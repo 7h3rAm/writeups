@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Date: Tue, 10 Sep 2019 01:30:16 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Last-Modified: Sat, 03 Mar 2018 20:32:03 GMT
+ETag: "860-2b-56687fc51225f"
+Accept-Ranges: bytes
+Content-Length: 43
+Vary: Accept-Encoding
+Content-Type: text/plain
+
+User-agent: *
+Disallow: /backup_wordpress
+

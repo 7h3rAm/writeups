@@ -1,0 +1,241 @@
+# Nmap 7.70 scan initiated Thu Sep 19 17:29:27 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/_full_tcp_nmap.xml 192.168.92.177
+adjust_timeouts2: packet supposedly had rtt of -383217 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -383217 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -402016 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -402016 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -657390 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -657390 microseconds.  Ignoring time.
+Nmap scan report for 192.168.92.177
+Host is up, received arp-response (0.0011s latency).
+Scanned at 2019-09-19 17:29:27 PDT for 41s
+Not shown: 65518 closed ports
+Reason: 65518 resets
+PORT      STATE SERVICE    REASON         VERSION
+22/tcp    open  ssh        syn-ack ttl 64 OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 10:cd:9e:a0:e4:e0:30:24:3e:bd:67:5f:75:4a:33:bf (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAJJHCFDFkbuQTVpmQvCvdR2poQrsZOQ0nBEsUij15T9DAiUhxI41G8hQ97MM9Qe0eGdP7HsA8vkZnglainhktvPe1NN9+XnDVRziI3dEqSxpCi4obxxYdKtqGBIj83dOPpxm09xDhVYBdh7ZlZh8xttD+ACFqmN4VZjmv0IlSYZFAAAAFQC6Z+j+KbT59gBXSPQTpAJIh0FE2wAAAIEAgYwA5oFVMQdKfRwAxbLoADx3t735BpLIoVNX2j4UrAF8CmwLCmcsNAhdpUP+hMhKGXnP5co2nira3OkcwWRu219bjte7m1l9JOvCJUASTUzOC0CUJkm9wO40/gyJOelKRR37r0qnBImiEumL6dSpcg4b0IfozCI9UJGh/yiEu4kAAACASWk2tKCyCHamiXwIt0XdwTXubZYtRtH09LHdisSEsoinz+2szuzbqnwgancHXcyQ3PapixZhVNASZ8MobmkFDXh4SDS5zl+RW7K40FBh3z+HCdSAJJjkRFXWEuadjxpO2QWBYEJiER4AtFWUSl2kVMFdsWqYaK7BxStNNkmGBII=
+|   2048 bc:f9:24:07:2f:cb:76:80:0d:27:a6:48:52:0a:24:3a (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1jCDgzdowLQVOEXrczN+xbuMcNkncz2EfCEncP7k8rhNjQq+eXzMKEfULxMLh/wLFhX2TVZDECTpQ0WVJckgkGeZSdvmEJKt5LbZlSm5HAz/DMUKIuohDRI4F3lqn9u5VAVKSyTXyR3EuxCsCHJy+Xf40BJImr+fZ7yH3xwPPqJ9in+LfgTXaRItqLDHiHAsTIXXwsDgweaS9hSTAR1MO+TdZCnXKPJ1NEt38+Fl7rnTnBE2TdtU3iyrlWXE0GGGg0bgldqas7bR4UH/uRZZOZK2+UTf0qg30H7ll8ShfZIbdW+59RfQqYz8tZYsoWoxahWf3dmx5soCWWcAP7DAV
+|   256 4d:bb:4a:c1:18:e8:da:d1:82:6f:58:52:9c:ee:34:5f (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGEudclsh1beHM/DPWQGR31dOGqdLcXVj1xLG/YSGfiNmN1pT6x0MwYQyN6pzCzzonljThH8JwIZjid+JN2PzxE=
+25/tcp    open  smtp       syn-ack ttl 64 Postfix smtpd
+|_smtp-commands: vulnix, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=vulnix
+| Issuer: commonName=vulnix
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-09-02T17:40:12
+| Not valid after:  2022-08-31T17:40:12
+| MD5:   58e3 f1ac fef6 b6d1 744c 836f ba24 4f0a
+| SHA-1: 712f 69ba 8c54 32e5 711c 898b 55ab 0a83 44a0 420b
+| -----BEGIN CERTIFICATE-----
+| MIICnjCCAYYCCQCrWhznjAI2hTANBgkqhkiG9w0BAQUFADARMQ8wDQYDVQQDEwZ2
+| dWxuaXgwHhcNMTIwOTAyMTc0MDEyWhcNMjIwODMxMTc0MDEyWjARMQ8wDQYDVQQD
+| EwZ2dWxuaXgwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDbiWM7/Xk
+| 7+VnQuSzKIy6GgD9xAw5jCnKmRY6MfJ0jNmpIjo70LEpoTTEZvFLwKbdkxQHzusv
+| 50GOrZLm6MkrB2Ad8skvkJR9PA05KoM+Uha5P35rdF0MaNPtHRpA5W3Ql3qAoph7
+| 8hGmdI4GrLmedxkmajniCYNpowArI7UjYA5FWF6q1m41CS+xCqk9u4qH8SrV616z
+| bJ2H00mhp0NJDJbTDX35biGeGKR70e5xQAkMwQKM6s9iLBo2nrH2JKyxfVMeMgQf
+| KoRJEeILZbgP4X9Xc6iA9GuNSqluObOhCv1RsFLP915xNvnf6aZf8EtyODISzXhj
+| GBsy//uolXMLAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAIJHgnARP3nuoFigE9vE
+| CyK9sKYPn+nh0xOMFil2LzfcZsVRqTl0T/VbOug1i+pettkcPqWBBNs1Q5uSEIuP
+| 0pEq9AQdeLk7weMa0trDK+XoSbEvcAvYPnbK6Ghr343FE74nmxewtfCbrNfEnYZB
+| TYlEElBqcQFSo4kB6UyMOOGwuIJ7EHITPa7ZxKW6OBOVOzCUiYm3hGn7dpyVeaH/
+| zpSwobV1pSqyW7+Tb3KO82lqSnmYvRzk3TmIVXutOXTVE+L58xbo5uafae2UvP4m
+| m5Be1rZi17Ub1kIMKT+OJLq2oaDb6Y8Ni/a267RoGO/TcwCLjKHsDl5Niwk6rYMX
+| ZtY=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-09-20T00:30:07+00:00; +7s from scanner time.
+79/tcp    open  finger     syn-ack ttl 64 Linux fingerd
+|_finger: No one logged on.\x0D
+110/tcp   open  pop3       syn-ack ttl 64 Dovecot pop3d
+|_pop3-capabilities: SASL PIPELINING STLS CAPA UIDL TOP RESP-CODES
+| ssl-cert: Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-09-02T17:40:22
+| Not valid after:  2022-09-02T17:40:22
+| MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc
+| SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e
+| -----BEGIN CERTIFICATE-----
+| MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV
+| BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE
+| AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx
+| NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz
+| ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI
+| hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh
+| VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ
+| ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv
+| vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr
+| /Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb
+| V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz
+| b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG
+| A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV
+| LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr
+| 76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW
+| YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc
+| 8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg
+| mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-09-20T00:30:06+00:00; +6s from scanner time.
+111/tcp   open  rpcbind    syn-ack ttl 64 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      50680/tcp  mountd
+|   100005  1,2,3      51785/udp  mountd
+|   100021  1,3,4      35231/udp  nlockmgr
+|   100021  1,3,4      57819/tcp  nlockmgr
+|   100024  1          51959/udp  status
+|   100024  1          59222/tcp  status
+|   100227  2,3         2049/tcp  nfs_acl
+|_  100227  2,3         2049/udp  nfs_acl
+143/tcp   open  imap       syn-ack ttl 64 Dovecot imapd
+|_imap-capabilities: more LOGIN-REFERRALS LOGINDISABLEDA0001 ID listed LITERAL+ post-login have ENABLE IMAP4rev1 capabilities STARTTLS Pre-login OK SASL-IR IDLE
+| ssl-cert: Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-09-02T17:40:22
+| Not valid after:  2022-09-02T17:40:22
+| MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc
+| SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e
+| -----BEGIN CERTIFICATE-----
+| MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV
+| BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE
+| AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx
+| NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz
+| ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI
+| hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh
+| VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ
+| ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv
+| vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr
+| /Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb
+| V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz
+| b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG
+| A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV
+| LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr
+| 76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW
+| YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc
+| 8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg
+| mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-09-20T00:30:05+00:00; +6s from scanner time.
+512/tcp   open  exec       syn-ack ttl 64 netkit-rsh rexecd
+513/tcp   open  login      syn-ack ttl 64
+514/tcp   open  tcpwrapped syn-ack ttl 64
+993/tcp   open  ssl/imap   syn-ack ttl 64 Dovecot imapd
+|_imap-capabilities: LOGIN-REFERRALS AUTH=PLAINA0001 ID listed LITERAL+ more have ENABLE IMAP4rev1 post-login capabilities Pre-login OK SASL-IR IDLE
+| ssl-cert: Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-09-02T17:40:22
+| Not valid after:  2022-09-02T17:40:22
+| MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc
+| SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e
+| -----BEGIN CERTIFICATE-----
+| MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV
+| BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE
+| AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx
+| NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz
+| ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI
+| hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh
+| VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ
+| ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv
+| vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr
+| /Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb
+| V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz
+| b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG
+| A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV
+| LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr
+| 76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW
+| YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc
+| 8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg
+| mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-09-20T00:30:05+00:00; +6s from scanner time.
+995/tcp   open  ssl/pop3   syn-ack ttl 64 Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) PIPELINING USER CAPA UIDL TOP RESP-CODES
+| ssl-cert: Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2012-09-02T17:40:22
+| Not valid after:  2022-09-02T17:40:22
+| MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc
+| SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e
+| -----BEGIN CERTIFICATE-----
+| MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV
+| BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE
+| AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx
+| NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz
+| ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI
+| hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+| ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh
+| VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ
+| ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv
+| vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr
+| /Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb
+| V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz
+| b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG
+| A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV
+| LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr
+| 76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW
+| YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc
+| 8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg
+| mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-09-20T00:30:05+00:00; +7s from scanner time.
+2049/tcp  open  nfs_acl    syn-ack ttl 64 2-3 (RPC #100227)
+34422/tcp open  mountd     syn-ack ttl 64 1-3 (RPC #100005)
+39054/tcp open  mountd     syn-ack ttl 64 1-3 (RPC #100005)
+50680/tcp open  mountd     syn-ack ttl 64 1-3 (RPC #100005)
+57819/tcp open  nlockmgr   syn-ack ttl 64 1-4 (RPC #100021)
+59222/tcp open  status     syn-ack ttl 64 1 (RPC #100024)
+MAC Address: 00:0C:29:87:38:08 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/19%OT=22%CT=1%CU=38432%PV=Y%DS=1%DC=D%G=Y%M=000C29%T
+OS:M=5D841D90%P=i686-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%T
+OS:S=8)OPS(O1=M5B4ST11NW3%O2=M5B4ST11NW3%O3=M5B4NNT11NW3%O4=M5B4ST11NW3%O5=
+OS:M5B4ST11NW3%O6=M5B4ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3
+OS:890)ECN(R=Y%DF=Y%T=40%W=3908%O=M5B4NNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A
+OS:=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%
+OS:Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=
+OS:A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%
+OS:T=40%CD=S)
+
+Uptime guess: 178.812 days (since Sun Mar 24 22:00:40 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  vulnix; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 6s, deviation: 0s, median: 5s
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.05 ms 192.168.92.177
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 19 17:30:08 2019 -- 1 IP address (1 host up) scanned in 42.25 seconds

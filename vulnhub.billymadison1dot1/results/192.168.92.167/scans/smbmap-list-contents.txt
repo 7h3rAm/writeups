@@ -1,0 +1,52 @@
+[+] Finding open SMB ports....
+[+] Guest RPC session established on 192.168.92.167...
+[+] IP: 192.168.92.167:139	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	.\
+	dr--r--r--                0 Thu Sep  5 17:42:41 2019	.
+	dr--r--r--                0 Sat Aug 20 11:56:45 2016	..
+	-r--r--r--             4096 Wed Aug 17 07:32:07 2016	._.DS_Store
+	-r--r--r--               35 Thu Sep  5 17:42:41 2019	ebd.txt
+	-r--r--r--             6148 Wed Aug 17 07:32:12 2016	.DS_Store
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest RPC session established on 192.168.92.167...
+[+] IP: 192.168.92.167:139	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	.\
+	dr--r--r--                0 Thu Sep  5 17:42:41 2019	.
+	dr--r--r--                0 Sat Aug 20 11:56:45 2016	..
+	-r--r--r--             4096 Wed Aug 17 07:32:07 2016	._.DS_Store
+	-r--r--r--               35 Thu Sep  5 17:42:41 2019	ebd.txt
+	-r--r--r--             6148 Wed Aug 17 07:32:12 2016	.DS_Store
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 192.168.92.167...
+[+] IP: 192.168.92.167:445	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	.\
+	dr--r--r--                0 Thu Sep  5 17:42:41 2019	.
+	dr--r--r--                0 Sat Aug 20 11:56:45 2016	..
+	-r--r--r--             4096 Wed Aug 17 07:32:07 2016	._.DS_Store
+	-r--r--r--               35 Thu Sep  5 17:42:41 2019	ebd.txt
+	-r--r--r--             6148 Wed Aug 17 07:32:12 2016	.DS_Store
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 192.168.92.167...
+[+] IP: 192.168.92.167:445	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	.\
+	dr--r--r--                0 Thu Sep  5 17:42:41 2019	.
+	dr--r--r--                0 Sat Aug 20 11:56:45 2016	..
+	-r--r--r--             4096 Wed Aug 17 07:32:07 2016	._.DS_Store
+	-r--r--r--               35 Thu Sep  5 17:42:41 2019	ebd.txt
+	-r--r--r--             6148 Wed Aug 17 07:32:12 2016	.DS_Store
+	IPC$                                              	NO ACCESS

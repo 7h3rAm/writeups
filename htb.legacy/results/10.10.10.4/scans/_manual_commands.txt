@@ -1,0 +1,33 @@
+[*] netbios-ssn on tcp/139
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_139_smb_ms06-025.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_139_smb_ms06-025.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_139_smb_ms07-029.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_139_smb_ms07-029.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_139_smb_ms08-067.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_139_smb_ms08-067.xml" 10.10.10.4
+
+
+[*] microsoft-ds on tcp/445
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_445_smb_ms06-025.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_445_smb_ms06-025.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_445_smb_ms07-029.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_445_smb_ms07-029.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_445_smb_ms08-067.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_445_smb_ms08-067.xml" 10.10.10.4
+
+
+[*] netbios-ns on udp/137
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_ms06-025.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_ms06-025.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_ms07-029.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_ms07-029.xml" 10.10.10.4
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_ms08-067.txt" -oX "/root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_ms08-067.xml" 10.10.10.4
+
+

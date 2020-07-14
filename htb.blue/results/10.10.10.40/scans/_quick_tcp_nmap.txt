@@ -1,0 +1,34 @@
+# Nmap 7.70 scan initiated Fri Nov  1 17:05:41 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/_quick_tcp_nmap.xml 10.10.10.40
+Nmap scan report for 10.10.10.40
+Host is up, received user-set (0.15s latency).
+Scanned at 2019-11-01 17:05:41 PDT for 171s
+Not shown: 991 closed ports
+Reason: 991 resets
+PORT      STATE SERVICE      REASON          VERSION
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 127 Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+49152/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49155/tcp open  unknown      syn-ack ttl 127
+49156/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49157/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+Service Info: Host: HARIS-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 57283/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 12383/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 19006/udp): CLEAN (Timeout)
+|   Check 4 (port 60472/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   2.10: 
+|_    Message signing enabled but not required
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 17:08:32 2019 -- 1 IP address (1 host up) scanned in 171.43 seconds

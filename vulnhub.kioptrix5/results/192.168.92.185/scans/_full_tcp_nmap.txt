@@ -1,0 +1,36 @@
+# Nmap 7.70 scan initiated Wed Oct  9 12:11:53 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/_full_tcp_nmap.xml 192.168.92.185
+Nmap scan report for 192.168.92.185
+Host is up, received arp-response (0.00043s latency).
+Scanned at 2019-10-09 12:11:54 PDT for 157s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT     STATE  SERVICE    REASON         VERSION
+22/tcp   closed ssh        reset ttl 64
+80/tcp   open   tcpwrapped syn-ack ttl 64
+8080/tcp open   tcpwrapped syn-ack ttl 64
+MAC Address: 00:0C:29:0B:79:90 (VMware)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Vonage V-Portal VoIP adapter (89%), Cisco Unified Communications Manager VoIP adapter (89%), Android 7.1.2 (Linux 3.10) (89%), DD-WRT v23 (Linux 2.4.36) (89%), Vyatta router (Linux 2.6.26) (89%), Linux 2.6.18 (89%), Linux 2.6.26 (PCLinuxOS) (89%), Tomato firmware (Linux 2.6.22) (89%), MikroTik RouterOS 5.25 (Linux 2.6.35) (89%), Netgear ReadyNAS Duo NAS device (RAIDiator 4.1.4) (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=10/9%OT=8080%CT=22%CU=%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D9E3197%P=i686-pc-linux-gnu)
+ECN(R=N)
+T1(R=N)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T7(R=N)
+U1(R=N)
+IE(R=N)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.43 ms 192.168.92.185
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  9 12:14:31 2019 -- 1 IP address (1 host up) scanned in 158.72 seconds

@@ -1,0 +1,25 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.170
++ Target Hostname:    wordy
++ Target Port:        80
++ Start Time:         2019-09-10 18:10:01 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.25 (Debian)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'link' found, with contents: <http://wordy/>; rel=shortlink
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Uncommon header 'x-redirect-by' found, with contents: WordPress
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ OSVDB-3092: /license.txt: License file found may identify site software.
++ Cookie wordpress_test_cookie created without the httponly flag
++ /wp-login.php: Wordpress login found
++ 7373 requests: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2019-09-10 18:10:50 (GMT-7) (49 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

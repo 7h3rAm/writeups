@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Fri May 29 19:04:11 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/xml/_full_tcp_nmap.xml 10.10.10.68

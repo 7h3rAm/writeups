@@ -1,0 +1,122 @@
+# Nmap 7.70 scan initiated Fri Nov  1 12:31:47 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_139_smb_nmap.xml 10.10.10.3
+Nmap scan report for 10.10.10.3
+Host is up, received user-set (0.12s latency).
+Scanned at 2019-11-01 12:31:48 PDT for 92s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 63 Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+
+Host script results:
+| smb-enum-users: 
+|   LAME\backup (RID: 1068)
+|     Full name:   backup
+|     Flags:       Normal user account, Account disabled
+|   LAME\bin (RID: 1004)
+|     Full name:   bin
+|     Flags:       Normal user account, Account disabled
+|   LAME\bind (RID: 1210)
+|     Flags:       Normal user account, Account disabled
+|   LAME\daemon (RID: 1002)
+|     Full name:   daemon
+|     Flags:       Normal user account, Account disabled
+|   LAME\dhcp (RID: 1202)
+|     Flags:       Normal user account, Account disabled
+|   LAME\distccd (RID: 1222)
+|     Flags:       Normal user account, Account disabled
+|   LAME\ftp (RID: 1214)
+|     Flags:       Normal user account, Account disabled
+|   LAME\games (RID: 1010)
+|     Full name:   games
+|     Flags:       Normal user account, Account disabled
+|   LAME\gnats (RID: 1082)
+|     Full name:   Gnats Bug-Reporting System (admin)
+|     Flags:       Normal user account, Account disabled
+|   LAME\irc (RID: 1078)
+|     Full name:   ircd
+|     Flags:       Normal user account, Account disabled
+|   LAME\klog (RID: 1206)
+|     Flags:       Normal user account, Account disabled
+|   LAME\libuuid (RID: 1200)
+|     Flags:       Normal user account, Account disabled
+|   LAME\list (RID: 1076)
+|     Full name:   Mailing List Manager
+|     Flags:       Normal user account, Account disabled
+|   LAME\lp (RID: 1014)
+|     Full name:   lp
+|     Flags:       Normal user account, Account disabled
+|   LAME\mail (RID: 1016)
+|     Full name:   mail
+|     Flags:       Normal user account, Account disabled
+|   LAME\man (RID: 1012)
+|     Full name:   man
+|     Flags:       Normal user account, Account disabled
+|   LAME\msfadmin (RID: 3000)
+|     Full name:   msfadmin,,,
+|     Flags:       Normal user account
+|   LAME\mysql (RID: 1218)
+|     Full name:   MySQL Server,,,
+|     Flags:       Normal user account, Account disabled
+|   LAME\news (RID: 1018)
+|     Full name:   news
+|     Flags:       Normal user account, Account disabled
+|   LAME\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account, Account disabled
+|   LAME\postfix (RID: 1212)
+|     Flags:       Normal user account, Account disabled
+|   LAME\postgres (RID: 1216)
+|     Full name:   PostgreSQL administrator,,,
+|     Flags:       Normal user account, Account disabled
+|   LAME\proftpd (RID: 1226)
+|     Flags:       Normal user account, Account disabled
+|   LAME\proxy (RID: 1026)
+|     Full name:   proxy
+|     Flags:       Normal user account, Account disabled
+|   LAME\root (RID: 1000)
+|     Full name:   root
+|     Flags:       Normal user account, Account disabled
+|   LAME\service (RID: 3004)
+|     Full name:   ,,,
+|     Flags:       Normal user account, Account disabled
+|   LAME\sshd (RID: 1208)
+|     Flags:       Normal user account, Account disabled
+|   LAME\sync (RID: 1008)
+|     Full name:   sync
+|     Flags:       Normal user account, Account disabled
+|   LAME\sys (RID: 1006)
+|     Full name:   sys
+|     Flags:       Normal user account, Account disabled
+|   LAME\syslog (RID: 1204)
+|     Flags:       Normal user account, Account disabled
+|   LAME\telnetd (RID: 1224)
+|     Flags:       Normal user account, Account disabled
+|   LAME\tomcat55 (RID: 1220)
+|     Flags:       Normal user account, Account disabled
+|   LAME\user (RID: 3002)
+|     Full name:   just a user,111,,
+|     Flags:       Normal user account
+|   LAME\uucp (RID: 1020)
+|     Full name:   uucp
+|     Flags:       Normal user account, Account disabled
+|   LAME\www-data (RID: 1066)
+|     Full name:   www-data
+|_    Flags:       Normal user account, Account disabled
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [12]
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-11-01T15:32:20-04:00
+|_smb-print-text: false
+|_smb-protocols: No dialects accepted. Something may be blocking the responses
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: Could not connect to 'IPC$'
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 12:33:20 2019 -- 1 IP address (1 host up) scanned in 93.45 seconds

@@ -1,0 +1,23 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.189
++ Target Hostname:    192.168.92.189
++ Target Port:        3000
++ Start Time:         2019-10-22 14:20:56 (GMT-7)
+---------------------------------------------------------------------------
++ Server: No banner retrieved
++ Retrieved x-powered-by header: Express
++ Server leaks inodes via ETags, header found with file /, fields: 0xW/f15 0x15e4258ef70 
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ OSVDB-3092: /app/: This might be interesting...
++ OSVDB-3092: /css: This might be interesting...
++ OSVDB-3092: /js: This might be interesting...
++ OSVDB-3092: /misc/: This might be interesting...
++ ERROR: Error limit (20) reached for host, giving up. Last error: error reading HTTP response
++ Scan terminated:  20 error(s) and 9 item(s) reported on remote host
++ End Time:           2019-10-22 14:22:14 (GMT-7) (78 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

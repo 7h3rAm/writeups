@@ -1,0 +1,32 @@
+root:*:0:0:root:/root:/bin/bash
+daemon:*:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:*:2:2:bin:/bin:/usr/sbin/nologin
+sys:*:3:3:sys:/dev:/usr/sbin/nologin
+sync:*:4:65534:sync:/bin:/bin/sync
+games:*:5:60:games:/usr/games:/usr/sbin/nologin
+man:*:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:*:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:*:8:8:mail:/var/mail:/usr/sbin/nologin
+news:*:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:*:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:*:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:*:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:*:34:34:backup:/var/backups:/usr/sbin/nologin
+list:*:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:*:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+gnats:*:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:*:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-timesync:*:100:102:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+systemd-network:*:101:103:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:*:102:104:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+syslog:*:103:108::/home/syslog:/usr/sbin/nologin
+_apt:*:104:65534::/nonexistent:/usr/sbin/nologin
+messagebus:*:105:109::/nonexistent:/usr/sbin/nologin
+uuidd:*:106:111::/run/uuidd:/usr/sbin/nologin
+landscape:*:107:113::/var/lib/landscape:/usr/sbin/nologin
+pollinate:*:108:1::/var/cache/pollinate:/bin/false
+sshd:*:109:65534::/run/sshd:/usr/sbin/nologin
+systemd-coredump:!!:998:998:systemd Core Dumper:/:/sbin/nologin
+hackme:$6$.L285vCy$Hma4mKjGV.sE7ZCFVj2iOkRokX1u3F5DMiTPQFoZPJnQ1kUXLje/bY2BIUQFbYu.8M6BvLML5fAftZOCEVnqa1:1000:1000:hackme:/home/hackme:/bin/bash
+lxd:!:999:100::/var/snap/lxd/common/lxd:/bin/false
+mysql:!:110:115:MySQL Server,,,:/nonexistent:/bin/false

@@ -1,0 +1,14 @@
+tcp/80/nmap-http - Identified HTTP Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+
+tcp/443/nmap-http - Identified HTTP Server: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

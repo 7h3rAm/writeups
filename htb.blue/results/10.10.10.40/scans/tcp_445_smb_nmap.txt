@@ -1,0 +1,106 @@
+# Nmap 7.70 scan initiated Fri Nov  1 17:08:33 2019 as: nmap -vv --reason -Pn -sV -p 445 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_445_smb_nmap.xml 10.10.10.40
+Nmap scan report for 10.10.10.40
+Host is up, received user-set (0.049s latency).
+Scanned at 2019-11-01 17:08:33 PDT for 121s
+
+PORT    STATE SERVICE      REASON          VERSION
+445/tcp open  microsoft-ds syn-ack ttl 127 Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+Service Info: Host: HARIS-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.10.10.40\ADMIN$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Remote Admin
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.10.40\C$: 
+|     Type: STYPE_DISKTREE_HIDDEN
+|     Comment: Default share
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\10.10.10.40\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: Remote IPC
+|     Anonymous access: READ
+|     Current user access: READ/WRITE
+|   \\10.10.10.40\Share: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: <none>
+|     Current user access: READ
+|   \\10.10.10.40\Users: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Anonymous access: <none>
+|_    Current user access: READ
+| smb-ls: Volume \\10.10.10.40\Share
+| SIZE   TIME                 FILENAME
+| <DIR>  2017-07-14 06:48:44  .
+| <DIR>  2017-07-14 06:48:44  ..
+| 
+| 
+| Volume \\10.10.10.40\Users
+| SIZE   TIME                 FILENAME
+| <DIR>  2009-07-13 20:20:08  .
+| <DIR>  2009-07-13 20:20:08  ..
+| <DIR>  2009-07-13 20:20:08  Public
+| <DIR>  2009-07-13 20:20:08  Public\Documents
+| <DIR>  2009-07-13 20:20:08  Public\Downloads
+| <DIR>  2009-07-13 20:20:08  Public\Music
+| <DIR>  2009-07-13 20:20:08  Public\Pictures
+| <DIR>  2011-04-12 00:51:29  Public\Recorded TV
+| <DIR>  2009-07-13 20:20:08  Public\Videos
+|_
+|_smb-mbenum: Not a master or backup browser
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: haris-PC
+|   NetBIOS computer name: HARIS-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-11-02T00:08:50+00:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|_    2.10
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-11-01 17:09:08
+|_  start_date: 2019-11-01 17:08:13
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 17:10:34 2019 -- 1 IP address (1 host up) scanned in 121.84 seconds

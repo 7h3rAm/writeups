@@ -1,0 +1,113 @@
+# Nmap 7.70 scan initiated Tue Oct  8 15:47:39 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/xml/tcp_139_smb_nmap.xml 192.168.92.131
+Nmap scan report for 192.168.92.131
+Host is up, received arp-response (0.0010s latency).
+Scanned at 2019-10-08 15:47:41 PDT for 435s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 3.0.28a (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:9E:D6:27 (VMware)
+
+Host script results:
+| nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   KIOPTRIX4<00>        Flags: <unique><active>
+|   KIOPTRIX4<03>        Flags: <unique><active>
+|   KIOPTRIX4<20>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-domains: 
+|   KIOPTRIX4
+|     Groups: n/a
+|     Users: nobody\x00, robert\x00, root\x00, john\x00, loneferret\x00
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.131\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Kioptrix4 server (Samba, Ubuntu))
+|     Users: 5
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.131\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|_    Current user access: <none>
+| smb-enum-users: 
+|   KIOPTRIX4\john (RID: 3002)
+|     Full name:   ,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\loneferret (RID: 3000)
+|     Full name:   loneferret,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\nobody (RID: 501)
+|     Full name:   nobody
+|     Flags:       Normal user account
+|   KIOPTRIX4\robert (RID: 3004)
+|     Full name:   ,,,
+|     Flags:       Normal user account
+|   KIOPTRIX4\root (RID: 1000)
+|     Full name:   root
+|_    Flags:       Normal user account
+| smb-mbenum: 
+|   DFS Root
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Potential Browser
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Print server
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Server
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Server service
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Unix server
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+|   Workstation
+|_    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.28a)
+|   Computer name: Kioptrix4
+|   NetBIOS computer name: 
+|   Domain name: localdomain
+|   FQDN: Kioptrix4.localdomain
+|_  System time: 2019-10-08T11:47:35-04:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct  8 15:54:56 2019 -- 1 IP address (1 host up) scanned in 437.61 seconds

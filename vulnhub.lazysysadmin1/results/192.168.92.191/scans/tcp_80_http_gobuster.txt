@@ -1,0 +1,35 @@
+http://192.168.92.191:80/.hta (Status: 403) [Size: 285]
+http://192.168.92.191:80/.hta.txt (Status: 403) [Size: 289]
+http://192.168.92.191:80/.hta.html (Status: 403) [Size: 290]
+http://192.168.92.191:80/.hta.php (Status: 403) [Size: 289]
+http://192.168.92.191:80/.hta.asp (Status: 403) [Size: 289]
+http://192.168.92.191:80/.hta.aspx (Status: 403) [Size: 290]
+http://192.168.92.191:80/.hta.jsp (Status: 403) [Size: 289]
+http://192.168.92.191:80/.htaccess (Status: 403) [Size: 290]
+http://192.168.92.191:80/.htpasswd (Status: 403) [Size: 290]
+http://192.168.92.191:80/.htaccess.txt (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htpasswd.txt (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htaccess.html (Status: 403) [Size: 295]
+http://192.168.92.191:80/.htaccess.php (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htpasswd.html (Status: 403) [Size: 295]
+http://192.168.92.191:80/.htaccess.asp (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htpasswd.php (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htpasswd.asp (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htaccess.aspx (Status: 403) [Size: 295]
+http://192.168.92.191:80/.htpasswd.aspx (Status: 403) [Size: 295]
+http://192.168.92.191:80/.htaccess.jsp (Status: 403) [Size: 294]
+http://192.168.92.191:80/.htpasswd.jsp (Status: 403) [Size: 294]
+http://192.168.92.191:80/apache (Status: 301)
+http://192.168.92.191:80/index.html (Status: 200) [Size: 36072]
+http://192.168.92.191:80/index.html (Status: 200) [Size: 36072]
+http://192.168.92.191:80/info.php (Status: 200) [Size: 77215]
+http://192.168.92.191:80/info.php (Status: 200) [Size: 77215]
+http://192.168.92.191:80/javascript (Status: 301)
+http://192.168.92.191:80/old (Status: 301)
+http://192.168.92.191:80/phpmyadmin (Status: 301)
+http://192.168.92.191:80/robots.txt (Status: 200) [Size: 92]
+http://192.168.92.191:80/robots.txt (Status: 200) [Size: 92]
+http://192.168.92.191:80/server-status (Status: 403) [Size: 294]
+http://192.168.92.191:80/test (Status: 301)
+http://192.168.92.191:80/wordpress (Status: 301)
+http://192.168.92.191:80/wp (Status: 301)

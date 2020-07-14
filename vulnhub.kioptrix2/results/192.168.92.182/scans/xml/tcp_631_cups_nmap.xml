@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Sep 27 18:17:47 2019 as: nmap -vv -&#45;reason -Pn -sV -p 631 &quot;-&#45;script=banner,(cups* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_631_cups_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_631_cups_nmap.xml 192.168.92.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 631 &quot;-&#45;script=banner,(cups* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_631_cups_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_631_cups_nmap.xml 192.168.92.182" start="1569633467" startstr="Fri Sep 27 18:17:47 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="631"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569633467"/>
+<taskend task="NSE" time="1569633467"/>
+<taskbegin task="NSE" time="1569633467"/>
+<taskend task="NSE" time="1569633467"/>
+<taskbegin task="ARP Ping Scan" time="1569633467"/>
+<taskend task="ARP Ping Scan" time="1569633467" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1569633468"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1569633468"/>
+<taskbegin task="SYN Stealth Scan" time="1569633468"/>
+<taskend task="SYN Stealth Scan" time="1569633468" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1569633468"/>
+<taskend task="Service scan" time="1569633474" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1569633474"/>
+<taskend task="NSE" time="1569633489"/>
+<taskbegin task="NSE" time="1569633489"/>
+<taskend task="NSE" time="1569633489"/>
+<host starttime="1569633467" endtime="1569633489"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.182" addrtype="ipv4"/>
+<address addr="00:0C:29:DD:3C:B5" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="631"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ipp" product="CUPS" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apple:cups:1.1</cpe></service><script id="cups-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="cups-queue-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-server-header" output="CUPS/1.1"><elem>CUPS/1.1</elem>
+</script></port>
+</ports>
+<times srtt="701" rttvar="3926" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569633489"/>
+<taskend task="NSE" time="1569633489"/>
+<taskbegin task="NSE" time="1569633489"/>
+<taskend task="NSE" time="1569633489"/>
+<runstats><finished time="1569633489" timestr="Fri Sep 27 18:18:09 2019" elapsed="22.48" summary="Nmap done at Fri Sep 27 18:18:09 2019; 1 IP address (1 host up) scanned in 22.48 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

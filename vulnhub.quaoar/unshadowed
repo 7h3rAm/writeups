@@ -1,0 +1,36 @@
+root:$6$CM3c1cdI$HbQWZlQdGEWV8yo3j7M84i1/RFK4G7fafTUIUYLWk52zm9O8KRLhqZenF8KbqsUjHlZQk4VmNEeEbBCRjOWbH0:0:0:root:/root:/bin/bash
+daemon:*:1:1:daemon:/usr/sbin:/bin/sh
+bin:*:2:2:bin:/bin:/bin/sh
+sys:*:3:3:sys:/dev:/bin/sh
+sync:*:4:65534:sync:/bin:/bin/sync
+games:*:5:60:games:/usr/games:/bin/sh
+man:*:6:12:man:/var/cache/man:/bin/sh
+lp:*:7:7:lp:/var/spool/lpd:/bin/sh
+mail:*:8:8:mail:/var/mail:/bin/sh
+news:*:9:9:news:/var/spool/news:/bin/sh
+uucp:*:10:10:uucp:/var/spool/uucp:/bin/sh
+proxy:*:13:13:proxy:/bin:/bin/sh
+www-data:*:33:33:www-data:/var/www:/bin/sh
+backup:*:34:34:backup:/var/backups:/bin/sh
+list:*:38:38:Mailing List Manager:/var/list:/bin/sh
+irc:*:39:39:ircd:/var/run/ircd:/bin/sh
+gnats:*:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/bin/sh
+nobody:*:65534:65534:nobody:/nonexistent:/bin/sh
+libuuid:!:100:101::/var/lib/libuuid:/bin/sh
+syslog:*:101:103::/home/syslog:/bin/false
+mysql:!:102:105:MySQL Server,,,:/nonexistent:/bin/false
+messagebus:*:103:107::/var/run/dbus:/bin/false
+colord:*:104:109:colord colour management daemon,,,:/var/lib/colord:/bin/false
+whoopsie:*:105:112::/nonexistent:/bin/false
+avahi:*:106:115:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+bind:*:107:117::/var/cache/bind:/bin/false
+postfix:*:108:118::/var/spool/postfix:/bin/false
+dovecot:*:109:120:Dovecot mail server,,,:/usr/lib/dovecot:/bin/false
+dovenull:*:110:65534:Dovecot login user,,,:/nonexistent:/bin/false
+landscape:*:111:121::/var/lib/landscape:/bin/false
+libvirt-qemu:!:112:106:Libvirt Qemu,,,:/var/lib/libvirt:/bin/false
+libvirt-dnsmasq:!:113:123:Libvirt Dnsmasq,,,:/var/lib/libvirt/dnsmasq:/bin/false
+sshd:*:114:65534::/var/run/sshd:/usr/sbin/nologin
+postgres:*:115:124:PostgreSQL administrator,,,:/var/lib/postgresql:/bin/bash
+tomcat6:*:116:126::/usr/share/tomcat6:/bin/false
+wpadmin:$6$FtTN/YPC$iidNFmRVpQ1p2kkfoOZ6OzNPqR95DQ/7G10aze2CA2W3ik/sHHyEPaNNY57tMvRDU0/Rs62FEimiKXD2VgEYC1:1001:1001::/home/wpadmin:/bin/sh

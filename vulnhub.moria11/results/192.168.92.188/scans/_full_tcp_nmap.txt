@@ -1,0 +1,58 @@
+# Nmap 7.70 scan initiated Fri Oct 11 15:31:52 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/xml/_full_tcp_nmap.xml 192.168.92.188
+adjust_timeouts2: packet supposedly had rtt of -1325686 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1325686 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1409054 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1409054 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -796754 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -796754 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2269156 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -2269156 microseconds.  Ignoring time.
+Nmap scan report for 192.168.92.188
+Host is up, received arp-response (0.063s latency).
+Scanned at 2019-10-11 15:32:02 PDT for 140s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 vsftpd 2.0.8 or later
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 6.6.1 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 47:b5:ed:e3:f9:ad:96:88:c0:f2:83:23:7f:a3:d3:4f (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5gdKNO3UCeDGX36RIZSkcVHvWknoFBZe2IT96Gep79sECS7G2pO76RFdOCJMru0Ek9EQKhMhHTrVI0DWDJFp2apdEPVsqn8nuJKUCHbaL49frQtFnR64b5WoM+f7VgEN84S+iPmUCwwgIMjR5hoYCAJFdJNpE27ZguVbnnN+i1491TDIO/cN92Uut/T70C3bntlsptY9N+fR0hOdkLg+K+TT1zX2BZOw99OMn9ytt3kSi4DNaoDpn9GDOfXhqeQH/eJWmFNTsFSM2+GHOAZKc0Ichiqhxf3WHoGOnliH8XdV6ZNpjHA8jGCYVcPnkTk42nP7E9Ql7mabsi+L3Ugq3
+|   256 85:cd:a2:d8:bb:85:f6:0f:4e:ae:8c:aa:73:52:ec:63 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCuLX/CWxsOhekXJRxQqQH/Yx0SD+XgUpmlmWN1Y8cvmCYJslOh4vE+I6fmMwCdBfi4W061RmFc+vMALlQUYNz0=
+|   256 b1:77:7e:08:b3:a0:84:f8:f4:5d:f9:8e:d5:85:b9:34 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILxa4UjJJ2naeaBginolO5UHAS/rB0Wh5mtDLQuNUYaN
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-title: Gates of Moria
+MAC Address: 00:0C:29:84:7D:D1 (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=10/11%OT=21%CT=1%CU=42766%PV=Y%DS=1%DC=D%G=N%M=000C29%
+OS:TM=5DA1036F%P=i686-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=105%TI=Z%TS=A)SEQ(S
+OS:P=100%GCD=1%ISR=102%TI=Z%CI=I%TS=A)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=
+OS:M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11)WIN(W1=7120%W2=71
+OS:20%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7
+OS:%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=
+OS:Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=O%F=
+OS:AR%O=%RD=0%Q=)T6(R=N)T6(R=Y%DF=Y%T=40%W=0%S=O%A=Z%F=R%O=%RD=0%Q=)T7(R=N)
+OS:T7(R=Y%DF=Y%T=40%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN
+OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.001 days (since Fri Oct 11 15:33:31 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   63.40 ms 192.168.92.188
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 11 15:34:23 2019 -- 1 IP address (1 host up) scanned in 153.28 seconds

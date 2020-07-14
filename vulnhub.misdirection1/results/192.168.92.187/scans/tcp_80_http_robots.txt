@@ -1,0 +1,9 @@
+HTTP/1.1 400 BAD REQUEST
+Date: Fri, 11 Oct 2019 19:14:01 GMT
+Server: Rocket 1.2.6 Python/2.7.15rc1
+Content-Length: 50
+Content-Type: text/html; charset=UTF-8
+web2py_error: invalid path
+Connection: close
+
+<html><body><h1>invalid request</h1></body></html>

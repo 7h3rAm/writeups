@@ -1,0 +1,75 @@
+# Nmap 7.70 scan initiated Tue Sep 17 11:47:37 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/_quick_tcp_nmap.xml 192.168.92.173
+Nmap scan report for 192.168.92.173
+Host is up, received arp-response (0.00026s latency).
+Scanned at 2019-09-17 11:47:38 PDT for 20s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT     STATE SERVICE     REASON         VERSION
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+111/tcp  open  rpcbind     syn-ack ttl 64 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  3           2049/udp  nfs
+|   100003  3,4         2049/tcp  nfs
+|   100005  1,2,3      43318/udp  mountd
+|   100005  1,2,3      43937/tcp  mountd
+|   100021  1,3,4      39393/tcp  nlockmgr
+|   100021  1,3,4      47990/udp  nlockmgr
+|   100227  3           2049/tcp  nfs_acl
+|_  100227  3           2049/udp  nfs_acl
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)
+2049/tcp open  nfs_acl     syn-ack ttl 64 3 (RPC #100227)
+MAC Address: 00:0C:29:A6:A7:B9 (VMware)
+Service Info: Host: LINUX
+
+Host script results:
+|_clock-skew: mean: 1h20m01s, deviation: 2h18m34s, median: 0s
+| nbstat: NetBIOS name: LINUX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LINUX<00>            Flags: <unique><active>
+|   LINUX<03>            Flags: <unique><active>
+|   LINUX<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 55304/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 61557/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 38128/udp): CLEAN (Timeout)
+|   Check 4 (port 2678/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: osboxes
+|   NetBIOS computer name: LINUX\x00
+|   Domain name: \x00
+|   FQDN: osboxes
+|_  System time: 2019-09-17T14:47:54-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-09-17 11:47:54
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 17 11:47:58 2019 -- 1 IP address (1 host up) scanned in 21.30 seconds

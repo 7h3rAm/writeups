@@ -1,0 +1,1163 @@
+# Nmap 7.70 scan initiated Tue Sep 10 18:09:59 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_nmap.txt -oX /root/toolbox/vulnhub/dc6/results/wordy/scans/xml/tcp_80_http_nmap.xml wordy
+Nmap scan report for wordy (192.168.92.170)
+Host is up, received arp-response (0.00083s latency).
+Scanned at 2019-09-10 18:10:01 PDT for 40s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.25 ((Debian))
+|_http-backup-finder: ERROR: Script execution failed (use -d to debug)
+|_http-chrono: Request times for /; avg: 478.79ms; min: 347.07ms; max: 706.33ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=wordy
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 871
+|     Comment: 
+|         /* Typography for Thai Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 852
+|     Comment: 
+|         /* Typography for Korean font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1704
+|     Comment: 
+|         /* Prevent header from extending beyond the footer */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2891
+|     Comment: 
+|         /* Audio Player */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2716
+|     Comment: 
+|         /* Gravatar */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 77
+|     Comment: 
+|         <!-- .site-branding-text -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3953
+|     Comment: 
+|         /* Post formats */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 49
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         1.0 Normalize
+|         Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 132
+|     Comment: 
+|         <!-- .site-info -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2848
+|     Comment: 
+|         /* Make sure embeds and iframes fit their containers. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2724
+|     Comment: 
+|         /* Recent Comments */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 311
+|     Comment: 
+|         /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 81
+|     Comment: 
+|         <!-- .site-branding -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3906
+|     Comment: 
+|         /* without sidebar */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 665
+|     Comment: 
+|         /* Typography for Chinese Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1681
+|     Comment: 
+|         /* IE6-9 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1680
+|     Comment: 
+|         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3836
+|     Comment: 
+|         /* Blog, archive, search */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2323
+|     Comment: 
+|         /* Social nav */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3188
+|     Comment: 
+|         /* Social Menu fallbacks */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 303
+|     Comment: 
+|         /* Text meant only for screen readers. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3102
+|     Comment: 
+|         /* Matches visible edit shortcuts. */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 112
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1317
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         12.0 Navigation
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2365
+|     Comment: 
+|         /* Site info */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3904
+|     Comment: 
+|         /* Entry content */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2609
+|     Comment: 
+|         /* Widget markup */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2823
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         16.0 Media
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 135
+|     Comment: 
+|         <!-- .site-content-contain -->
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 120
+|     Comment: 
+|         <!-- #primary -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 814
+|     Comment: 
+|         /* Typography for Hebrew Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1285
+|     Comment: 
+|         /* Fixes linked images */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 83
+|     Comment: 
+|         <!-- .custom-header -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3117
+|     Comment: 
+|         /* Used for placeholder text */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3149
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         18.0 SVGs Fallbacks
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1433
+|     Comment: 
+|         /* Display the menu toggle when JavaScript is available. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1711
+|     Comment: 
+|         /* Specificity prevents .color-dark button overrides */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1841
+|     Comment: 
+|         /* Front Page - Recent Posts */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1497
+|     Comment: 
+|         /* IE 9 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2036
+|     Comment: 
+|         /* Blog landing, search, archives */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2225
+|     Comment: 
+|         /* Post Navigation */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3486
+|     Comment: 
+|         /* The font size is 14px here and we need 50px padding in ems */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Seventeen
+|         Theme URI: https://wordpress.org/themes/twentyseventeen/
+|         Author: the WordPress team
+|         Author URI: https://wordpress.org/
+|         Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+|         Version: 2.1
+|         License: GNU General Public License v2 or later
+|         License URI: http://www.gnu.org/licenses/gpl-2.0.html
+|         Text Domain: twentyseventeen
+|         Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+|         
+|         This theme, like WordPress, is licensed under the GPL.
+|         Use it to make something cool, have fun, and share what you've learned with others.
+|         */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2129
+|     Comment: 
+|         /* Entry footer */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3212
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         19.0 Media Queries
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 692
+|     Comment: 
+|         /* Typography for Cyrillic Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1829
+|     Comment: 
+|         /* Panel edit link */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1529
+|     Comment: 
+|         /* Fallback for when there is no custom background color defined. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2658
+|     Comment: 
+|         /* RSS Widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 734
+|     Comment: 
+|         /* Typography for Devanagari Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1679
+|     Comment: 
+|         /* Chrome10-25,Safari5.1-6 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2316
+|     Comment: 
+|         /* Footer widgets */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2292
+|     Comment: 
+|         /* 404 page */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 140
+|     Comment: 
+|         /* ]]> */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1468
+|     Comment: 
+|         /* Dropdown Toggle */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1082
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         7.0 Formatting
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1521
+|     Comment: 
+|         /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4118
+|     Comment: 
+|         /* Pagination */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 116
+|     Comment: 
+|         <!-- .entry-content -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1747
+|     Comment: 
+|         /* For browsers that support 'object-fit' */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3918
+|     Comment: 
+|         /* with sidebar */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 39
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://wordy/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
+|         <![endif]-->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2738
+|     Comment: 
+|         /* Search */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1882
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.4 Posts
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 915
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         6.0 Forms
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 119
+|     Comment: 
+|         <!-- #main -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3138
+|     Comment: 
+|         /* Add some space around the visual edit shortcut buttons. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1182
+|     Comment: 
+|         /* Hover effects */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 580
+|     Comment: 
+|         /* Typography for Arabic Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2520
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         15.0 Widgets
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3311
+|     Comment: 
+|         /* Blog Index, Archive, Search */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2195
+|     Comment: 
+|         /* Post Formats */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2616
+|     Comment: 
+|         /* Text widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4272
+|     Comment: 
+|         /* override styles added by JavaScript */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1677
+|     Comment: 
+|         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3991
+|     Comment: 
+|         /* Posts pagination */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1802
+|     Comment: 
+|         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+100 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1765
+|     Comment: 
+|         /* Hides div in Customizer preview when header images or videos change. */
+|     
+|     Path: http://wordy:80/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery Migrate v1.4.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://wordy:80/wp-includes/js/jquery/jquery.js?ver=1.12.4
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4308
+|     Comment: 
+|         /* Make sure color schemes don't affect to print */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4298
+|     Comment: 
+|         /* Brute force since user agents all print differently. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4294
+|     Comment: 
+|         /* Colors */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3034
+|     Comment: 
+|         /* Align more nicely with capital letters */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2393
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         14.0 Comments
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 795
+|     Comment: 
+|         /* Typography for Gujarati Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4208
+|     Comment: 
+|         /* Font sizes */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4172
+|     Comment: 
+|         /* Hide elements */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 42
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <script type='text/javascript' src='http://wordy/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=3.7.3'></script>
+|         <![endif]-->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4166
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         20.0 Print
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 97
+|     Comment: 
+|         <!-- .navigation-top -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4107
+|     Comment: 
+|         /* Sticky posts */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1298
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         11.0 Featured Image Hover
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2934
+|     Comment: 
+|         /* Playlist Color Overrides: Dark */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4027
+|     Comment: 
+|         /* Footer */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4019
+|     Comment: 
+|         /* Widgets */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 4011
+|     Comment: 
+|         /* Secondary */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3977
+|     Comment: 
+|         /* Comments */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3959
+|     Comment: 
+|         /* Pages */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3323
+|     Comment: 
+|         /* Site Footer */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 124
+|     Comment: 
+|         <!-- #content -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1886
+|     Comment: 
+|         /* Post Landing Page */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 336
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         3.0 Alignments
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3803
+|     Comment: 
+|         /* Posts */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3759
+|     Comment: 
+|         /* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1093
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         8.0 Lists
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/
+|     Line number: 133
+|     Comment: 
+|         <!-- .panel-content -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3471
+|     Comment: 
+|         /* Navigation */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2802
+|     Comment: 
+|         /* Calendar widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3373
+|     Comment: 
+|         /* Layout */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3330
+|     Comment: 
+|         /* Gallery Columns */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2830
+|     Comment: 
+|         /* Adhere to container width. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3935
+|     Comment: 
+|         /* blog and archive */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1678
+|     Comment: 
+|         /* FF3.6-15 */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3292
+|     Comment: 
+|         /* Front Page */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 833
+|     Comment: 
+|         /* Typography for Japanese Font */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 134
+|     Comment: 
+|         <!-- #colophon -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3275
+|     Comment: 
+|         /* Fix image alignment */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3226
+|     Comment: 
+|         /* Typography */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2546
+|     Comment: 
+|         /* widget forms */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 892
+|     Comment: 
+|         /* Remove letter-spacing for all non-latin alphabets */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2079
+|     Comment: 
+|         /* More tag */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1125
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         9.0 Tables
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3208
+|     Comment: 
+|         /* overrides previous !important styles */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2980
+|     Comment: 
+|         /* Playlist Style Overrides */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3144
+|     Comment: 
+|         /* Ensure that placeholder icons are visible. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3129
+|     Comment: 
+|         /* Show borders on the custom page panels only when the front page sections are being edited */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3114
+|     Comment: 
+|         /* Prevent :after from preventing interactions within the section */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 17
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         >>> TABLE OF CONTENTS:
+|         ----------------------------------------------------------------
+|         1.0 Normalize
+|         2.0 Accessibility
+|         3.0 Alignments
+|         4.0 Clearings
+|         5.0 Typography
+|         6.0 Forms
+|         7.0 Formatting
+|         8.0 Lists
+|         9.0 Tables
+|         10.0 Links
+|         11.0 Featured Image Hover
+|         12.0 Navigation
+|         13.0 Layout
+|            13.1 Header
+|            13.2 Front Page
+|            13.3 Regular Content
+|            13.4 Posts
+|            13.5 Pages
+|            13.6 Footer
+|         14.0 Comments
+|         15.0 Widgets
+|         16.0 Media
+|            16.1 Galleries
+|         17.0 Customizer
+|         18.0 SVGs Fallbacks
+|         19.0 Media Queries
+|         20.0 Print
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1163
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         10.0 Links
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3508
+|     Comment: 
+|         /* Main Navigation */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1564
+|     Comment: 
+|         /* Site branding */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2813
+|     Comment: 
+|         /* Gallery widget */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 99
+|     Comment: 
+|         <!-- #masthead -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1780
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.2 Front Page
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1360
+|     Comment: 
+|         /* Hide the menu on small screens when JavaScript is available.
+|          * It only works with JavaScript.
+|          */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2553
+|     Comment: 
+|         /* widget lists */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 80
+|     Comment: 
+|         <!-- .wrap -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3040
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         16.1 Galleries
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2829
+|     Comment: 
+|         /* Make sure images are scaled correctly. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3028
+|     Comment: 
+|         /* SVG Icons base styles */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 95
+|     Comment: 
+|         <!-- #site-navigation -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 359
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         4.0 Clearings
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3197
+|     Comment: 
+|         /* Show screen reader text in some cases */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1869
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.3 Regular Content
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2583
+|     Comment: 
+|         /* Widget lists of links */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1701
+|     Comment: 
+|         /* vw prevents 1px gap on left that 100% has */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1551
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.1 Header
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1502
+|     Comment: 
+|         /* Scroll down arrow */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3286
+|     Comment: 
+|         /* Site Branding */
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 117
+|     Comment: 
+|         <!-- #post-## -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 410
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         5.0 Typography
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3216
+|     Comment: 
+|         /* Adjust positioning of edit shortcuts, override style in customize-preview.css */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2303
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.6 Footer
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 136
+|     Comment: 
+|         <!-- #page -->
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 3097
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         17.0 Customizer
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1600
+|     Comment: 
+|         /* Prevent opacity from changing during selective refreshes in the customize preview */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2026
+|     Comment: 
+|         /* Aligned blockquotes */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1074
+|     Comment: 
+|         /* Since FF19 lowers the opacity of the placeholder by default */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2710
+|     Comment: 
+|         /* Contact Info Widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 775
+|     Comment: 
+|         /* Typography for Greek Font */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2758
+|     Comment: 
+|         /* Tag cloud widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2900
+|     Comment: 
+|         /* Playlist Color Overrides: Light */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2857
+|     Comment: 
+|         /* Remove bottom on embeds that wrapped in paragraphs via wpautop. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 299
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         2.0 Accessibility
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1498
+|     Comment: 
+|         /* Chrome, Safari, Opera */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2732
+|     Comment: 
+|         /* Recent Posts widget */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 333
+|     Comment: 
+|         /* Above WP toolbar. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1508
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.0 Layout
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/index.php/contact-us/
+|     Line number: 138
+|     Comment: 
+|         /* <![CDATA[ */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2265
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.5 Pages
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2885
+|     Comment: 
+|         /* Media Elements */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1059
+|     Comment: 
+|         /* Placeholder text color -- selectors need to be separate to work. */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 1415
+|     Comment: 
+|         /* Menu toggle */
+|     
+|     Path: http://wordy:80/wp-content/themes/twentyseventeen/style.css?ver=5.1.1
+|     Line number: 2087
+|     Comment: 
+|_        /* Single Post */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=wordy
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://wordy:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Form id: search-form-1
+|     Form action: http://wordy/
+|     
+|     Path: http://wordy:80/index.php/contact-us/%5c
+|     Form id: search-form-1
+|     Form action: http://wordy/
+|     
+|     Path: http://wordy:80/index.php/about-us/%5c
+|     Form id: search-form-1
+|_    Form action: http://wordy/
+|_http-date: Wed, 11 Sep 2019 01:10:19 GMT; -1s from local time.
+|_http-devframework: Wordpress detected. Found common traces on /
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wp-login.php: Possible admin folder
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 5.1.1
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|_  /readme.html: Interesting, a readme.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=wordy
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://wordy:80/%5c%22
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/wp-json/oembed/1.0/d.value%7delse;}},d)a.addEventListener(\"message\",a.wp.receiveEmbedMessage,!1),b.addEventListener(\"DOMContentLoaded\",c,!1),a.addEventListener(\"load\",c,!1)}(window,document);\n\/\/--
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/about-us/%5c
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/wordy%5c/index.php%5c/contact-us%5c/%5c%22
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/wordy%5c/embed%5c/%5c%22
+|   
+|   Error Code: 404
+|   	http://wordy:80/wp-includes/js/d.value%7delse;}},d)a.addEventListener("message",a.wp.receiveEmbedMessage,!1),b.addEventListener("DOMContentLoaded",c,!1),a.addEventListener("load",c,!1)}(window,document);
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/wordy%5c/%5c%22
+|   
+|   Error Code: 404
+|   	http://wordy:80/index.php/contact-us/%5c
+|   
+|   Error Code: 404
+|_  	http://wordy:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/wordy%5c/index.php%5c/contact-us%5c/embed%5c/%5c%22
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=wordy
+|   Found the following feeds: 
+|     RSS (version 2.0): http://wordy:80/index.php/feed/
+|     RSS (version 2.0): http://wordy:80/index.php/comments/feed/
+|     RSS (version 2.0): http://wordy/index.php/feed/
+|_    RSS (version 2.0): http://wordy/index.php/comments/feed/
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: WordPress 5.1.1
+| http-headers: 
+|   Date: Wed, 11 Sep 2019 01:10:16 GMT
+|   Server: Apache/2.4.25 (Debian)
+|   Link: <http://wordy/index.php/wp-json/>; rel="https://api.w.org/"
+|   Link: <http://wordy/>; rel=shortlink
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-screenshot-html: 
+|   Saved to wordy-192.168.92.170-80.png
+|_  Saved to 192.168.92.170-80.png
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.25 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 1
+|     /index.php/about-us/
+|       Other: 1
+|     /index.php/comments/feed/
+|       Other: 1
+|     /index.php/contact-us/
+|       Other: 1
+|     /index.php/feed/
+|       Other: 1
+|     /index.php/wp-json/
+|       Other: 1
+|     /wp-content/themes/twentyseventeen/
+|       css: 1
+|     /wp-includes/
+|       xml: 1
+|     /wp-includes/js/
+|       js: 1
+|     /wp-includes/js/jquery/
+|       Other: 1; js: 2
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /wp-content/themes/twentyseventeen/
+|   Total files found (by extension):
+|_    Other: 7; css: 1; js: 3; php: 1; xml: 1
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://wordy:80/wp-includes/js/jquery/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://wordy:80/wp-includes/js/jquery/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://wordy:80/wp-includes/js/jquery/?C=S%3bO%3dA%27%20OR%20sqlspider
+|_    http://wordy:80/wp-includes/js/jquery/?C=D%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Wordy &#8211; Just another WordPress site
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 301
+| http-waf-detect: IDS/IPS/WAF detected:
+|_wordy:80/?p4yl04d3=<script>alert(document.cookie)</script>
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   themes
+|     twentysixteen 1.9
+|     twentyseventeen 2.1
+|   plugins
+|     akismet
+|_    user-role-editor 4.24
+| http-wordpress-users: 
+| Username found: admin
+| Username found: graham
+| Username found: mark
+| Username found: sarah
+| Username found: jens
+|_Search stopped at ID #25. Increase the upper limit if necessary with 'http-wordpress-users.limit'
+MAC Address: 00:0C:29:F1:97:73 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 10 18:10:41 2019 -- 1 IP address (1 host up) scanned in 41.85 seconds

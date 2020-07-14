@@ -1,0 +1,51 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.185" color="navyblue" fillcolor="#ffffff" tooltip="Kioptrix: 2014 (#5)"];
+  10[label="Mozilla4_browser" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  11[label="burp proxy: useragent: Mozilla4_browser" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  12[label="/phptax/ webapp" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  13[label="edb: 25849" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  14[label="netcat (www)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  15[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  16[label="freebsd 9" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  17[label="edb: 28718" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  18[label="root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  2[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="html comment: pChart2.1.3/index.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="http://192.168.92.185/pChart2.1.3/index.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  6[label="edb: 31173" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  7[label="directory traversal: /../../etc/passwd" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  8[label="directory traversal: /../../usr/local/etc/apache22/httpd.conf" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  9[label="8080/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "Kioptrix: 2014 (#5)";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 9 [color="#665957"];
+    10 -> 5 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    16 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 11 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    6 -> 8 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

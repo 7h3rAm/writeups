@@ -1,0 +1,33 @@
+http://192.168.92.131:80/.hta (Status: 403) [Size: 325]
+http://192.168.92.131:80/.hta.txt (Status: 403) [Size: 329]
+http://192.168.92.131:80/.hta.html (Status: 403) [Size: 330]
+http://192.168.92.131:80/.hta.php (Status: 403) [Size: 329]
+http://192.168.92.131:80/.hta.asp (Status: 403) [Size: 329]
+http://192.168.92.131:80/.hta.aspx (Status: 403) [Size: 330]
+http://192.168.92.131:80/.hta.jsp (Status: 403) [Size: 329]
+http://192.168.92.131:80/.htaccess (Status: 403) [Size: 330]
+http://192.168.92.131:80/.htpasswd (Status: 403) [Size: 330]
+http://192.168.92.131:80/.htaccess.txt (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htpasswd.txt (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htaccess.html (Status: 403) [Size: 335]
+http://192.168.92.131:80/.htpasswd.html (Status: 403) [Size: 335]
+http://192.168.92.131:80/.htpasswd.php (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htaccess.php (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htaccess.asp (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htaccess.aspx (Status: 403) [Size: 335]
+http://192.168.92.131:80/.htaccess.jsp (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htpasswd.asp (Status: 403) [Size: 334]
+http://192.168.92.131:80/.htpasswd.aspx (Status: 403) [Size: 335]
+http://192.168.92.131:80/.htpasswd.jsp (Status: 403) [Size: 334]
+http://192.168.92.131:80/cgi-bin/ (Status: 403) [Size: 329]
+http://192.168.92.131:80/cgi-bin/.html (Status: 403) [Size: 334]
+http://192.168.92.131:80/images (Status: 301)
+http://192.168.92.131:80/index (Status: 200) [Size: 1255]
+http://192.168.92.131:80/index.php (Status: 200) [Size: 1255]
+http://192.168.92.131:80/index.php (Status: 200) [Size: 1255]
+http://192.168.92.131:80/john (Status: 301)
+http://192.168.92.131:80/logout (Status: 302)
+http://192.168.92.131:80/logout.php (Status: 302)
+http://192.168.92.131:80/member (Status: 302)
+http://192.168.92.131:80/member.php (Status: 302)
+http://192.168.92.131:80/server-status (Status: 403) [Size: 334]

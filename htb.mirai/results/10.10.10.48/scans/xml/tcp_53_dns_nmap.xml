@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Nov 12 15:49:46 2019 as: nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/tcp_53_dns_nmap.txt -oX /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/xml/tcp_53_dns_nmap.xml 10.10.10.48 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/tcp_53_dns_nmap.txt -oX /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/xml/tcp_53_dns_nmap.xml 10.10.10.48" start="1573602586" startstr="Tue Nov 12 15:49:46 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1573602588"/>
+<taskend task="NSE" time="1573602588"/>
+<taskbegin task="NSE" time="1573602588"/>
+<taskend task="NSE" time="1573602588"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1573602588"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1573602588"/>
+<taskbegin task="SYN Stealth Scan" time="1573602588"/>
+<taskend task="SYN Stealth Scan" time="1573602588" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1573602588"/>
+<taskend task="Service scan" time="1573602594" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1573602594"/>
+<taskend task="NSE" time="1573602609"/>
+<taskbegin task="NSE" time="1573602609"/>
+<taskend task="NSE" time="1573602609"/>
+<host starttime="1573602588" endtime="1573602609"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="domain" product="dnsmasq" version="2.76" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.76</cpe></service><script id="dns-nsec-enum" output="Can&apos;t determine domain for host 10.10.10.48; use dns-nsec-enum.domains script arg."/><script id="dns-nsec3-enum" output="Can&apos;t determine domain for host 10.10.10.48; use dns-nsec3-enum.domains script arg."/><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.76"><elem key="bind.version">dnsmasq-2.76</elem>
+</script></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.10.10.48&quot;; use dns-brute.domain script argument."/></hostscript><times srtt="62575" rttvar="62575" to="312875"/>
+</host>
+<taskbegin task="NSE" time="1573602610"/>
+<taskend task="NSE" time="1573602610"/>
+<taskbegin task="NSE" time="1573602610"/>
+<taskend task="NSE" time="1573602610"/>
+<runstats><finished time="1573602610" timestr="Tue Nov 12 15:50:10 2019" elapsed="23.85" summary="Nmap done at Tue Nov 12 15:50:10 2019; 1 IP address (1 host up) scanned in 23.85 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

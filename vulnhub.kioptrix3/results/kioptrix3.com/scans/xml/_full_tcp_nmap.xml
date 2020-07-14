@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Sep 28 21:12:22 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/xml/_full_tcp_nmap.xml kioptrix3.com -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/xml/_full_tcp_nmap.xml kioptrix3.com" start="1569730342" startstr="Sat Sep 28 21:12:22 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569730343"/>
+<taskend task="NSE" time="1569730343"/>
+<taskbegin task="NSE" time="1569730343"/>
+<taskend task="NSE" time="1569730343"/>
+<taskbegin task="ARP Ping Scan" time="1569730343"/>
+<taskend task="ARP Ping Scan" time="1569730343" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1569730343"/>
+<taskend task="SYN Stealth Scan" time="1569730358" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1569730359"/>
+<taskend task="Service scan" time="1569730368" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1569730383"/>
+<taskend task="NSE" time="1569730383"/>
+<taskbegin task="NSE" time="1569730383"/>
+<taskend task="NSE" time="1569730383"/>
+<host starttime="1569730343" endtime="1569730383"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.184" addrtype="ipv4"/>
+<address addr="00:0C:29:3F:EF:00" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="kioptrix3.com" type="user"/>
+<hostname name="kioptrix3.com" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1.2" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 30:e3:f6:dc:2e:22:5d:17:ac:46:02:39:ad:71:cb:49 (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAL4CpDFXD9Zn2ONktcyGQL37Dn6s9JaOv3oKjxfdiABm9GjRkLEtbSAK3vhBBUJTZcVKYZk21lFHAqoe/+pLr4U9yOLOBbSoKNSxQ2VHN9FOLc9C58hKMF/0sjDsSIZnaI4zO7M4HmdEMYXONrmj2x6qczbfqecs+z4cEYVUF3R3AAAAFQCuG9mm7mLm1GGqZRSICZ+omMZkKQAAAIEAnj8NDH48hL+Pp06GWQZOlhte8JRZT5do6n8+bCgRSOvaYLYGoNi/GBzlET6tMSjWMsyhVY/YKTNTXRjqzS1DqbODM7M1GzLjsmGtVlkLoQafV6HJ25JsKPCEzSImjeOCpzwRP5opjmMrYBMjjKqtIlWYpaUijT4uR08tdaTxCukAAACBAJeJ9j2DTugDAy+SLCa0dZCH+jnclNo3o6oINF1FjzICdgDONL2YbBeU3CiAL2BureorAE0lturvvrIC2xVn2vHhrLpz6NPbDAkrLV2/rwoavbCkYGrwXdBHd5ObqBIkoUKbI1hGIGA51nafI2tjoXPfIeHeNOep20hgr32x9x1x&#xa;  2048 9a:82:e6:96:e4:7e:d6:a6:d7:45:44:cb:19:aa:ec:dd (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyOv6c+5ON+N+ZNDtjetiZ0eUxnIR1U0UqSF+a24Pz2xqdnJC1EN0O3zxGJB3gfPdJlyqUDiozbEth1GBP//8wbWsa1pLJOL1YmcumEJCsitngnrVN7huACG127UjKP8hArECjCHzc1P372gN3AQ/h5aZd0VV17e03HnAJ64ZziOQzVJ+DKWJbiHoXC2cdD1P+nlhK5fULe0QBvmA14gkl2LWA6KILHiisHZpF+V3X7NvXYyCSSI9GeXwhW4RKOCGdGVbjYf7d93K9gj0oU7dHrbdNKgX0WosuhMuXmKleHkIxfyLAILYWrRRj0GVdhZfbI99J3TYaR/yLTpb0D6mhw=="><table>
+<elem key="fingerprint">30e3f6dc2e225d17ac460239ad71cb49</elem>
+<elem key="bits">1024.0</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAL4CpDFXD9Zn2ONktcyGQL37Dn6s9JaOv3oKjxfdiABm9GjRkLEtbSAK3vhBBUJTZcVKYZk21lFHAqoe/+pLr4U9yOLOBbSoKNSxQ2VHN9FOLc9C58hKMF/0sjDsSIZnaI4zO7M4HmdEMYXONrmj2x6qczbfqecs+z4cEYVUF3R3AAAAFQCuG9mm7mLm1GGqZRSICZ+omMZkKQAAAIEAnj8NDH48hL+Pp06GWQZOlhte8JRZT5do6n8+bCgRSOvaYLYGoNi/GBzlET6tMSjWMsyhVY/YKTNTXRjqzS1DqbODM7M1GzLjsmGtVlkLoQafV6HJ25JsKPCEzSImjeOCpzwRP5opjmMrYBMjjKqtIlWYpaUijT4uR08tdaTxCukAAACBAJeJ9j2DTugDAy+SLCa0dZCH+jnclNo3o6oINF1FjzICdgDONL2YbBeU3CiAL2BureorAE0lturvvrIC2xVn2vHhrLpz6NPbDAkrLV2/rwoavbCkYGrwXdBHd5ObqBIkoUKbI1hGIGA51nafI2tjoXPfIeHeNOep20hgr32x9x1x</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+<table>
+<elem key="fingerprint">9a82e696e47ed6a6d74544cb19aaecdd</elem>
+<elem key="bits">2048.0</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAQEAyOv6c+5ON+N+ZNDtjetiZ0eUxnIR1U0UqSF+a24Pz2xqdnJC1EN0O3zxGJB3gfPdJlyqUDiozbEth1GBP//8wbWsa1pLJOL1YmcumEJCsitngnrVN7huACG127UjKP8hArECjCHzc1P372gN3AQ/h5aZd0VV17e03HnAJ64ZziOQzVJ+DKWJbiHoXC2cdD1P+nlhK5fULe0QBvmA14gkl2LWA6KILHiisHZpF+V3X7NvXYyCSSI9GeXwhW4RKOCGdGVbjYf7d93K9gj0oU7dHrbdNKgX0WosuhMuXmKleHkIxfyLAILYWrRRj0GVdhZfbI99J3TYaR/yLTpb0D6mhw==</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.8" extrainfo="(Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.8</cpe></service><script id="http-cookie-flags" output="&#xa;  /: &#xa;    PHPSESSID: &#xa;      httponly flag not set"><table key="/">
+<table key="PHPSESSID">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-favicon" output="Unknown favicon MD5: 99EFC00391F142252888403BB1C196D2"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch"><elem>Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch</elem>
+</script><script id="http-title" output="Ligoat Security - Got Goat? Security ..."><elem key="title">Ligoat Security - Got Goat? Security ...</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42939"/>
+<osmatch name="Linux 2.6.9 - 2.6.33" accuracy="100" line="59153">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=9/28%OT=22%CT=1%CU=42939%PV=Y%DS=1%DC=D%G=Y%M=000C29%T&#xa;OS:M=5D902F4F%P=i686-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CB%TI=Z%II=I%TS=7)SEQ&#xa;OS:(SP=C7%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=7)OPS(O1=M5B4ST11NW5%O2=M5B4ST11NW&#xa;OS:5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B4ST11NW5%O6=M5B4ST11)WIN(W1=16A0%&#xa;OS:W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4N&#xa;OS:NSNW5%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%&#xa;OS:T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11NW5%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A&#xa;OS:%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T5(R=N&#xa;OS:)T6(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)T7(R=Y%DF=Y%T&#xa;OS:=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RI&#xa;OS:D=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2240" lastboot="Sat Sep 28 20:35:43 2019"/>
+<distance value="1"/>
+<tcpsequence index="199" difficulty="Good luck!" values="279151EF,27C22152,27B2733E,27D7A0C1,285821A5,27F872F9"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="36A81,36A8C,36A97,36AA2,36AAD,36AB8"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.184" rtt="1.05" host="kioptrix3.com"/>
+</trace>
+<times srtt="1049" rttvar="1378" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569730383"/>
+<taskend task="NSE" time="1569730383"/>
+<taskbegin task="NSE" time="1569730383"/>
+<taskend task="NSE" time="1569730383"/>
+<runstats><finished time="1569730383" timestr="Sat Sep 28 21:13:03 2019" elapsed="41.23" summary="Nmap done at Sat Sep 28 21:13:03 2019; 1 IP address (1 host up) scanned in 41.23 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

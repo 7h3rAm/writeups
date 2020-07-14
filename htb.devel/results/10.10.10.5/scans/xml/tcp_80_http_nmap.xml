@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Nov  5 11:29:18 2019 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/xml/tcp_80_http_nmap.xml 10.10.10.5 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/xml/tcp_80_http_nmap.xml 10.10.10.5" start="1572982158" startstr="Tue Nov  5 11:29:18 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572982160"/>
+<taskend task="NSE" time="1572982160"/>
+<taskbegin task="NSE" time="1572982160"/>
+<taskend task="NSE" time="1572982160"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572982160"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572982160"/>
+<taskbegin task="SYN Stealth Scan" time="1572982160"/>
+<taskend task="SYN Stealth Scan" time="1572982161" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572982161"/>
+<taskend task="Service scan" time="1572982167" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572982167"/>
+<taskprogress task="NSE" time="1572982198" percent="98.39" remaining="1" etc="1572982199"/>
+<taskprogress task="NSE" time="1572982228" percent="99.68" remaining="1" etc="1572982228"/>
+<taskprogress task="NSE" time="1572982258" percent="99.68" remaining="1" etc="1572982258"/>
+<taskprogress task="NSE" time="1572982288" percent="99.68" remaining="1" etc="1572982288"/>
+<taskprogress task="NSE" time="1572982318" percent="99.68" remaining="1" etc="1572982318"/>
+<taskprogress task="NSE" time="1572982348" percent="99.68" remaining="1" etc="1572982349"/>
+<taskprogress task="NSE" time="1572982378" percent="99.68" remaining="1" etc="1572982379"/>
+<taskprogress task="NSE" time="1572982408" percent="99.68" remaining="1" etc="1572982409"/>
+<taskprogress task="NSE" time="1572982438" percent="99.68" remaining="1" etc="1572982439"/>
+<taskprogress task="NSE" time="1572982468" percent="99.68" remaining="1" etc="1572982469"/>
+<taskprogress task="NSE" time="1572982498" percent="99.68" remaining="2" etc="1572982499"/>
+<taskprogress task="NSE" time="1572982528" percent="99.68" remaining="2" etc="1572982529"/>
+<taskprogress task="NSE" time="1572982558" percent="99.68" remaining="2" etc="1572982559"/>
+<taskend task="NSE" time="1572982566"/>
+<taskbegin task="NSE" time="1572982566"/>
+<taskend task="NSE" time="1572982566"/>
+<host starttime="1572982160" endtime="1572982566"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.5" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-chrono" output="Request times for /; avg: 1431.94ms; min: 604.48ms; max: 4263.58ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.5&#xa;    &#xa;    Path: http://10.10.10.5:80/&#xa;    Line number: 7&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;        body {&#xa;        &#x9;color:#000000;&#xa;        &#x9;background-color:#B3B3B3;&#xa;        &#x9;margin:0;&#xa;        }&#xa;        &#xa;        #container {&#xa;        &#x9;margin-left:auto;&#xa;        &#x9;margin-right:auto;&#xa;        &#x9;text-align:center;&#xa;        &#x9;}&#xa;        &#xa;        a img {&#xa;        &#x9;border:none;&#xa;        }&#xa;        &#xa;        -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Sat, 09 Nov 2019 03:27:21 GMT; +3d07h57m46s from local time."><elem key="date">2019-11-09T03:27:21+00:00</elem>
+<elem key="delta">287866.0</elem>
+</script><script id="http-devframework" output="ASP.NET detected. Found related header."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Content-Type: text/html&#xa;  Last-Modified: Fri, 17 Mar 2017 14:37:30 GMT&#xa;  Accept-Ranges: bytes&#xa;  ETag: &quot;37b5ed12c9fd21:0&quot;&#xa;  Server: Microsoft-IIS/7.5&#xa;  X-Powered-By: ASP.NET&#xa;  Date: Sat, 09 Nov 2019 03:27:34 GMT&#xa;  Connection: close&#xa;  Content-Length: 689&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash dfbd1ee66a4e792349591b88660c0956&#xa;Credits query returned unknown hash dfbd1ee66a4e792349591b88660c0956"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-screenshot-html" output="&#xa;  Saved to 10.10.10.5-80.png&#xa;"/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; png: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; png: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="IIS7"><elem key="title">IIS7</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="116840" rttvar="116840" to="584200"/>
+</host>
+<taskbegin task="NSE" time="1572982566"/>
+<taskend task="NSE" time="1572982566"/>
+<taskbegin task="NSE" time="1572982566"/>
+<taskend task="NSE" time="1572982566"/>
+<runstats><finished time="1572982566" timestr="Tue Nov  5 11:36:06 2019" elapsed="407.57" summary="Nmap done at Tue Nov  5 11:36:06 2019; 1 IP address (1 host up) scanned in 407.57 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

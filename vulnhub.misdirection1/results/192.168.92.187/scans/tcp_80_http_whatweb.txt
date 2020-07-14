@@ -1,0 +1,94 @@
+WhatWeb report for http://192.168.92.187:80
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.92.187
+Country   : RESERVED, ZZ
+
+Summary   : Python[2.7.15rc1], X-UA-Compatible[IE=edge], Cookies[session_id_init], Script[text/javascript], X-Powered-By[web2py], HTTPServer[Rocket 1.2.6 Python/2.7.15rc1], Web2py[web2py], JQuery, HttpOnly[session_id_init], Meta-Author[Massimo Di pierro]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : session_id_init
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Rocket 1.2.6 Python/2.7.15rc1 (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : session_id_init
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name 
+	tag - info: 
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : Massimo Di pierro
+
+[ Python ]
+	Python is a programming language that lets you work more 
+	quickly and integrate your systems more effectively. You 
+	can learn to use Python and see almost immediate gains in 
+	productivity and lower maintenance costs. 
+
+	Version      : 2.7.15rc1
+	Website     : http://www.python.org/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+[ Web2py ]
+	Web2py - Free open source full-stack framework written in 
+	Pytho 
+
+	String       : web2py
+	Google Dorks: (1)
+	Website     : http://www.web2py.com/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : web2py (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 11 Oct 2019 19:15:25 GMT
+	Server: Rocket 1.2.6 Python/2.7.15rc1
+	X-Powered-By: web2py
+	Expires: Fri, 11 Oct 2019 19:15:25 GMT
+	Pragma: no-cache
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Content-Type: text/html; charset=utf-8
+	Set-Cookie: session_id_init=192.168.92.183-578b680a-0d54-41f0-af29-ac1b07cd9b07; httponly; Path=/; SameSite=Lax
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Connection: close
+	Transfer-Encoding: chunked
+	

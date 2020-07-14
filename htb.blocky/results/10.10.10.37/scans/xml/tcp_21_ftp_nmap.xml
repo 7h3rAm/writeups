@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Nov 13 12:25:46 2019 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.37 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.37" start="1573676746" startstr="Wed Nov 13 12:25:46 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1573676747"/>
+<taskend task="NSE" time="1573676747"/>
+<taskbegin task="NSE" time="1573676747"/>
+<taskend task="NSE" time="1573676747"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1573676748"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1573676748"/>
+<taskbegin task="SYN Stealth Scan" time="1573676748"/>
+<taskend task="SYN Stealth Scan" time="1573676748" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1573676748"/>
+<taskend task="Service scan" time="1573676748" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1573676748"/>
+<taskend task="NSE" time="1573676750"/>
+<taskbegin task="NSE" time="1573676750"/>
+<taskend task="NSE" time="1573676750"/>
+<host starttime="1573676748" endtime="1573676750"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="ProFTPD" version="1.3.5a" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:proftpd:proftpd:1.3.5a</cpe></service><script id="banner" output="220 ProFTPD 1.3.5a Server (Debian) [::ffff:10.10.10.37]"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="78456" rttvar="78456" to="392280"/>
+</host>
+<taskbegin task="NSE" time="1573676750"/>
+<taskend task="NSE" time="1573676750"/>
+<taskbegin task="NSE" time="1573676750"/>
+<taskend task="NSE" time="1573676750"/>
+<runstats><finished time="1573676750" timestr="Wed Nov 13 12:25:50 2019" elapsed="4.84" summary="Nmap done at Wed Nov 13 12:25:50 2019; 1 IP address (1 host up) scanned in 4.84 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

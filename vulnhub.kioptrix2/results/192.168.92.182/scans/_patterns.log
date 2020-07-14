@@ -1,0 +1,22 @@
+nmap-quick - Matched Pattern: unauthorized
+
+tcp/3306/nmap-mysql - Matched Pattern: unauthorized
+
+nmap-full-tcp - Matched Pattern: unauthorized
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.0.52 (CentOS)
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.0.52 (CentOS)
+
+tcp/443/nmap-http - Identified HTTP Server: Apache/2.0.52 (CentOS)
+
+tcp/443/nmap-http - Identified HTTP Server: Apache/2.0.52 (CentOS)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

@@ -1,0 +1,37 @@
+# Nmap 7.70 scan initiated Fri Sep 27 15:46:39 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/xml/tcp_139_smb_nmap.xml 192.168.92.181
+Nmap scan report for 192.168.92.181
+Host is up, received arp-response (0.0046s latency).
+Scanned at 2019-09-27 15:46:41 PDT for 271s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd (workgroup: MYGROUP)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:0C:29:45:0D:56 (VMware)
+
+Host script results:
+| nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   KIOPTRIX<00>         Flags: <unique><active>
+|   KIOPTRIX<03>         Flags: <unique><active>
+|   KIOPTRIX<20>         Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   MYGROUP<00>          Flags: <group><active>
+|   MYGROUP<1d>          Flags: <unique><active>
+|   MYGROUP<1e>          Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+|_smb-print-text: false
+|_smb-protocols: No dialects accepted. Something may be blocking the responses
+|_smb-vuln-ms10-061: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [14]
+|_smb-vuln-ms17-010: Could not connect to 'IPC$'
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 27 15:51:12 2019 -- 1 IP address (1 host up) scanned in 273.13 seconds

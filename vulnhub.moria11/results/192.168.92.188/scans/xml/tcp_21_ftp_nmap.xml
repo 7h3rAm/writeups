@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Oct 11 15:32:18 2019 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.188 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.188" start="1570833138" startstr="Fri Oct 11 15:32:18 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570833141"/>
+<taskend task="NSE" time="1570833141"/>
+<taskbegin task="NSE" time="1570833141"/>
+<taskend task="NSE" time="1570833141"/>
+<taskbegin task="ARP Ping Scan" time="1570833141"/>
+<taskend task="ARP Ping Scan" time="1570833141" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570833142"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570833142"/>
+<taskbegin task="SYN Stealth Scan" time="1570833142"/>
+<taskend task="SYN Stealth Scan" time="1570833144" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1570833145"/>
+<taskend task="Service scan" time="1570833156" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1570833156"/>
+<taskend task="NSE" time="1570833160"/>
+<taskbegin task="NSE" time="1570833160"/>
+<taskend task="NSE" time="1570833160"/>
+<host starttime="1570833141" endtime="1570833160"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.188" addrtype="ipv4"/>
+<address addr="00:0C:29:84:7D:D1" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.0.8 or later" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="banner" output="220 Welcome Balrog!"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="22352" rttvar="24177" to="119060"/>
+</host>
+<taskbegin task="NSE" time="1570833160"/>
+<taskend task="NSE" time="1570833160"/>
+<taskbegin task="NSE" time="1570833160"/>
+<taskend task="NSE" time="1570833160"/>
+<runstats><finished time="1570833160" timestr="Fri Oct 11 15:32:40 2019" elapsed="22.07" summary="Nmap done at Fri Oct 11 15:32:40 2019; 1 IP address (1 host up) scanned in 22.07 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

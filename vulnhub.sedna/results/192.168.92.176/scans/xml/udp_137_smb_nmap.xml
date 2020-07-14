@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Sep 18 18:06:25 2019 as: nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/udp_137_smb_nmap.xml 192.168.92.176 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/udp_137_smb_nmap.xml 192.168.92.176" start="1568855185" startstr="Wed Sep 18 18:06:25 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568855186"/>
+<taskend task="NSE" time="1568855186"/>
+<taskbegin task="NSE" time="1568855186"/>
+<taskend task="NSE" time="1568855186"/>
+<taskbegin task="ARP Ping Scan" time="1568855186"/>
+<taskend task="ARP Ping Scan" time="1568855186" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568855186"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568855186"/>
+<taskbegin task="UDP Scan" time="1568855186"/>
+<taskend task="UDP Scan" time="1568855187" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568855187"/>
+<taskend task="Service scan" time="1568855187" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568855187"/>
+<taskend task="NSE" time="1568855187"/>
+<taskbegin task="NSE" time="1568855187"/>
+<taskend task="NSE" time="1568855187"/>
+<host starttime="1568855186" endtime="1568855187"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.176" addrtype="ipv4"/>
+<address addr="00:0C:29:53:40:6E" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="64"/><service name="netbios-ns" product="Samba nmbd netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="SEDNA" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: SEDNA, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  SEDNA&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  SEDNA&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  SEDNA&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="user">&lt;unknown&gt;</elem>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="name">SEDNA</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">SEDNA</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">3</elem>
+</table>
+<table>
+<elem key="name">SEDNA</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+</table>
+<table>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+</table>
+<table>
+<elem key="name">WORKGROUP</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+</table>
+</table>
+<table key="mac">
+<elem key="address">&lt;unknown&gt;</elem>
+<elem key="manuf">unknown</elem>
+</table>
+<elem key="server_name">SEDNA</elem>
+</script></hostscript><times srtt="1081" rttvar="3951" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568855187"/>
+<taskend task="NSE" time="1568855187"/>
+<taskbegin task="NSE" time="1568855187"/>
+<taskend task="NSE" time="1568855187"/>
+<runstats><finished time="1568855187" timestr="Wed Sep 18 18:06:27 2019" elapsed="2.05" summary="Nmap done at Wed Sep 18 18:06:27 2019; 1 IP address (1 host up) scanned in 2.05 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

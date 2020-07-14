@@ -1,0 +1,30 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.134
++ Target Hostname:    192.168.92.134
++ Target Port:        80
++ Start Time:         2019-10-17 15:47:25 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Retrieved x-powered-by header: PHP/5.5.29
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server leaks inodes via ETags, header found with file /robots.txt, fields: 0x29 0x52467010ef8ad 
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html, index.php
++ OSVDB-3092: /admin/: This might be interesting...
++ Uncommon header 'link' found, with contents: <http://192.168.92.134/?p=23>; rel=shortlink
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ OSVDB-3092: /license.txt: License file found may identify site software.
++ /admin/index.html: Admin login page/section found.
++ Cookie wordpress_test_cookie created without the httponly flag
++ /wp-login/: Admin login page/section found.
++ /wordpress/: A Wordpress installation was found.
++ /wp-admin/wp-login.php: Wordpress login found
++ /blog/wp-login.php: Wordpress login found
++ /wp-login.php: Wordpress login found
++ 7535 requests: 0 error(s) and 17 item(s) reported on remote host
++ End Time:           2019-10-17 17:00:11 (GMT-7) (4366 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

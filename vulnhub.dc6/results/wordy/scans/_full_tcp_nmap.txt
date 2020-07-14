@@ -1,0 +1,55 @@
+# Nmap 7.70 scan initiated Tue Sep 10 18:09:50 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/vulnhub/dc6/results/wordy/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_full_tcp_nmap.xml wordy
+adjust_timeouts2: packet supposedly had rtt of -454301 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -454301 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -461512 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -461512 microseconds.  Ignoring time.
+Nmap scan report for wordy (192.168.92.170)
+Host is up, received arp-response (0.00065s latency).
+Scanned at 2019-09-10 18:09:51 PDT for 25s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 3e:52:ce:ce:01:b6:94:eb:7b:03:7d:be:08:7f:5f:fd (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDHiBBFUtpw1T9DZyoXpMp3kg25/RgmGZRFFmZuTfV9SJPxJCvrQXdM6P5GfFLFcgnLlcOBhBbv33N9HvWisycRypK0uLK26bntqfyTAFCdMXcud7fKNgRBxJdN8onwl4Hly3wzRBJxFWqTdD1RF8viYH4TYIs5+WLpN7KihosjpbwzPpOnbDQZUw7GdHvosV7dFI6IMcF57R4G5LzSgV66GACNGxRn72ypwfOMaVbsoxzCHQCJBvd8ULL0YeAFtNeHoyJ8tL3dZlu71Wt9ePYf7ZreO+en701iDqL6T/iyt3wwTDl7NwpZGj5+GrlyfRSFoNyHqdd0xjPmXyoHynp
+|   256 3c:83:65:71:dd:73:d7:23:f8:83:0d:e3:46:bc:b5:6f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE+jke+7np4l7EWf0wgySSp3MtYFcI6klVOWm7tDjas8eDxc9jYOhR4uK7koa2CkQPDd18XJSt0yNAGQFBb7wzI=
+|   256 41:89:9e:85:ae:30:5b:e0:8f:a4:68:71:06:b4:15:ee (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII1mnJveN8yJySEDhG8wjYqtSKmcYNdX5EVqzxYb92dP
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.25 ((Debian))
+|_http-generator: WordPress 5.1.1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.25 (Debian)
+|_http-title: Wordy &#8211; Just another WordPress site
+MAC Address: 00:0C:29:F1:97:73 (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/10%OT=22%CT=1%CU=36785%PV=Y%DS=1%DC=D%G=Y%M=000C29%T
+OS:M=5D784978%P=i686-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%T
+OS:S=8)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=
+OS:M5B4ST11NW7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7
+OS:120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A
+OS:=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%
+OS:Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=
+OS:A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=
+OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%
+OS:T=40%CD=S)
+
+Uptime guess: 193.424 days (since Fri Mar  1 06:59:17 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.65 ms wordy (192.168.92.170)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 10 18:10:16 2019 -- 1 IP address (1 host up) scanned in 26.52 seconds

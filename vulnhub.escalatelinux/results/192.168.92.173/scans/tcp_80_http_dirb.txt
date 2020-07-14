@@ -1,0 +1,28 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_80_http_dirb.txt
+START_TIME: Tue Sep 17 11:47:59 2019
+URL_BASE: http://192.168.92.173:80/
+WORDLIST_FILES: /usr/share/seclists/Discovery/Web-Content/common.txt
+OPTION: Printing LOCATION header
+OPTION: Not Recursive
+OPTION: Silent Mode
+EXTENSIONS_LIST: (,.txt,.html,.php,.asp,.aspx) | ()(.txt)(.html)(.php)(.asp)(.aspx) [NUM = 6]
+
+-----------------
+
+GENERATED WORDS: 4593
+
+---- Scanning URL: http://192.168.92.173:80/ ----
++ http://192.168.92.173:80/index.html (CODE:200|SIZE:10918)
++ http://192.168.92.173:80/index.html (CODE:200|SIZE:10918)
++ http://192.168.92.173:80/server-status (CODE:403|SIZE:302)
++ http://192.168.92.173:80/shell.php (CODE:200|SIZE:29)
+
+-----------------
+END_TIME: Tue Sep 17 11:49:15 2019
+DOWNLOADED: 27558 - FOUND: 4

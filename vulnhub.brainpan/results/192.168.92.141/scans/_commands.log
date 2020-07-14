@@ -1,0 +1,26 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/_full_tcp_nmap.xml" 192.168.92.141
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/_top_20_udp_nmap.xml" 192.168.92.141
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/_quick_tcp_nmap.xml" 192.168.92.141
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.141:9999 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_9999_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.141:10000 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 10000 --script="(http* or ssl*) and not (broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_nmap.txt" -oX "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/tcp_10000_http_nmap.xml" 192.168.92.141
+
+curl -sSik http://192.168.92.141:10000/ -m 10 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_index.html"
+
+curl -sSik http://192.168.92.141:10000/robots.txt -m 10 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.141:10000/ /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.92.141:10000 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_whatweb.txt"
+
+nikto -ask=no -h http://192.168.92.141:10000 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_nikto.txt"
+
+gobuster -u http://192.168.92.141:10000/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,403" -x "txt,html,php,asp,aspx" 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_gobuster.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.141:10000 2>&1 | tee "/root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_sslscan.txt"; fi
+

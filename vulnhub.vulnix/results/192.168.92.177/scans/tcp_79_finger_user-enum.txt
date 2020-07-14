@@ -1,0 +1,215 @@
+finger: 4Dgifts: no such user.
+finger: EZsetup: no such user.
+finger: OutOfBox: no such user.
+finger: ROOT: no such user.
+finger: adm: no such user.
+finger: admin: no such user.
+finger: administrator: no such user.
+finger: anon: no such user.
+finger: auditor: no such user.
+finger: avahi: no such user.
+finger: avahi-autoipd: no such user.
+Login: backup         			Name: backup
+Directory: /var/backups             	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: bbs: no such user.
+Login: bin            			Name: bin
+Directory: /bin                     	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: checkfs: no such user.
+finger: checkfsys: no such user.
+finger: checksys: no such user.
+finger: cmwlogin: no such user.
+finger: couchdb: no such user.
+Login: daemon         			Name: daemon
+Directory: /usr/sbin                	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: dbadmin: no such user.
+finger: demo: no such user.
+finger: demos: no such user.
+finger: diag: no such user.
+finger: distccd: no such user.
+finger: dni: no such user.
+finger: fal: no such user.
+finger: fax: no such user.
+finger: ftp: no such user.
+Login: games          			Name: games
+Directory: /usr/games               	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: gdm: no such user.
+Login: gnats          			Name: Gnats Bug-Reporting System (admin)
+Directory: /var/lib/gnats           	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: gopher: no such user.
+finger: gropher: no such user.
+finger: guest: no such user.
+finger: haldaemon: no such user.
+finger: halt: no such user.
+finger: hplip: no such user.
+finger: informix: no such user.
+finger: install: no such user.
+Login: irc            			Name: ircd
+Directory: /var/run/ircd            	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: karaf: no such user.
+finger: kernoops: no such user.
+Login: libuuid        			Name: 
+Directory: /var/lib/libuuid         	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+Login: list           			Name: Mailing List Manager
+Directory: /var/list                	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: listen: no such user.
+Login: lp             			Name: lp
+Directory: /var/spool/lpd           	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: lpadm: no such user.
+finger: lpadmin: no such user.
+finger: lynx: no such user.
+Login: mail           			Name: mail
+Directory: /var/mail                	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+
+Login: dovecot        			Name: Dovecot mail server
+Directory: /usr/lib/dovecot         	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: man            			Name: man
+Directory: /var/cache/man           	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: me: no such user.
+Login: messagebus     			Name: 
+Directory: /var/run/dbus            	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+finger: mountfs: no such user.
+finger: mountfsys: no such user.
+finger: mountsys: no such user.
+Login: news           			Name: news
+Directory: /var/spool/news          	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: noaccess: no such user.
+Login: nobody         			Name: nobody
+Directory: /nonexistent             	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: nobody4: no such user.
+finger: nuucp: no such user.
+finger: nxpgsql: no such user.
+finger: operator: no such user.
+finger: oracle: no such user.
+finger: pi: no such user.
+finger: popr: no such user.
+finger: postgres: no such user.
+finger: postmaster: no such user.
+finger: printer: no such user.
+Login: proxy          			Name: proxy
+Directory: /bin                     	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: pulse: no such user.
+finger: rfindd: no such user.
+finger: rje: no such user.
+Login: root           			Name: root
+Directory: /root                    	Shell: /bin/bash
+Never logged in.
+No mail.
+No Plan.
+finger: rooty: no such user.
+finger: saned: no such user.
+finger: service: no such user.
+finger: setup: no such user.
+finger: sgiweb: no such user.
+finger: sigver: no such user.
+finger: speech-dispatcher: no such user.
+Login: sshd           			Name: 
+Directory: /var/run/sshd            	Shell: /usr/sbin/nologin
+Never logged in.
+No mail.
+No Plan.
+finger: sym: no such user.
+finger: symop: no such user.
+Login: sync           			Name: sync
+Directory: /bin                     	Shell: /bin/sync
+Never logged in.
+No mail.
+No Plan.
+Login: sys            			Name: sys
+Directory: /dev                     	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: sysadm: no such user.
+finger: sysadmin: no such user.
+finger: sysbin: no such user.
+Login: syslog         			Name: 
+Directory: /home/syslog             	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+finger: system_admin: no such user.
+finger: trouble: no such user.
+finger: udadmin: no such user.
+finger: ultra: no such user.
+finger: umountfs: no such user.
+finger: umountfsys: no such user.
+finger: umountsys: no such user.
+finger: unix: no such user.
+finger: us_admin: no such user.
+Login: user           			Name: user
+Directory: /home/user               	Shell: /bin/bash
+Never logged in.
+No mail.
+No Plan.
+
+Login: dovenull       			Name: Dovecot login user
+Directory: /nonexistent             	Shell: /bin/false
+Never logged in.
+No mail.
+No Plan.
+Login: uucp           			Name: uucp
+Directory: /var/spool/uucp          	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: uucpadm: no such user.
+finger: web: no such user.
+finger: webmaster: no such user.
+finger: www: no such user.
+Login: www-data       			Name: www-data
+Directory: /var/www                 	Shell: /bin/sh
+Never logged in.
+No mail.
+No Plan.
+finger: xpdb: no such user.
+finger: xpopr: no such user.
+finger: zabbix: no such user.
+finger: vagrant: no such user.

@@ -1,0 +1,46 @@
+# Nmap 7.70 scan initiated Wed Nov 13 14:08:01 2019 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/htb.cronos/results/10.10.10.13/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/htb.cronos/results/10.10.10.13/scans/xml/_top_20_udp_nmap.xml 10.10.10.13
+Nmap scan report for 10.10.10.13
+Host is up, received user-set (0.13s latency).
+Scanned at 2019-11-13 14:08:02 PST for 267s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open          domain       udp-response ttl 63 ISC BIND 9.10.3-P4 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.10.3-P4-Ubuntu
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/13%OT=%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DCC7FCD%P=i686-pc-linux-gnu)
+SEQ(II=I)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/udp)
+HOP RTT       ADDRESS
+1   128.71 ms 10.10.14.1
+2   146.40 ms 10.10.10.13
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 13 14:12:29 2019 -- 1 IP address (1 host up) scanned in 268.72 seconds

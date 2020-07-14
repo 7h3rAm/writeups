@@ -1,0 +1,72 @@
+# Nmap 7.70 scan initiated Mon Sep  9 18:30:03 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/xml/_full_tcp_nmap.xml 192.168.92.169
+adjust_timeouts2: packet supposedly had rtt of -557347 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -557347 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -560999 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -560999 microseconds.  Ignoring time.
+Nmap scan report for 192.168.92.169
+Host is up, received arp-response (0.00047s latency).
+Scanned at 2019-09-09 18:30:03 PDT for 19s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 vsftpd 2.3.5
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 65534    65534        4096 Mar 03  2018 public
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.92.163
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 5
+|      vsFTPd 2.3.5 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 85:9f:8b:58:44:97:33:98:ee:98:b0:c1:85:60:3c:41 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAMkzaYX4CU4jgFt2LpgYnD4dUrKdvXHU26+oyQDS6DGYj4NK4+BlG6y1Af6NNqGv+Kph7Wp4ZZc3iDnsCXZe62idQOhusQf00LsnusvbuOXmthEicgnDSi4HUMtvs5I9Knt0+YanEq/w6mBVcbv4FoGu/l5xJny0wbiOC4jEtQGdAAAAFQCj+Lv2iCRNBOt/XGRL+YY3bFwTDQAAAIEApOoTiAV/aanDDjLFmAT6UwicLJSXY9ZtJyNUFSTEbZsCu4SSJMh+X66t4eYGhl+Ocs/OrNHmy4pQM5X4EBXmwtiSBDIrcOtiPHsV/QQhTpH60XLRQ+lPn0eoVPN+QS4JXwlb/J8KxSNLhJ6JGwrL1/ubFaywPTULmrSuobSuw+8AAACBAMNS/6H3+124bwcKmMAwwQepW19Awj89dxquE5HqPhrwNs4JYnES7ACYWKJ+/PYv7oxeK5vYrLYBpcQH5ohlJ9Jp0e7Qrinllvj1h3y4VFabKSIB5Vtba06n9+HgJwRROInfIy9D31W8JEYFHhfQbB1sXi9BVYJe646rTwktRCAM
+|   2048 cf:1a:04:e1:7b:a3:cd:2b:d1:af:7d:b3:30:e0:a0:9d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzW3pS4f3ySJqldtlgXJW75MikaSN1qeWtmXgqCi9fVPcUEh+MNxaSdltnr9aUyl7C7b4LoJKDpHuuW8qi+aRukCoaZPC/k4SCgtBjkpbJqq/Ss9Ud8ySoYw3hKHnjnfzg/FDC8a1J4O4akL4a9yaX0BM2xmsi3fm9Epc2HB4MgHvMK9MzgKPz/JaaC47sayw60VlWcgCJo+HyfXmL6iFsUtDodPz/2M2yFbtkX/zleEUb1JXVE2JPCH7VjUkDVMkhch14yCezJfVDvoEq6VeKFwheRb2mcqEuywHRvt79Ovt9JgN6E5mGLMIJvtcWmur7PouFxmuijKwuq8tSPhUX
+|   256 97:e5:28:7a:31:4d:0a:89:b2:b0:25:81:d5:36:63:4c (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNIDEfC9c65N5M+6l4b+MJso0upnINHHah2BPkniqSGDi4ITuSkHRkaruC/bVcPkxNWoWoTspMSWNVOtZYumNnI=
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.22 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/backup_wordpress
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 00:0C:29:D5:5D:EA (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/9%OT=21%CT=1%CU=36754%PV=Y%DS=1%DC=D%G=Y%M=000C29%TM
+OS:=5D76FCAF%P=i686-pc-linux-gnu)SEQ(SP=FD%GCD=1%ISR=10E%TI=Z%CI=I%II=I%TS=
+OS:8)OPS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5
+OS:B4ST11NW7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=712
+OS:0)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S
+OS:+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=
+OS:)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%
+OS:A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%
+OS:DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=
+OS:40%CD=S)
+
+Uptime guess: 0.002 days (since Mon Sep  9 18:27:25 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.47 ms 192.168.92.169
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  9 18:30:23 2019 -- 1 IP address (1 host up) scanned in 20.54 seconds

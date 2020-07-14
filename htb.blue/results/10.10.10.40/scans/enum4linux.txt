@@ -1,0 +1,146 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov  1 17:08:32 2019
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.10.40
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ =================================================== 
+|    Enumerating Workgroup/Domain on 10.10.10.40    |
+ =================================================== 
+[E] Can't find workgroup/domain
+
+
+ =========================================== 
+|    Nbtstat Information for 10.10.10.40    |
+ =========================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 437.
+Looking up status of 10.10.10.40
+No reply from 10.10.10.40
+
+ ==================================== 
+|    Session Check on 10.10.10.40    |
+ ==================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 451.
+[+] Server 10.10.10.40 allows sessions using username '', password ''
+[+] Got domain/workgroup name: 
+
+ ==================================================== 
+|    Getting information via LDAP for 10.10.10.40    |
+ ==================================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 359.
+[E] Connection error
+
+ ========================================== 
+|    Getting domain SID for 10.10.10.40    |
+ ========================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 458.
+could not initialise lsa pipe. Error was NT_STATUS_ACCESS_DENIED
+could not obtain sid from server
+error: NT_STATUS_ACCESS_DENIED
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ===================================== 
+|    OS information on 10.10.10.40    |
+ ===================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 467.
+[+] Got OS info for 10.10.10.40 from smbclient: 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 866.
+[E] Can't get OS info with srvinfo: NT_STATUS_ACCESS_DENIED
+
+ ============================ 
+|    Users on 10.10.10.40    |
+ ============================ 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 881.
+[E] Couldn't find users using querydispinfo: NT_STATUS_ACCESS_DENIED
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 640.
+[E] Couldn't find users using enumdomusers: NT_STATUS_ACCESS_DENIED
+
+ ========================================== 
+|    Machine Enumeration on 10.10.10.40    |
+ ========================================== 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ ======================================== 
+|    Share Enumeration on 10.10.10.40    |
+ ======================================== 
+WARNING: The "syslog" option is deprecated
+smb1cli_req_writev_submit: called for dialect[SMB2_10] server[10.10.10.40]
+
+	Sharename       Type      Comment
+	---------       ----      -------
+Error returning browse list: NT_STATUS_REVISION_MISMATCH
+Reconnecting with SMB1 for workgroup listing.
+Connection to 10.10.10.40 failed (Error NT_STATUS_RESOURCE_NAME_NOT_FOUND)
+Failed to connect with SMB1 -- no workgroup available
+
+[+] Attempting to map shares on 10.10.10.40
+
+ =================================================== 
+|    Password Policy Information for 10.10.10.40    |
+ =================================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 501.
+[E] Unexpected error from polenum:
+
+
+[+] Attaching to 10.10.10.40 using a NULL share
+
+[+] Trying protocol 445/SMB...
+
+	[!] Protocol failed: SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:10.10.10.40)
+
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 542.
+
+[E] Failed to get password policy with rpcclient
+
+
+ ============================= 
+|    Groups on 10.10.10.40    |
+ ============================= 
+
+[+] Getting builtin groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 542.
+[E] Can't get builtin groups: NT_STATUS_ACCESS_DENIED
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 593.
+[E] Can't get local groups: NT_STATUS_ACCESS_DENIED
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 710.
+[E] Can't get domain groups: NT_STATUS_ACCESS_DENIED
+
+[+] Getting domain group memberships:
+
+ ====================================================================== 
+|    Users on 10.10.10.40 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ====================================================================== 
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 742.
+[E] Couldn't get SID: NT_STATUS_ACCESS_DENIED.  RID cycling not possible.
+Use of uninitialized value $global_workgroup in concatenation (.) or string at ./enum4linux.pl line 991.
+
+ ============================================ 
+|    Getting printer info for 10.10.10.40    |
+ ============================================ 
+could not initialise lsa pipe. Error was NT_STATUS_ACCESS_DENIED
+could not obtain sid from server
+error: NT_STATUS_ACCESS_DENIED
+
+
+enum4linux complete on Fri Nov  1 17:09:00 2019
+

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Oct 10 14:06:38 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_full_tcp_nmap.xml 192.168.92.151 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_full_tcp_nmap.xml 192.168.92.151" start="1570741598" startstr="Thu Oct 10 14:06:38 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570741599"/>
+<taskend task="NSE" time="1570741599"/>
+<taskbegin task="NSE" time="1570741599"/>
+<taskend task="NSE" time="1570741599"/>
+<taskbegin task="ARP Ping Scan" time="1570741599"/>
+<taskend task="ARP Ping Scan" time="1570741599" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570741599"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570741599"/>
+<taskbegin task="SYN Stealth Scan" time="1570741599"/>
+<taskprogress task="SYN Stealth Scan" time="1570741630" percent="19.79" remaining="126" etc="1570741756"/>
+<taskprogress task="SYN Stealth Scan" time="1570741660" percent="40.57" remaining="90" etc="1570741749"/>
+<taskprogress task="SYN Stealth Scan" time="1570741690" percent="68.90" remaining="42" etc="1570741731"/>
+<taskend task="SYN Stealth Scan" time="1570741719" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1570741719"/>
+<taskend task="Service scan" time="1570741719" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1570741720"/>
+<taskend task="NSE" time="1570741721"/>
+<taskbegin task="NSE" time="1570741721"/>
+<taskend task="NSE" time="1570741721"/>
+<host starttime="1570741599" endtime="1570741721"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.151" addrtype="ipv4"/>
+<address addr="00:0C:29:97:85:0D" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.6.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 3c:3d:e3:8e:35:f9:da:74:20:ef:aa:49:4a:1d:ed:dd (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAJKVpy10olbGC8nI2MWPTGKXhT6VsZcRnCAjQhqcpe8hLZ4cXu33YaLzgHJF1cm0ebDTZNP55kkYx8iQLw4izWfw21R45GWEuFLa6gX7wsygffXlSP0jlGbnspYWZj9FkbqN8GOFnUsqvCDCcXDe69OlxGPhBiMxB1rxuoUZnxPZAAAAFQCDbd7sa658iDpIzFLRsbyEkgmvQwAAAIA4myZvSg9MIJQoio8r7Pu2Z7de6aMg6dooumuVPfbsvcb1ZpcnU1nnBcJe5sSof/eIZSqh+NFl3r04rVcNmEMNP+7liXhjGAQ4G0c95vAN+12V12vHdk2YXEO4Mj/VhQxI1AP/5XdiY4OI7vDVY6FGw+4gR+aarZIDjY67jpl//QAAAIAvQVESJOOiTImUdavfNImDDFo/8Ttw0Iq9OcAwuE3umJ6PSfjcTq5IODKQ1hHr8Qb/+7Q6+osumyd6ONOIuM9x8sWExOAlWrcGkZszDzBUb4tjWXdliHuxYds+qZjl3esaKbeW5v97Zf5RPYeUv7cWWxThqbVNehp+fsxAmhMhgw==&#xa;  2048 85:94:6c:87:c9:a8:35:0f:2c:db:bb:c1:3f:2a:50:c1 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnR9vNmnhJVAXLzEz9KbyuNunmOeZLgWAvEXrYL5PQUSnjV6r9quuRtcjxs26JAMkSr2GH0r8JEhYKQQBMdGe7j/qfN5gorUOykWv1R3v+4Blu5L4R+8v7pFrQnu7IrAbms9fOiiF0nCWs6dugDQ+4rBl+90WHbJ40s5f9L1akGBpYmuuT9gy7ULabvc6CYZ2+cCFVpkf/s8rc3z3OV0W5JNoENyXtyvuirQqQ4+xLVlyPFpBfmqx1mY1XOeY7qqN99/82Ti9JfNJwjWgINGTY0wWGuWJdYrxAiyL/F9/MPJyb/zEM9I2/ne+qUrJ1Jkpcl4eJ42UV7HUkUGpZXkb&#xa;  256 f3:cd:aa:1d:05:f2:1e:8c:61:87:25:b6:f4:34:45:37 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFoWH4DDWVRbA1EqnCjoMMCx5bR9hiI5qTJIi+LGY9kWZQU4Y4D+MJQRoDBVd/ijYLAQ1HvW/MZIpjRCfUON6uU=&#xa;  256 34:ec:16:dd:a7:cf:2a:86:45:ec:65:ea:05:43:89:21 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8+Q9UBYlSuxYmR6fYF4W8Vv22fP15QxiCfpGk8JV2+"><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJKVpy10olbGC8nI2MWPTGKXhT6VsZcRnCAjQhqcpe8hLZ4cXu33YaLzgHJF1cm0ebDTZNP55kkYx8iQLw4izWfw21R45GWEuFLa6gX7wsygffXlSP0jlGbnspYWZj9FkbqN8GOFnUsqvCDCcXDe69OlxGPhBiMxB1rxuoUZnxPZAAAAFQCDbd7sa658iDpIzFLRsbyEkgmvQwAAAIA4myZvSg9MIJQoio8r7Pu2Z7de6aMg6dooumuVPfbsvcb1ZpcnU1nnBcJe5sSof/eIZSqh+NFl3r04rVcNmEMNP+7liXhjGAQ4G0c95vAN+12V12vHdk2YXEO4Mj/VhQxI1AP/5XdiY4OI7vDVY6FGw+4gR+aarZIDjY67jpl//QAAAIAvQVESJOOiTImUdavfNImDDFo/8Ttw0Iq9OcAwuE3umJ6PSfjcTq5IODKQ1hHr8Qb/+7Q6+osumyd6ONOIuM9x8sWExOAlWrcGkZszDzBUb4tjWXdliHuxYds+qZjl3esaKbeW5v97Zf5RPYeUv7cWWxThqbVNehp+fsxAmhMhgw==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">3c3de38e35f9da7420efaa494a1deddd</elem>
+<elem key="bits">1024.0</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnR9vNmnhJVAXLzEz9KbyuNunmOeZLgWAvEXrYL5PQUSnjV6r9quuRtcjxs26JAMkSr2GH0r8JEhYKQQBMdGe7j/qfN5gorUOykWv1R3v+4Blu5L4R+8v7pFrQnu7IrAbms9fOiiF0nCWs6dugDQ+4rBl+90WHbJ40s5f9L1akGBpYmuuT9gy7ULabvc6CYZ2+cCFVpkf/s8rc3z3OV0W5JNoENyXtyvuirQqQ4+xLVlyPFpBfmqx1mY1XOeY7qqN99/82Ti9JfNJwjWgINGTY0wWGuWJdYrxAiyL/F9/MPJyb/zEM9I2/ne+qUrJ1Jkpcl4eJ42UV7HUkUGpZXkb</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">85946c87c9a8350f2cdbbbc13f2a50c1</elem>
+<elem key="bits">2048.0</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFoWH4DDWVRbA1EqnCjoMMCx5bR9hiI5qTJIi+LGY9kWZQU4Y4D+MJQRoDBVd/ijYLAQ1HvW/MZIpjRCfUON6uU=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">f3cdaa1d05f21e8c618725b6f4344537</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIK8+Q9UBYlSuxYmR6fYF4W8Vv22fP15QxiCfpGk8JV2+</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">34ec16dda7cf2a8645ec65ea05438921</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 3.10 - 4.11" accuracy="100" line="63230">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16 - 4.6" accuracy="100" line="64164">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="100" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="100" line="67111">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=10/10%OT=22%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D9&#xa;OS:F9DD9%P=i686-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=10D%TI=Z%TS=8)OPS(O1=M5B4&#xa;OS:ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=&#xa;OS:M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=&#xa;OS:Y%TG=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0&#xa;OS:%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)U1(R=N)IE&#xa;OS:(R=N)&#xa;"/>
+</os>
+<uptime seconds="3734" lastboot="Thu Oct 10 13:06:27 2019"/>
+<distance value="1"/>
+<tcpsequence index="259" difficulty="Good luck!" values="A734A9D3,4A616643,97BCCDD5,84578DAC,E5A814E2,87720E44"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FC628,FC644,FC65F,FC67B,FC697,FC6B3"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.151" rtt="0.55"/>
+</trace>
+<times srtt="546" rttvar="84" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1570741721"/>
+<taskend task="NSE" time="1570741721"/>
+<taskbegin task="NSE" time="1570741721"/>
+<taskend task="NSE" time="1570741721"/>
+<runstats><finished time="1570741721" timestr="Thu Oct 10 14:08:41 2019" elapsed="122.59" summary="Nmap done at Thu Oct 10 14:08:41 2019; 1 IP address (1 host up) scanned in 122.59 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

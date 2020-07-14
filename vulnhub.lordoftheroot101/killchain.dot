@@ -1,0 +1,53 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.151" color="navyblue" fillcolor="#ffffff" tooltip="Lord Of The Root: 1.0.1"];
+  10[label="cred reuse for ssh by user smeagol" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  11[label="ssh (smeagol)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  12[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  13[label="mysql creds in /var/www/login.php" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  14[label="mysql running as root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  15[label="edb: 1518" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  16[label="user smeagol gets elevated sudo rights" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  17[label="sudo su" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  18[label="root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="edb: 39166" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  2[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="ssh banner → port knock: 1,2,3" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="1337/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="robots.txt" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="/978345210/index.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  7[label="web login form" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  8[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  9[label="sqlmap: creds for 5 users" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "Lord Of The Root: 1.0.1";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 4 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    11 -> 19 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    12 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    16 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    19 -> 18 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    7 -> 8 [color="#665957"];
+    8 -> 9 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

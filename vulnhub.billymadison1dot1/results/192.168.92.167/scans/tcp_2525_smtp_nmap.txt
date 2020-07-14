@@ -1,0 +1,20 @@
+# Nmap 7.70 scan initiated Thu Sep  5 17:47:58 2019 as: nmap -vv --reason -Pn -sV -p 2525 --script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_2525_smtp_nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_2525_smtp_nmap.xml 192.168.92.167
+Nmap scan report for 192.168.92.167
+Host is up, received arp-response (0.00022s latency).
+Scanned at 2019-09-05 17:47:58 PDT for 25s
+
+PORT     STATE SERVICE REASON         VERSION
+2525/tcp open  smtp    syn-ack ttl 64 SubEtha smtpd
+|_banner: 220 BM ESMTP SubEthaSMTP null
+| smtp-commands: BM, 8BITMIME, AUTH LOGIN, Ok, 
+|_ SubEthaSMTP null on BM Topics: HELP HELO RCPT MAIL DATA AUTH EHLO NOOP RSET VRFY QUIT STARTTLS For more info use "HELP <topic>". End of HELP info 
+|_smtp-strangeport: Mail server on unusual port: possible malware
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+MAC Address: 00:0C:29:1A:ED:6C (VMware)
+Service Info: Host: BM
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  5 17:48:23 2019 -- 1 IP address (1 host up) scanned in 24.97 seconds

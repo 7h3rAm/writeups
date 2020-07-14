@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Sep  5 17:47:28 2019 as: nmap -vv -&#45;reason -Pn -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_23_telnet-nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_23_telnet_nmap.xml 192.168.92.167 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_23_telnet-nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_23_telnet_nmap.xml 192.168.92.167" start="1567730848" startstr="Thu Sep  5 17:47:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="23"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1567730850"/>
+<taskend task="NSE" time="1567730850"/>
+<taskbegin task="NSE" time="1567730850"/>
+<taskend task="NSE" time="1567730850"/>
+<taskbegin task="ARP Ping Scan" time="1567730850"/>
+<taskend task="ARP Ping Scan" time="1567730851" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1567730851"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1567730851"/>
+<taskbegin task="SYN Stealth Scan" time="1567730851"/>
+<taskend task="SYN Stealth Scan" time="1567730851" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1567730851"/>
+<taskbegin task="NSE" time="1567730851"/>
+<taskend task="NSE" time="1567730851"/>
+<taskbegin task="NSE" time="1567730851"/>
+<taskend task="NSE" time="1567730851"/>
+<host starttime="1567730850" endtime="1567730851"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.167" addrtype="ipv4"/>
+<address addr="00:0C:29:1A:ED:6C" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="23"><state state="closed" reason="reset" reason_ttl="64"/><service name="telnet" method="table" conf="3"/></port>
+</ports>
+<times srtt="3046" rttvar="4657" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1567730851"/>
+<taskend task="NSE" time="1567730851"/>
+<taskbegin task="NSE" time="1567730851"/>
+<taskend task="NSE" time="1567730851"/>
+<runstats><finished time="1567730851" timestr="Thu Sep  5 17:47:31 2019" elapsed="3.36" summary="Nmap done at Thu Sep  5 17:47:31 2019; 1 IP address (1 host up) scanned in 3.36 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

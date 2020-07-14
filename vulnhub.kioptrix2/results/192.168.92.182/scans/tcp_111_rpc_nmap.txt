@@ -1,0 +1,18 @@
+# Nmap 7.70 scan initiated Fri Sep 27 18:17:04 2019 as: nmap -vv --reason -Pn -sV -p 111 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_111_rpc_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_111_rpc_nmap.xml 192.168.92.182
+Nmap scan report for 192.168.92.182
+Host is up, received arp-response (0.0052s latency).
+Scanned at 2019-09-27 18:17:07 PDT for 39s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 64 2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1            622/udp  status
+|_  100024  1            625/tcp  status
+MAC Address: 00:0C:29:DD:3C:B5 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 27 18:17:47 2019 -- 1 IP address (1 host up) scanned in 42.74 seconds

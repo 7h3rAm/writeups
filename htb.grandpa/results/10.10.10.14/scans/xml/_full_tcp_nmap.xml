@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Nov  4 15:43:15 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_full_tcp_nmap.xml 10.10.10.14 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_full_tcp_nmap.xml 10.10.10.14" start="1572910995" startstr="Mon Nov  4 15:43:15 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572910995"/>
+<taskend task="NSE" time="1572910995"/>
+<taskbegin task="NSE" time="1572910995"/>
+<taskend task="NSE" time="1572910995"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572910995"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572910995"/>
+<taskbegin task="SYN Stealth Scan" time="1572910995"/>
+<taskprogress task="SYN Stealth Scan" time="1572911026" percent="11.02" remaining="251" etc="1572911276"/>
+<taskprogress task="SYN Stealth Scan" time="1572911056" percent="17.95" remaining="279" etc="1572911335"/>
+<taskprogress task="SYN Stealth Scan" time="1572911095" percent="27.83" remaining="260" etc="1572911354"/>
+<taskprogress task="SYN Stealth Scan" time="1572911169" percent="42.81" remaining="233" etc="1572911401"/>
+<taskprogress task="SYN Stealth Scan" time="1572911199" percent="50.98" remaining="197" etc="1572911395"/>
+<taskprogress task="SYN Stealth Scan" time="1572911229" percent="63.36" remaining="136" etc="1572911364"/>
+<taskprogress task="SYN Stealth Scan" time="1572911259" percent="74.26" remaining="92" etc="1572911350"/>
+<taskprogress task="SYN Stealth Scan" time="1572911289" percent="80.08" remaining="74" etc="1572911362"/>
+<taskprogress task="SYN Stealth Scan" time="1572911319" percent="85.91" remaining="54" etc="1572911372"/>
+<taskprogress task="SYN Stealth Scan" time="1572911349" percent="91.50" remaining="33" etc="1572911382"/>
+<taskend task="SYN Stealth Scan" time="1572911368" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1572911368"/>
+<taskend task="Service scan" time="1572911378" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1572911383"/>
+<taskend task="Traceroute" time="1572911383"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1572911383"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1572911383"/>
+<taskbegin task="NSE" time="1572911383"/>
+<taskend task="NSE" time="1572911385"/>
+<taskbegin task="NSE" time="1572911385"/>
+<taskend task="NSE" time="1572911385"/>
+<host starttime="1572910995" endtime="1572911385"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.14" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="6.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:6.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT POST MOVE MKCOL PROPPATCH&#xa;  Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>COPY</elem>
+<elem>PROPFIND</elem>
+<elem>SEARCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>DELETE</elem>
+<elem>PUT</elem>
+<elem>POST</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+<elem>COPY</elem>
+<elem>PROPFIND</elem>
+<elem>SEARCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>DELETE</elem>
+<elem>PUT</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/6.0"><elem>Microsoft-IIS/6.0</elem>
+</script><script id="http-title" output="Under Construction"><elem key="title">Under Construction</elem>
+</script><script id="http-webdav-scan" output="&#xa;  Allowed Methods: OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK&#xa;  Server Type: Microsoft-IIS/6.0&#xa;  WebDAV type: Unkown&#xa;  Server Date: Mon, 04 Nov 2019 23:49:51 GMT&#xa;  Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH"><elem key="Allowed Methods">OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK</elem>
+<elem key="Server Type">Microsoft-IIS/6.0</elem>
+<elem key="WebDAV type">Unkown</elem>
+<elem key="Server Date">Mon, 04 Nov 2019 23:49:51 GMT</elem>
+<elem key="Public Options">OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2003 SP1 or SP2" accuracy="91" line="72499">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2003::sp1</cpe><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 SP2" accuracy="89" line="72646">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2003 SP2" accuracy="89" line="71406">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 Enterprise SP2" accuracy="89" line="74044">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="87" line="83428">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="87"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="85" line="71186">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="85"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP" accuracy="85" line="79993">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="85"><cpe>cpe:/o:microsoft:windows_xp</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=11/4%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DC0B919%P=i686-pc-linux-gnu)&#xa;SEQ(SP=FC%GCD=2%ISR=109%TS=0)&#xa;OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)&#xa;WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)&#xa;ECN(R=Y%DF=N%TG=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)&#xa;T1(R=Y%DF=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=S%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="252" difficulty="Good luck!" values="D146AB96,14F83708,52C7C2CD,7DC46ED4,58A457FA,78BCBCE"/>
+<ipidsequence class="Busy server or unknown class" values="603B,6069,6088,60A0,60CE,60FC"/>
+<tcptssequence class="zero timestamp" values="0,0,0,0,0,0"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="92.30"/>
+<hop ttl="2" ipaddr="10.10.10.14" rtt="91.75"/>
+</trace>
+<times srtt="81274" rttvar="16362" to="146722"/>
+</host>
+<taskbegin task="NSE" time="1572911385"/>
+<taskend task="NSE" time="1572911385"/>
+<taskbegin task="NSE" time="1572911385"/>
+<taskend task="NSE" time="1572911385"/>
+<runstats><finished time="1572911385" timestr="Mon Nov  4 15:49:45 2019" elapsed="390.48" summary="Nmap done at Mon Nov  4 15:49:45 2019; 1 IP address (1 host up) scanned in 390.48 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

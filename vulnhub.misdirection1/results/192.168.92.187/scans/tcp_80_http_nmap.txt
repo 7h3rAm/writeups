@@ -1,0 +1,1235 @@
+# Nmap 7.70 scan initiated Fri Oct 11 12:13:59 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.misdirection1/results/192.168.92.187/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.misdirection1/results/192.168.92.187/scans/xml/tcp_80_http_nmap.xml 192.168.92.187
+Nmap scan report for 192.168.92.187
+Host is up, received arp-response (0.036s latency).
+Scanned at 2019-10-11 12:14:11 PDT for 829s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Rocket httpd 1.2.6 (Python 2.7.15rc1)
+|_http-chrono: Request times for /; avg: 10369.81ms; min: 8302.74ms; max: 12925.12ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.187
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 763
+|     Comment: 
+|         /* internals - shouldn't be needed
+|         web2py_ajax_init = jQuery.web2py.ajax_init;
+|         web2py_event_handlers = jQuery.web2py.event_handlers;
+|         web2py_trap_link = jQuery.web2py.trap_link;
+|         web2py_calc_entropy = jQuery.web2py.calc_entropy;
+|         */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 114
+|     Comment: 
+|          // If false, it is only calculated when the mouse is above a container.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 249
+|     Comment: 
+|         /* run this here only if this Ajax request is NOT for a web2py component. */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 45
+|     Comment: 
+|          // end container defaults
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 39
+|     Comment: 
+|          // selector matches the item
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 337
+|     Comment: 
+|         /* Parse and load the html received */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 319
+|     Comment: 
+|          //test a usecase, should stop here if returns false
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 1
+|     Comment: 
+|         /* ===================================================
+|          *  jquery-sortable.js v0.9.12
+|          *  http://johnny.github.com/jquery-sortable/
+|          * ===================================================
+|          *  Copyright (c) 2012 Jonas von Andrian
+|          *  All rights reserved.
+|          *
+|          *  Redistribution and use in source and binary forms, with or without
+|          *  modification, are permitted provided that the following conditions are met:
+|          *  * Redistributions of source code must retain the above copyright
+|          *    notice, this list of conditions and the following disclaimer.
+|          *  * Redistributions in binary form must reproduce the above copyright
+|          *    notice, this list of conditions and the following disclaimer in the
+|          *    documentation and/or other materials provided with the distribution.
+|          *  * The name of the author may not be used to endorse or promote products
+|          *    derived from this software without specific prior written permission.
+|          *
+|          *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+|          *  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+|          *  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+|          *  DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+|          *  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+|          *  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+|          *  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+|          *  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+|          *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+|          *  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+|          * ========================================================== */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 142
+|     Comment: 
+|         /*called whenever a fragment gets loaded */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 152
+|     Comment: 
+|         /*
+|            * a is Array [left, right, top, bottom]
+|            * b is array [left, top]
+|            */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 654
+|     Comment: 
+|         /*this enables removal of whatever selector if a closest is not found */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 755
+|     Comment: 
+|         /*used for LOAD(ajax=False)*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 487
+|     Comment: 
+|         /* not supported */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 486
+|     Comment: 
+|         /* supported */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 234
+|     Comment: 
+|         /* help preventing double form submission for normal form (not LOADed) */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 693
+|     Comment: 
+|         /* Re-enables disabled form elements:
+|                 - Replaces element text with cached value from 'w2p_enable_with' data store (created in `disableFormElements`)
+|                 - Sets disabled property to false
+|                 */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 359
+|     Comment: 
+|         /* Method to check timing limit */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 111
+|     Comment: 
+|          // The placeholder must have the class "placeholder"
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 342
+|     Comment: 
+|         /**** tags ****/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 386
+|     Comment: 
+|         /* Multiple or infinite reload
+|                                  * Run first iteration
+|                                  */
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/index
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/request_reset_password?_next=%2Finit%2Fdefault%2Findex">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 1
+|     Comment: 
+|         /************
+|           Created by Massimo Di Pierro
+|           Stupid.css is what the names says, take it with a grain of salt
+|           License: BSD
+|         ************/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 311
+|     Comment: 
+|         /*test a usecase, should stop here if returns false */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 33
+|     Comment: 
+|         /* toggle an element */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 41
+|     Comment: 
+|          // If true, search for nested containers within an item
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 307
+|     Comment: 
+|         /* element is a new parameter, but should be put be put in front */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 425
+|     Comment: 
+|          // Recursively clear container and item dimensions
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 247
+|     Comment: 
+|         /**** modal ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 67
+|     Comment: 
+|         /*** forms ***/
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/features
+|     Line number: 18
+|     Comment: 
+|          //--></script>
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 43
+|     Comment: 
+|          // If true, the items are assumed to be arranged vertically
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 358
+|     Comment: 
+|         /*** colors from http://clrs.cc/ ***/
+|     
+|     Path: http://192.168.92.187:80/init/default/support
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/support">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 521
+|     Comment: 
+|          //method = el.attr('name') ? 'html' : 'val';
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 49
+|     Comment: 
+|         /*** helpers ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 513
+|     Comment: 
+|         /* replace element's html with the 'data-disable-with' after storing original html
+|                  * and prevent clicking on it */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 528
+|     Comment: 
+|         /*if you don't want to see "working..." on buttons, replace the following
+|                      * two lines with this one
+|                      * el.data('w2p_disable_with', el[method]());
+|                      */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 309
+|     Comment: 
+|         /* if target is not there, fill it with something that there isn't in the page*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 86
+|     Comment: 
+|          // The container is the closest initialized container.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 421
+|     Comment: 
+|         /* calculate a simple entropy for a given string */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 117
+|     Comment: 
+|          // The pair $parent/$children is either container/items or item/subcontainers.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 540
+|     Comment: 
+|         /* prevent further clicking*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 2
+|     Comment: 
+|         /*  Copyright Mihai Bazon, 2002-2005  |  www.bazon.net/mishoo
+|          * -----------------------------------------------------------
+|          *
+|          * The DHTML Calendar, version 1.0 "It is happening again"
+|          *
+|          * Details and latest version at:
+|          * www.dynarch.com/projects/calendar
+|          *
+|          * This script is developed by Dynarch.com.  Visit us at www.dynarch.com.
+|          *
+|          * This script is distributed under the GNU Lesser General Public License.
+|          * Read the entire license text here: http://www.gnu.org/licenses/lgpl.html
+|          */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 489
+|     Comment: 
+|         /* new from here */
+|     
+|     Path: http://192.168.92.187:80/init/default/user/login?_next=/init/default/index
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/login?_next=%2Finit%2Fdefault%2Findex">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 90
+|     Comment: 
+|         /* javascript for ListWidget*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 556
+|     Comment: 
+|         /*convenience wrapper, internal use only */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 84
+|     Comment: 
+|          // that is the mouse button is beeing held down and
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 266
+|     Comment: 
+|         /*** tooltips from http://codepen.io/trezy/pen/Khnzy ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 549
+|     Comment: 
+|         /* set to old enabled state */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 668
+|     Comment: 
+|         /* Disables form elements:
+|                 - Caches element value in 'w2p_enable_with' data store
+|                 - Replaces element text with value of 'data-disable-with' attribute
+|                 - Sets disabled property to true
+|                 */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 266
+|     Comment: 
+|          // place item under the cursor
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 50
+|     Comment: 
+|          // been appended to.
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 231
+|     Comment: 
+|         /**** underline effect ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 85
+|     Comment: 
+|          // the mouse is moving.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 285
+|     Comment: 
+|         /* form has no action. Use component url. */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 400
+|     Comment: 
+|         /* run once (no timeout specified) */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 269
+|     Comment: 
+|         /* traps any LOADed form */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 49
+|     Comment: 
+|          // has been put at or the closest empty Container, the placeholder has
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 20
+|     Comment: 
+|         /* End Copyright Notice for Dynarch Date Time Picker */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 57
+|     Comment: 
+|          // Distance the mouse has to travel to start dragging
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 153
+|     Comment: 
+|         /*Fix firefox problem*/
+|     
+|     Path: http://192.168.92.187:80/init/default/
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/index">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/default/features
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/features">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 99
+|     Comment: 
+|         /* the line we clicked on was deleted, just add to end of list */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 585
+|     Comment: 
+|          // The field exists only when creating/editing a row
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 318
+|     Comment: 
+|         /*** cards from http://codepen.io/edeesims/pen/iGDzk ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 655
+|     Comment: 
+|         /**
+|            * jQuery API
+|            *
+|            * Parameters are
+|            *   either options on init
+|            *   or a method name followed by arguments to pass to the method
+|            */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 96
+|     Comment: 
+|         /* make sure we didn't delete the element before we insert after */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 412
+|     Comment: 
+|         /* Remove any title elements from the response */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 37
+|     Comment: 
+|         /*fade something*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 135
+|     Comment: 
+|          // end group defaults
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 149
+|     Comment: 
+|         /* manage errors in forms */
+|     
+|     Path: http://192.168.92.187:80/init/default/user/register?_next=/init/default/features
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/register?_next=%2Finit%2Fdefault%2Ffeatures">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/default/user/register?_next=/init/default/index
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/register?_next=%2Finit%2Fdefault%2Findex">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 560
+|     Comment: 
+|         /*helper for flash messages*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 154
+|     Comment: 
+|         /* called whenever an ajax request completes */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 18
+|     Comment: 
+|         
+|         // Encoding: any
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 16
+|     Comment: 
+|         
+|         // Calendar EN language
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 360
+|     Comment: 
+|          // use position() which is relative to this parent,
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 298
+|     Comment: 
+|         /*** accordion ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 110
+|     Comment: 
+|          // e.g. a string, a DOM element.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 74
+|     Comment: 
+|          // Executed before onDrop if placeholder is detached.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 647
+|     Comment: 
+|         /* removal of element should happen only on success */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 550
+|     Comment: 
+|          // can not do something like el.children().first().offsetParent()
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 549
+|     Comment: 
+|          // Since el might be empty we have to check el itself and
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 206
+|     Comment: 
+|          // last entry is the closest
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 758
+|     Comment: 
+|         /*undocumented - rare*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 402
+|     Comment: 
+|          // init delay timer if needed
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 362
+|     Comment: 
+|          // compare #setDimensions
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 361
+|     Comment: 
+|          // otherwise use offset()
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 722
+|     Comment: 
+|          // Block triggering regular routines
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 24
+|     Comment: 
+|         /* http://keith-wood.name/timeEntry.html
+|            Time entry for jQuery v1.5.1.
+|            Written by Keith Wood (kbwood{at}iinet.com.au) June 2007.
+|            Licensed under the MIT (https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt) license.
+|            Please attribute the author if you use it. */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 185
+|     Comment: 
+|         /**** dropdown menu from http://codepen.io/philhoyt/pen/ujHzd ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 359
+|     Comment: 
+|          // If every container has the same offset parent,
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 70
+|     Comment: 
+|          // and may be quite expensive.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 490
+|     Comment: 
+|         /* Form input elements bound by web2py.js */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 169
+|     Comment: 
+|          // use fitting method
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 240
+|     Comment: 
+|          // get item to drag
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 739
+|     Comment: 
+|         /*main hook*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 48
+|     Comment: 
+|          // $closestItemOrContainer contains the closest item, the placeholder
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 494
+|     Comment: 
+|         /* Form input elements re-enabled after form submission */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 496
+|     Comment: 
+|         /* Triggers an event on an element and returns false if the event result is false */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 412
+|     Comment: 
+|          // TODO is this needed?
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 746
+|     Comment: 
+|         /* compatibility code - start */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 751
+|     Comment: 
+|         /*needed for IS_STRONG(entropy)*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 87
+|     Comment: 
+|          // Therefore it might not be the container, that actually contains the item.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 287
+|     Comment: 
+|          // processing Drop, check if placeholder is detached
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 133
+|     Comment: 
+|          // negative values increase it.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 132
+|     Comment: 
+|          // Set tolerance while dragging. Positive values decrease sensitivity,
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 394
+|     Comment: 
+|         /* Run once with timeout */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 116
+|     Comment: 
+|          // Specifies serialization of the container group.
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 20
+|     Comment: 
+|         /* Fix */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 113
+|     Comment: 
+|          // If true, the position of the placeholder is calculated on every mousemove.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 545
+|     Comment: 
+|         /* restore element to its original state which was disabled by 'disableElement' above*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 256
+|     Comment: 
+|         /*personally I don't like it.
+|                          *if there's an error it it flashed and can be removed
+|                          *as any other message
+|                          *doc.off('click', '.w2p_flash')
+|                          */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/calendar.js
+|     Line number: 1
+|     Comment: 
+|         /* Copyright Notice for Dynarch Date Time Picker */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 109
+|     Comment: 
+|          // Template for the placeholder. Can be any valid jQuery input
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 769
+|     Comment: 
+|         /* compatibility code - end*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 96
+|     Comment: 
+|          // Called when the mouse button is beeing released
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 92
+|     Comment: 
+|         /* #MEDIA QUERIES SECTION */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 101
+|     Comment: 
+|          // Called on mousedown. If falsy value is returned, the dragging will not start.
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 31
+|     Comment: 
+|         /* IE fix */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 24
+|     Comment: 
+|         /*********** web2py specific ***********/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 431
+|     Comment: 
+|         /* classify this character */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 102
+|     Comment: 
+|          // If clicked on input element, ignore
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 753
+|     Comment: 
+|         /*needed for crud.search and SQLFORM.grid's search*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 86
+|     Comment: 
+|         /* javascript for PasswordWidget*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 79
+|     Comment: 
+|          // The Placeholder has not been moved yet.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 78
+|     Comment: 
+|          // Executed at the beginning of a mouse move event.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 75
+|     Comment: 
+|          // This happens if pullPlaceholder is set to false and the drop occurs outside a container.
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 7
+|     Comment: 
+|         /*** basic styles ***/
+|     
+|     Path: http://192.168.92.187:80/init/default/elections
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/login?_next=%2Finit%2Fdefault%2Felections">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 295
+|     Comment: 
+|          // cleanup
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 69
+|     Comment: 
+|          // Use with care, since the search for a valid container entails a depth first search
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 68
+|     Comment: 
+|          // Check if the dragged item may be inside the container.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 27
+|     Comment: 
+|         /* popup a window */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 64
+|     Comment: 
+|          // The exact css path between the item and its subcontainers
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 62
+|     Comment: 
+|          // The css selector of the drag handle
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 60
+|     Comment: 
+|          // This option can be used to prevent unwanted drags when clicking on an element.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 59
+|     Comment: 
+|          // Time in milliseconds after mousedown until dragging should start.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 42
+|     Comment: 
+|         /*simple ajax function*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 34
+|     Comment: 
+|          // If true, items can be dragged from this container
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 196
+|     Comment: 
+|         /* fix some IE problems */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 55
+|     Comment: 
+|          // The css selector of the containers
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 121
+|     Comment: 
+|         /* keep only as many as needed*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 328
+|     Comment: 
+|         /*bummer for form submissions....in addition to the element being not there after
+|                                  *complete because it gets replaced by the new response, standard form
+|                                  *handling just returns the same status code for good and bad
+|                                  *form submissions (i.e. that triggered a validator error)
+|                                  */
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/features
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/request_reset_password?_next=%2Finit%2Fdefault%2Ffeatures">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 165
+|     Comment: 
+|         /*
+|                      * This is called once for page
+|                      * Ideally it should bound all the things that are needed
+|                      * and require no dom manipulations
+|                      */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 238
+|     Comment: 
+|         /* safeguard in case the form doesn't trigger a refresh,
+|                         see https://github.com/web2py/web2py/issues/1100 */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 53
+|     Comment: 
+|          // The exact css path between the container and its items, e.g. "> tbody"
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 352
+|     Comment: 
+|         /* Continue if times is Infinity or
+|                              * the times limit is not reached
+|                              */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 537
+|     Comment: 
+|         /* set to disabled state*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 66
+|     Comment: 
+|          // The css selector of the items
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 47
+|     Comment: 
+|          // This is executed after the placeholder has been moved.
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 439
+|     Comment: 
+|         /*calculate effect of character on alphabet size */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 492
+|     Comment: 
+|         /* Form input elements disabled during form submission */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 38
+|     Comment: 
+|          // Exclude items from being draggable, if the
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 114
+|     Comment: 
+|         /* clone the first field */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 109
+|     Comment: 
+|         /*** progress bar from http://codepen.io/holdencreative/details/pvxGxy  ***/
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/features
+|     Line number: 12
+|     Comment: 
+|          // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 524
+|     Comment: 
+|         /*store enabled state if not already disabled */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 23
+|     Comment: 
+|         /* grabbed from underscore.js */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 322
+|     Comment: 
+|         /*bummer for form submissions....the element is not there after complete
+|                                  *because it gets replaced by the new response....
+|                                  */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 346
+|     Comment: 
+|         /* element is a new parameter, but should be put in front */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 663
+|     Comment: 
+|         /*re-enable click on completion*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 2
+|     Comment: 
+|         /*
+|              * Unobtrusive scripting adapter for jQuery, largely taken from
+|              * the wonderful https://github.com/rails/jquery-ujs
+|              *
+|              *
+|              * Released under the MIT license
+|              *
+|              */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 17
+|     Comment: 
+|         /* tr#submit_record__row {border-top:1px solid #E5E5E5} */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 74
+|     Comment: 
+|         /* same as superfish */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 413
+|     Comment: 
+|         /* Set the new document title */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 76
+|     Comment: 
+|         /*
+|                      *this attaches something to a newly loaded fragment/page
+|                      * Ideally all events should be bound to the document, so we can avoid calling
+|                      * this over and over... all will be bound to the document
+|                      */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 75
+|     Comment: 
+|         /*** grid ***/
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 101
+|     Comment: 
+|         /* .web2py_table {border:1px solid #ccc} */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 211
+|     Comment: 
+|         /*** pulsating ring from https://jsfiddle.net/mandynicole/7xrKP/ *******/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 83
+|     Comment: 
+|          // Called after the drag has been started,
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 108
+|     Comment: 
+|         /* only remove if we have more than 1 item so the list is never empty */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 738
+|     Comment: 
+|         /*end of functions */
+|     
+|     Path: http://192.168.92.187:80/init/static/css/web2py.css
+|     Line number: 94
+|     Comment: 
+|         /*
+|         *Grid
+|         *
+|         * The default style for SQLFORM.grid even using jquery-iu or another ui framework
+|         * will look better with the declarations below
+|         * if needed to remove base.css consider keeping these following lines in some css file.
+|         */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/jquery-sortable.js
+|     Line number: 36
+|     Comment: 
+|          // If true, items can be droped onto this container
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 717
+|     Comment: 
+|         /* Invalidate and force reload of a web2py component
+|                  */
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 81
+|     Comment: 
+|         /*adds btn class to buttons*/
+|     
+|     Path: http://192.168.92.187:80/init/static/js/web2py.js
+|     Line number: 504
+|     Comment: 
+|         /* Helper function, needed to provide consistent behavior in IE */
+|     
+|     Path: http://192.168.92.187:80/init/default/user/login?_next=/init/default/features
+|     Line number: 11
+|     Comment: 
+|         <!--
+|             // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).
+|             var w2p_ajax_confirm_message = "Are you sure you want to delete this object?";
+|             var w2p_ajax_disable_with_message = "Working...";
+|             var w2p_ajax_date_format = "%Y-%m-%d";
+|             var w2p_ajax_datetime_format = "%Y-%m-%d %H:%M:%S";
+|             var ajax_error_500 = 'An error occured, please <a href="/init/default/user/login?_next=%2Finit%2Fdefault%2Ffeatures">reload</a> the page'
+|             //-->
+|     
+|     Path: http://192.168.92.187:80/init/static/css/stupid.css
+|     Line number: 42
+|     Comment: 
+|_        /*** buttons ***/
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.187
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/index
+|     Form id: auth_user_email__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/user/login?_next=/init/default/index
+|     Form id: auth_user_email__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/elections
+|     Form id: auth_user_email__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/user/register?_next=/init/default/index
+|     Form id: auth_user_first_name__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/user/register?_next=/init/default/features
+|     Form id: auth_user_first_name__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/user/login?_next=/init/default/features
+|     Form id: auth_user_email__row
+|     Form action: #
+|     
+|     Path: http://192.168.92.187:80/init/default/user/request_reset_password?_next=/init/default/features
+|     Form id: auth_user_email__row
+|_    Form action: #
+|_http-date: Fri, 11 Oct 2019 19:14:32 GMT; +1s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.92.187:80/init/static/js/calendar.js: 
+|     (1) email: 
+|_      + bazon@yahoo.com
+| http-headers: 
+|   Date: Fri, 11 Oct 2019 19:14:33 GMT
+|   Server: Rocket 1.2.6 Python/2.7.15rc1
+|   X-Powered-By: web2py
+|   Expires: Fri, 11 Oct 2019 19:14:33 GMT
+|   Pragma: no-cache
+|   Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Content-Type: text/html; charset=utf-8
+|   Set-Cookie: session_id_init=192.168.92.183-4742916f-eb99-4d15-879b-c12eb86abd7b; httponly; Path=/; SameSite=Lax
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash df4a361388cfd103c8f455f8759fa558
+|_Credits query returned unknown hash 68a585826a9b52e4b64b9372a4d42382
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-screenshot-html: 
+|_  failed (verify wkhtmltoimage is in your path)
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Fri, 11 Oct 2019 19:14:31 GMT
+|_http-server-header: Rocket 1.2.6 Python/2.7.15rc1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /init/default/
+|       Other: 5
+|     /init/default/user/
+|       Other: 3
+|     /init/static/
+|       pdf: 1
+|     /init/static/css/
+|       css: 3
+|     /init/static/js/
+|       js: 5
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /init/default/user/
+|   Total files found (by extension):
+|_    Other: 9; css: 3; js: 5; pdf: 1
+|_http-sql-injection: ERROR: Script execution failed (use -d to debug)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+|_http-unsafe-output-escaping: ERROR: Script execution failed (use -d to debug)
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     libwww
+|_    Python-urllib/2.5
+| http-vhosts: 
+| 69 names had status 200
+| 57 names had status ERROR
+|_testing : 502
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   themes
+|     twentyeleven
+|     twentytwelve
+|     twentyten
+|     twentythirteen
+|   plugins
+|_    akismet
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:F0:F4:AE (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 11 12:28:00 2019 -- 1 IP address (1 host up) scanned in 841.31 seconds

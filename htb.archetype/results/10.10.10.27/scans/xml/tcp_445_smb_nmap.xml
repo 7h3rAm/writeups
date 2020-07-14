@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Apr 28 07:56:24 2020 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_nmap.xml 10.10.10.27 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_nmap.xml 10.10.10.27" start="1588085784" startstr="Tue Apr 28 07:56:24 2020" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1588085785"/>
+<taskend task="NSE" time="1588085785"/>
+<taskbegin task="NSE" time="1588085785"/>
+<taskend task="NSE" time="1588085785"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1588085785"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1588085798"/>
+<taskbegin task="SYN Stealth Scan" time="1588085798"/>
+<taskend task="SYN Stealth Scan" time="1588085799" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1588085799"/>
+<taskend task="Service scan" time="1588085806" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1588085806"/>
+<taskprogress task="NSE" time="1588085837" percent="93.33" remaining="3" etc="1588085839"/>
+<taskprogress task="NSE" time="1588085867" percent="97.33" remaining="2" etc="1588085869"/>
+<taskprogress task="NSE" time="1588085897" percent="97.33" remaining="3" etc="1588085899"/>
+<taskend task="NSE" time="1588085918"/>
+<taskbegin task="NSE" time="1588085918"/>
+<taskend task="NSE" time="1588085930"/>
+<host starttime="1588085798" endtime="1588085930"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2019 Standard 17763 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb-enum-sessions" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.10.10.27\ADMIN$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Remote Admin&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.10.27\C$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Default share&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.10.27\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: Remote IPC&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\10.10.10.27\backups: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Anonymous access: READ&#xa;    Current user access: READ"><elem key="account_used">guest</elem>
+<table key="\\10.10.10.27\ADMIN$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Remote Admin</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.27\C$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Default share</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.27\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">Remote IPC</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.10.10.27\backups">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Anonymous access">READ</elem>
+<elem key="Current user access">READ</elem>
+</table>
+</script><script id="smb-ls" output="Volume \\10.10.10.27\backups&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2020-01-20 03:32:14  .&#xa;&lt;DIR&gt;  2020-01-20 03:32:14  ..&#xa;609    2020-01-20 04:20:57  prod.dtsConfig&#xa;&#xa;"><table key="volumes">
+<table>
+<elem key="volume">\\10.10.10.27\backups</elem>
+<table key="files">
+<table>
+<elem key="time">2020-01-20 03:32:14</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="filename">.</elem>
+</table>
+<table>
+<elem key="time">2020-01-20 03:32:14</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="filename">..</elem>
+</table>
+<table>
+<elem key="time">2020-01-20 04:20:57</elem>
+<elem key="size">609</elem>
+<elem key="filename">prod.dtsConfig</elem>
+</table>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="files">3</elem>
+<elem key="bytes">609</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  ERROR: Call to Browser Service failed with status = 2184"/><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)&#xa;  Computer name: Archetype&#xa;  NetBIOS computer name: ARCHETYPE\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2020-04-28T08:11:10-07:00&#xa;"><elem key="os">Windows Server 2019 Standard 17763</elem>
+<elem key="lanmanager">Windows Server 2019 Standard 6.3</elem>
+<elem key="server">ARCHETYPE\x00</elem>
+<elem key="date">2020-04-28T08:11:10-07:00</elem>
+<elem key="fqdn">Archetype</elem>
+<elem key="domain_dns">Archetype</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="NT_STATUS_OBJECT_NAME_NOT_FOUND">false</script><script id="smb-vuln-ms17-010" output="This system is patched."/><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-04-28 08:11:06&#xa;  start_date: N/A"><elem key="date">2020-04-28 08:11:06</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="286040" rttvar="286040" to="1430200"/>
+</host>
+<taskbegin task="NSE" time="1588085930"/>
+<taskend task="NSE" time="1588085930"/>
+<taskbegin task="NSE" time="1588085930"/>
+<taskend task="NSE" time="1588085930"/>
+<runstats><finished time="1588085930" timestr="Tue Apr 28 07:58:50 2020" elapsed="146.44" summary="Nmap done at Tue Apr 28 07:58:50 2020; 1 IP address (1 host up) scanned in 146.44 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,19 @@
+# Nmap 7.70 scan initiated Wed Oct  9 12:11:53 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/_quick_tcp_nmap.xml 192.168.92.185
+Nmap scan report for 192.168.92.185
+Host is up, received arp-response (0.00043s latency).
+Scanned at 2019-10-09 12:11:53 PDT for 35s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT     STATE  SERVICE REASON         VERSION
+22/tcp   closed ssh     reset ttl 64
+80/tcp   open   http    syn-ack ttl 64 Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)
+|_http-title: Site doesn't have a title (text/html).
+8080/tcp open   http    syn-ack ttl 64 Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)
+| http-methods: 
+|_  Supported Methods: HEAD
+|_http-title: 403 Forbidden
+MAC Address: 00:0C:29:0B:79:90 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  9 12:12:28 2019 -- 1 IP address (1 host up) scanned in 35.43 seconds

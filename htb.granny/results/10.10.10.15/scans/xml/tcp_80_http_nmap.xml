@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Nov  4 13:35:58 2019 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/htb.granny/results/10.10.10.15/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.granny/results/10.10.10.15/scans/xml/tcp_80_http_nmap.xml 10.10.10.15 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/htb.granny/results/10.10.10.15/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.granny/results/10.10.10.15/scans/xml/tcp_80_http_nmap.xml 10.10.10.15" start="1572903358" startstr="Mon Nov  4 13:35:58 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572903359"/>
+<taskend task="NSE" time="1572903359"/>
+<taskbegin task="NSE" time="1572903359"/>
+<taskend task="NSE" time="1572903359"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572903359"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572903359"/>
+<taskbegin task="SYN Stealth Scan" time="1572903359"/>
+<taskend task="SYN Stealth Scan" time="1572903359" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572903360"/>
+<taskend task="Service scan" time="1572903366" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572903366"/>
+<taskprogress task="NSE" time="1572903397" percent="99.04" remaining="1" etc="1572903397"/>
+<taskprogress task="NSE" time="1572903427" percent="99.36" remaining="1" etc="1572903427"/>
+<taskprogress task="NSE" time="1572903457" percent="99.36" remaining="1" etc="1572903458"/>
+<taskprogress task="NSE" time="1572903488" percent="99.36" remaining="1" etc="1572903489"/>
+<taskprogress task="NSE" time="1572903518" percent="99.36" remaining="1" etc="1572903519"/>
+<taskprogress task="NSE" time="1572903548" percent="99.36" remaining="2" etc="1572903549"/>
+<taskprogress task="NSE" time="1572903578" percent="99.36" remaining="2" etc="1572903579"/>
+<taskprogress task="NSE" time="1572903608" percent="99.36" remaining="2" etc="1572903610"/>
+<taskprogress task="NSE" time="1572903638" percent="99.68" remaining="1" etc="1572903639"/>
+<taskprogress task="NSE" time="1572903668" percent="99.68" remaining="1" etc="1572903669"/>
+<taskend task="NSE" time="1572903691"/>
+<taskbegin task="NSE" time="1572903691"/>
+<taskend task="NSE" time="1572903693"/>
+<host starttime="1572903359" endtime="1572903693"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.15" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="6.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:6.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-chrono" output="Request times for /; avg: 285.78ms; min: 258.02ms; max: 314.58ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.15&#xa;    &#xa;    Path: http://10.10.10.15:80/&#xa;    Line number: 20&#xa;    Comment: &#xa;        &lt;!-&#45;Probable causes:&lt;-&#45;&gt;&#xa;    &#xa;    Path: http://10.10.10.15:80/&#xa;    Line number: 18&#xa;    Comment: &#xa;        &lt;!-&#45;Problem-&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 04 Nov 2019 21:36:14 GMT; +7s from local time."><elem key="date">2019-11-04T21:36:14+00:00</elem>
+<elem key="delta">7.0</elem>
+</script><script id="http-devframework" output="ASP.NET detected. Found related header."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /_vti_bin/: Frontpage file or folder&#xa;  /_vti_log/: Frontpage file or folder&#xa;  /postinfo.html: Frontpage file or folder&#xa;  /_vti_bin/_vti_aut/author.dll: Frontpage file or folder&#xa;  /_vti_bin/_vti_aut/author.exe: Frontpage file or folder&#xa;  /_vti_bin/_vti_adm/admin.dll: Frontpage file or folder&#xa;  /_vti_bin/_vti_adm/admin.exe: Frontpage file or folder&#xa;  /_vti_bin/fpcount.exe?Page=default.asp|Image=3: Frontpage file or folder&#xa;  /_vti_bin/shtml.dll: Frontpage file or folder&#xa;  /_vti_bin/shtml.exe: Frontpage file or folder&#xa;  /images/: Potentially interesting folder&#xa;  /_private/: Potentially interesting folder&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-frontpage-login" output="&#xa;  VULNERABLE:&#xa;  Frontpage extension anonymous login&#xa;    State: VULNERABLE&#xa;      Default installations of older versions of frontpage extensions allow anonymous logins which can lead to server compromise.&#xa;      &#xa;    References:&#xa;      http://insecure.org/sploits/Microsoft.frontpage.insecurities.html&#xa;"><table key="NMAP-2">
+<elem key="title">Frontpage extension anonymous login</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Default installations of older versions of frontpage extensions allow anonymous logins which can lead to server compromise.&#xa;</elem>
+</table>
+<table key="refs">
+<elem>http://insecure.org/sploits/Microsoft.frontpage.insecurities.html</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Content-Length: 1433&#xa;  Content-Type: text/html&#xa;  Content-Location: http://10.10.10.15/iisstart.htm&#xa;  Last-Modified: Fri, 21 Feb 2003 15:48:30 GMT&#xa;  Accept-Ranges: bytes&#xa;  ETag: &quot;05b3daec0d9c21:354&quot;&#xa;  Server: Microsoft-IIS/6.0&#xa;  MicrosoftOfficeWebServer: 5.0_Pub&#xa;  X-Powered-By: ASP.NET&#xa;  Date: Mon, 04 Nov 2019 21:36:18 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-iis-webdav-vuln" output="WebDAV is ENABLED. No protected folder found; check not run. If you know a protected folder, add -&#45;script-args=webdavfolder=&lt;path&gt;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD DELETE COPY MOVE PROPFIND PROPPATCH SEARCH MKCOL LOCK UNLOCK PUT POST&#xa;  Potentially risky methods: TRACE DELETE COPY MOVE PROPFIND PROPPATCH SEARCH MKCOL LOCK UNLOCK PUT"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>DELETE</elem>
+<elem>COPY</elem>
+<elem>MOVE</elem>
+<elem>PROPFIND</elem>
+<elem>PROPPATCH</elem>
+<elem>SEARCH</elem>
+<elem>MKCOL</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>PUT</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+<elem>DELETE</elem>
+<elem>COPY</elem>
+<elem>MOVE</elem>
+<elem>PROPFIND</elem>
+<elem>PROPPATCH</elem>
+<elem>SEARCH</elem>
+<elem>MKCOL</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>PUT</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash d36ef6356fa2aa546f1da2bb003c17b1&#xa;Credits query returned unknown hash d36ef6356fa2aa546f1da2bb003c17b1"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-screenshot-html" output="&#xa;  Saved to 10.10.10.15-80.png&#xa;"/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Microsoft-IIS/6.0"><elem>Microsoft-IIS/6.0</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; gif: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; gif: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Under Construction"><elem key="title">Under Construction</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-webdav-scan" output="&#xa;  Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH&#xa;  WebDAV type: Unkown&#xa;  Allowed Methods: OPTIONS, TRACE, GET, HEAD, DELETE, COPY, MOVE, PROPFIND, PROPPATCH, SEARCH, MKCOL, LOCK, UNLOCK&#xa;  Server Date: Mon, 04 Nov 2019 21:36:18 GMT&#xa;  Server Type: Microsoft-IIS/6.0"><elem key="Public Options">OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH</elem>
+<elem key="WebDAV type">Unkown</elem>
+<elem key="Allowed Methods">OPTIONS, TRACE, GET, HEAD, DELETE, COPY, MOVE, PROPFIND, PROPPATCH, SEARCH, MKCOL, LOCK, UNLOCK</elem>
+<elem key="Server Date">Mon, 04 Nov 2019 21:36:18 GMT</elem>
+<elem key="Server Type">Microsoft-IIS/6.0</elem>
+</script><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="64653" rttvar="64653" to="323265"/>
+</host>
+<taskbegin task="NSE" time="1572903693"/>
+<taskend task="NSE" time="1572903693"/>
+<taskbegin task="NSE" time="1572903693"/>
+<taskend task="NSE" time="1572903693"/>
+<runstats><finished time="1572903693" timestr="Mon Nov  4 13:41:33 2019" elapsed="334.61" summary="Nmap done at Mon Nov  4 13:41:33 2019; 1 IP address (1 host up) scanned in 334.61 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

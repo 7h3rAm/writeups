@@ -1,0 +1,26 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/vulnhub/dc6/results/wordy/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_full_tcp_nmap.xml" wordy
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/vulnhub/dc6/results/wordy/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_quick_tcp_nmap.xml" wordy
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/vulnhub/dc6/results/wordy/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_top_20_udp_nmap.xml" wordy
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour wordy:22 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_22_ssh_nmap.txt" -oX "/root/toolbox/vulnhub/dc6/results/wordy/scans/xml/tcp_22_ssh_nmap.xml" wordy
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour wordy:80 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_nmap.txt" -oX "/root/toolbox/vulnhub/dc6/results/wordy/scans/xml/tcp_80_http_nmap.xml" wordy
+
+curl -sSik http://wordy:80/ -m 10 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_index.html"
+
+curl -sSik http://wordy:80/robots.txt -m 10 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://wordy:80/ /root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://wordy:80 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://wordy:80 2>&1 | tee "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_nikto.txt"
+
+dirb http://wordy:80/ /usr/share/seclists/Discovery/Web-Content/common.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx" -o "/root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_dirb.txt"
+

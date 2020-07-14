@@ -1,0 +1,1 @@
+[*] Task tcp/80/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.187:80/ /root/toolbox/writeups/vulnhub.misdirection1/results/192.168.92.187/scans/tcp_80_http_screenshot.png; fi

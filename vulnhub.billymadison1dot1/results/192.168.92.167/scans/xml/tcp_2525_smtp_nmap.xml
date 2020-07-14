@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Sep  5 17:47:58 2019 as: nmap -vv -&#45;reason -Pn -sV -p 2525 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_2525_smtp_nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_2525_smtp_nmap.xml 192.168.92.167 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 2525 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_2525_smtp_nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_2525_smtp_nmap.xml 192.168.92.167" start="1567730878" startstr="Thu Sep  5 17:47:58 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="2525"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1567730878"/>
+<taskend task="NSE" time="1567730878"/>
+<taskbegin task="NSE" time="1567730878"/>
+<taskend task="NSE" time="1567730878"/>
+<taskbegin task="ARP Ping Scan" time="1567730878"/>
+<taskend task="ARP Ping Scan" time="1567730878" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1567730879"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1567730879"/>
+<taskbegin task="SYN Stealth Scan" time="1567730879"/>
+<taskend task="SYN Stealth Scan" time="1567730879" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1567730879"/>
+<taskend task="Service scan" time="1567730902" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1567730902"/>
+<taskend task="NSE" time="1567730903"/>
+<taskbegin task="NSE" time="1567730903"/>
+<taskend task="NSE" time="1567730903"/>
+<host starttime="1567730878" endtime="1567730903"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.167" addrtype="ipv4"/>
+<address addr="00:0C:29:1A:ED:6C" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="2525"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="SubEtha smtpd" hostname="BM" method="probed" conf="10"><cpe>cpe:/a:voodoodyne:subethasmtp</cpe></service><script id="banner" output="220 BM ESMTP SubEthaSMTP null"/><script id="smtp-commands" output="BM, 8BITMIME, AUTH LOGIN, Ok, &#xa; SubEthaSMTP null on BM Topics: HELP HELO RCPT MAIL DATA AUTH EHLO NOOP RSET VRFY QUIT STARTTLS For more info use &quot;HELP &lt;topic&gt;&quot;. End of HELP info "/><script id="smtp-strangeport" output="Mail server on unusual port: possible malware"/><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="216" rttvar="3750" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1567730903"/>
+<taskend task="NSE" time="1567730903"/>
+<taskbegin task="NSE" time="1567730903"/>
+<taskend task="NSE" time="1567730903"/>
+<runstats><finished time="1567730903" timestr="Thu Sep  5 17:48:23 2019" elapsed="24.97" summary="Nmap done at Thu Sep  5 17:48:23 2019; 1 IP address (1 host up) scanned in 24.97 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

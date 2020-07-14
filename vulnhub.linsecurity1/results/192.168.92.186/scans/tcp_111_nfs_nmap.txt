@@ -1,0 +1,42 @@
+# Nmap 7.70 scan initiated Wed Oct  9 19:28:28 2019 as: nmap -vv --reason -Pn -sV -p 111 --script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.186
+Nmap scan report for 192.168.92.186
+Host is up, received arp-response (0.0050s latency).
+Scanned at 2019-10-09 19:28:30 PDT for 24s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 64 2-4 (RPC #100000)
+| nfs-ls: Volume /home/peter
+|   access: Read Lookup NoModify NoExtend NoDelete NoExecute
+| PERMISSION  UID   GID   SIZE  TIME                 FILENAME
+| rwxr-xr-x   1001  1005  4096  2018-07-10T19:49:02  .
+| ??????????  ?     ?     ?     ?                    ..
+| rw-r--r--   1001  1005  220   2018-07-09T19:53:30  .bash_logout
+| rw-r--r--   1001  1005  3771  2018-07-09T19:53:30  .bashrc
+| rwx------   1001  1005  4096  2018-07-10T10:04:35  .cache
+| rw-rw-r--   1001  1005  0     2018-07-10T10:04:35  .cloud-locale-test.skip
+| rwx------   1001  1005  4096  2018-07-10T10:04:35  .gnupg
+| rwxrwxr-x   1001  1005  4096  2018-07-10T08:03:37  .local
+| rw-r--r--   1001  1005  807   2018-07-09T19:53:30  .profile
+|_
+| nfs-showmount: 
+|_  /home/peter *
+| nfs-statfs: 
+|   Filesystem   1K-blocks  Used       Available  Use%  Maxfilesize  Maxlink
+|_  /home/peter  8188344.0  4155796.0  3596888.0  54%   16.0T        32000
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  3           2049/udp  nfs
+|   100003  3,4         2049/tcp  nfs
+|   100005  1,2,3      37211/tcp  mountd
+|   100005  1,2,3      37678/udp  mountd
+|   100021  1,3,4      39735/tcp  nlockmgr
+|   100021  1,3,4      43597/udp  nlockmgr
+|   100227  3           2049/tcp  nfs_acl
+|_  100227  3           2049/udp  nfs_acl
+MAC Address: 00:0C:29:07:84:F0 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  9 19:28:54 2019 -- 1 IP address (1 host up) scanned in 26.27 seconds

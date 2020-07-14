@@ -1,0 +1,59 @@
+[*] ftp on tcp/21
+
+	[-] Bruteforce logins:
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 21 -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_21_ftp_hydra.txt" ftp://192.168.92.188
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 21 -O "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_21_ftp_medusa.txt" -M ftp -h 192.168.92.188
+
+
+[*] ssh on tcp/22
+
+	[-] Bruteforce logins:
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_22_ssh_hydra.txt" ssh://192.168.92.188
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_22_ssh_medusa.txt" -M ssh -h 192.168.92.188
+
+
+[*] http on tcp/80
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://192.168.92.188:80/ -t 16 -r -e txt,html,php,asp,aspx -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_dirsearch_big.txt"
+
+		dirsearch -u http://192.168.92.188:80/ -t 16 -r -e txt,html,php,asp,aspx -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://192.168.92.188:80/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx" -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_dirb_big.txt"
+
+		dirb http://192.168.92.188:80/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx" -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://192.168.92.188:80/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx" -z -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_gobuster_big.txt"
+
+		gobuster dir -u http://192.168.92.188:80/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx" -z -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://192.168.92.188:80/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx" -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_gobuster_big.txt"
+
+		gobuster -u http://192.168.92.188:80/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx" -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://192.168.92.188:80/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_auth_hydra.txt" http-get://192.168.92.188/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_auth_medusa.txt" -M http -h 192.168.92.188 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_form_hydra.txt" http-post-form://192.168.92.188/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_80_http_form_medusa.txt" -M web-form -h 192.168.92.188 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+

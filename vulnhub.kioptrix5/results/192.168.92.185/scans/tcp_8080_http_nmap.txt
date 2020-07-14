@@ -1,0 +1,46 @@
+# Nmap 7.70 scan initiated Wed Oct  9 12:12:29 2019 as: nmap -vv --reason -Pn -sV -p 8080 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/tcp_8080_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/tcp_8080_http_nmap.xml 192.168.92.185
+Nmap scan report for 192.168.92.185
+Host is up, received arp-response (0.00056s latency).
+Scanned at 2019-10-09 12:12:31 PDT for 324s
+
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+|_http-chrono: Request times for /; avg: 16093.07ms; min: 16000.89ms; max: 16337.86ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.92.185
+|   Found the following error pages: 
+|   
+|   Error Code: 403
+|_  	http://192.168.92.185:8080/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+| http-useragent-tester: 
+|_  Status for browser useragent: 403
+| http-vhosts: 
+|_127 names had status ERROR
+|_http-vuln-cve2014-3704: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:0B:79:90 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  9 12:17:55 2019 -- 1 IP address (1 host up) scanned in 326.47 seconds

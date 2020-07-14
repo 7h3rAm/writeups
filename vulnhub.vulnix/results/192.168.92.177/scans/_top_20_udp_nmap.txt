@@ -1,0 +1,46 @@
+# Nmap 7.70 scan initiated Thu Sep 19 17:29:27 2019 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/_top_20_udp_nmap.xml 192.168.92.177
+Nmap scan report for 192.168.92.177
+Host is up, received arp-response (0.0014s latency).
+Scanned at 2019-09-19 17:29:27 PDT for 269s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open|filtered domain       no-response
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    closed        tftp         port-unreach ttl 64
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   closed        netbios-ns   port-unreach ttl 64
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   closed        snmptrap     port-unreach ttl 64
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  closed        upnp         port-unreach ttl 64
+4500/udp  closed        nat-t-ike    port-unreach ttl 64
+49152/udp closed        unknown      port-unreach ttl 64
+MAC Address: 00:0C:29:87:38:08 (VMware)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=9/19%OT=%CT=%CU=69%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D841E74%P=i686-pc-linux-gnu)
+SEQ(CI=Z%II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.38 ms 192.168.92.177
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 19 17:33:57 2019 -- 1 IP address (1 host up) scanned in 270.33 seconds

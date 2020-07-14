@@ -1,0 +1,32 @@
+WhatWeb report for http://192.168.92.141:10000
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.92.141
+Country   : RESERVED, ZZ
+
+Summary   : Python[2.7.3], HTTPServer[SimpleHTTP/0.6 Python/2.7.3]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : SimpleHTTP/0.6 Python/2.7.3 (from server string)
+
+[ Python ]
+	Python is a programming language that lets you work more 
+	quickly and integrate your systems more effectively. You 
+	can learn to use Python and see almost immediate gains in 
+	productivity and lower maintenance costs. 
+
+	Version      : 2.7.3
+	Website     : http://www.python.org/
+
+HTTP Headers:
+	HTTP/1.0 200 OK
+	Server: SimpleHTTP/0.6 Python/2.7.3
+	Date: Wed, 31 Jul 2019 22:34:49 GMT
+	Content-type: text/html
+	Content-Length: 215
+	Last-Modified: Mon, 04 Mar 2013 17:35:55 GMT
+	

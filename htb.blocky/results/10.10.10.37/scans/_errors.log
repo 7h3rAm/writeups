@@ -1,0 +1,1 @@
+[*] Task tcp/80/wkhtmltoimage returned non-zero exit code: 139. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.37:80/ /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/tcp_80_http_screenshot.png; fi

@@ -1,0 +1,116 @@
+# Nmap 7.70 scan initiated Tue Oct 29 11:18:01 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/_full_tcp_nmap.xml 192.168.92.191
+adjust_timeouts2: packet supposedly had rtt of -361939 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -361939 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -628893 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -628893 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -615593 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -615593 microseconds.  Ignoring time.
+Nmap scan report for 192.168.92.191
+Host is up, received arp-response (0.0056s latency).
+Scanned at 2019-10-29 11:18:03 PDT for 45s
+Not shown: 65529 closed ports
+Reason: 65529 resets
+PORT     STATE SERVICE     REASON         VERSION
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 b5:38:66:0f:a1:ee:cd:41:69:3b:82:cf:ad:a1:f7:13 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAKXQVTTRKsDhYwPWdmZ2BDTjKcCtJ7SnW0BHwbBvIdUVOh7zjZ6xjkEJ4TkT/Y+lJUolKMMNDu+CNPrRNKyBfjQ5w13mO7/3mKh9p52bzHG6XFS2m7GI4cLiDbmjO9L/YhU5deFP1Bo02KxzREp/ipz/CVlRr8IZm/x7SbPXtzv1AAAAFQDorLYH3AOwt18+kzAxGO0f2SarWQAAAIEAmOm6aWDLi+a85rfIm2Llb24aPZN3OsntJKVk4iCDbKxXi7xd6K9h1t+Utrg7dn4oO/QrVv8RRYBSiuJ8sy7B2+YDM0X7v+yqIG8FdA66tFpnMiMvdhYXoLyiod71vTqmGuAVKyHc56fUtdb3gCMjO0CHhPTKg2S0gPfFOqiyGVUAAACACvwr3X/J810mevpUQokt4xBBPNiIGkbK9KbZG63vi1NvGmaOkzbo3Cf8gZ0ILFd3YlryhP6c8PHaQMWcvzMT9oTyJ4FOokv1D3Mh4APPZ1SDqCmryHmRazggnbYlbGkYiqmZHUvS1zNalJHfC/QIHQZAjeUrHl8ZVHKk5ZYktAE=
+|   2048 58:5a:63:69:d0:da:dd:51:cc:c1:6e:00:fd:7e:61:d0 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDL4kUdp6Gej0kmVuGrpPSUUIqYmMsiqjbZ4PFCmji+ozLhgBlWE4+XcghV9PWTUmBdU6yZsylputJMi87GBW8s66tCnZU2lm+APerAT+euYlUgi+xoigD+g2VWthVNwvj2mg8updYtcZ3Jv2besdsohtadike0fwJAPfvl/ss9jE9AFv73DHu2EuwrP/3tM0WG7GgQQj01TFmrLYnDX9unvKcOi3kLgQ9I6JfdSC1oc+lBtkOp12hr5gIlYIlAgI+E2yl79cdk6PTQ4mgRmIEJguLbWo8mnaEI77y1Lz7xpxi89/gWjQuS+DMPbbpoJZdRkTldTr0QaJuP2i0ys8Dh
+|   256 61:30:f3:55:1a:0d:de:c8:6a:59:5b:c9:9c:b4:92:04 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBcmYC//tB7vdI00Q3Czjvzi7cao1q+PtbUHYxSk7ay3rM1LStjxRkpUZPQWpVRdU9kWJhIiYZDMPf8gOSgC2eY=
+|   256 1f:65:c0:dd:15:e6:e4:21:f2:c1:9b:a3:b6:55:a0:45 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKQXcDdFdhnLjXj6zgOcox1r7UBkTYpaOYdioJt97xdA
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.4.7 ((Ubuntu))
+|_http-generator: Silex v2.2.7
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+| http-robots.txt: 4 disallowed entries 
+|_/old/ /test/ /TR2/ /Backnode_files/
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Backnode
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+3306/tcp open  mysql       syn-ack ttl 64 MySQL (unauthorized)
+6667/tcp open  irc         syn-ack ttl 64 InspIRCd
+| irc-info: 
+|   server: Admin.local
+|   users: 1
+|   servers: 1
+|   chans: 0
+|   lusers: 1
+|   lservers: 0
+|   source ident: nmap
+|   source host: 192.168.92.190
+|_  error: Closing link: (nmap@192.168.92.190) [Client exited]
+MAC Address: 00:0C:29:C2:70:16 (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=10/29%OT=22%CT=1%CU=40773%PV=Y%DS=1%DC=D%G=Y%M=000C29%
+OS:TM=5DB88288%P=i686-pc-linux-gnu)SEQ(SP=102%GCD=2%ISR=109%TI=Z%CI=I%II=I%
+OS:TS=8)OPS(O1=M5B4ST11NW6%O2=M5B4ST11NW6%O3=M5B4NNT11NW6%O4=M5B4ST11NW6%O5
+OS:=M5B4ST11NW6%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=
+OS:7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%
+OS:A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0
+OS:%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S
+OS:=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R
+OS:=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N
+OS:%T=40%CD=S)
+
+Uptime guess: 179.458 days (since Fri May  3 00:19:01 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts: LAZYSYSADMIN, Admin.local; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -3h19m57s, deviation: 5h46m24s, median: 1s
+| nbstat: NetBIOS name: LAZYSYSADMIN, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LAZYSYSADMIN<00>     Flags: <unique><active>
+|   LAZYSYSADMIN<03>     Flags: <unique><active>
+|   LAZYSYSADMIN<20>     Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 59130/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 20872/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 25346/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 16469/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: lazysysadmin
+|   NetBIOS computer name: LAZYSYSADMIN\x00
+|   Domain name: \x00
+|   FQDN: lazysysadmin
+|_  System time: 2019-10-30T04:18:42+10:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-10-29 11:18:42
+|_  start_date: N/A
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.55 ms 192.168.92.191
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 29 11:18:48 2019 -- 1 IP address (1 host up) scanned in 48.49 seconds

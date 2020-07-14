@@ -1,0 +1,16 @@
+WARNING: The "syslog" option is deprecated
+Anonymous login successful
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	IPC$            IPC       IPC Service (Sedna server (Samba, Ubuntu))
+	print$          Disk      Printer Drivers
+Reconnecting with SMB1 for workgroup listing.
+Anonymous login successful
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            SEDNA

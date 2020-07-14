@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Date: Fri, 11 Oct 2019 19:14:18 GMT
+Server: Apache/2.4.29 (Ubuntu)
+Content-Length: 290
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /robots.txt was not found on this server.</p>
+<hr>
+<address>Apache/2.4.29 (Ubuntu) Server at 192.168.92.187 Port 8080</address>
+</body></html>

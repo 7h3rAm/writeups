@@ -1,0 +1,14 @@
+HTTP/1.1 403 Forbidden
+Date: Wed, 09 Oct 2019 19:12:01 GMT
+Server: Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8
+Content-Length: 212
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>403 Forbidden</title>
+</head><body>
+<h1>Forbidden</h1>
+<p>You don't have permission to access /robots.txt
+on this server.</p>
+</body></html>

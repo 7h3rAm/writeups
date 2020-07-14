@@ -1,0 +1,63 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.131" color="navyblue" fillcolor="#ffffff" tooltip="Kioptrix: Level 1.3 (#4)"];
+  10[label="ssh john@192.168.92.131" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  11[label="restricted shell" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  12[label="echo os.system('/bin/bash')" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  13[label="shell (john)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  14[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  15[label="/var/www/checklogin.php" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  16[label="mysql creds for user root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  17[label="mysql running as root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  18[label="mysql udf: /usr/lib/lib_mysqludf_sys.so" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="select sys_exec('usermod -a -G admin john');" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="sudo su" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  21[label="root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  22[label="137/udp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  23[label="139/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  24[label="445/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  2[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="liggoat login page" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  6[label="sqli using sqlmap" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  7[label="passwords for users john and robert" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  8[label="sqli manual" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  9[label="password for user john" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "Kioptrix: Level 1.3 (#4)";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 22 [color="#665957"];
+    1 -> 23 [color="#665957"];
+    1 -> 24 [color="#665957"];
+    1 -> 3 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    14 -> 17 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    17 -> 19 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    20 -> 21 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    5 -> 8 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    8 -> 9 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

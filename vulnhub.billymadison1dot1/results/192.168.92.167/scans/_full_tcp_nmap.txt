@@ -1,0 +1,83 @@
+# Nmap 7.70 scan initiated Thu Sep  5 17:45:51 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/_full_tcp_nmap.xml 192.168.92.167
+Nmap scan report for 192.168.92.167
+Host is up, received arp-response (0.0036s latency).
+Scanned at 2019-09-05 17:45:53 PDT for 212s
+Not shown: 65526 filtered ports
+Reason: 65526 no-responses
+PORT     STATE  SERVICE     REASON         VERSION
+22/tcp   open   tcpwrapped  syn-ack ttl 64
+23/tcp   open   tcpwrapped  syn-ack ttl 64
+69/tcp   open   caldav      syn-ack ttl 64 Radicale calendar and contacts server (Python BaseHTTPServer)
+|_http-generator: WordPress 1.0
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-server-header: MadisonHotelsWordpress
+|_http-title: Welcome | Just another WordPress site
+80/tcp   open   http        syn-ack ttl 64 Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Oh nooooooo!
+137/tcp  closed netbios-ns  reset ttl 64
+138/tcp  closed netbios-dgm reset ttl 64
+139/tcp  open   netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open   netbios-ssn syn-ack ttl 64 Samba smbd 4.3.9-Ubuntu (workgroup: WORKGROUP)
+2525/tcp open   smtp        syn-ack ttl 64 SubEtha smtpd
+| smtp-commands: BM, 8BITMIME, AUTH LOGIN, Ok, 
+|_ SubEthaSMTP null on BM Topics: HELP HELO RCPT MAIL DATA AUTH EHLO NOOP RSET VRFY QUIT STARTTLS For more info use "HELP <topic>". End of HELP info 
+MAC Address: 00:0C:29:1A:ED:6C (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.11
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/5%OT=69%CT=137%CU=%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D
+OS:71AD15%P=i686-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=I%TS=8)OPS(O
+OS:1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11N
+OS:W7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R
+OS:=Y%DF=Y%TG=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=A
+OS:S%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(
+OS:R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%TG=40%W=0%S=A%A=
+OS:Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=N)IE(R=N)
+
+Uptime guess: 0.002 days (since Thu Sep  5 17:47:14 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: BM
+
+Host script results:
+|_clock-skew: mean: 1h40m01s, deviation: 2h53m15s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 57877/tcp): CLEAN (Timeout)
+|   Check 2 (port 44191/tcp): CLEAN (Timeout)
+|   Check 3 (port 46411/udp): CLEAN (Timeout)
+|   Check 4 (port 51691/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.9-Ubuntu)
+|   Computer name: bm
+|   NetBIOS computer name: BM\x00
+|   Domain name: \x00
+|   FQDN: bm
+|_  System time: 2019-09-05T19:48:50-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-09-05 17:48:46
+|_  start_date: N/A
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   3.58 ms 192.168.92.167
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  5 17:49:25 2019 -- 1 IP address (1 host up) scanned in 215.07 seconds

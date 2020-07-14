@@ -1,0 +1,120 @@
+# Nmap 7.70 scan initiated Wed Sep 18 18:02:38 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/tcp_139_smb_nmap.xml 192.168.92.176
+Nmap scan report for 192.168.92.176
+Host is up, received arp-response (0.0025s latency).
+Scanned at 2019-09-18 18:02:39 PDT for 406s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 4.1.6-Ubuntu (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:53:40:6E (VMware)
+Service Info: Host: SEDNA
+
+Host script results:
+| nbstat: NetBIOS name: SEDNA, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   SEDNA<00>            Flags: <unique><active>
+|   SEDNA<03>            Flags: <unique><active>
+|   SEDNA<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-domains: 
+|   SEDNA
+|     Groups: n/a
+|     Users: viper, root
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.176\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Sedna server (Samba, Ubuntu))
+|     Users: 3
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.176\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|_    Current user access: <none>
+| smb-enum-users: 
+|   SEDNA\root (RID: 1001)
+|     Full name:   root
+|     Description: 
+|     Flags:       Normal user account
+|   SEDNA\viper (RID: 1000)
+|     Full name:   viper
+|     Description: 
+|_    Flags:       Normal user account
+| smb-mbenum: 
+|   DFS Root
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Master Browser
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Print server
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Server
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Server service
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Unix server
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     SEDNA  0.0  Sedna server (Samba, Ubuntu)
+|   Workstation
+|_    SEDNA  0.0  Sedna server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Unix (Samba 4.1.6-Ubuntu)
+|   NetBIOS computer name: SEDNA\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-09-18T21:02:43-04:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|_    3.00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|   3.00: 
+|_    Distributed File System
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-09-18 18:02:43
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 18:09:25 2019 -- 1 IP address (1 host up) scanned in 407.00 seconds

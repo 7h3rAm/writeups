@@ -1,0 +1,22 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_top_20_udp_nmap.xml" 10.10.10.14
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_quick_tcp_nmap.xml" 10.10.10.14
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_full_tcp_nmap.xml" 10.10.10.14
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.14:80 2>&1 | tee "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_nmap.txt" -oX "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/tcp_80_http_nmap.xml" 10.10.10.14
+
+curl -sSik http://10.10.10.14:80/ -m 10 2>&1 | tee "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.10.10.14:80/robots.txt -m 10 2>&1 | tee "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.14:80/ /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.14:80 2>&1 | tee "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.14:80 2>&1 | tee "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.14:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://10.10.10.14:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/tcp_80_http_gobuster.txt"; fi
+

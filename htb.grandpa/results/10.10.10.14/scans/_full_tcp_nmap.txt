@@ -1,0 +1,56 @@
+# Nmap 7.70 scan initiated Mon Nov  4 15:43:15 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.grandpa/results/10.10.10.14/scans/xml/_full_tcp_nmap.xml 10.10.10.14
+adjust_timeouts2: packet supposedly had rtt of -180557 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180557 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -205915 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -205915 microseconds.  Ignoring time.
+Nmap scan report for 10.10.10.14
+Host is up, received user-set (0.081s latency).
+Scanned at 2019-11-04 15:43:15 PST for 390s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 6.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT POST MOVE MKCOL PROPPATCH
+|_  Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH
+|_http-server-header: Microsoft-IIS/6.0
+|_http-title: Under Construction
+| http-webdav-scan: 
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK
+|   Server Type: Microsoft-IIS/6.0
+|   WebDAV type: Unkown
+|   Server Date: Mon, 04 Nov 2019 23:49:51 GMT
+|_  Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2003|2008|XP|2000 (91%)
+OS CPE: cpe:/o:microsoft:windows_server_2003::sp1 cpe:/o:microsoft:windows_server_2003::sp2 cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_2000::sp4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2003 SP1 or SP2 (91%), Microsoft Windows Server 2003 SP2 (89%), Microsoft Windows 2003 SP2 (89%), Microsoft Windows Server 2008 Enterprise SP2 (89%), Microsoft Windows XP SP3 (87%), Microsoft Windows 2000 SP4 (85%), Microsoft Windows XP (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/4%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DC0B919%P=i686-pc-linux-gnu)
+SEQ(SP=FC%GCD=2%ISR=109%TS=0)
+OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)
+WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)
+ECN(R=Y%DF=N%TG=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)
+T1(R=Y%DF=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=S%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=252 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   92.30 ms 10.10.14.1
+2   91.75 ms 10.10.10.14
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  4 15:49:45 2019 -- 1 IP address (1 host up) scanned in 390.48 seconds

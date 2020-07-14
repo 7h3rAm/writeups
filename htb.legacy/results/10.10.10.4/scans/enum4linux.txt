@@ -1,0 +1,124 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Fri Nov  1 14:49:04 2019
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.10.4
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ================================================== 
+|    Enumerating Workgroup/Domain on 10.10.10.4    |
+ ================================================== 
+[+] Got domain/workgroup name: HTB
+
+ ========================================== 
+|    Nbtstat Information for 10.10.10.4    |
+ ========================================== 
+Looking up status of 10.10.10.4
+	LEGACY          <00> -         B <ACTIVE>  Workstation Service
+	HTB             <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	LEGACY          <20> -         B <ACTIVE>  File Server Service
+	HTB             <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+	HTB             <1d> -         B <ACTIVE>  Master Browser
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+
+	MAC Address = 00-50-56-B9-0C-03
+
+ =================================== 
+|    Session Check on 10.10.10.4    |
+ =================================== 
+[+] Server 10.10.10.4 allows sessions using username '', password ''
+
+ =================================================== 
+|    Getting information via LDAP for 10.10.10.4    |
+ =================================================== 
+[E] Connection error
+
+ ========================================= 
+|    Getting domain SID for 10.10.10.4    |
+ ========================================= 
+Cannot connect to server.  Error was NT_STATUS_INVALID_PARAMETER
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ==================================== 
+|    OS information on 10.10.10.4    |
+ ==================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 10.10.10.4 from smbclient: 
+[+] Got OS info for 10.10.10.4 from srvinfo:
+Cannot connect to server.  Error was NT_STATUS_INVALID_PARAMETER
+
+ =========================== 
+|    Users on 10.10.10.4    |
+ =========================== 
+Use of uninitialized value $users in print at ./enum4linux.pl line 874.
+Use of uninitialized value $users in pattern match (m//) at ./enum4linux.pl line 877.
+
+Use of uninitialized value $users in print at ./enum4linux.pl line 888.
+Use of uninitialized value $users in pattern match (m//) at ./enum4linux.pl line 890.
+
+ ========================================= 
+|    Machine Enumeration on 10.10.10.4    |
+ ========================================= 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ ======================================= 
+|    Share Enumeration on 10.10.10.4    |
+ ======================================= 
+[E] Can't list shares: NT_STATUS_ACCESS_DENIED
+
+[+] Attempting to map shares on 10.10.10.4
+
+ ================================================== 
+|    Password Policy Information for 10.10.10.4    |
+ ================================================== 
+[E] Unexpected error from polenum:
+
+
+[+] Attaching to 10.10.10.4 using a NULL share
+
+[+] Trying protocol 445/SMB...
+
+	[!] Protocol failed: SMB SessionError: STATUS_ACCESS_DENIED({Access Denied} A process has requested access to an object but has not been granted those access rights.)
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Cannot request session (Called Name:10.10.10.4)
+
+
+[+] Retieved partial password policy with rpcclient:
+
+
+
+ ============================ 
+|    Groups on 10.10.10.4    |
+ ============================ 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ===================================================================== 
+|    Users on 10.10.10.4 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ===================================================================== 
+
+ =========================================== 
+|    Getting printer info for 10.10.10.4    |
+ =========================================== 
+Cannot connect to server.  Error was NT_STATUS_INVALID_PARAMETER
+
+
+enum4linux complete on Fri Nov  1 14:51:38 2019
+

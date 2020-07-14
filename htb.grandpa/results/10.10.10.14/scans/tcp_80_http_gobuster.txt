@@ -1,0 +1,14 @@
+http://10.10.10.14:80/Images (Status: 301)
+http://10.10.10.14:80/_private (Status: 403) [Size: 1529]
+http://10.10.10.14:80/_vti_bin (Status: 301)
+http://10.10.10.14:80/_vti_bin/_vti_adm/admin.dll (Status: 200) [Size: 195]
+http://10.10.10.14:80/_vti_bin/_vti_aut/author.dll (Status: 200) [Size: 195]
+http://10.10.10.14:80/_vti_bin/shtml.dll (Status: 200) [Size: 96]
+http://10.10.10.14:80/_vti_cnf (Status: 403) [Size: 1529]
+http://10.10.10.14:80/_vti_log (Status: 403) [Size: 1529]
+http://10.10.10.14:80/_vti_pvt (Status: 403) [Size: 1529]
+http://10.10.10.14:80/_vti_inf.html (Status: 200) [Size: 1754]
+http://10.10.10.14:80/_vti_txt (Status: 403) [Size: 1529]
+http://10.10.10.14:80/aspnet_client (Status: 403) [Size: 218]
+http://10.10.10.14:80/images (Status: 301)
+http://10.10.10.14:80/postinfo.html (Status: 200) [Size: 2440]

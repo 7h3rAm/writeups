@@ -1,0 +1,85 @@
+# Nmap 7.70 scan initiated Fri Sep 27 12:01:15 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.hackme/results/192.168.92.180/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.hackme/results/192.168.92.180/scans/xml/tcp_80_http_nmap.xml 192.168.92.180
+Nmap scan report for 192.168.92.180
+Host is up, received arp-response (0.00099s latency).
+Scanned at 2019-09-27 12:01:17 PDT for 28s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.34 ((Ubuntu))
+|_http-chrono: Request times for /; avg: 225.41ms; min: 189.80ms; max: 247.74ms
+|_http-comments-displayer: Couldn't find any comments.
+| http-cookie-flags: 
+|   /login.php: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Fri, 27 Sep 2019 19:01:26 GMT; +2s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /login.php: Possible admin folder
+|_  /uploads/: Potentially interesting directory w/ listing on 'apache/2.4.34 (ubuntu)'
+|_http-errors: Couldn't find any error pages.
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Fri, 27 Sep 2019 19:01:29 GMT
+|   Server: Apache/2.4.34 (Ubuntu)
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash e5fcc48fa54449e2f4a34f61cd317a4c
+|_Credits query returned unknown hash e5fcc48fa54449e2f4a34f61cd317a4c
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-screenshot-html: 
+|_  failed (verify wkhtmltoimage is in your path)
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.34 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:49:EA:B5 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 27 12:01:45 2019 -- 1 IP address (1 host up) scanned in 30.88 seconds

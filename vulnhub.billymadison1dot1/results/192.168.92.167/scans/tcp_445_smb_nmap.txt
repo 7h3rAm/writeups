@@ -1,0 +1,116 @@
+# Nmap 7.70 scan initiated Thu Sep  5 17:47:53 2019 as: nmap -vv --reason -Pn -sV -p 445 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_445_smb_nmap.xml 192.168.92.167
+Nmap scan report for 192.168.92.167
+Host is up, received arp-response (0.012s latency).
+Scanned at 2019-09-05 17:47:54 PDT for 339s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 4.3.9-Ubuntu (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:1A:ED:6C (VMware)
+Service Info: Host: BM
+
+Host script results:
+| smb-enum-domains: 
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   BM
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.167\EricsSecretStuff: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\home\WeaselLaugh
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.167\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (BM)
+|     Users: 3
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|_    Current user access: READ/WRITE
+| smb-ls: Volume \\192.168.92.167\EricsSecretStuff
+| SIZE   TIME                 FILENAME
+| <DIR>  2019-09-05 17:42:41  .
+| <DIR>  2016-08-20 11:56:45  ..
+| 35     2019-09-05 17:42:41  ebd.txt
+|_
+| smb-mbenum: 
+|   DFS Root
+|     BM  0.0  BM
+|   Master Browser
+|     BM  0.0  BM
+|   Print server
+|     BM  0.0  BM
+|   Server
+|     BM  0.0  BM
+|   Server service
+|     BM  0.0  BM
+|   Unix server
+|     BM  0.0  BM
+|   Windows NT/2000/XP/2003 server
+|     BM  0.0  BM
+|   Workstation
+|_    BM  0.0  BM
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.9-Ubuntu)
+|   Computer name: bm
+|   NetBIOS computer name: BM\x00
+|   Domain name: \x00
+|   FQDN: bm
+|_  System time: 2019-09-05T19:48:05-05:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.00: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.02: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.11: 
+|     Distributed File System
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-09-05 17:48:18
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  5 17:53:33 2019 -- 1 IP address (1 host up) scanned in 340.11 seconds

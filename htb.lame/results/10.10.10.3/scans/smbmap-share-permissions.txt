@@ -1,0 +1,27 @@
+[+] Finding open SMB ports....
+[+] User RPC session establishd on 10.10.10.3...
+[+] IP: 10.10.10.3:139	Name: 10.10.10.3                                        
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	print$                                            	NO ACCESS
+	tmp                                               	READ, WRITE
+	opt                                               	NO ACCESS
+	IPC$                                              	NO ACCESS
+	ADMIN$                                            	NO ACCESS
+[+] Finding open SMB ports....
+[+] User SMB session establishd on 10.10.10.3...
+[+] IP: 10.10.10.3:445	Name: 10.10.10.3                                        
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	print$                                            	NO ACCESS
+	tmp                                               	READ, WRITE
+	opt                                               	NO ACCESS
+	IPC$                                              	NO ACCESS
+	ADMIN$                                            	NO ACCESS
+[+] Finding open SMB ports....
+[!] Authentication error occured
+[!] SMB SessionError: STATUS_LOGON_FAILURE(The attempted logon is invalid. This is either due to a bad username or authentication information.)
+[!] Authentication error on 10.10.10.3
+[+] Finding open SMB ports....
+[!] RPC Authentication error occured
+[!] Authentication error on 10.10.10.3

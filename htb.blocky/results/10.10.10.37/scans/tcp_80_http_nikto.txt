@@ -1,0 +1,30 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.37
++ Target Hostname:    10.10.10.37
++ Target Port:        80
++ Start Time:         2019-11-13 12:25:50 (GMT-8)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.18 (Ubuntu)
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'link' found, with contents: <http://10.10.10.37/index.php/wp-json/>; rel="https://api.w.org/"
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ DEBUG HTTP verb may show server debugging information. See http://msdn.microsoft.com/en-us/library/e8z01xdh%28VS.80%29.aspx for details.
++ Uncommon header 'x-ob_mode' found, with contents: 1
++ Server leaks inodes via ETags, header found with file /icons/README, fields: 0x13f4 0x438c034968a80 
++ OSVDB-3233: /icons/README: Apache default file found.
++ /wp-content/plugins/akismet/readme.txt: The WordPress Akismet plugin 'Tested up to' version usually matches the WordPress version
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ OSVDB-3092: /license.txt: License file found may identify site software.
++ /phpmyadmin/: phpMyAdmin directory found
++ Cookie wordpress_test_cookie created without the httponly flag
++ OSVDB-3268: /wp-content/uploads/: Directory indexing found.
++ /wp-content/uploads/: Wordpress uploads directory is browsable. This may reveal sensitive information
++ /wp-login.php: Wordpress login found
++ 7650 requests: 0 error(s) and 17 item(s) reported on remote host
++ End Time:           2019-11-13 12:38:35 (GMT-8) (765 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

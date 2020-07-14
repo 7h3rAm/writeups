@@ -1,0 +1,396 @@
+# Nmap 7.70 scan initiated Sat Sep 28 21:12:29 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/xml/tcp_80_http_nmap.xml kioptrix3.com
+Nmap scan report for kioptrix3.com (192.168.92.184)
+Host is up, received arp-response (0.0014s latency).
+Scanned at 2019-09-28 21:12:31 PDT for 31s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kioptrix3.com
+|   url                                                              method
+|   http://kioptrix3.com:80/index.php?system=Admin                   FORM
+|   http://kioptrix3.com:80/index.php?system=Admin&page=loginSubmit  FORM
+|_  http://kioptrix3.com:80/gallery/gadmin/                          FORM
+|_http-chrono: Request times for /; avg: 434.77ms; min: 276.94ms; max: 577.33ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kioptrix3.com
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&category=0
+|     Line number: 29
+|     Comment: 
+|         <!-- END -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/recent.php
+|     Line number: 43
+|     Comment: 
+|         <!-- recent_grid_end -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 70
+|     Comment: 
+|         <!-- popular_grid: output a 4x1 row containing the most viewed photos -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/g.php/1
+|     Line number: 47
+|     Comment: 
+|         <!-- gallery_photo_grid_end -->
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&post=1281005380
+|     Line number: 108
+|     Comment: 
+|         
+|         //--></script>				</div>
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 23
+|     Comment: 
+|         <!-- menu: output the generic gallery navigation menu -->
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&category=0
+|     Line number: 27
+|     Comment: 
+|         <!-- BEGIN -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/g.php/1
+|     Line number: 47
+|     Comment: 
+|         <!-- gallery_photo_grid: output 4x1 rows containing photos in this gallery -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/recent.php
+|     Line number: 43
+|     Comment: 
+|         <!-- recent_grid: output a 4x1 row containing recently uploaded photos -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 70
+|     Comment: 
+|         <!-- popular_grid_end -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/themes/black/style.css
+|     Line number: 1
+|     Comment: 
+|         /*  
+|         Theme Name: Gallarific Black
+|         Theme URI: http://www.gallarific.com/
+|         Description: The Gallarific black photo gallery theme
+|         Version: 1.0
+|         Author: Gallarific
+|         Author URI: http://www.gallarific.com/
+|         */
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Admin&page=loginSubmit
+|     Line number: 12
+|     Comment: 
+|         <!--
+|         	$(document).ready(function() {
+|           		// Handler for .ready() called.
+|           		$('body').corner();
+|           		$('#footer').corner();
+|         	  	$('#menu').corner("right");
+|         	});
+|         	-->
+|     
+|     Path: http://kioptrix3.com:80/gallery/p.php/4
+|     Line number: 40
+|     Comment: 
+|         <!-- links_end -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 38
+|     Comment: 
+|         <!-- menu_end -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 72
+|     Comment: 
+|         <!-- gallery_stats: outputs statistics for the photo gallery -->
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&post=1281005380
+|     Line number: 58
+|     Comment: 
+|         <!--
+|         var formAction = {
+|         	remember : function() {
+|         		if (document.getElementById("remember").checked) {
+|         			var expire = new Date();
+|         			expire.setTime(expire.getTime() + 30*24*60*60*1000);
+|         			var inputs = document.getElementById("commentForm").getElementsByTagName("input");
+|         			var name;
+|         			var website;
+|         			for (var i=0; i<inputs.length; i++) {
+|         				if (inputs[i].name=="name") name = inputs[i].value;
+|         				else if (inputs[i].name=="website") website = inputs[i].value;
+|         			}
+|         			document.cookie = "newsguest=" + name + "," + website + "; expires=" + expire.toGMTString();
+|         		}
+|         	},
+|         	fill : function() {
+|         		var cookie = document.cookie;
+|         		var newsguest = "newsguest=";
+|         		var begin = cookie.indexOf(newsguest);
+|         		if (begin>-1) {
+|         			begin += newsguest.length;
+|         			var end = cookie.indexOf(";", begin);
+|         			if (end==-1) end = cookie.length;
+|         			var guests = cookie.substring(begin, end).split(",");
+|         			var inputs = document.getElementById("commentForm").getElementsByTagName("input");
+|         			for (var i=0; i<inputs.length; i++) {
+|         				if (inputs[i].name=="name") inputs[i].value = guests[0];
+|         				else if (inputs[i].name=="website") inputs[i].value = guests[1];
+|         			}
+|         		}
+|         	},
+|         	validate : function() {
+|         		var inputs = document.getElementById("commentForm").getElementsByTagName("input");
+|         		for (var i=0; i<inputs.length; i++) {
+|         			if (inputs[i].name=="name" && inputs[i].value=='') return false;
+|         		}
+|         		return (document.getElementById("commentForm").getElementsByTagName("textarea")[0].value!='');
+|         	},
+|         	submit : function() {
+|         		if (this.validate()) {
+|         			this.remember();
+|         			return true;
+|         		} else {
+|         			alert('No blank name or message, please.');
+|         			return false;
+|         		}
+|         	}
+|         };
+|         window.onload = formAction.fill;
+|         //-->
+|     
+|     Path: http://kioptrix3.com:80/gallery/p.php/4
+|     Line number: 25
+|     Comment: 
+|         <!-- links: output quick links for gallery -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/p.php/4
+|     Line number: 34
+|     Comment: 
+|         <!--  <a href="gadmin">Admin</a>&nbsp;&nbsp; -->
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&category=0
+|     Line number: 72
+|     Comment: 
+|         <!-- Leaving in my name and website link will be greatly appreciated in return for offering you this template for free. Thanking you in advance. -->
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Line number: 101
+|     Comment: 
+|_        <!-- gallery_stats_end -->
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=kioptrix3.com
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Admin
+|     Form id: contactform
+|     Form action: index.php?system=Admin&page=loginSubmit
+|     
+|     Path: http://kioptrix3.com:80/gallery/
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Admin&page=loginSubmit
+|     Form id: contactform
+|     Form action: index.php?system=Admin&page=loginSubmit
+|     
+|     Path: http://kioptrix3.com:80/index.php?system=Blog&post=1281005380
+|     Form id: commentform
+|     Form action: 
+|     
+|     Path: http://kioptrix3.com:80/gallery/index.php
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: http://kioptrix3.com:80/gallery/gadmin/
+|     Form id: username
+|_    Form action: index.php?task=signin
+|_http-date: Sat, 28 Sep 2019 21:12:30 GMT; -7h00m19s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /phpmyadmin/: phpMyAdmin
+|   /cache/: Potentially interesting folder
+|   /core/: Potentially interesting folder
+|   /icons/: Potentially interesting folder w/ directory listing
+|   /modules/: Potentially interesting directory w/ listing on 'apache/2.2.8 (ubuntu) php/5.2.4-2ubuntu5.6 with suhosin-patch'
+|_  /style/: Potentially interesting folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=kioptrix3.com
+|   Found the following error pages: 
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/themes/black/style.css
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/index.php
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/vote.php?id=3&vote=5&from=%2Fgallery%2Fp.php%2F3%3F
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/themes/black/javascript.js
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/vote.php?id=3&vote=4&from=%2Fgallery%2Fp.php%2F3%3F
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/vote.php?id=3&vote=3&from=%2Fgallery%2Fp.php%2F3%3F
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/p.php/4
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/vote.php?id=3&vote=1&from=%2Fgallery%2Fp.php%2F3%3F
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/vote.php?id=3&vote=2&from=%2Fgallery%2Fp.php%2F3%3F
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/gadmin
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/g.php/1
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/recent.php
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/login.php
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/index.php
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/recent.php
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/3
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/g.php/1
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/5
+|   
+|   Error Code: 500
+|   	http://kioptrix3.com:80/gallery/p.php/4
+|   
+|   Error Code: 500
+|_  	http://kioptrix3.com:80/gallery/p.php/vote.php?id=5&vote=5&from=%2Fgallery%2Fp.php%2F5%3F
+|_http-favicon: Unknown favicon MD5: 99EFC00391F142252888403BB1C196D2
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Sat, 28 Sep 2019 21:12:29 GMT
+|   Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+|   X-Powered-By: PHP/5.2.4-2ubuntu5.6
+|   Set-Cookie: PHPSESSID=f3f85f4bfc2a3870213ba371c2d3f0b5; path=/
+|   Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: no-cache
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Versions from logo query (less accurate): 5.1.3 - 5.1.6, 5.2.0 - 5.2.17
+| Versions from credits query (more accurate): 5.2.3 - 5.2.5, 5.2.6RC3
+|_Version from header x-powered-by: PHP/5.2.4-2ubuntu5.6
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  http://ajax.googleapis.com:80/ajax/libs/jquery/1.4.2/jquery.min.js
+| http-screenshot-html: 
+|   Saved to kioptrix3.com-192.168.92.184-80.png
+|_  Saved to 192.168.92.184-80.png
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 1
+|     /gallery/gadmin/
+|       Other: 1
+|     /gallery/photos/
+|       jpg: 3
+|     /gallery/themes/black/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /gallery/themes/black/
+|   Total files found (by extension):
+|_    Other: 2; css: 1; jpg: 3; php: 1
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=loginSubmit%27%20OR%20sqlspider&system=Admin
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=loginSubmit%27%20OR%20sqlspider&system=Admin
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|     http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|_    http://kioptrix3.com:80/index.php?page=index%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Ligoat Security - Got Goat? Security ...
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Sat, 28 Sep 2019 21:12:28 GMT
+| Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:3F:EF:00 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep 28 21:13:02 2019 -- 1 IP address (1 host up) scanned in 32.68 seconds

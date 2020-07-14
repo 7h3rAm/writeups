@@ -1,0 +1,141 @@
+writeup:
+  metadata:
+    status: public
+    datetime: 20191104
+    infra: HackTheBox
+    name: Optimum
+    points: 20
+    path: htb.optimum
+    url: https://www.hackthebox.eu/home/machines/profile/6
+    infocard: ./infocard.png
+    references:
+      - https://reboare.github.io/hackthebox/htb-optimum.html
+    categories:
+      - oscp
+      - htb
+      - windows
+    tags:
+      - exploit_hfs_cmd_exec
+      - privesc_windows_ms16_098
+  overview:
+    description: |
+      This is a writeup for HTB VM [`Optimum`](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+    killchain:
+      - "_ [HTB] Optimum/10.10.10.8":
+        - ". Phase #1: Enumeration":
+          - ". 80/tcp":
+            - ". HttpFileServer 2.3":
+              - ".. Phase #2: Exploitation":
+                - ".. edb:39161":
+                  - ".. netcat (kostas)":
+                    - ".. user.txt.txt":
+                    - "... Phase #3: Privilege Escalation":
+                      - "... windows-exploit-suggester.py":
+                        - "... edb:41020":
+                          - "... netcat (system)":
+                            - "... root.txt":
+    ttps:
+      "80/tcp/http/HttpFileServer httpd 2.3": exploit_hfs_cmd_exec privesc_windows_ms16_098
+
+  enumeration:
+    steps:
+      - description: |
+          Here's the Nmap scan result:
+        command: |
+          # Nmap 7.70 scan initiated Mon Nov  4 17:34:56 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/xml/_quick_tcp_nmap.xml 10.10.10.8
+          Nmap scan report for 10.10.10.8
+          Host is up, received user-set (0.062s latency).
+          Scanned at 2019-11-04 17:34:57 PST for 19s
+          Not shown: 999 filtered ports
+          Reason: 999 no-responses
+          PORT   STATE SERVICE REASON          VERSION
+          80/tcp open  http    syn-ack ttl 127 HttpFileServer httpd 2.3
+          |_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+          | http-methods:
+          |_  Supported Methods: GET HEAD POST
+          |_http-server-header: HFS 2.3
+          |_http-title: HFS /
+          Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+          Read data files from: /usr/bin/../share/nmap
+          Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+          # Nmap done at Mon Nov  4 17:35:16 2019 -- 1 IP address (1 host up) scanned in 19.87 seconds
+      - description: |
+          We find `HttpFileServer 2.3` running on the target system. Upon searching for exploits we find multiple hits:
+        command: |
+        screenshot:
+          - ./screenshot01.png
+    findings:
+      openports:
+        - '80/tcp  |  http  |  HttpFileServer httpd 2.3'
+  exploitation:
+    steps:
+      - description: |
+          We use the command execution exploit, slightly modify it to print debug information and get interactive access on the target system:
+        command: |
+        screenshot:
+          - ./screenshot02.png
+          - ./screenshot03.png
+          - ./screenshot04.png
+    vuln:
+      - cve: 2014-6287
+        edb: 39161
+  postexploit:
+    user: kostas
+    hostname: OPTIMUM
+    id: |
+      optimum\kostas
+    uname: |
+      Host Name:                 OPTIMUM
+      OS Name:                   Microsoft Windows Server 2012 R2 Standard
+      OS Version:                6.3.9600 N/A Build 9600
+      OS Manufacturer:           Microsoft Corporation
+      OS Configuration:          Standalone Server
+      OS Build Type:             Multiprocessor Free
+    ifconfig: |
+      Ethernet adapter Ethernet0
+       Connection-specific DNS Suffix  . :
+       IPv4 Address. . . . . . . . . . . : 10.10.10.8
+       Subnet Mask . . . . . . . . . . . : 255.255.255.0
+       Default Gateway . . . . . . . . . : 10.10.10.2
+    users:
+      - Administrator
+      - kostas
+  privesc:
+    steps:
+      - description: |
+          We can now view the contents of the `user.txt.txt` file to get the first flag:
+        command: |
+        screenshot:
+          - ./screenshot05.png
+      - description: |
+          We now use the `windows-exploit-suggester.py` script to get list of possible privesc vectors. To do this, we first had to download `netcat` onto target system via Powershell and transfer the text output of `systeminfo` command to our local system:
+        command: |
+        screenshot:
+          - ./screenshot06.png
+          - ./screenshot07.png
+          - ./screenshot08.png
+      - description: |
+          The `windows-exploit-suggester.py` scripts lists several privesc vectors and we decide to use [EDB:41020](https://www.exploit-db.com/exploits/41020) because it provides a pre-compiled binary ready to used. We again transfer this exploit file to the target system using Powershell:
+        command: |
+        screenshot:
+          - ./screenshot09.png
+          - ./screenshot10.png
+      - description: |
+          Once executed, we get elevated privileges on the target system:
+        command: |
+        screenshot:
+          - ./screenshot11.png
+      - description: |
+          We can now view the contents of the `root.txt` file to complete the challenge:
+        command: |
+        screenshot:
+          - ./screenshot12.png
+    vuln:
+      - edb: 41020
+        links:
+          - https://docs.microsoft.com/en-us/security-updates/securitybulletins/2016/ms16-098
+  loot:
+    flags:
+      - 'C:\Users\kostas\Desktop\user.txt.txt: d0c39409d7b994a9a1389ebf38ef5f73'
+      - 'C:\Users\Administrator\Desktop\root.txt: 51ed1b36553c8461f4552c2e92b3eeed'

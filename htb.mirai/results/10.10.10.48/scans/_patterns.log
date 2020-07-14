@@ -1,0 +1,28 @@
+tcp/80/nmap-http - Identified HTTP Server: lighttpd/1.4.35
+
+nmap-full-tcp - Matched Pattern: Unauthorized
+
+nmap-full-tcp - Matched Pattern: Unauthorized
+
+tcp/32400/curl-index - Matched Pattern: Unauthorized
+
+tcp/32400/curl-robots - Matched Pattern: Unauthorized
+
+tcp/32400/curl-index - Matched Pattern: Unauthorized
+
+tcp/32400/curl-index - Matched Pattern: Unauthorized
+
+tcp/32400/curl-robots - Matched Pattern: Unauthorized
+
+tcp/32400/curl-robots - Matched Pattern: Unauthorized
+
+tcp/32400/whatweb - Matched Pattern: Unauthorized
+
+tcp/32400/whatweb - Matched Pattern: Unauthorized
+
+tcp/32400/whatweb - Matched Pattern: Unauthorized
+
+tcp/32400/nmap-http - Matched Pattern: Unauthorized
+
+tcp/32400/nmap-http - Matched Pattern: Unauthorized
+

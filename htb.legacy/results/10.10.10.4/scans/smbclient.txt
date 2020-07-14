@@ -1,0 +1,2 @@
+WARNING: The "syslog" option is deprecated
+session setup failed: NT_STATUS_INVALID_PARAMETER

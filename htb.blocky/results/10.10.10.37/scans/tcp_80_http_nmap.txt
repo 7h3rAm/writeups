@@ -1,0 +1,1225 @@
+# Nmap 7.70 scan initiated Wed Nov 13 12:25:46 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.blocky/results/10.10.10.37/scans/xml/tcp_80_http_nmap.xml 10.10.10.37
+Nmap scan report for 10.10.10.37
+Host is up, received user-set (0.14s latency).
+Scanned at 2019-11-13 12:25:49 PST for 64s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.37
+|   url                                 method
+|_  http://10.10.10.37:80/wp-login.php  FORM
+|_http-backup-finder: ERROR: Script execution failed (use -d to debug)
+|_http-chrono: Request times for /; avg: 1204.24ms; min: 921.46ms; max: 1581.06ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.37
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2357
+|     Comment: 
+|         /* Site info */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1833
+|     Comment: 
+|         /* Front Page - Recent Posts */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1878
+|     Comment: 
+|         /* Post Landing Page */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1499
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.0 Layout
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2079
+|     Comment: 
+|         /* Single Post */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1794
+|     Comment: 
+|         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+100 */
+|     
+|     Path: http://10.10.10.37:80/wp-login.php?action=lostpassword
+|     Line number: 5
+|     Comment: 
+|         <!--[if !(IE 8) ]><!-->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4117
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         20.0 Print
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1695
+|     Comment: 
+|         /* Prevent header from extending beyond the footer */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 70
+|     Comment: 
+|         <!-- .site-branding-text -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 17
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         >>> TABLE OF CONTENTS:
+|         ----------------------------------------------------------------
+|         1.0 Normalize
+|         2.0 Accessibility
+|         3.0 Alignments
+|         4.0 Clearings
+|         5.0 Typography
+|         6.0 Forms
+|         7.0 Formatting
+|         8.0 Lists
+|         9.0 Tables
+|         10.0 Links
+|         11.0 Featured Image Hover
+|         12.0 Navigation
+|         13.0 Layout
+|            13.1 Header
+|            13.2 Front Page
+|            13.3 Regular Content
+|            13.4 Posts
+|            13.5 Pages
+|            13.6 Footer
+|         14.0 Comments
+|         15.0 Widgets
+|         16.0 Media
+|            16.1 Galleries
+|         17.0 Customizer
+|         18.0 SVGs Fallbacks
+|         19.0 Media Queries
+|         20.0 Print
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-login.php
+|     Line number: 51
+|     Comment: 
+|         /**
+|          * Filters whether to print the call to `wp_attempt_focus()` on the login screen.
+|          *
+|          * @since 4.8.0
+|          *
+|          * @param bool $print Whether to print the function call. Default true.
+|          */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 79
+|     Comment: 
+|         <!-- #masthead -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2988
+|     Comment: 
+|         /* Align more nicely with capital letters */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 122
+|     Comment: 
+|         <!-- #colophon -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3978
+|     Comment: 
+|         /* Footer */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2982
+|     Comment: 
+|         /* SVG Icons base styles */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1493
+|     Comment: 
+|         /* Scroll down arrow */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 76
+|     Comment: 
+|         <!-- .custom-header -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2028
+|     Comment: 
+|         /* Blog landing, search, archives */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3869
+|     Comment: 
+|         /* with sidebar */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 410
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         5.0 Typography
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2585
+|     Comment: 
+|         /* widget markup */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3243
+|     Comment: 
+|         /* Front Page */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1692
+|     Comment: 
+|         /* vw prevents 1px gap on left that 100% has */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 871
+|     Comment: 
+|         /* Typography for Thai Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 775
+|     Comment: 
+|         /* Typography for Greek Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1542
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.1 Header
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2496
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         15.0 Widgets
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2839
+|     Comment: 
+|         /* Media Elements */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3459
+|     Comment: 
+|         /* Main Navigation */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3065
+|     Comment: 
+|         /* Prevent :after from preventing interactions within the section */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3089
+|     Comment: 
+|         /* Add some space around the visual edit shortcut buttons. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1861
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.3 Regular Content
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3910
+|     Comment: 
+|         /* Pages */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2700
+|     Comment: 
+|         /* Recent Comments */
+|     
+|     Path: http://10.10.10.37:80/wp-login.php?action=lostpassword
+|     Line number: 2
+|     Comment: 
+|         <!--[if IE 8]>
+|         		<html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+|         	<![endif]-->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 814
+|     Comment: 
+|         /* Typography for Hebrew Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3139
+|     Comment: 
+|         /* Social Menu fallbacks */
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Line number: 96
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 107
+|     Comment: 
+|         <!-- .error-404 -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3053
+|     Comment: 
+|         /* Matches visible edit shortcuts. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3710
+|     Comment: 
+|         /* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Line number: 102
+|     Comment: 
+|         <!-- .entry-content -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1077
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         7.0 Formatting
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Line number: 96
+|     Comment: 
+|         <!-- .entry-meta -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4249
+|     Comment: 
+|         /* Brute force since user agents all print differently. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2529
+|     Comment: 
+|         /* widget lists */
+|     
+|     Path: http://10.10.10.37:80/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery Migrate v1.4.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3928
+|     Comment: 
+|         /* Comments */
+|     
+|     Path: http://10.10.10.37:80/wp-includes/js/jquery/jquery.js?ver=1.12.4
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1459
+|     Comment: 
+|         /* Dropdown Toggle */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 128
+|     Comment: 
+|         /* ]]> */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1520
+|     Comment: 
+|         /* Fallback for when there is no custom background color defined. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2708
+|     Comment: 
+|         /* Recent Posts widget */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1555
+|     Comment: 
+|         /* Site branding */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1489
+|     Comment: 
+|         /* Chrome, Safari, Opera */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 36
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://10.10.10.37/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
+|         <![endif]-->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1289
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         11.0 Featured Image Hover
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 123
+|     Comment: 
+|         <!-- .site-content-contain -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1488
+|     Comment: 
+|         /* IE 9 */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3886
+|     Comment: 
+|         /* blog and archive */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2714
+|     Comment: 
+|         /* Search */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 39
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <script type='text/javascript' src='http://10.10.10.37/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=3.7.3'></script>
+|         <![endif]-->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1088
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         8.0 Lists
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 692
+|     Comment: 
+|         /* Typography for Cyrillic Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2934
+|     Comment: 
+|         /* Playlist Style Overrides */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1672
+|     Comment: 
+|         /* IE6-9 */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 795
+|     Comment: 
+|         /* Typography for Gujarati Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1772
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.2 Front Page
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-login.php?action=lostpassword
+|     Line number: 7
+|     Comment: 
+|         <!--<![endif]-->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1277
+|     Comment: 
+|         /* Fixes linked images */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4259
+|     Comment: 
+|         /* Make sure color schemes don't affect to print */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4245
+|     Comment: 
+|         /* Colors */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4058
+|     Comment: 
+|         /* Sticky posts */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1669
+|     Comment: 
+|         /* FF3.6-15 */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2295
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.6 Footer
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2785
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         16.0 Media
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4159
+|     Comment: 
+|         /* Font sizes */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4123
+|     Comment: 
+|         /* Hide elements */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 49
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         1.0 Normalize
+|         Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 580
+|     Comment: 
+|         /* Typography for Arabic Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1757
+|     Comment: 
+|         /* Hides div in Customizer preview when header images or videos change. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4223
+|     Comment: 
+|         /* override styles added by JavaScript */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 333
+|     Comment: 
+|         /* Above WP toolbar. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3970
+|     Comment: 
+|         /* Widgets */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 73
+|     Comment: 
+|         <!-- .wrap -->
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 92
+|     Comment: 
+|         <!-- .page-header -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3167
+|     Comment: 
+|         /* Adjust positioning of edit shortcuts, override style in customize-preview.css */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3857
+|     Comment: 
+|         /* without sidebar */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3855
+|     Comment: 
+|         /* Entry content */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2559
+|     Comment: 
+|         /* Widget lists of links */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2308
+|     Comment: 
+|         /* Footer widgets */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2734
+|     Comment: 
+|         /* Tag cloud widget */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 74
+|     Comment: 
+|         <!-- .site-branding -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3754
+|     Comment: 
+|         /* Posts */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3437
+|     Comment: 
+|         /* The font size is 14px here and we need 50px padding in ems */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1670
+|     Comment: 
+|         /* Chrome10-25,Safari5.1-6 */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3422
+|     Comment: 
+|         /* Navigation */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3904
+|     Comment: 
+|         /* Post formats */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3281
+|     Comment: 
+|         /* Gallery Columns */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3274
+|     Comment: 
+|         /* Site Footer */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 359
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         4.0 Clearings
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2377
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         14.0 Comments
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2888
+|     Comment: 
+|         /* Playlist Color Overrides: Dark */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 892
+|     Comment: 
+|         /* Remove letter-spacing for all non-latin alphabets */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 311
+|     Comment: 
+|         /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1668
+|     Comment: 
+|         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3226
+|     Comment: 
+|         /* Fix image alignment */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 113
+|     Comment: 
+|         <!-- #content -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2257
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.5 Pages
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1308
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         12.0 Navigation
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2018
+|     Comment: 
+|         /* Aligned blockquotes */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3324
+|     Comment: 
+|         /* Layout */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3163
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         19.0 Media Queries
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2121
+|     Comment: 
+|         /* Entry footer */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3159
+|     Comment: 
+|         /* overrides previous !important styles */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 734
+|     Comment: 
+|         /* Typography for Devanagari Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3177
+|     Comment: 
+|         /* Typography */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3095
+|     Comment: 
+|         /* Ensure that placeholder icons are visible. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3068
+|     Comment: 
+|         /* Used for placeholder text */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1351
+|     Comment: 
+|         /* Hide the menu on small screens when JavaScript is available.
+|          * It only works with JavaScript.
+|          */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1424
+|     Comment: 
+|         /* Display the menu toggle when JavaScript is available. */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 126
+|     Comment: 
+|         /* <![CDATA[ */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3080
+|     Comment: 
+|         /* Show borders on the custom page panels only when the front page sections are being edited */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2522
+|     Comment: 
+|         /* widget forms */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 120
+|     Comment: 
+|         <!-- .site-info -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1738
+|     Comment: 
+|         /* For browsers that support 'object-fit' */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2750
+|     Comment: 
+|         /* !important to overwrite inline styles */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3237
+|     Comment: 
+|         /* Site Branding */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2792
+|     Comment: 
+|         /* Adhere to container width. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 665
+|     Comment: 
+|         /* Typography for Chinese Font */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 108
+|     Comment: 
+|         <!-- #main -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1158
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         10.0 Links
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2854
+|     Comment: 
+|         /* Playlist Color Overrides: Light */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1177
+|     Comment: 
+|         /* Hover effects */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1821
+|     Comment: 
+|         /* Panel edit link */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2315
+|     Comment: 
+|         /* Social nav */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2845
+|     Comment: 
+|         /* Audio Player */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2810
+|     Comment: 
+|         /* Make sure embeds and iframes fit their containers. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 4069
+|     Comment: 
+|         /* Pagination */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 915
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         6.0 Forms
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3262
+|     Comment: 
+|         /* Blog Index, Archive, Search */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 299
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         2.0 Accessibility
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2774
+|     Comment: 
+|         /* Calendar widget */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3962
+|     Comment: 
+|         /* Secondary */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 336
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         3.0 Alignments
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2994
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         16.1 Galleries
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3048
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         17.0 Customizer
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 833
+|     Comment: 
+|         /* Typography for Japanese Font */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2692
+|     Comment: 
+|         /* Gravatar */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2686
+|     Comment: 
+|         /* Contact Info Widget */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3148
+|     Comment: 
+|         /* Show screen reader text in some cases */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2634
+|     Comment: 
+|         /* RSS Widget */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1406
+|     Comment: 
+|         /* Menu toggle */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2071
+|     Comment: 
+|         /* More tag */
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Line number: 137
+|     Comment: 
+|         <!-- #secondary -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2592
+|     Comment: 
+|         /* Text widget */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1120
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         9.0 Tables
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3787
+|     Comment: 
+|         /* Blog, archive, search */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1512
+|     Comment: 
+|         /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2187
+|     Comment: 
+|         /* Post Formats */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2791
+|     Comment: 
+|         /* Make sure images are scaled correctly. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1054
+|     Comment: 
+|         /* Placeholder text color -- selectors need to be separate to work. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1702
+|     Comment: 
+|         /* Specificity prevents .color-dark button overrides */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2284
+|     Comment: 
+|         /* 404 page */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3100
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         18.0 SVGs Fallbacks
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 124
+|     Comment: 
+|         <!-- #page -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 303
+|     Comment: 
+|         /* Text meant only for screen readers. */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 2217
+|     Comment: 
+|         /* Post Navigation */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 109
+|     Comment: 
+|         <!-- #primary -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Seventeen
+|         Theme URI: https://wordpress.org/themes/twentyseventeen/
+|         Author: the WordPress team
+|         Author URI: https://wordpress.org/
+|         Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+|         Version: 1.3
+|         License: GNU General Public License v2 or later
+|         License URI: http://www.gnu.org/licenses/gpl-2.0.html
+|         Text Domain: twentyseventeen
+|         Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+|         
+|         This theme, like WordPress, is licensed under the GPL.
+|         Use it to make something cool, have fun, and share what you've learned with others.
+|         */
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Line number: 105
+|     Comment: 
+|         <!-- #post-## -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1874
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         13.4 Posts
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 852
+|     Comment: 
+|         /* Typography for Korean font */
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Line number: 106
+|     Comment: 
+|         <!-- .page-content -->
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1671
+|     Comment: 
+|         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1069
+|     Comment: 
+|         /* Since FF19 lowers the opacity of the placeholder by default */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 1591
+|     Comment: 
+|         /* Prevent opacity from changing during selective refreshes in the customize preview */
+|     
+|     Path: http://10.10.10.37:80/wp-content/themes/twentyseventeen/style.css?ver=4.8
+|     Line number: 3942
+|     Comment: 
+|_        /* Posts pagination */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.37
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.37:80/
+|     Form id: search-form-5dcc66e7e5aa4
+|     Form action: http://10.10.10.37/
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/
+|     Form id: search-form-5dcc66e5717dc
+|     Form action: http://10.10.10.37/
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/
+|     Form id: search-form-5dcc66e82cb99
+|     Form action: http://10.10.10.37/
+|     
+|     Path: http://10.10.10.37:80/wp-login.php
+|     Form id: loginform
+|     Form action: http://10.10.10.37/wp-login.php
+|     
+|     Path: http://10.10.10.37:80/index.php/2017/07/%5c%22
+|     Form id: search-form-5dcc66ea7a427
+|     Form action: http://10.10.10.37/
+|     
+|     Path: http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|     Form id: search-form-5dcc66edbf21c
+|     Form action: http://10.10.10.37/
+|     
+|     Path: http://10.10.10.37:80/wp-login.php?action=lostpassword
+|     Form id: lostpasswordform
+|_    Form action: http://10.10.10.37/wp-login.php?action=lostpassword
+|_http-date: Wed, 13 Nov 2019 20:25:59 GMT; +2s from local time.
+|_http-devframework: Wordpress detected. Found common traces on /
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wiki/: Wiki
+|   /wp-login.php: Possible admin folder
+|   /phpmyadmin/: phpMyAdmin
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 4.8
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|_  /readme.html: Interesting, a readme.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.10.37
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/category/uncategorized/
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/2017/07/02/welcome-to-blockycraft/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/10.10.10.37%5c/index.php%5c/2017%5c/07%5c/02%5c/welcome-to-blockycraft%5c/embed%5c/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/wp-json/oembed/1.0/d.value%7delse;}},d)a.addEventListener(\"message\",a.wp.receiveEmbedMessage,!1),b.addEventListener(\"DOMContentLoaded\",c,!1),a.addEventListener(\"load\",c,!1)}(window,document);\n\/\/--
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/wp-json/oembed/1.0/%5c%22http:%5c/%5c/10.10.10.37%5c/index.php%5c/2017%5c/07%5c/02%5c/welcome-to-blockycraft%5c/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/author/notch/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/wp-includes/js/d.value%7delse;}},d)a.addEventListener("message",a.wp.receiveEmbedMessage,!1),b.addEventListener("DOMContentLoaded",c,!1),a.addEventListener("load",c,!1)}(window,document);
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/category/uncategorized/%5c%22
+|   
+|   Error Code: 404
+|   	http://10.10.10.37:80/index.php/2017/07/%5c%22
+|   
+|   Error Code: 405
+|   	http://10.10.10.37:80/xmlrpc.php
+|   
+|   Error Code: 405
+|_  	http://10.10.10.37:80/wp-comments-post.php
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.10.37
+|   Found the following feeds: 
+|     RSS (version 2.0): http://10.10.10.37:80/index.php/2017/07/02/welcome-to-blockycraft/feed/
+|     RSS (version 2.0): http://10.10.10.37/index.php/feed/
+|     RSS (version 2.0): http://10.10.10.37:80/index.php/comments/feed/
+|     RSS (version 2.0): http://10.10.10.37:80/index.php/author/notch/feed/
+|     RSS (version 2.0): http://10.10.10.37/index.php/author/notch/feed/
+|     RSS (version 2.0): http://10.10.10.37/index.php/2017/07/02/welcome-to-blockycraft/feed/
+|     RSS (version 2.0): http://10.10.10.37/index.php/comments/feed/
+|_    RSS (version 2.0): http://10.10.10.37:80/index.php/feed/
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: WordPress 4.8
+| http-grep: 
+|   (1) http://10.10.10.37:80/: 
+|     (1) ip: 
+|_      + 10.10.10.37
+| http-headers: 
+|   Date: Wed, 13 Nov 2019 20:26:02 GMT
+|   Server: Apache/2.4.18 (Ubuntu)
+|   Link: <http://10.10.10.37/index.php/wp-json/>; rel="https://api.w.org/"
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 97c7381671ea98a68b0876c2896c68f7
+|_Credits query returned unknown hash 09cb01c9fb47938211de9c0c00cf4597
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-screenshot-html: 
+|_  Saved to 10.10.10.37-80.png
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 2
+|     /index.php/2017/07/
+|       Other: 1
+|     /index.php/comments/feed/
+|       Other: 1
+|     /index.php/feed/
+|       Other: 1
+|     /index.php/wp-json/
+|       Other: 1
+|     /wp-admin/
+|       php: 1
+|     /wp-content/themes/twentyseventeen/
+|       css: 1
+|     /wp-includes/
+|       xml: 1
+|     /wp-includes/js/
+|       js: 1
+|     /wp-includes/js/jquery/
+|       Other: 1; js: 2
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /index.php/2017/07/
+|   Total files found (by extension):
+|_    Other: 6; css: 1; js: 3; php: 3; xml: 1
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://10.10.10.37:80/wp-includes/js/jquery/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://10.10.10.37:80/wp-includes/js/jquery/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.37:80/wp-includes/js/jquery/?C=S%3bO%3dA%27%20OR%20sqlspider
+|_    http://10.10.10.37:80/wp-includes/js/jquery/?C=D%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: BlockyCraft &#8211; Under Construction!
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   themes
+|     twentyfifteen 1.8
+|     twentysixteen 1.3
+|     twentyseventeen 1.3
+|   plugins
+|_    akismet 3.3.2
+| http-wordpress-users: 
+| Username found: notch
+|_Search stopped at ID #25. Increase the upper limit if necessary with 'http-wordpress-users.limit'
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 13 12:26:53 2019 -- 1 IP address (1 host up) scanned in 66.93 seconds

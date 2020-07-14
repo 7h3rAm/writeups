@@ -1,0 +1,64 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.169" color="navyblue" fillcolor="#ffffff" tooltip="[VulnHub] BSides Vancouver: 2018 (Workshop)"];
+  10[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  11[label="anne is part of sudo group: sudo -l" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  12[label="sudo su → root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  13[label="/root/flag.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  14[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  15[label="Apache httpd 2.2.22 ((Ubuntu))" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  16[label="http://192.168.92.169/robots.txt" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  17[label="http://192.168.92.169/backup_wordpress" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  18[label="wpscan found 2 users: admin and john" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  19[label="wpscan found password for user john → enigma" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="Hello Dolly plugin → PHP reverse shell → www-data" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  21[label="mysql credentials in /var/www/backup_wordpress/wp-config.php" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  22[label="cronjob /usr/local/bin/cleanup" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  23[label="netcat shell → root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  2[label="21/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="vsftpd 2.3.5" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="ftp://192.168.92.169/public/users.txt.bk" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="password bruteforce using hydra for user anne → princess" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  7[label="OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  8[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  9[label="ssh interactive shell → anne" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[VulnHub] BSides Vancouver: 2018 (Workshop)";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 14 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 6 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    10 -> 21 [color="#665957"];
+    10 -> 22 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    16 -> 17 [color="#665957"];
+    17 -> 8 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    20 -> 10 [color="#665957"];
+    22 -> 23 [color="#665957"];
+    23 -> 13 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 8 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    7 -> 5 [color="#665957"];
+    8 -> 18 [color="#665957"];
+    8 -> 9 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

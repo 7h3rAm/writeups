@@ -1,0 +1,86 @@
+WhatWeb report for http://kioptrix3.com:80
+Status    : 200 OK
+Title     : Ligoat Security - Got Goat? Security ...
+IP        : 192.168.92.184
+Country   : RESERVED, ZZ
+
+Summary   : maybe LotusCMS, PHP[5,5.2.4-2ubuntu5.6][Suhosin-Patch], Cookies[PHPSESSID], X-Powered-By[PHP/5.2.4-2ubuntu5.6], HTTPServer[Ubuntu Linux][Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch], Apache[2.2.8,2.x], Meta-Author[name of author - Manjeet Singh Sawhney   www.manjeetss.com]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.2.8 (from HTTP Server Header)
+	Version      : 2.x
+	Version      : 2.x
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : PHPSESSID
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch (from server string)
+
+[ LotusCMS ]
+	LotusCMS (previously ArboroianCMS) brings to the forefront 
+	design and design integration into one of the most 
+	neglected CMS niches - Databaseless Web-Design and 
+	Development. 
+
+	Certainty    : maybe
+	Google Dorks: (1)
+	Website     : http://www.lotuscms.org/
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name 
+	tag - info: 
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : name of author - Manjeet Singh Sawhney   www.manjeetss.com
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.2.4-2ubuntu5.6
+	Module       : Suhosin-Patch
+	Version      : 5.2.4-2ubuntu5.6
+	Version      : 5
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.2.4-2ubuntu5.6 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Sat, 28 Sep 2019 21:12:16 GMT
+	Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+	X-Powered-By: PHP/5.2.4-2ubuntu5.6
+	Set-Cookie: PHPSESSID=995896d9428777b02a3f03e6d531527f; path=/
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Pragma: no-cache
+	Content-Length: 1819
+	Connection: close
+	Content-Type: text/html
+	

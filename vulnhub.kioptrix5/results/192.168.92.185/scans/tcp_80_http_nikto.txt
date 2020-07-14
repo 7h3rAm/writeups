@@ -1,0 +1,24 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.185
++ Target Hostname:    192.168.92.185
++ Target Port:        80
++ Start Time:         2019-10-09 12:12:31 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8
++ Server leaks inodes via ETags, header found with file /, inode: 67014, size: 152, mtime: Sat Mar 29 10:22:52 2014
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ mod_ssl/2.2.21 appears to be outdated (current is at least 2.8.31) (may depend on server version)
++ PHP/5.3.8 appears to be outdated (current is at least 5.6.9). PHP 5.5.25 and 5.4.41 are also current.
++ OpenSSL/0.9.8q appears to be outdated (current is at least 1.0.1j). OpenSSL 1.0.0o and 0.9.8zc are also current.
++ Apache/2.2.21 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE 
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 - mod_ssl 2.8.7 and lower are vulnerable to a remote buffer overflow which may allow a remote shell. http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0082, OSVDB-756.
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect (timeout): Operation now in progress
++ Scan terminated:  7 error(s) and 11 item(s) reported on remote host
++ End Time:           2019-10-09 12:19:17 (GMT-7) (406 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

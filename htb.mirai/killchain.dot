@@ -1,0 +1,65 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="10.10.10.48" color="navyblue" fillcolor="#ffffff" tooltip="[HTB] Mirai"];
+  10[label="ssh (root)" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  11[label="/root/root.txt → flag in usb drive" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  12[label="cat /media/usbstick/damnit.txt → flag file deleted" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  13[label="strings /dev/sdb → contents of root.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  14[label="53/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  15[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  16[label="X-Pi-hole: A black hole for Internet advertisements." color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  17[label="http://10.10.10.48/admin/" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  18[label="pihole dashboard" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  19[label="pihole default creds for ssh login" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="22/tcp" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  21[label="123/udp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  22[label="1323/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  23[label="32400/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  24[label="32469/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  2[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  4[label="ssh (pi)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  5[label="/home/pi/Desktop/user.txt" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  6[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  7[label="id → user pi is member of sudo group" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  8[label="sudo su -" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  9[label="sudo -l → user pi can run any command with sudo" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[HTB] Mirai";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 14 [color="#665957"];
+    1 -> 15 [color="#665957"];
+    1 -> 16 [color="#665957"];
+    1 -> 17 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 21 [color="#665957"];
+    1 -> 22 [color="#665957"];
+    1 -> 23 [color="#665957"];
+    1 -> 24 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    15 -> 1 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    18 -> 3 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    3 -> 19 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    6 -> 9 [color="#665957"];
+    7 -> 8 [color="#665957"];
+    8 -> 10 [color="#665957"];
+    9 -> 8 [color="#665957"];
+  }
+}

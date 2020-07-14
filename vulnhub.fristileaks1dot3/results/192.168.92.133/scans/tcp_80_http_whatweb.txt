@@ -1,0 +1,62 @@
+WhatWeb report for http://192.168.92.133:80
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.92.133
+Country   : RESERVED, ZZ
+
+Summary   : WebDAV[2], PHP[5.3.3], HTTPServer[CentOS][Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3], Apache[2.2,2.2.15]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.2.15 (from HTTP Server Header)
+	Version      : 2.2
+	Version      : 2.2
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : CentOS
+	String       : Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3 (from server string)
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.3
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ WebDAV ]
+	Web-based Distributed Authoring and Versioning (WebDAV) is 
+	a set of methods based on the Hypertext Transfer Protocol 
+	(HTTP) that facilitates collaboration between users in 
+	editing and managing documents and files stored on World 
+	Wide Web servers. - More Info: 
+	http://en.wikipedia.org/wiki/WebDAV 
+
+	Version      : 2
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Wed, 11 Sep 2019 13:59:56 GMT
+	Server: Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3
+	Last-Modified: Tue, 17 Nov 2015 18:45:47 GMT
+	ETag: "31b2-2bf-524c0ef1d551d"
+	Accept-Ranges: bytes
+	Content-Length: 703
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

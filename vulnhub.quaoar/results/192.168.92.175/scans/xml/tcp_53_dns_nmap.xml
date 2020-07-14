@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Sep 18 14:24:04 2019 as: nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_53_dns_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_53_dns_nmap.xml 192.168.92.175 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_53_dns_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_53_dns_nmap.xml 192.168.92.175" start="1568841844" startstr="Wed Sep 18 14:24:04 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568841846"/>
+<taskend task="NSE" time="1568841846"/>
+<taskbegin task="NSE" time="1568841846"/>
+<taskend task="NSE" time="1568841846"/>
+<taskbegin task="ARP Ping Scan" time="1568841846"/>
+<taskend task="ARP Ping Scan" time="1568841846" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568841846"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568841847"/>
+<taskbegin task="SYN Stealth Scan" time="1568841847"/>
+<taskend task="SYN Stealth Scan" time="1568841847" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568841847"/>
+<taskend task="Service scan" time="1568841853" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568841853"/>
+<taskend task="NSE" time="1568841868"/>
+<taskbegin task="NSE" time="1568841868"/>
+<taskend task="NSE" time="1568841868"/>
+<host starttime="1568841846" endtime="1568841868"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.175" addrtype="ipv4"/>
+<address addr="00:0C:29:00:BD:18" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="domain" product="ISC BIND" version="9.8.1-P1" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.8.1-p1</cpe></service><script id="dns-nsec-enum" output="Can&apos;t determine domain for host 192.168.92.175; use dns-nsec-enum.domains script arg."/><script id="dns-nsec3-enum" output="Can&apos;t determine domain for host 192.168.92.175; use dns-nsec3-enum.domains script arg."/><script id="dns-nsid" output="&#xa;  bind.version: 9.8.1-P1"><elem key="bind.version">9.8.1-P1</elem>
+</script></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;192.168.92.175&quot;; use dns-brute.domain script argument."/></hostscript><times srtt="1305" rttvar="4720" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568841868"/>
+<taskend task="NSE" time="1568841868"/>
+<taskbegin task="NSE" time="1568841868"/>
+<taskend task="NSE" time="1568841868"/>
+<runstats><finished time="1568841868" timestr="Wed Sep 18 14:24:28 2019" elapsed="24.89" summary="Nmap done at Wed Sep 18 14:24:28 2019; 1 IP address (1 host up) scanned in 24.89 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

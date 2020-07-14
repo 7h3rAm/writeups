@@ -1,0 +1,94 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_full_tcp_nmap.xml" 10.10.10.27
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_top_20_udp_nmap.xml" 10.10.10.27
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_quick_tcp_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:135 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_135_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_135_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:139 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_139_smb_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_139_smb_nmap.xml" 10.10.10.27
+
+enum4linux -a -M -l -d 10.10.10.27 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.10.10.27 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbclient.txt"
+
+smbmap -H 10.10.10.27 -P 139 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 139 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.27 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.27 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:445 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_nmap.xml" 10.10.10.27
+
+smbmap -H 10.10.10.27 -P 445 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 445 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.27 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.27 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.27 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:1433 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_1433_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 1433 --script="banner,(ms-sql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="mssql.instance-port=1433,mssql.username=sa,mssql.password=sa" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_1433_mssql_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_1433_mssql_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:5985 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_5985_http_nmap.xml" 10.10.10.27
+
+curl -sSik http://10.10.10.27:5985/ -m 10 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_index.html"
+
+curl -sSik http://10.10.10.27:5985/robots.txt -m 10 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.27:5985/ /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.27:5985 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.27:5985 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.27:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster.txt"; else gobuster dir -u http://10.10.10.27:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:47001 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 47001 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_47001_http_nmap.xml" 10.10.10.27
+
+curl -sSik http://10.10.10.27:47001/ -m 10 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_index.html"
+
+curl -sSik http://10.10.10.27:47001/robots.txt -m 10 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.27:47001/ /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.27:47001 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.27:47001 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.27:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster.txt"; else gobuster dir -u http://10.10.10.27:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49664 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49664_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49664 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49664_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49664_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49665 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49665_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49665 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49665_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49665_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49666 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49666_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49666 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49666_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49666_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49667 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49667_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49667 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49667_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49667_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49668 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49668_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49668 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49668_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49668_rpc_nmap.xml" 10.10.10.27
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.27:49669 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49669_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49669 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_49669_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_49669_rpc_nmap.xml" 10.10.10.27
+

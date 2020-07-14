@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Sep 11 13:59:40 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_full_tcp_nmap.xml 192.168.92.133 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_full_tcp_nmap.xml 192.168.92.133" start="1568235580" startstr="Wed Sep 11 13:59:40 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568235581"/>
+<taskend task="NSE" time="1568235581"/>
+<taskbegin task="NSE" time="1568235581"/>
+<taskend task="NSE" time="1568235581"/>
+<taskbegin task="ARP Ping Scan" time="1568235581"/>
+<taskend task="ARP Ping Scan" time="1568235582" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568235582"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568235582"/>
+<taskbegin task="SYN Stealth Scan" time="1568235582"/>
+<taskprogress task="SYN Stealth Scan" time="1568235613" percent="12.28" remaining="222" etc="1568235834"/>
+<taskprogress task="SYN Stealth Scan" time="1568235643" percent="20.46" remaining="238" etc="1568235880"/>
+<taskprogress task="SYN Stealth Scan" time="1568235673" percent="32.21" remaining="192" etc="1568235865"/>
+<taskprogress task="SYN Stealth Scan" time="1568235703" percent="50.88" remaining="117" etc="1568235820"/>
+<taskprogress task="SYN Stealth Scan" time="1568235733" percent="72.86" remaining="57" etc="1568235789"/>
+<taskend task="SYN Stealth Scan" time="1568235767" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1568235767"/>
+<taskend task="Service scan" time="1568235773" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568235775"/>
+<taskend task="NSE" time="1568235775"/>
+<taskbegin task="NSE" time="1568235775"/>
+<taskend task="NSE" time="1568235775"/>
+<host starttime="1568235581" endtime="1568235775"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.133" addrtype="ipv4"/>
+<address addr="08:00:27:A5:A6:76" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65351"/>
+<extrareasons reason="host-prohibiteds" count="183"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.15" extrainfo="(CentOS) DAV/2 PHP/5.3.3" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.15</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS TRACE&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-robots.txt" output="3 disallowed entries &#xa;/cola /sisi /beer"/><script id="http-server-header" output="Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3"><elem>Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 2.6.32" accuracy="100" line="54126">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=9/11%OT=80%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=080027%TM=5D79&#xa;OS:60FF%P=i686-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=105%TI=Z%II=I%TS=A)OPS(O1=&#xa;OS:M5B4ST11NW5%O2=M5B4ST11NW5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B4ST11NW5&#xa;OS:%O6=M5B4ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN(R=Y&#xa;OS:%DF=Y%TG=40%W=3908%O=M5B4NNSNW5%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%&#xa;OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)U1(R=N)IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="4294953" lastboot="Tue Jul 23 21:00:22 2019"/>
+<distance value="1"/>
+<tcpsequence index="263" difficulty="Good luck!" values="6EA3C4C4,6A6105BA,CCB6FB3E,2174DFBC,28787330,24A421B3"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="FFFFC234,FFFFC29B,FFFFC303,FFFFC36B,FFFFC3D3,FFFFC43B"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.133" rtt="0.94"/>
+</trace>
+<times srtt="942" rttvar="889" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568235775"/>
+<taskend task="NSE" time="1568235775"/>
+<taskbegin task="NSE" time="1568235775"/>
+<taskend task="NSE" time="1568235775"/>
+<runstats><finished time="1568235775" timestr="Wed Sep 11 14:02:55 2019" elapsed="195.00" summary="Nmap done at Wed Sep 11 14:02:55 2019; 1 IP address (1 host up) scanned in 195.00 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

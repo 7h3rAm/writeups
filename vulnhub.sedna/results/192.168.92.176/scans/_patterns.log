@@ -1,0 +1,24 @@
+tcp/110/nmap-pop3 - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/110/nmap-pop3 - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.7 (Ubuntu)
+
+tcp/143/nmap-imap - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/143/nmap-imap - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/993/nmap-imap - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/993/nmap-imap - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/995/nmap-pop3 - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/995/nmap-pop3 - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/8080/nmap-http - Matched Pattern: Unauthorized
+
+tcp/8080/nmap-http - Matched Pattern: Unauthorized
+
+tcp/8080/nmap-http - Identified HTTP Server: Apache-Coyote/1.1
+

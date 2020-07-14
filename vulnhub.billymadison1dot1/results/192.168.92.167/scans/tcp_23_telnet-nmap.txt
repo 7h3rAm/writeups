@@ -1,0 +1,12 @@
+# Nmap 7.70 scan initiated Thu Sep  5 17:47:28 2019 as: nmap -vv --reason -Pn -sV -p 23 --script=banner,telnet-encryption,telnet-ntlm-info -oN /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/tcp_23_telnet-nmap.txt -oX /root/toolbox/vulnhub/billymadison1dot1/results/192.168.92.167/scans/xml/tcp_23_telnet_nmap.xml 192.168.92.167
+Nmap scan report for 192.168.92.167
+Host is up, received arp-response (0.0030s latency).
+Scanned at 2019-09-05 17:47:30 PDT for 1s
+
+PORT   STATE  SERVICE REASON       VERSION
+23/tcp closed telnet  reset ttl 64
+MAC Address: 00:0C:29:1A:ED:6C (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  5 17:47:31 2019 -- 1 IP address (1 host up) scanned in 3.36 seconds

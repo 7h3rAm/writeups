@@ -1,0 +1,12 @@
+# Nmap 7.70 scan initiated Wed Oct  9 12:12:28 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/tcp_80_http_nmap.xml 192.168.92.185
+Nmap scan report for 192.168.92.185
+Host is up, received arp-response (0.0019s latency).
+Scanned at 2019-10-09 12:12:31 PDT for 0s
+
+PORT   STATE    SERVICE REASON      VERSION
+80/tcp filtered http    no-response
+MAC Address: 00:0C:29:0B:79:90 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct  9 12:12:31 2019 -- 1 IP address (1 host up) scanned in 3.16 seconds

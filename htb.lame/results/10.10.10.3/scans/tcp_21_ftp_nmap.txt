@@ -1,0 +1,27 @@
+# Nmap 7.70 scan initiated Fri Nov  1 12:31:47 2019 as: nmap -vv --reason -Pn -sV -p 21 --script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.3
+Nmap scan report for 10.10.10.3
+Host is up, received user-set (0.067s latency).
+Scanned at 2019-11-01 12:31:48 PDT for 22s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 63 vsftpd 2.3.4
+|_banner: 220 (vsFTPd 2.3.4)
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.10.14.18
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+|_sslv2-drown: 
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 12:32:10 2019 -- 1 IP address (1 host up) scanned in 23.21 seconds

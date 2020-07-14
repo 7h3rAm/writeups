@@ -1,0 +1,24 @@
+Doing NBT name scan for addresses from 192.168.92.131
+
+
+NetBIOS Name Table for Host 192.168.92.131:
+
+Incomplete packet, 335 bytes long.
+Name             Service          Type             
+----------------------------------------
+KIOPTRIX4        Workstation Service
+KIOPTRIX4        Messenger Service
+KIOPTRIX4        File Server Service
+KIOPTRIX4        Workstation Service
+KIOPTRIX4        Messenger Service
+KIOPTRIX4        File Server Service
+__MSBROWSE__  Master Browser
+WORKGROUP        Master Browser
+WORKGROUP        Browser Service Elections
+WORKGROUP        Domain Name
+WORKGROUP        Master Browser
+WORKGROUP        Browser Service Elections
+WORKGROUP        Domain Name
+
+Adapter address: 00:00:00:00:00:00
+----------------------------------------

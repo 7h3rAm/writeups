@@ -1,0 +1,126 @@
+# Nmap 7.70 scan initiated Wed Nov 13 14:08:25 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/htb.cronos/results/10.10.10.13/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.cronos/results/10.10.10.13/scans/xml/tcp_80_http_nmap.xml 10.10.10.13
+Nmap scan report for 10.10.10.13
+Host is up, received user-set (0.12s latency).
+Scanned at 2019-11-13 14:08:28 PST for 29s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+|_http-chrono: Request times for /; avg: 301.79ms; min: 258.22ms; max: 332.16ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.13
+|     
+|     Path: http://10.10.10.13:80/
+|     Line number: 4
+|     Comment: 
+|         <!--
+|             Modified from the Debian original for Ubuntu
+|             Last updated: 2014-03-19
+|             See: https://launchpad.net/bugs/1288690
+|           -->
+|     
+|     Path: http://10.10.10.13:80/
+|     Line number: 239
+|     Comment: 
+|         <!--      <div class="table_of_contents floating_element">
+|                 <div class="section_header section_header_grey">
+|                   TABLE OF CONTENTS
+|                 </div>
+|                 <div class="table_of_contents_item floating_element">
+|                   <a href="#about">About</a>
+|                 </div>
+|                 <div class="table_of_contents_item floating_element">
+|                   <a href="#changes">Changes</a>
+|                 </div>
+|                 <div class="table_of_contents_item floating_element">
+|                   <a href="#scope">Scope</a>
+|                 </div>
+|                 <div class="table_of_contents_item floating_element">
+|                   <a href="#files">Config files</a>
+|                 </div>
+|               </div>
+|_        -->
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 13 Nov 2019 22:08:41 GMT; 0s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.10.13
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://10.10.10.13:80/manual
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://10.10.10.13:80/manual: 
+|     (1) ip: 
+|_      + 10.10.10.13
+| http-headers: 
+|   Date: Wed, 13 Nov 2019 22:08:45 GMT
+|   Server: Apache/2.4.18 (Ubuntu)
+|   Last-Modified: Wed, 26 Jul 2017 22:40:58 GMT
+|   ETag: "30a6-555402443a52b"
+|   Accept-Ranges: bytes
+|   Content-Length: 12454
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 488ed7a64b91469482ef8959e32403d5
+|_Credits query returned unknown hash 488ed7a64b91469482ef8959e32403d5
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  http://cdn.carbonads.com:80/carbon.js?zoneid=1673&serve=C6AILKT&placement=hacktheboxeu
+| http-screenshot-html: 
+|_  Saved to 10.10.10.13-80.png
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /icons/
+|       png: 1
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /icons/
+|   Total files found (by extension):
+|_    Other: 1; png: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Apache2 Ubuntu Default Page: It works
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 13 14:08:57 2019 -- 1 IP address (1 host up) scanned in 32.05 seconds

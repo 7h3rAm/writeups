@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Sep 10 18:09:50 2019 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /root/toolbox/vulnhub/dc6/results/wordy/scans/_top_20_udp_nmap.txt -oX /root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_top_20_udp_nmap.xml wordy -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /root/toolbox/vulnhub/dc6/results/wordy/scans/_top_20_udp_nmap.txt -oX /root/toolbox/vulnhub/dc6/results/wordy/scans/xml/_top_20_udp_nmap.xml wordy" start="1568164190" startstr="Tue Sep 10 18:09:50 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568164191"/>
+<taskend task="NSE" time="1568164191"/>
+<taskbegin task="NSE" time="1568164191"/>
+<taskend task="NSE" time="1568164191"/>
+<taskbegin task="ARP Ping Scan" time="1568164191"/>
+<taskend task="ARP Ping Scan" time="1568164191" extrainfo="1 total hosts"/>
+<taskbegin task="UDP Scan" time="1568164191"/>
+<taskend task="UDP Scan" time="1568164208" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1568164208"/>
+<taskend task="Service scan" time="1568164449" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568164451"/>
+<taskend task="NSE" time="1568164451"/>
+<taskbegin task="NSE" time="1568164451"/>
+<taskend task="NSE" time="1568164452"/>
+<host starttime="1568164191" endtime="1568164452"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.170" addrtype="ipv4"/>
+<address addr="00:0C:29:F1:97:73" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="wordy" type="user"/>
+<hostname name="wordy" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="64"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="53"/>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=9/10%OT=%CT=%CU=53%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D784A64%P=i686-pc-linux-gnu)&#xa;SEQ(CI=Z%II=I)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="1"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.170" rtt="1.90" host="wordy"/>
+</trace>
+<times srtt="1905" rttvar="2654" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568164452"/>
+<taskend task="NSE" time="1568164452"/>
+<taskbegin task="NSE" time="1568164452"/>
+<taskend task="NSE" time="1568164452"/>
+<runstats><finished time="1568164452" timestr="Tue Sep 10 18:14:12 2019" elapsed="261.73" summary="Nmap done at Tue Sep 10 18:14:12 2019; 1 IP address (1 host up) scanned in 261.73 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

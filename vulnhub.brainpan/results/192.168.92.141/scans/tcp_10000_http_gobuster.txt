@@ -1,0 +1,17 @@
+
+Gobuster v1.4.1              OJ Reeves (@TheColonial)
+=====================================================
+=====================================================
+[+] Mode         : dir
+[+] Url/Domain   : http://192.168.92.141:10000/
+[+] Threads      : 10
+[+] Wordlist     : /usr/share/seclists/Discovery/Web-Content/common.txt
+[+] Status codes : 200,204,301,302,307,403
+[+] Show length  : true
+[+] Extensions   : .txt,.html,.php,.asp,.aspx
+[+] Expanded     : true
+=====================================================
+http://192.168.92.141:10000/bin (Status: 301)
+http://192.168.92.141:10000/index.html (Status: 200) [Size: 215]
+http://192.168.92.141:10000/index.html (Status: 200) [Size: 215]
+=====================================================

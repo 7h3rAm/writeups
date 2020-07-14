@@ -1,0 +1,15 @@
+# Nmap 7.70 scan initiated Fri Sep 27 18:17:47 2019 as: nmap -vv --reason -Pn -sV -p 631 --script=banner,(cups* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_631_cups_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_631_cups_nmap.xml 192.168.92.182
+Nmap scan report for 192.168.92.182
+Host is up, received arp-response (0.00070s latency).
+Scanned at 2019-09-27 18:17:47 PDT for 22s
+
+PORT    STATE SERVICE REASON         VERSION
+631/tcp open  ipp     syn-ack ttl 64 CUPS 1.1
+|_cups-info: ERROR: Script execution failed (use -d to debug)
+|_cups-queue-info: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: CUPS/1.1
+MAC Address: 00:0C:29:DD:3C:B5 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 27 18:18:09 2019 -- 1 IP address (1 host up) scanned in 22.48 seconds

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Sep 27 18:17:07 2019 as: nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_443_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_443_https_nmap.xml 192.168.92.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_443_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_443_https_nmap.xml 192.168.92.182" start="1569633427" startstr="Fri Sep 27 18:17:07 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569633428"/>
+<taskend task="NSE" time="1569633428"/>
+<taskbegin task="NSE" time="1569633428"/>
+<taskend task="NSE" time="1569633428"/>
+<taskbegin task="ARP Ping Scan" time="1569633428"/>
+<taskend task="ARP Ping Scan" time="1569633428" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1569633428"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1569633428"/>
+<taskbegin task="SYN Stealth Scan" time="1569633428"/>
+<taskend task="SYN Stealth Scan" time="1569633428" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1569633429"/>
+<taskend task="Service scan" time="1569633462" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1569633462"/>
+<taskprogress task="NSE" time="1569633493" percent="98.73" remaining="1" etc="1569633493"/>
+<taskprogress task="NSE" time="1569633523" percent="99.05" remaining="1" etc="1569633524"/>
+<taskprogress task="NSE" time="1569633553" percent="99.68" remaining="1" etc="1569633553"/>
+<taskprogress task="NSE" time="1569633583" percent="99.68" remaining="1" etc="1569633583"/>
+<taskprogress task="NSE" time="1569633613" percent="99.68" remaining="1" etc="1569633613"/>
+<taskprogress task="NSE" time="1569633643" percent="99.68" remaining="1" etc="1569633644"/>
+<taskend task="NSE" time="1569633651"/>
+<taskbegin task="NSE" time="1569633651"/>
+<taskend task="NSE" time="1569633651"/>
+<host starttime="1569633428" endtime="1569633651"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.182" addrtype="ipv4"/>
+<address addr="00:0C:29:DD:3C:B5" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.0.52" extrainfo="(CentOS)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.0.52</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.182&#xa;  url                                   method&#xa;  https://192.168.92.182:443/           FORM&#xa;  https://192.168.92.182:443/index.php  FORM&#xa;"/><script id="http-chrono" output="Request times for /; avg: 652.60ms; min: 324.08ms; max: 1028.51ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.182&#xa;    &#xa;    Path: https://192.168.92.182:443/index.php&#xa;    Line number: 28&#xa;    Comment: &#xa;        &lt;!-&#45; Start of HTML when logged in as Administator -&#45;&gt;&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.182&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: https://192.168.92.182:443/&#xa;    Form id: frmlogin&#xa;    Form action: index.php&#xa;    &#xa;    Path: https://192.168.92.182:443/index.php&#xa;    Form id: frmlogin&#xa;    Form action: index.php&#xa;"/><script id="http-date" output="Fri, 27 Sep 2019 22:07:46 GMT; -3h10m00s from local time."><elem key="date">2019-09-27T22:07:46+00:00</elem>
+<elem key="delta">-11400.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /icons/: Potentially interesting directory w/ listing on &apos;apache/2.0.52 (centos)&apos;&#xa;  /manual/: Potentially interesting folder&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Date: Fri, 27 Sep 2019 22:07:49 GMT&#xa;  Server: Apache/2.0.52 (CentOS)&#xa;  X-Powered-By: PHP/4.3.9&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 638cf3f4fbc7d4276fb34667955cb7d2&#xa;Versions from credits query (more accurate): 4.3.9 - 4.3.11&#xa;Version from header x-powered-by: PHP/4.3.9"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-screenshot-html" output="&#xa;  Saved to 192.168.92.182-443.png&#xa;"/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.0.52 (CentOS)"><elem>Apache/2.0.52 (CentOS)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; php: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; php: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script><script id="http-trace" output="TRACE is enabled&#xa;Headers:&#xa;Date: Fri, 27 Sep 2019 22:07:50 GMT&#xa;Server: Apache/2.0.52 (CentOS)&#xa;Connection: close&#xa;Transfer-Encoding: chunked&#xa;Content-Type: message/http&#xa;"/><script id="http-traceroute" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;124 names had status 200&#xa;erp&#xa;test&#xa;cdn"/><script id="http-vuln-cve2017-1001000" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/><script id="ssl-ccs-injection" output="&#xa;  VULNERABLE:&#xa;  SSL/TLS MITM vulnerability (CCS Injection)&#xa;    State: VULNERABLE&#xa;    Risk factor: High&#xa;      OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h&#xa;      does not properly restrict processing of ChangeCipherSpec messages,&#xa;      which allows man-in-the-middle attackers to trigger use of a zero&#xa;      length master key in certain OpenSSL-to-OpenSSL communications, and&#xa;      consequently hijack sessions or obtain sensitive information, via&#xa;      a crafted TLS handshake, aka the &quot;CCS Injection&quot; vulnerability.&#xa;          &#xa;    References:&#xa;      http://www.cvedetails.com/cve/2014-0224&#xa;      http://www.openssl.org/news/secadv_20140605.txt&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224&#xa;"><table key="NMAP-4">
+<elem key="title">SSL/TLS MITM vulnerability (CCS Injection)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>OpenSSL before 0.9.8za, 1.0.0 before 1.0.0m, and 1.0.1 before 1.0.1h&#xa;does not properly restrict processing of ChangeCipherSpec messages,&#xa;which allows man-in-the-middle attackers to trigger use of a zero&#xa;length master key in certain OpenSSL-to-OpenSSL communications, and&#xa;consequently hijack sessions or obtain sensitive information, via&#xa;a crafted TLS handshake, aka the &quot;CCS Injection&quot; vulnerability.&#xa;    </elem>
+</table>
+<table key="refs">
+<elem>http://www.cvedetails.com/cve/2014-0224</elem>
+<elem>http://www.openssl.org/news/secadv_20140605.txt</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224</elem>
+</table>
+</table>
+</script><script id="ssl-cert" output="Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=-&#45;/emailAddress=root@localhost.localdomain/organizationalUnitName=SomeOrganizationalUnit/localityName=SomeCity&#xa;Issuer: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=-&#45;/emailAddress=root@localhost.localdomain/organizationalUnitName=SomeOrganizationalUnit/localityName=SomeCity&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: md5WithRSAEncryption&#xa;Not valid before: 2009-10-08T00:10:47&#xa;Not valid after:  2010-10-08T00:10:47&#xa;MD5:   01de 29f9 fbfb 2eb2 beaf e624 3157 090f&#xa;SHA-1: 560c 9196 6506 fb0f fb81 66b1 ded3 ac11 2ed4 808a&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEDDCCA3WgAwIBAgIBADANBgkqhkiG9w0BAQQFADCBuzELMAkGA1UEBhMCLS0x&#xa;EjAQBgNVBAgTCVNvbWVTdGF0ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoT&#xa;EFNvbWVPcmdhbml6YXRpb24xHzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVu&#xa;aXQxHjAcBgNVBAMTFWxvY2FsaG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJ&#xa;ARYacm9vdEBsb2NhbGhvc3QubG9jYWxkb21haW4wHhcNMDkxMDA4MDAxMDQ3WhcN&#xa;MTAxMDA4MDAxMDQ3WjCBuzELMAkGA1UEBhMCLS0xEjAQBgNVBAgTCVNvbWVTdGF0&#xa;ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoTEFNvbWVPcmdhbml6YXRpb24x&#xa;HzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVuaXQxHjAcBgNVBAMTFWxvY2Fs&#xa;aG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJARYacm9vdEBsb2NhbGhvc3Qu&#xa;bG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAN4duNVEr4aL&#xa;TUfsjacXKcCaRs1oTxsdNTIxkp7SV2PDD+mBY5shsXt/FMG7Upf4g605+W6ZEhfB&#xa;WpLXonDFaRIxxn4AGSOLg8q20kUt9p2HZufaSLSwfSwJ+CTMwYtN8AU0jhf3r0y8&#xa;jr+jjEU0HT4O4YXcnDRvbIUeHKedPPsTAgMBAAGjggEcMIIBGDAdBgNVHQ4EFgQU&#xa;QAs+OwqZIYsWClQ2ZBav2uPP/mAwgegGA1UdIwSB4DCB3YAUQAs+OwqZIYsWClQ2&#xa;ZBav2uPP/mChgcGkgb4wgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIEwlTb21lU3Rh&#xa;dGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQKExBTb21lT3JnYW5pemF0aW9u&#xa;MR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDExVsb2Nh&#xa;bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0&#xa;LmxvY2FsZG9tYWluggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEA&#xa;Hvq7KPeUTn36Sz/Au95TmC7aSkhIkGVHMRGhWe7KTEflqQffYTqJOS4xsu/FxDRy&#xa;9IGOapsyILGEx57apuCYJW3tpwMUrpUXu/x9g3LM+VghiH0XxMOfbueVhqWZ+yP8&#xa;LisROr5u+FeGOBBIINAmpWUX2xEdB4p97WYzP03rEQU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="organizationName">SomeOrganization</elem>
+<elem key="localityName">SomeCity</elem>
+<elem key="countryName">-&#45;</elem>
+<elem key="stateOrProvinceName">SomeState</elem>
+<elem key="organizationalUnitName">SomeOrganizationalUnit</elem>
+<elem key="commonName">localhost.localdomain</elem>
+<elem key="emailAddress">root@localhost.localdomain</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">SomeOrganization</elem>
+<elem key="localityName">SomeCity</elem>
+<elem key="countryName">-&#45;</elem>
+<elem key="stateOrProvinceName">SomeState</elem>
+<elem key="organizationalUnitName">SomeOrganizationalUnit</elem>
+<elem key="commonName">localhost.localdomain</elem>
+<elem key="emailAddress">root@localhost.localdomain</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">1024</elem>
+<elem key="type">rsa</elem>
+<elem key="modulus">userdata: 0x372e9f8</elem>
+<elem key="exponent">userdata: 0x382f298</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">40:0B:3E:3B:0A:99:21:8B:16:0A:54:36:64:16:AF:DA:E3:CF:FE:60</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:40:0B:3E:3B:0A:99:21:8B:16:0A:54:36:64:16:AF:DA:E3:CF:FE:60&#xa;DirName:/C=-&#45;/ST=SomeState/L=SomeCity/O=SomeOrganization/OU=SomeOrganizationalUnit/CN=localhost.localdomain/emailAddress=root@localhost.localdomain&#xa;serial:00&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">md5WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notAfter">2010-10-08T00:10:47</elem>
+<elem key="notBefore">2009-10-08T00:10:47</elem>
+</table>
+<elem key="md5">01de29f9fbfb2eb2beafe6243157090f</elem>
+<elem key="sha1">560c91966506fb0ffb8166b1ded3ac112ed4808a</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIEDDCCA3WgAwIBAgIBADANBgkqhkiG9w0BAQQFADCBuzELMAkGA1UEBhMCLS0x&#xa;EjAQBgNVBAgTCVNvbWVTdGF0ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoT&#xa;EFNvbWVPcmdhbml6YXRpb24xHzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVu&#xa;aXQxHjAcBgNVBAMTFWxvY2FsaG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJ&#xa;ARYacm9vdEBsb2NhbGhvc3QubG9jYWxkb21haW4wHhcNMDkxMDA4MDAxMDQ3WhcN&#xa;MTAxMDA4MDAxMDQ3WjCBuzELMAkGA1UEBhMCLS0xEjAQBgNVBAgTCVNvbWVTdGF0&#xa;ZTERMA8GA1UEBxMIU29tZUNpdHkxGTAXBgNVBAoTEFNvbWVPcmdhbml6YXRpb24x&#xa;HzAdBgNVBAsTFlNvbWVPcmdhbml6YXRpb25hbFVuaXQxHjAcBgNVBAMTFWxvY2Fs&#xa;aG9zdC5sb2NhbGRvbWFpbjEpMCcGCSqGSIb3DQEJARYacm9vdEBsb2NhbGhvc3Qu&#xa;bG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAN4duNVEr4aL&#xa;TUfsjacXKcCaRs1oTxsdNTIxkp7SV2PDD+mBY5shsXt/FMG7Upf4g605+W6ZEhfB&#xa;WpLXonDFaRIxxn4AGSOLg8q20kUt9p2HZufaSLSwfSwJ+CTMwYtN8AU0jhf3r0y8&#xa;jr+jjEU0HT4O4YXcnDRvbIUeHKedPPsTAgMBAAGjggEcMIIBGDAdBgNVHQ4EFgQU&#xa;QAs+OwqZIYsWClQ2ZBav2uPP/mAwgegGA1UdIwSB4DCB3YAUQAs+OwqZIYsWClQ2&#xa;ZBav2uPP/mChgcGkgb4wgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIEwlTb21lU3Rh&#xa;dGUxETAPBgNVBAcTCFNvbWVDaXR5MRkwFwYDVQQKExBTb21lT3JnYW5pemF0aW9u&#xa;MR8wHQYDVQQLExZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDExVsb2Nh&#xa;bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0&#xa;LmxvY2FsZG9tYWluggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADgYEA&#xa;Hvq7KPeUTn36Sz/Au95TmC7aSkhIkGVHMRGhWe7KTEflqQffYTqJOS4xsu/FxDRy&#xa;9IGOapsyILGEx57apuCYJW3tpwMUrpUXu/x9g3LM+VghiH0XxMOfbueVhqWZ+yP8&#xa;LisROr5u+FeGOBBIINAmpWUX2xEdB4p97WYzP03rEQU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-27T22:07:46+00:00; -3h09m57s from scanner time."><elem key="delta">-11397.0</elem>
+<elem key="date">2019-09-27T22:07:46+00:00</elem>
+</script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2015-4000  OSVDB:122331&#xa;      The Transport Layer Security (TLS) protocol contains a flaw that is&#xa;      triggered when handling Diffie-Hellman key exchanges defined with&#xa;      the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker&#xa;      to downgrade the security of a TLS session to 512-bit export-grade&#xa;      cryptography, which is significantly weaker, allowing the attacker&#xa;      to more easily break the encryption and monitor or tamper with&#xa;      the encrypted stream.&#xa;    Disclosure date: 2015-5-19&#xa;    Check results:&#xa;      EXPORT-GRADE DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: mod_ssl 2.0.x/512-bit MODP group with safe prime modulus&#xa;            Modulus Length: 512&#xa;            Generator Length: 8&#xa;            Public Key Length: 512&#xa;    References:&#xa;      http://osvdb.org/122331&#xa;      https://weakdh.org&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000&#xa;  &#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: mod_ssl 2.0.x/1024-bit MODP group with safe prime modulus&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="CVE-2015-4000">
+<elem key="title">Transport Layer Security (TLS) Protocol DHE_EXPORT Ciphers Downgrade MitM (Logjam)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2015-4000</elem>
+<elem>OSVDB:122331</elem>
+</table>
+<table key="description">
+<elem>The Transport Layer Security (TLS) protocol contains a flaw that is&#xa;triggered when handling Diffie-Hellman key exchanges defined with&#xa;the DHE_EXPORT cipher. This may allow a man-in-the-middle attacker&#xa;to downgrade the security of a TLS session to 512-bit export-grade&#xa;cryptography, which is significantly weaker, allowing the attacker&#xa;to more easily break the encryption and monitor or tamper with&#xa;the encrypted stream.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">5</elem>
+<elem key="day">19</elem>
+<elem key="year">2015</elem>
+</table>
+</table>
+<elem key="disclosure">2015-5-19</elem>
+<table key="check_results">
+<elem>EXPORT-GRADE DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: mod_ssl 2.0.x/512-bit MODP group with safe prime modulus&#xa;      Modulus Length: 512&#xa;      Generator Length: 8&#xa;      Public Key Length: 512</elem>
+</table>
+<table key="refs">
+<elem>http://osvdb.org/122331</elem>
+<elem>https://weakdh.org</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-4000</elem>
+</table>
+</table>
+<table key="NMAP-7">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: mod_ssl 2.0.x/1024-bit MODP group with safe prime modulus&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  SSLv3: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA - F&#xa;      TLS_RSA_WITH_DES_CBC_SHA - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 - F&#xa;      TLS_RSA_WITH_RC4_128_SHA - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      CBC-mode cipher in SSLv3 (CVE-2014-3566)&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature: MD5&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA - E&#xa;      TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - F&#xa;      TLS_DHE_RSA_WITH_DES_CBC_SHA (dh 1024) - F&#xa;      TLS_RSA_WITH_3DES_EDE_CBC_SHA - F&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA - F&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA - F&#xa;      TLS_RSA_WITH_DES_CBC_SHA - F&#xa;      TLS_RSA_WITH_RC4_128_MD5 - F&#xa;      TLS_RSA_WITH_RC4_128_SHA - F&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: client&#xa;    warnings: &#xa;      64-bit block cipher 3DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES vulnerable to SWEET32 attack&#xa;      64-bit block cipher DES40 vulnerable to SWEET32 attack&#xa;      Broken cipher RC4 is deprecated by RFC 7465&#xa;      Ciphersuite uses MD5 for message integrity&#xa;      Insecure certificate signature: MD5&#xa;  least strength: F"><table key="SSLv3">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_DES_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>CBC-mode cipher in SSLv3 (CVE-2014-3566)</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature: MD5</elem>
+</table>
+</table>
+<table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="strength">E</elem>
+<elem key="name">TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_DHE_RSA_WITH_DES_CBC_SHA</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_3DES_EDE_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_DES_CBC_SHA</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_MD5</elem>
+</table>
+<table>
+<elem key="strength">F</elem>
+<elem key="name">TLS_RSA_WITH_RC4_128_SHA</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">client</elem>
+<table key="warnings">
+<elem>64-bit block cipher 3DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES vulnerable to SWEET32 attack</elem>
+<elem>64-bit block cipher DES40 vulnerable to SWEET32 attack</elem>
+<elem>Broken cipher RC4 is deprecated by RFC 7465</elem>
+<elem>Ciphersuite uses MD5 for message integrity</elem>
+<elem>Insecure certificate signature: MD5</elem>
+</table>
+</table>
+<elem key="least strength">F</elem>
+</script><script id="ssl-poodle" output="&#xa;  VULNERABLE:&#xa;  SSL POODLE information leak&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2014-3566  OSVDB:113251&#xa;          The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;          products, uses nondeterministic CBC padding, which makes it easier&#xa;          for man-in-the-middle attackers to obtain cleartext data via a&#xa;          padding-oracle attack, aka the &quot;POODLE&quot; issue.&#xa;    Disclosure date: 2014-10-14&#xa;    Check results:&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA&#xa;    References:&#xa;      https://www.openssl.org/~bodo/ssl-poodle.pdf&#xa;      http://osvdb.org/113251&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566&#xa;      https://www.imperialviolet.org/2014/10/14/poodle.html&#xa;"><table key="CVE-2014-3566">
+<elem key="title">SSL POODLE information leak</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2014-3566</elem>
+<elem>OSVDB:113251</elem>
+</table>
+<table key="description">
+<elem>    The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other&#xa;    products, uses nondeterministic CBC padding, which makes it easier&#xa;    for man-in-the-middle attackers to obtain cleartext data via a&#xa;    padding-oracle attack, aka the &quot;POODLE&quot; issue.</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">10</elem>
+<elem key="day">14</elem>
+<elem key="year">2014</elem>
+</table>
+</table>
+<elem key="disclosure">2014-10-14</elem>
+<table key="check_results">
+<elem>TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+</table>
+<table key="refs">
+<elem>https://www.openssl.org/~bodo/ssl-poodle.pdf</elem>
+<elem>http://osvdb.org/113251</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566</elem>
+<elem>https://www.imperialviolet.org/2014/10/14/poodle.html</elem>
+</table>
+</table>
+</script><script id="sslv2" output="&#xa;  SSLv2 supported&#xa;  ciphers: &#xa;    SSL2_DES_64_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC4_64_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5"><elem>SSLv2 supported</elem>
+<table key="ciphers">
+<elem>SSL2_DES_64_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_64_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+</script><script id="sslv2-drown" output="&#xa;  ciphers: &#xa;    SSL2_DES_64_CBC_WITH_MD5&#xa;    SSL2_RC4_128_EXPORT40_WITH_MD5&#xa;    SSL2_DES_192_EDE3_CBC_WITH_MD5&#xa;    SSL2_RC4_64_WITH_MD5&#xa;    SSL2_RC2_128_CBC_WITH_MD5&#xa;    SSL2_RC4_128_WITH_MD5&#xa;    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5&#xa;  vulns: &#xa;    CVE-2016-0703: &#xa;      title: OpenSSL: Divide-and-conquer session key recovery in SSLv2&#xa;      state: VULNERABLE&#xa;      ids: &#xa;        CVE:CVE-2016-0703&#xa;      description: &#xa;              The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in&#xa;      OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before&#xa;      1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary&#xa;      cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value&#xa;      and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a&#xa;      related issue to CVE-2016-0800.&#xa;    &#xa;      refs: &#xa;        https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703&#xa;        https://www.openssl.org/news/secadv/20160301.txt&#xa;    CVE-2016-0800: &#xa;      title: OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)&#xa;      state: VULNERABLE&#xa;      ids: &#xa;        CVE:CVE-2016-0800&#xa;      description: &#xa;              The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and&#xa;      other products, requires a server to send a ServerVerify message before establishing&#xa;      that a client possesses certain plaintext RSA data, which makes it easier for remote&#xa;      attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding&#xa;      oracle, aka a &quot;DROWN&quot; attack.&#xa;    &#xa;      refs: &#xa;        https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800&#xa;        https://www.openssl.org/news/secadv/20160301.txt"><table key="ciphers">
+<elem>SSL2_DES_64_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_EXPORT40_WITH_MD5</elem>
+<elem>SSL2_DES_192_EDE3_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_64_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_WITH_MD5</elem>
+<elem>SSL2_RC4_128_WITH_MD5</elem>
+<elem>SSL2_RC2_128_CBC_EXPORT40_WITH_MD5</elem>
+</table>
+<table key="vulns">
+<table key="CVE-2016-0703">
+<elem key="title">OpenSSL: Divide-and-conquer session key recovery in SSLv2</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2016-0703</elem>
+</table>
+<table key="description">
+<elem>      The get_client_master_key function in s2_srvr.c in the SSLv2 implementation in&#xa;      OpenSSL before 0.9.8zf, 1.0.0 before 1.0.0r, 1.0.1 before 1.0.1m, and 1.0.2 before&#xa;      1.0.2a accepts a nonzero CLIENT-MASTER-KEY CLEAR-KEY-LENGTH value for an arbitrary&#xa;      cipher, which allows man-in-the-middle attackers to determine the MASTER-KEY value&#xa;      and decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding oracle, a&#xa;      related issue to CVE-2016-0800.&#xa;    </elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0703</elem>
+<elem>https://www.openssl.org/news/secadv/20160301.txt</elem>
+</table>
+</table>
+<table key="CVE-2016-0800">
+<elem key="title">OpenSSL: Cross-protocol attack on TLS using SSLv2 (DROWN)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2016-0800</elem>
+</table>
+<table key="description">
+<elem>      The SSLv2 protocol, as used in OpenSSL before 1.0.1s and 1.0.2 before 1.0.2g and&#xa;      other products, requires a server to send a ServerVerify message before establishing&#xa;      that a client possesses certain plaintext RSA data, which makes it easier for remote&#xa;      attackers to decrypt TLS ciphertext data by leveraging a Bleichenbacher RSA padding&#xa;      oracle, aka a &quot;DROWN&quot; attack.&#xa;    </elem>
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-0800</elem>
+<elem>https://www.openssl.org/news/secadv/20160301.txt</elem>
+</table>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="2440" rttvar="4077" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569633652"/>
+<taskend task="NSE" time="1569633652"/>
+<taskbegin task="NSE" time="1569633652"/>
+<taskend task="NSE" time="1569633652"/>
+<runstats><finished time="1569633652" timestr="Fri Sep 27 18:20:52 2019" elapsed="224.50" summary="Nmap done at Fri Sep 27 18:20:52 2019; 1 IP address (1 host up) scanned in 224.50 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

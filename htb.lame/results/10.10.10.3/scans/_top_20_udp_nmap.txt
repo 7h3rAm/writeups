@@ -1,0 +1,43 @@
+# Nmap 7.70 scan initiated Fri Nov  1 12:30:13 2019 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/_top_20_udp_nmap.xml 10.10.10.3
+Nmap scan report for 10.10.10.3
+Host is up, received user-set (0.22s latency).
+Scanned at 2019-11-01 12:30:14 PDT for 295s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open|filtered domain       no-response
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/1%OT=%CT=%CU=139%PV=Y%DS=2%DC=T%G=N%TM=5DBC88ED%P=i686-pc-linux-gnu)
+SEQ(II=I)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 139/udp)
+HOP RTT      ADDRESS
+1   67.17 ms 10.10.14.1
+2   67.21 ms 10.10.10.3
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 12:35:09 2019 -- 1 IP address (1 host up) scanned in 296.07 seconds

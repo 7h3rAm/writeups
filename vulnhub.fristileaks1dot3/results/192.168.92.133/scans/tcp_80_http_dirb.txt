@@ -1,0 +1,30 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_dirb.txt
+START_TIME: Wed Sep 11 13:59:54 2019
+URL_BASE: http://192.168.92.133:80/
+WORDLIST_FILES: /usr/share/seclists/Discovery/Web-Content/common.txt
+OPTION: Printing LOCATION header
+OPTION: Not Recursive
+OPTION: Silent Mode
+EXTENSIONS_LIST: (,.txt,.html,.php,.asp,.aspx) | ()(.txt)(.html)(.php)(.asp)(.aspx) [NUM = 6]
+
+-----------------
+
+GENERATED WORDS: 4593
+
+---- Scanning URL: http://192.168.92.133:80/ ----
++ http://192.168.92.133:80/cgi-bin/ (CODE:403|SIZE:210)
+==> DIRECTORY: http://192.168.92.133:80/images/
++ http://192.168.92.133:80/index.html (CODE:200|SIZE:703)
++ http://192.168.92.133:80/index.html (CODE:200|SIZE:703)
++ http://192.168.92.133:80/robots.txt (CODE:200|SIZE:62)
++ http://192.168.92.133:80/robots.txt (CODE:200|SIZE:62)
+
+-----------------
+END_TIME: Wed Sep 11 14:01:28 2019
+DOWNLOADED: 27558 - FOUND: 5

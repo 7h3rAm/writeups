@@ -1,0 +1,67 @@
+# Nmap 7.70 scan initiated Mon Sep  9 18:30:11 2019 as: nmap -vv --reason -Pn -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_22_ssh_nmap.txt -oX /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/xml/tcp_22_ssh_nmap.xml 192.168.92.169
+Nmap scan report for 192.168.92.169
+Host is up, received arp-response (0.00038s latency).
+Scanned at 2019-09-09 18:30:12 PDT for 1s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_5.9p1 Debian-5ubuntu1.10
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|_    password
+| ssh-hostkey: 
+|   1024 85:9f:8b:58:44:97:33:98:ee:98:b0:c1:85:60:3c:41 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAMkzaYX4CU4jgFt2LpgYnD4dUrKdvXHU26+oyQDS6DGYj4NK4+BlG6y1Af6NNqGv+Kph7Wp4ZZc3iDnsCXZe62idQOhusQf00LsnusvbuOXmthEicgnDSi4HUMtvs5I9Knt0+YanEq/w6mBVcbv4FoGu/l5xJny0wbiOC4jEtQGdAAAAFQCj+Lv2iCRNBOt/XGRL+YY3bFwTDQAAAIEApOoTiAV/aanDDjLFmAT6UwicLJSXY9ZtJyNUFSTEbZsCu4SSJMh+X66t4eYGhl+Ocs/OrNHmy4pQM5X4EBXmwtiSBDIrcOtiPHsV/QQhTpH60XLRQ+lPn0eoVPN+QS4JXwlb/J8KxSNLhJ6JGwrL1/ubFaywPTULmrSuobSuw+8AAACBAMNS/6H3+124bwcKmMAwwQepW19Awj89dxquE5HqPhrwNs4JYnES7ACYWKJ+/PYv7oxeK5vYrLYBpcQH5ohlJ9Jp0e7Qrinllvj1h3y4VFabKSIB5Vtba06n9+HgJwRROInfIy9D31W8JEYFHhfQbB1sXi9BVYJe646rTwktRCAM
+|   2048 cf:1a:04:e1:7b:a3:cd:2b:d1:af:7d:b3:30:e0:a0:9d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzW3pS4f3ySJqldtlgXJW75MikaSN1qeWtmXgqCi9fVPcUEh+MNxaSdltnr9aUyl7C7b4LoJKDpHuuW8qi+aRukCoaZPC/k4SCgtBjkpbJqq/Ss9Ud8ySoYw3hKHnjnfzg/FDC8a1J4O4akL4a9yaX0BM2xmsi3fm9Epc2HB4MgHvMK9MzgKPz/JaaC47sayw60VlWcgCJo+HyfXmL6iFsUtDodPz/2M2yFbtkX/zleEUb1JXVE2JPCH7VjUkDVMkhch14yCezJfVDvoEq6VeKFwheRb2mcqEuywHRvt79Ovt9JgN6E5mGLMIJvtcWmur7PouFxmuijKwuq8tSPhUX
+|   256 97:e5:28:7a:31:4d:0a:89:b2:b0:25:81:d5:36:63:4c (ECDSA)
+|_ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNIDEfC9c65N5M+6l4b+MJso0upnINHHah2BPkniqSGDi4ITuSkHRkaruC/bVcPkxNWoWoTspMSWNVOtZYumNnI=
+| ssh2-enum-algos: 
+|   kex_algorithms: (7)
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (3)
+|       ssh-rsa
+|       ssh-dss
+|       ecdsa-sha2-nistp256
+|   encryption_algorithms: (13)
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       arcfour256
+|       arcfour128
+|       aes128-cbc
+|       3des-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       aes192-cbc
+|       aes256-cbc
+|       arcfour
+|       rijndael-cbc@lysator.liu.se
+|   mac_algorithms: (11)
+|       hmac-md5
+|       hmac-sha1
+|       umac-64@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-256-96
+|       hmac-sha2-512
+|       hmac-sha2-512-96
+|       hmac-ripemd160
+|       hmac-ripemd160@openssh.com
+|       hmac-sha1-96
+|       hmac-md5-96
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+MAC Address: 00:0C:29:D5:5D:EA (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  9 18:30:13 2019 -- 1 IP address (1 host up) scanned in 2.60 seconds

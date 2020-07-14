@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Oct 10 15:50:49 2019 as: nmap -vv -&#45;reason -Pn -sV -sC -&#45;version-all -p1337,22 -oN /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_manual_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_manual_tcp_nmap.txt 192.168.92.151 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -sC -&#45;version-all -p1337,22 -oN /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_manual_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_manual_tcp_nmap.txt 192.168.92.151" start="1570747849" startstr="Thu Oct 10 15:50:49 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,1337"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570747849"/>
+<taskend task="NSE" time="1570747849"/>
+<taskbegin task="NSE" time="1570747849"/>
+<taskend task="NSE" time="1570747849"/>
+<taskbegin task="ARP Ping Scan" time="1570747849"/>
+<taskend task="ARP Ping Scan" time="1570747849" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570747849"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570747849"/>
+<taskbegin task="SYN Stealth Scan" time="1570747849"/>
+<taskend task="SYN Stealth Scan" time="1570747849" extrainfo="2 total ports"/>
+<taskbegin task="Service scan" time="1570747849"/>
+<taskend task="Service scan" time="1570747860" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1570747860"/>
+<taskend task="NSE" time="1570747861"/>
+<taskbegin task="NSE" time="1570747861"/>
+<taskend task="NSE" time="1570747861"/>
+<host starttime="1570747849" endtime="1570747861"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.151" addrtype="ipv4"/>
+<address addr="00:0C:29:97:85:0D" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="6.6.1p1 Ubuntu 2ubuntu2.3" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:6.6.1p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 3c:3d:e3:8e:35:f9:da:74:20:ef:aa:49:4a:1d:ed:dd (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAJKVpy10olbGC8nI2MWPTGKXhT6VsZcRnCAjQhqcpe8hLZ4cXu33YaLzgHJF1cm0ebDTZNP55kkYx8iQLw4izWfw21R45GWEuFLa6gX7wsygffXlSP0jlGbnspYWZj9FkbqN8GOFnUsqvCDCcXDe69OlxGPhBiMxB1rxuoUZnxPZAAAAFQCDbd7sa658iDpIzFLRsbyEkgmvQwAAAIA4myZvSg9MIJQoio8r7Pu2Z7de6aMg6dooumuVPfbsvcb1ZpcnU1nnBcJe5sSof/eIZSqh+NFl3r04rVcNmEMNP+7liXhjGAQ4G0c95vAN+12V12vHdk2YXEO4Mj/VhQxI1AP/5XdiY4OI7vDVY6FGw+4gR+aarZIDjY67jpl//QAAAIAvQVESJOOiTImUdavfNImDDFo/8Ttw0Iq9OcAwuE3umJ6PSfjcTq5IODKQ1hHr8Qb/+7Q6+osumyd6ONOIuM9x8sWExOAlWrcGkZszDzBUb4tjWXdliHuxYds+qZjl3esaKbeW5v97Zf5RPYeUv7cWWxThqbVNehp+fsxAmhMhgw==&#xa;  2048 85:94:6c:87:c9:a8:35:0f:2c:db:bb:c1:3f:2a:50:c1 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnR9vNmnhJVAXLzEz9KbyuNunmOeZLgWAvEXrYL5PQUSnjV6r9quuRtcjxs26JAMkSr2GH0r8JEhYKQQBMdGe7j/qfN5gorUOykWv1R3v+4Blu5L4R+8v7pFrQnu7IrAbms9fOiiF0nCWs6dugDQ+4rBl+90WHbJ40s5f9L1akGBpYmuuT9gy7ULabvc6CYZ2+cCFVpkf/s8rc3z3OV0W5JNoENyXtyvuirQqQ4+xLVlyPFpBfmqx1mY1XOeY7qqN99/82Ti9JfNJwjWgINGTY0wWGuWJdYrxAiyL/F9/MPJyb/zEM9I2/ne+qUrJ1Jkpcl4eJ42UV7HUkUGpZXkb&#xa;  256 f3:cd:aa:1d:05:f2:1e:8c:61:87:25:b6:f4:34:45:37 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFoWH4DDWVRbA1EqnCjoMMCx5bR9hiI5qTJIi+LGY9kWZQU4Y4D+MJQRoDBVd/ijYLAQ1HvW/MZIpjRCfUON6uU=&#xa;  256 34:ec:16:dd:a7:cf:2a:86:45:ec:65:ea:05:43:89:21 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIK8+Q9UBYlSuxYmR6fYF4W8Vv22fP15QxiCfpGk8JV2+"><table>
+<elem key="bits">1024.0</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJKVpy10olbGC8nI2MWPTGKXhT6VsZcRnCAjQhqcpe8hLZ4cXu33YaLzgHJF1cm0ebDTZNP55kkYx8iQLw4izWfw21R45GWEuFLa6gX7wsygffXlSP0jlGbnspYWZj9FkbqN8GOFnUsqvCDCcXDe69OlxGPhBiMxB1rxuoUZnxPZAAAAFQCDbd7sa658iDpIzFLRsbyEkgmvQwAAAIA4myZvSg9MIJQoio8r7Pu2Z7de6aMg6dooumuVPfbsvcb1ZpcnU1nnBcJe5sSof/eIZSqh+NFl3r04rVcNmEMNP+7liXhjGAQ4G0c95vAN+12V12vHdk2YXEO4Mj/VhQxI1AP/5XdiY4OI7vDVY6FGw+4gR+aarZIDjY67jpl//QAAAIAvQVESJOOiTImUdavfNImDDFo/8Ttw0Iq9OcAwuE3umJ6PSfjcTq5IODKQ1hHr8Qb/+7Q6+osumyd6ONOIuM9x8sWExOAlWrcGkZszDzBUb4tjWXdliHuxYds+qZjl3esaKbeW5v97Zf5RPYeUv7cWWxThqbVNehp+fsxAmhMhgw==</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">3c3de38e35f9da7420efaa494a1deddd</elem>
+</table>
+<table>
+<elem key="bits">2048.0</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQCZnR9vNmnhJVAXLzEz9KbyuNunmOeZLgWAvEXrYL5PQUSnjV6r9quuRtcjxs26JAMkSr2GH0r8JEhYKQQBMdGe7j/qfN5gorUOykWv1R3v+4Blu5L4R+8v7pFrQnu7IrAbms9fOiiF0nCWs6dugDQ+4rBl+90WHbJ40s5f9L1akGBpYmuuT9gy7ULabvc6CYZ2+cCFVpkf/s8rc3z3OV0W5JNoENyXtyvuirQqQ4+xLVlyPFpBfmqx1mY1XOeY7qqN99/82Ti9JfNJwjWgINGTY0wWGuWJdYrxAiyL/F9/MPJyb/zEM9I2/ne+qUrJ1Jkpcl4eJ42UV7HUkUGpZXkb</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">85946c87c9a8350f2cdbbbc13f2a50c1</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFoWH4DDWVRbA1EqnCjoMMCx5bR9hiI5qTJIi+LGY9kWZQU4Y4D+MJQRoDBVd/ijYLAQ1HvW/MZIpjRCfUON6uU=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">f3cdaa1d05f21e8c618725b6f4344537</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIK8+Q9UBYlSuxYmR6fYF4W8Vv22fP15QxiCfpGk8JV2+</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">34ec16dda7cf2a8645ec65ea05438921</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="1337"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.7</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.7 (Ubuntu)"><elem>Apache/2.4.7 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+</ports>
+<times srtt="312" rttvar="2827" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1570747861"/>
+<taskend task="NSE" time="1570747861"/>
+<taskbegin task="NSE" time="1570747861"/>
+<taskend task="NSE" time="1570747861"/>
+<runstats><finished time="1570747861" timestr="Thu Oct 10 15:51:01 2019" elapsed="12.08" summary="Nmap done at Thu Oct 10 15:51:01 2019; 1 IP address (1 host up) scanned in 12.08 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

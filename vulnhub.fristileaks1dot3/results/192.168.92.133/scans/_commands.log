@@ -1,0 +1,22 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_top_20_udp_nmap.xml" 192.168.92.133
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_quick_tcp_nmap.xml" 192.168.92.133
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_full_tcp_nmap.xml" 192.168.92.133
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.133:80 2>&1 | tee "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_nmap.txt" -oX "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/tcp_80_http_nmap.xml" 192.168.92.133
+
+curl -sSik http://192.168.92.133:80/ -m 10 2>&1 | tee "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_index.html"
+
+curl -sSik http://192.168.92.133:80/robots.txt -m 10 2>&1 | tee "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.133:80/ /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.92.133:80 2>&1 | tee "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://192.168.92.133:80 2>&1 | tee "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_nikto.txt"
+
+dirb http://192.168.92.133:80/ /usr/share/seclists/Discovery/Web-Content/common.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx" -o "/root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/tcp_80_http_dirb.txt"
+

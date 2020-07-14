@@ -1,0 +1,30 @@
+# Nmap 7.70 scan initiated Mon Sep  9 18:30:11 2019 as: nmap -vv --reason -Pn -sV -p 21 --script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.169
+Nmap scan report for 192.168.92.169
+Host is up, received arp-response (0.00055s latency).
+Scanned at 2019-09-09 18:30:12 PDT for 1s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 vsftpd 2.3.5
+|_banner: 220 (vsFTPd 2.3.5)
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 65534    65534        4096 Mar 03  2018 public
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.92.163
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 7
+|      vsFTPd 2.3.5 - secure, fast, stable
+|_End of status
+|_sslv2-drown: 
+MAC Address: 00:0C:29:D5:5D:EA (VMware)
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  9 18:30:13 2019 -- 1 IP address (1 host up) scanned in 2.41 seconds

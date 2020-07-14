@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Sep 27 15:46:32 2019 as: nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/xml/udp_137_smb_nmap.xml 192.168.92.181 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix1/results/192.168.92.181/scans/xml/udp_137_smb_nmap.xml 192.168.92.181" start="1569624392" startstr="Fri Sep 27 15:46:32 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<taskbegin task="ARP Ping Scan" time="1569624393"/>
+<taskend task="ARP Ping Scan" time="1569624393" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1569624393"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1569624393"/>
+<taskbegin task="UDP Scan" time="1569624393"/>
+<taskend task="UDP Scan" time="1569624393" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1569624393"/>
+<taskend task="Service scan" time="1569624393" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<host starttime="1569624393" endtime="1569624393"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.181" addrtype="ipv4"/>
+<address addr="00:0C:29:45:0D:56" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="64"/><service name="netbios-ns" product="Samba nmbd netbios-ns" extrainfo="workgroup: MYGROUP" hostname="KIOPTRIX" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: KIOPTRIX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  KIOPTRIX&lt;00&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX&lt;03&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX&lt;20&gt;         Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  MYGROUP&lt;00&gt;          Flags: &lt;group&gt;&lt;active&gt;&#xa;  MYGROUP&lt;1d&gt;          Flags: &lt;unique&gt;&lt;active&gt;&#xa;  MYGROUP&lt;1e&gt;          Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><table key="mac">
+<elem key="address">&lt;unknown&gt;</elem>
+<elem key="manuf">unknown</elem>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX</elem>
+</table>
+<table>
+<elem key="suffix">3</elem>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX</elem>
+</table>
+<table>
+<elem key="suffix">1</elem>
+<elem key="flags">33792</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">33792</elem>
+<elem key="name">MYGROUP</elem>
+</table>
+<table>
+<elem key="suffix">29</elem>
+<elem key="flags">1024</elem>
+<elem key="name">MYGROUP</elem>
+</table>
+<table>
+<elem key="suffix">30</elem>
+<elem key="flags">33792</elem>
+<elem key="name">MYGROUP</elem>
+</table>
+</table>
+<elem key="server_name">KIOPTRIX</elem>
+</script></hostscript><times srtt="225" rttvar="3818" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<taskbegin task="NSE" time="1569624393"/>
+<taskend task="NSE" time="1569624393"/>
+<runstats><finished time="1569624393" timestr="Fri Sep 27 15:46:33 2019" elapsed="1.87" summary="Nmap done at Fri Sep 27 15:46:33 2019; 1 IP address (1 host up) scanned in 1.87 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

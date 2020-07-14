@@ -1,0 +1,71 @@
+WhatWeb report for http://192.168.92.178:80
+Status    : 200 OK
+Title     : IMF - Homepage
+IP        : 192.168.92.178
+Country   : RESERVED, ZZ
+
+Summary   : X-UA-Compatible[IE=edge], Script, HTTPServer[Ubuntu Linux][Apache/2.4.18 (Ubuntu)], JQuery[1.10.2], Apache[2.4.18], Modernizr[2.6.2.min], HTML5
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.18 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.18 (Ubuntu) (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Version      : 1.10.2
+	Website     : http://jquery.com/
+
+[ Modernizr ]
+	Modernizr adds classes to the <html> element which allow 
+	you to target specific browser functionality in your 
+	stylesheet. You don't actually need to write any Javascript 
+	to use it. [JavaScript] 
+
+	Version      : 2.6.2.min
+	Website     : http://www.modernizr.com/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Sun, 22 Sep 2019 19:16:50 GMT
+	Server: Apache/2.4.18 (Ubuntu)
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 1257
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

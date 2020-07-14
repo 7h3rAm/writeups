@@ -1,0 +1,160 @@
+[*] msrpc on tcp/135
+
+	[-] RPC Client:
+
+		rpcclient -p 135 -U "" 10.10.10.27
+
+
+[*] netbios-ssn on tcp/139
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_139_smb_ms06-025.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_139_smb_ms06-025.xml" 10.10.10.27
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_139_smb_ms07-029.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_139_smb_ms07-029.xml" 10.10.10.27
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_139_smb_ms08-067.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_139_smb_ms08-067.xml" 10.10.10.27
+
+
+[*] microsoft-ds on tcp/445
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_ms06-025.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_ms06-025.xml" 10.10.10.27
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_ms07-029.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_ms07-029.xml" 10.10.10.27
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_445_smb_ms08-067.txt" -oX "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/tcp_445_smb_ms08-067.xml" 10.10.10.27
+
+
+[*] ms-sql-s on tcp/1433
+
+	[-] (sqsh) interactive database shell
+
+		sqsh -U <username> -P <password> -S 10.10.10.27:1433
+
+
+[*] http on tcp/5985
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://10.10.10.27:5985/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_dirsearch_big.txt"
+
+		dirsearch -u http://10.10.10.27:5985/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://10.10.10.27:5985/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_dirb_big.txt"
+
+		dirb http://10.10.10.27:5985/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://10.10.10.27:5985/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster_big.txt"
+
+		gobuster dir -u http://10.10.10.27:5985/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://10.10.10.27:5985/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster_big.txt"
+
+		gobuster -u http://10.10.10.27:5985/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.10.27:5985/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 5985 -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_auth_hydra.txt" http-get://10.10.10.27/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 5985 -O "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_auth_medusa.txt" -M http -h 10.10.10.27 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 5985 -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_form_hydra.txt" http-post-form://10.10.10.27/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 5985 -O "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_5985_http_form_medusa.txt" -M web-form -h 10.10.10.27 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] http on tcp/47001
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://10.10.10.27:47001/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_dirsearch_big.txt"
+
+		dirsearch -u http://10.10.10.27:47001/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://10.10.10.27:47001/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_dirb_big.txt"
+
+		dirb http://10.10.10.27:47001/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://10.10.10.27:47001/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster_big.txt"
+
+		gobuster dir -u http://10.10.10.27:47001/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://10.10.10.27:47001/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster_big.txt"
+
+		gobuster -u http://10.10.10.27:47001/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.10.27:47001/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 47001 -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_auth_hydra.txt" http-get://10.10.10.27/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 47001 -O "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_auth_medusa.txt" -M http -h 10.10.10.27 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 47001 -o "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_form_hydra.txt" http-post-form://10.10.10.27/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 47001 -O "/root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/tcp_47001_http_form_medusa.txt" -M web-form -h 10.10.10.27 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] msrpc on tcp/49664
+
+	[-] RPC Client:
+
+		rpcclient -p 49664 -U "" 10.10.10.27
+
+
+[*] msrpc on tcp/49665
+
+	[-] RPC Client:
+
+		rpcclient -p 49665 -U "" 10.10.10.27
+
+
+[*] msrpc on tcp/49666
+
+	[-] RPC Client:
+
+		rpcclient -p 49666 -U "" 10.10.10.27
+
+
+[*] msrpc on tcp/49667
+
+	[-] RPC Client:
+
+		rpcclient -p 49667 -U "" 10.10.10.27
+
+
+[*] msrpc on tcp/49668
+
+	[-] RPC Client:
+
+		rpcclient -p 49668 -U "" 10.10.10.27
+
+
+[*] msrpc on tcp/49669
+
+	[-] RPC Client:
+
+		rpcclient -p 49669 -U "" 10.10.10.27
+
+

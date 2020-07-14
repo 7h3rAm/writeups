@@ -1,0 +1,18 @@
+Doing NBT name scan for addresses from 192.168.92.176
+
+
+NetBIOS Name Table for Host 192.168.92.176:
+
+Incomplete packet, 227 bytes long.
+Name             Service          Type             
+----------------------------------------
+SEDNA            Workstation Service
+SEDNA            Messenger Service
+SEDNA            File Server Service
+__MSBROWSE__  Master Browser
+WORKGROUP        Domain Name
+WORKGROUP        Master Browser
+WORKGROUP        Browser Service Elections
+
+Adapter address: 00:00:00:00:00:00
+----------------------------------------

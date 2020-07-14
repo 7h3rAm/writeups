@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 14:44:28 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/_full_tcp_nmap.xml 10.10.10.4 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/_full_tcp_nmap.xml 10.10.10.4" start="1572644668" startstr="Fri Nov  1 14:44:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572644668"/>
+<taskend task="NSE" time="1572644668"/>
+<taskbegin task="NSE" time="1572644668"/>
+<taskend task="NSE" time="1572644668"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572644668"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572644668"/>
+<taskbegin task="SYN Stealth Scan" time="1572644668"/>
+<taskprogress task="SYN Stealth Scan" time="1572644693" percent="9.26" remaining="245" etc="1572644938"/>
+<taskprogress task="SYN Stealth Scan" time="1572644723" percent="14.41" remaining="327" etc="1572645050"/>
+<taskprogress task="SYN Stealth Scan" time="1572644762" percent="23.80" remaining="301" etc="1572645063"/>
+<taskprogress task="SYN Stealth Scan" time="1572644792" percent="26.29" remaining="348" etc="1572645140"/>
+<taskprogress task="SYN Stealth Scan" time="1572644822" percent="27.67" remaining="403" etc="1572645225"/>
+<taskprogress task="SYN Stealth Scan" time="1572644852" percent="28.68" remaining="458" etc="1572645309"/>
+<taskprogress task="SYN Stealth Scan" time="1572644882" percent="33.61" remaining="423" etc="1572645305"/>
+<taskprogress task="SYN Stealth Scan" time="1572644912" percent="44.15" remaining="309" etc="1572645221"/>
+<taskprogress task="SYN Stealth Scan" time="1572644942" percent="50.74" remaining="267" etc="1572645208"/>
+<taskprogress task="SYN Stealth Scan" time="1572644972" percent="66.84" remaining="151" etc="1572645123"/>
+<taskprogress task="SYN Stealth Scan" time="1572645002" percent="76.43" remaining="104" etc="1572645105"/>
+<taskprogress task="SYN Stealth Scan" time="1572645044" percent="82.63" remaining="80" etc="1572645123"/>
+<taskprogress task="SYN Stealth Scan" time="1572645080" percent="88.00" remaining="57" etc="1572645136"/>
+<taskend task="SYN Stealth Scan" time="1572645109" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1572645109"/>
+<taskend task="Service scan" time="1572645116" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1572645119"/>
+<taskend task="Traceroute" time="1572645120"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1572645120"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1572645120"/>
+<taskbegin task="NSE" time="1572645120"/>
+<taskprogress task="NSE" time="1572645151" percent="98.92" remaining="1" etc="1572645151"/>
+<taskprogress task="NSE" time="1572645181" percent="99.64" remaining="1" etc="1572645181"/>
+<taskprogress task="NSE" time="1572645211" percent="99.64" remaining="1" etc="1572645211"/>
+<taskprogress task="NSE" time="1572645241" percent="99.64" remaining="1" etc="1572645241"/>
+<taskprogress task="NSE" time="1572645271" percent="99.64" remaining="1" etc="1572645272"/>
+<taskprogress task="NSE" time="1572645301" percent="99.64" remaining="1" etc="1572645302"/>
+<taskprogress task="NSE" time="1572645331" percent="99.64" remaining="1" etc="1572645332"/>
+<taskprogress task="NSE" time="1572645361" percent="99.64" remaining="1" etc="1572645362"/>
+<taskend task="NSE" time="1572645374"/>
+<taskbegin task="NSE" time="1572645374"/>
+<taskend task="NSE" time="1572645374"/>
+<host starttime="1572644668" endtime="1572645374"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows XP microsoft-ds" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="closed" reason="reset" reason_ttl="127"/><service name="ms-wbt-server" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="139"/>
+<portused state="closed" proto="tcp" portid="3389"/>
+<osmatch name="Microsoft Windows 2000 SP4 or Windows XP SP2 or SP3" accuracy="92" line="71312">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="92"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="92"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2" accuracy="92" line="81943">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="92"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2 or Windows Small Business Server 2003" accuracy="91" line="82751">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="91"><cpe>cpe:/o:microsoft:windows_xp</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2003</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="90" line="70879">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="90"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP Professional SP3" accuracy="90" line="80819">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp3:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2 or SP3" accuracy="90" line="82356">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="90" line="83428">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP2 or Windows Server 2003" accuracy="90" line="82655">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="90"><cpe>cpe:/o:microsoft:windows_xp::sp2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2003::-</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 Server" accuracy="89" line="69689">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="89"><cpe>cpe:/o:microsoft:windows_2000</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003" accuracy="89" line="71568">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2003</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=11/1%OT=139%CT=3389%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DBCA9FE%P=i686-pc-linux-gnu)&#xa;SEQ(SP=108%GCD=1%ISR=10A%TI=I%CI=I%II=I%SS=S%TS=0)&#xa;OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)&#xa;WIN(W1=44E9%W2=44E9%W3=4100%W4=40E8%W5=40E8%W6=402E)&#xa;ECN(R=Y%DF=Y%TG=80%W=44E9%O=M54DNW0NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)&#xa;T5(R=Y%DF=N%TG=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=S%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="264" difficulty="Good luck!" values="1A74A922,7E235A06,76BC3234,7DF44089,211D6532,BBA76A39"/>
+<ipidsequence class="Incremental" values="1737,1738,1739,173A,173B,173C"/>
+<tcptssequence class="zero timestamp" values="0,0,0,0,0,0"/>
+<hostscript><script id="clock-skew" output="mean: -3h59m53s, deviation: 1h24m51s, median: -4h59m53s"><elem key="mean">-14393</elem>
+<elem key="stddev">5091</elem>
+<elem key="median">-17993</elem>
+</script><script id="nbstat" output="NetBIOS name: LEGACY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:b9:0c:03 (VMware)&#xa;Names:&#xa;  LEGACY&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;00&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  LEGACY&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;1e&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  HTB&lt;1d&gt;              Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="server_name">LEGACY</elem>
+<table key="mac">
+<elem key="manuf">VMware</elem>
+<elem key="address">00:50:56:b9:0c:03</elem>
+</table>
+<table key="names">
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+</table>
+<table>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+</table>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<table key="statistics">
+<elem>00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 40600/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 13850/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 50902/udp): CLEAN (Timeout)&#xa;  Check 4 (port 54226/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows XP (Windows 2000 LAN Manager)&#xa;  OS CPE: cpe:/o:microsoft:windows_xp::-&#xa;  Computer name: legacy&#xa;  NetBIOS computer name: LEGACY\x00&#xa;  Workgroup: HTB\x00&#xa;  System time: 2019-11-01T20:52:07+02:00&#xa;"><elem key="os">Windows 5.1</elem>
+<elem key="lanmanager">Windows 2000 LAN Manager</elem>
+<elem key="server">LEGACY\x00</elem>
+<elem key="date">2019-11-01T20:52:07+02:00</elem>
+<elem key="fqdn">legacy</elem>
+<elem key="domain_dns">legacy</elem>
+<elem key="workgroup">HTB\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_xp::-</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><trace port="3389" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="55.10"/>
+<hop ttl="2" ipaddr="10.10.10.4" rtt="55.08"/>
+</trace>
+<times srtt="52467" rttvar="2462" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1572645374"/>
+<taskend task="NSE" time="1572645374"/>
+<taskbegin task="NSE" time="1572645374"/>
+<taskend task="NSE" time="1572645374"/>
+<runstats><finished time="1572645374" timestr="Fri Nov  1 14:56:14 2019" elapsed="706.41" summary="Nmap done at Fri Nov  1 14:56:14 2019; 1 IP address (1 host up) scanned in 706.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

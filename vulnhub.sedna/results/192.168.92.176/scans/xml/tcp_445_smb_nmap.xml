@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Sep 18 18:03:09 2019 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/tcp_445_smb_nmap.xml 192.168.92.176 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/tcp_445_smb_nmap.xml 192.168.92.176" start="1568854989" startstr="Wed Sep 18 18:03:09 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568854990"/>
+<taskend task="NSE" time="1568854990"/>
+<taskbegin task="NSE" time="1568854990"/>
+<taskend task="NSE" time="1568854990"/>
+<taskbegin task="ARP Ping Scan" time="1568854990"/>
+<taskend task="ARP Ping Scan" time="1568854990" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568854990"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568854990"/>
+<taskbegin task="SYN Stealth Scan" time="1568854990"/>
+<taskend task="SYN Stealth Scan" time="1568854990" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568854991"/>
+<taskend task="Service scan" time="1568854997" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568854997"/>
+<taskprogress task="NSE" time="1568855028" percent="89.33" remaining="4" etc="1568855032"/>
+<taskprogress task="NSE" time="1568855058" percent="89.33" remaining="8" etc="1568855065"/>
+<taskprogress task="NSE" time="1568855088" percent="96.00" remaining="4" etc="1568855092"/>
+<taskprogress task="NSE" time="1568855118" percent="97.33" remaining="4" etc="1568855121"/>
+<taskprogress task="NSE" time="1568855148" percent="97.33" remaining="5" etc="1568855152"/>
+<taskprogress task="NSE" time="1568855178" percent="97.33" remaining="5" etc="1568855183"/>
+<taskprogress task="NSE" time="1568855208" percent="97.33" remaining="6" etc="1568855214"/>
+<taskprogress task="NSE" time="1568855238" percent="97.33" remaining="7" etc="1568855245"/>
+<taskprogress task="NSE" time="1568855268" percent="97.33" remaining="8" etc="1568855275"/>
+<taskprogress task="NSE" time="1568855298" percent="97.33" remaining="9" etc="1568855306"/>
+<taskprogress task="NSE" time="1568855328" percent="98.67" remaining="5" etc="1568855332"/>
+<taskprogress task="NSE" time="1568855358" percent="98.67" remaining="5" etc="1568855363"/>
+<taskprogress task="NSE" time="1568855389" percent="98.67" remaining="6" etc="1568855394"/>
+<taskprogress task="NSE" time="1568855419" percent="98.67" remaining="6" etc="1568855425"/>
+<taskprogress task="NSE" time="1568855449" percent="98.67" remaining="7" etc="1568855455"/>
+<taskprogress task="NSE" time="1568855479" percent="98.67" remaining="7" etc="1568855486"/>
+<taskprogress task="NSE" time="1568855509" percent="98.67" remaining="7" etc="1568855516"/>
+<taskend task="NSE" time="1568855509"/>
+<taskbegin task="NSE" time="1568855509"/>
+<taskprogress task="NSE" time="1568855540" percent="80.00" remaining="8" etc="1568855548"/>
+<taskprogress task="NSE" time="1568855570" percent="80.00" remaining="16" etc="1568855585"/>
+<taskend task="NSE" time="1568855572"/>
+<host starttime="1568854990" endtime="1568855572"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.176" addrtype="ipv4"/>
+<address addr="00:0C:29:53:40:6E" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="4.1.6-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="SEDNA" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: SEDNA, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  SEDNA&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  SEDNA&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  SEDNA&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><table key="mac">
+<elem key="manuf">unknown</elem>
+<elem key="address">&lt;unknown&gt;</elem>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">SEDNA</elem>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+<elem key="name">SEDNA</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">3</elem>
+<elem key="name">SEDNA</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+<elem key="name">SEDNA</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+</table>
+</script><script id="smb-enum-domains" output="&#xa;  SEDNA&#xa;    Groups: n/a&#xa;    Users: viper, root&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (SMB: ERROR: Server disconnected the connection)&#xa;  account_used: guest&#xa;  \\192.168.92.176\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (Sedna server (Samba, Ubuntu))&#xa;    Users: 3&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\192.168.92.176\PRINT$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (SMB: ERROR: Server disconnected the connection)</elem>
+<elem key="account_used">guest</elem>
+<table key="\\192.168.92.176\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (Sedna server (Samba, Ubuntu))</elem>
+<elem key="Users">3</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\192.168.92.176\PRINT$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-enum-users" output="&#xa;  SEDNA\root (RID: 1001)&#xa;    Full name:   root&#xa;    Description: &#xa;    Flags:       Normal user account&#xa;  SEDNA\viper (RID: 1000)&#xa;    Full name:   viper&#xa;    Description: &#xa;    Flags:       Normal user account&#xa;"/><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Master Browser&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Print server&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Server&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Server service&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Unix server&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Windows NT/2000/XP/2003 server&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;  Workstation&#xa;    SEDNA  0.0  Sedna server (Samba, Ubuntu)&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 4.1.6-Ubuntu)&#xa;  NetBIOS computer name: SEDNA\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-09-18T21:03:09-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 4.1.6-Ubuntu</elem>
+<elem key="server">SEDNA\x00</elem>
+<elem key="date">2019-09-18T21:03:09-04:00</elem>
+<elem key="fqdn"></elem>
+<elem key="domain_dns"></elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-vuln-ms17-010" output="This system is patched."/><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-09-18 18:03:09&#xa;  start_date: N/A"><elem key="date">2019-09-18 18:03:09</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="1642" rttvar="3983" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568855572"/>
+<taskend task="NSE" time="1568855572"/>
+<taskbegin task="NSE" time="1568855572"/>
+<taskend task="NSE" time="1568855572"/>
+<runstats><finished time="1568855572" timestr="Wed Sep 18 18:12:52 2019" elapsed="583.11" summary="Nmap done at Wed Sep 18 18:12:52 2019; 1 IP address (1 host up) scanned in 583.11 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

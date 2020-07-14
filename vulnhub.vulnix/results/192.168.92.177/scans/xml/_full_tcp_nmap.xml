@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Sep 19 17:29:27 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/_full_tcp_nmap.xml 192.168.92.177 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/_full_tcp_nmap.xml 192.168.92.177" start="1568939367" startstr="Thu Sep 19 17:29:27 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568939367"/>
+<taskend task="NSE" time="1568939367"/>
+<taskbegin task="NSE" time="1568939367"/>
+<taskend task="NSE" time="1568939367"/>
+<taskbegin task="ARP Ping Scan" time="1568939367"/>
+<taskend task="ARP Ping Scan" time="1568939367" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568939368"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568939368"/>
+<taskbegin task="SYN Stealth Scan" time="1568939368"/>
+<taskend task="SYN Stealth Scan" time="1568939381" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1568939381"/>
+<taskend task="Service scan" time="1568939395" extrainfo="17 services on 1 host"/>
+<taskbegin task="NSE" time="1568939397"/>
+<taskend task="NSE" time="1568939408"/>
+<taskbegin task="NSE" time="1568939408"/>
+<taskend task="NSE" time="1568939408"/>
+<host starttime="1568939367" endtime="1568939408"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.177" addrtype="ipv4"/>
+<address addr="00:0C:29:87:38:08" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65518">
+<extrareasons reason="resets" count="65518"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="5.9p1 Debian 5ubuntu1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:5.9p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 10:cd:9e:a0:e4:e0:30:24:3e:bd:67:5f:75:4a:33:bf (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBAJJHCFDFkbuQTVpmQvCvdR2poQrsZOQ0nBEsUij15T9DAiUhxI41G8hQ97MM9Qe0eGdP7HsA8vkZnglainhktvPe1NN9+XnDVRziI3dEqSxpCi4obxxYdKtqGBIj83dOPpxm09xDhVYBdh7ZlZh8xttD+ACFqmN4VZjmv0IlSYZFAAAAFQC6Z+j+KbT59gBXSPQTpAJIh0FE2wAAAIEAgYwA5oFVMQdKfRwAxbLoADx3t735BpLIoVNX2j4UrAF8CmwLCmcsNAhdpUP+hMhKGXnP5co2nira3OkcwWRu219bjte7m1l9JOvCJUASTUzOC0CUJkm9wO40/gyJOelKRR37r0qnBImiEumL6dSpcg4b0IfozCI9UJGh/yiEu4kAAACASWk2tKCyCHamiXwIt0XdwTXubZYtRtH09LHdisSEsoinz+2szuzbqnwgancHXcyQ3PapixZhVNASZ8MobmkFDXh4SDS5zl+RW7K40FBh3z+HCdSAJJjkRFXWEuadjxpO2QWBYEJiER4AtFWUSl2kVMFdsWqYaK7BxStNNkmGBII=&#xa;  2048 bc:f9:24:07:2f:cb:76:80:0d:27:a6:48:52:0a:24:3a (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1jCDgzdowLQVOEXrczN+xbuMcNkncz2EfCEncP7k8rhNjQq+eXzMKEfULxMLh/wLFhX2TVZDECTpQ0WVJckgkGeZSdvmEJKt5LbZlSm5HAz/DMUKIuohDRI4F3lqn9u5VAVKSyTXyR3EuxCsCHJy+Xf40BJImr+fZ7yH3xwPPqJ9in+LfgTXaRItqLDHiHAsTIXXwsDgweaS9hSTAR1MO+TdZCnXKPJ1NEt38+Fl7rnTnBE2TdtU3iyrlWXE0GGGg0bgldqas7bR4UH/uRZZOZK2+UTf0qg30H7ll8ShfZIbdW+59RfQqYz8tZYsoWoxahWf3dmx5soCWWcAP7DAV&#xa;  256 4d:bb:4a:c1:18:e8:da:d1:82:6f:58:52:9c:ee:34:5f (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGEudclsh1beHM/DPWQGR31dOGqdLcXVj1xLG/YSGfiNmN1pT6x0MwYQyN6pzCzzonljThH8JwIZjid+JN2PzxE="><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAJJHCFDFkbuQTVpmQvCvdR2poQrsZOQ0nBEsUij15T9DAiUhxI41G8hQ97MM9Qe0eGdP7HsA8vkZnglainhktvPe1NN9+XnDVRziI3dEqSxpCi4obxxYdKtqGBIj83dOPpxm09xDhVYBdh7ZlZh8xttD+ACFqmN4VZjmv0IlSYZFAAAAFQC6Z+j+KbT59gBXSPQTpAJIh0FE2wAAAIEAgYwA5oFVMQdKfRwAxbLoADx3t735BpLIoVNX2j4UrAF8CmwLCmcsNAhdpUP+hMhKGXnP5co2nira3OkcwWRu219bjte7m1l9JOvCJUASTUzOC0CUJkm9wO40/gyJOelKRR37r0qnBImiEumL6dSpcg4b0IfozCI9UJGh/yiEu4kAAACASWk2tKCyCHamiXwIt0XdwTXubZYtRtH09LHdisSEsoinz+2szuzbqnwgancHXcyQ3PapixZhVNASZ8MobmkFDXh4SDS5zl+RW7K40FBh3z+HCdSAJJjkRFXWEuadjxpO2QWBYEJiER4AtFWUSl2kVMFdsWqYaK7BxStNNkmGBII=</elem>
+<elem key="bits">1024.0</elem>
+<elem key="fingerprint">10cd9ea0e4e030243ebd675f754a33bf</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+<table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQC1jCDgzdowLQVOEXrczN+xbuMcNkncz2EfCEncP7k8rhNjQq+eXzMKEfULxMLh/wLFhX2TVZDECTpQ0WVJckgkGeZSdvmEJKt5LbZlSm5HAz/DMUKIuohDRI4F3lqn9u5VAVKSyTXyR3EuxCsCHJy+Xf40BJImr+fZ7yH3xwPPqJ9in+LfgTXaRItqLDHiHAsTIXXwsDgweaS9hSTAR1MO+TdZCnXKPJ1NEt38+Fl7rnTnBE2TdtU3iyrlWXE0GGGg0bgldqas7bR4UH/uRZZOZK2+UTf0qg30H7ll8ShfZIbdW+59RfQqYz8tZYsoWoxahWf3dmx5soCWWcAP7DAV</elem>
+<elem key="bits">2048.0</elem>
+<elem key="fingerprint">bcf924072fcb76800d27a648520a243a</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGEudclsh1beHM/DPWQGR31dOGqdLcXVj1xLG/YSGfiNmN1pT6x0MwYQyN6pzCzzonljThH8JwIZjid+JN2PzxE=</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">4dbb4ac118e8dad1826f58529cee345f</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="Postfix smtpd" hostname=" vulnix" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="smtp-commands" output="vulnix, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, "/><script id="ssl-cert" output="Subject: commonName=vulnix&#xa;Issuer: commonName=vulnix&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2012-09-02T17:40:12&#xa;Not valid after:  2022-08-31T17:40:12&#xa;MD5:   58e3 f1ac fef6 b6d1 744c 836f ba24 4f0a&#xa;SHA-1: 712f 69ba 8c54 32e5 711c 898b 55ab 0a83 44a0 420b&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICnjCCAYYCCQCrWhznjAI2hTANBgkqhkiG9w0BAQUFADARMQ8wDQYDVQQDEwZ2&#xa;dWxuaXgwHhcNMTIwOTAyMTc0MDEyWhcNMjIwODMxMTc0MDEyWjARMQ8wDQYDVQQD&#xa;EwZ2dWxuaXgwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDbiWM7/Xk&#xa;7+VnQuSzKIy6GgD9xAw5jCnKmRY6MfJ0jNmpIjo70LEpoTTEZvFLwKbdkxQHzusv&#xa;50GOrZLm6MkrB2Ad8skvkJR9PA05KoM+Uha5P35rdF0MaNPtHRpA5W3Ql3qAoph7&#xa;8hGmdI4GrLmedxkmajniCYNpowArI7UjYA5FWF6q1m41CS+xCqk9u4qH8SrV616z&#xa;bJ2H00mhp0NJDJbTDX35biGeGKR70e5xQAkMwQKM6s9iLBo2nrH2JKyxfVMeMgQf&#xa;KoRJEeILZbgP4X9Xc6iA9GuNSqluObOhCv1RsFLP915xNvnf6aZf8EtyODISzXhj&#xa;GBsy//uolXMLAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAIJHgnARP3nuoFigE9vE&#xa;CyK9sKYPn+nh0xOMFil2LzfcZsVRqTl0T/VbOug1i+pettkcPqWBBNs1Q5uSEIuP&#xa;0pEq9AQdeLk7weMa0trDK+XoSbEvcAvYPnbK6Ghr343FE74nmxewtfCbrNfEnYZB&#xa;TYlEElBqcQFSo4kB6UyMOOGwuIJ7EHITPa7ZxKW6OBOVOzCUiYm3hGn7dpyVeaH/&#xa;zpSwobV1pSqyW7+Tb3KO82lqSnmYvRzk3TmIVXutOXTVE+L58xbo5uafae2UvP4m&#xa;m5Be1rZi17Ub1kIMKT+OJLq2oaDb6Y8Ni/a267RoGO/TcwCLjKHsDl5Niwk6rYMX&#xa;ZtY=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">vulnix</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">vulnix</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x25b7a68</elem>
+<elem key="exponent">userdata: 0x2bf86e8</elem>
+<elem key="type">rsa</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2012-09-02T17:40:12</elem>
+<elem key="notAfter">2022-08-31T17:40:12</elem>
+</table>
+<elem key="md5">58e3f1acfef6b6d1744c836fba244f0a</elem>
+<elem key="sha1">712f69ba8c5432e5711c898b55ab0a8344a0420b</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIICnjCCAYYCCQCrWhznjAI2hTANBgkqhkiG9w0BAQUFADARMQ8wDQYDVQQDEwZ2&#xa;dWxuaXgwHhcNMTIwOTAyMTc0MDEyWhcNMjIwODMxMTc0MDEyWjARMQ8wDQYDVQQD&#xa;EwZ2dWxuaXgwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDDbiWM7/Xk&#xa;7+VnQuSzKIy6GgD9xAw5jCnKmRY6MfJ0jNmpIjo70LEpoTTEZvFLwKbdkxQHzusv&#xa;50GOrZLm6MkrB2Ad8skvkJR9PA05KoM+Uha5P35rdF0MaNPtHRpA5W3Ql3qAoph7&#xa;8hGmdI4GrLmedxkmajniCYNpowArI7UjYA5FWF6q1m41CS+xCqk9u4qH8SrV616z&#xa;bJ2H00mhp0NJDJbTDX35biGeGKR70e5xQAkMwQKM6s9iLBo2nrH2JKyxfVMeMgQf&#xa;KoRJEeILZbgP4X9Xc6iA9GuNSqluObOhCv1RsFLP915xNvnf6aZf8EtyODISzXhj&#xa;GBsy//uolXMLAgMBAAEwDQYJKoZIhvcNAQEFBQADggEBAIJHgnARP3nuoFigE9vE&#xa;CyK9sKYPn+nh0xOMFil2LzfcZsVRqTl0T/VbOug1i+pettkcPqWBBNs1Q5uSEIuP&#xa;0pEq9AQdeLk7weMa0trDK+XoSbEvcAvYPnbK6Ghr343FE74nmxewtfCbrNfEnYZB&#xa;TYlEElBqcQFSo4kB6UyMOOGwuIJ7EHITPa7ZxKW6OBOVOzCUiYm3hGn7dpyVeaH/&#xa;zpSwobV1pSqyW7+Tb3KO82lqSnmYvRzk3TmIVXutOXTVE+L58xbo5uafae2UvP4m&#xa;m5Be1rZi17Ub1kIMKT+OJLq2oaDb6Y8Ni/a267RoGO/TcwCLjKHsDl5Niwk6rYMX&#xa;ZtY=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-20T00:30:07+00:00; +7s from scanner time."><elem key="date">2019-09-20T00:30:07+00:00</elem>
+<elem key="delta">7.0</elem>
+</script></port>
+<port protocol="tcp" portid="79"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="finger" product="Linux fingerd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="finger" output="No one logged on.\x0D&#xa;"/></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="pop3-capabilities" output="SASL PIPELINING STLS CAPA UIDL TOP RESP-CODES"/><script id="ssl-cert" output="Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2012-09-02T17:40:22&#xa;Not valid after:  2022-09-02T17:40:22&#xa;MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc&#xa;SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x457cfc8</elem>
+<elem key="exponent">userdata: 0x2f220c8</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2012-09-02T17:40:22</elem>
+<elem key="notAfter">2022-09-02T17:40:22</elem>
+</table>
+<elem key="md5">2b3f3e28c85de10c7b7a2435c5e784fc</elem>
+<elem key="sha1">4a49a40701f137c881a34519981b1eee6856348e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-20T00:30:06+00:00; +6s from scanner time."><elem key="date">2019-09-20T00:30:06+00:00</elem>
+<elem key="delta">6.0</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100003  2,3,4       2049/tcp  nfs&#xa;  100003  2,3,4       2049/udp  nfs&#xa;  100005  1,2,3      50680/tcp  mountd&#xa;  100005  1,2,3      51785/udp  mountd&#xa;  100021  1,3,4      35231/udp  nlockmgr&#xa;  100021  1,3,4      57819/tcp  nlockmgr&#xa;  100024  1          51959/udp  status&#xa;  100024  1          59222/tcp  status&#xa;  100227  2,3         2049/tcp  nfs_acl&#xa;  100227  2,3         2049/udp  nfs_acl&#xa;"><table key="100003">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+<table key="100024">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">59222</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">51959</elem>
+</table>
+</table>
+<table key="100227">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100021">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">57819</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">35231</elem>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">50680</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">51785</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Dovecot imapd" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="imap-capabilities" output="more LOGIN-REFERRALS LOGINDISABLEDA0001 ID listed LITERAL+ post-login have ENABLE IMAP4rev1 capabilities STARTTLS Pre-login OK SASL-IR IDLE"/><script id="ssl-cert" output="Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2012-09-02T17:40:22&#xa;Not valid after:  2022-09-02T17:40:22&#xa;MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc&#xa;SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x25f8478</elem>
+<elem key="exponent">userdata: 0x23495f8</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2012-09-02T17:40:22</elem>
+<elem key="notAfter">2022-09-02T17:40:22</elem>
+</table>
+<elem key="md5">2b3f3e28c85de10c7b7a2435c5e784fc</elem>
+<elem key="sha1">4a49a40701f137c881a34519981b1eee6856348e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-20T00:30:05+00:00; +6s from scanner time."><elem key="date">2019-09-20T00:30:05+00:00</elem>
+<elem key="delta">6.0</elem>
+</script></port>
+<port protocol="tcp" portid="512"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="exec" product="netkit-rsh rexecd" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:netkit:netkit</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="513"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="login" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="514"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="993"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="imap" product="Dovecot imapd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="imap-capabilities" output="LOGIN-REFERRALS AUTH=PLAINA0001 ID listed LITERAL+ more have ENABLE IMAP4rev1 post-login capabilities Pre-login OK SASL-IR IDLE"/><script id="ssl-cert" output="Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2012-09-02T17:40:22&#xa;Not valid after:  2022-09-02T17:40:22&#xa;MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc&#xa;SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x43d4888</elem>
+<elem key="exponent">userdata: 0x2537128</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2012-09-02T17:40:22</elem>
+<elem key="notAfter">2022-09-02T17:40:22</elem>
+</table>
+<elem key="md5">2b3f3e28c85de10c7b7a2435c5e784fc</elem>
+<elem key="sha1">4a49a40701f137c881a34519981b1eee6856348e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-20T00:30:05+00:00; +6s from scanner time."><elem key="date">2019-09-20T00:30:05+00:00</elem>
+<elem key="delta">6.0</elem>
+</script></port>
+<port protocol="tcp" portid="995"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="pop3" product="Dovecot pop3d" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="pop3-capabilities" output="SASL(PLAIN) PIPELINING USER CAPA UIDL TOP RESP-CODES"/><script id="ssl-cert" output="Subject: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Issuer: commonName=vulnix/organizationName=Dovecot mail server/organizationalUnitName=vulnix/emailAddress=root@vulnix&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2012-09-02T17:40:22&#xa;Not valid after:  2022-09-02T17:40:22&#xa;MD5:   2b3f 3e28 c85d e10c 7b7a 2435 c5e7 84fc&#xa;SHA-1: 4a49 a407 01f1 37c8 81a3 4519 981b 1eee 6856 348e&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">Dovecot mail server</elem>
+<elem key="commonName">vulnix</elem>
+<elem key="emailAddress">root@vulnix</elem>
+<elem key="organizationalUnitName">vulnix</elem>
+</table>
+<table key="pubkey">
+<elem key="bits">2048</elem>
+<elem key="modulus">userdata: 0x432a6d8</elem>
+<elem key="exponent">userdata: 0x432a778</elem>
+<elem key="type">rsa</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:00:8C:E0:DF:F1:1E:F8:B3:6F:75:BF:41:E6:BE:06:F6:1B:DC:EE:C0&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2012-09-02T17:40:22</elem>
+<elem key="notAfter">2022-09-02T17:40:22</elem>
+</table>
+<elem key="md5">2b3f3e28c85de10c7b7a2435c5e784fc</elem>
+<elem key="sha1">4a49a40701f137c881a34519981b1eee6856348e</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDizCCAnOgAwIBAgIJAKvS691t83I+MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV&#xa;BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UE&#xa;AwwGdnVsbml4MRowGAYJKoZIhvcNAQkBFgtyb290QHZ1bG5peDAeFw0xMjA5MDIx&#xa;NzQwMjJaFw0yMjA5MDIxNzQwMjJaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz&#xa;ZXJ2ZXIxDzANBgNVBAsMBnZ1bG5peDEPMA0GA1UEAwwGdnVsbml4MRowGAYJKoZI&#xa;hvcNAQkBFgtyb290QHZ1bG5peDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC&#xa;ggEBALv7qqgwWV56bHtf/0PqD6yMN1bv866H5gqrVENXrfaL8ZOiNCD9/Fg6jOuh&#xa;VLV5iw5y8lKNdMZW5PWHN8mQEeoyWWFXMV1X4RLvOuTIf1sXNHp+IcwZpDDobHzQ&#xa;ENhpwhlWTxdObUEVVT/ChOTaAQIpi9AFzo4fjJ4UEHfEae98cssmuqQP9Unj9xKv&#xa;vCj181l3g9VAQ92KjxWeWMa8e+ecwBVtAsPdU3ZwmwVIuVnBDa9nRdkR0y31RWSr&#xa;/Lil4ckL0TZ4K92z146pTex7QSNKGHyuLPJGddm5pu11WP5cJEz9O2MDOo6WEISb&#xa;V7EEpfbvrA6cd+ISf4dGSyNZfp8CAwEAAaNQME4wHQYDVR0OBBYEFACM4N/xHviz&#xa;b3W/Qea+BvYb3O7AMB8GA1UdIwQYMBaAFACM4N/xHvizb3W/Qea+BvYb3O7AMAwG&#xa;A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAEP1Kk3MagUfM6kOLgK++4gV&#xa;LJzOC1OGQ/ERyNRhk8JgVbhuasrC7hNtzk2ku7yP4H8IlVzjs4EGQOxoGKHnrzBr&#xa;76iqlQRASZbJPwemc1CpRbh7XTZAOPHUbihycpG4iQZD2/55c6Az+TcyHLqjPbCW&#xa;YVCAB8mMXDtYEB4OiOEvbulud5fjXAu7ba8tzUSqAWF7dA9S/vcmmnCC+y1nV9Tc&#xa;8K1+edk6WTOjoQEALUA5ikfB8I8O95AWPkfcj77BOiPOvPlEGlaWm85DMRkVOatg&#xa;mqDiJCaX/SajIW22LgEw81ErtM8m6RAZ1qN+sf9O6T7+Mxvbd6aPx/bxj/LwQ6c=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2019-09-20T00:30:05+00:00; +7s from scanner time."><elem key="date">2019-09-20T00:30:05+00:00</elem>
+<elem key="delta">7.0</elem>
+</script></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nfs_acl" version="2-3" extrainfo="RPC #100227" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="34422"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="39054"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="50680"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mountd" version="1-3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="57819"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nlockmgr" version="1-4" extrainfo="RPC #100021" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="59222"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="38432"/>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="100" line="56381">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=9/19%OT=22%CT=1%CU=38432%PV=Y%DS=1%DC=D%G=Y%M=000C29%T&#xa;OS:M=5D841D90%P=i686-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%T&#xa;OS:S=8)OPS(O1=M5B4ST11NW3%O2=M5B4ST11NW3%O3=M5B4NNT11NW3%O4=M5B4ST11NW3%O5=&#xa;OS:M5B4ST11NW3%O6=M5B4ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3&#xa;OS:890)ECN(R=Y%DF=Y%T=40%W=3908%O=M5B4NNSNW3%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A&#xa;OS:=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%&#xa;OS:Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=&#xa;OS:A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=&#xa;OS:Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%&#xa;OS:T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="15449368" lastboot="Sun Mar 24 22:00:40 2019"/>
+<distance value="1"/>
+<tcpsequence index="260" difficulty="Good luck!" values="674F9D10,3FB36C7B,E93A9C06,7FB883F1,40EBB5B1,4D6D9C25"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFF4BD4,FFFF4BF0,FFFF4C0C,FFFF4C27,FFFF4C43,FFFF4C5F"/>
+<hostscript><script id="clock-skew" output="mean: 6s, deviation: 0s, median: 5s"><elem key="median">5</elem>
+<elem key="mean">6</elem>
+<elem key="stddev">0</elem>
+</script></hostscript><trace>
+<hop ttl="1" ipaddr="192.168.92.177" rtt="1.05"/>
+</trace>
+<times srtt="1051" rttvar="806" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568939408"/>
+<taskend task="NSE" time="1568939408"/>
+<taskbegin task="NSE" time="1568939408"/>
+<taskend task="NSE" time="1568939408"/>
+<runstats><finished time="1568939408" timestr="Thu Sep 19 17:30:08 2019" elapsed="42.25" summary="Nmap done at Thu Sep 19 17:30:08 2019; 1 IP address (1 host up) scanned in 42.25 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

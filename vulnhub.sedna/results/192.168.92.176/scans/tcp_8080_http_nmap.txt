@@ -1,0 +1,881 @@
+# Nmap 7.70 scan initiated Wed Sep 18 18:03:30 2019 as: nmap -vv --reason -Pn -sV -p 8080 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/tcp_8080_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/tcp_8080_http_nmap.xml 192.168.92.176
+Nmap scan report for 192.168.92.176
+Host is up, received arp-response (0.00034s latency).
+Scanned at 2019-09-18 18:03:31 PDT for 68s
+
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 64 Apache Tomcat/Coyote JSP engine 1.1
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.176
+|   url                                           method
+|   http://192.168.92.176:8080/host-manager/html  HTTP: Basic
+|_  http://192.168.92.176:8080/manager/html       HTTP: Basic
+|_http-chrono: Request times for /; avg: 848.79ms; min: 649.89ms; max: 1298.94ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.176
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 179
+|     Comment: 
+|         
+|         // ============================================================================
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 217
+|     Comment: 
+|         
+|         // ========== CATALINA CODE PERMISSIONS =======================================
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 327
+|     Comment: 
+|          // Precompiled JSPs need access to these packages.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 255
+|     Comment: 
+|          // the following to be on a single line):
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 350
+|     Comment: 
+|          // Applications using the legacy WebSocket implementation need to be able to access this package
+|     
+|     Path: http://192.168.92.176:8080/examples/servlets/
+|     Line number: 1
+|     Comment: 
+|         <!--
+|          Licensed to the Apache Software Foundation (ASF) under one or more
+|           contributor license agreements.  See the NOTICE file distributed with
+|           this work for additional information regarding copyright ownership.
+|           The ASF licenses this file to You under the Apache License, Version 2.0
+|           (the "License"); you may not use this file except in compliance with
+|           the License.  You may obtain a copy of the License at
+|         
+|               http://www.apache.org/licenses/LICENSE-2.0
+|         
+|           Unless required by applicable law or agreed to in writing, software
+|           distributed under the License is distributed on an "AS IS" BASIS,
+|           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+|           See the License for the specific language governing permissions and
+|           limitations under the License.
+|         -->
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 19
+|     Comment: 
+|         <!--PROJECT LOGO-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 210
+|     Comment: 
+|         
+|         // These permissions apply to all shared system extensions when
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 284
+|     Comment: 
+|         
+|         // These permissions are granted by default to all web applications
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 78
+|     Comment: 
+|          //--><!]]></script></blockquote></td></tr></table></td></tr><!--FOOTER SEPARATOR--><tr><td colspan="2"><hr noshade size="1"></td></tr><!--PAGE FOOTER--><tr><td colspan="2"><div align="center"><font color="#525D76" size="-1"><em>
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 363
+|     Comment: 
+|         
+|         // - CATALINA_HOME != CATALINA_BASE, per instance Manager in CATALINA_BASE
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 253
+|     Comment: 
+|          // secure before enabling such access.
+|     
+|     Path: http://192.168.92.176:8080/docs/ssi-howto.html
+|     Line number: 379
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/ssi-howto.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 177
+|     Comment: 
+|         
+|         // limitations under the License.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 225
+|     Comment: 
+|         
+|         // These permissions apply to the logging API
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 78
+|     Comment: 
+|         <!--FOOTER SEPARATOR-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 220
+|     Comment: 
+|         
+|         // These permissions apply to the daemon code
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 252
+|     Comment: 
+|          // the appropriate file. Be sure that the logging configuration is
+|     
+|     Path: http://192.168.92.176:8080/examples/websocket/index.xhtml
+|     Line number: 2
+|     Comment: 
+|         <!--
+|           Licensed to the Apache Software Foundation (ASF) under one or more
+|           contributor license agreements.  See the NOTICE file distributed with
+|           this work for additional information regarding copyright ownership.
+|           The ASF licenses this file to You under the Apache License, Version 2.0
+|           (the "License"); you may not use this file except in compliance with
+|           the License.  You may obtain a copy of the License at
+|         
+|               http://www.apache.org/licenses/LICENSE-2.0
+|         
+|           Unless required by applicable law or agreed to in writing, software
+|           distributed under the License is distributed on an "AS IS" BASIS,
+|           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+|           See the License for the specific language governing permissions and
+|           limitations under the License.
+|         -->
+|     
+|     Path: http://192.168.92.176:8080/docs/setup.html
+|     Line number: 154
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/setup.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 200
+|     Comment: 
+|         
+|         // These permissions apply to all shared system extensions
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 294
+|     Comment: 
+|          // OS Specific properties to allow read access
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 286
+|     Comment: 
+|         
+|         // and JndiPermission for all files and directories in its document root.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 318
+|     Comment: 
+|          // Required for OpenJMX
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 251
+|     Comment: 
+|          // Note: To enable per context logging configuration, permit read access to
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 278
+|     Comment: 
+|         
+|         // };
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 78
+|     Comment: 
+|         <!--PAGE FOOTER-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 173
+|     Comment: 
+|         
+|         // Unless required by applicable law or agreed to in writing, software
+|     
+|     Path: http://192.168.92.176:8080/docs/monitoring.html
+|     Line number: 1137
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/monitoring.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 281
+|     Comment: 
+|         
+|         // ========== WEB APPLICATION PERMISSIONS =====================================
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 21
+|     Comment: 
+|         <!--HEADER SEPARATOR-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 384
+|     Comment: 
+|         
+|         // Different permissions can be granted to JSP pages, classes loaded from
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 62
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/funcspecs/index.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/manager/html
+|     Line number: 7
+|     Comment: 
+|         <!--
+|             BODY {font-family:Tahoma,Arial,sans-serif;color:black;background-color:white;font-size:12px;}
+|             H1 {font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;font-size:22px;}
+|             PRE, TT {border: 1px dotted #525D76}
+|             A {color : black;}A.name {color : black;}
+|             -->
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 62
+|     Comment: 
+|         <!--//-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 261
+|     Comment: 
+|         
+|         // These permissions apply to the server startup code
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 408
+|     Comment: 
+|         
+|         // grant codeBase "jar:file:${catalina.base}/webapps/examples/WEB-INF/lib/scrape.jar!/-" {
+|     
+|     Path: http://192.168.92.176:8080/docs/apr.html
+|     Line number: 170
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/apr.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 205
+|     Comment: 
+|         
+|         // These permissions apply to javac when ${java.home] points at $JAVA_HOME/jre
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 171
+|     Comment: 
+|         
+|         //     http://www.apache.org/licenses/LICENSE-2.0
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 359
+|     Comment: 
+|         
+|         // The Manager application needs access to the following packages to support the
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 400
+|     Comment: 
+|         
+|         // grant codeBase "file:${catalina.base}/webapps/examples/WEB-INF/classes/-" {
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 19
+|     Comment: 
+|         <!--PAGE HEADER-->
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 21
+|     Comment: 
+|         <!--()-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 390
+|     Comment: 
+|         
+|         // corresponding database and used the scrape taglib to get the weather from
+|     
+|     Path: http://192.168.92.176:8080/docs/manager-howto.html
+|     Line number: 1345
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/manager-howto.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/comments.html
+|     Line number: 104
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/comments.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 386
+|     Comment: 
+|         
+|         // directory, or even to individual jar files in the /WEB-INF/lib/ directory.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 394
+|     Comment: 
+|         
+|         // grant codeBase "file:${catalina.base}/webapps/examples/-" {
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 333
+|     Comment: 
+|          // Precompiled JSPs need access to these system properties.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 396
+|     Comment: 
+|         
+|         //      permission java.net.SocketPermission "*.noaa.gov:80", "connect";
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 388
+|     Comment: 
+|         
+|         // For instance, assume that the standard "examples" application
+|     
+|     Path: http://192.168.92.176:8080/docs/default-servlet.html
+|     Line number: 304
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/default-servlet.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 382
+|     Comment: 
+|         
+|         // application, /WEB-INF/classes/, or /WEB-INF/lib/ jar files.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 254
+|     Comment: 
+|          // E.g. for the examples web application (uncomment and unwrap
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 256
+|     Comment: 
+|          // permission java.io.FilePermission "${catalina.base}${file.separator}
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 380
+|     Comment: 
+|         
+|         // You can assign additional permissions to particular web applications by
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 361
+|     Comment: 
+|         
+|         // configurations:
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 258
+|     Comment: 
+|          //  ${file.separator}classes${file.separator}logging.properties", "read";
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 142
+|     Comment: 
+|         
+|         // Example policy file entry
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 404
+|     Comment: 
+|         
+|         // grant codeBase "jar:file:${catalina.base}/webapps/examples/WEB-INF/lib/driver.jar!/-" {
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 274
+|     Comment: 
+|         
+|         // If using a per instance lib directory, i.e. ${catalina.base}/lib,
+|     
+|     Path: http://192.168.92.176:8080/docs/cgi-howto.html
+|     Line number: 93
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/cgi-howto.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 102
+|     Comment: 
+|         /*";
+|         </pre></td><td bgcolor="#023264" width="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td></tr><tr><td bgcolor="#023264" width="1" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td><td bgcolor="#023264" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td><td bgcolor="#023264" width="1" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td></tr></table></div>
+|         
+|             <p>A Permission entry like this is generated dynamically for each web
+|             application that is deployed, to allow it to read its own static resources
+|             but disallow it from using file access to read any other files (unless
+|             permissions for those files are explicitly granted).</p>
+|         
+|             <p>Also, Tomcat always dynamically creates the following file permissions:</p>
+|         <div align="left"><table cellspacing="4" cellpadding="0" border="0"><tr><td bgcolor="#023264" width="1" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td><td bgcolor="#023264" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td><td bgcolor="#023264" width="1" height="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td></tr><tr><td bgcolor="#023264" width="1"><img src="./images/void.gif" alt="" width="1" height="1" vspace="0" hspace="0" border="0"></td><td bgcolor="#ffffff" height="1"><pre>
+|         permission java.io.FilePermission "** your application context**", "read";
+|         
+|         permission java.io.FilePermission
+|           "** application working directory**", "read,write";
+|         permission java.io.FilePermission
+|           "** application working directory**/
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 347
+|     Comment: 
+|          // Applications using Comet need to be able to access this package
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 339
+|     Comment: 
+|          // The cookie code needs these.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 324
+|     Comment: 
+|          // All JSPs need to be able to read this package
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 276
+|     Comment: 
+|         
+|         // grant codeBase "file:${catalina.base}/lib/-" {
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 302
+|     Comment: 
+|          // JVM properties to allow read access
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 289
+|     Comment: 
+|          // javamail named MimePart DataSource used to send mail
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 288
+|     Comment: 
+|          // Required for JNDI lookup of named JDBC DataSource's and
+|     
+|     Path: http://192.168.92.176:8080/docs/
+|     Line number: 203
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/index.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 321
+|     Comment: 
+|          // Allow read of JAXP compliant XML parser debug
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 167
+|     Comment: 
+|         
+|         // The ASF licenses this file to You under the Apache License, Version 2.0
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 170
+|     Comment: 
+|         
+|         //
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 268
+|     Comment: 
+|         
+|         // located in the "lib" directory
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 496
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/security-manager-howto.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 21
+|     Comment: 
+|         <!--LEFT SIDE NAVIGATION-->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 266
+|     Comment: 
+|         
+|         // These permissions apply to the servlet API classes
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 183
+|     Comment: 
+|         
+|         // JVM) when Catalina is executed with the "-security" option.  In addition
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 175
+|     Comment: 
+|         
+|         // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 257
+|     Comment: 
+|          //  webapps${file.separator}examples${file.separator}WEB-INF
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 353
+|     Comment: 
+|          // Applications using the JSR-356 WebSocket implementation need to be able to access these packages
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 165
+|     Comment: 
+|         
+|         // contributor license agreements.  See the NOTICE file distributed with
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 192
+|     Comment: 
+|         
+|         // ========== SYSTEM CODE PERMISSIONS =========================================
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 227
+|     Comment: 
+|         
+|         // update this section accordingly.
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 195
+|     Comment: 
+|         
+|         // These permissions apply to javac
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 187
+|     Comment: 
+|         
+|         // * Read access to the web application's document root directory
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 169
+|     Comment: 
+|         
+|         // the License.  You may obtain a copy of the License at
+|     
+|     Path: http://192.168.92.176:8080/examples/jsp/
+|     Line number: 52
+|     Comment: 
+|         <!--<tr VALIGN=TOP>
+|         <td WIDTH="30"><img SRC="images/read.gif" height=24 width=24></td>
+|         
+|         <td>Read more about this feature</td>
+|         -->
+|     
+|     Path: http://192.168.92.176:8080/docs/security-manager-howto.html
+|     Line number: 185
+|     Comment: 
+|         
+|         // granted to each web application:
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 21
+|     Comment: 
+|         <!--RIGHT SIDE MAIN BODY-->
+|     
+|     Path: http://192.168.92.176:8080/docs/maven-jars.html
+|     Line number: 47
+|     Comment: 
+|         <!--
+|                       var comments_shortname = 'tomcat';
+|                       var comments_identifier = 'http://tomcat.apache.org/tomcat-7.0-doc/maven-jars.html';
+|                       (function(w, d) {
+|                           if (w.location.hostname.toLowerCase() == "tomcat.apache.org") {
+|                               d.write('<div id="comments_thread"><\/div>');
+|                               var s = d.createElement('script');
+|                               s.type = 'text/javascript';
+|                               s.async = true;
+|                               s.src = 'https://comments.apache.org/show_comments.lua?site=' + comments_shortname + '&page=' + comments_identifier;
+|                               (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+|                           }
+|                           else {
+|                               d.write('<div id="comments_thread"><strong>Comments are disabled for this page at the moment.<\/strong><\/div>');
+|                           }
+|                       })(window, document);
+|                       //-->
+|     
+|     Path: http://192.168.92.176:8080/docs/funcspecs/index.html
+|     Line number: 21
+|     Comment: 
+|_        <!--APACHE LOGO-->
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Thu, 19 Sep 2019 01:03:31 GMT; -10s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /examples/: Sample scripts
+|   /manager/html/upload: Apache Tomcat (401 Unauthorized)
+|   /manager/html: Apache Tomcat (401 Unauthorized)
+|_  /docs/: Potentially interesting folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.92.176
+|   Found the following error pages: 
+|   
+|   Error Code: 401
+|   	http://192.168.92.176:8080/host-manager/html
+|   
+|   Error Code: 401
+|_  	http://192.168.92.176:8080/manager/html
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://192.168.92.176:8080/docs/monitoring.html: 
+|     (1) ip: 
+|_      + 192.168.111.1
+| http-headers: 
+|   Server: Apache-Coyote/1.1
+|   Accept-Ranges: bytes
+|   ETag: W/"1895-1475867860000"
+|   Last-Modified: Fri, 07 Oct 2016 19:17:40 GMT
+|   Content-Type: text/html
+|   Content-Length: 1895
+|   Date: Thu, 19 Sep 2019 01:03:30 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-iis-webdav-vuln: WebDAV is DISABLED. Server is not currently vulnerable.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash c243df337b0e8dc299eddaa849b476f9
+|_Credits query returned unknown hash c243df337b0e8dc299eddaa849b476f9
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-screenshot-html: 
+|_  Saved to 192.168.92.176-8080.png
+|_http-security-headers: 
+|_http-server-header: Apache-Coyote/1.1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /docs/
+|       Other: 1; html: 10
+|     /docs/images/
+|       gif: 1
+|     /examples/
+|       Other: 1
+|     /examples/jsp/
+|       Other: 1
+|     /examples/servlets/
+|       Other: 1
+|     /examples/websocket-deprecated/
+|       Other: 1
+|     /examples/websocket/
+|       xhtml: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /examples/websocket-deprecated/
+|   Total files found (by extension):
+|_    Other: 6; gif: 1; html: 10; xhtml: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Apache Tomcat
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:53:40:6E (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 18:04:39 2019 -- 1 IP address (1 host up) scanned in 69.18 seconds

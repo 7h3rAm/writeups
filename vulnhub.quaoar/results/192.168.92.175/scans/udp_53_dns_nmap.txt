@@ -1,0 +1,20 @@
+# Nmap 7.70 scan initiated Wed Sep 18 14:28:13 2019 as: nmap -vv --reason -Pn -sU -sV -p 53 --script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_53_dns_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/udp_53_dns_nmap.xml 192.168.92.175
+Nmap scan report for 192.168.92.175
+Host is up, received arp-response (0.0012s latency).
+Scanned at 2019-09-18 14:28:14 PDT for 9s
+
+PORT   STATE SERVICE REASON              VERSION
+53/udp open  domain  udp-response ttl 64 ISC BIND 9.8.1-P1
+|_dns-cache-snoop: 0 of 100 tested domains are cached.
+|_dns-nsec-enum: Can't determine domain for host 192.168.92.175; use dns-nsec-enum.domains script arg.
+|_dns-nsec3-enum: Can't determine domain for host 192.168.92.175; use dns-nsec3-enum.domains script arg.
+| dns-nsid: 
+|_  bind.version: 9.8.1-P1
+MAC Address: 00:0C:29:00:BD:18 (VMware)
+
+Host script results:
+|_dns-brute: Can't guess domain of "192.168.92.175"; use dns-brute.domain script argument.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 14:28:23 2019 -- 1 IP address (1 host up) scanned in 9.53 seconds

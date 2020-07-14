@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 14:49:04 2019 as: nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_139_smb_nmap.xml 10.10.10.4 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/tcp_139_smb_nmap.xml 10.10.10.4" start="1572644944" startstr="Fri Nov  1 14:49:04 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572644945"/>
+<taskend task="NSE" time="1572644945"/>
+<taskbegin task="NSE" time="1572644945"/>
+<taskend task="NSE" time="1572644945"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572644945"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572644945"/>
+<taskbegin task="SYN Stealth Scan" time="1572644945"/>
+<taskend task="SYN Stealth Scan" time="1572644945" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572644945"/>
+<taskend task="Service scan" time="1572644951" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572644951"/>
+<taskprogress task="NSE" time="1572644982" percent="92.00" remaining="3" etc="1572644985"/>
+<taskprogress task="NSE" time="1572645012" percent="93.33" remaining="5" etc="1572645016"/>
+<taskprogress task="NSE" time="1572645042" percent="93.33" remaining="7" etc="1572645048"/>
+<taskprogress task="NSE" time="1572645072" percent="93.33" remaining="9" etc="1572645081"/>
+<taskprogress task="NSE" time="1572645103" percent="96.00" remaining="7" etc="1572645109"/>
+<taskprogress task="NSE" time="1572645133" percent="96.00" remaining="8" etc="1572645141"/>
+<taskprogress task="NSE" time="1572645163" percent="96.00" remaining="9" etc="1572645172"/>
+<taskprogress task="NSE" time="1572645193" percent="96.00" remaining="11" etc="1572645203"/>
+<taskend task="NSE" time="1572645211"/>
+<taskbegin task="NSE" time="1572645211"/>
+<taskend task="NSE" time="1572645215"/>
+<host starttime="1572644945" endtime="1572645215"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Windows XP netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: LEGACY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:b9:0c:03 (VMware)&#xa;Names:&#xa;  LEGACY&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;00&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  LEGACY&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;1e&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  HTB&lt;1d&gt;              Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">LEGACY</elem>
+<table key="statistics">
+<elem>00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="mac">
+<elem key="address">00:50:56:b9:0c:03</elem>
+<elem key="manuf">VMware</elem>
+</table>
+<table key="names">
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+</table>
+<table>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+</table>
+</table>
+</script><script id="smb-enum-shares" output="&#xa;  note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)&#xa;  account_used: &lt;blank&gt;&#xa;  \\10.10.10.4\ADMIN$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.10.10.4\C$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: &lt;none&gt;&#xa;  \\10.10.10.4\IPC$: &#xa;    warning: Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED&#xa;    Anonymous access: READ"><elem key="note">ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)</elem>
+<elem key="account_used">&lt;blank&gt;</elem>
+<table key="\\10.10.10.4\ADMIN$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.4\C$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.4\IPC$">
+<elem key="warning">Couldn&apos;t get details for share: NT_STATUS_ACCESS_DENIED</elem>
+<elem key="Anonymous access">READ</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    FOREST  10.0  &#xa;    GRANNY  5.2   &#xa;  Domain Controller&#xa;    FOREST  10.0  &#xa;  Master Browser&#xa;    LEGACY  5.1  &#xa;  Potential Browser&#xa;    LEGACY  5.1  &#xa;  Server&#xa;    GRANNY  5.2  &#xa;    SILO    6.3  &#xa;  Server service&#xa;    FOREST  10.0  &#xa;    GRANNY  5.2   &#xa;    LEGACY  5.1   &#xa;    SILO    6.3   &#xa;  Time Source&#xa;    FOREST  10.0  &#xa;  Windows NT/2000/XP/2003 server&#xa;    FOREST  10.0  &#xa;    GRANNY  5.2   &#xa;    LEGACY  5.1   &#xa;    SILO    6.3   &#xa;  Workstation&#xa;    FOREST  10.0  &#xa;    GRANNY  5.2   &#xa;    LEGACY  5.1   &#xa;    SILO    6.3   &#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows XP (Windows 2000 LAN Manager)&#xa;  OS CPE: cpe:/o:microsoft:windows_xp::-&#xa;  Computer name: legacy&#xa;  NetBIOS computer name: LEGACY\x00&#xa;  Workgroup: HTB\x00&#xa;  System time: 2019-11-01T20:49:20+02:00&#xa;"><elem key="os">Windows 5.1</elem>
+<elem key="lanmanager">Windows 2000 LAN Manager</elem>
+<elem key="server">LEGACY\x00</elem>
+<elem key="date">2019-11-01T20:49:20+02:00</elem>
+<elem key="fqdn">legacy</elem>
+<elem key="domain_dns">legacy</elem>
+<elem key="workgroup">HTB\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_xp::-</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">03</elem>
+<elem key="year">2017</elem>
+<elem key="day">14</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+</table>
+</table>
+</script><script id="smb2-capabilities" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="51212" rttvar="51212" to="256060"/>
+</host>
+<taskbegin task="NSE" time="1572645215"/>
+<taskend task="NSE" time="1572645215"/>
+<taskbegin task="NSE" time="1572645215"/>
+<taskend task="NSE" time="1572645215"/>
+<runstats><finished time="1572645215" timestr="Fri Nov  1 14:53:35 2019" elapsed="271.06" summary="Nmap done at Fri Nov  1 14:53:35 2019; 1 IP address (1 host up) scanned in 271.06 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

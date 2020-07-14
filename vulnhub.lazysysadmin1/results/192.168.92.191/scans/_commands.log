@@ -1,0 +1,68 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/_full_tcp_nmap.xml" 192.168.92.191
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/_top_20_udp_nmap.xml" 192.168.92.191
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/_quick_tcp_nmap.xml" 192.168.92.191
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:22 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_22_ssh_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_22_ssh_nmap.xml" 192.168.92.191
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_80_http_nmap.xml" 192.168.92.191
+
+curl -sSik http://192.168.92.191:80/ -m 10 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_index.html"
+
+curl -sSik http://192.168.92.191:80/robots.txt -m 10 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.191:80/ /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.92.191:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://192.168.92.191:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://192.168.92.191:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://192.168.92.191:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:139 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_139_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_139_smb_nmap.xml" 192.168.92.191
+
+enum4linux -a -M -l -d 192.168.92.191 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 192.168.92.191 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbclient.txt"
+
+smbmap -H 192.168.92.191 -P 139 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 139 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.191 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.191 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:445 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_445_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_445_smb_nmap.xml" 192.168.92.191
+
+smbmap -H 192.168.92.191 -P 445 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 445 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.191 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.191 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:3306 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_3306_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3306 --script="banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_3306_mysql_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_3306_mysql_nmap.xml" 192.168.92.191
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:6667 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_6667_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.191:137 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/udp_137_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/udp_137_smb_nmap.xml" 192.168.92.191
+
+nbtscan -rvh 192.168.92.191 2>&1 | tee "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/nbtscan.txt"
+
+smbmap -H 192.168.92.191 -P 137 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 137 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.191 -P 137 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 137 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.191 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.191 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/smbmap-execute-command.txt"
+

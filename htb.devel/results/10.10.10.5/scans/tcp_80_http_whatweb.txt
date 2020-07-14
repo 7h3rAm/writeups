@@ -1,0 +1,43 @@
+WhatWeb report for http://10.10.10.5:80
+Status    : 200 OK
+Title     : IIS7
+IP        : 10.10.10.5
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[ASP.NET], HTTPServer[Microsoft-IIS/7.5], Microsoft-IIS[7.5][Under Construction]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/7.5 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Module       : Under Construction
+	Version      : 7.5
+	Website     : http://www.iis.net/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Fri, 17 Mar 2017 14:37:30 GMT
+	Accept-Ranges: bytes
+	ETag: "37b5ed12c9fd21:0"
+	Server: Microsoft-IIS/7.5
+	X-Powered-By: ASP.NET
+	Date: Sat, 09 Nov 2019 03:27:13 GMT
+	Connection: close
+	Content-Length: 689
+	

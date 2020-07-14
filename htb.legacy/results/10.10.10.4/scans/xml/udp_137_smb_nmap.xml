@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 14:49:21 2019 as: nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_nmap.xml 10.10.10.4 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_nmap.xml 10.10.10.4" start="1572644961" startstr="Fri Nov  1 14:49:21 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572644961"/>
+<taskend task="NSE" time="1572644961"/>
+<taskbegin task="NSE" time="1572644961"/>
+<taskend task="NSE" time="1572644961"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572644961"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572644961"/>
+<taskbegin task="UDP Scan" time="1572644961"/>
+<taskend task="UDP Scan" time="1572644962" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572644962"/>
+<taskend task="Service scan" time="1572644962" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572644962"/>
+<taskend task="NSE" time="1572644962"/>
+<taskbegin task="NSE" time="1572644962"/>
+<taskend task="NSE" time="1572644962"/>
+<host starttime="1572644961" endtime="1572644962"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="127"/><service name="netbios-ns" product="Microsoft Windows netbios-ns" extrainfo="workgroup: HTB" hostname="LEGACY" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: LEGACY, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:b9:0c:03 (VMware)&#xa;Names:&#xa;  LEGACY&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;00&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  LEGACY&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  HTB&lt;1e&gt;              Flags: &lt;group&gt;&lt;active&gt;&#xa;  HTB&lt;1d&gt;              Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><table key="names">
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="name">LEGACY</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+</table>
+<table>
+<elem key="name">HTB</elem>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+</table>
+<table>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+</table>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">LEGACY</elem>
+<table key="mac">
+<elem key="address">00:50:56:b9:0c:03</elem>
+<elem key="manuf">VMware</elem>
+</table>
+<table key="statistics">
+<elem>00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+</script></hostscript><times srtt="48091" rttvar="48091" to="240455"/>
+</host>
+<taskbegin task="NSE" time="1572644962"/>
+<taskend task="NSE" time="1572644962"/>
+<taskbegin task="NSE" time="1572644962"/>
+<taskend task="NSE" time="1572644962"/>
+<runstats><finished time="1572644962" timestr="Fri Nov  1 14:49:22 2019" elapsed="1.51" summary="Nmap done at Fri Nov  1 14:49:22 2019; 1 IP address (1 host up) scanned in 1.51 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

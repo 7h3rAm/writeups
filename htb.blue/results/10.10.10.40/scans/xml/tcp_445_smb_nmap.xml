@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 17:08:33 2019 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_445_smb_nmap.xml 10.10.10.40 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_445_smb_nmap.xml 10.10.10.40" start="1572653313" startstr="Fri Nov  1 17:08:33 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572653313"/>
+<taskend task="NSE" time="1572653313"/>
+<taskbegin task="NSE" time="1572653313"/>
+<taskend task="NSE" time="1572653313"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572653313"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572653313"/>
+<taskbegin task="SYN Stealth Scan" time="1572653313"/>
+<taskend task="SYN Stealth Scan" time="1572653313" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572653314"/>
+<taskend task="Service scan" time="1572653320" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572653320"/>
+<taskprogress task="NSE" time="1572653351" percent="90.67" remaining="4" etc="1572653354"/>
+<taskprogress task="NSE" time="1572653384" percent="97.33" remaining="2" etc="1572653386"/>
+<taskprogress task="NSE" time="1572653414" percent="97.33" remaining="3" etc="1572653417"/>
+<taskend task="NSE" time="1572653427"/>
+<taskbegin task="NSE" time="1572653427"/>
+<taskend task="NSE" time="1572653434"/>
+<host starttime="1572653313" endtime="1572653434"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.40" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows 7 Professional 7601 Service Pack 1 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="HARIS-PC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.10.10.40\ADMIN$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Remote Admin&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.10.40\C$: &#xa;    Type: STYPE_DISKTREE_HIDDEN&#xa;    Comment: Default share&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\10.10.10.40\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: Remote IPC&#xa;    Anonymous access: READ&#xa;    Current user access: READ/WRITE&#xa;  \\10.10.10.40\Share: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: READ&#xa;  \\10.10.10.40\Users: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: READ"><elem key="account_used">guest</elem>
+<table key="\\10.10.10.40\ADMIN$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Remote Admin</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.40\C$">
+<elem key="Type">STYPE_DISKTREE_HIDDEN</elem>
+<elem key="Comment">Default share</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\10.10.10.40\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">Remote IPC</elem>
+<elem key="Anonymous access">READ</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.10.10.40\Share">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">READ</elem>
+</table>
+<table key="\\10.10.10.40\Users">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">READ</elem>
+</table>
+</script><script id="smb-ls" output="Volume \\10.10.10.40\Share&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2017-07-14 06:48:44  .&#xa;&lt;DIR&gt;  2017-07-14 06:48:44  ..&#xa;&#xa;&#xa;Volume \\10.10.10.40\Users&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  .&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  ..&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public\Documents&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public\Downloads&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public\Music&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public\Pictures&#xa;&lt;DIR&gt;  2011-04-12 00:51:29  Public\Recorded TV&#xa;&lt;DIR&gt;  2009-07-13 20:20:08  Public\Videos&#xa;&#xa;"><table key="volumes">
+<table>
+<elem key="volume">\\10.10.10.40\Share</elem>
+<table key="files">
+<table>
+<elem key="filename">.</elem>
+<elem key="time">2017-07-14 06:48:44</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">..</elem>
+<elem key="time">2017-07-14 06:48:44</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+</table>
+</table>
+<table>
+<elem key="volume">\\10.10.10.40\Users</elem>
+<table key="files">
+<table>
+<elem key="filename">.</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">..</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Documents</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Downloads</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Music</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Pictures</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Recorded TV</elem>
+<elem key="time">2011-04-12 00:51:29</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+<table>
+<elem key="filename">Public\Videos</elem>
+<elem key="time">2009-07-13 20:20:08</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+</table>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="bytes">0</elem>
+<elem key="files">11</elem>
+</table>
+</script><script id="smb-mbenum" output="Not a master or backup browser"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional&#xa;  Computer name: haris-PC&#xa;  NetBIOS computer name: HARIS-PC\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-11-02T00:08:50+00:00&#xa;"><elem key="os">Windows 7 Professional 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows 7 Professional 6.1</elem>
+<elem key="server">HARIS-PC\x00</elem>
+<elem key="date">2019-11-02T00:08:50+00:00</elem>
+<elem key="fqdn">haris-PC</elem>
+<elem key="domain_dns">haris-PC</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::sp1:professional</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="NT_STATUS_OBJECT_NAME_NOT_FOUND">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="month">03</elem>
+<elem key="day">14</elem>
+<elem key="year">2017</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+</table>
+</table>
+</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-11-01 17:09:08&#xa;  start_date: 2019-11-01 17:08:13"><elem key="date">2019-11-01 17:09:08</elem>
+<elem key="start_date">2019-11-01 17:08:13</elem>
+</script></hostscript><times srtt="49316" rttvar="49316" to="246580"/>
+</host>
+<taskbegin task="NSE" time="1572653434"/>
+<taskend task="NSE" time="1572653434"/>
+<taskbegin task="NSE" time="1572653434"/>
+<taskend task="NSE" time="1572653434"/>
+<runstats><finished time="1572653434" timestr="Fri Nov  1 17:10:34 2019" elapsed="121.84" summary="Nmap done at Fri Nov  1 17:10:34 2019; 1 IP address (1 host up) scanned in 121.84 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

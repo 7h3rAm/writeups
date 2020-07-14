@@ -1,0 +1,145 @@
+# Nmap 7.70 scan initiated Tue Oct 29 11:18:49 2019 as: nmap -vv --reason -Pn -sV -p 445 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_445_smb_nmap.xml 192.168.92.191
+Nmap scan report for 192.168.92.191
+Host is up, received arp-response (0.012s latency).
+Scanned at 2019-10-29 11:18:50 PDT for 312s
+
+PORT    STATE SERVICE     REASON         VERSION
+445/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:C2:70:16 (VMware)
+Service Info: Host: LAZYSYSADMIN
+
+Host script results:
+| nbstat: NetBIOS name: LAZYSYSADMIN, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LAZYSYSADMIN<00>     Flags: <unique><active>
+|   LAZYSYSADMIN<03>     Flags: <unique><active>
+|   LAZYSYSADMIN<20>     Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-domains: 
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   LAZYSYSADMIN
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.191\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Web server)
+|     Users: 6
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.191\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|     Current user access: <none>
+|   \\192.168.92.191\share$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Sumshare
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\var\www\html\
+|     Anonymous access: READ/WRITE
+|_    Current user access: READ/WRITE
+| smb-ls: Volume \\192.168.92.191\share$
+|   maxfiles limit reached (10)
+| SIZE   TIME                 FILENAME
+| <DIR>  2017-08-15 04:05:52  .
+| <DIR>  2017-08-14 05:34:47  ..
+| <DIR>  2019-10-29 11:18:53  wordpress
+| 2853   2015-12-16 01:58:26  wordpress\wp-config-sample.php
+| 4513   2016-10-14 12:39:28  wordpress\wp-trackback.php
+| <DIR>  2017-08-02 14:02:02  wordpress\wp-admin
+| 16200  2017-04-06 11:01:42  wordpress\wp-settings.php
+| 364    2015-12-19 03:20:28  wordpress\wp-blog-header.php
+| 418    2013-09-24 17:18:11  wordpress\index.php
+| 3286   2015-05-24 10:26:25  wordpress\wp-cron.php
+|_
+| smb-mbenum: 
+|   DFS Root
+|     LAZYSYSADMIN  0.0  Web server
+|   Master Browser
+|     LAZYSYSADMIN  0.0  Web server
+|   Print server
+|     LAZYSYSADMIN  0.0  Web server
+|   Server
+|     LAZYSYSADMIN  0.0  Web server
+|   Server service
+|     LAZYSYSADMIN  0.0  Web server
+|   Unix server
+|     LAZYSYSADMIN  0.0  Web server
+|   Windows NT/2000/XP/2003 server
+|     LAZYSYSADMIN  0.0  Web server
+|   Workstation
+|_    LAZYSYSADMIN  0.0  Web server
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: lazysysadmin
+|   NetBIOS computer name: LAZYSYSADMIN\x00
+|   Domain name: \x00
+|   FQDN: lazysysadmin
+|_  System time: 2019-10-30T04:19:03+10:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.00: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.02: 
+|     Distributed File System
+|     Multi-credit operations
+|   3.11: 
+|     Distributed File System
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-10-29 11:19:03
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 29 11:24:02 2019 -- 1 IP address (1 host up) scanned in 313.36 seconds

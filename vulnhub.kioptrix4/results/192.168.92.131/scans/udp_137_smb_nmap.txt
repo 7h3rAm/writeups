@@ -1,0 +1,28 @@
+# Nmap 7.70 scan initiated Tue Oct  8 15:51:40 2019 as: nmap -vv --reason -Pn -sU -sV -p 137 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/xml/udp_137_smb_nmap.xml 192.168.92.131
+Nmap scan report for 192.168.92.131
+Host is up, received arp-response (0.0019s latency).
+Scanned at 2019-10-08 15:51:41 PDT for 1s
+
+PORT    STATE SERVICE    REASON              VERSION
+137/udp open  netbios-ns udp-response ttl 64 Microsoft Windows netbios-ns (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:9E:D6:27 (VMware)
+Service Info: Host: KIOPTRIX4; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: KIOPTRIX4, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   KIOPTRIX4<00>        Flags: <unique><active>
+|   KIOPTRIX4<03>        Flags: <unique><active>
+|   KIOPTRIX4<20>        Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct  8 15:51:42 2019 -- 1 IP address (1 host up) scanned in 2.39 seconds

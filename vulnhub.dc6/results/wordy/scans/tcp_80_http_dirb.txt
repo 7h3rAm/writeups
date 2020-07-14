@@ -1,0 +1,47 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: /root/toolbox/vulnhub/dc6/results/wordy/scans/tcp_80_http_dirb.txt
+START_TIME: Tue Sep 10 18:09:59 2019
+URL_BASE: http://wordy:80/
+WORDLIST_FILES: /usr/share/seclists/Discovery/Web-Content/common.txt
+OPTION: Printing LOCATION header
+OPTION: Not Recursive
+OPTION: Silent Mode
+EXTENSIONS_LIST: (,.txt,.html,.php,.asp,.aspx) | ()(.txt)(.html)(.php)(.asp)(.aspx) [NUM = 6]
+
+-----------------
+
+GENERATED WORDS: 4593
+
+---- Scanning URL: http://wordy:80/ ----
++ http://wordy:80/index.php (CODE:301|SIZE:0)
+  (Location: 'http://wordy/')
++ http://wordy:80/index.php (CODE:301|SIZE:0)
+  (Location: 'http://wordy/')
++ http://wordy:80/license.txt (CODE:200|SIZE:19935)
++ http://wordy:80/readme.html (CODE:200|SIZE:7425)
++ http://wordy:80/server-status (CODE:403|SIZE:293)
+==> DIRECTORY: http://wordy:80/wp-admin/
++ http://wordy:80/wp-blog-header.php (CODE:200|SIZE:0)
++ http://wordy:80/wp-config.php (CODE:200|SIZE:0)
+==> DIRECTORY: http://wordy:80/wp-content/
++ http://wordy:80/wp-cron.php (CODE:200|SIZE:0)
+==> DIRECTORY: http://wordy:80/wp-includes/
++ http://wordy:80/wp-links-opml.php (CODE:200|SIZE:220)
++ http://wordy:80/wp-load.php (CODE:200|SIZE:0)
++ http://wordy:80/wp-login.php (CODE:200|SIZE:2808)
++ http://wordy:80/wp-mail.php (CODE:403|SIZE:2758)
++ http://wordy:80/wp-settings.php (CODE:500|SIZE:0)
++ http://wordy:80/wp-signup.php (CODE:302|SIZE:0)
+  (Location: 'http://wordy/wp-login.php?action=register')
++ http://wordy:80/wp-trackback.php (CODE:200|SIZE:135)
++ http://wordy:80/xmlrpc.php (CODE:405|SIZE:42)
++ http://wordy:80/xmlrpc.php (CODE:405|SIZE:42)
+
+-----------------
+END_TIME: Tue Sep 10 18:10:40 2019
+DOWNLOADED: 27558 - FOUND: 17

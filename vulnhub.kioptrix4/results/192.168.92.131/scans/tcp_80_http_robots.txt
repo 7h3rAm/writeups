@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Date: Tue, 08 Oct 2019 15:47:17 GMT
+Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+Content-Length: 327
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /robots.txt was not found on this server.</p>
+<hr>
+<address>Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch Server at 192.168.92.131 Port 80</address>
+</body></html>

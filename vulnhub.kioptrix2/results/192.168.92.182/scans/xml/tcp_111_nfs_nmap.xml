@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Sep 27 18:17:03 2019 as: nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.182 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix2/results/192.168.92.182/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.182" start="1569633423" startstr="Fri Sep 27 18:17:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569633426"/>
+<taskend task="NSE" time="1569633426"/>
+<taskbegin task="NSE" time="1569633426"/>
+<taskend task="NSE" time="1569633426"/>
+<taskbegin task="NSE" time="1569633426"/>
+<taskend task="NSE" time="1569633426"/>
+<taskbegin task="ARP Ping Scan" time="1569633426"/>
+<taskend task="ARP Ping Scan" time="1569633427" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1569633427"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1569633427"/>
+<taskbegin task="SYN Stealth Scan" time="1569633427"/>
+<taskend task="SYN Stealth Scan" time="1569633427" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1569633427"/>
+<taskend task="Service scan" time="1569633433" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1569633433"/>
+<taskprogress task="NSE" time="1569633464" percent="97.67" remaining="1" etc="1569633465"/>
+<taskend task="NSE" time="1569633466"/>
+<taskbegin task="NSE" time="1569633466"/>
+<taskend task="NSE" time="1569633466"/>
+<taskbegin task="NSE" time="1569633466"/>
+<taskend task="NSE" time="1569633466"/>
+<host starttime="1569633426" endtime="1569633466"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.182" addrtype="ipv4"/>
+<address addr="00:0C:29:DD:3C:B5" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2            111/tcp  rpcbind&#xa;  100000  2            111/udp  rpcbind&#xa;  100024  1            622/udp  status&#xa;  100024  1            625/tcp  status&#xa;"><table key="100000">
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+</table>
+</table>
+</table>
+<table key="100024">
+<table key="udp">
+<elem key="port">622</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+<table key="tcp">
+<elem key="port">625</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="3434" rttvar="4044" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569633466"/>
+<taskend task="NSE" time="1569633466"/>
+<taskbegin task="NSE" time="1569633466"/>
+<taskend task="NSE" time="1569633466"/>
+<taskbegin task="NSE" time="1569633466"/>
+<taskend task="NSE" time="1569633466"/>
+<runstats><finished time="1569633466" timestr="Fri Sep 27 18:17:46 2019" elapsed="43.24" summary="Nmap done at Fri Sep 27 18:17:46 2019; 1 IP address (1 host up) scanned in 43.24 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

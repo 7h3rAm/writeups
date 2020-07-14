@@ -1,0 +1,35 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.187
++ Target Hostname:    192.168.92.187
++ Target Port:        80
++ Start Time:         2019-10-11 12:14:23 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Rocket 1.2.6 Python/2.7.15rc1
++ Retrieved x-powered-by header: web2py
++ RFC-1918 IP address found in the 'set-cookie' header. The IP is "192.168.92.183".
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ RFC-1918 IP address found in the 'session_id_init' cookie. The IP is "192.168.92.183".
++ Uncommon header 'web2py_error' found, with contents: invalid path
++ Server banner has changed from 'Rocket 1.2.6 Python/2.7.15rc1' to 'Apache/2.4.29 (Ubuntu)' which may suggest a WAF, load balancer or proxy is in place
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ RFC-1918 IP address found in the 'session_id_welcome' cookie. The IP is "192.168.92.183".
++ RFC-1918 IP address found in the 'session_id_admin' cookie. The IP is "192.168.92.183".
++ OSVDB-376: /admin/contextAdmin/contextAdmin.html: Tomcat may be configured to let attackers read arbitrary files. Restrict access to /admin.
++ OSVDB-2813: /admin/database/wwForum.mdb: Web Wiz Forums pre 7.5 is vulnerable to Cross-Site Scripting attacks. Default login/pass is Administrator/letmein
++ OSVDB-3092: /admin/: This might be interesting...
++ OSVDB-3093: /admin/cfg/configscreen.inc.php+: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/cfg/configsite.inc.php+: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/cfg/configsql.inc.php+: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/cfg/configtache.inc.php+: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/cms/htmltags.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/modules/cache.php+: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/templates/header.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ /admin/html: Tomcat Manager / Host Manager interface found (pass protected)
++ /admin/status: Tomcat Server Status interface found (pass protected)
++ 7546 requests: 8 error(s) and 21 item(s) reported on remote host
++ End Time:           2019-10-11 12:48:00 (GMT-7) (2017 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

@@ -1,0 +1,212 @@
+[+] Finding open SMB ports....
+[+] User SMB session establishd on 10.10.10.40...
+[+] IP: 10.10.10.40:445	Name: 10.10.10.40                                       
+	Disk                                                  	Permissions
+	----                                                  	-----------
+[!] Access Denied
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 10.10.10.40...
+[+] IP: 10.10.10.40:445	Name: 10.10.10.40                                       
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	ADMIN$                                            	NO ACCESS
+	C$                                                	NO ACCESS
+	IPC$                                              	NO ACCESS
+	Share                                             	READ ONLY
+	.\
+[+] Finding open SMB ports....
+[!] RPC Authentication error occured
+[!] Authentication error on 10.10.10.40
+	Users                                             	READ ONLY
+	.\
+	dw--w--w--                0 Thu Jul 20 23:56:23 2017	.
+	dw--w--w--                0 Thu Jul 20 23:56:23 2017	..
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Default
+	-r--r--r--              174 Fri Jul 14 15:32:23 2017	desktop.ini
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Public
+	.\\Default\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	AppData
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Desktop
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Documents
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Downloads
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Favorites
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Links
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Music
+	-r--r--r--           262144 Sun Jul 16 13:22:24 2017	NTUSER.DAT
+	-r--r--r--             1024 Fri Jul 14 15:32:24 2017	NTUSER.DAT.LOG
+	-r--r--r--           189440 Sun Jul 16 13:22:24 2017	NTUSER.DAT.LOG1
+	-r--r--r--                0 Fri Jul 14 15:37:45 2017	NTUSER.DAT.LOG2
+	-r--r--r--            65536 Fri Jul 14 15:32:24 2017	NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+	-r--r--r--           524288 Fri Jul 14 15:32:24 2017	NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms
+	-r--r--r--           524288 Fri Jul 14 15:32:23 2017	NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Pictures
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Saved Games
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Videos
+	.\\Default\AppData\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Local
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Roaming
+	.\\Default\AppData\Local\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Microsoft
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Temp
+	.\\Default\AppData\Local\Microsoft\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Windows
+	.\\Default\AppData\Local\Microsoft\Windows\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	GameExplorer
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	History
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Temporary Internet Files
+	.\\Default\AppData\Roaming\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Media Center Programs
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Microsoft
+	.\\Default\AppData\Roaming\Microsoft\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Internet Explorer
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Windows
+	.\\Default\AppData\Roaming\Microsoft\Internet Explorer\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Quick Launch
+	.\\Default\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	-r--r--r--              146 Fri Jul 14 15:32:24 2017	desktop.ini
+	-r--r--r--              290 Fri Jul 14 15:32:24 2017	Shows Desktop.lnk
+	-r--r--r--              272 Fri Jul 14 15:32:24 2017	Window Switcher.lnk
+	[+] Finding open SMB ports....
+[!] RPC Authentication error occured
+[!] Authentication error on 10.10.10.40
+.\\Default\AppData\Roaming\Microsoft\Windows\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Cookies
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Network Shortcuts
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Printer Shortcuts
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Recent
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	SendTo
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Start Menu
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Templates
+	.\\Default\AppData\Roaming\Microsoft\Windows\SendTo\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	-r--r--r--                3 Fri Jul 14 15:32:24 2017	Compressed (zipped) Folder.ZFSendToTarget
+	-r--r--r--                7 Fri Jul 14 15:32:24 2017	Desktop (create shortcut).DeskLink
+	-r--r--r--              558 Fri Jul 14 15:32:24 2017	Desktop.ini
+	-r--r--r--             1238 Fri Jul 14 15:32:24 2017	Fax Recipient.lnk
+	-r--r--r--                4 Fri Jul 14 15:32:24 2017	Mail Recipient.MAPIMail
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	Programs
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	.
+	dr--r--r--                0 Fri Jul 14 15:37:45 2017	..
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Accessories
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Maintenance
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	Accessibility
+	-r--r--r--             1280 Fri Jul 14 15:32:24 2017	Command Prompt.lnk
+	-r--r--r--              678 Fri Jul 14 15:32:24 2017	Desktop.ini
+	-r--r--r--             1304 Fri Jul 14 15:32:24 2017	Notepad.lnk
+	-r--r--r--              262 Fri Jul 14 15:32:24 2017	Run.lnk
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	System Tools
+	-r--r--r--             1228 Fri Jul 14 15:32:24 2017	Windows Explorer.lnk
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\Accessibility\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	-r--r--r--              704 Fri Jul 14 15:32:24 2017	Desktop.ini
+	-r--r--r--             1358 Fri Jul 14 15:32:24 2017	Ease of Access.lnk
+	-r--r--r--             1258 Fri Jul 14 15:32:24 2017	Magnify.lnk
+	-r--r--r--             1262 Fri Jul 14 15:32:24 2017	Narrator.lnk
+	-r--r--r--             1250 Fri Jul 14 15:32:24 2017	On-Screen Keyboard.lnk
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Accessories\System Tools\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	-r--r--r--              262 Fri Jul 14 15:32:24 2017	computer.lnk
+	-r--r--r--              262 Fri Jul 14 15:32:24 2017	Control Panel.lnk
+	-r--r--r--              592 Fri Jul 14 15:32:24 2017	Desktop.ini
+	-r--r--r--             1306 Fri Jul 14 15:32:24 2017	Private Character Editor.lnk
+	.\\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Maintenance\
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	.
+	dw--w--w--                0 Fri Jul 14 15:37:45 2017	..
+	-r--r--r--              318 Fri Jul 14 15:32:24 2017	Desktop.ini
+	-r--r--r--              262 Fri Jul 14 15:32:24 2017	Help.lnk
+	.\\Public\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              174 Thu Jul 20 23:40:38 2017	desktop.ini
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Documents
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Downloads
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Favorites
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Libraries
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Music
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Pictures
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Recorded TV
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Videos
+	.\\Public\Documents\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              278 Thu Jul 20 23:40:38 2017	desktop.ini
+	.\\Public\Downloads\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              174 Thu Jul 20 23:40:38 2017	desktop.ini
+	.\\Public\Libraries\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--               88 Thu Jul 20 23:40:38 2017	desktop.ini
+	-r--r--r--              876 Thu Jul 20 23:40:38 2017	RecordedTV.library-ms
+	.\\Public\Music\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              380 Thu Jul 20 23:40:38 2017	desktop.ini
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Sample Music
+	.\\Public\Music\Sample Music\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              586 Thu Jul 20 23:40:38 2017	desktop.ini
+	-r--r--r--          8414449 Thu Jul 20 23:40:38 2017	Kalimba.mp3
+	-r--r--r--          4113874 Thu Jul 20 23:40:38 2017	Maid with the Flaxen Hair.mp3
+	-r--r--r--          4842585 Thu Jul 20 23:40:38 2017	Sleep Away.mp3
+	.\\Public\Pictures\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              380 Thu Jul 20 23:40:38 2017	desktop.ini
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Sample Pictures
+	.\\Public\Pictures\Sample Pictures\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--           879394 Thu Jul 20 23:40:38 2017	Chrysanthemum.jpg
+	-r--r--r--           845941 Thu Jul 20 23:40:38 2017	Desert.jpg
+	-r--r--r--             1120 Thu Jul 20 23:40:38 2017	desktop.ini
+	-r--r--r--           595284 Thu Jul 20 23:40:38 2017	Hydrangeas.jpg
+	-r--r--r--           775702 Thu Jul 20 23:40:38 2017	Jellyfish.jpg
+	-r--r--r--           780831 Thu Jul 20 23:40:38 2017	Koala.jpg
+	-r--r--r--           561276 Thu Jul 20 23:40:38 2017	Lighthouse.jpg
+	-r--r--r--           777835 Thu Jul 20 23:40:38 2017	Penguins.jpg
+	-r--r--r--           620888 Thu Jul 20 23:40:38 2017	Tulips.jpg
+	.\\Public\Recorded TV\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--               80 Thu Jul 20 23:40:38 2017	desktop.ini
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	Sample Media
+	.\\Public\Recorded TV\Sample Media\
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	.
+	dw--w--w--                0 Thu Jul 20 23:40:38 2017	..
+	-r--r--r--              171 Thu Jul 20 23:40:38 2017	desktop.ini
+	-r--r--r--          9699328 Thu Jul 20 23:40:38 2017	win7_scenic-demoshort_raw.wtv
+The NETBIOS connection with the remote host timed out.
+The NETBIOS connection with the remote host timed out.

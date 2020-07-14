@@ -1,0 +1,28 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.133
++ Target Hostname:    192.168.92.133
++ Target Port:        80
++ Start Time:         2019-09-11 13:59:56 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3
++ Server leaks inodes via ETags, header found with file /, inode: 12722, size: 703, mtime: Tue Nov 17 10:45:47 2015
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Entry '/cola/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ Entry '/sisi/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ Entry '/beer/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ "robots.txt" contains 3 entries which should be manually viewed.
++ Apache/2.2.15 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.
++ PHP/5.3.3 appears to be outdated (current is at least 5.6.9). PHP 5.5.25 and 5.4.41 are also current.
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS, TRACE 
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ 8348 requests: 0 error(s) and 16 item(s) reported on remote host
++ End Time:           2019-09-11 14:01:02 (GMT-7) (66 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

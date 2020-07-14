@@ -1,0 +1,33 @@
+# Nmap 7.70 scan initiated Thu Sep 19 17:29:44 2019 as: nmap -vv --reason -Pn -sV -p 111 --script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.177
+Nmap scan report for 192.168.92.177
+Host is up, received arp-response (0.0090s latency).
+Scanned at 2019-09-19 17:29:51 PDT for 22s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 64 2-4 (RPC #100000)
+| nfs-ls: Volume /home/vulnix
+|_  access: NoRead NoLookup NoModify NoExtend NoDelete NoExecute
+| nfs-showmount: 
+|_  /home/vulnix *
+| nfs-statfs: 
+|   Filesystem    1K-blocks  Used      Available  Use%  Maxfilesize  Maxlink
+|_  /home/vulnix  792040.0   714080.0  38232.0    95%   8.0T         32000
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      50680/tcp  mountd
+|   100005  1,2,3      51785/udp  mountd
+|   100021  1,3,4      35231/udp  nlockmgr
+|   100021  1,3,4      57819/tcp  nlockmgr
+|   100024  1          51959/udp  status
+|   100024  1          59222/tcp  status
+|   100227  2,3         2049/tcp  nfs_acl
+|_  100227  2,3         2049/udp  nfs_acl
+MAC Address: 00:0C:29:87:38:08 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 19 17:30:13 2019 -- 1 IP address (1 host up) scanned in 28.89 seconds

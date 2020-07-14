@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri May 29 19:04:11 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/xml/_full_tcp_nmap.xml 10.10.10.68 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/xml/_full_tcp_nmap.xml 10.10.10.68" start="1590759251" startstr="Fri May 29 19:04:11 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1590759251"/>
+<taskend task="NSE" time="1590759251"/>
+<taskbegin task="NSE" time="1590759251"/>
+<taskend task="NSE" time="1590759251"/>
+<taskbegin task="NSE" time="1590759251"/>
+<taskend task="NSE" time="1590759251"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1590759251"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1590759264"/>
+<taskbegin task="Connect Scan" time="1590759264"/>
+<taskprogress task="Connect Scan" time="1590759295" percent="1.46" remaining="2086" etc="1590761380"/>
+<taskprogress task="Connect Scan" time="1590759325" percent="2.31" remaining="2578" etc="1590761903"/>
+<taskprogress task="Connect Scan" time="1590759355" percent="2.33" remaining="3808" etc="1590763162"/>
+<taskprogress task="Connect Scan" time="1590759385" percent="2.36" remaining="5010" etc="1590764394"/>
+<taskprogress task="Connect Scan" time="1590759415" percent="2.38" remaining="6194" etc="1590765608"/>
+<taskprogress task="Connect Scan" time="1590759445" percent="2.41" remaining="7340" etc="1590766784"/>
+<taskprogress task="Connect Scan" time="1590759475" percent="2.43" remaining="8469" etc="1590767944"/>
+<taskprogress task="Connect Scan" time="1590759505" percent="2.45" remaining="9582" etc="1590769087"/>
+<taskprogress task="Connect Scan" time="1590759535" percent="3.02" remaining="8699" etc="1590768234"/>
+<taskprogress task="Connect Scan" time="1590759565" percent="4.11" remaining="7017" etc="1590766582"/>
+<taskprogress task="Connect Scan" time="1590759595" percent="5.22" remaining="6005" etc="1590765599"/>
+<taskprogress task="Connect Scan" time="1590759625" percent="6.55" remaining="5153" etc="1590764778"/>
+<taskprogress task="Connect Scan" time="1590759655" percent="7.45" remaining="4861" etc="1590764515"/>
+<taskprogress task="Connect Scan" time="1590759685" percent="9.06" remaining="4227" etc="1590763912"/>
+<taskprogress task="Connect Scan" time="1590759715" percent="10.76" remaining="3741" etc="1590763455"/>
+<taskprogress task="Connect Scan" time="1590759763" percent="12.39" remaining="3529" etc="1590763292"/>
+<taskprogress task="Connect Scan" time="1590759793" percent="13.94" remaining="3266" etc="1590763058"/>
+<taskprogress task="Connect Scan" time="1590759868" percent="14.86" remaining="3461" etc="1590763328"/>
+<taskprogress task="Connect Scan" time="1590759937" percent="15.51" remaining="3665" etc="1590763602"/>
+<taskprogress task="Connect Scan" time="1590760021" percent="16.31" remaining="3886" etc="1590763906"/>
+<taskprogress task="Connect Scan" time="1590760126" percent="17.30" remaining="4121" etc="1590764247"/>
+<taskprogress task="Connect Scan" time="1590760261" percent="18.56" remaining="4375" etc="1590764635"/>
+<taskprogress task="Connect Scan" time="1590760453" percent="20.38" remaining="4646" etc="1590765099"/>

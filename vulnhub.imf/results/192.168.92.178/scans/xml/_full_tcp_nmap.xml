@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Sep 22 12:16:23 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/xml/_full_tcp_nmap.xml 192.168.92.178 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/xml/_full_tcp_nmap.xml 192.168.92.178" start="1569179783" startstr="Sun Sep 22 12:16:23 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1569179784"/>
+<taskend task="NSE" time="1569179784"/>
+<taskbegin task="NSE" time="1569179784"/>
+<taskend task="NSE" time="1569179784"/>
+<taskbegin task="ARP Ping Scan" time="1569179784"/>
+<taskend task="ARP Ping Scan" time="1569179784" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1569179784"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1569179784"/>
+<taskbegin task="SYN Stealth Scan" time="1569179784"/>
+<taskprogress task="SYN Stealth Scan" time="1569179815" percent="11.71" remaining="234" etc="1569180049"/>
+<taskprogress task="SYN Stealth Scan" time="1569179845" percent="22.56" remaining="210" etc="1569180054"/>
+<taskprogress task="SYN Stealth Scan" time="1569179875" percent="46.48" remaining="105" etc="1569179980"/>
+<taskprogress task="SYN Stealth Scan" time="1569179905" percent="77.33" remaining="36" etc="1569179940"/>
+<taskend task="SYN Stealth Scan" time="1569179925" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1569179925"/>
+<taskend task="Service scan" time="1569179931" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1569179933"/>
+<taskend task="NSE" time="1569179933"/>
+<taskbegin task="NSE" time="1569179933"/>
+<taskend task="NSE" time="1569179933"/>
+<host starttime="1569179784" endtime="1569179933"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.178" addrtype="ipv4"/>
+<address addr="00:0C:29:2A:CD:D9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="IMF - Homepage"><elem key="title">IMF - Homepage</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 3.16 - 4.6" accuracy="100" line="64164">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="100" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=9/22%OT=80%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D87&#xa;OS:C91D%P=i686-pc-linux-gnu)SEQ(SP=F9%GCD=1%ISR=107%TI=Z%TS=8)OPS(O1=M5B4ST&#xa;OS:11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5&#xa;OS:B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%&#xa;OS:TG=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q&#xa;OS:=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)U1(R=N)IE(R&#xa;OS:=N)&#xa;"/>
+</os>
+<uptime seconds="32" lastboot="Sun Sep 22 12:18:21 2019"/>
+<distance value="1"/>
+<tcpsequence index="249" difficulty="Good luck!" values="D5518CA,38FD5BD9,1C1DEEEC,5B49C18F,83E0E222,BC531F9B"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="205F,207A,2096,20B2,20CD,20E9"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.178" rtt="0.47"/>
+</trace>
+<times srtt="466" rttvar="303" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1569179933"/>
+<taskend task="NSE" time="1569179933"/>
+<taskbegin task="NSE" time="1569179933"/>
+<taskend task="NSE" time="1569179933"/>
+<runstats><finished time="1569179933" timestr="Sun Sep 22 12:18:53 2019" elapsed="150.49" summary="Nmap done at Sun Sep 22 12:18:53 2019; 1 IP address (1 host up) scanned in 150.49 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

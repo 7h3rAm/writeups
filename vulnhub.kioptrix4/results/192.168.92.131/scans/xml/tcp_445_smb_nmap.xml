@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Oct  8 15:47:49 2019 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/xml/tcp_445_smb_nmap.xml 192.168.92.131 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix4/results/192.168.92.131/scans/xml/tcp_445_smb_nmap.xml 192.168.92.131" start="1570574869" startstr="Tue Oct  8 15:47:49 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570574874"/>
+<taskend task="NSE" time="1570574874"/>
+<taskbegin task="NSE" time="1570574874"/>
+<taskend task="NSE" time="1570574874"/>
+<taskbegin task="ARP Ping Scan" time="1570574874"/>
+<taskend task="ARP Ping Scan" time="1570574875" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570574875"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570574875"/>
+<taskbegin task="SYN Stealth Scan" time="1570574875"/>
+<taskend task="SYN Stealth Scan" time="1570574875" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1570574876"/>
+<taskend task="Service scan" time="1570574882" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1570574882"/>
+<taskprogress task="NSE" time="1570574913" percent="98.67" remaining="1" etc="1570574913"/>
+<taskprogress task="NSE" time="1570574945" percent="98.67" remaining="1" etc="1570574946"/>
+<taskprogress task="NSE" time="1570574975" percent="98.67" remaining="2" etc="1570574976"/>
+<taskprogress task="NSE" time="1570575005" percent="98.67" remaining="2" etc="1570575007"/>
+<taskprogress task="NSE" time="1570575035" percent="98.67" remaining="3" etc="1570575037"/>
+<taskprogress task="NSE" time="1570575065" percent="98.67" remaining="3" etc="1570575067"/>
+<taskprogress task="NSE" time="1570575095" percent="98.67" remaining="3" etc="1570575098"/>
+<taskprogress task="NSE" time="1570575125" percent="98.67" remaining="4" etc="1570575128"/>
+<taskprogress task="NSE" time="1570575155" percent="98.67" remaining="4" etc="1570575159"/>
+<taskprogress task="NSE" time="1570575185" percent="98.67" remaining="5" etc="1570575189"/>
+<taskprogress task="NSE" time="1570575215" percent="98.67" remaining="5" etc="1570575219"/>
+<taskprogress task="NSE" time="1570575245" percent="98.67" remaining="5" etc="1570575250"/>
+<taskprogress task="NSE" time="1570575275" percent="98.67" remaining="6" etc="1570575280"/>
+<taskend task="NSE" time="1570575304"/>
+<taskbegin task="NSE" time="1570575304"/>
+<taskend task="NSE" time="1570575304"/>
+<host starttime="1570574874" endtime="1570575304"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.131" addrtype="ipv4"/>
+<address addr="00:0C:29:9E:D6:27" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="3.0.28a" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: KIOPTRIX4, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  KIOPTRIX4&lt;00&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX4&lt;03&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  KIOPTRIX4&lt;20&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="server_name">KIOPTRIX4</elem>
+<table key="mac">
+<elem key="manuf">unknown</elem>
+<elem key="address">&lt;unknown&gt;</elem>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<table key="names">
+<table>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX4</elem>
+<elem key="suffix">0</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX4</elem>
+<elem key="suffix">3</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="name">KIOPTRIX4</elem>
+<elem key="suffix">32</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">30</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">0</elem>
+</table>
+</table>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+</script><script id="smb-enum-domains" output="&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  KIOPTRIX4&#xa;    Groups: n/a&#xa;    Users: nobody\x00, robert\x00, root\x00, john\x00, loneferret\x00&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\192.168.92.131\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (Kioptrix4 server (Samba, Ubuntu))&#xa;    Users: 6&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\192.168.92.131\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;"><elem key="account_used">guest</elem>
+<table key="\\192.168.92.131\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (Kioptrix4 server (Samba, Ubuntu))</elem>
+<elem key="Users">6</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\192.168.92.131\print$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-enum-users" output="&#xa;  KIOPTRIX4\john (RID: 3002)&#xa;    Full name:   ,,,&#xa;    Flags:       Normal user account&#xa;  KIOPTRIX4\loneferret (RID: 3000)&#xa;    Full name:   loneferret,,,&#xa;    Flags:       Normal user account&#xa;  KIOPTRIX4\nobody (RID: 501)&#xa;    Full name:   nobody&#xa;    Flags:       Normal user account&#xa;  KIOPTRIX4\robert (RID: 3004)&#xa;    Full name:   ,,,&#xa;    Flags:       Normal user account&#xa;  KIOPTRIX4\root (RID: 1000)&#xa;    Full name:   root&#xa;    Flags:       Normal user account&#xa;"/><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Potential Browser&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Print server&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Server&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Server service&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Unix server&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Windows NT/2000/XP/2003 server&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;  Workstation&#xa;    KIOPTRIX4  0.0  Kioptrix4 server (Samba, Ubuntu)&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.28a)&#xa;  Computer name: Kioptrix4&#xa;  NetBIOS computer name: &#xa;  Domain name: localdomain&#xa;  FQDN: Kioptrix4.localdomain&#xa;  System time: 2019-10-08T11:47:39-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.28a</elem>
+<elem key="server"></elem>
+<elem key="date">2019-10-08T11:47:39-04:00</elem>
+<elem key="fqdn">Kioptrix4.localdomain</elem>
+<elem key="domain_dns">localdomain</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-vuln-ms17-010" output="This system is patched."/><script id="smb2-capabilities" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="30643" rttvar="30803" to="153855"/>
+</host>
+<taskbegin task="NSE" time="1570575304"/>
+<taskend task="NSE" time="1570575304"/>
+<taskbegin task="NSE" time="1570575304"/>
+<taskend task="NSE" time="1570575304"/>
+<runstats><finished time="1570575304" timestr="Tue Oct  8 15:55:04 2019" elapsed="435.83" summary="Nmap done at Tue Oct  8 15:55:04 2019; 1 IP address (1 host up) scanned in 435.83 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

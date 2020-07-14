@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 12:31:47 2019 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.3 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.3" start="1572636707" startstr="Fri Nov  1 12:31:47 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572636708"/>
+<taskend task="NSE" time="1572636708"/>
+<taskbegin task="NSE" time="1572636708"/>
+<taskend task="NSE" time="1572636708"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572636708"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572636708"/>
+<taskbegin task="SYN Stealth Scan" time="1572636708"/>
+<taskend task="SYN Stealth Scan" time="1572636708" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572636708"/>
+<taskend task="Service scan" time="1572636709" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572636709"/>
+<taskend task="NSE" time="1572636730"/>
+<taskbegin task="NSE" time="1572636730"/>
+<taskend task="NSE" time="1572636730"/>
+<host starttime="1572636708" endtime="1572636730"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service><script id="banner" output="220 (vsFTPd 2.3.4)"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 10.10.14.18&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 10.10.14.18&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="66686" rttvar="66686" to="333430"/>
+</host>
+<taskbegin task="NSE" time="1572636730"/>
+<taskend task="NSE" time="1572636730"/>
+<taskbegin task="NSE" time="1572636730"/>
+<taskend task="NSE" time="1572636730"/>
+<runstats><finished time="1572636730" timestr="Fri Nov  1 12:32:10 2019" elapsed="23.21" summary="Nmap done at Fri Nov  1 12:32:10 2019; 1 IP address (1 host up) scanned in 23.21 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

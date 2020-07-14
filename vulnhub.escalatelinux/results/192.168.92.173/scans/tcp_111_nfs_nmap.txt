@@ -1,0 +1,43 @@
+# Nmap 7.70 scan initiated Tue Sep 17 11:47:59 2019 as: nmap -vv --reason -Pn -sV -p 111 --script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.173
+Nmap scan report for 192.168.92.173
+Host is up, received arp-response (0.00098s latency).
+Scanned at 2019-09-17 11:48:01 PDT for 22s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 64 2-4 (RPC #100000)
+| nfs-ls: Volume /home/user5
+|   access: Read Lookup Modify Extend Delete NoExecute
+| PERMISSION  UID   GID   SIZE  TIME                 FILENAME
+| rwxr-xr-x   0     0     4096  2019-06-05T18:16:09  ..
+| rw-r--r--   1004  1004  124   2019-06-04T19:01:43  .asoundrc
+| rw-r--r--   1004  1004  23    2019-06-04T19:01:43  .dmrc
+| rw-r--r--   1004  1004  0     2019-06-04T19:01:42  .gksu.lock
+| rw-r--r--   1004  1004  20    2019-06-04T19:01:40  .gtk-bookmarks
+| rw-r--r--   1004  1004  0     2019-06-04T19:01:43  .sudo_as_admin_successful
+| rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:41  .thunderbird
+| rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:42  Desktop
+| rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:43  Public
+| rwxrwxr-x   1004  1004  26    2019-06-04T19:54:13  ls
+|_
+| nfs-showmount: 
+|_  /home/user5 *
+| nfs-statfs: 
+|   Filesystem   1K-blocks    Used      Available    Use%  Maxfilesize  Maxlink
+|_  /home/user5  277708868.0  348912.0  263183444.0  1%    16.0T        32000
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  3           2049/udp  nfs
+|   100003  3,4         2049/tcp  nfs
+|   100005  1,2,3      43318/udp  mountd
+|   100005  1,2,3      43937/tcp  mountd
+|   100021  1,3,4      39393/tcp  nlockmgr
+|   100021  1,3,4      47990/udp  nlockmgr
+|   100227  3           2049/tcp  nfs_acl
+|_  100227  3           2049/udp  nfs_acl
+MAC Address: 00:0C:29:A6:A7:B9 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 17 11:48:24 2019 -- 1 IP address (1 host up) scanned in 24.52 seconds

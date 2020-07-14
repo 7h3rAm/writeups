@@ -1,0 +1,81 @@
+# Nmap 7.70 scan initiated Fri Nov  1 12:30:13 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/_full_tcp_nmap.xml 10.10.10.3
+adjust_timeouts2: packet supposedly had rtt of 9959255 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of 9959255 microseconds.  Ignoring time.
+Nmap scan report for 10.10.10.3
+Host is up, received user-set (0.25s latency).
+Scanned at 2019-11-01 12:30:14 PDT for 1373s
+Not shown: 65530 filtered ports
+Reason: 65530 no-responses
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 63 vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 10.10.14.18
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         syn-ack ttl 63 OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+|_ssh-dss AAAAB3NzaC1kc3MAAACBALz4hsc8a2Srq4nlW960qV8xwBG0JC+jI7fWxm5METIJH4tKr/xUTwsTYEYnaZLzcOiy21D3ZvOwYb6AA3765zdgCd2Tgand7F0YD5UtXG7b7fbz99chReivL0SIWEG/E96Ai+pqYMP2WD5KaOJwSIXSUajnU5oWmY5x85sBw+XDAAAAFQDFkMpmdFQTF+oRqaoSNVU7Z+hjSwAAAIBCQxNKzi1TyP+QJIFa3M0oLqCVWI0We/ARtXrzpBOJ/dt0hTJXCeYisKqcdwdtyIn8OUCOyrIjqNuA2QW217oQ6wXpbFh+5AQm8Hl3b6C6o8lX3Ptw+Y4dp0lzfWHwZ/jzHwtuaDQaok7u1f971lEazeJLqfiWrAzoklqSWyDQJAAAAIA1lAD3xWYkeIeHv/R3P9i+XaoI7imFkMuYXCDTq843YU6Td+0mWpllCqAWUV/CQamGgQLtYy5S0ueoks01MoKdOMMhKVwqdr08nvCBdNKjIEd3gH6oBk/YRnjzxlEAYBsvCmM4a0jmhz0oNiRWlc/F+bkUeFKrBx/D2fdfZmhrGg==
+139/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+3632/tcp open  distccd     syn-ack ttl 63 distccd v1 ((GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4))
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: WAP|general purpose|remote management|broadband router|specialized
+Running (JUST GUESSING): Linux 2.4.X|2.6.X (92%), Dell embedded (92%), D-Link embedded (92%), Meinberg embedded (92%), Raritan embedded (92%), Gemtek embedded (91%), Siemens embedded (91%)
+OS CPE: cpe:/o:linux:linux_kernel:2.4.30 cpe:/o:linux:linux_kernel:2.6.18 cpe:/o:linux:linux_kernel:2.6.21 cpe:/h:dlink:dir-300_nru cpe:/o:linux:linux_kernel:2.6.15 cpe:/h:meinberg:lantime_m600 cpe:/h:gemtek:p360 cpe:/h:siemens:gigaset_se515dsl
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: OpenWrt White Russian 0.9 (Linux 2.4.30) (92%), Linux 2.6.18 (92%), Dell Chassis Management Controller (CMC) (92%), D-Link DIR-300 NRU router (Linux 2.6.21) (92%), Linux 2.6.16 - 2.6.20 (92%), Linux 2.6.16 - 2.6.21 (92%), Linux 2.6.18 - 2.6.27 (92%), Linux 2.6.21 (92%), Linux 2.6.23 (92%), Linux 2.6.24 - 2.6.26 (Debian) (92%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/1%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DBC8D23%P=i686-pc-linux-gnu)
+SEQ(SP=CA%GCD=1%ISR=CE%TI=Z%II=I%TS=8)
+OPS(O1=M54DST11NW5%O2=M54DST11NW5%O3=M54DNNT11NW5%O4=M54DST11NW5%O5=M54DST11NW5%O6=M54DST11)
+WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)
+ECN(R=Y%DF=Y%TG=40%W=16D0%O=M54DNNSNW5%CC=N%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.032 days (since Fri Nov  1 12:07:06 2019)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=202 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 4h00m22s, deviation: 0s, median: 4h00m22s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 59488/tcp): CLEAN (Timeout)
+|   Check 2 (port 22727/tcp): CLEAN (Timeout)
+|   Check 3 (port 47197/udp): CLEAN (Timeout)
+|   Check 4 (port 40169/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-11-01T15:52:44-04:00
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 445/tcp)
+HOP RTT       ADDRESS
+1   337.26 ms 10.10.14.1
+2   31.30 ms  10.10.10.3
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 12:53:07 2019 -- 1 IP address (1 host up) scanned in 1374.33 seconds

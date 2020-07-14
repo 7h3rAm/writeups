@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Jul 31 15:34:20 2019 as: nmap -vv -&#45;reason -Pn -sV -p 10000 &quot;-&#45;script=(http* or ssl*) and not (broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_nmap.txt -oX /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/tcp_10000_http_nmap.xml 192.168.92.141 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 10000 &quot;-&#45;script=(http* or ssl*) and not (broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_nmap.txt -oX /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/tcp_10000_http_nmap.xml 192.168.92.141" start="1564612460" startstr="Wed Jul 31 15:34:20 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="10000"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1564612465"/>
+<taskend task="NSE" time="1564612465"/>
+<taskbegin task="NSE" time="1564612465"/>
+<taskend task="NSE" time="1564612465"/>
+<taskbegin task="ARP Ping Scan" time="1564612465"/>
+<taskend task="ARP Ping Scan" time="1564612465" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1564612465"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1564612465"/>
+<taskbegin task="SYN Stealth Scan" time="1564612465"/>
+<taskend task="SYN Stealth Scan" time="1564612465" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1564612466"/>
+<taskbegin task="NSE" time="1564612466"/>
+<taskend task="NSE" time="1564612466"/>
+<taskbegin task="NSE" time="1564612466"/>
+<taskend task="NSE" time="1564612466"/>
+<host starttime="1564612465" endtime="1564612465"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.141" addrtype="ipv4"/>
+<address addr="00:0C:29:4F:0B:E6" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="10000"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="snet-sensor-mgmt" method="table" conf="3"/></port>
+</ports>
+<times srtt="253" rttvar="5000" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1564612466"/>
+<taskend task="NSE" time="1564612466"/>
+<taskbegin task="NSE" time="1564612466"/>
+<taskend task="NSE" time="1564612466"/>
+<runstats><finished time="1564612466" timestr="Wed Jul 31 15:34:26 2019" elapsed="5.56" summary="Nmap done at Wed Jul 31 15:34:26 2019; 1 IP address (1 host up) scanned in 5.56 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,66 @@
+WhatWeb report for https://192.168.92.134:443
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.92.134
+Country   : RESERVED, ZZ
+
+Summary   : X-Frame-Options[SAMEORIGIN], Script, UncommonHeaders[x-mod-pagespeed], HTTPServer[Apache], Apache, HTML5
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache (from server string)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : x-mod-pagespeed (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 18 Oct 2019 05:48:15 GMT
+	Server: Apache
+	X-Frame-Options: SAMEORIGIN
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	X-Mod-Pagespeed: 1.9.32.3-4523
+	Content-Encoding: gzip
+	Cache-Control: max-age=0, no-cache
+	Content-Length: 614
+	Connection: close
+	Content-Type: text/html
+	

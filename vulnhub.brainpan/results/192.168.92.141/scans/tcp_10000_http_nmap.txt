@@ -1,0 +1,12 @@
+# Nmap 7.70 scan initiated Wed Jul 31 15:34:20 2019 as: nmap -vv --reason -Pn -sV -p 10000 --script=(http* or ssl*) and not (broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/tcp_10000_http_nmap.txt -oX /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/tcp_10000_http_nmap.xml 192.168.92.141
+Nmap scan report for 192.168.92.141
+Host is up, received arp-response (0.00025s latency).
+Scanned at 2019-07-31 15:34:25 PDT for 0s
+
+PORT      STATE    SERVICE          REASON      VERSION
+10000/tcp filtered snet-sensor-mgmt no-response
+MAC Address: 00:0C:29:4F:0B:E6 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul 31 15:34:26 2019 -- 1 IP address (1 host up) scanned in 5.56 seconds

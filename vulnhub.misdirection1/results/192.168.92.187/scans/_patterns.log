@@ -1,0 +1,12 @@
+nmap-quick - Matched Pattern: unauthorized
+
+tcp/80/curl-index - Matched Pattern: Powered by <a href="http://web2py.com">web2py</a>
+
+tcp/3306/nmap-mysql - Matched Pattern: unauthorized
+
+tcp/8080/nmap-http - Identified HTTP Server: Apache/2.4.29 (Ubuntu)
+
+nmap-full-tcp - Matched Pattern: unauthorized
+
+tcp/80/nmap-http - Identified HTTP Server: Rocket 1.2.6 Python/2.7.15rc1
+

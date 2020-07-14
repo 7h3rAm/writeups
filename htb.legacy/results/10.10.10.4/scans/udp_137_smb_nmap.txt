@@ -1,0 +1,26 @@
+# Nmap 7.70 scan initiated Fri Nov  1 14:49:21 2019 as: nmap -vv --reason -Pn -sU -sV -p 137 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/udp_137_smb_nmap.xml 10.10.10.4
+Nmap scan report for 10.10.10.4
+Host is up, received user-set (0.048s latency).
+Scanned at 2019-11-01 14:49:21 PDT for 1s
+
+PORT    STATE SERVICE    REASON               VERSION
+137/udp open  netbios-ns udp-response ttl 127 Microsoft Windows netbios-ns (workgroup: HTB)
+Service Info: Host: LEGACY; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b9:0c:03 (VMware)
+| Names:
+|   LEGACY<00>           Flags: <unique><active>
+|   HTB<00>              Flags: <group><active>
+|   LEGACY<20>           Flags: <unique><active>
+|   HTB<1e>              Flags: <group><active>
+|   HTB<1d>              Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 14:49:22 2019 -- 1 IP address (1 host up) scanned in 1.51 seconds

@@ -1,0 +1,86 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/_top_20_udp_nmap.xml" 192.168.92.175
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/_quick_tcp_nmap.xml" 192.168.92.175
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/_full_tcp_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:22 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_22_ssh_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_22_ssh_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:53 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_53_dns_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_53_dns_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_80_http_nmap.xml" 192.168.92.175
+
+curl -sSik http://192.168.92.175:80/ -m 10 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_index.html"
+
+curl -sSik http://192.168.92.175:80/robots.txt -m 10 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.175:80/ /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://192.168.92.175:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://192.168.92.175:80 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://192.168.92.175:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://192.168.92.175:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:110 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_110_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 110 --script="banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_110_pop3_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_110_pop3_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:139 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_139_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_139_smb_nmap.xml" 192.168.92.175
+
+enum4linux -a -M -l -d 192.168.92.175 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 192.168.92.175 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbclient.txt"
+
+smbmap -H 192.168.92.175 -P 139 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 139 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.175 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.175 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:143 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_143_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 143 --script="banner,(imap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_143_imap_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_143_imap_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:445 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_445_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_445_smb_nmap.xml" 192.168.92.175
+
+smbmap -H 192.168.92.175 -P 445 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 445 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.175 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.175 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:993 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_993_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 993 --script="banner,(imap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_993_imap_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_993_imap_nmap.xml" 192.168.92.175
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:995 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_995_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 995 --script="banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_995_pop3_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_995_pop3_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:53 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_53_dns_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/udp_53_dns_nmap.xml" 192.168.92.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.175:137 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/udp_137_smb_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/udp_137_smb_nmap.xml" 192.168.92.175
+
+nbtscan -rvh 192.168.92.175 2>&1 | tee "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/nbtscan.txt"
+
+smbmap -H 192.168.92.175 -P 137 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 137 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-share-permissions.txt"
+
+smbmap -H 192.168.92.175 -P 137 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 137 -R 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-list-contents.txt"
+
+smbmap -H 192.168.92.175 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 192.168.92.175 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/smbmap-execute-command.txt"
+

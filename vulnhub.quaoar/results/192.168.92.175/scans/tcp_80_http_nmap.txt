@@ -1,0 +1,92 @@
+# Nmap 7.70 scan initiated Wed Sep 18 14:24:04 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_80_http_nmap.xml 192.168.92.175
+Nmap scan report for 192.168.92.175
+Host is up, received arp-response (0.0085s latency).
+Scanned at 2019-09-18 14:24:06 PDT for 25s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.22 ((Ubuntu))
+|_http-apache-negotiation: mod_negotiation enabled.
+|_http-chrono: Request times for /; avg: 282.44ms; min: 162.07ms; max: 637.91ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Wed, 18 Sep 2019 21:24:29 GMT; +10s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wordpress/: Blog
+|   /robots.txt: Robots file
+|   /wordpress/wp-login.php: Wordpress login page.
+|_  /upload/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+| http-exif-spider: 
+|   http://192.168.92.175:80/Quaoar.jpg
+|_    Date: 2002:07:16 11:20:04
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Wed, 18 Sep 2019 21:24:26 GMT
+|   Server: Apache/2.2.22 (Ubuntu)
+|   Last-Modified: Mon, 24 Oct 2016 04:00:10 GMT
+|   ETag: "20b57-64-53f946d9971d1"
+|   Accept-Ranges: bytes
+|   Content-Length: 100
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 2d8d0b93ad1be6571865c17da599fd18
+|_Credits query returned unknown hash 2d8d0b93ad1be6571865c17da599fd18
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 1 disallowed entry 
+|_Hackers
+| http-screenshot-html: 
+|_  failed (verify wkhtmltoimage is in your path)
+|_http-security-headers: 
+|_http-server-header: Apache/2.2.22 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; jpg: 2
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1; jpg: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Site doesn't have a title (text/html).
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+MAC Address: 00:0C:29:00:BD:18 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 14:24:31 2019 -- 1 IP address (1 host up) scanned in 27.10 seconds

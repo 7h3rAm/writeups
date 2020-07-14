@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 12:31:47 2019 as: nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_139_smb_nmap.xml 10.10.10.3 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_139_smb_nmap.xml 10.10.10.3" start="1572636707" startstr="Fri Nov  1 12:31:47 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572636708"/>
+<taskend task="NSE" time="1572636708"/>
+<taskbegin task="NSE" time="1572636708"/>
+<taskend task="NSE" time="1572636708"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572636708"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572636708"/>
+<taskbegin task="SYN Stealth Scan" time="1572636708"/>
+<taskend task="SYN Stealth Scan" time="1572636709" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572636709"/>
+<taskend task="Service scan" time="1572636724" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572636724"/>
+<taskprogress task="NSE" time="1572636755" percent="90.67" remaining="4" etc="1572636758"/>
+<taskend task="NSE" time="1572636778"/>
+<taskbegin task="NSE" time="1572636778"/>
+<taskend task="NSE" time="1572636800"/>
+<host starttime="1572636708" endtime="1572636800"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.0.20-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-enum-users" output="&#xa;  LAME\backup (RID: 1068)&#xa;    Full name:   backup&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\bin (RID: 1004)&#xa;    Full name:   bin&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\bind (RID: 1210)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\daemon (RID: 1002)&#xa;    Full name:   daemon&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\dhcp (RID: 1202)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\distccd (RID: 1222)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\ftp (RID: 1214)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\games (RID: 1010)&#xa;    Full name:   games&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\gnats (RID: 1082)&#xa;    Full name:   Gnats Bug-Reporting System (admin)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\irc (RID: 1078)&#xa;    Full name:   ircd&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\klog (RID: 1206)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\libuuid (RID: 1200)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\list (RID: 1076)&#xa;    Full name:   Mailing List Manager&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\lp (RID: 1014)&#xa;    Full name:   lp&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\mail (RID: 1016)&#xa;    Full name:   mail&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\man (RID: 1012)&#xa;    Full name:   man&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\msfadmin (RID: 3000)&#xa;    Full name:   msfadmin,,,&#xa;    Flags:       Normal user account&#xa;  LAME\mysql (RID: 1218)&#xa;    Full name:   MySQL Server,,,&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\news (RID: 1018)&#xa;    Full name:   news&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\nobody (RID: 501)&#xa;    Full name:   nobody&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\postfix (RID: 1212)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\postgres (RID: 1216)&#xa;    Full name:   PostgreSQL administrator,,,&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\proftpd (RID: 1226)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\proxy (RID: 1026)&#xa;    Full name:   proxy&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\root (RID: 1000)&#xa;    Full name:   root&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\service (RID: 3004)&#xa;    Full name:   ,,,&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\sshd (RID: 1208)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\sync (RID: 1008)&#xa;    Full name:   sync&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\sys (RID: 1006)&#xa;    Full name:   sys&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\syslog (RID: 1204)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\telnetd (RID: 1224)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\tomcat55 (RID: 1220)&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\user (RID: 3002)&#xa;    Full name:   just a user,111,,&#xa;    Flags:       Normal user account&#xa;  LAME\uucp (RID: 1020)&#xa;    Full name:   uucp&#xa;    Flags:       Normal user account, Account disabled&#xa;  LAME\www-data (RID: 1066)&#xa;    Full name:   www-data&#xa;    Flags:       Normal user account, Account disabled&#xa;"/><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: Could not negotiate a connection:SMB: ERROR: Server returned less data than it was supposed to (one or more fields are missing); aborting [12]"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.20-Debian)&#xa;  NetBIOS computer name: &#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-11-01T15:32:20-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.20-Debian</elem>
+<elem key="domain">WORKGROUP\x00</elem>
+<elem key="server"></elem>
+<elem key="date">2019-11-01T15:32:20-04:00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="No dialects accepted. Something may be blocking the responses"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-vuln-ms17-010" output="Could not connect to &apos;IPC$&apos;"/><script id="smb2-capabilities" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="120268" rttvar="120268" to="601340"/>
+</host>
+<taskbegin task="NSE" time="1572636800"/>
+<taskend task="NSE" time="1572636800"/>
+<taskbegin task="NSE" time="1572636800"/>
+<taskend task="NSE" time="1572636800"/>
+<runstats><finished time="1572636800" timestr="Fri Nov  1 12:33:20 2019" elapsed="93.45" summary="Nmap done at Fri Nov  1 12:33:20 2019; 1 IP address (1 host up) scanned in 93.45 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

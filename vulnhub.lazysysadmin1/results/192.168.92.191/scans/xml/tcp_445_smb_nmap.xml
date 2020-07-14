@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Oct 29 11:18:49 2019 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_445_smb_nmap.xml 192.168.92.191 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_445_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_445_smb_nmap.xml 192.168.92.191" start="1572373129" startstr="Tue Oct 29 11:18:49 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572373130"/>
+<taskend task="NSE" time="1572373130"/>
+<taskbegin task="NSE" time="1572373130"/>
+<taskend task="NSE" time="1572373130"/>
+<taskbegin task="ARP Ping Scan" time="1572373130"/>
+<taskend task="ARP Ping Scan" time="1572373131" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572373131"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572373131"/>
+<taskbegin task="SYN Stealth Scan" time="1572373131"/>
+<taskend task="SYN Stealth Scan" time="1572373131" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572373132"/>
+<taskend task="Service scan" time="1572373141" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572373141"/>
+<taskprogress task="NSE" time="1572373173" percent="98.67" remaining="1" etc="1572373173"/>
+<taskprogress task="NSE" time="1572373203" percent="98.67" remaining="1" etc="1572373204"/>
+<taskprogress task="NSE" time="1572373233" percent="98.67" remaining="2" etc="1572373234"/>
+<taskprogress task="NSE" time="1572373263" percent="98.67" remaining="2" etc="1572373265"/>
+<taskprogress task="NSE" time="1572373293" percent="98.67" remaining="3" etc="1572373295"/>
+<taskprogress task="NSE" time="1572373323" percent="98.67" remaining="3" etc="1572373325"/>
+<taskprogress task="NSE" time="1572373353" percent="98.67" remaining="3" etc="1572373356"/>
+<taskprogress task="NSE" time="1572373383" percent="98.67" remaining="4" etc="1572373386"/>
+<taskprogress task="NSE" time="1572373413" percent="98.67" remaining="4" etc="1572373417"/>
+<taskend task="NSE" time="1572373442"/>
+<taskbegin task="NSE" time="1572373442"/>
+<taskend task="NSE" time="1572373442"/>
+<host starttime="1572373130" endtime="1572373442"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.191" addrtype="ipv4"/>
+<address addr="00:0C:29:C2:70:16" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="LAZYSYSADMIN" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: LAZYSYSADMIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  LAZYSYSADMIN&lt;00&gt;     Flags: &lt;unique&gt;&lt;active&gt;&#xa;  LAZYSYSADMIN&lt;03&gt;     Flags: &lt;unique&gt;&lt;active&gt;&#xa;  LAZYSYSADMIN&lt;20&gt;     Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">LAZYSYSADMIN</elem>
+<table key="mac">
+<elem key="manuf">unknown</elem>
+<elem key="address">&lt;unknown&gt;</elem>
+</table>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">0</elem>
+<elem key="name">LAZYSYSADMIN</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">3</elem>
+<elem key="name">LAZYSYSADMIN</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">32</elem>
+<elem key="name">LAZYSYSADMIN</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">1</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">0</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="flags">1024</elem>
+<elem key="suffix">29</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="flags">33792</elem>
+<elem key="suffix">30</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+</table>
+</script><script id="smb-enum-domains" output="&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  LAZYSYSADMIN&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\192.168.92.191\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (Web server)&#xa;    Users: 6&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\192.168.92.191\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;&#xa;  \\192.168.92.191\share$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Sumshare&#xa;    Users: 1&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\www\html\&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE"><elem key="account_used">guest</elem>
+<table key="\\192.168.92.191\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (Web server)</elem>
+<elem key="Users">6</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\192.168.92.191\print$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+<table key="\\192.168.92.191\share$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Sumshare</elem>
+<elem key="Users">1</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\www\html\</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+</script><script id="smb-ls" output="Volume \\192.168.92.191\share$&#xa;  maxfiles limit reached (10)&#xa;SIZE   TIME                 FILENAME&#xa;&lt;DIR&gt;  2017-08-15 04:05:52  .&#xa;&lt;DIR&gt;  2017-08-14 05:34:47  ..&#xa;&lt;DIR&gt;  2019-10-29 11:18:53  wordpress&#xa;2853   2015-12-16 01:58:26  wordpress\wp-config-sample.php&#xa;4513   2016-10-14 12:39:28  wordpress\wp-trackback.php&#xa;&lt;DIR&gt;  2017-08-02 14:02:02  wordpress\wp-admin&#xa;16200  2017-04-06 11:01:42  wordpress\wp-settings.php&#xa;364    2015-12-19 03:20:28  wordpress\wp-blog-header.php&#xa;418    2013-09-24 17:18:11  wordpress\index.php&#xa;3286   2015-05-24 10:26:25  wordpress\wp-cron.php&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="files">
+<table>
+<elem key="filename">.</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2017-08-15 04:05:52</elem>
+</table>
+<table>
+<elem key="filename">..</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2017-08-14 05:34:47</elem>
+</table>
+<table>
+<elem key="filename">wordpress</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2019-10-29 11:18:53</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-config-sample.php</elem>
+<elem key="size">2853</elem>
+<elem key="time">2015-12-16 01:58:26</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-trackback.php</elem>
+<elem key="size">4513</elem>
+<elem key="time">2016-10-14 12:39:28</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-admin</elem>
+<elem key="size">&lt;DIR&gt;</elem>
+<elem key="time">2017-08-02 14:02:02</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-settings.php</elem>
+<elem key="size">16200</elem>
+<elem key="time">2017-04-06 11:01:42</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-blog-header.php</elem>
+<elem key="size">364</elem>
+<elem key="time">2015-12-19 03:20:28</elem>
+</table>
+<table>
+<elem key="filename">wordpress\index.php</elem>
+<elem key="size">418</elem>
+<elem key="time">2013-09-24 17:18:11</elem>
+</table>
+<table>
+<elem key="filename">wordpress\wp-cron.php</elem>
+<elem key="size">3286</elem>
+<elem key="time">2015-05-24 10:26:25</elem>
+</table>
+</table>
+<elem key="volume">\\192.168.92.191\share$</elem>
+<table key="info">
+<elem>maxfiles limit reached (10)</elem>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="bytes">27634</elem>
+<elem key="files">10</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Master Browser&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Print server&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Server&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Server service&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Unix server&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Windows NT/2000/XP/2003 server&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;  Workstation&#xa;    LAZYSYSADMIN  0.0  Web server&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: lazysysadmin&#xa;  NetBIOS computer name: LAZYSYSADMIN\x00&#xa;  Domain name: \x00&#xa;  FQDN: lazysysadmin&#xa;  System time: 2019-10-30T04:19:03+10:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">LAZYSYSADMIN\x00</elem>
+<elem key="date">2019-10-30T04:19:03+10:00</elem>
+<elem key="fqdn">lazysysadmin</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-vuln-ms17-010" output="This system is patched."/><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-10-29 11:19:03&#xa;  start_date: N/A"><elem key="date">2019-10-29 11:19:03</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="12194" rttvar="12153" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1572373442"/>
+<taskend task="NSE" time="1572373442"/>
+<taskbegin task="NSE" time="1572373442"/>
+<taskend task="NSE" time="1572373442"/>
+<runstats><finished time="1572373442" timestr="Tue Oct 29 11:24:02 2019" elapsed="313.36" summary="Nmap done at Tue Oct 29 11:24:02 2019; 1 IP address (1 host up) scanned in 313.36 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

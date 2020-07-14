@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Sep 17 11:47:59 2019 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_80_http_nmap.xml 192.168.92.173 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_80_http_nmap.xml 192.168.92.173" start="1568746079" startstr="Tue Sep 17 11:47:59 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568746082"/>
+<taskend task="NSE" time="1568746082"/>
+<taskbegin task="NSE" time="1568746082"/>
+<taskend task="NSE" time="1568746082"/>
+<taskbegin task="ARP Ping Scan" time="1568746082"/>
+<taskend task="ARP Ping Scan" time="1568746082" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568746083"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568746083"/>
+<taskbegin task="SYN Stealth Scan" time="1568746083"/>
+<taskend task="SYN Stealth Scan" time="1568746083" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568746083"/>
+<taskend task="Service scan" time="1568746089" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568746089"/>
+<taskend task="NSE" time="1568746109"/>
+<taskbegin task="NSE" time="1568746109"/>
+<taskend task="NSE" time="1568746109"/>
+<host starttime="1568746082" endtime="1568746109"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.173" addrtype="ipv4"/>
+<address addr="00:0C:29:A6:A7:B9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-chrono" output="Request times for /; avg: 240.39ms; min: 183.40ms; max: 357.83ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.173&#xa;    &#xa;    Path: http://192.168.92.173:80/&#xa;    Line number: 4&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;            Modified from the Debian original for Ubuntu&#xa;            Last updated: 2016-11-16&#xa;            See: https://launchpad.net/bugs/1288690&#xa;          -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.173:80/&#xa;    Line number: 201&#xa;    Comment: &#xa;        &lt;!-&#45;      &lt;div class=&quot;table_of_contents floating_element&quot;&gt;&#xa;                &lt;div class=&quot;section_header section_header_grey&quot;&gt;&#xa;                  TABLE OF CONTENTS&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#changes&quot;&gt;Changes&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#scope&quot;&gt;Scope&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;                &lt;div class=&quot;table_of_contents_item floating_element&quot;&gt;&#xa;                  &lt;a href=&quot;#files&quot;&gt;Config files&lt;/a&gt;&#xa;                &lt;/div&gt;&#xa;              &lt;/div&gt;&#xa;        -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Tue, 17 Sep 2019 18:48:16 GMT; -2s from local time."><elem key="date">2019-09-17T18:48:16+00:00</elem>
+<elem key="delta">-2.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.92.173&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://192.168.92.173:80/manual&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.92.173:80/manual: &#xa;    (1) ip: &#xa;      + 192.168.92.173"><table key="(1) http://192.168.92.173:80/manual">
+<table key="(1) ip">
+<elem>+ 192.168.92.173</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Tue, 17 Sep 2019 18:48:21 GMT&#xa;  Server: Apache/2.4.29 (Ubuntu)&#xa;  Last-Modified: Tue, 04 Jun 2019 19:43:52 GMT&#xa;  ETag: &quot;2aa6-58a84b35a8d4e&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 10918&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS HEAD GET POST"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 3526531ccd6c6a1d2340574a305a18f8&#xa;Credits query returned unknown hash 3526531ccd6c6a1d2340574a305a18f8"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-screenshot-html" output="&#xa;  Saved to 192.168.92.173-80.png&#xa;"/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /icons/&#xa;      png: 1&#xa;  Longest directory structure:&#xa;    Depth: 1&#xa;    Dir: /icons/&#xa;  Total files found (by extension):&#xa;    Other: 1; png: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Apache2 Ubuntu Default Page: It works"><elem key="title">Apache2 Ubuntu Default Page: It works</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="385" rttvar="3766" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568746109"/>
+<taskend task="NSE" time="1568746109"/>
+<taskbegin task="NSE" time="1568746109"/>
+<taskend task="NSE" time="1568746109"/>
+<runstats><finished time="1568746109" timestr="Tue Sep 17 11:48:29 2019" elapsed="30.61" summary="Nmap done at Tue Sep 17 11:48:29 2019; 1 IP address (1 host up) scanned in 30.61 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,2 @@
+[*] Task tcp/80/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.48:80/ /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/tcp_80_http_screenshot.png; fi
+[*] Task tcp/32400/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.48:32400/ /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/tcp_32400_http_screenshot.png; fi

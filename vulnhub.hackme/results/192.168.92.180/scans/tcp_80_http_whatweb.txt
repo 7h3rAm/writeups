@@ -1,0 +1,103 @@
+WhatWeb report for http://192.168.92.180:80
+Status    : 200 OK
+Title     : <None>
+IP        : 192.168.92.180
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Ubuntu Linux][Apache/2.4.34 (Ubuntu)], Apache[2.4.34], Meta-Refresh-Redirect[login.php]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.34 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.34 (Ubuntu) (from server string)
+
+[ Meta-Refresh-Redirect ]
+	Meta refresh tag is a deprecated URL element that can be 
+	used to optionally wait x seconds before reloading the 
+	current page or loading a new page. More info: 
+	https://secure.wikimedia.org/wikipedia/en/wiki/Meta_refresh 
+
+	String       : login.php
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 27 Sep 2019 19:01:21 GMT
+	Server: Apache/2.4.34 (Ubuntu)
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 100
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	
+WhatWeb report for http://192.168.92.180/login.php
+Status    : 200 OK
+Title     : Login
+IP        : 192.168.92.180
+Country   : RESERVED, ZZ
+
+Summary   : Cookies[PHPSESSID], HTTPServer[Ubuntu Linux][Apache/2.4.34 (Ubuntu)], Apache[2.4.34], PasswordField[password], HTML5
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.34 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : PHPSESSID
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.34 (Ubuntu) (from server string)
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 27 Sep 2019 19:01:21 GMT
+	Server: Apache/2.4.34 (Ubuntu)
+	Set-Cookie: PHPSESSID=3ns5cubfghad6gbav1lo2hcfvn; path=/
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 527
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

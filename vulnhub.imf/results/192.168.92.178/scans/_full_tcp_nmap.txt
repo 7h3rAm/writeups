@@ -1,0 +1,39 @@
+# Nmap 7.70 scan initiated Sun Sep 22 12:16:23 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.imf/results/192.168.92.178/scans/xml/_full_tcp_nmap.xml 192.168.92.178
+Nmap scan report for 192.168.92.178
+Host is up, received arp-response (0.00047s latency).
+Scanned at 2019-09-22 12:16:24 PDT for 149s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: IMF - Homepage
+MAC Address: 00:0C:29:2A:CD:D9 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.16 - 4.6, Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/22%OT=80%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D87
+OS:C91D%P=i686-pc-linux-gnu)SEQ(SP=F9%GCD=1%ISR=107%TI=Z%TS=8)OPS(O1=M5B4ST
+OS:11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5
+OS:B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%
+OS:TG=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q
+OS:=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)U1(R=N)IE(R
+OS:=N)
+
+Uptime guess: 0.000 days (since Sun Sep 22 12:18:21 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=249 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.47 ms 192.168.92.178
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 22 12:18:53 2019 -- 1 IP address (1 host up) scanned in 150.49 seconds

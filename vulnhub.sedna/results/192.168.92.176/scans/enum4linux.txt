@@ -1,0 +1,507 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Wed Sep 18 18:02:51 2019
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 192.168.92.176
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ====================================================== 
+|    Enumerating Workgroup/Domain on 192.168.92.176    |
+ ====================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================== 
+|    Nbtstat Information for 192.168.92.176    |
+ ============================================== 
+Looking up status of 192.168.92.176
+	SEDNA           <00> -         B <ACTIVE>  Workstation Service
+	SEDNA           <03> -         B <ACTIVE>  Messenger Service
+	SEDNA           <20> -         B <ACTIVE>  File Server Service
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	WORKGROUP       <1d> -         B <ACTIVE>  Master Browser
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+	MAC Address = 00-00-00-00-00-00
+
+ ======================================= 
+|    Session Check on 192.168.92.176    |
+ ======================================= 
+[+] Server 192.168.92.176 allows sessions using username '', password ''
+
+ ======================================================= 
+|    Getting information via LDAP for 192.168.92.176    |
+ ======================================================= 
+[E] Connection error
+
+ ============================================= 
+|    Getting domain SID for 192.168.92.176    |
+ ============================================= 
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ======================================== 
+|    OS information on 192.168.92.176    |
+ ======================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 192.168.92.176 from smbclient: 
+[+] Got OS info for 192.168.92.176 from srvinfo:
+	SEDNA          Wk Sv PrQ Unx NT SNT Sedna server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	4.9
+	server type     :	0x809a03
+
+ =============================== 
+|    Users on 192.168.92.176    |
+ =============================== 
+index: 0x1 RID: 0x3e8 acb: 0x00000010 Account: viper	Name: viper	Desc: 
+index: 0x2 RID: 0x3e9 acb: 0x00000010 Account: root	Name: root	Desc: 
+
+user:[viper] rid:[0x3e8]
+user:[root] rid:[0x3e9]
+	User Name   :	root
+	Full Name   :	root
+	Home Drive  :	\\sedna\root
+	Dir Drive   :	
+	Profile Path:	\\sedna\root\profile
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 16:00:00 PST
+	Logoff Time              :	never
+	Kickoff Time             :	never
+	Password last set Time   :	Sat, 11 Mar 2017 21:41:47 PST
+	Password can change Time :	Sat, 11 Mar 2017 21:41:47 PST
+	Password must change Time:	never
+	unknown_2[0..31]...
+	user_rid :	0x3e9
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+
+
+ ============================================= 
+|    Machine Enumeration on 192.168.92.176    |
+ ============================================= 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ =========================================== 
+|    Share Enumeration on 192.168.92.176    |
+ =========================================== 
+WARNING: The "syslog" option is deprecated
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	IPC$            IPC       IPC Service (Sedna server (Samba, Ubuntu))
+	print$          Disk      Printer Drivers
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            SEDNA
+
+[+] Attempting to map shares on 192.168.92.176
+//192.168.92.176/IPC$	[E] Can't understand response:
+WARNING: The "syslog" option is deprecated
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+//192.168.92.176/print$	Mapping: DENIED, Listing: N/A
+
+ ====================================================== 
+|    Password Policy Information for 192.168.92.176    |
+ ====================================================== 
+
+
+[+] Attaching to 192.168.92.176 using a NULL share
+
+[+] Trying protocol 445/SMB...
+
+[+] Found domain(s):
+
+	[+] SEDNA
+	[+] Builtin
+
+[+] Password Info for Domain: SEDNA
+
+	[+] Minimum password length: 5
+	[+] Password history length: None
+	[+] Maximum password age: Not Set
+	[+] Password Complexity Flags: 000000
+
+		[+] Domain Refuse Password Change: 0
+		[+] Domain Password Store Cleartext: 0
+		[+] Domain Password Lockout Admins: 0
+		[+] Domain Password No Clear Change: 0
+		[+] Domain Password No Anon Change: 0
+		[+] Domain Password Complex: 0
+
+	[+] Minimum password age: None
+	[+] Reset Account Lockout Counter: 30 minutes 
+	[+] Locked Account Duration: 30 minutes 
+	[+] Account Lockout Threshold: None
+	[+] Forced Log off Time: Not Set
+
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ ================================ 
+|    Groups on 192.168.92.176    |
+ ================================ 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ========================================================================= 
+|    Users on 192.168.92.176 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ========================================================================= 
+[I] Found new SID: S-1-5-21-2217169221-2747901371-1699642345
+[I] Found new SID: S-1-22-1
+[I] Found new SID: S-1-5-32
+[+] Enumerating users using SID S-1-5-21-2217169221-2747901371-1699642345 and logon username '', password ''
+S-1-5-21-2217169221-2747901371-1699642345-500 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-501 SEDNA\nobody (Local User)
+	User Name   :	nobody
+	Full Name   :	nobody
+	Home Drive  :	
+	Dir Drive   :	(null)
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 16:00:00 PST
+	Logoff Time              :	never
+	Kickoff Time             :	never
+	Password last set Time   :	Wed, 31 Dec 1969 16:00:00 PST
+	Password can change Time :	Wed, 31 Dec 1969 16:00:00 PST
+	Password must change Time:	Wed, 31 Dec 1969 16:00:00 PST
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+S-1-5-21-2217169221-2747901371-1699642345-502 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-503 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-504 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-505 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-506 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-507 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-508 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-509 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-510 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-511 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-512 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-513 SEDNA\None (Domain Group)
+	Group Name:	None
+	Description:	Ordinary Users
+	Group Attribute:7
+	Num Members:0
+
+S-1-5-21-2217169221-2747901371-1699642345-514 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-515 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-516 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-517 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-518 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-519 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-520 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-521 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-522 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-523 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-524 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-525 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-526 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-527 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-528 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-529 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-530 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-531 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-532 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-533 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-534 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-535 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-536 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-537 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-538 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-539 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-540 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-541 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-542 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-543 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-544 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-545 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-546 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-547 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-548 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-549 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-550 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1000 SEDNA\viper (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+
+S-1-5-21-2217169221-2747901371-1699642345-1001 SEDNA\root (Local User)
+	User Name   :	root
+	Full Name   :	root
+	Home Drive  :	\\sedna\root
+	Dir Drive   :	
+	Profile Path:	\\sedna\root\profile
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Wed, 31 Dec 1969 16:00:00 PST
+	Logoff Time              :	never
+	Kickoff Time             :	never
+	Password last set Time   :	Sat, 11 Mar 2017 21:41:47 PST
+	Password can change Time :	Sat, 11 Mar 2017 21:41:47 PST
+	Password must change Time:	never
+	unknown_2[0..31]...
+	user_rid :	0x3e9
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+S-1-5-21-2217169221-2747901371-1699642345-1002 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1003 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1004 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1005 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1006 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1007 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1008 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1009 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1010 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1011 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1012 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1013 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1014 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1015 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1016 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1017 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1018 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1019 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1020 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1021 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1022 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1023 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1024 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1025 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1026 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1027 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1028 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1029 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1030 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1031 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1032 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1033 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1034 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1035 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1036 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1037 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1038 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1039 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1040 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1041 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1042 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1043 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1044 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1045 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1046 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1047 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1048 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1049 *unknown*\*unknown* (8)
+S-1-5-21-2217169221-2747901371-1699642345-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-500 *unknown*\*unknown* (8)
+S-1-5-32-501 *unknown*\*unknown* (8)
+S-1-5-32-502 *unknown*\*unknown* (8)
+S-1-5-32-503 *unknown*\*unknown* (8)
+S-1-5-32-504 *unknown*\*unknown* (8)
+S-1-5-32-505 *unknown*\*unknown* (8)
+S-1-5-32-506 *unknown*\*unknown* (8)
+S-1-5-32-507 *unknown*\*unknown* (8)
+S-1-5-32-508 *unknown*\*unknown* (8)
+S-1-5-32-509 *unknown*\*unknown* (8)
+S-1-5-32-510 *unknown*\*unknown* (8)
+S-1-5-32-511 *unknown*\*unknown* (8)
+S-1-5-32-512 *unknown*\*unknown* (8)
+S-1-5-32-513 *unknown*\*unknown* (8)
+S-1-5-32-514 *unknown*\*unknown* (8)
+S-1-5-32-515 *unknown*\*unknown* (8)
+S-1-5-32-516 *unknown*\*unknown* (8)
+S-1-5-32-517 *unknown*\*unknown* (8)
+S-1-5-32-518 *unknown*\*unknown* (8)
+S-1-5-32-519 *unknown*\*unknown* (8)
+S-1-5-32-520 *unknown*\*unknown* (8)
+S-1-5-32-521 *unknown*\*unknown* (8)
+S-1-5-32-522 *unknown*\*unknown* (8)
+S-1-5-32-523 *unknown*\*unknown* (8)
+S-1-5-32-524 *unknown*\*unknown* (8)
+S-1-5-32-525 *unknown*\*unknown* (8)
+S-1-5-32-526 *unknown*\*unknown* (8)
+S-1-5-32-527 *unknown*\*unknown* (8)
+S-1-5-32-528 *unknown*\*unknown* (8)
+S-1-5-32-529 *unknown*\*unknown* (8)
+S-1-5-32-530 *unknown*\*unknown* (8)
+S-1-5-32-531 *unknown*\*unknown* (8)
+S-1-5-32-532 *unknown*\*unknown* (8)
+S-1-5-32-533 *unknown*\*unknown* (8)
+S-1-5-32-534 *unknown*\*unknown* (8)
+S-1-5-32-535 *unknown*\*unknown* (8)
+S-1-5-32-536 *unknown*\*unknown* (8)
+S-1-5-32-537 *unknown*\*unknown* (8)
+S-1-5-32-538 *unknown*\*unknown* (8)
+S-1-5-32-539 *unknown*\*unknown* (8)
+S-1-5-32-540 *unknown*\*unknown* (8)
+S-1-5-32-541 *unknown*\*unknown* (8)
+S-1-5-32-542 *unknown*\*unknown* (8)
+S-1-5-32-543 *unknown*\*unknown* (8)
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+[E] No info found
+
+S-1-5-32-545 BUILTIN\Users (Local Group)
+[E] No info found
+
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+[E] No info found
+
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+[E] No info found
+
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+[E] No info found
+
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+[E] No info found
+
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+[E] No info found
+
+S-1-5-32-1000 *unknown*\*unknown* (8)
+S-1-5-32-1001 *unknown*\*unknown* (8)
+S-1-5-32-1002 *unknown*\*unknown* (8)
+S-1-5-32-1003 *unknown*\*unknown* (8)
+S-1-5-32-1004 *unknown*\*unknown* (8)
+S-1-5-32-1005 *unknown*\*unknown* (8)
+S-1-5-32-1006 *unknown*\*unknown* (8)
+S-1-5-32-1007 *unknown*\*unknown* (8)
+S-1-5-32-1008 *unknown*\*unknown* (8)
+S-1-5-32-1009 *unknown*\*unknown* (8)
+S-1-5-32-1010 *unknown*\*unknown* (8)
+S-1-5-32-1011 *unknown*\*unknown* (8)
+S-1-5-32-1012 *unknown*\*unknown* (8)
+S-1-5-32-1013 *unknown*\*unknown* (8)
+S-1-5-32-1014 *unknown*\*unknown* (8)
+S-1-5-32-1015 *unknown*\*unknown* (8)
+S-1-5-32-1016 *unknown*\*unknown* (8)
+S-1-5-32-1017 *unknown*\*unknown* (8)
+S-1-5-32-1018 *unknown*\*unknown* (8)
+S-1-5-32-1019 *unknown*\*unknown* (8)
+S-1-5-32-1020 *unknown*\*unknown* (8)
+S-1-5-32-1021 *unknown*\*unknown* (8)
+S-1-5-32-1022 *unknown*\*unknown* (8)
+S-1-5-32-1023 *unknown*\*unknown* (8)
+S-1-5-32-1024 *unknown*\*unknown* (8)
+S-1-5-32-1025 *unknown*\*unknown* (8)
+S-1-5-32-1026 *unknown*\*unknown* (8)
+S-1-5-32-1027 *unknown*\*unknown* (8)
+S-1-5-32-1028 *unknown*\*unknown* (8)
+S-1-5-32-1029 *unknown*\*unknown* (8)
+S-1-5-32-1030 *unknown*\*unknown* (8)
+S-1-5-32-1031 *unknown*\*unknown* (8)
+S-1-5-32-1032 *unknown*\*unknown* (8)
+S-1-5-32-1033 *unknown*\*unknown* (8)
+S-1-5-32-1034 *unknown*\*unknown* (8)
+S-1-5-32-1035 *unknown*\*unknown* (8)
+S-1-5-32-1036 *unknown*\*unknown* (8)
+S-1-5-32-1037 *unknown*\*unknown* (8)
+S-1-5-32-1038 *unknown*\*unknown* (8)
+S-1-5-32-1039 *unknown*\*unknown* (8)
+S-1-5-32-1040 *unknown*\*unknown* (8)
+S-1-5-32-1041 *unknown*\*unknown* (8)
+S-1-5-32-1042 *unknown*\*unknown* (8)
+S-1-5-32-1043 *unknown*\*unknown* (8)
+S-1-5-32-1044 *unknown*\*unknown* (8)
+S-1-5-32-1045 *unknown*\*unknown* (8)
+S-1-5-32-1046 *unknown*\*unknown* (8)
+S-1-5-32-1047 *unknown*\*unknown* (8)
+S-1-5-32-1048 *unknown*\*unknown* (8)
+S-1-5-32-1049 *unknown*\*unknown* (8)
+S-1-5-32-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''
+S-1-22-1-1000 Unix User\crackmeforpoints (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+
+
+ =============================================== 
+|    Getting printer info for 192.168.92.176    |
+ =============================================== 
+No printers returned.
+
+
+enum4linux complete on Wed Sep 18 18:32:10 2019
+

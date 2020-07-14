@@ -1,0 +1,14 @@
+# Nmap 7.70 scan initiated Fri Oct 11 15:32:18 2019 as: nmap -vv --reason -Pn -sV -p 21 --script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/writeups/vulnhub.moria11/results/192.168.92.188/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.188
+Nmap scan report for 192.168.92.188
+Host is up, received arp-response (0.022s latency).
+Scanned at 2019-10-11 15:32:21 PDT for 19s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 64 vsftpd 2.0.8 or later
+|_banner: 220 Welcome Balrog!
+|_sslv2-drown: 
+MAC Address: 00:0C:29:84:7D:D1 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 11 15:32:40 2019 -- 1 IP address (1 host up) scanned in 22.07 seconds

@@ -1,0 +1,65 @@
+# Nmap 7.70 scan initiated Fri Oct 11 12:13:33 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.misdirection1/results/192.168.92.187/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.misdirection1/results/192.168.92.187/scans/xml/_full_tcp_nmap.xml 192.168.92.187
+adjust_timeouts2: packet supposedly had rtt of -316527 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -316527 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -319737 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -319737 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -458868 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -458868 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -429191 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -429191 microseconds.  Ignoring time.
+Nmap scan report for 192.168.92.187
+Host is up, received arp-response (0.015s latency).
+Scanned at 2019-10-11 12:13:34 PDT for 139s
+Not shown: 65531 closed ports
+Reason: 65531 resets
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 ec:bb:44:ee:f3:33:af:9f:a5:ce:b5:77:61:45:e4:36 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkS5yl+Dpb7vsMGbzAHXBYrVSUNTh4kYGh8zajM3ZujG0XHLvgkW7xJ6F/meai9IrCB5gTq7+tTsn+fqNk0cAZugz4h+vwm5ekXe5szPPHNxNUlKuNAQ0Rch9k7jT/2pWjtsE5iF6yFlh1UA2vBKqrTWVU5vrGWswdFRMWICKWiFXwl1Tv93STPsKHYoVbq74v2y1mVOLn+3JNMmRNCBFqh8Z2x+1DTep0YY8vIV325iRK5ROKCJAPeyX33uoxQ/cYrdPIS+Whs9QX0C+W343Hf2Ypq93h3/g3NNm54LvZdE6X2vTUcUHGdvK2gU+dWQOiDhCpMDv3wiEAwGlf87P5
+|   256 67:7b:cb:4e:95:1b:78:08:8d:2a:b1:47:04:8d:62:87 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM+YEivOAqHPDlFWduSuOjAjuJtfC9v/KW2uYB85gxQuibGJQZhFPcxwPEUf7UvQ/a5fr/keKYF2Kdld6gO44jY=
+|   256 59:04:1d:25:11:6d:89:a3:6c:6d:e4:e3:d2:3c:da:7d (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFHxbfiqinvu3cV7JoKrOF3w64zk+0N0h+/2nu+Z20Mk
+80/tcp   open  http    syn-ack ttl 64 Rocket httpd 1.2.6 (Python 2.7.15rc1)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS
+|_http-server-header: Rocket 1.2.6 Python/2.7.15rc1
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+3306/tcp open  mysql   syn-ack ttl 64 MySQL (unauthorized)
+8080/tcp open  http    syn-ack ttl 64 Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+MAC Address: 00:0C:29:F0:F4:AE (VMware)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=10/11%OT=22%CT=1%CU=41261%PV=Y%DS=1%DC=D%G=Y%M=000C29%
+OS:TM=5DA0D4E9%P=i686-pc-linux-gnu)SEQ(SP=FD%GCD=1%ISR=10D%TI=Z%II=I%TS=A)O
+OS:PS(O1=M5B4ST11NW7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4S
+OS:T11NW7%O6=M5B4ST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)E
+OS:CN(R=Y%DF=Y%T=40%W=7210%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F
+OS:=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5
+OS:(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z
+OS:%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=
+OS:N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%
+OS:CD=S)
+
+Uptime guess: 41.888 days (since Fri Aug 30 14:57:29 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   14.81 ms 192.168.92.187
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 11 12:15:53 2019 -- 1 IP address (1 host up) scanned in 142.02 seconds

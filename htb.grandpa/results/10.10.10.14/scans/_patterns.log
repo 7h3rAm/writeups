@@ -1,0 +1,8 @@
+tcp/80/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/80/nmap-http - Identified HTTP Server: Microsoft-IIS/6.0
+
+tcp/80/nmap-http - Identified HTTP Server: 5.0_Pub
+
+tcp/80/nmap-http - WebDAV is enabled
+

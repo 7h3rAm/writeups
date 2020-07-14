@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Date: Tue, 29 Oct 2019 18:18:31 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Mon, 14 Aug 2017 12:36:14 GMT
+ETag: "5c-556b5e89038a2"
+Accept-Ranges: bytes
+Content-Length: 92
+Vary: Accept-Encoding
+Content-Type: text/plain
+
+User-agent: *
+Disallow: /old/
+Disallow: /test/
+Disallow: /TR2/
+Disallow: /Backnode_files/
+
+

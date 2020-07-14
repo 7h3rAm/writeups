@@ -1,0 +1,2 @@
+[*] Task tcp/443/wkhtmltoimage returned non-zero exit code: 139. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://192.168.92.134:443/ /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/tcp_443_https_screenshot.png; fi
+[*] Task tcp/80/wkhtmltoimage returned non-zero exit code: 139. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://192.168.92.134:80/ /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/tcp_80_http_screenshot.png; fi

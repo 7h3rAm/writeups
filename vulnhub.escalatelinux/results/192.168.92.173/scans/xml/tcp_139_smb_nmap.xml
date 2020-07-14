@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Sep 17 11:48:03 2019 as: nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_139_smb_nmap.xml 192.168.92.173 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_139_smb_nmap.xml 192.168.92.173" start="1568746083" startstr="Tue Sep 17 11:48:03 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568746084"/>
+<taskend task="NSE" time="1568746084"/>
+<taskbegin task="NSE" time="1568746084"/>
+<taskend task="NSE" time="1568746084"/>
+<taskbegin task="ARP Ping Scan" time="1568746084"/>
+<taskend task="ARP Ping Scan" time="1568746084" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568746084"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568746084"/>
+<taskbegin task="SYN Stealth Scan" time="1568746084"/>
+<taskend task="SYN Stealth Scan" time="1568746085" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568746085"/>
+<taskend task="Service scan" time="1568746099" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568746099"/>
+<taskprogress task="NSE" time="1568746132" percent="98.67" remaining="1" etc="1568746132"/>
+<taskprogress task="NSE" time="1568746162" percent="98.67" remaining="1" etc="1568746163"/>
+<taskprogress task="NSE" time="1568746192" percent="98.67" remaining="2" etc="1568746193"/>
+<taskprogress task="NSE" time="1568746222" percent="98.67" remaining="2" etc="1568746224"/>
+<taskprogress task="NSE" time="1568746252" percent="98.67" remaining="3" etc="1568746254"/>
+<taskprogress task="NSE" time="1568746282" percent="98.67" remaining="3" etc="1568746284"/>
+<taskprogress task="NSE" time="1568746312" percent="98.67" remaining="3" etc="1568746315"/>
+<taskprogress task="NSE" time="1568746342" percent="98.67" remaining="4" etc="1568746345"/>
+<taskprogress task="NSE" time="1568746372" percent="98.67" remaining="4" etc="1568746376"/>
+<taskend task="NSE" time="1568746399"/>
+<taskbegin task="NSE" time="1568746399"/>
+<taskend task="NSE" time="1568746400"/>
+<host starttime="1568746084" endtime="1568746400"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.173" addrtype="ipv4"/>
+<address addr="00:0C:29:A6:A7:B9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="netbios-ssn" product="Samba smbd" version="4.7.6-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="LINUX" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: LINUX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  LINUX&lt;00&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  LINUX&lt;03&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  LINUX&lt;20&gt;            Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"><elem key="user">&lt;unknown&gt;</elem>
+<table key="names">
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">1024</elem>
+<elem key="name">LINUX</elem>
+</table>
+<table>
+<elem key="suffix">3</elem>
+<elem key="flags">1024</elem>
+<elem key="name">LINUX</elem>
+</table>
+<table>
+<elem key="suffix">32</elem>
+<elem key="flags">1024</elem>
+<elem key="name">LINUX</elem>
+</table>
+<table>
+<elem key="suffix">1</elem>
+<elem key="flags">33792</elem>
+<elem key="name">\x01\x02__MSBROWSE__\x02</elem>
+</table>
+<table>
+<elem key="suffix">0</elem>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="suffix">29</elem>
+<elem key="flags">1024</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+<table>
+<elem key="suffix">30</elem>
+<elem key="flags">33792</elem>
+<elem key="name">WORKGROUP</elem>
+</table>
+</table>
+<table key="mac">
+<elem key="address">&lt;unknown&gt;</elem>
+<elem key="manuf">unknown</elem>
+</table>
+<table key="statistics">
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<elem key="server_name">LINUX</elem>
+</script><script id="smb-enum-domains" output="&#xa;  LINUX&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;  Builtin&#xa;    Groups: n/a&#xa;    Users: n/a&#xa;    Creation time: unknown&#xa;    Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords&#xa;    Account lockout disabled&#xa;"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\192.168.92.173\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (Linux Lite Shares)&#xa;    Users: 6&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\192.168.92.173\liteshare: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: &#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\home\guest\linux_share&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;"><elem key="account_used">guest</elem>
+<table key="\\192.168.92.173\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (Linux Lite Shares)</elem>
+<elem key="Users">6</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\192.168.92.173\liteshare">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment"></elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\home\guest\linux_share</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Master Browser&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Print server&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Server&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Server service&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Unix server&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Windows NT/2000/XP/2003 server&#xa;    LINUX  0.0  Linux Lite Shares&#xa;  Workstation&#xa;    LINUX  0.0  Linux Lite Shares&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.7.6-Ubuntu)&#xa;  Computer name: osboxes&#xa;  NetBIOS computer name: LINUX\x00&#xa;  Domain name: \x00&#xa;  FQDN: osboxes&#xa;  System time: 2019-09-17T14:48:20-04:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.7.6-Ubuntu</elem>
+<elem key="server">LINUX\x00</elem>
+<elem key="date">2019-09-17T14:48:20-04:00</elem>
+<elem key="fqdn">osboxes</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb-vuln-ms17-010" output="This system is patched."/><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-09-17 11:48:20&#xa;  start_date: N/A"><elem key="date">2019-09-17 11:48:20</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="687" rttvar="4586" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568746400"/>
+<taskend task="NSE" time="1568746400"/>
+<taskbegin task="NSE" time="1568746400"/>
+<taskend task="NSE" time="1568746400"/>
+<runstats><finished time="1568746400" timestr="Tue Sep 17 11:53:20 2019" elapsed="317.35" summary="Nmap done at Tue Sep 17 11:53:20 2019; 1 IP address (1 host up) scanned in 317.35 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

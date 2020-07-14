@@ -1,0 +1,60 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.178" color="navyblue" fillcolor="#ffffff" tooltip="[VulnHub] IMF: 1"];
+  10[label="http://192.168.92.178/imfadministrator/images/whiteboard.jpg" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  11[label="flag4" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  12[label="http://192.168.92.178/imfadministrator/uploadr942.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  13[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  14[label="http://192.168.92.178/imfadministrator/uploads/bf76ad6d6afc.gif" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  15[label="command execution" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  16[label="flag5" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  17[label="netcat (www-data)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  18[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="/usr/local/bin/agent" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="buffer overflow exploit" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  21[label="netcat (root)" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  22[label="/root/Flag.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  23[label="/root/TheEnd.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  2[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="http://192.168.92.178/contact.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="flag1" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="http://192.168.92.178/index.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="flag2" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  7[label="http://192.168.92.178/imfadministrator/index.php" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  8[label="flag3" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  9[label="http://192.168.92.178/imfadministrator/cms.php?pagename=home" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[VulnHub] IMF: 1";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    10 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    15 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    2 -> 5 [color="#665957"];
+    2 -> 7 [color="#665957"];
+    2 -> 9 [color="#665957"];
+    20 -> 21 [color="#665957"];
+    21 -> 22 [color="#665957"];
+    21 -> 23 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    7 -> 8 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

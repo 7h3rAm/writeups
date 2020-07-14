@@ -1,0 +1,57 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="10.10.10.13" color="navyblue" fillcolor="#ffffff" tooltip="[HTB] Cronos"];
+  10[label="login page, vulnerable to sqli" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  11[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  12[label="bypass and login" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  13[label="net tools page, vulnerable to command injection" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  14[label="python reverse shell" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  15[label="netcat (www-data)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  16[label="user.txt" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  17[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  18[label="crontab lists a php job running as root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="replace php cron job file with php reverse shell and wait for a minute" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="netcat (root)" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  21[label="root.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  2[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="53/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="dns axfr" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="cronos.htb" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="admin.cronos.htb" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  7[label="ns1.cronos.htb" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  8[label="www.cronos.htb" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  9[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[HTB] Cronos";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 3 [color="#665957"];
+    1 -> 9 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    15 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    20 -> 21 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    4 -> 6 [color="#665957"];
+    4 -> 7 [color="#665957"];
+    4 -> 8 [color="#665957"];
+    6 -> 10 [color="#665957"];
+    9 -> 6 [color="#665957"];
+  }
+}

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Oct 17 15:47:21 2019 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/xml/tcp_80_http_nmap.xml 192.168.92.134 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.mrrobot1/results/192.168.92.134/scans/xml/tcp_80_http_nmap.xml 192.168.92.134" start="1571352441" startstr="Thu Oct 17 15:47:21 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1571352444"/>
+<taskend task="NSE" time="1571352444"/>
+<taskbegin task="NSE" time="1571352444"/>
+<taskend task="NSE" time="1571352444"/>
+<taskbegin task="ARP Ping Scan" time="1571352444"/>
+<taskend task="ARP Ping Scan" time="1571352444" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1571352444"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1571352444"/>
+<taskbegin task="SYN Stealth Scan" time="1571352444"/>
+<taskend task="SYN Stealth Scan" time="1571352445" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1571352445"/>
+<taskend task="Service scan" time="1571352455" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1571352455"/>
+<taskprogress task="NSE" time="1571352488" percent="87.46" remaining="5" etc="1571352493"/>
+<taskprogress task="NSE" time="1571352518" percent="97.44" remaining="2" etc="1571352520"/>
+<taskprogress task="NSE" time="1571352548" percent="98.72" remaining="2" etc="1571352549"/>
+<taskprogress task="NSE" time="1571352578" percent="98.72" remaining="2" etc="1571352580"/>
+<taskprogress task="NSE" time="1571352608" percent="99.04" remaining="2" etc="1571352609"/>
+<taskprogress task="NSE" time="1571352638" percent="99.04" remaining="2" etc="1571352640"/>
+<taskprogress task="NSE" time="1571352668" percent="99.36" remaining="2" etc="1571352669"/>
+<taskprogress task="NSE" time="1571352698" percent="99.36" remaining="2" etc="1571352700"/>
+<taskprogress task="NSE" time="1571352728" percent="99.68" remaining="1" etc="1571352729"/>
+<taskprogress task="NSE" time="1571352758" percent="99.68" remaining="1" etc="1571352759"/>
+<taskprogress task="NSE" time="1571352788" percent="99.68" remaining="2" etc="1571352789"/>
+<taskprogress task="NSE" time="1571352818" percent="99.68" remaining="2" etc="1571352819"/>
+<taskprogress task="NSE" time="1571352848" percent="99.68" remaining="2" etc="1571352849"/>
+<taskprogress task="NSE" time="1571352878" percent="99.68" remaining="2" etc="1571352879"/>
+<taskprogress task="NSE" time="1571352908" percent="99.68" remaining="2" etc="1571352909"/>
+<taskprogress task="NSE" time="1571352938" percent="99.68" remaining="2" etc="1571352940"/>
+<taskprogress task="NSE" time="1571352968" percent="99.68" remaining="2" etc="1571352970"/>
+<taskprogress task="NSE" time="1571352998" percent="99.68" remaining="2" etc="1571353000"/>
+<taskprogress task="NSE" time="1571353028" percent="99.68" remaining="2" etc="1571353030"/>
+<taskprogress task="NSE" time="1571353058" percent="99.68" remaining="2" etc="1571353060"/>
+<taskprogress task="NSE" time="1571353088" percent="99.68" remaining="3" etc="1571353090"/>
+<taskprogress task="NSE" time="1571353118" percent="99.68" remaining="3" etc="1571353120"/>
+<taskprogress task="NSE" time="1571353148" percent="99.68" remaining="3" etc="1571353150"/>
+<taskprogress task="NSE" time="1571353178" percent="99.68" remaining="3" etc="1571353180"/>
+<taskprogress task="NSE" time="1571353208" percent="99.68" remaining="3" etc="1571353210"/>
+<taskprogress task="NSE" time="1571353241" percent="99.68" remaining="3" etc="1571353244"/>
+<taskprogress task="NSE" time="1571353271" percent="99.68" remaining="3" etc="1571353274"/>
+<taskprogress task="NSE" time="1571353301" percent="99.68" remaining="3" etc="1571353304"/>
+<taskprogress task="NSE" time="1571353331" percent="99.68" remaining="3" etc="1571353334"/>
+<taskprogress task="NSE" time="1571353361" percent="99.68" remaining="3" etc="1571353364"/>
+<taskprogress task="NSE" time="1571353391" percent="99.68" remaining="4" etc="1571353394"/>
+<taskprogress task="NSE" time="1571353421" percent="99.68" remaining="4" etc="1571353424"/>
+<taskprogress task="NSE" time="1571353451" percent="99.68" remaining="4" etc="1571353454"/>
+<taskprogress task="NSE" time="1571353481" percent="99.68" remaining="4" etc="1571353484"/>
+<taskprogress task="NSE" time="1571353511" percent="99.68" remaining="4" etc="1571353514"/>
+<taskprogress task="NSE" time="1571353541" percent="99.68" remaining="4" etc="1571353544"/>
+<taskprogress task="NSE" time="1571353571" percent="99.68" remaining="4" etc="1571353575"/>
+<taskprogress task="NSE" time="1571353601" percent="99.68" remaining="4" etc="1571353605"/>
+<taskprogress task="NSE" time="1571353631" percent="99.68" remaining="4" etc="1571353635"/>
+<taskprogress task="NSE" time="1571353661" percent="99.68" remaining="4" etc="1571353665"/>
+<taskprogress task="NSE" time="1571353691" percent="99.68" remaining="4" etc="1571353695"/>
+<taskprogress task="NSE" time="1571353721" percent="99.68" remaining="5" etc="1571353725"/>
+<taskprogress task="NSE" time="1571353751" percent="99.68" remaining="5" etc="1571353755"/>
+<taskprogress task="NSE" time="1571353781" percent="99.68" remaining="5" etc="1571353785"/>
+<taskprogress task="NSE" time="1571353814" percent="99.68" remaining="5" etc="1571353818"/>
+<taskprogress task="NSE" time="1571353844" percent="99.68" remaining="5" etc="1571353848"/>
+<taskprogress task="NSE" time="1571353874" percent="99.68" remaining="5" etc="1571353879"/>
+<taskprogress task="NSE" time="1571353904" percent="99.68" remaining="5" etc="1571353909"/>
+<taskprogress task="NSE" time="1571353934" percent="99.68" remaining="5" etc="1571353939"/>
+<taskprogress task="NSE" time="1571353964" percent="99.68" remaining="5" etc="1571353969"/>
+<taskprogress task="NSE" time="1571353994" percent="99.68" remaining="5" etc="1571353999"/>
+<taskprogress task="NSE" time="1571354024" percent="99.68" remaining="6" etc="1571354029"/>
+<taskprogress task="NSE" time="1571354054" percent="99.68" remaining="6" etc="1571354059"/>
+<taskprogress task="NSE" time="1571354084" percent="99.68" remaining="6" etc="1571354089"/>
+<taskprogress task="NSE" time="1571354114" percent="99.68" remaining="6" etc="1571354119"/>
+<taskprogress task="NSE" time="1571354144" percent="99.68" remaining="6" etc="1571354149"/>
+<taskprogress task="NSE" time="1571354174" percent="99.68" remaining="6" etc="1571354180"/>
+<taskprogress task="NSE" time="1571354204" percent="99.68" remaining="6" etc="1571354210"/>
+<taskprogress task="NSE" time="1571354234" percent="99.68" remaining="6" etc="1571354240"/>
+<taskprogress task="NSE" time="1571354264" percent="99.68" remaining="6" etc="1571354270"/>
+<taskprogress task="NSE" time="1571354294" percent="99.68" remaining="6" etc="1571354300"/>
+<taskprogress task="NSE" time="1571354324" percent="99.68" remaining="7" etc="1571354330"/>
+<taskprogress task="NSE" time="1571354354" percent="99.68" remaining="7" etc="1571354360"/>
+<taskprogress task="NSE" time="1571354384" percent="99.68" remaining="7" etc="1571354390"/>
+<taskprogress task="NSE" time="1571354414" percent="99.68" remaining="7" etc="1571354420"/>
+<taskprogress task="NSE" time="1571354444" percent="99.68" remaining="7" etc="1571354450"/>
+<taskprogress task="NSE" time="1571354474" percent="99.68" remaining="7" etc="1571354480"/>
+<taskprogress task="NSE" time="1571354504" percent="99.68" remaining="7" etc="1571354511"/>
+<taskprogress task="NSE" time="1571354534" percent="99.68" remaining="7" etc="1571354541"/>
+<taskprogress task="NSE" time="1571354567" percent="99.68" remaining="7" etc="1571354574"/>
+<taskprogress task="NSE" time="1571354597" percent="99.68" remaining="7" etc="1571354604"/>
+<taskprogress task="NSE" time="1571354627" percent="99.68" remaining="7" etc="1571354634"/>
+<taskprogress task="NSE" time="1571354657" percent="99.68" remaining="8" etc="1571354664"/>
+<taskprogress task="NSE" time="1571354687" percent="99.68" remaining="8" etc="1571354694"/>
+<taskend task="NSE" time="1571354692"/>
+<taskbegin task="NSE" time="1571354692"/>
+<taskend task="NSE" time="1571354696"/>
+<host starttime="1571352444" endtime="1571354696"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.134" addrtype="ipv4"/>
+<address addr="00:0C:29:C0:00:97" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-apache-negotiation" output="mod_negotiation enabled."/><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.134&#xa;  url                                    method&#xa;  http://192.168.92.134:80/wp-login.php  FORM&#xa;"/><script id="http-backup-finder" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-chrono" output="Request times for /; avg: 660.18ms; min: 158.16ms; max: 1281.47ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.134&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1327&#xa;    Comment: &#xa;        /**&#xa;         * 11.0 Widgets&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 4052&#xa;    Comment: &#xa;        /**&#xa;         * 16.4 Desktop Small 955px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1572&#xa;    Comment: &#xa;        /**&#xa;         * 12.1 Posts and pages&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1174&#xa;    Comment: &#xa;        /* must have higher specificity than alternative color schemes inline styles */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 123&#xa;    Comment: &#xa;        &lt;!-&#45; .site-info -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*&#xa;        Theme Name: Twenty Fifteen&#xa;        Theme URI: https://wordpress.org/themes/twentyfifteen/&#xa;        Author: the WordPress team&#xa;        Author URI: https://wordpress.org/&#xa;        Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen&apos;s simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.&#xa;        Version: 1.3&#xa;        License: GNU General Public License v2 or later&#xa;        License URI: http://www.gnu.org/licenses/gpl-2.0.html&#xa;        Tags: black, blue, gray, pink, purple, white, yellow, dark, light, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready&#xa;        Text Domain: twentyfifteen&#xa;        &#xa;        This theme, like WordPress, is licensed under the GPL.&#xa;        Use it to make something cool, have fun, and share what you&apos;ve learned with others.&#xa;        */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 3504&#xa;    Comment: &#xa;        /**&#xa;         * 16.3 Tablet Large 880px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2413&#xa;    Comment: &#xa;        /**&#xa;         * 14.0 Media&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1164&#xa;    Comment: &#xa;        /* Text meant only for screen readers */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5884&#xa;    Comment: &#xa;        /* Make sure color schemes dont&apos;t affect to print */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 635&#xa;    Comment: &#xa;        /**&#xa;         * 6.0 Navigations&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2667&#xa;    Comment: &#xa;        /**&#xa;         * 16.0 Media Queries&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 130&#xa;    Comment: &#xa;        /* &lt;![CDATA[ */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 409&#xa;    Comment: &#xa;        /* Prevents HTML tables from becoming too wide */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5849&#xa;    Comment: &#xa;        /**&#xa;         * 17.0 Print&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 502&#xa;    Comment: &#xa;        /* Removing the inner shadow on iOS inputs */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 201&#xa;    Comment: &#xa;        /**&#xa;         * 3.0 Typography&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 355&#xa;    Comment: &#xa;        /**&#xa;         * 4.0 Elements&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2478&#xa;    Comment: &#xa;        /**&#xa;         * 14.1 Captions&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 115&#xa;    Comment: &#xa;        &lt;!-&#45; .content-area -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 100&#xa;    Comment: &#xa;        &lt;!-&#45; .page-header -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;        \   //~~\ |   |    /\  |~~\|~~  |\  | /~~\~~|~~    /\  |  /~~\ |\  ||~~&#xa;         \ /|    ||   |   /__\ |__/|-&#45;  | \ ||    | |     /__\ | |    || \ ||-&#45;&#xa;          |  \__/  \_/   /    \|  \|__  |  \| \__/  |    /    \|__\__/ |  \||__&#xa;        -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 64&#xa;    Comment: &#xa;        &lt;!-&#45; .site-header -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 112&#xa;    Comment: &#xa;        &lt;!-&#45; .error-404 -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/&#xa;    Line number: 3&#xa;    Comment: &#xa;         //~~\ |   |    /\  |~~\|~~  |\  | /~~\~~|~~    /\  |  /~~\ |\  ||~~&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2685&#xa;    Comment: &#xa;        /**&#xa;         * 16.1 Mobile Large 620px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 88&#xa;    Comment: &#xa;        &lt;!-&#45; .secondary -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 118&#xa;    Comment: &#xa;        &lt;!-&#45; .site-content -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5938&#xa;    Comment: &#xa;        /* Make sure sticky sidebar doesn&apos;t affect to print */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1545&#xa;    Comment: &#xa;        /**&#xa;         * 12.0 Content&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 656&#xa;    Comment: &#xa;        /**&#xa;         * 6.2 Menus&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 157&#xa;    Comment: &#xa;        /**&#xa;         * 2.0 - Genericons&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2385&#xa;    Comment: &#xa;        /**&#xa;         * 13.0 Footer&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 726&#xa;    Comment: &#xa;        /* Stop screen readers to read the text as capital letters */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2841&#xa;    Comment: &#xa;        /* restore screen-reader-text */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 4759&#xa;    Comment: &#xa;        /**&#xa;         * 16.5 Desktop Medium 1100px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 86&#xa;    Comment: &#xa;        &lt;!-&#45; .widget-area -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 4068&#xa;    Comment: &#xa;        /* Fixes flashing bug with scrolling on Safari */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1017&#xa;    Comment: &#xa;        /* reset screen-reader-text */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 449&#xa;    Comment: &#xa;        /* Placeholder text color -&#45; selectors need to be separate to work. */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5297&#xa;    Comment: &#xa;        /**&#xa;         * 16.6 Desktop Large 1240px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1160&#xa;    Comment: &#xa;        /**&#xa;         * 7.0 Accessibility&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 18&#xa;    Comment: &#xa;        /**&#xa;         * Table of Contents&#xa;         *&#xa;         * 1.0 - Reset&#xa;         * 2.0 - Genericons&#xa;         * 3.0 - Typography&#xa;         * 4.0 - Elements&#xa;         * 5.0 - Forms&#xa;         * 6.0 - Navigations&#xa;         *   6.1 - Links&#xa;         *   6.2 - Menus&#xa;         * 7.0 - Accessibility&#xa;         * 8.0 - Alignments&#xa;         * 9.0 - Clearings&#xa;         * 10.0 - Header&#xa;         * 11.0 - Widgets&#xa;         * 12.0 - Content&#xa;         *    12.1 - Posts and pages&#xa;         *    12.2 - Post Formats&#xa;         *    12.3 - Comments&#xa;         * 13.0 - Footer&#xa;         * 14.0 - Media&#xa;         *    14.1 - Captions&#xa;         *    14.2 - Galleries&#xa;         * 15.0 - Multisite&#xa;         * 16.0 - Media Queries&#xa;         *    16.1 - Mobile Large&#xa;         *    16.2 - Tablet Small&#xa;         *    16.3 - Tablet Large&#xa;         *    16.4 - Desktop Small&#xa;         *    16.5 - Desktop Medium&#xa;         *    16.6 - Desktop Large&#xa;         *    16.7 - Desktop X-Large&#xa;         * 17.0 - Print&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-login.php&#xa;    Line number: 5&#xa;    Comment: &#xa;        &lt;!-&#45;[if !(IE 8) ]&gt;&lt;!-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-login.php&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;[if IE 8]&gt;&#xa;        &#x9;&#x9;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; class=&quot;ie8&quot; lang=&quot;en-US&quot;&gt;&#xa;        &#x9;&lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-includes/js/jquery/jquery.js?ver=1.11.3&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery Migrate v1.2.1 | (c) 2005, 2013 jQuery Foundation, Inc. and other contributors | jquery.org/license */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5911&#xa;    Comment: &#xa;        /* Make sure color schemes don&apos;t affect to print */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 39&#xa;    Comment: &#xa;        &lt;!-&#45;[if lt IE 8]&gt;&#xa;        &lt;link rel=&apos;stylesheet&apos; id=&apos;twentyfifteen-ie7-css&apos;  href=&apos;http://192.168.92.134/wp-content/themes/twentyfifteen/css/ie7.css?ver=20141010&apos; type=&apos;text/css&apos; media=&apos;all&apos; /&gt;&#xa;        &lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5837&#xa;    Comment: &#xa;        /**&#xa;         * 16.7 Desktop X-Large 1403px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1204&#xa;    Comment: &#xa;        /**&#xa;         * 8.0 Alignments&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 126&#xa;    Comment: &#xa;        &lt;!-&#45; .site -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 114&#xa;    Comment: &#xa;        &lt;!-&#45; .site-main -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 36&#xa;    Comment: &#xa;        &lt;!-&#45;[if lt IE 9]&gt;&#xa;        &lt;link rel=&apos;stylesheet&apos; id=&apos;twentyfifteen-ie-css&apos;  href=&apos;http://192.168.92.134/wp-content/themes/twentyfifteen/css/ie.css?ver=20141010&apos; type=&apos;text/css&apos; media=&apos;all&apos; /&gt;&#xa;        &lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 111&#xa;    Comment: &#xa;        &lt;!-&#45; .page-content -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1290&#xa;    Comment: &#xa;        /**&#xa;         * 10.0 Header&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 132&#xa;    Comment: &#xa;        /* ]]&gt; */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 55&#xa;    Comment: &#xa;        /**&#xa;         * 1.0 - Reset&#xa;         *&#xa;         * Resetting and rebuilding styles have been helped along thanks to the fine&#xa;         * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2879&#xa;    Comment: &#xa;        /**&#xa;         * 16.2 Tablet Small 740px&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2503&#xa;    Comment: &#xa;        /**&#xa;         * 14.2 Galleries&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 5855&#xa;    Comment: &#xa;        /* Brute force since user agents all print differently. */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2671&#xa;    Comment: &#xa;        /*&#xa;         * Does the same thing as &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;,&#xa;         * but in the future W3C standard way. -ms- prefix is required for IE10+ to&#xa;         * render responsive styling in Windows 8 &quot;snapped&quot; views; IE10+ does not honor&#xa;         * the meta tag. See https://core.trac.wordpress.org/ticket/25888.&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2130&#xa;    Comment: &#xa;        /**&#xa;         * 12.3 Comments&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/&#xa;    Line number: 19&#xa;    Comment: &#xa;        &lt;!-&#45;[if lt IE 9]&gt;&#xa;              &lt;p class=&quot;browserupgrade&quot;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&quot;http://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;&#xa;            &#xa;        &#xa;            &lt;!-&#45; Google Plus confirmation -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 90&#xa;    Comment: &#xa;        &lt;!-&#45; .sidebar -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 464&#xa;    Comment: &#xa;        /* Since FF19 lowers the opacity of the placeholder by default */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 640&#xa;    Comment: &#xa;        /**&#xa;         * 6.1 Links&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2096&#xa;    Comment: &#xa;        /**&#xa;         * 12.2 Post Formats&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 63&#xa;    Comment: &#xa;        &lt;!-&#45; .site-branding -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-login.php&#xa;    Line number: 7&#xa;    Comment: &#xa;        &lt;!-&#45;&lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 1251&#xa;    Comment: &#xa;        /**&#xa;         * 9.0 Clearings&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 473&#xa;    Comment: &#xa;        /**&#xa;         * 5.0 Forms&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 124&#xa;    Comment: &#xa;        &lt;!-&#45; .site-footer -&#45;&gt;&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-content/themes/twentyfifteen/style.css?ver=4.3.1&#xa;    Line number: 2574&#xa;    Comment: &#xa;        /**&#xa;         * 15.0 Multisite&#xa;         */&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Line number: 8&#xa;    Comment: &#xa;        &lt;!-&#45;[if lt IE 9]&gt;&#xa;        &#x9;&lt;script src=&quot;http://192.168.92.134/wp-content/themes/twentyfifteen/js/html5.js&quot;&gt;&lt;/script&gt;&#xa;        &#x9;&lt;![endif]-&#45;&gt;&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.92.134&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://192.168.92.134:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s.&quot;+&quot;forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout(&apos;if(window.s_c_il)window.s_c_il[&apos;+s._in+&apos;].bcr()&apos;,s.forcedLinkTrackingTimeout);}else&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s.&quot;+&quot;forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout(&apos;if(window.s_c_il)window.s_c_il[&apos;+s._in+&apos;].bcr()&apos;,s.forcedLinkTrackingTimeout);}else&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/u;c.appendChild(o);&apos;+(n?&apos;o.c=0;o.i=setTimeout(f2,100)&apos;:&apos;&apos;)+&apos;}}catch(e){o=0}return&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/u;c.appendChild(o);&apos;+(n?&apos;o.c=0;o.i=setTimeout(f2,100)&apos;:&apos;&apos;)+&apos;}}catch(e){o=0}return&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/BASE_URL+%22/live/%22);this.firstBoot?(this.firstBoot=!1,this.track.omni(&quot;Email&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/BASE_URL+%22/live/%22);this.firstBoot?(this.firstBoot=!1,this.track.omni(&quot;Email&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/js/vendor/null,this.tags.length=0%7d,t.get=function()%7bif(0==this.tags.length)return&#xa;    Form id: &#xa;    Form action: http://192.168.92.134/&#xa;    &#xa;    Path: http://192.168.92.134:80/wp-login.php&#xa;    Form id: loginform&#xa;    Form action: http://192.168.92.134/wp-login.php&#xa;"/><script id="http-date" output="Fri, 18 Oct 2019 05:48:21 GMT; +7h00m34s from local time."><elem key="date">2019-10-18T05:48:21+00:00</elem>
+<elem key="delta">25234.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /admin/: Possible admin folder&#xa;  /admin/index.html: Possible admin folder&#xa;  /wp-login.php: Possible admin folder&#xa;  /robots.txt: Robots file&#xa;  /readme.html: Wordpress version: 2 &#xa;  /feed/: Wordpress version: 4.3.21&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: Interesting, a readme.&#xa;  /0/: Potentially interesting folder&#xa;  /image/: Potentially interesting folder&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-favicon" output="Unknown favicon MD5: D41D8CD98F00B204E9800998ECF8427E"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://192.168.92.134:80/: &#xa;    (1) ip: &#xa;      + 208.185.115.6&#xa;  (1) http://192.168.92.134:80/css/A.main-600a9791.css.pagespeed.cf.PT0at0JS3G.css: &#xa;    (1) ip: &#xa;      + 192.168.92.134&#xa;  (1) http://192.168.92.134:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s.&quot;+&quot;forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout(&apos;if(window.s_c_il)window.s_c_il[&apos;+s._in+&apos;].bcr()&apos;,s.forcedLinkTrackingTimeout);}else: &#xa;    (1) ip: &#xa;      + 172.16.58.187"><table key="(1) http://192.168.92.134:80/">
+<table key="(1) ip">
+<elem>+ 208.185.115.6</elem>
+</table>
+</table>
+<table key="(1) http://192.168.92.134:80/css/A.main-600a9791.css.pagespeed.cf.PT0at0JS3G.css">
+<table key="(1) ip">
+<elem>+ 192.168.92.134</elem>
+</table>
+</table>
+<table key="(1) http://192.168.92.134:80/js/rs;if(s.useForcedLinkTracking||s.bcf){if(!s.&quot;+&quot;forcedLinkTrackingTimeout)s.forcedLinkTrackingTimeout=250;setTimeout(&apos;if(window.s_c_il)window.s_c_il[&apos;+s._in+&apos;].bcr()&apos;,s.forcedLinkTrackingTimeout);}else">
+<table key="(1) ip">
+<elem>+ 172.16.58.187</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Fri, 18 Oct 2019 05:48:16 GMT&#xa;  Server: Apache&#xa;  X-Frame-Options: SAMEORIGIN&#xa;  Accept-Ranges: bytes&#xa;  Vary: Accept-Encoding&#xa;  X-Mod-Pagespeed: 1.9.32.3-4523&#xa;  Cache-Control: max-age=0, no-cache&#xa;  Content-Length: 1188&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-passwd" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-php-version" output="Logo query returned unknown hash f6f1bff8bdfeb85abb477a933c498bec&#xa;Credits query returned unknown hash f6f1bff8bdfeb85abb477a933c498bec"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-screenshot-html" output="&#xa;  failed (verify wkhtmltoimage is in your path)&#xa;"/><script id="http-security-headers" output="&#xa;  X_Frame_Options: &#xa;    Header: X-Frame-Options: SAMEORIGIN&#xa;    Description: The browser must not display this content in any frame from a page of different origin than the content itself.&#xa;  Cache_Control: &#xa;    Header: Cache-Control: max-age=0, no-cache"><table key="X_Frame_Options">
+<elem>Header: X-Frame-Options: SAMEORIGIN</elem>
+<elem>Description: The browser must not display this content in any frame from a page of different origin than the content itself.</elem>
+</table>
+<table key="Cache_Control">
+<elem>Header: Cache-Control: max-age=0, no-cache</elem>
+</table>
+</script><script id="http-server-header" output="Apache"><elem>Apache</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; php: 2&#xa;    /comments/feed/&#xa;      Other: 1&#xa;    /css/&#xa;      css: 1&#xa;    /feed/&#xa;      Other: 1&#xa;    /js/&#xa;      js: 2&#xa;    /js/vendor/&#xa;      js: 1&#xa;    /wp-content/themes/twentyfifteen/&#xa;      css: 1&#xa;    /wp-includes/&#xa;      xml: 1&#xa;    /wp-includes/js/jquery/&#xa;      js: 2&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /wp-content/themes/twentyfifteen/&#xa;  Total files found (by extension):&#xa;    Other: 3; css: 2; js: 5; php: 2; xml: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-userdir-enum" output="Potential Users: admin"/><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-wordpress-enum" output="&#xa;Search limited to top 100 themes/plugins&#xa;  themes&#xa;    twentytwelve&#xa;    twentythirteen 1.6&#xa;    twentyfourteen 1.5&#xa;    twentyfifteen 1.3&#xa;  plugins&#xa;    akismet&#xa;    contact-form-7 4.1&#xa;    jetpack 3.3.2&#xa;    all-in-one-seo-pack &#xa;    google-sitemap-generator 4.0.7.1&#xa;    google-analytics-for-wordpress 5.3.2&#xa;    wptouch 3.7.3&#xa;    all-in-one-wp-migration 2.0.4&#xa;    wp-mail-smtp 0.9.5&#xa;"><table key="twentytwelve">
+<elem key="name">twentytwelve</elem>
+<elem key="category">themes</elem>
+<elem key="path">/wp-content/themes/twentytwelve/</elem>
+</table>
+<table key="twentythirteen">
+<elem key="name">twentythirteen</elem>
+<elem key="installation_version">1.6</elem>
+<elem key="category">themes</elem>
+<elem key="path">/wp-content/themes/twentythirteen/</elem>
+</table>
+<table key="twentyfourteen">
+<elem key="name">twentyfourteen</elem>
+<elem key="installation_version">1.5</elem>
+<elem key="category">themes</elem>
+<elem key="path">/wp-content/themes/twentyfourteen/</elem>
+</table>
+<table key="twentyfifteen">
+<elem key="name">twentyfifteen</elem>
+<elem key="installation_version">1.3</elem>
+<elem key="category">themes</elem>
+<elem key="path">/wp-content/themes/twentyfifteen/</elem>
+</table>
+<table key="akismet">
+<elem key="name">akismet</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/akismet/</elem>
+</table>
+<table key="contact-form-7">
+<elem key="name">contact-form-7</elem>
+<elem key="installation_version">4.1</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/contact-form-7/</elem>
+</table>
+<table key="jetpack">
+<elem key="name">jetpack</elem>
+<elem key="installation_version">3.3.2</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/jetpack/</elem>
+</table>
+<table key="all-in-one-seo-pack">
+<elem key="name">all-in-one-seo-pack</elem>
+<elem key="installation_version"></elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/all-in-one-seo-pack/</elem>
+</table>
+<table key="google-sitemap-generator">
+<elem key="name">google-sitemap-generator</elem>
+<elem key="installation_version">4.0.7.1</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/google-sitemap-generator/</elem>
+</table>
+<table key="google-analytics-for-wordpress">
+<elem key="name">google-analytics-for-wordpress</elem>
+<elem key="installation_version">5.3.2</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/google-analytics-for-wordpress/</elem>
+</table>
+<table key="wptouch">
+<elem key="name">wptouch</elem>
+<elem key="installation_version">3.7.3</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/wptouch/</elem>
+</table>
+<table key="all-in-one-wp-migration">
+<elem key="name">all-in-one-wp-migration</elem>
+<elem key="installation_version">2.0.4</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/all-in-one-wp-migration/</elem>
+</table>
+<table key="wp-mail-smtp">
+<elem key="name">wp-mail-smtp</elem>
+<elem key="installation_version">0.9.5</elem>
+<elem key="category">plugins</elem>
+<elem key="path">/wp-content/plugins/wp-mail-smtp/</elem>
+</table>
+<elem key="title">Search limited to top 100 themes/plugins</elem>
+</script></port>
+</ports>
+<times srtt="1141" rttvar="4629" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1571354696"/>
+<taskend task="NSE" time="1571354696"/>
+<taskbegin task="NSE" time="1571354696"/>
+<taskend task="NSE" time="1571354696"/>
+<runstats><finished time="1571354696" timestr="Thu Oct 17 16:24:56 2019" elapsed="2255.47" summary="Nmap done at Thu Oct 17 16:24:56 2019; 1 IP address (1 host up) scanned in 2255.47 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

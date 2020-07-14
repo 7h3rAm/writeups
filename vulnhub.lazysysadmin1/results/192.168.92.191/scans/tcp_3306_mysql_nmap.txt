@@ -1,0 +1,16 @@
+# Nmap 7.70 scan initiated Tue Oct 29 11:19:08 2019 as: nmap -vv --reason -Pn -sV -p 3306 --script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer) -oN /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/tcp_3306_mysql_nmap.txt -oX /root/toolbox/writeups/vulnhub.lazysysadmin1/results/192.168.92.191/scans/xml/tcp_3306_mysql_nmap.xml 192.168.92.191
+Nmap scan report for 192.168.92.191
+Host is up, received arp-response (0.0028s latency).
+Scanned at 2019-10-29 11:19:09 PDT for 1s
+
+PORT     STATE SERVICE REASON         VERSION
+3306/tcp open  mysql   syn-ack ttl 64 MySQL (unauthorized)
+| banner: G\x00\x00\x00\xFFj\x04Host '192.168.92.190' is not allowed to c
+|_onnect to this MySQL server
+|_mysql-empty-password: Host '192.168.92.190' is not allowed to connect to this MySQL server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:0C:29:C2:70:16 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Oct 29 11:19:10 2019 -- 1 IP address (1 host up) scanned in 2.36 seconds

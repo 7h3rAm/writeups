@@ -1,0 +1,1016 @@
+# Nmap 7.80 scan initiated Fri May 29 19:05:10 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/tcp_80_http_nmap.txt -oX /home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/xml/tcp_80_http_nmap.xml 10.10.10.68
+Nmap scan report for 10.10.10.68
+Host is up, received user-set (0.27s latency).
+Scanned at 2020-05-29 19:05:24 IST for 259s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+|_http-chrono: Request times for /; avg: 2838.77ms; min: 1447.74ms; max: 4906.51ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.68
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 704
+|     Comment: 
+|          // concat childElems to filterFound array
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 489
+|     Comment: 
+|         /*global define: false */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 566
+|     Comment: 
+|          // universal module definition
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 430
+|     Comment: 
+|         /**
+|         	 * Fetches the current value to check against when executing listeners. If
+|         	 * the listeners return value matches this one then it should be removed
+|         	 * automatically. It will return true by default.
+|         	 *
+|         	 * @return {*|Boolean} The current value to check for or the default, true.
+|         	 * @api private
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 176
+|     Comment: 
+|         /**
+|         	 * Alias of addOnceListener.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 843
+|     Comment: 
+|          // only trigger checking once
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 856
+|     Comment: 
+|          // ----- events ----- //
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 940
+|     Comment: 
+|         /* END CONTACT */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 621
+|     Comment: 
+|         
+|         // turn element or nodeList into an array
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 206
+|     Comment: 
+|         /**
+|         	 * Removes a listener function from the specified event.
+|         	 * When passed a regular expression as the event name, it will remove the listener from all events that match it.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to remove the listener from.
+|         	 * @param {Function} listener Method to remove from the event.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 80
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 841
+|     Comment: 
+|         /* CONTACT */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 34
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 44
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/index.html
+|     Line number: 91
+|     Comment: 
+|         <!-- Home Content -->
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 776
+|     Comment: 
+|         /* END DEFAULT PAGE */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 129
+|     Comment: 
+|         /**
+|         	 * Adds a listener function to the specified event.
+|         	 * The listener will not be added if it is a duplicate.
+|         	 * If the listener returns true then it will be removed after it is called.
+|         	 * If you pass a regular expression as the event name then the listener will be added to all events that match it.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to attach the listener to.
+|         	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 313
+|     Comment: 
+|         /**
+|         	 * Removes all listeners from a specified event.
+|         	 * If you do not specify an event then all listeners will be removed.
+|         	 * That means every event will be emptied.
+|         	 * You can also pass a regex to remove all events that match it.
+|         	 *
+|         	 * @param {String|RegExp} [evt] Optional name of the event to remove all listeners for. Will remove from every event if not passed.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 717
+|     Comment: 
+|         /* SINGLE POST */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 550
+|     Comment: 
+|          // AMD
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 797
+|     Comment: 
+|          // first check cached any previous images that have same src
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 596
+|     Comment: 
+|         
+|         // --------------------------  factory -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 633
+|     Comment: 
+|          // array of single index
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 237
+|     Comment: 
+|         /**
+|         	 * Adds listeners in bulk using the manipulateListeners method.
+|         	 * If you pass an object as the second argument you can add to multiple events at once. The object should contain key value pairs of events and listeners or listener arrays. You can also pass it an event name and an array of listeners to be added.
+|         	 * You can also pass it a regular expression to add the array of listeners to all events that match it.
+|         	 * Yeah, this function does quite a bit. That's probably a bad thing.
+|         	 *
+|         	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add to multiple events at once.
+|         	 * @param {Function[]} [listeners] An optional array of listener functions to add.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 847
+|     Comment: 
+|          // simulate loading on detached element
+|     
+|     Path: http://10.10.10.68:80/js/jquery.easing.1.3.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|          */
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 416
+|     Comment: 
+|         /* MENU */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 672
+|     Comment: 
+|          // add jQuery Deferred object
+|     
+|     Path: http://10.10.10.68:80/index.html
+|     Line number: 29
+|     Comment: 
+|         <!-- Preloader Gif -->
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 267
+|     Comment: 
+|         /**
+|         	 * Edits listeners in bulk. The addListeners and removeListeners methods both use this to do their job. You should really use those instead, this is a little lower level.
+|         	 * The first argument will determine if the listeners are removed (true) or added (false).
+|         	 * If you pass an object as the second argument you can add/remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
+|         	 * You can also pass it an event name and an array of listeners to be added/removed.
+|         	 * You can also pass it a regular expression to manipulate the listeners of all events that match it.
+|         	 *
+|         	 * @param {Boolean} remove True if you want to remove listeners, false if you want to add.
+|         	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to add/remove from multiple events at once.
+|         	 * @param {Function[]} [listeners] An optional array of listener functions to add/remove.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 812
+|     Comment: 
+|          // If none of the checks above matched, simulate loading on detached element.
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 807
+|     Comment: 
+|          // report based on naturalWidth
+|     
+|     Path: http://10.10.10.68:80/css/font-awesome.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+|          *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+|          */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 651
+|     Comment: 
+|          // use elem as selector string
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 672
+|     Comment: 
+|         /* Fallback */
+|     
+|     Path: http://10.10.10.68:80/js/jquery.smartmenus.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! SmartMenus jQuery Plugin - v1.0.0 - January 27, 2016
+|          * http://www.smartmenus.org/
+|          * Copyright Vasil Dinkov, Vadikom Web Ltd. http://vadikom.com; Licensed MIT */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 741
+|     Comment: 
+|          // bind once
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 551
+|     Comment: 
+|         /* Above WP toolbar. */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 171
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/js/jquery.nicescroll.min.js
+|     Line number: 1
+|     Comment: 
+|         /* jquery.nicescroll 3.6.0 InuYaksa*2014 MIT http://nicescroll.areaaperta.com */
+|     
+|     Path: http://10.10.10.68:80/js/jquery.carouFredSel-6.0.0-packed.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          *	jQuery carouFredSel 6.0.0
+|          *	Demo's and documentation:
+|          *	caroufredsel.frebsite.nl
+|          *
+|          *	Copyright (c) 2012 Fred Heusschen
+|          *	www.frebsite.nl
+|          *
+|          *	Dual licensed under the MIT and GPL licenses.
+|          *	http://en.wikipedia.org/wiki/MIT_License
+|          *	http://en.wikipedia.org/wiki/GNU_General_Public_License
+|          */
+|     
+|     Path: http://10.10.10.68:80/index.html
+|     Line number: 150
+|     Comment: 
+|         <!--Load JavaScript-->
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 399
+|     Comment: 
+|         /**
+|         	 * Alias of emitEvent
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 767
+|     Comment: 
+|          // HACK - another setTimeout so that confirm happens after progress
+|     
+|     Path: http://10.10.10.68:80/js/jquery.touchSwipe.min.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|         * touchSwipe - jQuery Plugin
+|         * https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+|         * http://labs.skinkers.com/touchSwipe/
+|         * http://plugins.jquery.com/project/touchSwipe
+|         *
+|         * Copyright (c) 2010 Matt Bryson (www.skinkers.com)
+|         * Dual licensed under the MIT or GPL Version 2 licenses.
+|         *
+|         * $version: 1.3.3
+|         */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 858
+|     Comment: 
+|          // trigger specified handler for event type
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 579
+|     Comment: 
+|          // CommonJS
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 1002
+|     Comment: 
+|         /* END FOOTER */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 693
+|     Comment: 
+|          // filter siblings
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 138
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 181
+|     Comment: 
+|         /**
+|         	 * Defines an event name. This is required if you want to use a regex to add a listener to multiple events at once. If you don't do this then how do you expect it to know what event to add to? Should it just add to every possible match for a regex? No. That is scary and bad.
+|         	 * You need to tell it what event names should be matched by a regex.
+|         	 *
+|         	 * @param {String} evt Name of the event to create.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 788
+|     Comment: 
+|          // --------------------------  -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 827
+|     Comment: 
+|          // -------------------------- Resource -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 749
+|     Comment: 
+|         /* DEFAULT PAGE */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 72
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * imagesLoaded PACKAGED v3.1.8
+|          * JavaScript is all like "You images are done yet or what?"
+|          * MIT License
+|          */
+|     
+|     Path: http://10.10.10.68:80/js/jquery.mousewheel.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
+|          * Licensed under the MIT License (LICENSE.txt).
+|          *
+|          * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
+|          * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
+|          * Thanks to: Seamus Leahy for adding deltaX and deltaY
+|          *
+|          * Version: 3.0.6
+|          * 
+|          * Requires: 1.2.2+
+|          */
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 525
+|     Comment: 
+|         /* Text meant only for screen readers. */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 501
+|     Comment: 
+|          // add event.target
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 805
+|     Comment: 
+|          // try to check for image status manually.
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 447
+|     Comment: 
+|         /**
+|         	 * Fetches the events object and creates one if required.
+|         	 *
+|         	 * @return {Object} The events storage object.
+|         	 * @api private
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 94
+|     Comment: 
+|         /**
+|         	 * Takes a list of listener objects and flattens it into a list of listener functions.
+|         	 *
+|         	 * @param {Object[]} listeners Raw listener objects.
+|         	 * @return {Function[]} Just the listener functions.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 417
+|     Comment: 
+|         /**
+|         	 * Sets the current value to check against when executing listeners. If a
+|         	 * listeners return value matches the one set here then it will be removed
+|         	 * after execution. This value defaults to true.
+|         	 *
+|         	 * @param {*} value The new value to check for when executing listeners.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 553
+|     Comment: 
+|          // browser global
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 676
+|     Comment: 
+|          // HACK check async to allow time to bind listeners
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 404
+|     Comment: 
+|         /**
+|         	 * Subtly different from emitEvent in that it will pass its arguments on to the listeners, as opposed to taking a single array of arguments to pass on.
+|         	 * As with emitEvent, you can pass a regex in place of the event name to emit to all events that match it.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
+|         	 * @param {...*} Optional additional arguments to be passed to each listener.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 628
+|     Comment: 
+|          // convert nodeList to array
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 641
+|     Comment: 
+|         /**
+|            * @param {Array, Element, NodeList, String} elem
+|            * @param {Object or Function} options - if function, use as callback
+|            * @param {Function} onAlways - callback function
+|            */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 779
+|     Comment: 
+|         /* ABOUT PAGE */
+|     
+|     Path: http://10.10.10.68:80/js/jquery.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license */
+|     
+|     Path: http://10.10.10.68:80/css/sm-clean.css
+|     Line number: 105
+|     Comment: 
+|         /* fixed width only please - you can use the "subMenusMinWidth"/"subMenusMaxWidth" script options to override this if you like */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 63
+|     Comment: 
+|         /**
+|         	 * Returns the listener array for the specified event.
+|         	 * Will initialise the event object and listener arrays if required.
+|         	 * Will return an object if you use a regex search. The object contains keys for each matched event. So /ba[rz]/ might return an object containing bar and baz. But only if you have either defined them with defineEvent or added some listeners to them.
+|         	 * Each property in the object response is an array of listener functions.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to return the listeners from.
+|         	 * @return {Function[]|Object} All listener functions for the event.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 156
+|     Comment: 
+|         /**
+|         	 * Alias of addListener
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 457
+|     Comment: 
+|         /**
+|         	 * Reverts the global {@link EventEmitter} to its previous value and returns a reference to this version.
+|         	 *
+|         	 * @return {Function} Non conflicting EventEmitter class.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 1004
+|     Comment: 
+|         /* RESPONSIVE PART */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 889
+|     Comment: 
+|          // -----  ----- //
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 698
+|     Comment: 
+|          // no non-element nodes, #143
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 481
+|     Comment: 
+|         /*!
+|          * eventie v1.0.4
+|          * event binding helper
+|          *   eventie.bind( elem, 'click', myFn )
+|          *   eventie.unbind( elem, 'click', myFn )
+|          */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 778
+|     Comment: 
+|          // -------------------------- jquery -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 193
+|     Comment: 
+|         /**
+|         	 * Uses defineEvent to define multiple events.
+|         	 *
+|         	 * @param {String[]} evts An array of event names to define.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 161
+|     Comment: 
+|         /**
+|         	 * Semi-alias of addListener. It will add a listener that will be
+|         	 * automatically removed after it's first execution.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to attach the listener to.
+|         	 * @param {Function} listener Method to be called when the event is emitted. If the function returns true then it will be removed after calling.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 23
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 830
+|     Comment: 
+|          // separate class from LoadingImage to prevent memory leaks. See #115
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 713
+|     Comment: 
+|         /* END FEATURED POST SCROLL */
+|     
+|     Path: http://10.10.10.68:80/index.html
+|     Line number: 40
+|     Comment: 
+|         <!-- Left Sidebar -->
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 592
+|     Comment: 
+|         /* ...and hide the images */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 355
+|     Comment: 
+|         /**
+|         	 * Emits an event of your choice.
+|         	 * When emitted, every listener attached to that event will be executed.
+|         	 * If you pass the optional argument array then those arguments will be passed to every listener upon execution.
+|         	 * Because it uses `apply`, your array of arguments will be passed as if you wrote them out separately.
+|         	 * So they will not arrive within the array on the other side, they will be separate.
+|         	 * You can also pass a regular expression to emit to all events that match it.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to emit and execute listeners for.
+|         	 * @param {Array} [args] Optional array of arguments to be passed to each listener.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 583
+|     Comment: 
+|         /* If background-size supported we'll add the images to the background of the li */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 537
+|     Comment: 
+|          // can't delete window object properties
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 608
+|     Comment: 
+|         
+|         // extend objects
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 8
+|     Comment: 
+|         /*!
+|          * EventEmitter v4.2.6 - git.io/ee
+|          * Oliver Caldwell
+|          * MIT license
+|          * @preserve
+|          */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 852
+|     Comment: 
+|          // set flag
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 639
+|     Comment: 
+|          // -------------------------- imagesLoaded -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 423
+|     Comment: 
+|         /* BLOG */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 599
+|     Comment: 
+|         /* FEATURED POSTS SCROLL PAGE */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 548
+|     Comment: 
+|         
+|         // transport
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 836
+|     Comment: 
+|          // add to cache
+|     
+|     Path: http://10.10.10.68:80/index.html
+|     Line number: 20
+|     Comment: 
+|         
+|         
+|                 <![endif]-->
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 435
+|     Comment: 
+|         /* WP DEFAULT CLASSES */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 647
+|     Comment: 
+|          // coerce ImagesLoaded() without new, to be new ImagesLoaded()
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 232
+|     Comment: 
+|         /**
+|         	 * Alias of removeListener
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/css/sm-clean.css
+|     Line number: 11
+|     Comment: 
+|         /* make room for the toggle button (sub indicator) */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 838
+|     Comment: 
+|         /* END ABOUT PAGE */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 348
+|     Comment: 
+|         /**
+|         	 * Alias of removeEvent.
+|         	 *
+|         	 * Added to mirror the node API.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 55
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 746
+|     Comment: 
+|         /* END SINGLE POST */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 697
+|     Comment: 
+|          // find children
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 150
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 725
+|     Comment: 
+|          // complete if no images
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 753
+|     Comment: 
+|          // HACK - Chrome triggers event before object properties have changed. #83
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 252
+|     Comment: 
+|         /**
+|         	 * Removes listeners in bulk using the manipulateListeners method.
+|         	 * If you pass an object as the second argument you can remove from multiple events at once. The object should contain key value pairs of events and listeners or listener arrays.
+|         	 * You can also pass it an event name and an array of listeners to be removed.
+|         	 * You can also pass it a regular expression to remove the listeners from all events that match it.
+|         	 *
+|         	 * @param {String|Object|RegExp} evt An event name if you will pass an array of listeners next. An object if you wish to remove from multiple events at once.
+|         	 * @param {Function[]} [listeners] An optional array of listener functions to remove.
+|         	 * @return {Object} Current instance of EventEmitter for chaining.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 829
+|     Comment: 
+|          // Resource checks each src, only once
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 488
+|     Comment: 
+|         /*jshint browser: true, undef: true, unused: true */
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 340
+|     Comment: 
+|         /* COLUMNS */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 568
+|     Comment: 
+|         /*global define: false, module: false, require: false */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 876
+|     Comment: 
+|          // ----- confirm ----- //
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 690
+|     Comment: 
+|          // filter & find items if we have an item selector
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 18
+|     Comment: 
+|         /**
+|         	 * Class for managing events.
+|         	 * Can be extended to provide event functionality in other classes.
+|         	 *
+|         	 * @class EventEmitter Manages event registering and emitting.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 625
+|     Comment: 
+|          // use object if already an array
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 606
+|     Comment: 
+|         
+|         // -------------------------- helpers -------------------------- //
+|     
+|     Path: http://10.10.10.68:80/single.html
+|     Line number: 91
+|     Comment: 
+|         <!-- Single Content -->
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 712
+|     Comment: 
+|         /**
+|            * @param {Image} img
+|            */
+|     
+|     Path: http://10.10.10.68:80/js/html5.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          HTML5 Shiv v3.7.0 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+|         */
+|     
+|     Path: http://10.10.10.68:80/css/common.css
+|     Line number: 418
+|     Comment: 
+|         
+|         
+|         -------------------------------------------------------------------------------------------*/
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 804
+|     Comment: 
+|          // If complete is true and browser supports natural sizes,
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 559
+|     Comment: 
+|         /*!
+|          * imagesLoaded v3.1.8
+|          * JavaScript is all like "You images are done yet or what?"
+|          * MIT License
+|          */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 231
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 595
+|     Comment: 
+|         /* END BLOG */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 31
+|     Comment: 
+|         /**
+|         	 * Finds the index of the listener for the event in it's storage array.
+|         	 *
+|         	 * @param {Function[]} listeners Array of listeners to search through.
+|         	 * @param {Function} listener Method to look for.
+|         	 * @return {Number} Index of the specified listener, -1 if not found
+|         	 * @api private
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/main.js
+|     Line number: 141
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 111
+|     Comment: 
+|         /**
+|         	 * Fetches the requested listeners via getListeners but will always return the results inside an object. This is mainly for internal use but others may find it useful.
+|         	 *
+|         	 * @param {String|RegExp} evt Name of the event to return the listeners from.
+|         	 * @return {Object} All listener functions for an event in an object.
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/js/imagesloaded.pkgd.js
+|     Line number: 50
+|     Comment: 
+|         /**
+|         	 * Alias a method while keeping the context correct, to allow for overwriting of target method.
+|         	 *
+|         	 * @param {String} name The name of the target method.
+|         	 * @return {Function} The aliased method
+|         	 * @api private
+|         	 */
+|     
+|     Path: http://10.10.10.68:80/style.css
+|     Line number: 943
+|     Comment: 
+|_        /* FOOTER */
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Fri, 29 May 2020 13:39:40 GMT; +3m59s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /dev/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /js/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|   /php/: Potentially interesting directory w/ listing on 'apache/2.4.18 (ubuntu)'
+|_  /uploads/: Potentially interesting folder
+|_http-errors: Couldn't find any error pages.
+|_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://10.10.10.68:80/js/: 
+|     (1) ip: 
+|_      + 10.10.10.68
+| http-headers: 
+|   Date: Fri, 29 May 2020 13:39:45 GMT
+|   Server: Apache/2.4.18 (Ubuntu)
+|   Last-Modified: Mon, 04 Dec 2017 23:03:42 GMT
+|   ETag: "1e3f-55f8bbac32f80"
+|   Accept-Ranges: bytes
+|   Content-Length: 7743
+|   Vary: Accept-Encoding
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 127.0.1.1
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: POST OPTIONS GET HEAD
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 235ca5b282cbc2c83bec1a18fe5a9a9f
+|_Credits query returned unknown hash 235ca5b282cbc2c83bec1a18fe5a9a9f
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; css: 1; html: 2
+|     /css/
+|       css: 5
+|     /images/
+|       gif: 1; png: 1
+|     /js/
+|       js: 9
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /js/
+|   Total files found (by extension):
+|_    Other: 1; css: 6; gif: 1; html: 2; js: 9; png: 1
+| http-sql-injection: 
+|   Possible sqli for queries:
+|     http://10.10.10.68:80/js/?C=M%3bO%3dA%27%20OR%20sqlspider
+|     http://10.10.10.68:80/js/?C=N%3bO%3dD%27%20OR%20sqlspider
+|     http://10.10.10.68:80/js/?C=D%3bO%3dA%27%20OR%20sqlspider
+|_    http://10.10.10.68:80/js/?C=S%3bO%3dA%27%20OR%20sqlspider
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Arrexel's Development Site
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 29 19:09:43 2020 -- 1 IP address (1 host up) scanned in 272.45 seconds

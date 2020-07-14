@@ -1,0 +1,123 @@
+# Nmap 7.70 scan initiated Tue Sep 17 11:48:03 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_139_smb_nmap.xml 192.168.92.173
+Nmap scan report for 192.168.92.173
+Host is up, received arp-response (0.00069s latency).
+Scanned at 2019-09-17 11:48:04 PDT for 316s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:A6:A7:B9 (VMware)
+Service Info: Host: LINUX
+
+Host script results:
+| nbstat: NetBIOS name: LINUX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LINUX<00>            Flags: <unique><active>
+|   LINUX<03>            Flags: <unique><active>
+|   LINUX<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-domains: 
+|   LINUX
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.173\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Linux Lite Shares)
+|     Users: 6
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.173\liteshare: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\home\guest\linux_share
+|     Anonymous access: <none>
+|_    Current user access: <none>
+| smb-mbenum: 
+|   DFS Root
+|     LINUX  0.0  Linux Lite Shares
+|   Master Browser
+|     LINUX  0.0  Linux Lite Shares
+|   Print server
+|     LINUX  0.0  Linux Lite Shares
+|   Server
+|     LINUX  0.0  Linux Lite Shares
+|   Server service
+|     LINUX  0.0  Linux Lite Shares
+|   Unix server
+|     LINUX  0.0  Linux Lite Shares
+|   Windows NT/2000/XP/2003 server
+|     LINUX  0.0  Linux Lite Shares
+|   Workstation
+|_    LINUX  0.0  Linux Lite Shares
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: osboxes
+|   NetBIOS computer name: LINUX\x00
+|   Domain name: \x00
+|   FQDN: osboxes
+|_  System time: 2019-09-17T14:48:20-04:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|   3.11: 
+|     Distributed File System
+|_    Leasing
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-09-17 11:48:20
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 17 11:53:20 2019 -- 1 IP address (1 host up) scanned in 317.35 seconds

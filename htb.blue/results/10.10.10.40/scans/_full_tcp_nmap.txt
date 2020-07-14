@@ -1,0 +1,1 @@
+# Nmap 7.70 scan initiated Fri Nov  1 17:05:41 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/_full_tcp_nmap.xml 10.10.10.40

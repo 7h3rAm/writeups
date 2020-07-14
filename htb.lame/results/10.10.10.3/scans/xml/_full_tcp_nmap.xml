@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 12:30:13 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/_full_tcp_nmap.xml 10.10.10.3 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/_full_tcp_nmap.xml 10.10.10.3" start="1572636613" startstr="Fri Nov  1 12:30:13 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572636614"/>
+<taskend task="NSE" time="1572636614"/>
+<taskbegin task="NSE" time="1572636614"/>
+<taskend task="NSE" time="1572636614"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572636614"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572636614"/>
+<taskbegin task="SYN Stealth Scan" time="1572636614"/>
+<taskprogress task="SYN Stealth Scan" time="1572636676" percent="2.27" remaining="2673" etc="1572639348"/>
+<taskprogress task="SYN Stealth Scan" time="1572636706" percent="7.88" remaining="1076" etc="1572637782"/>
+<taskprogress task="SYN Stealth Scan" time="1572636736" percent="14.37" remaining="728" etc="1572637463"/>
+<taskprogress task="SYN Stealth Scan" time="1572636766" percent="19.68" remaining="621" etc="1572637386"/>
+<taskprogress task="SYN Stealth Scan" time="1572636796" percent="21.32" remaining="672" etc="1572637468"/>
+<taskprogress task="SYN Stealth Scan" time="1572636835" percent="26.09" remaining="627" etc="1572637461"/>
+<taskprogress task="SYN Stealth Scan" time="1572637011" percent="40.95" remaining="573" etc="1572637583"/>
+<taskprogress task="SYN Stealth Scan" time="1572637041" percent="48.67" remaining="451" etc="1572637491"/>
+<taskprogress task="SYN Stealth Scan" time="1572637171" percent="52.96" remaining="495" etc="1572637666"/>
+<taskprogress task="SYN Stealth Scan" time="1572637344" percent="62.72" remaining="434" etc="1572637778"/>
+<taskprogress task="SYN Stealth Scan" time="1572637377" percent="67.05" remaining="375" etc="1572637752"/>
+<taskprogress task="SYN Stealth Scan" time="1572637410" percent="71.68" remaining="315" etc="1572637724"/>
+<taskprogress task="SYN Stealth Scan" time="1572637568" percent="79.00" remaining="254" etc="1572637822"/>
+<taskprogress task="SYN Stealth Scan" time="1572637598" percent="89.82" remaining="112" etc="1572637710"/>
+<taskprogress task="SYN Stealth Scan" time="1572637628" percent="95.48" remaining="48" etc="1572637676"/>
+<taskprogress task="SYN Stealth Scan" time="1572637678" percent="96.73" remaining="36" etc="1572637714"/>
+<taskend task="SYN Stealth Scan" time="1572637916" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1572637916"/>
+<taskend task="Service scan" time="1572637928" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1572637939"/>
+<taskend task="Traceroute" time="1572637941"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1572637941"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1572637941"/>
+<taskbegin task="NSE" time="1572637941"/>
+<taskprogress task="NSE" time="1572637972" percent="99.85" remaining="1" etc="1572637972"/>
+<taskend task="NSE" time="1572637987"/>
+<taskbegin task="NSE" time="1572637987"/>
+<taskend task="NSE" time="1572637987"/>
+<host starttime="1572636614" endtime="1572637987"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65530">
+<extrareasons reason="no-responses" count="65530"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="2.3.4" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.4</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 10.10.14.18&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 10.10.14.18&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     vsFTPd 2.3.4 - secure, fast, stable&#xa;End of status</elem>
+</script></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="4.7p1 Debian 8ubuntu1" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:4.7p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)&#xa;ssh-dss AAAAB3NzaC1kc3MAAACBALz4hsc8a2Srq4nlW960qV8xwBG0JC+jI7fWxm5METIJH4tKr/xUTwsTYEYnaZLzcOiy21D3ZvOwYb6AA3765zdgCd2Tgand7F0YD5UtXG7b7fbz99chReivL0SIWEG/E96Ai+pqYMP2WD5KaOJwSIXSUajnU5oWmY5x85sBw+XDAAAAFQDFkMpmdFQTF+oRqaoSNVU7Z+hjSwAAAIBCQxNKzi1TyP+QJIFa3M0oLqCVWI0We/ARtXrzpBOJ/dt0hTJXCeYisKqcdwdtyIn8OUCOyrIjqNuA2QW217oQ6wXpbFh+5AQm8Hl3b6C6o8lX3Ptw+Y4dp0lzfWHwZ/jzHwtuaDQaok7u1f971lEazeJLqfiWrAzoklqSWyDQJAAAAIA1lAD3xWYkeIeHv/R3P9i+XaoI7imFkMuYXCDTq843YU6Td+0mWpllCqAWUV/CQamGgQLtYy5S0ueoks01MoKdOMMhKVwqdr08nvCBdNKjIEd3gH6oBk/YRnjzxlEAYBsvCmM4a0jmhz0oNiRWlc/F+bkUeFKrBx/D2fdfZmhrGg=="><table>
+<elem key="key">AAAAB3NzaC1kc3MAAACBALz4hsc8a2Srq4nlW960qV8xwBG0JC+jI7fWxm5METIJH4tKr/xUTwsTYEYnaZLzcOiy21D3ZvOwYb6AA3765zdgCd2Tgand7F0YD5UtXG7b7fbz99chReivL0SIWEG/E96Ai+pqYMP2WD5KaOJwSIXSUajnU5oWmY5x85sBw+XDAAAAFQDFkMpmdFQTF+oRqaoSNVU7Z+hjSwAAAIBCQxNKzi1TyP+QJIFa3M0oLqCVWI0We/ARtXrzpBOJ/dt0hTJXCeYisKqcdwdtyIn8OUCOyrIjqNuA2QW217oQ6wXpbFh+5AQm8Hl3b6C6o8lX3Ptw+Y4dp0lzfWHwZ/jzHwtuaDQaok7u1f971lEazeJLqfiWrAzoklqSWyDQJAAAAIA1lAD3xWYkeIeHv/R3P9i+XaoI7imFkMuYXCDTq843YU6Td+0mWpllCqAWUV/CQamGgQLtYy5S0ueoks01MoKdOMMhKVwqdr08nvCBdNKjIEd3gH6oBk/YRnjzxlEAYBsvCmM4a0jmhz0oNiRWlc/F+bkUeFKrBx/D2fdfZmhrGg==</elem>
+<elem key="bits">1024.0</elem>
+<elem key="fingerprint">600fcfe1c05f6a74d69024fac4d56ccd</elem>
+<elem key="type">ssh-dss</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.X - 4.X" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="3.0.20-Debian" extrainfo="workgroup: WORKGROUP" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="tcp" portid="3632"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="distccd" product="distccd" version="v1" extrainfo="(GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4)" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<osmatch name="OpenWrt White Russian 0.9 (Linux 2.4.30)" accuracy="92" line="46571">
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="2.4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.4.30</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18" accuracy="92" line="48737">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+</osmatch>
+<osmatch name="Dell Chassis Management Controller (CMC)" accuracy="92" line="21748">
+<osclass type="remote management" vendor="Dell" osfamily="embedded" accuracy="92"/>
+</osmatch>
+<osmatch name="D-Link DIR-300 NRU router (Linux 2.6.21)" accuracy="92" line="46739">
+<osclass type="broadband router" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.21</cpe></osclass>
+<osclass type="broadband router" vendor="D-Link" osfamily="embedded" accuracy="92"><cpe>cpe:/h:dlink:dir-300_nru</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.16 - 2.6.20" accuracy="92" line="48142">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.16 - 2.6.21" accuracy="92" line="48166">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18 - 2.6.27" accuracy="92" line="49881">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.21" accuracy="92" line="50551">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.21</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.23" accuracy="92" line="51704">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6.23</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.24 - 2.6.26 (Debian)" accuracy="92" line="52310">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=11/1%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DBC8D23%P=i686-pc-linux-gnu)&#xa;SEQ(SP=CA%GCD=1%ISR=CE%TI=Z%II=I%TS=8)&#xa;OPS(O1=M54DST11NW5%O2=M54DST11NW5%O3=M54DNNT11NW5%O4=M54DST11NW5%O5=M54DST11NW5%O6=M54DST11)&#xa;WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)&#xa;ECN(R=Y%DF=Y%TG=40%W=16D0%O=M54DNNSNW5%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="2761" lastboot="Fri Nov  1 12:07:06 2019"/>
+<distance value="2"/>
+<tcpsequence index="202" difficulty="Good luck!" values="96BFC04A,97125943,9681C5E4,96FB73C6,96F5F565,978E462B"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="100HZ" values="42292,42295,422A2,422AF,422B3,422C0"/>
+<hostscript><script id="clock-skew" output="mean: 4h00m22s, deviation: 0s, median: 4h00m22s"><elem key="mean">14422</elem>
+<elem key="median">14422</elem>
+<elem key="stddev">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 59488/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 22727/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 47197/udp): CLEAN (Timeout)&#xa;  Check 4 (port 40169/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Unix (Samba 3.0.20-Debian)&#xa;  NetBIOS computer name: &#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-11-01T15:52:44-04:00&#xa;"><elem key="os">Unix</elem>
+<elem key="lanmanager">Samba 3.0.20-Debian</elem>
+<elem key="domain">WORKGROUP\x00</elem>
+<elem key="server"></elem>
+<elem key="date">2019-11-01T15:52:44-04:00</elem>
+</script><script id="smb2-security-mode" output="Couldn&apos;t establish a SMBv2 connection."/><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><trace port="445" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="337.26"/>
+<hop ttl="2" ipaddr="10.10.10.3" rtt="31.30"/>
+</trace>
+<times srtt="252223" rttvar="332195" to="1581003"/>
+</host>
+<taskbegin task="NSE" time="1572637987"/>
+<taskend task="NSE" time="1572637987"/>
+<taskbegin task="NSE" time="1572637987"/>
+<taskend task="NSE" time="1572637987"/>
+<runstats><finished time="1572637987" timestr="Fri Nov  1 12:53:07 2019" elapsed="1374.33" summary="Nmap done at Fri Nov  1 12:53:07 2019; 1 IP address (1 host up) scanned in 1374.33 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

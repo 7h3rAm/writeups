@@ -1,0 +1,30 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.187
++ Target Hostname:    192.168.92.187
++ Target Port:        8080
++ Start Time:         2019-10-11 12:14:32 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.29 (Ubuntu)
++ Server leaks inodes via ETags, header found with file /, fields: 0x2aa6 0x58a38e5a14c97 
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ OSVDB-3268: /scripts/: Directory indexing found.
++ Allowed HTTP Methods: GET, POST, OPTIONS, HEAD 
++ OSVDB-3268: /help/: Directory indexing found.
++ /help/: Help directory should not be accessible
++ OSVDB-3268: /development/: Directory indexing found.
++ OSVDB-3092: /development/: This might be interesting...
++ OSVDB-3092: /scripts/: This might be interesting... possibly a system shell found.
++ OSVDB-3268: /manual/: Directory indexing found.
++ OSVDB-3092: /manual/: Web server manual found.
++ OSVDB-3268: /images/: Directory indexing found.
++ OSVDB-3268: /images/?pattern=/etc/*&sort=name: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ Uncommon header 'x-redirect-by' found, with contents: WordPress
++ /debug/: Possible debug directory/program found.
++ 8348 requests: 0 error(s) and 18 item(s) reported on remote host
++ End Time:           2019-10-11 12:18:24 (GMT-7) (232 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

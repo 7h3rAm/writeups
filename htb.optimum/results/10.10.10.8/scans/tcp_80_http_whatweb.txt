@@ -1,0 +1,51 @@
+WhatWeb report for http://10.10.10.8:80
+Status    : 200 OK
+Title     : HFS /
+IP        : 10.10.10.8
+Country   : RESERVED, ZZ
+
+Summary   : HttpFileServer, Cookies[HFS_SID], Script[text/javascript], HTTPServer[HFS 2.3], JQuery
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : HFS_SID
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : HFS 2.3 (from server string)
+
+[ HttpFileServer ]
+	You can use HFS (HTTP File Server) to send and receive 
+	files. Access your remote files, over the network. 
+
+	Google Dorks: (1)
+	Website     : http://www.rejetto.com/hfs/
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Content-Length: 1670
+	Accept-Ranges: bytes
+	Server: HFS 2.3
+	Set-Cookie: HFS_SID=0.435868254862726; path=/;
+	Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+	Content-Encoding: gzip
+	

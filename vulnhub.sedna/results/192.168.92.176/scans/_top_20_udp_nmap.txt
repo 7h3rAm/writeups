@@ -1,0 +1,105 @@
+# Nmap 7.70 scan initiated Wed Sep 18 18:02:07 2019 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/vulnhub.sedna/results/192.168.92.176/scans/xml/_top_20_udp_nmap.xml 192.168.92.176
+Nmap scan report for 192.168.92.176
+Host is up, received arp-response (0.00056s latency).
+Scanned at 2019-09-18 18:02:07 PDT for 258s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open          domain       udp-response ttl 64 (generic dns response: NOTIMP)
+| dns-nsid: 
+|_  bind.version: 9.9.5-3-Ubuntu
+|_dns-recursion: Recursion appears to be enabled
+| fingerprint-strings: 
+|   DNS-SD: 
+|     _services
+|     _dns-sd
+|     _udp
+|     local
+|     root-servers
+|   NBTStat: 
+|     CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+|_    root-servers
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    closed        tftp         port-unreach ttl 64
+123/udp   closed        ntp          port-unreach ttl 64
+135/udp   open|filtered msrpc        no-response
+137/udp   open          netbios-ns?  udp-response ttl 64
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   closed        snmp         port-unreach ttl 64
+162/udp   open|filtered snmptrap     no-response
+445/udp   open|filtered microsoft-ds no-response
+500/udp   open|filtered isakmp       no-response
+514/udp   closed        syslog       port-unreach ttl 64
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  closed        ms-sql-m     port-unreach ttl 64
+1900/udp  closed        upnp         port-unreach ttl 64
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-UDP:V=7.70%I=9%D=9/18%Time=5D82D39E%P=i686-pc-linux-gnu%r(DNSSta
+SF:tusRequest,C,"\0\0\x90\x04\0\0\0\0\0\0\0\0")%r(RPCCheck,C,"r\xfe\x99\x1
+SF:1\0\0\0\0\0\0\0\0")%r(NBTStat,105,"\x80\xf0\x80\x90\0\x01\0\0\0\r\0\0\x
+SF:20CKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\0\0!\0\x01\0\0\x02\0\x01\0\x07\x86\x
+SF:0c\0\x14\x01c\x0croot-servers\x03net\0\0\0\x02\0\x01\0\x07\x86\x0c\0\x0
+SF:4\x01m\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01g\xc0\?\0\0\x02\0\x01
+SF:\0\x07\x86\x0c\0\x04\x01j\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01e\
+SF:xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01l\xc0\?\0\0\x02\0\x01\0\x07\
+SF:x86\x0c\0\x04\x01h\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01f\xc0\?\0
+SF:\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01d\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c
+SF:\0\x04\x01a\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\x01k\xc0\?\0\0\x02\
+SF:0\x01\0\x07\x86\x0c\0\x04\x01i\xc0\?\0\0\x02\0\x01\0\x07\x86\x0c\0\x04\
+SF:x01b\xc0\?")%r(LDAPSearchReqUDP,C,"0\x84\x80\x01\0\0\0\0\0\0\0\0")%r(SI
+SF:POptions,C,"OP\xd0\x01\0\0\0\0\0\0\0\0")%r(NTPRequest,11,"\xe3\0\x80\x1
+SF:1\0\x01\0\0\0\0\0\0\0\0\0\0\0")%r(SNMPv1public,C,"0\x82\x80\x01\0\0\0\0
+SF:\0\0\0\0")%r(SNMPv3GetRequest,C,"0:\x80\x01\0\0\0\0\0\0\0\0")%r(AFSVers
+SF:ionRequest,C,"\0\0\x81\x01\0\0\0\0\0\0\0\0")%r(ibm-db2-das-udp,C,"DB\xb
+SF:0\x01\0\0\0\0\0\0\0\0")%r(DNS-SD,101,"\0\0\x80\x80\0\x01\0\0\0\r\0\0\t_
+SF:services\x07_dns-sd\x04_udp\x05local\0\0\x0c\0\x01\0\0\x02\0\x01\0\x07\
+SF:x85\xd0\0\x14\x01k\x0croot-servers\x03net\0\0\0\x02\0\x01\0\x07\x85\xd0
+SF:\0\x04\x01i\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01h\xc0;\0\0\x02\0\
+SF:x01\0\x07\x85\xd0\0\x04\x01e\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01
+SF:d\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01a\xc0;\0\0\x02\0\x01\0\x07\
+SF:x85\xd0\0\x04\x01b\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01g\xc0;\0\0
+SF:\x02\0\x01\0\x07\x85\xd0\0\x04\x01j\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\
+SF:x04\x01c\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01l\xc0;\0\0\x02\0\x01
+SF:\0\x07\x85\xd0\0\x04\x01f\xc0;\0\0\x02\0\x01\0\x07\x85\xd0\0\x04\x01m\x
+SF:c0;")%r(Citrix,C,"\x1e\0\x81\x11\0\0\0\0\0\0\0\0")%r(Kerberos,C,"j\x81\
+SF:xe8\x11\0\0\0\0\0\0\0\0")%r(SqueezeCenter,C,"eI\xd0\x01\0\0\0\0\0\0\0\0
+SF:")%r(Quake1_server_info,C,"\x80\0\x80\x01\0\0\0\0\0\0\0\0");
+MAC Address: 00:0C:29:53:40:6E (VMware)
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=9/18%OT=%CT=%CU=69%PV=Y%DS=1%DC=D%G=N%M=000C29%TM=5D82D491%P=i686-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+Host script results:
+| nbstat: NetBIOS name: SEDNA, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   SEDNA<00>            Flags: <unique><active>
+|   SEDNA<03>            Flags: <unique><active>
+|   SEDNA<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.56 ms 192.168.92.176
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 18:06:25 2019 -- 1 IP address (1 host up) scanned in 259.01 seconds

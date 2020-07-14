@@ -1,0 +1,21 @@
+HTTP/1.1 200 OK
+Date: Wed, 18 Sep 2019 21:24:15 GMT
+Server: Apache/2.2.22 (Ubuntu)
+Last-Modified: Mon, 24 Oct 2016 06:56:49 GMT
+ETag: "24bac-10f-53f96e55d4191"
+Accept-Ranges: bytes
+Content-Length: 271
+Vary: Accept-Encoding
+Content-Type: text/plain
+X-Pad: avoid browser bug
+
+Disallow: Hackers
+Allow: /wordpress/
+   ____                              
+#  /___ \_   _  __ _  ___   __ _ _ __ 
+# //  / / | | |/ _` |/ _ \ / _` | '__|
+#/ \_/ /| |_| | (_| | (_) | (_| | |   
+#\___,_\ \__,_|\__,_|\___/ \__,_|_|   
+                                     
+
+

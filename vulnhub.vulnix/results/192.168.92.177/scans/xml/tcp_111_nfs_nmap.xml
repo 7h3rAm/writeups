@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Sep 19 17:29:44 2019 as: nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.177 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.vulnix/results/192.168.92.177/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.177" start="1568939384" startstr="Thu Sep 19 17:29:44 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568939390"/>
+<taskend task="NSE" time="1568939390"/>
+<taskbegin task="NSE" time="1568939390"/>
+<taskend task="NSE" time="1568939390"/>
+<taskbegin task="NSE" time="1568939390"/>
+<taskend task="NSE" time="1568939390"/>
+<taskbegin task="ARP Ping Scan" time="1568939391"/>
+<taskend task="ARP Ping Scan" time="1568939391" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568939391"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568939391"/>
+<taskbegin task="SYN Stealth Scan" time="1568939391"/>
+<taskend task="SYN Stealth Scan" time="1568939391" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568939391"/>
+<taskend task="Service scan" time="1568939397" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568939397"/>
+<taskend task="NSE" time="1568939412"/>
+<taskbegin task="NSE" time="1568939412"/>
+<taskend task="NSE" time="1568939413"/>
+<taskbegin task="NSE" time="1568939413"/>
+<taskend task="NSE" time="1568939413"/>
+<host starttime="1568939391" endtime="1568939413"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.177" addrtype="ipv4"/>
+<address addr="00:0C:29:87:38:08" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="nfs-ls" output="Volume /home/vulnix&#xa;  access: NoRead NoLookup NoModify NoExtend NoDelete NoExecute&#xa;"><table key="volumes">
+<table>
+<elem key="volume">/home/vulnix</elem>
+<table key="info">
+<elem>access: NoRead NoLookup NoModify NoExtend NoDelete NoExecute</elem>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="bytes">0</elem>
+<elem key="files">0</elem>
+</table>
+</script><script id="nfs-showmount" output="&#xa;  /home/vulnix *&#xa;"/><script id="nfs-statfs" output="&#xa;  Filesystem    1K-blocks  Used      Available  Use%  Maxfilesize  Maxlink&#xa;  /home/vulnix  792040.0   714080.0  38232.0    95%   8.0T         32000&#xa;"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100003  2,3,4       2049/tcp  nfs&#xa;  100003  2,3,4       2049/udp  nfs&#xa;  100005  1,2,3      50680/tcp  mountd&#xa;  100005  1,2,3      51785/udp  mountd&#xa;  100021  1,3,4      35231/udp  nlockmgr&#xa;  100021  1,3,4      57819/tcp  nlockmgr&#xa;  100024  1          51959/udp  status&#xa;  100024  1          59222/tcp  status&#xa;  100227  2,3         2049/tcp  nfs_acl&#xa;  100227  2,3         2049/udp  nfs_acl&#xa;"><table key="100003">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100000">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+</table>
+</table>
+<table key="100227">
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100021">
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">35231</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">57819</elem>
+</table>
+</table>
+<table key="100024">
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">51959</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">59222</elem>
+</table>
+</table>
+<table key="100005">
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">51785</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+<elem key="port">50680</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="8965" rttvar="9569" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568939413"/>
+<taskend task="NSE" time="1568939413"/>
+<taskbegin task="NSE" time="1568939413"/>
+<taskend task="NSE" time="1568939413"/>
+<taskbegin task="NSE" time="1568939413"/>
+<taskend task="NSE" time="1568939413"/>
+<runstats><finished time="1568939413" timestr="Thu Sep 19 17:30:13 2019" elapsed="28.89" summary="Nmap done at Thu Sep 19 17:30:13 2019; 1 IP address (1 host up) scanned in 28.89 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

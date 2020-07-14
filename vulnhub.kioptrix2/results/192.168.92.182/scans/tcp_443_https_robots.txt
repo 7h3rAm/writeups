@@ -1,0 +1,16 @@
+HTTP/1.1 404 Not Found
+Date: Fri, 27 Sep 2019 22:07:35 GMT
+Server: Apache/2.0.52 (CentOS)
+Content-Length: 289
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL /robots.txt was not found on this server.</p>
+<hr>
+<address>Apache/2.0.52 (CentOS) Server at 192.168.92.182 Port 443</address>
+</body></html>

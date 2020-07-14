@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Oct  9 12:12:29 2019 as: nmap -vv -&#45;reason -Pn -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/tcp_8080_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/tcp_8080_http_nmap.xml 192.168.92.185 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/tcp_8080_http_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix5/results/192.168.92.185/scans/xml/tcp_8080_http_nmap.xml 192.168.92.185" start="1570648349" startstr="Wed Oct  9 12:12:29 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8080"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570648350"/>
+<taskend task="NSE" time="1570648350"/>
+<taskbegin task="NSE" time="1570648350"/>
+<taskend task="NSE" time="1570648350"/>
+<taskbegin task="ARP Ping Scan" time="1570648351"/>
+<taskend task="ARP Ping Scan" time="1570648351" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570648351"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570648351"/>
+<taskbegin task="SYN Stealth Scan" time="1570648351"/>
+<taskend task="SYN Stealth Scan" time="1570648351" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1570648351"/>
+<taskend task="Service scan" time="1570648358" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1570648358"/>
+<taskprogress task="NSE" time="1570648389" percent="68.81" remaining="15" etc="1570648403"/>
+<taskprogress task="NSE" time="1570648420" percent="82.00" remaining="14" etc="1570648434"/>
+<taskprogress task="NSE" time="1570648450" percent="82.41" remaining="20" etc="1570648470"/>
+<taskprogress task="NSE" time="1570648480" percent="84.14" remaining="23" etc="1570648503"/>
+<taskprogress task="NSE" time="1570648510" percent="85.11" remaining="27" etc="1570648537"/>
+<taskprogress task="NSE" time="1570648540" percent="86.41" remaining="29" etc="1570648569"/>
+<taskprogress task="NSE" time="1570648570" percent="88.03" remaining="29" etc="1570648599"/>
+<taskprogress task="NSE" time="1570648600" percent="97.43" remaining="7" etc="1570648606"/>
+<taskprogress task="NSE" time="1570648630" percent="99.04" remaining="3" etc="1570648633"/>
+<taskprogress task="NSE" time="1570648660" percent="99.68" remaining="1" etc="1570648661"/>
+<taskend task="NSE" time="1570648675"/>
+<taskbegin task="NSE" time="1570648675"/>
+<taskend task="NSE" time="1570648675"/>
+<host starttime="1570648351" endtime="1570648675"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.185" addrtype="ipv4"/>
+<address addr="00:0C:29:0B:79:90" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.21" extrainfo="(FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.21</cpe></service><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-chrono" output="Request times for /; avg: 16093.07ms; min: 16000.89ms; max: 16337.86ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=192.168.92.185&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 403&#xa;  &#x9;http://192.168.92.185:8080/&#xa;"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-traceroute" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 403"><elem key="Status for browser useragent">403</elem>
+</script><script id="http-vhosts" output="&#xa;127 names had status ERROR"/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="564" rttvar="3891" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1570648675"/>
+<taskend task="NSE" time="1570648675"/>
+<taskbegin task="NSE" time="1570648675"/>
+<taskend task="NSE" time="1570648675"/>
+<runstats><finished time="1570648675" timestr="Wed Oct  9 12:17:55 2019" elapsed="326.47" summary="Nmap done at Wed Oct  9 12:17:55 2019; 1 IP address (1 host up) scanned in 326.47 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

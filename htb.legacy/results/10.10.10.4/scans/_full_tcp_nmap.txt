@@ -1,0 +1,81 @@
+# Nmap 7.70 scan initiated Fri Nov  1 14:44:28 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.legacy/results/10.10.10.4/scans/xml/_full_tcp_nmap.xml 10.10.10.4
+Nmap scan report for 10.10.10.4
+Host is up, received user-set (0.052s latency).
+Scanned at 2019-11-01 14:44:28 PDT for 706s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT     STATE  SERVICE       REASON          VERSION
+139/tcp  open   netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp  open   microsoft-ds  syn-ack ttl 127 Windows XP microsoft-ds
+3389/tcp closed ms-wbt-server reset ttl 127
+Device type: general purpose|specialized
+Running (JUST GUESSING): Microsoft Windows 2000|XP|2003 (92%), General Dynamics embedded (88%)
+OS CPE: cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_xp::sp2 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_server_2003
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Microsoft Windows 2000 SP4 or Windows XP SP2 or SP3 (92%), Microsoft Windows XP SP2 (92%), Microsoft Windows XP SP2 or Windows Small Business Server 2003 (91%), Microsoft Windows 2000 SP4 (90%), Microsoft Windows XP Professional SP3 (90%), Microsoft Windows XP SP2 or SP3 (90%), Microsoft Windows XP SP3 (90%), Microsoft Windows XP SP2 or Windows Server 2003 (90%), Microsoft Windows 2000 Server (89%), Microsoft Windows Server 2003 (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/1%OT=139%CT=3389%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DBCA9FE%P=i686-pc-linux-gnu)
+SEQ(SP=108%GCD=1%ISR=10A%TI=I%CI=I%II=I%SS=S%TS=0)
+OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)
+WIN(W1=44E9%W2=44E9%W3=4100%W4=40E8%W5=40E8%W6=402E)
+ECN(R=Y%DF=Y%TG=80%W=44E9%O=M54DNW0NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=N%TG=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=S%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -3h59m53s, deviation: 1h24m51s, median: -4h59m53s
+| nbstat: NetBIOS name: LEGACY, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b9:0c:03 (VMware)
+| Names:
+|   LEGACY<00>           Flags: <unique><active>
+|   HTB<00>              Flags: <group><active>
+|   LEGACY<20>           Flags: <unique><active>
+|   HTB<1e>              Flags: <group><active>
+|   HTB<1d>              Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| Statistics:
+|   00 50 56 b9 0c 03 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 40600/tcp): CLEAN (Timeout)
+|   Check 2 (port 13850/tcp): CLEAN (Timeout)
+|   Check 3 (port 50902/udp): CLEAN (Timeout)
+|   Check 4 (port 54226/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: legacy
+|   NetBIOS computer name: LEGACY\x00
+|   Workgroup: HTB\x00
+|_  System time: 2019-11-01T20:52:07+02:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT      ADDRESS
+1   55.10 ms 10.10.14.1
+2   55.08 ms 10.10.10.4
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 14:56:14 2019 -- 1 IP address (1 host up) scanned in 706.41 seconds

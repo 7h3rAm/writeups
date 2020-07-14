@@ -1,0 +1,4 @@
+http://192.168.92.187:80/admin (Status: 200) [Size: 42]
+http://192.168.92.187:80/examples (Status: 200) [Size: 6937]
+http://192.168.92.187:80/init (Status: 200) [Size: 5782]
+http://192.168.92.187:80/server-status (Status: 403) [Size: 302]

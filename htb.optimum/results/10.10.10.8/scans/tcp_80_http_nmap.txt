@@ -1,0 +1,435 @@
+# Nmap 7.70 scan initiated Mon Nov  4 17:35:16 2019 as: nmap -vv --reason -Pn -sV -p 80 --script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer) -oN /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/tcp_80_http_nmap.txt -oX /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/xml/tcp_80_http_nmap.xml 10.10.10.8
+Nmap scan report for 10.10.10.8
+Host is up, received user-set (0.053s latency).
+Scanned at 2019-11-04 17:35:17 PST for 558s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 HttpFileServer httpd 2.3
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.8
+|   url                          method
+|_  http://10.10.10.8:80/~login  HTTP: Basic
+|_http-chrono: Request times for /; avg: 580.95ms; min: 451.73ms; max: 712.36ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.8
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 53
+|     Comment: 
+|          // remove progress indicators and this button too
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 153
+|     Comment: 
+|          // this is global
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 57
+|     Comment: 
+|          // refresh information
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 402
+|     Comment: 
+|          // a leading "\" will invert the logic
+|     
+|     Path: http://10.10.10.8:80/
+|     Line number: 14
+|     Comment: 
+|          // this object will store some %symbols% in the javascript space, so that libs can read them
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 430
+|     Comment: 
+|          // getCookie
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 123
+|     Comment: 
+|          // give up
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 80
+|     Comment: 
+|          // the submitter button won't expand the popup, but sets the flag to avoid the popup to be closed
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 45
+|     Comment: 
+|          // build the gui
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 60
+|     Comment: 
+|          // until the request is fulfilled, we give it 3 times the refresh time
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 361
+|     Comment: 
+|          // there s no work to do
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 425
+|     Comment: 
+|          // setCookie
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 41
+|     Comment: 
+|          // on submit			
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 1
+|     Comment: 
+|          // this is here for the syntax highlighter
+|     
+|     Path: http://10.10.10.8:80/?mode=jquery
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * jQuery JavaScript Library v1.4.2
+|          * http://jquery.com/
+|          *
+|          * Copyright 2010, John Resig
+|          * Dual licensed under the MIT or GPL Version 2 licenses.
+|          * http://jquery.org/license
+|          *
+|          * Includes Sizzle.js
+|          * http://sizzlejs.com/
+|          * Copyright 2010, The Dojo Foundation
+|          * Released under the MIT, BSD, and GPL Licenses.
+|          *
+|          * Date: Sat Feb 13 22:33:48 2010 -0500
+|          */
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 29
+|     Comment: 
+|          // this must be done after the above instruction, so we'll clone also the behavior. 
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 434
+|     Comment: 
+|          // delCookie
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 48
+|     Comment: 
+|          // stop submit/upload
+|     
+|     Path: http://10.10.10.8:80/?mode=jquery
+|     Line number: 123
+|     Comment: 
+|         /*"}},lastModified:{},etag:{},ajax:function(a){function b(){e.success&&
+|         e.success.call(k,o,i,x);e.global&&f("ajaxSuccess",[x,e])}function d(){e.complete&&e.complete.call(k,x,i);e.global&&f("ajaxComplete",[x,e]);e.global&&!--c.active&&c.event.trigger("ajaxStop")}function f(q,p){(e.context?c(e.context):c.event).trigger(q,p)}var e=c.extend(true,{},c.ajaxSettings,a),j,i,o,k=a&&a.context||e,n=e.type.toUpperCase();if(e.data&&e.processData&&typeof e.data!=="string")e.data=c.param(e.data,e.traditional);if(e.dataType==="jsonp"){if(n==="GET")N.test(e.url)||(e.url+=(ka.test(e.url)?
+|         "&":"?")+(e.jsonp||"callback")+"=?");else if(!e.data||!N.test(e.data))e.data=(e.data?e.data+"&":"")+(e.jsonp||"callback")+"=?";e.dataType="json"}if(e.dataType==="json"&&(e.data&&N.test(e.data)||N.test(e.url))){j=e.jsonpCallback||"jsonp"+sb++;if(e.data)e.data=(e.data+"").replace(N,"="+j+"$1");e.url=e.url.replace(N,"="+j+"$1");e.dataType="script";A[j]=A[j]||function(q){o=q;b();d();A[j]=w;try{delete A[j]}catch(p){}z&&z.removeChild(C)}}if(e.dataType==="script"&&e.cache===null)e.cache=false;if(e.cache===
+|         false&&n==="GET"){var r=J(),u=e.url.replace(wb,"$1_="+r+"$2");e.url=u+(u===e.url?(ka.test(e.url)?"&":"?")+"_="+r:"")}if(e.data&&n==="GET")e.url+=(ka.test(e.url)?"&":"?")+e.data;e.global&&!c.active++&&c.event.trigger("ajaxStart");r=(r=xb.exec(e.url))&&(r[1]&&r[1]!==location.protocol||r[2]!==location.host);if(e.dataType==="script"&&n==="GET"&&r){var z=s.getElementsByTagName("head")[0]||s.documentElement,C=s.createElement("script");C.src=e.url;if(e.scriptCharset)C.charset=e.scriptCharset;if(!j){var B=
+|         false;C.onload=C.onreadystatechange=function(){if(!B&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){B=true;b();d();C.onload=C.onreadystatechange=null;z&&C.parentNode&&z.removeChild(C)}}}z.insertBefore(C,z.firstChild);return w}var E=false,x=e.xhr();if(x){e.username?x.open(n,e.url,e.async,e.username,e.password):x.open(n,e.url,e.async);try{if(e.data||a&&a.contentType)x.setRequestHeader("Content-Type",e.contentType);if(e.ifModified){c.lastModified[e.url]&&x.setRequestHeader("If-Modified-Since",
+|         c.lastModified[e.url]);c.etag[e.url]&&x.setRequestHeader("If-None-Match",c.etag[e.url])}r||x.setRequestHeader("X-Requested-With","XMLHttpRequest");x.setRequestHeader("Accept",e.dataType&&e.accepts[e.dataType]?e.accepts[e.dataType]+", */
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 406
+|     Comment: 
+|          // in this case let the user decide exactly how it is placed in the string  
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 388
+|     Comment: 
+|          // reload
+|     
+|     Path: http://10.10.10.8:80/
+|     Line number: 20
+|     Comment: 
+|         <!-- -->
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 77
+|     Comment: 
+|          // search options appear when it gets focus
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 113
+|     Comment: 
+|          // here we make some changes trying to make the panel fit the window
+|     
+|     Path: http://10.10.10.8:80/
+|     Line number: 120
+|     Comment: 
+|         <!-- Build-time: 0.016 -->
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 34
+|     Comment: 
+|          // make it popup by button, so we save some vertical space and avoid some scrollbar
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 15
+|     Comment: 
+|          // selecting functionality
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 21
+|     Comment: 
+|          // infinite upload fields available
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 315
+|     Comment: 
+|          // what2do is a list of actions we are supposed to do if the ajax result is "ok"
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 71
+|     Comment: 
+|          // javascript wants it in milliseconds
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 138
+|     Comment: 
+|          // at this time the page is not correctly formatted in IE6
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 218
+|     Comment: 
+|          // getItemName
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 133
+|     Comment: 
+|          // darn you ie6!
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 20
+|     Comment: 
+|          // this was hiding things for those w/o js capabilities
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 290
+|     Comment: 
+|          // ENTER key is like submit, but not in textarea
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 109
+|     Comment: 
+|          // workaround for those browsers not supporting :first-child selector used in style
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 269
+|     Comment: 
+|          // load on demand
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 196
+|     Comment: 
+|          // we handle elements, not jquery sets  
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 264
+|     Comment: 
+|          // 2 parameters means "options" is missing
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 259
+|     Comment: 
+|          // restore it
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 212
+|     Comment: 
+|          // folders have a trailing slash that's not truly part of the name
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 215
+|     Comment: 
+|          // it is encoded
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 249
+|     Comment: 
+|          // we'll wait.
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 209
+|     Comment: 
+|          // current folder is specified. Remove it.
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 191
+|     Comment: 
+|          // selectedChanged
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 70
+|     Comment: 
+|          // choose the time, in seconds
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 28
+|     Comment: 
+|          // we must create an empty "template", by cloning before it's set to a file, because on some browsers (Opera 10) emptying the value run-time is not allowed.
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 202
+|     Comment: 
+|          // take the url, and ignore any #anchor part
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 205
+|     Comment: 
+|          // remove protocol and hostname
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 164
+|     Comment: 
+|          // hold it still
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 159
+|     Comment: 
+|          // this happens when the page is not formatted at this exact time, and the table is misplaced 
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 54
+|     Comment: 
+|          // re-show the form
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 8
+|     Comment: 
+|          // outsideV
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 307
+|     Comment: 
+|         
+|         // this is a factory for ajax request handlers
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 323
+|     Comment: 
+|          // you specify exactly what to do
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 44
+|     Comment: 
+|          // we don't need the form anymore, make space for the progress bars
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 13
+|     Comment: 
+|          // make these links into buttons for homogeneity
+|     
+|     Path: http://10.10.10.8:80/?mode=section&id=lib.js
+|     Line number: 43
+|     Comment: 
+|_         // no file, no submit
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.10.8
+|   Found the following error pages: 
+|   
+|   Error Code: 401
+|_  	http://10.10.10.8:80/~login
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|_    Couldn't find a file-type field.
+| http-headers: 
+|   Content-Type: text/html
+|   Content-Length: 3845
+|   Accept-Ranges: bytes
+|   Server: HFS 2.3
+|   Set-Cookie: HFS_SID=0.45689312950708; path=/; 
+|   Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-malware-host: Host appears to be clean
+| http-method-tamper: 
+|   VULNERABLE:
+|   Authentication bypass by HTTP verb tampering
+|     State: VULNERABLE (Exploitable)
+|       This web server contains password protected resources vulnerable to authentication bypass
+|       vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the
+|        common HTTP methods and in misconfigured .htaccess files.
+|              
+|     Extra information:
+|       
+|   URIs suspected to be vulnerable to HTTP verb tampering:
+|     /~login [HEAD]
+|   
+|     References:
+|       https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29
+|       http://www.mkit.com.ar/labs/htexploit/
+|       http://capec.mitre.org/data/definitions/274.html
+|_      http://www.imperva.com/resources/glossary/http_verb_tampering.html
+| http-methods: 
+|_  Supported Methods: GET POST
+|_http-mobileversion-checker: No mobile version detected.
+|_http-php-version: Credits query returned unknown hash 051e4714bf6d53c533ab202e1b1018e7
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|_  http://ajax.googleapis.com:80/ajax/libs/jquery/1.4.4/jquery.js
+| http-screenshot-html: 
+|_  Saved to 10.10.10.8-80.png
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: no-cache, no-store, must-revalidate, max-age=-1
+|_http-server-header: HFS 2.3
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 9; ico: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 9; ico: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: HFS /
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     Python-urllib/2.5
+|     GT::WWW
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 32 names had status ERROR
+|_95 names had status 200
+| http-vuln-cve2011-3192: 
+|   VULNERABLE:
+|   Apache byterange filter DoS
+|     State: VULNERABLE
+|     IDs:  OSVDB:74721  CVE:CVE-2011-3192
+|       The Apache web server is vulnerable to a denial of service attack when numerous
+|       overlapping byte ranges are requested.
+|     Disclosure date: 2011-08-19
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3192
+|       http://nessus.org/plugins/index.php?view=single&id=55976
+|       http://seclists.org/fulldisclosure/2011/Aug/175
+|_      http://osvdb.org/74721
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  4 17:44:35 2019 -- 1 IP address (1 host up) scanned in 558.86 seconds

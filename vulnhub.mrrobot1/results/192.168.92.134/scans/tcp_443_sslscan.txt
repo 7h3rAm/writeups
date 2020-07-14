@@ -1,0 +1,79 @@
+Version: 1.11.11-static
+OpenSSL 1.0.2-chacha (1.0.2g-dev)
+
+Connected to 192.168.92.134
+
+Testing SSL server 192.168.92.134 on port 443 using SNI name 192.168.92.134
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLS 1.2 not vulnerable to heartbleed
+TLS 1.1 not vulnerable to heartbleed
+TLS 1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-GCM-SHA256   Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA256       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Preferred TLSv1.1  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Preferred TLSv1.0  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIBqzCCARQCCQCgSfELirADCzANBgkqhkiG9w0BAQUFADAaMRgwFgYDVQQDDA93
+d3cuZXhhbXBsZS5jb20wHhcNMTUwOTE2MTA0NTAzWhcNMjUwOTEzMTA0NTAzWjAa
+MRgwFgYDVQQDDA93d3cuZXhhbXBsZS5jb20wgZ8wDQYJKoZIhvcNAQEBBQADgY0A
+MIGJAoGBANlxG/38e8Dy/mxwZzBboYF64tu1n8c2zsWOw8FFU0azQFxv7RPKcGwt
+sALkdAMkNcWS7J930xGamdCZPdoRY4hhfesLIshZxpyk6NoYBkmtx+GfwrrLh6mU
+yvsyno29GAlqYWfffzXRoibdDtGTn9NeMqXobVTTKTaR0BGspOS5AgMBAAEwDQYJ
+KoZIhvcNAQEFBQADgYEASfG0dH3x4/XaN6IWwaKo8XeRStjYTy/uBJEBUERlP17X
+1TooZOYbvgFAqK8DPOl7EkzASVeu0mS5orfptWjOZ/UWVZujSNj7uu7QR4vbNERx
+ncZrydr7FklpkIN5Bj8SYc94JI9GsrHip4mpbystXkxncoOVESjRBES/iatbkl0=
+-----END CERTIFICATE-----
+    Version: 0
+    Serial Number: a0:49:f1:0b:8a:b0:03:0b
+    Signature Algorithm: sha1WithRSAEncryption
+    Issuer: /CN=www.example.com
+    Not valid before: Sep 16 10:45:03 2015 GMT
+    Not valid after: Sep 13 10:45:03 2025 GMT
+    Subject: /CN=www.example.com
+    Public Key Algorithm: rsaEncryption
+    RSA Public Key: (1024 bit)
+      Public-Key: (1024 bit)
+      Modulus:
+          00:d9:71:1b:fd:fc:7b:c0:f2:fe:6c:70:67:30:5b:
+          a1:81:7a:e2:db:b5:9f:c7:36:ce:c5:8e:c3:c1:45:
+          53:46:b3:40:5c:6f:ed:13:ca:70:6c:2d:b0:02:e4:
+          74:03:24:35:c5:92:ec:9f:77:d3:11:9a:99:d0:99:
+          3d:da:11:63:88:61:7d:eb:0b:22:c8:59:c6:9c:a4:
+          e8:da:18:06:49:ad:c7:e1:9f:c2:ba:cb:87:a9:94:
+          ca:fb:32:9e:8d:bd:18:09:6a:61:67:df:7f:35:d1:
+          a2:26:dd:0e:d1:93:9f:d3:5e:32:a5:e8:6d:54:d3:
+          29:36:91:d0:11:ac:a4:e4:b9
+      Exponent: 65537 (0x10001)
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha1WithRSAEncryption
+RSA Key Strength:    1024
+
+Subject:  www.example.com
+Issuer:   www.example.com
+
+Not valid before: Sep 16 10:45:03 2015 GMT
+Not valid after:  Sep 13 10:45:03 2025 GMT

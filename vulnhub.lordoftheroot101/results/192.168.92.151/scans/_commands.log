@@ -1,0 +1,10 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_full_tcp_nmap.xml" 192.168.92.151
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_top_20_udp_nmap.xml" 192.168.92.151
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/_quick_tcp_nmap.xml" 192.168.92.151
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 192.168.92.151:22 2>&1 | tee "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/tcp_22_ssh_nmap.txt" -oX "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/xml/tcp_22_ssh_nmap.xml" 192.168.92.151
+

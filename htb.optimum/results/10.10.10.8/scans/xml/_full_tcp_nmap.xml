@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Nov  4 17:34:57 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/xml/_full_tcp_nmap.xml 10.10.10.8 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/xml/_full_tcp_nmap.xml 10.10.10.8" start="1572917697" startstr="Mon Nov  4 17:34:57 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572917697"/>
+<taskend task="NSE" time="1572917697"/>
+<taskbegin task="NSE" time="1572917697"/>
+<taskend task="NSE" time="1572917697"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572917697"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572917697"/>
+<taskbegin task="SYN Stealth Scan" time="1572917697"/>
+<taskprogress task="SYN Stealth Scan" time="1572917728" percent="5.04" remaining="585" etc="1572918312"/>
+<taskprogress task="SYN Stealth Scan" time="1572917761" percent="10.49" remaining="547" etc="1572918307"/>
+<taskprogress task="SYN Stealth Scan" time="1572917791" percent="18.39" remaining="418" etc="1572918208"/>
+<taskprogress task="SYN Stealth Scan" time="1572917821" percent="24.39" remaining="385" etc="1572918205"/>
+<taskprogress task="SYN Stealth Scan" time="1572917967" percent="42.98" remaining="359" etc="1572918325"/>
+<taskprogress task="SYN Stealth Scan" time="1572917997" percent="53.88" remaining="257" etc="1572918254"/>
+<taskprogress task="SYN Stealth Scan" time="1572918027" percent="59.92" remaining="221" etc="1572918248"/>
+<taskprogress task="SYN Stealth Scan" time="1572918057" percent="66.31" remaining="183" etc="1572918240"/>
+<taskprogress task="SYN Stealth Scan" time="1572918087" percent="78.57" remaining="107" etc="1572918193"/>
+<taskprogress task="SYN Stealth Scan" time="1572918117" percent="88.42" remaining="55" etc="1572918172"/>
+<taskprogress task="SYN Stealth Scan" time="1572918147" percent="93.63" remaining="31" etc="1572918178"/>
+<taskend task="SYN Stealth Scan" time="1572918190" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1572918190"/>
+<taskend task="Service scan" time="1572918196" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1572918202"/>
+<taskend task="Traceroute" time="1572918203"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1572918203"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1572918203"/>
+<taskbegin task="NSE" time="1572918203"/>
+<taskend task="NSE" time="1572918206"/>
+<taskbegin task="NSE" time="1572918206"/>
+<taskend task="NSE" time="1572918206"/>
+<host starttime="1572917697" endtime="1572918206"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.8" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="HttpFileServer httpd" version="2.3" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:rejetto:httpfileserver:2.3</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-server-header" output="HFS 2.3"><elem>HFS 2.3</elem>
+</script><script id="http-title" output="HFS /"><elem key="title">HFS /</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2012" accuracy="90" line="75072">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="90" line="75205">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="90" line="75243">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional" accuracy="85" line="76506">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="85"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.70%E=4%D=11/4%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DC0D3BE%P=i686-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=10C%TS=7)&#xa;SEQ(SP=105%GCD=1%ISR=10C%II=I%TS=7)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="92185" lastboot="Sun Nov  3 16:07:01 2019"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="60FB779E,4408E69F,BD687AAD,5FDC8FA7,98BC146E"/>
+<ipidsequence class="Busy server or unknown class" values="1B4A,1B76,1B9D,1BAC,1BCA"/>
+<tcptssequence class="100HZ" values="8CA7CC,8CA7DB,8CA7E9,8CA7EE,8CA7FD"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="56.59"/>
+<hop ttl="2" ipaddr="10.10.10.8" rtt="108.62"/>
+</trace>
+<times srtt="86510" rttvar="27078" to="194822"/>
+</host>
+<taskbegin task="NSE" time="1572918206"/>
+<taskend task="NSE" time="1572918206"/>
+<taskbegin task="NSE" time="1572918206"/>
+<taskend task="NSE" time="1572918206"/>
+<runstats><finished time="1572918206" timestr="Mon Nov  4 17:43:26 2019" elapsed="509.78" summary="Nmap done at Mon Nov  4 17:43:26 2019; 1 IP address (1 host up) scanned in 509.78 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

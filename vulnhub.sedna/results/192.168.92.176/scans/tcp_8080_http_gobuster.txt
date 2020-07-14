@@ -1,0 +1,7 @@
+http://192.168.92.176:8080/META-INF (Status: 302)
+http://192.168.92.176:8080/docs (Status: 302)
+http://192.168.92.176:8080/examples (Status: 302)
+http://192.168.92.176:8080/host-manager (Status: 302)
+http://192.168.92.176:8080/index.html (Status: 200) [Size: 1895]
+http://192.168.92.176:8080/index.html (Status: 200) [Size: 1895]
+http://192.168.92.176:8080/manager (Status: 302)

@@ -1,0 +1,34 @@
+
+-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_80_http_dirb.txt
+START_TIME: Mon Sep  9 18:30:11 2019
+URL_BASE: http://192.168.92.169:80/
+WORDLIST_FILES: /usr/share/seclists/Discovery/Web-Content/common.txt
+OPTION: Printing LOCATION header
+OPTION: Not Recursive
+OPTION: Silent Mode
+EXTENSIONS_LIST: (,.txt,.html,.php,.asp,.aspx) | ()(.txt)(.html)(.php)(.asp)(.aspx) [NUM = 6]
+
+-----------------
+
+GENERATED WORDS: 4593
+
+---- Scanning URL: http://192.168.92.169:80/ ----
++ http://192.168.92.169:80/cgi-bin/ (CODE:403|SIZE:290)
++ http://192.168.92.169:80/index (CODE:200|SIZE:177)
+  (Location: 'index.html')
++ http://192.168.92.169:80/index.html (CODE:200|SIZE:177)
++ http://192.168.92.169:80/index.html (CODE:200|SIZE:177)
++ http://192.168.92.169:80/robots (CODE:200|SIZE:43)
+  (Location: 'robots.txt')
++ http://192.168.92.169:80/robots.txt (CODE:200|SIZE:43)
++ http://192.168.92.169:80/robots.txt (CODE:200|SIZE:43)
++ http://192.168.92.169:80/server-status (CODE:403|SIZE:295)
+
+-----------------
+END_TIME: Mon Sep  9 18:30:41 2019
+DOWNLOADED: 27558 - FOUND: 8

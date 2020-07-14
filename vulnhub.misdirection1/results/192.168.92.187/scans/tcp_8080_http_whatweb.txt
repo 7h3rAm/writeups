@@ -1,0 +1,41 @@
+WhatWeb report for http://192.168.92.187:8080
+Status    : 200 OK
+Title     : Apache2 Ubuntu Default Page: It works
+IP        : 192.168.92.187
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Ubuntu Linux][Apache/2.4.29 (Ubuntu)], Apache[2.4.29]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.29 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.29 (Ubuntu) (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Fri, 11 Oct 2019 19:14:53 GMT
+	Server: Apache/2.4.29 (Ubuntu)
+	Last-Modified: Sat, 01 Jun 2019 01:17:38 GMT
+	ETag: "2aa6-58a38e5a14c97-gzip"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 3138
+	Connection: close
+	Content-Type: text/html
+	

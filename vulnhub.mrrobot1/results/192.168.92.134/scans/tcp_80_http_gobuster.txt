@@ -1,0 +1,80 @@
+http://192.168.92.134:80/.hta (Status: 403) [Size: 213]
+http://192.168.92.134:80/.hta.txt (Status: 403) [Size: 217]
+http://192.168.92.134:80/.hta.html (Status: 403) [Size: 218]
+http://192.168.92.134:80/.hta.php (Status: 403) [Size: 217]
+http://192.168.92.134:80/.hta.asp (Status: 403) [Size: 217]
+http://192.168.92.134:80/.hta.aspx (Status: 403) [Size: 218]
+http://192.168.92.134:80/.hta.jsp (Status: 403) [Size: 217]
+http://192.168.92.134:80/.htaccess (Status: 403) [Size: 218]
+http://192.168.92.134:80/.htaccess.txt (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htaccess.html (Status: 403) [Size: 223]
+http://192.168.92.134:80/.htaccess.php (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htaccess.asp (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htaccess.aspx (Status: 403) [Size: 223]
+http://192.168.92.134:80/.htaccess.jsp (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htpasswd (Status: 403) [Size: 218]
+http://192.168.92.134:80/.htpasswd.txt (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htpasswd.html (Status: 403) [Size: 223]
+http://192.168.92.134:80/.htpasswd.php (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htpasswd.asp (Status: 403) [Size: 222]
+http://192.168.92.134:80/.htpasswd.aspx (Status: 403) [Size: 223]
+http://192.168.92.134:80/.htpasswd.jsp (Status: 403) [Size: 222]
+http://192.168.92.134:80/Image (Status: 301)
+http://192.168.92.134:80/admin (Status: 301)
+http://192.168.92.134:80/atom (Status: 200) [Size: 633]
+http://192.168.92.134:80/audio (Status: 301)
+http://192.168.92.134:80/blog (Status: 301)
+http://192.168.92.134:80/cgi-bin/.html (Status: 403) [Size: 222]
+http://192.168.92.134:80/css (Status: 301)
+http://192.168.92.134:80/dashboard (Status: 302)
+http://192.168.92.134:80/favicon.ico (Status: 200) [Size: 0]
+http://192.168.92.134:80/feed (Status: 200) [Size: 815]
+http://192.168.92.134:80/image (Status: 301)
+http://192.168.92.134:80/images (Status: 301)
+http://192.168.92.134:80/index.html (Status: 200) [Size: 1077]
+http://192.168.92.134:80/index.html (Status: 200) [Size: 1188]
+http://192.168.92.134:80/index.php (Status: 301)
+http://192.168.92.134:80/index.php (Status: 301)
+http://192.168.92.134:80/intro (Status: 200) [Size: 516314]
+http://192.168.92.134:80/js (Status: 301)
+http://192.168.92.134:80/license (Status: 200) [Size: 19930]
+http://192.168.92.134:80/license.txt (Status: 200) [Size: 19930]
+http://192.168.92.134:80/login (Status: 302)
+http://192.168.92.134:80/page1 (Status: 200) [Size: 8285]
+http://192.168.92.134:80/phpmyadmin (Status: 403) [Size: 94]
+http://192.168.92.134:80/rdf (Status: 200) [Size: 819]
+http://192.168.92.134:80/readme (Status: 200) [Size: 7334]
+http://192.168.92.134:80/readme.html (Status: 200) [Size: 7334]
+http://192.168.92.134:80/robots (Status: 200) [Size: 41]
+http://192.168.92.134:80/robots.txt (Status: 200) [Size: 41]
+http://192.168.92.134:80/robots.txt (Status: 200) [Size: 41]
+http://192.168.92.134:80/rss (Status: 200) [Size: 367]
+http://192.168.92.134:80/rss2 (Status: 200) [Size: 815]
+http://192.168.92.134:80/sitemap (Status: 200) [Size: 0]
+http://192.168.92.134:80/sitemap.xml (Status: 200) [Size: 0]
+http://192.168.92.134:80/video (Status: 301)
+http://192.168.92.134:80/wp-admin (Status: 301)
+http://192.168.92.134:80/wp-config (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-content (Status: 301)
+http://192.168.92.134:80/wp-app.php (Status: 403) [Size: 0]
+http://192.168.92.134:80/wp-atom.php (Status: 301)
+http://192.168.92.134:80/wp-commentsrss2.php (Status: 301)
+http://192.168.92.134:80/wp-cron (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-config.php (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-includes (Status: 301)
+http://192.168.92.134:80/wp-cron.php (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-links-opml (Status: 200) [Size: 228]
+http://192.168.92.134:80/wp-feed.php (Status: 301)
+http://192.168.92.134:80/wp-load (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-login (Status: 200) [Size: 2717]
+http://192.168.92.134:80/wp-mail (Status: 403) [Size: 3018]
+http://192.168.92.134:80/wp-links-opml.php (Status: 200) [Size: 228]
+http://192.168.92.134:80/wp-load.php (Status: 200) [Size: 0]
+http://192.168.92.134:80/wp-mail.php (Status: 403) [Size: 3018]
+http://192.168.92.134:80/wp-login.php (Status: 200) [Size: 2769]
+http://192.168.92.134:80/wp-signup (Status: 302)
+http://192.168.92.134:80/wp-register.php (Status: 301)
+http://192.168.92.134:80/wp-rdf.php (Status: 301)
+http://192.168.92.134:80/wp-rss.php (Status: 301)
+http://192.168.92.134:80/wp-rss2.php (Status: 301)
+http://192.168.92.134:80/wp-signup.php (Status: 302)

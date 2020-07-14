@@ -1,0 +1,21 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.48
++ Target Hostname:    10.10.10.48
++ Target Port:        80
++ Start Time:         2019-11-12 15:49:48 (GMT-8)
+---------------------------------------------------------------------------
++ Server: lighttpd/1.4.35
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'x-pi-hole' found, with contents: A black hole for Internet advertisements.
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: OPTIONS, GET, HEAD, POST 
++ Cookie PHPSESSID created without the httponly flag
++ OSVDB-3092: /admin/: This might be interesting...
++ OSVDB-3093: /admin/index.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ 7498 requests: 0 error(s) and 8 item(s) reported on remote host
++ End Time:           2019-11-12 15:58:47 (GMT-8) (539 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

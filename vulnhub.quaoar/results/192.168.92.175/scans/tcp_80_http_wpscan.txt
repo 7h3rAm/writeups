@@ -1,0 +1,412 @@
+/usr/share/wpscan/lib/common/common_helper.rb:253: warning: Insecure world writable dir /root/toolbox/scripts in PATH, mode 040777
+_______________________________________________________________
+        __          _______   _____                  
+        \ \        / /  __ \ / ____|                 
+         \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+          \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \ 
+           \  /\  /  | |     ____) | (__| (_| | | | |
+            \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+        WordPress Security Scanner by the WPScan Team 
+                       Version 2.9.4
+          Sponsored by Sucuri - https://sucuri.net
+      @_WPScan_, @ethicalhack3r, @erwan_lr, @_FireFart_
+_______________________________________________________________
+
+[32m[+][0m URL: http://192.168.92.175/wordpress/
+[32m[+][0m Started: Wed Sep 18 15:05:14 2019
+
+[32m[+][0m Interesting header: SERVER: Apache/2.2.22 (Ubuntu)
+[32m[+][0m Interesting header: X-POWERED-BY: PHP/5.3.10-1ubuntu3
+[32m[+][0m XML-RPC Interface available under: http://192.168.92.175/wordpress/xmlrpc.php   [HTTP 200]
+[32m[+][0m Found an RSS Feed: /wordpress/?feed=rss2   [HTTP 0]
+[33m[!][0m Upload directory has directory listing enabled: http://192.168.92.175/wordpress/wp-content/uploads/
+[33m[!][0m Includes directory has directory listing enabled: http://192.168.92.175/wordpress/wp-includes/
+
+[32m[+][0m Enumerating WordPress version ...
+[33m[!][0m The WordPress 'http://192.168.92.175/wordpress/readme.html' file exists exposing a version number
+
+[32m[+][0m WordPress version 3.9.14 (Released on 2016-09-07) identified from meta generator, readme, links opml, stylesheets numbers, advanced fingerprinting
+[31m[!][0m 39 vulnerabilities identified from the version number
+
+[31m[!][0m Title: WordPress 2.9-4.7 - Authenticated Cross-Site scripting (XSS) in update-core.php
+    Reference: https://wpvulndb.com/vulnerabilities/8716
+    Reference: https://github.com/WordPress/WordPress/blob/c9ea1de1441bb3bda133bf72d513ca9de66566c2/wp-admin/update-core.php
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5488
+[34m[i][0m Fixed in: 3.9.15
+
+[31m[!][0m Title: WordPress 3.4-4.7 - Stored Cross-Site Scripting (XSS) via Theme Name fallback
+    Reference: https://wpvulndb.com/vulnerabilities/8718
+    Reference: https://www.mehmetince.net/low-severity-wordpress/
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/ce7fb2934dd111e6353784852de8aea2a938b359
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5490
+[34m[i][0m Fixed in: 3.9.15
+
+[31m[!][0m Title: WordPress <= 4.7 - Post via Email Checks mail.example.com by Default
+    Reference: https://wpvulndb.com/vulnerabilities/8719
+    Reference: https://github.com/WordPress/WordPress/commit/061e8788814ac87706d8b95688df276fe3c8596a
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5491
+[34m[i][0m Fixed in: 3.9.15
+
+[31m[!][0m Title: WordPress 2.8-4.7 - Accessibility Mode Cross-Site Request Forgery (CSRF)
+    Reference: https://wpvulndb.com/vulnerabilities/8720
+    Reference: https://github.com/WordPress/WordPress/commit/03e5c0314aeffe6b27f4b98fef842bf0fb00c733
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5492
+[34m[i][0m Fixed in: 3.9.15
+
+[31m[!][0m Title: WordPress 3.0-4.7 - Cryptographically Weak Pseudo-Random Number Generator (PRNG)
+    Reference: https://wpvulndb.com/vulnerabilities/8721
+    Reference: https://github.com/WordPress/WordPress/commit/cea9e2dc62abf777e06b12ec4ad9d1aaa49b29f4
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-1-security-and-maintenance-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5493
+[34m[i][0m Fixed in: 3.9.15
+
+[31m[!][0m Title: WordPress 3.5-4.7.1 - WP_Query SQL Injection
+    Reference: https://wpvulndb.com/vulnerabilities/8730
+    Reference: https://wordpress.org/news/2017/01/wordpress-4-7-2-security-release/
+    Reference: https://github.com/WordPress/WordPress/commit/85384297a60900004e27e417eac56d24267054cb
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5611
+[34m[i][0m Fixed in: 3.9.16
+
+[31m[!][0m Title: WordPress 3.6.0-4.7.2 - Authenticated Cross-Site Scripting (XSS) via Media File Metadata
+    Reference: https://wpvulndb.com/vulnerabilities/8765
+    Reference: https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/28f838ca3ee205b6f39cd2bf23eb4e5f52796bd7
+    Reference: https://sumofpwn.nl/advisory/2016/wordpress_audio_playlist_functionality_is_affected_by_cross_site_scripting.html
+    Reference: http://seclists.org/oss-sec/2017/q1/563
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6814
+[34m[i][0m Fixed in: 3.9.17
+
+[31m[!][0m Title: WordPress 2.8.1-4.7.2 - Control Characters in Redirect URL Validation
+    Reference: https://wpvulndb.com/vulnerabilities/8766
+    Reference: https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/288cd469396cfe7055972b457eb589cea51ce40e
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6815
+[34m[i][0m Fixed in: 3.9.17
+
+[31m[!][0m Title: WordPress 2.3-4.8.3 - Host Header Injection in Password Reset
+    Reference: https://wpvulndb.com/vulnerabilities/8807
+    Reference: https://exploitbox.io/vuln/WordPress-Exploit-4-7-Unauth-Password-Reset-0day-CVE-2017-8295.html
+    Reference: http://blog.dewhurstsecurity.com/2017/05/04/exploitbox-wordpress-security-advisories.html
+    Reference: https://core.trac.wordpress.org/ticket/25239
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-8295
+
+[31m[!][0m Title: WordPress 2.7.0-4.7.4 - Insufficient Redirect Validation
+    Reference: https://wpvulndb.com/vulnerabilities/8815
+    Reference: https://github.com/WordPress/WordPress/commit/76d77e927bb4d0f87c7262a50e28d84e01fd2b11
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9066
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 2.5.0-4.7.4 - Post Meta Data Values Improper Handling in XML-RPC
+    Reference: https://wpvulndb.com/vulnerabilities/8816
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://github.com/WordPress/WordPress/commit/3d95e3ae816f4d7c638f40d3e936a4be19724381
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9062
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 3.4.0-4.7.4 - XML-RPC Post Meta Data Lack of Capability Checks 
+    Reference: https://wpvulndb.com/vulnerabilities/8817
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://github.com/WordPress/WordPress/commit/e88a48a066ab2200ce3091b131d43e2fab2460a4
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9065
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 2.5.0-4.7.4 - Filesystem Credentials Dialog CSRF
+    Reference: https://wpvulndb.com/vulnerabilities/8818
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://github.com/WordPress/WordPress/commit/38347d7c580be4cdd8476e4bbc653d5c79ed9b67
+    Reference: https://sumofpwn.nl/advisory/2016/cross_site_request_forgery_in_wordpress_connection_information.html
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9064
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 3.3-4.7.4 - Large File Upload Error XSS
+    Reference: https://wpvulndb.com/vulnerabilities/8819
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://github.com/WordPress/WordPress/commit/8c7ea71edbbffca5d9766b7bea7c7f3722ffafa6
+    Reference: https://hackerone.com/reports/203515
+    Reference: https://hackerone.com/reports/203515
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9061
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 3.4.0-4.7.4 - Customizer XSS & CSRF
+    Reference: https://wpvulndb.com/vulnerabilities/8820
+    Reference: https://wordpress.org/news/2017/05/wordpress-4-7-5/
+    Reference: https://github.com/WordPress/WordPress/commit/3d10fef22d788f29aed745b0f5ff6f6baea69af3
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-9063
+[34m[i][0m Fixed in: 3.9.19
+
+[31m[!][0m Title: WordPress 2.3.0-4.8.1 - $wpdb->prepare() potential SQL Injection
+    Reference: https://wpvulndb.com/vulnerabilities/8905
+    Reference: https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/70b21279098fc973eae803693c0705a548128e48
+    Reference: https://github.com/WordPress/WordPress/commit/fc930d3daed1c3acef010d04acc2c5de93cd18ec
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14723
+[34m[i][0m Fixed in: 3.9.20
+
+[31m[!][0m Title: WordPress 2.3.0-4.7.4 - Authenticated SQL injection
+    Reference: https://wpvulndb.com/vulnerabilities/8906
+    Reference: https://medium.com/websec/wordpress-sqli-bbb2afcc8e94
+    Reference: https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/70b21279098fc973eae803693c0705a548128e48
+    Reference: https://wpvulndb.com/vulnerabilities/8905
+[34m[i][0m Fixed in: 4.7.5
+
+[31m[!][0m Title: WordPress 2.9.2-4.8.1 - Open Redirect
+    Reference: https://wpvulndb.com/vulnerabilities/8910
+    Reference: https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/
+    Reference: https://core.trac.wordpress.org/changeset/41398
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14725
+[34m[i][0m Fixed in: 3.9.20
+
+[31m[!][0m Title: WordPress 3.0-4.8.1 - Path Traversal in Unzipping
+    Reference: https://wpvulndb.com/vulnerabilities/8911
+    Reference: https://wordpress.org/news/2017/09/wordpress-4-8-2-security-and-maintenance-release/
+    Reference: https://core.trac.wordpress.org/changeset/41457
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-14719
+[34m[i][0m Fixed in: 3.9.20
+
+[31m[!][0m Title: WordPress <= 4.8.2 - $wpdb->prepare() Weakness
+    Reference: https://wpvulndb.com/vulnerabilities/8941
+    Reference: https://wordpress.org/news/2017/10/wordpress-4-8-3-security-release/
+    Reference: https://github.com/WordPress/WordPress/commit/a2693fd8602e3263b5925b9d799ddd577202167d
+    Reference: https://twitter.com/ircmaxell/status/923662170092638208
+    Reference: https://blog.ircmaxell.com/2017/10/disclosure-wordpress-wpdb-sql-injection-technical.html
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-16510
+[34m[i][0m Fixed in: 3.9.21
+
+[31m[!][0m Title: WordPress 2.8.6-4.9 - Authenticated JavaScript File Upload
+    Reference: https://wpvulndb.com/vulnerabilities/8966
+    Reference: https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/67d03a98c2cae5f41843c897f206adde299b0509
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17092
+[34m[i][0m Fixed in: 3.9.22
+
+[31m[!][0m Title: WordPress 1.5.0-4.9 - RSS and Atom Feed Escaping
+    Reference: https://wpvulndb.com/vulnerabilities/8967
+    Reference: https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/f1de7e42df29395c3314bf85bff3d1f4f90541de
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17094
+[34m[i][0m Fixed in: 3.9.22
+
+[31m[!][0m Title: WordPress 3.7-4.9 - 'newbloguser' Key Weak Hashing
+    Reference: https://wpvulndb.com/vulnerabilities/8969
+    Reference: https://wordpress.org/news/2017/11/wordpress-4-9-1-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/eaf1cfdc1fe0bdffabd8d879c591b864d833326c
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-17091
+[34m[i][0m Fixed in: 3.9.22
+
+[31m[!][0m Title: WordPress 3.7-4.9.1 - MediaElement Cross-Site Scripting (XSS)
+    Reference: https://wpvulndb.com/vulnerabilities/9006
+    Reference: https://github.com/WordPress/WordPress/commit/3fe9cb61ee71fcfadb5e002399296fcc1198d850
+    Reference: https://wordpress.org/news/2018/01/wordpress-4-9-2-security-and-maintenance-release/
+    Reference: https://core.trac.wordpress.org/ticket/42720
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-5776
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-9263
+[34m[i][0m Fixed in: 3.9.23
+
+[31m[!][0m Title: WordPress <= 4.9.4 - Application Denial of Service (DoS) (unpatched)
+    Reference: https://wpvulndb.com/vulnerabilities/9021
+    Reference: https://baraktawily.blogspot.fr/2018/02/how-to-dos-29-of-world-wide-websites.html
+    Reference: https://github.com/quitten/doser.py
+    Reference: https://thehackernews.com/2018/02/wordpress-dos-exploit.html
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6389
+
+[31m[!][0m Title: WordPress 3.7-4.9.4 - Remove localhost Default
+    Reference: https://wpvulndb.com/vulnerabilities/9053
+    Reference: https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/804363859602d4050d9a38a21f5a65d9aec18216
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10101
+[34m[i][0m Fixed in: 3.9.24
+
+[31m[!][0m Title: WordPress 3.7-4.9.4 - Use Safe Redirect for Login
+    Reference: https://wpvulndb.com/vulnerabilities/9054
+    Reference: https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/14bc2c0a6fde0da04b47130707e01df850eedc7e
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10100
+[34m[i][0m Fixed in: 3.9.24
+
+[31m[!][0m Title: WordPress 3.7-4.9.4 - Escape Version in Generator Tag
+    Reference: https://wpvulndb.com/vulnerabilities/9055
+    Reference: https://wordpress.org/news/2018/04/wordpress-4-9-5-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/31a4369366d6b8ce30045d4c838de2412c77850d
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-10102
+[34m[i][0m Fixed in: 3.9.24
+
+[31m[!][0m Title: WordPress <= 4.9.6 - Authenticated Arbitrary File Deletion
+    Reference: https://wpvulndb.com/vulnerabilities/9100
+    Reference: https://blog.ripstech.com/2018/wordpress-file-delete-to-code-execution/
+    Reference: http://blog.vulnspy.com/2018/06/27/Wordpress-4-9-6-Arbitrary-File-Delection-Vulnerbility-Exploit/
+    Reference: https://github.com/WordPress/WordPress/commit/c9dce0606b0d7e6f494d4abe7b193ac046a322cd
+    Reference: https://wordpress.org/news/2018/07/wordpress-4-9-7-security-and-maintenance-release/
+    Reference: https://www.wordfence.com/blog/2018/07/details-of-an-additional-file-deletion-vulnerability-patched-in-wordpress-4-9-7/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-12895
+[34m[i][0m Fixed in: 3.9.25
+
+[31m[!][0m Title: WordPress <= 5.0 - Authenticated File Delete
+    Reference: https://wpvulndb.com/vulnerabilities/9169
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20147
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - Authenticated Post Type Bypass
+    Reference: https://wpvulndb.com/vulnerabilities/9170
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://blog.ripstech.com/2018/wordpress-post-type-privilege-escalation/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20152
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - PHP Object Injection via Meta Data
+    Reference: https://wpvulndb.com/vulnerabilities/9171
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20148
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - Authenticated Cross-Site Scripting (XSS)
+    Reference: https://wpvulndb.com/vulnerabilities/9172
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20153
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - Cross-Site Scripting (XSS) that could affect plugins
+    Reference: https://wpvulndb.com/vulnerabilities/9173
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://github.com/WordPress/WordPress/commit/fb3c6ea0618fcb9a51d4f2c1940e9efcd4a2d460
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20150
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - User Activation Screen Search Engine Indexing
+    Reference: https://wpvulndb.com/vulnerabilities/9174
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20151
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress <= 5.0 - File Upload to XSS on Apache Web Servers
+    Reference: https://wpvulndb.com/vulnerabilities/9175
+    Reference: https://wordpress.org/news/2018/12/wordpress-5-0-1-security-release/
+    Reference: https://github.com/WordPress/WordPress/commit/246a70bdbfac3bd45ff71c7941deef1bb206b19a
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20149
+[34m[i][0m Fixed in: 3.9.26
+
+[31m[!][0m Title: WordPress 3.7-5.0 (except 4.9.9) - Authenticated Code Execution
+    Reference: https://wpvulndb.com/vulnerabilities/9222
+    Reference: https://blog.ripstech.com/2019/wordpress-image-remote-code-execution/
+    Reference: https://www.rapid7.com/db/modules/exploit/multi/http/wp_crop_rce
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8942
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-8943
+[34m[i][0m Fixed in: 5.0.1
+
+[31m[!][0m Title: WordPress 3.9-5.1 - Comment Cross-Site Scripting (XSS)
+    Reference: https://wpvulndb.com/vulnerabilities/9230
+    Reference: https://github.com/WordPress/WordPress/commit/0292de60ec78c5a44956765189403654fe4d080b
+    Reference: https://wordpress.org/news/2019/03/wordpress-5-1-1-security-and-maintenance-release/
+    Reference: https://blog.ripstech.com/2019/wordpress-csrf-to-rce/
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-9787
+[34m[i][0m Fixed in: 3.9.27
+
+[31m[!][0m Title: WordPress <= 5.2.2 - Cross-Site Scripting (XSS) in URL Sanitisation
+    Reference: https://wpvulndb.com/vulnerabilities/9867
+    Reference: https://wordpress.org/news/2019/09/wordpress-5-2-3-security-and-maintenance-release/
+    Reference: https://github.com/WordPress/WordPress/commit/30ac67579559fe42251b5a9f887211bf61a8ed68
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-16222
+[34m[i][0m Fixed in: 3.9.28
+
+[32m[+][0m WordPress theme in use: twentyfourteen - v1.1
+
+[32m[+][0m Name: twentyfourteen - v1.1
+ |  Last updated: 2019-05-07T00:00:00.000Z
+ |  Location: http://192.168.92.175/wordpress/wp-content/themes/twentyfourteen/
+[33m[!][0m The version is out of date, the latest version is 2.7
+ |  Style URL: http://192.168.92.175/wordpress/wp-content/themes/twentyfourteen/style.css
+ |  Referenced style.css: wp-content/themes/twentyfourteen/style.css
+ |  Theme Name: Twenty Fourteen
+ |  Theme URI: http://wordpress.org/themes/twentyfourteen
+ |  Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern des...
+ |  Author: the WordPress team
+ |  Author URI: http://wordpress.org/
+
+[32m[+][0m Enumerating installed plugins (only ones with known vulnerabilities) ...
+
+
+
+  : |=====================================================================================================================================================================================================|
+
+[32m[+][0m We found 2 plugins:
+
+[32m[+][0m Name: akismet - v3.0.1
+ |  Last updated: 2019-05-14T15:05:00.000Z
+ |  Location: http://192.168.92.175/wordpress/wp-content/plugins/akismet/
+ |  Readme: http://192.168.92.175/wordpress/wp-content/plugins/akismet/readme.txt
+[33m[!][0m The version is out of date, the latest version is 4.1.2
+
+[31m[!][0m Title: Akismet 2.5.0-3.1.4 - Unauthenticated Stored Cross-Site Scripting (XSS)
+    Reference: https://wpvulndb.com/vulnerabilities/8215
+    Reference: http://blog.akismet.com/2015/10/13/akismet-3-1-5-wordpress/
+    Reference: https://blog.sucuri.net/2015/10/security-advisory-stored-xss-in-akismet-wordpress-plugin.html
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-9357
+[34m[i][0m Fixed in: 3.1.5
+
+[32m[+][0m Name: mail-masta - v1.0
+ |  Latest version: 1.0 (up to date)
+ |  Last updated: 2014-09-19T07:52:00.000Z
+ |  Location: http://192.168.92.175/wordpress/wp-content/plugins/mail-masta/
+ |  Readme: http://192.168.92.175/wordpress/wp-content/plugins/mail-masta/readme.txt
+[33m[!][0m Directory listing is enabled: http://192.168.92.175/wordpress/wp-content/plugins/mail-masta/
+
+[31m[!][0m Title: Mail Masta 1.0 - Unauthenticated Local File Inclusion (LFI)
+    Reference: https://wpvulndb.com/vulnerabilities/8609
+    Reference: https://cxsecurity.com/issue/WLB-2016080220
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-10956
+    Reference: https://www.exploit-db.com/exploits/40290/
+
+[31m[!][0m Title: Mail Masta 1.0 - Multiple SQL Injection
+    Reference: https://wpvulndb.com/vulnerabilities/8740
+    Reference: https://github.com/hamkovic/Mail-Masta-Wordpress-Plugin
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6095
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6096
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6097
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6098
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6570
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6571
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6572
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6573
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6574
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6575
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6576
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6577
+    Reference: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6578
+
+[32m[+][0m Enumerating installed themes (only ones with known vulnerabilities) ...
+
+
+
+  : |=====================================================================================================================================================================================================|
+
+[32m[+][0m No themes found
+
+[32m[+][0m Enumerating timthumb files ...
+
+
+
+  : |=====================================================================================================================================================================================================|
+
+[32m[+][0m No timthumb files found
+
+[32m[+][0m Enumerating usernames ...
+[32m[+][0m We identified the following 2 users:
+    +----+--------+--------+
+    | ID | Login  | Name   |
+    +----+--------+--------+
+    | 1  | admin  | admin  |
+    | 2  | wpuser | wpuser |
+    +----+--------+--------+
+[33m[!][0m Default first WordPress username 'admin' is still used
+
+[32m[+][0m Finished: Wed Sep 18 15:06:11 2019
+[32m[+][0m Elapsed time: 00:00:56
+[32m[+][0m Requests made: 5049
+[32m[+][0m Memory used: 66.645 MB

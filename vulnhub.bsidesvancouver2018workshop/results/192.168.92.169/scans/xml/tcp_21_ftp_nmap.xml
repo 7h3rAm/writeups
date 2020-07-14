@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Sep  9 18:30:11 2019 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.169 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/tcp_21_ftp_nmap.txt -oX /root/toolbox/vulnhub/bsidesvancouver2018workshop/results/192.168.92.169/scans/xml/tcp_21_ftp_nmap.xml 192.168.92.169" start="1568079011" startstr="Mon Sep  9 18:30:11 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568079012"/>
+<taskend task="NSE" time="1568079012"/>
+<taskbegin task="NSE" time="1568079012"/>
+<taskend task="NSE" time="1568079012"/>
+<taskbegin task="ARP Ping Scan" time="1568079012"/>
+<taskend task="ARP Ping Scan" time="1568079012" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568079012"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568079012"/>
+<taskbegin task="SYN Stealth Scan" time="1568079012"/>
+<taskend task="SYN Stealth Scan" time="1568079013" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568079013"/>
+<taskend task="Service scan" time="1568079013" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568079013"/>
+<taskend task="NSE" time="1568079013"/>
+<taskbegin task="NSE" time="1568079013"/>
+<taskend task="NSE" time="1568079013"/>
+<host starttime="1568079012" endtime="1568079013"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.169" addrtype="ipv4"/>
+<address addr="00:0C:29:D5:5D:EA" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ftp" product="vsftpd" version="2.3.5" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:2.3.5</cpe></service><script id="banner" output="220 (vsFTPd 2.3.5)"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;drwxr-xr-x    2 65534    65534        4096 Mar 03  2018 public"/><script id="ftp-syst" output="&#xa;  STAT: &#xa;FTP server status:&#xa;     Connected to 192.168.92.163&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 7&#xa;     vsFTPd 2.3.5 - secure, fast, stable&#xa;End of status"><elem key="STAT">&#xa;FTP server status:&#xa;     Connected to 192.168.92.163&#xa;     Logged in as ftp&#xa;     TYPE: ASCII&#xa;     No session bandwidth limit&#xa;     Session timeout in seconds is 300&#xa;     Control connection is plain text&#xa;     Data connections will be plain text&#xa;     At session startup, client count was 7&#xa;     vsFTPd 2.3.5 - secure, fast, stable&#xa;End of status</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="551" rttvar="4206" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568079013"/>
+<taskend task="NSE" time="1568079013"/>
+<taskbegin task="NSE" time="1568079013"/>
+<taskend task="NSE" time="1568079013"/>
+<runstats><finished time="1568079013" timestr="Mon Sep  9 18:30:13 2019" elapsed="2.41" summary="Nmap done at Mon Sep  9 18:30:13 2019; 1 IP address (1 host up) scanned in 2.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

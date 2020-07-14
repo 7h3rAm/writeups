@@ -1,0 +1,41 @@
+# Nmap 7.70 scan initiated Wed Sep 11 13:59:40 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/fristileaks1.3/results/192.168.92.133/scans/xml/_full_tcp_nmap.xml 192.168.92.133
+Nmap scan report for 192.168.92.133
+Host is up, received arp-response (0.00094s latency).
+Scanned at 2019-09-11 13:59:41 PDT for 194s
+Not shown: 65534 filtered ports
+Reason: 65351 no-responses and 183 host-prohibiteds
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 3 disallowed entries 
+|_/cola /sisi /beer
+|_http-server-header: Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+MAC Address: 08:00:27:A5:A6:76 (Oracle VirtualBox virtual NIC)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+OS details: Linux 2.6.32
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/11%OT=80%CT=%CU=%PV=Y%DS=1%DC=D%G=N%M=080027%TM=5D79
+OS:60FF%P=i686-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=105%TI=Z%II=I%TS=A)OPS(O1=
+OS:M5B4ST11NW5%O2=M5B4ST11NW5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B4ST11NW5
+OS:%O6=M5B4ST11)WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN(R=Y
+OS:%DF=Y%TG=40%W=3908%O=M5B4NNSNW5%CC=Y%Q=)T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%
+OS:RD=0%Q=)T2(R=N)T3(R=N)T4(R=N)U1(R=N)IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 49.710 days (since Tue Jul 23 21:00:22 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.94 ms 192.168.92.133
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 11 14:02:55 2019 -- 1 IP address (1 host up) scanned in 195.00 seconds

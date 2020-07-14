@@ -1,0 +1,38 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.134
++ Target Hostname:    192.168.92.134
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=www.example.com
+                   Ciphers:  ECDHE-RSA-AES256-GCM-SHA384
+                   Issuer:   /CN=www.example.com
++ Start Time:         2019-10-17 15:47:32 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Retrieved x-powered-by header: PHP/5.5.29
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server leaks inodes via ETags, header found with file /robots.txt, fields: 0x29 0x52467010ef8ad 
++ The Content-Encoding header is set to "deflate" this may mean that the server is vulnerable to the BREACH attack.
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html, index.php
++ Hostname '192.168.92.134' does not match certificate's names: www.example.com
++ OSVDB-3092: /admin/: This might be interesting...
++ Uncommon header 'link' found, with contents: <https://192.168.92.134/?p=23>; rel=shortlink
++ /wp-links-opml.php: This WordPress script reveals the installed version.
++ OSVDB-3092: /license.txt: License file found may identify site software.
++ /admin/index.html: Admin login page/section found.
++ Cookie wordpress_test_cookie created without the secure flag
++ Cookie wordpress_test_cookie created without the httponly flag
++ /wp-login/: Admin login page/section found.
++ /wordpress/: A Wordpress installation was found.
++ /wp-admin/wp-login.php: Wordpress login found
++ /blog/wp-login.php: Wordpress login found
++ /wp-login.php: Wordpress login found
++ 7535 requests: 0 error(s) and 21 item(s) reported on remote host
++ End Time:           2019-10-17 17:01:42 (GMT-7) (4450 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

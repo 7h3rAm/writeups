@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Nov 12 15:53:33 2019 as: nmap -vv -&#45;reason -Pn -sU -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/udp_53_dns_nmap.txt -oX /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/xml/udp_53_dns_nmap.xml 10.10.10.48 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/udp_53_dns_nmap.txt -oX /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/xml/udp_53_dns_nmap.xml 10.10.10.48" start="1573602813" startstr="Tue Nov 12 15:53:33 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1573602813"/>
+<taskend task="NSE" time="1573602813"/>
+<taskbegin task="NSE" time="1573602813"/>
+<taskend task="NSE" time="1573602813"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1573602813"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1573602813"/>
+<taskbegin task="UDP Scan" time="1573602813"/>
+<taskend task="UDP Scan" time="1573602815" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1573602815"/>
+<taskend task="Service scan" time="1573602815" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1573602815"/>
+<taskprogress task="NSE" time="1573602846" percent="98.39" remaining="1" etc="1573602847"/>
+<taskprogress task="NSE" time="1573602876" percent="98.39" remaining="1" etc="1573602877"/>
+<taskprogress task="NSE" time="1573602906" percent="98.39" remaining="2" etc="1573602907"/>
+<taskprogress task="NSE" time="1573602936" percent="98.39" remaining="2" etc="1573602938"/>
+<taskprogress task="NSE" time="1573602966" percent="98.39" remaining="3" etc="1573602968"/>
+<taskprogress task="NSE" time="1573602996" percent="98.39" remaining="3" etc="1573602999"/>
+<taskprogress task="NSE" time="1573603026" percent="98.39" remaining="4" etc="1573603029"/>
+<taskprogress task="NSE" time="1573603056" percent="98.39" remaining="4" etc="1573603060"/>
+<taskprogress task="NSE" time="1573603086" percent="98.39" remaining="5" etc="1573603090"/>
+<taskprogress task="NSE" time="1573603116" percent="98.39" remaining="5" etc="1573603121"/>
+<taskprogress task="NSE" time="1573603146" percent="98.39" remaining="6" etc="1573603151"/>
+<taskprogress task="NSE" time="1573603176" percent="98.39" remaining="6" etc="1573603182"/>
+<taskprogress task="NSE" time="1573603206" percent="98.39" remaining="7" etc="1573603212"/>
+<taskprogress task="NSE" time="1573603236" percent="98.39" remaining="7" etc="1573603243"/>
+<taskprogress task="NSE" time="1573603266" percent="98.39" remaining="8" etc="1573603273"/>
+<taskprogress task="NSE" time="1573603296" percent="98.39" remaining="8" etc="1573603304"/>
+<taskprogress task="NSE" time="1573603326" percent="98.39" remaining="9" etc="1573603334"/>
+<taskprogress task="NSE" time="1573603356" percent="98.39" remaining="9" etc="1573603365"/>
+<taskprogress task="NSE" time="1573603386" percent="98.39" remaining="10" etc="1573603395"/>
+<taskprogress task="NSE" time="1573603416" percent="98.39" remaining="10" etc="1573603426"/>
+<taskprogress task="NSE" time="1573603446" percent="98.39" remaining="11" etc="1573603456"/>
+<taskprogress task="NSE" time="1573603476" percent="98.39" remaining="11" etc="1573603487"/>
+<taskprogress task="NSE" time="1573603506" percent="98.39" remaining="12" etc="1573603517"/>
+<taskprogress task="NSE" time="1573603536" percent="98.39" remaining="12" etc="1573603548"/>
+<taskprogress task="NSE" time="1573603566" percent="98.39" remaining="13" etc="1573603578"/>
+<taskend task="NSE" time="1573603592"/>
+<taskbegin task="NSE" time="1573603592"/>
+<taskend task="NSE" time="1573603592"/>
+<host starttime="1573602813" endtime="1573603592"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="open" reason="udp-response" reason_ttl="0"/><service name="domain" product="dnsmasq" version="2.76" method="probed" conf="10"><cpe>cpe:/a:thekelleys:dnsmasq:2.76</cpe></service><script id="dns-cache-snoop" output="3 of 100 tested domains are cached.&#xa;163.com&#xa;conduit.com&#xa;www.conduit.com"/><script id="dns-nsec-enum" output="Can&apos;t determine domain for host 10.10.10.48; use dns-nsec-enum.domains script arg."/><script id="dns-nsec3-enum" output="Can&apos;t determine domain for host 10.10.10.48; use dns-nsec3-enum.domains script arg."/><script id="dns-nsid" output="&#xa;  bind.version: dnsmasq-2.76"><elem key="bind.version">dnsmasq-2.76</elem>
+</script></port>
+</ports>
+<hostscript><script id="dns-brute" output="Can&apos;t guess domain of &quot;10.10.10.48&quot;; use dns-brute.domain script argument."/></hostscript></host>
+<taskbegin task="NSE" time="1573603592"/>
+<taskend task="NSE" time="1573603592"/>
+<taskbegin task="NSE" time="1573603592"/>
+<taskend task="NSE" time="1573603592"/>
+<runstats><finished time="1573603592" timestr="Tue Nov 12 16:06:32 2019" elapsed="779.23" summary="Nmap done at Tue Nov 12 16:06:32 2019; 1 IP address (1 host up) scanned in 779.23 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

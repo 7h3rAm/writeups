@@ -1,0 +1,56 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+
+  0[label="192.168.92.188" color="navyblue" fillcolor="#ffffff" tooltip="[VulnHub] Moria: 1.1"];
+  10[label="converts to string: Mellon" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  11[label="ftp credential: Balrog/Mellon" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  12[label="http://192.168.92.188/QlVraKW4fbIkXau9zkAPNGzviT3UKntl" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  13[label="usernames and password hashes" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  14[label="Phase #2: Exploitation" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  15[label="crack hashes using john" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  16[label="validate cracked hashes using hydra" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  17[label="ssh (Ori)" color="darkorange" fillcolor="#ffe0ac" tooltip="Phase #2:Exploitation"];
+  18[label="Phase #3: Privilege Escalation" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  19[label="known_hosts: entry for 127.0.0.1" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="Phase #1: Enumeration" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  20[label="ssh (root)" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  21[label="/root/flag.txt" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
+  2[label="21/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  3[label="possible username from ftp banner: Balrog" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  4[label="22/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  5[label="80/tcp" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  6[label="http://192.168.92.188/w/h/i/s/p/e/r/the_abyss/" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  7[label="hints at port knocking and sniffing" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  8[label="sniffing reveals possible port sequence: 77, 101, 108, 108, 111, 110" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+  9[label="port knocking makes no difference" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[VulnHub] Moria: 1.1";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    1 -> 4 [color="#665957"];
+    1 -> 5 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    12 -> 13 [color="#665957"];
+    13 -> 14 [color="#665957"];
+    14 -> 15 [color="#665957"];
+    15 -> 16 [color="#665957"];
+    16 -> 17 [color="#665957"];
+    17 -> 18 [color="#665957"];
+    18 -> 19 [color="#665957"];
+    19 -> 20 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    20 -> 21 [color="#665957"];
+    5 -> 12 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    6 -> 7 [color="#665957"];
+    7 -> 8 [color="#665957"];
+    8 -> 10 [color="#665957"];
+    8 -> 9 [color="#665957"];
+  }
+}

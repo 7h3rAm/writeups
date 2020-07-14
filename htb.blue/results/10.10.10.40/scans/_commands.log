@@ -1,0 +1,56 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/_top_20_udp_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/_top_20_udp_nmap.xml" 10.10.10.40
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/_quick_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/_quick_tcp_nmap.xml" 10.10.10.40
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/_full_tcp_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/_full_tcp_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:135 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_135_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_135_rpc_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:139 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_139_smb_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_139_smb_nmap.xml" 10.10.10.40
+
+enum4linux -a -M -l -d 10.10.10.40 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.10.10.40 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbclient.txt"
+
+smbmap -H 10.10.10.40 -P 139 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 139 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.40 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 139 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.40 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:445 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_445_smb_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_445_smb_nmap.xml" 10.10.10.40
+
+smbmap -H 10.10.10.40 -P 445 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 445 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.40 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 445 -R 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.40 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.40 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49152 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49152_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49152 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49152_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_49152_rpc_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49153 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49153_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49153 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49153_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_49153_rpc_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49154 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49154_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49154 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49154_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_49154_rpc_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49155 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49155_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49156 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49156_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49156 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49156_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_49156_rpc_nmap.xml" 10.10.10.40
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.40:49157 2>&1 | tee "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49157_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49157 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_49157_rpc_nmap.txt" -oX "/root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_49157_rpc_nmap.xml" 10.10.10.40
+

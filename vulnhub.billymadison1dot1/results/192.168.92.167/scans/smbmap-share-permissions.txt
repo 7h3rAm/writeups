@@ -1,0 +1,28 @@
+[+] Finding open SMB ports....
+[+] Guest RPC session established on 192.168.92.167...
+[+] IP: 192.168.92.167:139	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest RPC session established on 192.168.92.167...
+[+] IP: 192.168.92.167:139	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 192.168.92.167...
+[+] IP: 192.168.92.167:445	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	IPC$                                              	NO ACCESS
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 192.168.92.167...
+[+] IP: 192.168.92.167:445	Name: 192.168.92.167                                    
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	EricsSecretStuff                                  	READ ONLY
+	IPC$                                              	NO ACCESS

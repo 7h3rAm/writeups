@@ -1,0 +1,25 @@
+[+] Finding open SMB ports....
+[!] RPC Authentication error occured
+[!] Authentication error on 10.10.10.27
+[+] Finding open SMB ports....
+[!] RPC Authentication error occured
+[!] Authentication error on 10.10.10.27
+[+] Finding open SMB ports....
+[+] User SMB session establishd on 10.10.10.27...
+[+] IP: 10.10.10.27:445	Name: 10.10.10.27                                       
+	Disk                                                  	Permissions
+	----                                                  	-----------
+[!] Access Denied
+[+] Finding open SMB ports....
+[+] Guest SMB session established on 10.10.10.27...
+[+] IP: 10.10.10.27:445	Name: 10.10.10.27                                       
+	Disk                                                  	Permissions
+	----                                                  	-----------
+	ADMIN$                                            	NO ACCESS
+	backups                                           	READ ONLY
+	.\
+	dr--r--r--                0 Mon Jan 20 04:20:57 2020	.
+	dr--r--r--                0 Mon Jan 20 04:20:57 2020	..
+	-w--w--w--              609 Mon Jan 20 04:23:18 2020	prod.dtsConfig
+	C$                                                	NO ACCESS
+	IPC$                                              	NO ACCESS

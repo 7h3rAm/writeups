@@ -1,0 +1,31 @@
+root:$1$XROmcfDX$tF93GqnLHOJeGRHpaNyIs0:0:0:root:/root:/bin/bash
+bin:*:1:1:bin:/bin:/sbin/nologin
+daemon:*:2:2:daemon:/sbin:/sbin/nologin
+adm:*:3:4:adm:/var/adm:/sbin/nologin
+lp:*:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:*:5:0:sync:/sbin:/bin/sync
+shutdown:*:6:0:shutdown:/sbin:/sbin/shutdown
+halt:*:7:0:halt:/sbin:/sbin/halt
+mail:*:8:12:mail:/var/spool/mail:/sbin/nologin
+news:*:9:13:news:/var/spool/news:
+uucp:*:10:14:uucp:/var/spool/uucp:/sbin/nologin
+operator:*:11:0:operator:/root:/sbin/nologin
+games:*:12:100:games:/usr/games:/sbin/nologin
+gopher:*:13:30:gopher:/var/gopher:/sbin/nologin
+ftp:*:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:*:99:99:Nobody:/:/sbin/nologin
+mailnull:!!:47:47::/var/spool/mqueue:/dev/null
+rpm:!!:37:37::/var/lib/rpm:/bin/bash
+xfs:!!:43:43:X Font Server:/etc/X11/fs:/bin/false
+rpc:!!:32:32:Portmapper RPC user:/:/bin/false
+rpcuser:!!:29:29:RPC Service User:/var/lib/nfs:/sbin/nologin
+nfsnobody:!!:65534:65534:Anonymous NFS User:/var/lib/nfs:/sbin/nologin
+nscd:!!:28:28:NSCD Daemon:/:/bin/false
+ident:!!:98:98:pident user:/:/sbin/nologin
+radvd:!!:75:75:radvd user:/:/bin/false
+postgres:!!:26:26:PostgreSQL Server:/var/lib/pgsql:/bin/bash
+apache:!!:48:48:Apache:/var/www:/bin/false
+squid:!!:23:23::/var/spool/squid:/dev/null
+pcap:!!:77:77::/var/arpwatch:/bin/nologin
+john:$1$zL4.MR4t$26N4YpTGceBO0gTX6TAky1:500:500::/home/john:/bin/bash
+harold:$1$Xx6dZdOd$IMOGACl3r757dv17LZ9010:501:501::/home/harold:/bin/bash

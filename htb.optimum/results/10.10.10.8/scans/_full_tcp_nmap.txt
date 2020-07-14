@@ -1,0 +1,52 @@
+# Nmap 7.70 scan initiated Mon Nov  4 17:34:57 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.optimum/results/10.10.10.8/scans/xml/_full_tcp_nmap.xml 10.10.10.8
+adjust_timeouts2: packet supposedly had rtt of -150878 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -150878 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -250756 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -250756 microseconds.  Ignoring time.
+Nmap scan report for 10.10.10.8
+Host is up, received user-set (0.087s latency).
+Scanned at 2019-11-04 17:34:57 PST for 509s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 HttpFileServer httpd 2.3
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: HFS 2.3
+|_http-title: HFS /
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012|7 (90%)
+OS CPE: cpe:/o:microsoft:windows_server_2012 cpe:/o:microsoft:windows_7::-:professional
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2012 (90%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (90%), Microsoft Windows Server 2012 R2 (90%), Microsoft Windows 7 Professional (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/4%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5DC0D3BE%P=i686-pc-linux-gnu)
+SEQ(SP=104%GCD=1%ISR=10C%TS=7)
+SEQ(SP=105%GCD=1%ISR=10C%II=I%TS=7)
+OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Uptime guess: 1.067 days (since Sun Nov  3 16:07:01 2019)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   56.59 ms  10.10.14.1
+2   108.62 ms 10.10.10.8
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  4 17:43:26 2019 -- 1 IP address (1 host up) scanned in 509.78 seconds

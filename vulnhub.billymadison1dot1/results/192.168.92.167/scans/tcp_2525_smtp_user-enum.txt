@@ -1,0 +1,20 @@
+Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+Mode ..................... VRFY
+Worker Processes ......... 5
+Usernames file ........... /usr/share/seclists/Usernames/top-usernames-shortlist.txt
+Target count ............. 1
+Username count ........... 17
+Target TCP port .......... 2525
+Query timeout ............ 5 secs
+Target domain ............ 
+
+######## Scan started at Thu Sep  5 17:47:58 2019 #########
+######## Scan completed at Thu Sep  5 17:47:58 2019 #########
+0 results.
+
+17 queries in 1 seconds (17.0 queries / sec)

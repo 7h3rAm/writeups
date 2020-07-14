@@ -1,0 +1,6 @@
+[submodule "htb.lame/htb.lame/CVE-2007-2447"]
+	path = htb.lame/htb.lame/CVE-2007-2447
+	url = https://github.com/amriunix/CVE-2007-2447
+[submodule "htb.lame/CVE-2007-2447"]
+	path = htb.lame/CVE-2007-2447
+	url = https://github.com/amriunix/CVE-2007-2447

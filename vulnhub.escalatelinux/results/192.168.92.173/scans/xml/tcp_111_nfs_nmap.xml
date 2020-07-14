@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Sep 17 11:47:59 2019 as: nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.173 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 111 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/tcp_111_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/tcp_111_nfs_nmap.xml 192.168.92.173" start="1568746079" startstr="Tue Sep 17 11:47:59 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1568746081"/>
+<taskend task="NSE" time="1568746081"/>
+<taskbegin task="NSE" time="1568746081"/>
+<taskend task="NSE" time="1568746081"/>
+<taskbegin task="NSE" time="1568746081"/>
+<taskend task="NSE" time="1568746081"/>
+<taskbegin task="ARP Ping Scan" time="1568746081"/>
+<taskend task="ARP Ping Scan" time="1568746081" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1568746081"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1568746081"/>
+<taskbegin task="SYN Stealth Scan" time="1568746081"/>
+<taskend task="SYN Stealth Scan" time="1568746081" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1568746081"/>
+<taskend task="Service scan" time="1568746087" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1568746087"/>
+<taskend task="NSE" time="1568746102"/>
+<taskbegin task="NSE" time="1568746102"/>
+<taskend task="NSE" time="1568746103"/>
+<taskbegin task="NSE" time="1568746103"/>
+<taskend task="NSE" time="1568746103"/>
+<host starttime="1568746081" endtime="1568746103"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.173" addrtype="ipv4"/>
+<address addr="00:0C:29:A6:A7:B9" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="nfs-ls" output="Volume /home/user5&#xa;  access: Read Lookup Modify Extend Delete NoExecute&#xa;PERMISSION  UID   GID   SIZE  TIME                 FILENAME&#xa;rwxr-xr-x   0     0     4096  2019-06-05T18:16:09  ..&#xa;rw-r-&#45;r-&#45;   1004  1004  124   2019-06-04T19:01:43  .asoundrc&#xa;rw-r-&#45;r-&#45;   1004  1004  23    2019-06-04T19:01:43  .dmrc&#xa;rw-r-&#45;r-&#45;   1004  1004  0     2019-06-04T19:01:42  .gksu.lock&#xa;rw-r-&#45;r-&#45;   1004  1004  20    2019-06-04T19:01:40  .gtk-bookmarks&#xa;rw-r-&#45;r-&#45;   1004  1004  0     2019-06-04T19:01:43  .sudo_as_admin_successful&#xa;rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:41  .thunderbird&#xa;rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:42  Desktop&#xa;rwxr-xr-x   1004  1004  4096  2019-06-04T19:01:43  Public&#xa;rwxrwxr-x   1004  1004  26    2019-06-04T19:54:13  ls&#xa;&#xa;"><table key="volumes">
+<table>
+<table key="info">
+<elem>access: Read Lookup Modify Extend Delete NoExecute</elem>
+</table>
+<elem key="volume">/home/user5</elem>
+<table key="files">
+<table>
+<elem key="gid">0</elem>
+<elem key="uid">0</elem>
+<elem key="permission">rwxr-xr-x</elem>
+<elem key="filename">..</elem>
+<elem key="size">4096</elem>
+<elem key="time">2019-06-05T18:16:09</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rw-r-&#45;r-&#45;</elem>
+<elem key="filename">.asoundrc</elem>
+<elem key="size">124</elem>
+<elem key="time">2019-06-04T19:01:43</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rw-r-&#45;r-&#45;</elem>
+<elem key="filename">.dmrc</elem>
+<elem key="size">23</elem>
+<elem key="time">2019-06-04T19:01:43</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rw-r-&#45;r-&#45;</elem>
+<elem key="filename">.gksu.lock</elem>
+<elem key="size">0</elem>
+<elem key="time">2019-06-04T19:01:42</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rw-r-&#45;r-&#45;</elem>
+<elem key="filename">.gtk-bookmarks</elem>
+<elem key="size">20</elem>
+<elem key="time">2019-06-04T19:01:40</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rw-r-&#45;r-&#45;</elem>
+<elem key="filename">.sudo_as_admin_successful</elem>
+<elem key="size">0</elem>
+<elem key="time">2019-06-04T19:01:43</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rwxr-xr-x</elem>
+<elem key="filename">.thunderbird</elem>
+<elem key="size">4096</elem>
+<elem key="time">2019-06-04T19:01:41</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rwxr-xr-x</elem>
+<elem key="filename">Desktop</elem>
+<elem key="size">4096</elem>
+<elem key="time">2019-06-04T19:01:42</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rwxr-xr-x</elem>
+<elem key="filename">Public</elem>
+<elem key="size">4096</elem>
+<elem key="time">2019-06-04T19:01:43</elem>
+</table>
+<table>
+<elem key="gid">1004</elem>
+<elem key="uid">1004</elem>
+<elem key="permission">rwxrwxr-x</elem>
+<elem key="filename">ls</elem>
+<elem key="size">26</elem>
+<elem key="time">2019-06-04T19:54:13</elem>
+</table>
+</table>
+</table>
+</table>
+<table key="total">
+<elem key="bytes">16577</elem>
+<elem key="files">10</elem>
+</table>
+</script><script id="nfs-showmount" output="&#xa;  /home/user5 *&#xa;"/><script id="nfs-statfs" output="&#xa;  Filesystem   1K-blocks    Used      Available    Use%  Maxfilesize  Maxlink&#xa;  /home/user5  277708868.0  348912.0  263183444.0  1%    16.0T        32000&#xa;"/><script id="rpcinfo" output="&#xa;  program version   port/proto  service&#xa;  100000  2,3,4        111/tcp  rpcbind&#xa;  100000  2,3,4        111/udp  rpcbind&#xa;  100003  3           2049/udp  nfs&#xa;  100003  3,4         2049/tcp  nfs&#xa;  100005  1,2,3      43318/udp  mountd&#xa;  100005  1,2,3      43937/tcp  mountd&#xa;  100021  1,3,4      39393/tcp  nlockmgr&#xa;  100021  1,3,4      47990/udp  nlockmgr&#xa;  100227  3           2049/tcp  nfs_acl&#xa;  100227  3           2049/udp  nfs_acl&#xa;"><table key="100000">
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+<table key="100005">
+<table key="tcp">
+<elem key="port">43937</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">43318</elem>
+<table key="version">
+<elem>1</elem>
+<elem>2</elem>
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100021">
+<table key="tcp">
+<elem key="port">39393</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">47990</elem>
+<table key="version">
+<elem>1</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+</table>
+<table key="100227">
+<table key="tcp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp">
+<elem key="port">2049</elem>
+<table key="version">
+<elem>3</elem>
+</table>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="983" rttvar="3917" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1568746104"/>
+<taskend task="NSE" time="1568746104"/>
+<taskbegin task="NSE" time="1568746104"/>
+<taskend task="NSE" time="1568746104"/>
+<taskbegin task="NSE" time="1568746104"/>
+<taskend task="NSE" time="1568746104"/>
+<runstats><finished time="1568746104" timestr="Tue Sep 17 11:48:24 2019" elapsed="24.52" summary="Nmap done at Tue Sep 17 11:48:24 2019; 1 IP address (1 host up) scanned in 24.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

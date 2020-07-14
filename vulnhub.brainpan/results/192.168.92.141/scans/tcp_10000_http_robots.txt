@@ -1,0 +1,15 @@
+HTTP/1.0 404 File not found
+Server: SimpleHTTP/0.6 Python/2.7.3
+Date: Wed, 31 Jul 2019 22:34:30 GMT
+Content-Type: text/html
+Connection: close
+
+<head>
+<title>Error response</title>
+</head>
+<body>
+<h1>Error response</h1>
+<p>Error code 404.
+<p>Message: File not found.
+<p>Error code explanation: 404 = Nothing matches the given URI.
+</body>

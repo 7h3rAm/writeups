@@ -1,0 +1,18 @@
+Doing NBT name scan for addresses from 192.168.92.181
+
+
+NetBIOS Name Table for Host 192.168.92.181:
+
+Incomplete packet, 227 bytes long.
+Name             Service          Type             
+----------------------------------------
+KIOPTRIX         Workstation Service
+KIOPTRIX         Messenger Service
+KIOPTRIX         File Server Service
+__MSBROWSE__  Master Browser
+MYGROUP          Domain Name
+MYGROUP          Master Browser
+MYGROUP          Browser Service Elections
+
+Adapter address: 00:00:00:00:00:00
+----------------------------------------

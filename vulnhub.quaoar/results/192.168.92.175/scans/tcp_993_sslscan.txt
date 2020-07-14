@@ -1,0 +1,160 @@
+Version: 1.11.11-static
+OpenSSL 1.0.2-chacha (1.0.2g-dev)
+
+Connected to 192.168.92.175
+
+Testing SSL server 192.168.92.175 on port 993 using SNI name 192.168.92.175
+
+  TLS Fallback SCSV:
+Server does not support TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression enabled (CRIME)
+
+  Heartbleed:
+TLS 1.2 not vulnerable to heartbleed
+TLS 1.1 not vulnerable to heartbleed
+TLS 1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  DHE-RSA-AES256-GCM-SHA384     DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.2  256 bits  AES256-GCM-SHA384            
+Accepted  TLSv1.2  256 bits  AES256-SHA256                
+Accepted  TLSv1.2  256 bits  AES256-SHA                   
+Accepted  TLSv1.2  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-GCM-SHA256     DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+Accepted  TLSv1.2  128 bits  AES128-SHA256                
+Accepted  TLSv1.2  128 bits  AES128-SHA                   
+Accepted  TLSv1.2  128 bits  SEED-SHA                     
+Accepted  TLSv1.2  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.2  128 bits  RC4-SHA                      
+Accepted  TLSv1.2  128 bits  RC4-MD5                      
+Accepted  TLSv1.2  112 bits  EDH-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.2  112 bits  DES-CBC3-SHA                 
+Preferred TLSv1.1  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.1  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.1  256 bits  AES256-SHA                   
+Accepted  TLSv1.1  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.1  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.1  128 bits  AES128-SHA                   
+Accepted  TLSv1.1  128 bits  SEED-SHA                     
+Accepted  TLSv1.1  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.1  128 bits  RC4-SHA                      
+Accepted  TLSv1.1  128 bits  RC4-MD5                      
+Accepted  TLSv1.1  112 bits  EDH-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.1  112 bits  DES-CBC3-SHA                 
+Preferred TLSv1.0  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.0  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.0  256 bits  AES256-SHA                   
+Accepted  TLSv1.0  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.0  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.0  128 bits  AES128-SHA                   
+Accepted  TLSv1.0  128 bits  SEED-SHA                     
+Accepted  TLSv1.0  128 bits  CAMELLIA128-SHA              
+Accepted  TLSv1.0  128 bits  RC4-SHA                      
+Accepted  TLSv1.0  128 bits  RC4-MD5                      
+Accepted  TLSv1.0  112 bits  EDH-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  TLSv1.0  112 bits  DES-CBC3-SHA                 
+Preferred SSLv3    256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  SSLv3    256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  SSLv3    256 bits  AES256-SHA                   
+Accepted  SSLv3    256 bits  CAMELLIA256-SHA              
+Accepted  SSLv3    128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  SSLv3    128 bits  DHE-RSA-SEED-SHA              DHE 1024 bits
+Accepted  SSLv3    128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  SSLv3    128 bits  AES128-SHA                   
+Accepted  SSLv3    128 bits  SEED-SHA                     
+Accepted  SSLv3    128 bits  CAMELLIA128-SHA              
+Accepted  SSLv3    128 bits  RC4-SHA                      
+Accepted  SSLv3    128 bits  RC4-MD5                      
+Accepted  SSLv3    112 bits  EDH-RSA-DES-CBC3-SHA          DHE 1024 bits
+Accepted  SSLv3    112 bits  DES-CBC3-SHA                 
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIDizCCAnOgAwIBAgIJAP8OUpUA7rC3MA0GCSqGSIb3DQEBBQUAMFwxHDAaBgNV
+BAoME0RvdmVjb3QgbWFpbCBzZXJ2ZXIxDzANBgNVBAsMBnVidW50dTEPMA0GA1UE
+AwwGdWJ1bnR1MRowGAYJKoZIhvcNAQkBFgtyb290QHVidW50dTAeFw0xNjEwMDcw
+NDMyNDNaFw0yNjEwMDcwNDMyNDNaMFwxHDAaBgNVBAoME0RvdmVjb3QgbWFpbCBz
+ZXJ2ZXIxDzANBgNVBAsMBnVidW50dTEPMA0GA1UEAwwGdWJ1bnR1MRowGAYJKoZI
+hvcNAQkBFgtyb290QHVidW50dTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAMx7OvWQLwa6CLqojjvHuC2x7OjPP+jIUFMdoN2H1J+G/LdSy60QVEenqcqs
+SlHDFwmwDW2cCDC5tPaW2Qn5AI2Ts5TmSeNQTtlRcklAQN+tF8aQpiJ6jFjwMvbN
+CIpbEWfvheLCpSw2yWWOMcERFsmblOvdKo7KE/6fEvjdfYU1jJrVOLLqJFhgEwKX
+ImSx/OVqMA/u8zXOmqaqVfa8Rrzs3aAS2HwHS2TGo28Ay9vt4wuL7SuTrxX5lpfA
+Xi5TP2V9aatrpUwjlpGDolg/VptGPlQ3YRwqbZu3WWws11YoZXcOgYfYkJFR4gUs
+dwTZGGpSKb1by5VTLvXaUvB5iB0CAwEAAaNQME4wHQYDVR0OBBYEFOnF9jfUGBWq
+IM6SV5lPz3s6gn1cMB8GA1UdIwQYMBaAFOnF9jfUGBWqIM6SV5lPz3s6gn1cMAwG
+A1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADggEBAG0OkadSFSlV9IqgonA3dYYi
+GisZQtrmXM8mHNMWYf5Ym3gRDurQHASxYZqNtcc4OCF/YoxU8avrKxeU7lTRScPx
+wgqbYcssNTtpZnhC6AExZBULZ56ZQSTy4//CZa10wgCxdevE+K+UtkOuNGdh0REO
+hzZWi0AMpwQWSXZfxl915MiViPPNLVu0IPVZqc6PE79st2ZEWp7Cf2iKG35KSm39
+xTyAQjVFpJXZtPTMRIsXel6mUZOh2AHebgqGYnF19fx443ndgx2LHfc1+T9UTgk6
+zSCmC8/kJcb2PXWvEEXJtabYi25JKGD8p0CDGWKw2Ly3cysl8PTGqAei8ldlVp8=
+-----END CERTIFICATE-----
+    Version: 2
+    Serial Number: ff:0e:52:95:00:ee:b0:b7
+    Signature Algorithm: sha1WithRSAEncryption
+    Issuer: /O=Dovecot mail server/OU=ubuntu/CN=ubuntu/emailAddress=root@ubuntu
+    Not valid before: Oct  7 04:32:43 2016 GMT
+    Not valid after: Oct  7 04:32:43 2026 GMT
+    Subject: /O=Dovecot mail server/OU=ubuntu/CN=ubuntu/emailAddress=root@ubuntu
+    Public Key Algorithm: rsaEncryption
+    RSA Public Key: (2048 bit)
+      Public-Key: (2048 bit)
+      Modulus:
+          00:cc:7b:3a:f5:90:2f:06:ba:08:ba:a8:8e:3b:c7:
+          b8:2d:b1:ec:e8:cf:3f:e8:c8:50:53:1d:a0:dd:87:
+          d4:9f:86:fc:b7:52:cb:ad:10:54:47:a7:a9:ca:ac:
+          4a:51:c3:17:09:b0:0d:6d:9c:08:30:b9:b4:f6:96:
+          d9:09:f9:00:8d:93:b3:94:e6:49:e3:50:4e:d9:51:
+          72:49:40:40:df:ad:17:c6:90:a6:22:7a:8c:58:f0:
+          32:f6:cd:08:8a:5b:11:67:ef:85:e2:c2:a5:2c:36:
+          c9:65:8e:31:c1:11:16:c9:9b:94:eb:dd:2a:8e:ca:
+          13:fe:9f:12:f8:dd:7d:85:35:8c:9a:d5:38:b2:ea:
+          24:58:60:13:02:97:22:64:b1:fc:e5:6a:30:0f:ee:
+          f3:35:ce:9a:a6:aa:55:f6:bc:46:bc:ec:dd:a0:12:
+          d8:7c:07:4b:64:c6:a3:6f:00:cb:db:ed:e3:0b:8b:
+          ed:2b:93:af:15:f9:96:97:c0:5e:2e:53:3f:65:7d:
+          69:ab:6b:a5:4c:23:96:91:83:a2:58:3f:56:9b:46:
+          3e:54:37:61:1c:2a:6d:9b:b7:59:6c:2c:d7:56:28:
+          65:77:0e:81:87:d8:90:91:51:e2:05:2c:77:04:d9:
+          18:6a:52:29:bd:5b:cb:95:53:2e:f5:da:52:f0:79:
+          88:1d
+      Exponent: 65537 (0x10001)
+    X509v3 Extensions:
+      X509v3 Subject Key Identifier: 
+        E9:C5:F6:37:D4:18:15:AA:20:CE:92:57:99:4F:CF:7B:3A:82:7D:5C
+      X509v3 Authority Key Identifier: 
+        keyid:E9:C5:F6:37:D4:18:15:AA:20:CE:92:57:99:4F:CF:7B:3A:82:7D:5C
+
+      X509v3 Basic Constraints: 
+        CA:TRUE
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha1WithRSAEncryption
+RSA Key Strength:    2048
+
+Subject:  ubuntu
+Issuer:   ubuntu
+
+Not valid before: Oct  7 04:32:43 2016 GMT
+Not valid after:  Oct  7 04:32:43 2026 GMT

@@ -1,0 +1,4 @@
+tcp/445/nmap-smb - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+tcp/139/nmap-smb - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

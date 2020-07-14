@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Fri Nov  1 12:53:07 2019 as: nmap -vv -&#45;reason -Pn -sV -p 3632 -&#45;script=banner,distcc-cve2004-2687 -&#45;script-args=distcc-cve2004-2687.cmd=id -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_3632_distcc_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_3632_distcc_nmap.xml 10.10.10.3 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 3632 -&#45;script=banner,distcc-cve2004-2687 -&#45;script-args=distcc-cve2004-2687.cmd=id -oN /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/tcp_3632_distcc_nmap.txt -oX /root/toolbox/writeups/htb.lame/results/10.10.10.3/scans/xml/tcp_3632_distcc_nmap.xml 10.10.10.3" start="1572637987" startstr="Fri Nov  1 12:53:07 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3632"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1572637987"/>
+<taskend task="NSE" time="1572637987"/>
+<taskbegin task="NSE" time="1572637987"/>
+<taskend task="NSE" time="1572637987"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1572637987"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1572637990"/>
+<taskbegin task="SYN Stealth Scan" time="1572637990"/>
+<taskend task="SYN Stealth Scan" time="1572637992" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1572637992"/>
+<taskend task="Service scan" time="1572638001" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1572638001"/>
+<taskend task="NSE" time="1572638017"/>
+<taskbegin task="NSE" time="1572638017"/>
+<taskend task="NSE" time="1572638017"/>
+<host starttime="1572637990" endtime="1572638017"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.3" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="3632"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="distccd" product="distccd" version="v1" extrainfo="(GNU) 4.2.4 (Ubuntu 4.2.4-1ubuntu4)" method="probed" conf="10"/><script id="distcc-cve2004-2687" output="&#xa;  VULNERABLE:&#xa;  distcc Daemon Command Execution&#xa;    State: VULNERABLE (Exploitable)&#xa;    IDs:  CVE:CVE-2004-2687&#xa;    Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)&#xa;      Allows executing of arbitrary commands on systems running distccd 3.1 and&#xa;      earlier. The vulnerability is the consequence of weak service configuration.&#xa;      &#xa;    Disclosure date: 2002-02-01&#xa;    Extra information:&#xa;      &#xa;    uid=1(daemon) gid=1(daemon) groups=1(daemon)&#xa;  &#xa;    References:&#xa;      http://distcc.googlecode.com/svn/trunk/doc/web/security.html&#xa;      http://http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-2687&#xa;      http://http://www.osvdb.org/13378&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2687&#xa;"><table key="CVE-2004-2687">
+<elem key="title">distcc Daemon Command Execution</elem>
+<elem key="state">VULNERABLE (Exploitable)</elem>
+<table key="ids">
+<elem>CVE:CVE-2004-2687</elem>
+</table>
+<table key="scores">
+<elem key="CVSSv2">9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)</elem>
+</table>
+<table key="description">
+<elem>Allows executing of arbitrary commands on systems running distccd 3.1 and&#xa;earlier. The vulnerability is the consequence of weak service configuration.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">01</elem>
+<elem key="year">2002</elem>
+<elem key="month">02</elem>
+</table>
+</table>
+<elem key="disclosure">2002-02-01</elem>
+<table key="exploit_results">
+</table>
+<table key="extra_info">
+<elem>&#xa;  uid=1(daemon) gid=1(daemon) groups=1(daemon)&#xa;</elem>
+</table>
+<table key="refs">
+<elem>http://distcc.googlecode.com/svn/trunk/doc/web/security.html</elem>
+<elem>http://http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2004-2687</elem>
+<elem>http://http://www.osvdb.org/13378</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2004-2687</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="1206846" rttvar="979103" to="5123258"/>
+</host>
+<taskbegin task="NSE" time="1572638017"/>
+<taskend task="NSE" time="1572638017"/>
+<taskbegin task="NSE" time="1572638017"/>
+<taskend task="NSE" time="1572638017"/>
+<runstats><finished time="1572638017" timestr="Fri Nov  1 12:53:37 2019" elapsed="30.12" summary="Nmap done at Fri Nov  1 12:53:37 2019; 1 IP address (1 host up) scanned in 30.12 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

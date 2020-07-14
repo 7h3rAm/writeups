@@ -1,0 +1,61 @@
+WhatWeb report for http://10.10.10.14:80
+Status    : 200 OK
+Title     : <None>
+IP        : 10.10.10.14
+Country   : RESERVED, ZZ
+
+Summary   : MicrosoftOfficeWebServer[5.0_Pub], X-Powered-By[ASP.NET], UncommonHeaders[microsoftofficewebserver], HTTPServer[Microsoft-IIS/6.0], Microsoft-IIS[6.0][Under Construction]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/6.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Module       : Under Construction
+	Module       : Under Construction
+	Version      : 6.0
+	Website     : http://www.iis.net/
+
+[ MicrosoftOfficeWebServer ]
+	Microsoft Office Web Server 
+
+	Version      : 5.0_Pub
+	Website     : http://microsoft.com/
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : microsoftofficewebserver (from headers)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Length: 1433
+	Content-Type: text/html
+	Content-Location: http://10.10.10.14/iisstart.htm
+	Last-Modified: Fri, 21 Feb 2003 15:48:30 GMT
+	Accept-Ranges: bytes
+	ETag: "05b3daec0d9c21:2d3"
+	Server: Microsoft-IIS/6.0
+	MicrosoftOfficeWebServer: 5.0_Pub
+	X-Powered-By: ASP.NET
+	Date: Mon, 04 Nov 2019 23:43:48 GMT
+	Connection: close
+	

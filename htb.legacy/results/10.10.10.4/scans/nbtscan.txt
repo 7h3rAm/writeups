@@ -1,0 +1,16 @@
+Doing NBT name scan for addresses from 10.10.10.4
+
+
+NetBIOS Name Table for Host 10.10.10.4:
+
+Name             Service          Type             
+----------------------------------------
+LEGACY           Workstation Service
+HTB              Domain Name
+LEGACY           File Server Service
+HTB              Browser Service Elections
+HTB              Master Browser
+__MSBROWSE__  Master Browser
+
+Adapter address: 00:50:56:b9:0c:03
+----------------------------------------

@@ -1,0 +1,22 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.92.191
++ Target Hostname:    192.168.92.191
++ Target Port:        80
++ Start Time:         2019-10-29 11:18:36 (GMT-7)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.7 (Ubuntu)
++ Server leaks inodes via ETags, header found with file /, fields: 0x8ce8 0x5560ea23d23c0 
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ OSVDB-3268: /old/: Directory indexing found.
++ Entry '/old/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ OSVDB-3268: /test/: Directory indexing found.
++ Entry '/test/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ OSVDB-3268: /Backnode_files/: Directory indexing found.
++ Entry '/Backnode_files/' in robots.txt returned a non-forbidden or redirect HTTP code (200)
++ "robots.txt" contains 4 entries which should be manually viewed.
++ Apache/2.4.7 appears to be outdated (current is at least Apache/2.4.12). Apache 2.0.65 (final release) and 2.2.29 are also current.
++ Allowed HTTP Methods: OPTIONS, GET, HEAD, POST 

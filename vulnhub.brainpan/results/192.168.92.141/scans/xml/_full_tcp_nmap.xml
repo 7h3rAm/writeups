@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Jul 31 15:33:35 2019 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/_full_tcp_nmap.xml 192.168.92.141 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/_full_tcp_nmap.txt -oX /root/toolbox/vulnhub/brainpan/results/192.168.92.141/scans/xml/_full_tcp_nmap.xml 192.168.92.141" start="1564612415" startstr="Wed Jul 31 15:33:35 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1564612416"/>
+<taskend task="NSE" time="1564612416"/>
+<taskbegin task="NSE" time="1564612416"/>
+<taskend task="NSE" time="1564612416"/>
+<taskbegin task="ARP Ping Scan" time="1564612416"/>
+<taskend task="ARP Ping Scan" time="1564612416" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1564612416"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1564612416"/>
+<taskbegin task="SYN Stealth Scan" time="1564612416"/>
+<taskend task="SYN Stealth Scan" time="1564612432" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1564612432"/>
+<taskend task="Service scan" time="1564612475" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1564612482"/>
+<taskend task="NSE" time="1564612512"/>
+<taskbegin task="NSE" time="1564612512"/>
+<taskend task="NSE" time="1564612512"/>
+<host starttime="1564612416" endtime="1564612512"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.141" addrtype="ipv4"/>
+<address addr="00:0C:29:4F:0B:E6" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="9999"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="abyss" servicefp="SF-Port9999-TCP:V=7.70%I=9%D=7/31%Time=5D421756%P=i686-pc-linux-gnu%r(NULL,298,&quot;_\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\n_\|_\|_\|\x20\x20\x20\x20_\|\x20\x20_\|_\|\x20\x20\x20\x20_\|_\|_\|\x20\x20\x20\x20\x20\x20_\|_\|_\|\x20\x20\x20\x20_\|_\|_\|\x20\x20\x20\x20\x20\x20_\|_\|_\|\x20\x20_\|_\|_\|\x20\x20\n_\|\x20\x20\x20\x20_\|\x20\x20_\|_\|\x20\x20\x20\x20\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\n_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20\x20\x20\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\n_\|_\|_\|\x20\x20\x20\x20_\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_\|_\|_\|\x20\x20_\|\x20\x20_\|\x20\x20\x20\x20_\|\x20\x20_\|_\|_\|\x20\x20\x20\x20\x20\x20_\|_\|_\|\x20\x20_\|\x20\x20\x20\x20_\|\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_\|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20_\|\n\n\[________________________\x20WELCOME\x20TO\x20BRAINPAN\x20_________________________\]\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20ENTER\x20THE\x20PASSWORD\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\n\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20&gt;&gt;\x20&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  NULL: &#xa;    _| _| &#xa;    _|_|_| _| _|_| _|_|_| _|_|_| _|_|_| _|_|_| _|_|_| &#xa;    _|_| _| _| _| _| _| _| _| _| _| _| _|&#xa;    _|_|_| _| _|_|_| _| _| _| _|_|_| _|_|_| _| _|&#xa;    [________________________ WELCOME TO BRAINPAN _________________________]&#xa;    ENTER THE PASSWORD"><elem key="NULL">&#xa;    _| _| &#xa;    _|_|_| _| _|_| _|_|_| _|_|_| _|_|_| _|_|_| _|_|_| &#xa;    _|_| _| _| _| _| _| _| _| _| _| _| _|&#xa;    _|_|_| _| _|_|_| _| _| _| _|_|_| _|_|_| _| _|&#xa;    [________________________ WELCOME TO BRAINPAN _________________________]&#xa;    ENTER THE PASSWORD</elem>
+</script></port>
+<port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="caldav" product="Radicale calendar and contacts server" extrainfo="Python BaseHTTPServer" method="probed" conf="10"><cpe>cpe:/a:python:python</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="SimpleHTTP/0.6 Python/2.7.3"><elem>SimpleHTTP/0.6 Python/2.7.3</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="9999"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="36719"/>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="100" line="56381">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=7/31%OT=9999%CT=1%CU=36719%PV=Y%DS=1%DC=D%G=Y%M=000C29&#xa;OS:%TM=5D4217A0%P=i686-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10D%TI=Z%CI=Z%II=I&#xa;OS:%TS=8)SEQ(SP=102%GCD=1%ISR=10D%TI=Z%II=I%TS=8)OPS(O1=M5B4ST11NW5%O2=M5B4&#xa;OS:ST11NW5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B4ST11NW5%O6=M5B4ST11)WIN(W1&#xa;OS:=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)ECN(R=Y%DF=Y%T=40%W=3908%O&#xa;OS:=M5B4NNSNW5%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N&#xa;OS:)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=&#xa;OS:S+%F=AR%O=%RD=0%Q=)T5(R=N)T6(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=&#xa;OS:0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=N%T=&#xa;OS:40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S&#xa;OS:)&#xa;"/>
+</os>
+<uptime seconds="504" lastboot="Wed Jul 31 15:26:48 2019"/>
+<distance value="1"/>
+<tcpsequence index="256" difficulty="Good luck!" values="A4FCCC68,C4D6003A,10DE64C7,A46ABA36,84190B4,BCD6BAD1"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="20126,20142,2015E,2017E,2019A,201B8"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.92.141" rtt="3.33"/>
+</trace>
+<times srtt="3334" rttvar="1369" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1564612512"/>
+<taskend task="NSE" time="1564612512"/>
+<taskbegin task="NSE" time="1564612512"/>
+<taskend task="NSE" time="1564612512"/>
+<runstats><finished time="1564612512" timestr="Wed Jul 31 15:35:12 2019" elapsed="96.96" summary="Nmap done at Wed Jul 31 15:35:12 2019; 1 IP address (1 host up) scanned in 96.96 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

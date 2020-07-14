@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Fri Nov  1 17:08:32 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/htb.blue/results/10.10.10.40/scans/xml/tcp_139_smb_nmap.xml 10.10.10.40
+Nmap scan report for 10.10.10.40
+Host is up, received user-set (0.050s latency).
+Scanned at 2019-11-01 17:08:33 PDT for 47s
+
+PORT    STATE SERVICE     REASON          VERSION
+139/tcp open  netbios-ssn syn-ack ttl 127 Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_smb-mbenum: ERROR: Script execution failed (use -d to debug)
+|_smb-print-text: false
+|_smb-protocols: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
+|_smb-vuln-ms17-010: Could not connect to 'IPC$'
+|_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
+|_smb2-time: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 17:09:20 2019 -- 1 IP address (1 host up) scanned in 47.59 seconds

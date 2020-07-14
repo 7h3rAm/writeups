@@ -1,0 +1,53 @@
+# Nmap 7.70 scan initiated Tue Nov 12 15:49:19 2019 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/_top_20_udp_nmap.txt -oX /root/toolbox/writeups/htb.mirai/results/10.10.10.48/scans/xml/_top_20_udp_nmap.xml 10.10.10.48
+Nmap scan report for 10.10.10.48
+Host is up, received user-set (0.068s latency).
+Scanned at 2019-11-12 15:49:19 PST for 254s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open          domain       udp-response        dnsmasq 2.76
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.76
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    closed        tftp         port-unreach ttl 63
+123/udp   open          ntp          udp-response ttl 63 NTP v4 (unsynchronized)
+| ntp-info: 
+|_  receive time stamp: 2019-11-12T23:53:43
+135/udp   closed        msrpc        port-unreach ttl 63
+137/udp   closed        netbios-ns   port-unreach ttl 63
+138/udp   closed        netbios-dgm  port-unreach ttl 63
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   closed        snmp         port-unreach ttl 63
+162/udp   closed        snmptrap     port-unreach ttl 63
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   open|filtered isakmp       no-response
+514/udp   closed        syslog       port-unreach ttl 63
+520/udp   open|filtered route        no-response
+631/udp   open|filtered ipp          no-response
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  closed        nat-t-ike    port-unreach ttl 63
+49152/udp closed        unknown      port-unreach ttl 63
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=11/12%OT=%CT=%CU=69%PV=Y%DS=2%DC=T%G=N%TM=5DCB45FD%P=i686-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+Host script results:
+|_clock-skew: mean: 20s, deviation: 0s, median: 20s
+
+TRACEROUTE (using port 445/udp)
+HOP RTT      ADDRESS
+1   82.00 ms 10.10.14.1
+2   82.03 ms 10.10.10.48
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 12 15:53:33 2019 -- 1 IP address (1 host up) scanned in 254.53 seconds

@@ -1,0 +1,66 @@
+# Nmap 7.70 scan initiated Sat Sep 28 21:12:22 2019 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/vulnhub.kioptrix3/results/kioptrix3.com/scans/xml/_full_tcp_nmap.xml kioptrix3.com
+adjust_timeouts2: packet supposedly had rtt of -121208 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -121208 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -138729 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -138729 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -151501 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -151501 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -149417 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -149417 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -252657 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -252657 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -501032 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -501032 microseconds.  Ignoring time.
+Nmap scan report for kioptrix3.com (192.168.92.184)
+Host is up, received arp-response (0.0010s latency).
+Scanned at 2019-09-28 21:12:23 PDT for 40s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 30:e3:f6:dc:2e:22:5d:17:ac:46:02:39:ad:71:cb:49 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAL4CpDFXD9Zn2ONktcyGQL37Dn6s9JaOv3oKjxfdiABm9GjRkLEtbSAK3vhBBUJTZcVKYZk21lFHAqoe/+pLr4U9yOLOBbSoKNSxQ2VHN9FOLc9C58hKMF/0sjDsSIZnaI4zO7M4HmdEMYXONrmj2x6qczbfqecs+z4cEYVUF3R3AAAAFQCuG9mm7mLm1GGqZRSICZ+omMZkKQAAAIEAnj8NDH48hL+Pp06GWQZOlhte8JRZT5do6n8+bCgRSOvaYLYGoNi/GBzlET6tMSjWMsyhVY/YKTNTXRjqzS1DqbODM7M1GzLjsmGtVlkLoQafV6HJ25JsKPCEzSImjeOCpzwRP5opjmMrYBMjjKqtIlWYpaUijT4uR08tdaTxCukAAACBAJeJ9j2DTugDAy+SLCa0dZCH+jnclNo3o6oINF1FjzICdgDONL2YbBeU3CiAL2BureorAE0lturvvrIC2xVn2vHhrLpz6NPbDAkrLV2/rwoavbCkYGrwXdBHd5ObqBIkoUKbI1hGIGA51nafI2tjoXPfIeHeNOep20hgr32x9x1x
+|   2048 9a:82:e6:96:e4:7e:d6:a6:d7:45:44:cb:19:aa:ec:dd (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyOv6c+5ON+N+ZNDtjetiZ0eUxnIR1U0UqSF+a24Pz2xqdnJC1EN0O3zxGJB3gfPdJlyqUDiozbEth1GBP//8wbWsa1pLJOL1YmcumEJCsitngnrVN7huACG127UjKP8hArECjCHzc1P372gN3AQ/h5aZd0VV17e03HnAJ64ZziOQzVJ+DKWJbiHoXC2cdD1P+nlhK5fULe0QBvmA14gkl2LWA6KILHiisHZpF+V3X7NvXYyCSSI9GeXwhW4RKOCGdGVbjYf7d93K9gj0oU7dHrbdNKgX0WosuhMuXmKleHkIxfyLAILYWrRRj0GVdhZfbI99J3TYaR/yLTpb0D6mhw==
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-favicon: Unknown favicon MD5: 99EFC00391F142252888403BB1C196D2
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+|_http-title: Ligoat Security - Got Goat? Security ...
+MAC Address: 00:0C:29:3F:EF:00 (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=9/28%OT=22%CT=1%CU=42939%PV=Y%DS=1%DC=D%G=Y%M=000C29%T
+OS:M=5D902F4F%P=i686-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CB%TI=Z%II=I%TS=7)SEQ
+OS:(SP=C7%GCD=1%ISR=CB%TI=Z%CI=Z%II=I%TS=7)OPS(O1=M5B4ST11NW5%O2=M5B4ST11NW
+OS:5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B4ST11NW5%O6=M5B4ST11)WIN(W1=16A0%
+OS:W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4N
+OS:NSNW5%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%
+OS:T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11NW5%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A
+OS:%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T5(R=N
+OS:)T6(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)T7(R=Y%DF=Y%T
+OS:=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RI
+OS:D=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.026 days (since Sat Sep 28 20:35:43 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=199 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.05 ms kioptrix3.com (192.168.92.184)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep 28 21:13:03 2019 -- 1 IP address (1 host up) scanned in 41.23 seconds

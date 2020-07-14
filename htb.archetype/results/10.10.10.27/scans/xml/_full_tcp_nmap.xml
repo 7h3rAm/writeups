@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Tue Apr 28 07:55:10 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_full_tcp_nmap.xml 10.10.10.27 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/_full_tcp_nmap.txt -oX /root/toolbox/writeups/htb.archetype/results/10.10.10.27/scans/xml/_full_tcp_nmap.xml 10.10.10.27" start="1588085710" startstr="Tue Apr 28 07:55:10 2020" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1588085711"/>
+<taskend task="NSE" time="1588085711"/>
+<taskbegin task="NSE" time="1588085711"/>
+<taskend task="NSE" time="1588085711"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1588085711"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1588085724"/>
+<taskbegin task="SYN Stealth Scan" time="1588085724"/>
+<taskprogress task="SYN Stealth Scan" time="1588085755" percent="4.97" remaining="593" etc="1588086347"/>
+<taskprogress task="SYN Stealth Scan" time="1588085785" percent="5.60" remaining="1028" etc="1588086813"/>
+<taskprogress task="SYN Stealth Scan" time="1588085815" percent="6.39" remaining="1333" etc="1588087147"/>
+<taskprogress task="SYN Stealth Scan" time="1588085845" percent="7.14" remaining="1575" etc="1588087420"/>
+<taskprogress task="SYN Stealth Scan" time="1588085875" percent="7.66" remaining="1821" etc="1588087696"/>
+<taskprogress task="SYN Stealth Scan" time="1588085905" percent="8.10" remaining="2054" etc="1588087958"/>
+<taskprogress task="SYN Stealth Scan" time="1588085935" percent="8.63" remaining="2234" etc="1588088169"/>
+<taskprogress task="SYN Stealth Scan" time="1588085965" percent="10.30" remaining="2100" etc="1588088065"/>
+<taskprogress task="SYN Stealth Scan" time="1588085998" percent="12.15" remaining="1982" etc="1588087979"/>
+<taskprogress task="SYN Stealth Scan" time="1588086061" percent="15.29" remaining="1868" etc="1588087929"/>
+<taskprogress task="SYN Stealth Scan" time="1588086160" percent="19.89" remaining="1756" etc="1588087916"/>
+<taskprogress task="SYN Stealth Scan" time="1588086289" percent="25.56" remaining="1646" etc="1588087935"/>
+<taskprogress task="SYN Stealth Scan" time="1588086394" percent="30.39" remaining="1535" etc="1588087929"/>
+<taskprogress task="SYN Stealth Scan" time="1588086583" percent="37.64" remaining="1424" etc="1588088006"/>
+<taskprogress task="SYN Stealth Scan" time="1588086694" percent="42.57" remaining="1309" etc="1588088002"/>
+<taskprogress task="SYN Stealth Scan" time="1588086775" percent="46.83" remaining="1194" etc="1588087968"/>
+<taskprogress task="SYN Stealth Scan" time="1588086952" percent="53.22" remaining="1080" etc="1588088031"/>
+<taskprogress task="SYN Stealth Scan" time="1588087078" percent="58.43" remaining="964" etc="1588088041"/>
+<taskprogress task="SYN Stealth Scan" time="1588087183" percent="63.28" remaining="847" etc="1588088029"/>
+<taskprogress task="SYN Stealth Scan" time="1588087315" percent="68.57" remaining="730" etc="1588088044"/>
+<taskprogress task="SYN Stealth Scan" time="1588087423" percent="73.54" remaining="612" etc="1588088034"/>
+<taskprogress task="SYN Stealth Scan" time="1588087534" percent="78.56" remaining="494" etc="1588088028"/>
+<taskprogress task="SYN Stealth Scan" time="1588087699" percent="83.94" remaining="378" etc="1588088077"/>
+<taskprogress task="SYN Stealth Scan" time="1588087846" percent="89.10" remaining="260" etc="1588088106"/>
+<taskprogress task="SYN Stealth Scan" time="1588087966" percent="94.16" remaining="140" etc="1588088105"/>
+<taskend task="SYN Stealth Scan" time="1588088113" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1588088114"/>
+<taskprogress task="Service scan" time="1588088181" percent="58.33" remaining="48" etc="1588088229"/>
+<taskend task="Service scan" time="1588088181" extrainfo="12 services on 1 host"/>
+<taskbegin task="Traceroute" time="1588088196"/>
+<taskend task="Traceroute" time="1588088196"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1588088196"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1588088209"/>
+<taskbegin task="NSE" time="1588088210"/>
+<taskend task="NSE" time="1588088227"/>
+<taskbegin task="NSE" time="1588088227"/>
+<taskend task="NSE" time="1588088227"/>
+<host starttime="1588085724" endtime="1588088227"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.27" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65523">
+<extrareasons reason="resets" count="65523"/>
+</extraports>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2019 Standard 17763 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-sql-s" product="Microsoft SQL Server " version="14.00.1000.00" method="probed" conf="10"><cpe>cpe:/a:microsoft:sql_server</cpe></service><script id="ms-sql-ntlm-info" output="&#xa;  Target_Name: ARCHETYPE&#xa;  NetBIOS_Domain_Name: ARCHETYPE&#xa;  NetBIOS_Computer_Name: ARCHETYPE&#xa;  DNS_Domain_Name: Archetype&#xa;  DNS_Computer_Name: Archetype&#xa;  Product_Version: 10.0.17763"><elem key="Target_Name">ARCHETYPE</elem>
+<elem key="NetBIOS_Domain_Name">ARCHETYPE</elem>
+<elem key="NetBIOS_Computer_Name">ARCHETYPE</elem>
+<elem key="DNS_Domain_Name">Archetype</elem>
+<elem key="DNS_Computer_Name">Archetype</elem>
+<elem key="Product_Version">10.0.17763</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SSL_Self_Signed_Fallback&#xa;Issuer: commonName=SSL_Self_Signed_Fallback&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2020-04-28T07:32:15&#xa;Not valid after:  2050-04-28T07:32:15&#xa;MD5:   1991 9c41 53a0 c167 df32 b67b 61b8 1d29&#xa;SHA-1: 0e4e f065 a8c7 acbc 908f ee2e c308 1d69 b40f 5685&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQcwBdrws1MrBBCZkTyH2PuzANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjAwNDI4MDczMjE1WhgPMjA1MDA0MjgwNzMyMTVaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALSwuifA&#xa;DN4ACMe7B70oBUbpTthzMerRWg72fCSLmJWqgVrfwqBd/jlqvF2ytwrydVvp0i0b&#xa;bBzYnwOqVj2CpEoQCbN2VZPATo1tv6dSbht4BKHdLDQOyLcflcdg+Fl1W4XCPf7w&#xa;b4kMSWQHrr/paE388hh+yW1jyohBGB93tAHRBRFRS0D6u7DcgZxbznvYPf4a4mZN&#xa;P45cLa3FGTR3Oc6hHCjqKlW4L1P3IjTPfFeUIuW1/3PQHn7ox/1STvIERh/Pfy3X&#xa;fkZ4Z5Mar8nxjqlIOnmv6AnXDt4mtnfTzIA+MAZQ3x7hO8iX73V83m8pCMZR90nB&#xa;/uDq4ln4HctzarkCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAEj8vggUbVWKJOPG2&#xa;nUHJ9T5umrpswOmmKk+S/cKY3BGqTL1ChttzWytF23SR53iIwFrYLXbApKCE8c8b&#xa;T3zcI6YNsOgqm/HOlFNKIaQNeEnVCAMLcugLnca4QeL00ZAHTgmpaUU1V498fw7h&#xa;HV1/EOTi2+gt+6QUmNanH0g18Bh0hWX8wwEI1zervPrFUlOzrczT6GJy/D4RiAKg&#xa;iW26m2V+Iteo3syOlUQKSCcYsG3+Pwnx1j3SYL4tn68xwR9Jj+cfig/dT3oR1DJN&#xa;3s57f0jimwBlIbod2HEdQDpxuijqYszpjTjqnWCvIT3YZip/OLa/12PyU0zwnQE8&#xa;/R2Bwg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">\x00S\x00S\x00L\x00_\x00S\x00e\x00l\x00f\x00_\x00S\x00i\x00g\x00n\x00e\x00d\x00_\x00F\x00a\x00l\x00l\x00b\x00a\x00c\x00k</elem>
+</table>
+<table key="pubkey">
+<elem key="exponent">userdata: 0x4bd74a8</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="modulus">userdata: 0x4bd74c8</elem>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2020-04-28T07:32:15</elem>
+<elem key="notAfter">2050-04-28T07:32:15</elem>
+</table>
+<elem key="md5">19919c4153a0c167df32b67b61b81d29</elem>
+<elem key="sha1">0e4ef065a8c7acbc908fee2ec3081d69b40f5685</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDADCCAeigAwIBAgIQcwBdrws1MrBBCZkTyH2PuzANBgkqhkiG9w0BAQsFADA7&#xa;MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA&#xa;bABsAGIAYQBjAGswIBcNMjAwNDI4MDczMjE1WhgPMjA1MDA0MjgwNzMyMTVaMDsx&#xa;OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs&#xa;AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALSwuifA&#xa;DN4ACMe7B70oBUbpTthzMerRWg72fCSLmJWqgVrfwqBd/jlqvF2ytwrydVvp0i0b&#xa;bBzYnwOqVj2CpEoQCbN2VZPATo1tv6dSbht4BKHdLDQOyLcflcdg+Fl1W4XCPf7w&#xa;b4kMSWQHrr/paE388hh+yW1jyohBGB93tAHRBRFRS0D6u7DcgZxbznvYPf4a4mZN&#xa;P45cLa3FGTR3Oc6hHCjqKlW4L1P3IjTPfFeUIuW1/3PQHn7ox/1STvIERh/Pfy3X&#xa;fkZ4Z5Mar8nxjqlIOnmv6AnXDt4mtnfTzIA+MAZQ3x7hO8iX73V83m8pCMZR90nB&#xa;/uDq4ln4HctzarkCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAEj8vggUbVWKJOPG2&#xa;nUHJ9T5umrpswOmmKk+S/cKY3BGqTL1ChttzWytF23SR53iIwFrYLXbApKCE8c8b&#xa;T3zcI6YNsOgqm/HOlFNKIaQNeEnVCAMLcugLnca4QeL00ZAHTgmpaUU1V498fw7h&#xa;HV1/EOTi2+gt+6QUmNanH0g18Bh0hWX8wwEI1zervPrFUlOzrczT6GJy/D4RiAKg&#xa;iW26m2V+Iteo3syOlUQKSCcYsG3+Pwnx1j3SYL4tn68xwR9Jj+cfig/dT3oR1DJN&#xa;3s57f0jimwBlIbod2HEdQDpxuijqYszpjTjqnWCvIT3YZip/OLa/12PyU0zwnQE8&#xa;/R2Bwg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="2020-04-28T15:51:04+00:00; +14m12s from scanner time."><elem key="date">2020-04-28T15:51:04+00:00</elem>
+<elem key="delta">852.0</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="35614"/>
+<osmatch name="Microsoft Windows Server 2012" accuracy="93" line="75054">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="93"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP1" accuracy="93" line="79652">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="93"><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Longhorn" accuracy="92" line="78352">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Longhorn" accuracy="92"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="91" line="75351">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2 Update 1" accuracy="91" line="75621">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2016 build 10586 - 14393" accuracy="91" line="75783">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1" accuracy="91" line="77414">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7:::ultimate</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="91"><cpe>cpe:/o:microsoft:windows_2012</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="91"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1703" accuracy="90" line="69486">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="90"><cpe>cpe:/o:microsoft:windows_10:1703</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="90" line="74406">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1" accuracy="90" line="77079">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.70%E=4%D=4/28%OT=135%CT=1%CU=35614%PV=Y%DS=2%DC=T%G=Y%TM=5EA84D&#xa;OS:A3%P=i686-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=10D%TI=I%CI=I%II=I%SS=S%TS=U)&#xa;OS:OPS(O1=M54DNW8NNS%O2=M54DNW8NNS%O3=M54DNW8%O4=M54DNW8NNS%O5=M54DNW8NNS%O&#xa;OS:6=M54DNNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)ECN(R=Y%DF&#xa;OS:=Y%T=80%W=FFFF%O=M54DNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS%RD=0%&#xa;OS:Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z&#xa;OS:%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%&#xa;OS:DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%&#xa;OS:O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=8&#xa;OS:0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="248" difficulty="Good luck!" values="31250408,EEE82D8D,405CFBF0,CDEF0AC4,19CD9420,4B432C3F"/>
+<ipidsequence class="Incremental" values="76E8,76E9,76EA,76EB,76EC,76ED"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="clock-skew" output="mean: 1h38m12s, deviation: 3h07m51s, median: 14m11s"><elem key="stddev">11271</elem>
+<elem key="mean">5892</elem>
+<elem key="median">851</elem>
+</script><script id="ms-sql-info" output="&#xa;  10.10.10.27:1433: &#xa;    Version: &#xa;      name: Microsoft SQL Server &#xa;      number: 14.00.1000.00&#xa;      Product: Microsoft SQL Server &#xa;    TCP port: 1433"><table key="10.10.10.27:1433">
+<table key="Version">
+<elem key="name">Microsoft SQL Server </elem>
+<elem key="number">14.00.1000.00</elem>
+<elem key="Product">Microsoft SQL Server </elem>
+</table>
+<elem key="TCP port">1433</elem>
+</table>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 53066/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 2 (port 9662/tcp): CLEAN (Couldn&apos;t connect)&#xa;  Check 3 (port 45578/udp): CLEAN (Failed to receive data)&#xa;  Check 4 (port 47960/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2019 Standard 17763 (Windows Server 2019 Standard 6.3)&#xa;  Computer name: Archetype&#xa;  NetBIOS computer name: ARCHETYPE\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2020-04-28T08:51:05-07:00&#xa;"><elem key="os">Windows Server 2019 Standard 17763</elem>
+<elem key="lanmanager">Windows Server 2019 Standard 6.3</elem>
+<elem key="server">ARCHETYPE\x00</elem>
+<elem key="date">2020-04-28T08:51:05-07:00</elem>
+<elem key="fqdn">Archetype</elem>
+<elem key="domain_dns">Archetype</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-04-28 08:51:07&#xa;  start_date: N/A"><elem key="date">2020-04-28 08:51:07</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><trace port="22" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="369.86"/>
+<hop ttl="2" ipaddr="10.10.10.27" rtt="370.21"/>
+</trace>
+<times srtt="344063" rttvar="14541" to="402227"/>
+</host>
+<taskbegin task="NSE" time="1588088227"/>
+<taskend task="NSE" time="1588088227"/>
+<taskbegin task="NSE" time="1588088227"/>
+<taskend task="NSE" time="1588088227"/>
+<runstats><finished time="1588088227" timestr="Tue Apr 28 08:37:07 2020" elapsed="2517.61" summary="Nmap done at Tue Apr 28 08:37:07 2020; 1 IP address (1 host up) scanned in 2517.61 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

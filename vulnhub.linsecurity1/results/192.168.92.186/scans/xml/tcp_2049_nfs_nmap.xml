@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Oct  9 19:28:28 2019 as: nmap -vv -&#45;reason -Pn -sV -p 2049 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/tcp_2049_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/xml/tcp_2049_nfs_nmap.xml 192.168.92.186 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 2049 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/tcp_2049_nfs_nmap.txt -oX /root/toolbox/writeups/vulnhub.linsecurity1/results/192.168.92.186/scans/xml/tcp_2049_nfs_nmap.xml 192.168.92.186" start="1570674508" startstr="Wed Oct  9 19:28:28 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="2049"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1570674510"/>
+<taskend task="NSE" time="1570674510"/>
+<taskbegin task="NSE" time="1570674510"/>
+<taskend task="NSE" time="1570674510"/>
+<taskbegin task="NSE" time="1570674510"/>
+<taskend task="NSE" time="1570674510"/>
+<taskbegin task="ARP Ping Scan" time="1570674510"/>
+<taskend task="ARP Ping Scan" time="1570674510" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1570674510"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1570674511"/>
+<taskbegin task="SYN Stealth Scan" time="1570674511"/>
+<taskend task="SYN Stealth Scan" time="1570674511" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1570674512"/>
+<taskend task="Service scan" time="1570674518" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1570674518"/>
+<taskend task="NSE" time="1570674534"/>
+<taskbegin task="NSE" time="1570674534"/>
+<taskend task="NSE" time="1570674534"/>
+<taskbegin task="NSE" time="1570674534"/>
+<taskend task="NSE" time="1570674534"/>
+<host starttime="1570674510" endtime="1570674534"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.92.186" addrtype="ipv4"/>
+<address addr="00:0C:29:07:84:F0" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="nfs" version="3-4" extrainfo="RPC #100003" method="probed" conf="10"/></port>
+</ports>
+<times srtt="367" rttvar="4061" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1570674534"/>
+<taskend task="NSE" time="1570674534"/>
+<taskbegin task="NSE" time="1570674534"/>
+<taskend task="NSE" time="1570674534"/>
+<taskbegin task="NSE" time="1570674534"/>
+<taskend task="NSE" time="1570674534"/>
+<runstats><finished time="1570674534" timestr="Wed Oct  9 19:28:54 2019" elapsed="26.14" summary="Nmap done at Wed Oct  9 19:28:54 2019; 1 IP address (1 host up) scanned in 26.14 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

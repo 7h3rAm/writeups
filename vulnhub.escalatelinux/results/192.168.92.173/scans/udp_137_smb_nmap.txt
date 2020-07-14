@@ -1,0 +1,28 @@
+# Nmap 7.70 scan initiated Tue Sep 17 11:52:07 2019 as: nmap -vv --reason -Pn -sU -sV -p 137 --script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer) --script-args=unsafe=1 -oN /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/udp_137_smb_nmap.txt -oX /root/toolbox/writeups/vulnhub.escalatelinux/results/192.168.92.173/scans/xml/udp_137_smb_nmap.xml 192.168.92.173
+Nmap scan report for 192.168.92.173
+Host is up, received arp-response (0.010s latency).
+Scanned at 2019-09-17 11:52:09 PDT for 1s
+
+PORT    STATE SERVICE    REASON              VERSION
+137/udp open  netbios-ns udp-response ttl 64 Samba nmbd netbios-ns (workgroup: WORKGROUP)
+MAC Address: 00:0C:29:A6:A7:B9 (VMware)
+Service Info: Host: LINUX
+
+Host script results:
+| nbstat: NetBIOS name: LINUX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   LINUX<00>            Flags: <unique><active>
+|   LINUX<03>            Flags: <unique><active>
+|   LINUX<20>            Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep 17 11:52:10 2019 -- 1 IP address (1 host up) scanned in 3.82 seconds

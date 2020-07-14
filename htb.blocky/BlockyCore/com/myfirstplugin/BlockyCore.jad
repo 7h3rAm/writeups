@@ -1,0 +1,39 @@
+// Decompiled by Jad v1.5.8e. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.geocities.com/kpdus/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   BlockyCore.java
+
+package com.myfirstplugin;
+
+
+public class BlockyCore
+{
+
+    public BlockyCore()
+    {
+        sqlHost = "localhost";
+        sqlUser = "root";
+        sqlPass = "8YsqfCTnvxAUeduzjNSXe22";
+    }
+
+    public void onServerStart()
+    {
+    }
+
+    public void onServerStop()
+    {
+    }
+
+    public void onPlayerJoin()
+    {
+        sendMessage("TODO get username", "Welcome to the BlockyCraft!!!!!!!");
+    }
+
+    public void sendMessage(String s, String s1)
+    {
+    }
+
+    public String sqlHost;
+    public String sqlUser;
+    public String sqlPass;
+}

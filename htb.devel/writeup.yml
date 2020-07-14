@@ -1,0 +1,156 @@
+writeup:
+  metadata:
+    status: public
+    datetime: 20191105
+    infra: HackTheBox
+    name: Devel
+    points: 20
+    path: htb.devel
+    url: https://www.hackthebox.eu/home/machines/profile/3
+    infocard: ./infocard.png
+    references:
+      - https://xd3m0n.xyz/htb_devel/
+    categories:
+      - oscp
+      - htb
+      - windows
+    tags:
+      - exploit_ftp_anonymous
+      - exploit_ftp_web_root
+      - exploit_iis_asp_reverseshell
+      - privesc_windows_ms11_046
+  overview:
+    description: |
+      This is a writeup for HTB VM [`Devel`](https://www.hackthebox.eu/home/machines/profile/3). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+    killchain:
+      - "_ [HTB] Devel/10.10.10.5":
+        - ". Phase #1: Enumeration":
+          - ". 21/tcp":
+            - ". allows anonymous login":
+              - ". also shares ftp root with web root":
+                - ".. Phase #2: Exploitation":
+                  - ".. upload aspx reverse shell":
+          - ". 80/tcp":
+            - ".. Phase #2: Exploitation":
+              - ".. upload aspx reverse shell":
+                - ".. trigger execution of uploaded aspx reverse shell":
+                  - ".. netcat (web)":
+                    - "... Phase #3: Privilege Escalation":
+                      - "... download ms11-046 exploit":
+                        - "... netcat (ntauth/system)":
+                          - "... user.txt.txt":
+                          - "... root.txt.txt":
+    ttps:
+      "21/tcp/ftp/Microsoft ftpd": exploit_ftp_anonymous exploit_ftp_web_root
+      "80/tcp/http/Microsoft IIS httpd 7.5": exploit_iis_asp_reverseshell privesc_windows_ms11_046
+
+  enumeration:
+    steps:
+      - description: |
+          Here's the Nmap scan result:
+        command: |
+          # Nmap 7.70 scan initiated Tue Nov  5 11:28:16 2019 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/_quick_tcp_nmap.txt -oX /root/toolbox/writeups/htb.devel/results/10.10.10.5/scans/xml/_quick_tcp_nmap.xml 10.10.10.5
+          Nmap scan report for 10.10.10.5
+          Host is up, received user-set (0.11s latency).
+          Scanned at 2019-11-05 11:28:18 PST for 60s
+          Not shown: 998 filtered ports
+          Reason: 998 no-responses
+          PORT   STATE SERVICE REASON          VERSION
+          21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+          | ftp-anon: Anonymous FTP login allowed (FTP code 230)
+          | 03-18-17  01:06AM       <DIR>          aspnet_client
+          | 03-17-17  04:37PM                  689 iisstart.htm
+          |_03-17-17  04:37PM               184946 welcome.png
+          | ftp-syst:
+          |_  SYST: Windows_NT
+          80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+          | http-methods:
+          |   Supported Methods: OPTIONS TRACE GET HEAD POST
+          |_  Potentially risky methods: TRACE
+          |_http-server-header: Microsoft-IIS/7.5
+          |_http-title: IIS7
+          Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+          Read data files from: /usr/bin/../share/nmap
+          Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+          # Nmap done at Tue Nov  5 11:29:18 2019 -- 1 IP address (1 host up) scanned in 61.93 seconds
+      - description: |
+          We find that the FTP service allows `anonymous` login and it shares directory with IIS server web root. This means we can upload `.aspx` reverse shell file via FTP and trigger it using the HTTP service:
+        command: |
+        screenshot:
+          - ./screenshot01.png
+          - ./screenshot02.png
+    findings:
+      openports:
+        - '21/tcp  |  ftp   |  Microsoft ftpd'
+        - '80/tcp  |  http  |  Microsoft IIS httpd 7.5'
+  exploitation:
+    steps:
+      - description: |
+          We create a reverse shell file using `msfvenom` and upload it to the FTP server. We then start `multi/handler` listener to catch the incoming connection and request the uploaded file via web browser to get interactive access on the target system:
+        command: |
+        screenshot:
+          - ./screenshot03.png
+          - ./screenshot04.png
+          - ./screenshot05.png
+          - ./screenshot07.png
+          - ./screenshot08.png
+  postexploit:
+    user: web
+    hostname: DEVEL
+    id: |
+      iis apppool\web
+    uname: |
+      Host Name:                 DEVEL
+      OS Name:                   Microsoft Windows 7 Enterprise
+      OS Version:                6.1.7600 N/A Build 7600
+      OS Manufacturer:           Microsoft Corporation
+      OS Configuration:          Standalone Workstation
+      OS Build Type:             Multiprocessor Free
+    ifconfig: |
+      Ethernet adapter Local Area Connection:
+       Connection-specific DNS Suffix  . :
+       IPv4 Address. . . . . . . . . . . : 10.10.10.5
+       Subnet Mask . . . . . . . . . . . : 255.255.255.0
+       Default Gateway . . . . . . . . . : 10.10.10.2
+    users:
+      - Administrator
+      - babis
+  privesc:
+    steps:
+      - description: |
+          We first upload the `netcat` binary to the target system using the FTP server and use it to get `systeminfo` output. With this, we can start exploring possible exploits for the target system:
+        command: |
+        screenshot:
+          - ./screenshot06.png
+          - ./screenshot09.png
+          - ./screenshot10.png
+      - description: |
+          Upon looking for exploits for the target system, we find [EDB:40564](https://www.exploit-db.com/exploits/40564) but it needs compilation of source file. We search and find a pre-compiled exploit from the [SecWiki/windows-kernel-exploits](https://github.com/SecWiki/windows-kernel-exploits/tree/master/MS11-046) project:
+        command: |
+        screenshot:
+          - ./screenshot11.png
+      - description: |
+          Once downloaded locally, we need to transfer the exploit file to the target system using the FTP server. Once done, we execute the file and gain elevated privileges:
+        command: |
+        screenshot:
+          - ./screenshot12.png
+          - ./screenshot13.png
+          - ./screenshot14.png
+      - description: |
+          We can now view the contents of the `user.txt.txt` and `root.txt.txt` files to complete the challenge:
+        command: |
+        screenshot:
+          - ./screenshot15.png
+          - ./screenshot16.png
+    vuln:
+      - cve: 2011-1249
+        edb: 40564
+        links:
+          - https://technet.microsoft.com/library/security/ms11-046
+  loot:
+    flags:
+      - 'c:\Users\babis\Desktop\user.txt.txt: 9ecdd6a3aedf24b41562fea70f4cb3e8'
+      - 'c:\Users\Administrator\Desktop\root.txt.txt: e621a0b5041708797c4fc4728bc72b4b'
+  learning:
+    -

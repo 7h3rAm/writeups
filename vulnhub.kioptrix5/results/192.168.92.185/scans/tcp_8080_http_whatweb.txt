@@ -1,0 +1,68 @@
+WhatWeb report for http://192.168.92.185:8080
+Status    : 403 Forbidden
+Title     : 403 Forbidden
+IP        : 192.168.92.185
+Country   : RESERVED, ZZ
+
+Summary   : WebDAV[2], PHP[5.3.8], OpenSSL[0.9.8q], HTTPServer[FreeBSD][Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8], Apache[2.2.21][mod_ssl/2.2.21]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.2.21 (from HTTP Server Header)
+	Module       : mod_ssl/2.2.21
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : FreeBSD
+	String       : Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8 (from server string)
+
+[ OpenSSL ]
+	The OpenSSL Project is a collaborative effort to develop a 
+	robust, commercial-grade, full-featured, and Open Source 
+	toolkit implementing the Secure Sockets Layer (SSL v2/v3) 
+	and Transport Layer Security (TLS v1) protocols as well as 
+	a full-strength general purpose cryptography library. 
+
+	Version      : 0.9.8q
+	Website     : http://www.openssl.org/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.8
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ WebDAV ]
+	Web-based Distributed Authoring and Versioning (WebDAV) is 
+	a set of methods based on the Hypertext Transfer Protocol 
+	(HTTP) that facilitates collaboration between users in 
+	editing and managing documents and files stored on World 
+	Wide Web servers. - More Info: 
+	http://en.wikipedia.org/wiki/WebDAV 
+
+	Version      : 2
+
+HTTP Headers:
+	HTTP/1.1 403 Forbidden
+	Date: Wed, 09 Oct 2019 19:12:07 GMT
+	Server: Apache/2.2.21 (FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8
+	Content-Length: 202
+	Connection: close
+	Content-Type: text/html; charset=iso-8859-1
+	
