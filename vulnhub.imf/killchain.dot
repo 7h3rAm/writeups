@@ -1,6 +1,6 @@
 digraph G {
   #rankdir=LR;
-  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#f9f9f9"; outputorder="edgesfirst";
+  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
   edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
 
