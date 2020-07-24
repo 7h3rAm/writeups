@@ -1,6 +1,6 @@
 # 📖 ReadMe
 
-[![License: CC BY 4.0](https://raw.githubusercontent.com/7h3rAm/7h3rAm.github.io/master/static/files/ccby4.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License: CC BY-SA 4.0](https://raw.githubusercontent.com/7h3rAm/7h3rAm.github.io/master/static/files/ccbysa4.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 <a name="contents"></a>
 ## 🔖 Contents
@@ -73,12 +73,12 @@
 <a name="stats"></a>
 ## ☀️ Stats [↟](#contents)
 ### 📊 Counts [🡑](#stats)
-|    #     |     HackTheBox    |     VulnHub      |      OSCPlike     |       Owned       |
-|:--------:|:-----------------:|:----------------:|:-----------------:|:-----------------:|
-|  Total   | `23/169 (13.61%)` | `23/477 (4.82%)` | `41/152 (26.97%)` |  `46/646 (7.12%)` |
-| Windows  |  `22/52 (42.31%)` |  `0/2 (0.00%)`   |  `11/31 (35.48%)` |  `11/54 (20.37%)` |
-|   *nix   | `24/117 (20.51%)` | `46/475 (9.68%)` | `35/121 (28.93%)` |  `35/592 (5.91%)` |
-| OSCPlike |  `23/70 (32.86%)` | `18/82 (21.95%)` |                   | `41/152 (26.97%)` |
+|    #     |     HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
+|:--------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+|  Total   | `24/170 (14.12%)` |  `24/481 (4.99%)` | `43/154 (27.92%)` |  `48/651 (7.37%)` |
+| Windows  |  `24/53 (45.28%)` |   `0/2 (0.00%)`   |  `12/32 (37.50%)` |  `12/55 (21.82%)` |
+|   *nix   | `24/117 (20.51%)` | `48/479 (10.02%)` | `36/122 (29.51%)` |  `36/596 (6.04%)` |
+| OSCPlike |  `24/71 (33.80%)` |  `19/83 (22.89%)` |                   | `43/154 (27.92%)` |
 
 <a name="topcategories"></a>
 ### 📊 Top Categories [🡑](#stats)
