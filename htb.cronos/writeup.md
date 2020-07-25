@@ -89,7 +89,7 @@ host -t axfr cronos.htb 10.10.10.13
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp  |  ssh     |  OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)
 53/tcp  |  domain  |  ISC BIND 9.10.3-P4 (Ubuntu Linux)

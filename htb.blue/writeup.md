@@ -114,7 +114,7 @@ msfconsole
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 135/tcp    |  msrpc         |  Microsoft Windows RPC
 139/tcp    |  netbios-ssn   |  Microsoft Windows netbios-ssn

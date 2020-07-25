@@ -89,7 +89,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp     |  ssh     |  OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)
 53/tcp     |  domain  |  dnsmasq 2.76

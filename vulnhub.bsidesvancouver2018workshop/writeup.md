@@ -104,7 +104,7 @@ http://192.168.92.169/robots.txt → /backup_wordpress
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 21/tcp  |  ftp   |  vsftpd 2.3.5
 22/tcp  |  ssh   |  OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)

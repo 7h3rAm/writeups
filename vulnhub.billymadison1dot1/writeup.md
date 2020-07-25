@@ -181,7 +181,7 @@ ftp://veronica@192.168.92.167/eg-01.cap
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp    |  tcpwrapped   |
 23/tcp    |  telnet?      |

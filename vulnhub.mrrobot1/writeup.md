@@ -127,7 +127,7 @@ wpuser http://192.168.92.134/ users
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 80/tcp   |  http      |  Apache httpd
 443/tcp  |  ssl/http  |  Apache httpd

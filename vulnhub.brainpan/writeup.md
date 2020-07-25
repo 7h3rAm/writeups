@@ -103,7 +103,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 9999/tcp   |  abyss?  |
 10000/tcp  |  http    |  SimpleHTTPServer 0.6 (Python 2.7.3)

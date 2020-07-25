@@ -137,7 +137,7 @@ john --format=dynamic_6 hashes
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 21/tcp  |  ftp   |  vsftpd 2.0.8 or later
 22/tcp  |  ssh   |  OpenSSH 6.6.1 (protocol 2.0)

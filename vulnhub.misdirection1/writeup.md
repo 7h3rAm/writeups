@@ -89,7 +89,7 @@ http://192.168.92.187:8080/wordpress (Status: 301)
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp    |  ssh    |  OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 80/tcp    |  http   |  Rocket httpd 1.2.6 (Python 2.7.15rc1)

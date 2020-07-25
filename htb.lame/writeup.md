@@ -121,7 +121,7 @@ smbclient \\\\10.10.10.3\\tmp
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 21/tcp   |  ftp          |  vsftpd 2.3.4
 22/tcp   |  ssh          |  OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)

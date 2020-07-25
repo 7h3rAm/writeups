@@ -141,7 +141,7 @@ searchsploit mod_ssl
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp    |  ssh          |  OpenSSH 2.9p2 (protocol 1.99)
 80/tcp    |  http         |  Apache httpd 1.3.20 ((Unix) (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)

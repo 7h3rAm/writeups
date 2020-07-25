@@ -153,7 +153,7 @@ admin/' or 1=1 -- -
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp    |  ssh       |  OpenSSH 3.9p1 (protocol 1.99)
 80/tcp    |  http      |  Apache httpd 2.0.52 ((CentOS))

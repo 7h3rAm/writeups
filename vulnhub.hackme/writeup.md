@@ -93,7 +93,7 @@ gobuster -u http://192.168.92.180:80/ -w /usr/share/seclists/Discovery/Web-Conte
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp  |  ssh   |  OpenSSH 7.7p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
 80/tcp  |  http  |  Apache httpd 2.4.34 ((Ubuntu))

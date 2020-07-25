@@ -68,7 +68,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 80/tcp  |  http  |  HttpFileServer httpd 2.3
 ```

@@ -278,7 +278,7 @@ wpuser
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp   |  ssh          |  OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)
 53/tcp   |  domain       |  ISC BIND 9.8.1-P1

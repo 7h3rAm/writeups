@@ -298,7 +298,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp     |  ssh          |  OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
 53/tcp     |  domain       |  ISC BIND 9.9.5-3 (Ubuntu Linux)

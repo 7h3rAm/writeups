@@ -117,7 +117,7 @@ b64d Lzk3ODM0NTIxMC9pbmRleC5waHA=
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp    |  ssh   |  OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.3 (Ubuntu Linux; protocol 2.0)
 1337/tcp  |  http  |  Apache httpd 2.4.7 ((Ubuntu))

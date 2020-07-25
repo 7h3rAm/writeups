@@ -95,7 +95,7 @@ $ cat results/10.10.10.68/scans/tcp_80_http_gobuster_dirbuster.txt
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 80/tcp  | http      | 2.4.18 ((Ubuntu))
 ```

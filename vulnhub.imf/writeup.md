@@ -142,7 +142,7 @@ http://192.168.92.178/imfadministrator/images/whiteboard.jpg
 
 
 ### Findings
-#### Open Ports:
+#### Open Ports
 ``` {.python .numberLines}
 80/tcp  |  http  |  Apache httpd 2.4.18 ((Ubuntu))
 ```
