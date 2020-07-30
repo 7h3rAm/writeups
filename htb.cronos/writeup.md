@@ -31,7 +31,7 @@ header-includes:
 ![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HTB VM [`Cronos`](https://www.hackthebox.eu/home/machines/profile/11). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [`Cronos`](https://www.hackthebox.eu/home/machines/profile/11). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

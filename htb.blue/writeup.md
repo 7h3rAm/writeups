@@ -31,7 +31,7 @@ header-includes:
 ![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HTB VM [`Blue`](https://www.hackthebox.eu/home/machines/profile/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [`Blue`](https://www.hackthebox.eu/home/machines/profile/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)
