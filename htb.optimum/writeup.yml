@@ -19,7 +19,7 @@ writeup:
       - privesc_windows_ms16_098
   overview:
     description: |
-      This is a writeup for HTB VM [`Optimum`](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [`Optimum`](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Optimum/10.10.10.8":
         - ". Phase #1: Enumeration":

@@ -22,7 +22,7 @@ writeup:
       - privesc_psexec_login
   overview:
     description: |
-      This is a writeup for HTB VM [`Archetype`](https://www.hackthebox.eu/home/start). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [`Archetype`](https://www.hackthebox.eu/home/start). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       "_ [HTB] Archetype - Overview/10.10.10.27":
         - ". Phase #1: Enumeration":
