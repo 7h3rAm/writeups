@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof)  
 
 ## Overview
-This is a writeup for VulnHub VM [`IMF: 1`](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [IMF: 1](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

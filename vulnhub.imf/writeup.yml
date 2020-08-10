@@ -18,7 +18,7 @@ writeup:
       - privesc_bof
   overview:
     description: |
-      This is a writeup for VulnHub VM [`IMF: 1`](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [IMF: 1](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] IMF: 1/192.168.92.178":
         - ". Phase #1: Enumeration":

@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl)  
 
 ## Overview
-This is a writeup for VulnHub VM [`Kioptrix: Level 1 (#1)`](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

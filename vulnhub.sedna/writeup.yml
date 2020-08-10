@@ -21,7 +21,7 @@ writeup:
       - privesc_bash_reverseshell
   overview:
     description: |
-      This is a writeup for VulnHub VM [`hackfest2016: Sedna`](https://www.vulnhub.com/entry/hackfest2016-sedna,181/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [hackfest2016: Sedna](https://www.vulnhub.com/entry/hackfest2016-sedna,181/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] hackfest2016: Sedna/192.168.92.176":
         - ". Phase #1: Enumeration":

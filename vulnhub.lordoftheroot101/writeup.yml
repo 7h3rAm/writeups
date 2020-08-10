@@ -24,7 +24,7 @@ writeup:
       - privesc_mysql_udf
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Lord Of The Root: 1.0.1`](https://www.vulnhub.com/entry/lord-of-the-root-101,129/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Lord Of The Root: 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ Lord Of The Root: 1.0.1/192.168.92.151":
         - ". Phase #1: Enumeration":

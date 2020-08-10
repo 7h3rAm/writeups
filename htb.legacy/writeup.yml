@@ -18,7 +18,7 @@ writeup:
       - exploit_smb_ms08_067
   overview:
     description: |
-      This is a writeup for HackTheBox VM [`Legacy`](https://www.hackthebox.eu/home/machines/profile/2). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Legacy](https://www.hackthebox.eu/home/machines/profile/2). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Legacy/10.10.10.4":
         - ". Phase #1: Enumeration":

@@ -20,7 +20,7 @@ writeup:
       - privesc_windows_ms15_051
   overview:
     description: |
-      This is a writeup for HackTheBox VM [`Granny`](https://www.hackthebox.eu/home/machines/profile/14). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Granny](https://www.hackthebox.eu/home/machines/profile/14). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Granny/10.10.10.15":
         - ". Phase #1: Enumeration":

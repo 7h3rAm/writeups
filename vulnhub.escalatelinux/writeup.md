@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [`Escalate_Linux: 1`](https://www.vulnhub.com/entry/escalate_linux-1,323/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Escalate_Linux: 1](https://www.vulnhub.com/entry/escalate_linux-1,323/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

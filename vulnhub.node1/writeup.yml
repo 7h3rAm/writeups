@@ -20,7 +20,7 @@ writeup:
       - privesc_setuid
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Node: 1`](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Node: 1](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Node: 1/192.168.92.189":
         - ". Phase #1: Enumeration":

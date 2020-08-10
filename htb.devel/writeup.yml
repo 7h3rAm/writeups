@@ -21,7 +21,7 @@ writeup:
       - privesc_windows_ms11_046
   overview:
     description: |
-      This is a writeup for HackTheBox VM [`Devel`](https://www.hackthebox.eu/home/machines/profile/3). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Devel](https://www.hackthebox.eu/home/machines/profile/3). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Devel/10.10.10.5":
         - ". Phase #1: Enumeration":

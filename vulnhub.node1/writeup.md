@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [`Node: 1`](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Node: 1](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

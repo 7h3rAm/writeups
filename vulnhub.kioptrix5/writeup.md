@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd)  
 
 ## Overview
-This is a writeup for VulnHub VM [`Kioptrix: 2014 (#5)`](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: 2014 (#5)](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

@@ -20,7 +20,7 @@ writeup:
       - privesc_sudo
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Brainpan: 1`](https://www.vulnhub.com/entry/brainpan-1,51/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Brainpan: 1](https://www.vulnhub.com/entry/brainpan-1,51/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Brainpan: 1/192.168.92.141":
         - ". Phase #1: Enumeration":

@@ -31,7 +31,7 @@ header-includes:
 ![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [`Optimum`](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Optimum](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

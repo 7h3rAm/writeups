@@ -21,7 +21,7 @@ writeup:
       - privesc_nmap
   overview:
     description: |
-      This is a writeup for VulnHub VM [`DC: 6`](https://www.vulnhub.com/entry/dc-6,315/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [DC: 6](https://www.vulnhub.com/entry/dc-6,315/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] DC: 6/192.168.92.170":
         - ". Phase #1: Enumeration":

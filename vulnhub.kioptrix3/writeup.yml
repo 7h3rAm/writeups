@@ -20,7 +20,7 @@ writeup:
       - privesc_sudo
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Kioptrix: Level 1.2 (#3)`](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Kioptrix: Level 1.2 (#3)](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Kioptrix: Level 1.2 (#3)/192.168.92.184":
         - ". Phase #1: Enumeration":

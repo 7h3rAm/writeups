@@ -20,7 +20,7 @@ writeup:
       - privesc_sudoers
   overview:
     description: |
-      This is a writeup for HackTheBox VM [`Shocker`](https://www.hackthebox.eu/home/machines/profile/108). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Shocker](https://www.hackthebox.eu/home/machines/profile/108). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Shocker/10.10.10.56":
         - ". Phase #1: Enumeration":

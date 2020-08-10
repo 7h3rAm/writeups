@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [`FristiLeaks: 1.3`](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [FristiLeaks: 1.3](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

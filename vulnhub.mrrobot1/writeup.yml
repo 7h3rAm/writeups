@@ -19,7 +19,7 @@ writeup:
       - privesc_nmap
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Mr-Robot: 1`](https://www.vulnhub.com/entry/mr-robot-1,151/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Mr-Robot: 1](https://www.vulnhub.com/entry/mr-robot-1,151/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       "_ [VulnHub] Mr-Robot: 1/192.168.92.134":
         - ". Phase #1: Enumeration":

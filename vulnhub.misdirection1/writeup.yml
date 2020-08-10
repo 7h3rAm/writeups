@@ -20,7 +20,7 @@ writeup:
       - privesc_passwd_writable
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Misdirection: 1`](https://www.vulnhub.com/entry/misdirection-1,371/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Misdirection: 1](https://www.vulnhub.com/entry/misdirection-1,371/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Misdirection: 1/192.168.92.187":
         - ". Phase #1: Enumeration":

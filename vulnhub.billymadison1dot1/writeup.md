@@ -29,7 +29,7 @@ header-includes:
 **Tags**: [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)  
 
 ## Overview
-This is a writeup for VulnHub VM [`Billy Madison: 1.1`](https://www.vulnhub.com/entry/billy-madison-11,161). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Billy Madison: 1.1](https://www.vulnhub.com/entry/billy-madison-11,161). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
 ![writeup.overview.killchain](./killchain.png)

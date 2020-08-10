@@ -22,7 +22,7 @@ writeup:
       - privesc_credsreuse
   overview:
     description: |
-      This is a writeup for VulnHub VM [`hackfest2016: Quaoar`](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [hackfest2016: Quaoar](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] hackfest2016: Quaoar/192.168.92.175":
         - ". Phase #1: Enumeration":

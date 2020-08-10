@@ -25,7 +25,7 @@ writeup:
       - privesc_sudoers
   overview:
     description: |
-      This is a writeup for VulnHub VM [`BSides Vancouver: 2018 (Workshop)`](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [BSides Vancouver: 2018 (Workshop)](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       "_ [VulnHub] BSides Vancouver: 2018 (Workshop)/192.168.92.169":
         - ". Phase #1: Enumeration":

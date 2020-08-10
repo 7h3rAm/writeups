@@ -20,7 +20,7 @@ writeup:
       - privesc_lxc_bash
   overview:
     description: |
-      This is a writeup for VulnHub VM [`InfoSec Prep: OSCP`](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [InfoSec Prep: OSCP](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] InfoSec Prep: OSCP/192.168.119.198":
         - ". 22/tcp":

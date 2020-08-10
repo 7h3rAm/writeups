@@ -24,7 +24,7 @@ writeup:
       - privesc_mysql_udf
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Kioptrix: Level 1.3 (#4)`](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Kioptrix: Level 1.3 (#4)](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ Kioptrix: Level 1.3 (#4)/192.168.92.131":
         - ". Phase #1: Enumeration":

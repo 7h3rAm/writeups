@@ -21,7 +21,7 @@ writeup:
       - privesc_setuid
   overview:
     description: |
-      This is a writeup for VulnHub VM [`FristiLeaks: 1.3`](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [FristiLeaks: 1.3](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] FristiLeaks: 1.3/192.168.92.133":
         - ". Phase #1: Enumeration":

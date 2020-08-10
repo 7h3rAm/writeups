@@ -20,7 +20,7 @@ writeup:
       - privesc_freebsd
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Kioptrix: 2014 (#5)`](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Kioptrix: 2014 (#5)](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ Kioptrix: 2014 (#5)/192.168.92.185":
         - ". Phase #1: Enumeration":

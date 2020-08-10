@@ -22,7 +22,7 @@ writeup:
       - privesc_cron_rootjobs
   overview:
     description: |
-      This is a writeup for HackTheBox VM [`Bashed`](https://www.hackthebox.eu/home/machines/profile/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Bashed](https://www.hackthebox.eu/home/machines/profile/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ Bashed/10.10.10.68":
         - ". Phase #1: Enumeration":

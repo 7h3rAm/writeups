@@ -17,7 +17,7 @@ writeup:
       - privesc_ssh_knownhosts
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Moria: 1.1`](https://www.vulnhub.com/entry/moria-1,187/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Moria: 1.1](https://www.vulnhub.com/entry/moria-1,187/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Moria: 1.1/192.168.92.188":
         - ". Phase #1: Enumeration":

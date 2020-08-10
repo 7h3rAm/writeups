@@ -24,7 +24,7 @@ writeup:
       - privesc_sudo
   overview:
     description: |
-      This is a writeup for VulnHub VM [`LazySysAdmin: 1`](https://www.vulnhub.com/entry/lazysysadmin-1,205/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [LazySysAdmin: 1](https://www.vulnhub.com/entry/lazysysadmin-1,205/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ LazySysAdmin: 1/192.168.92.191":
         - ". Phase #1: Enumeration":

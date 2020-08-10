@@ -23,7 +23,7 @@ writeup:
       - privesc_ssh_authorizedkeys
   overview:
     description: |
-      This is a writeup for VulnHub VM [`HackLAB: Vulnix`](https://www.vulnhub.com/entry/hacklab-vulnix,48/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [HackLAB: Vulnix](https://www.vulnhub.com/entry/hacklab-vulnix,48/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] HackLAB: Vulnix/192.168.92.177":
         - ". Phase #1: Enumeration":

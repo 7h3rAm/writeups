@@ -21,7 +21,7 @@ writeup:
       - privesc_docker_group
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Lin.Security: 1`](https://www.vulnhub.com/entry/linsecurity-1,244/). Here's an overview of the `enumeration → exploitation → privilege escalation` process:
+      This is a writeup for VulnHub VM [Lin.Security: 1](https://www.vulnhub.com/entry/linsecurity-1,244/). Here's an overview of the `enumeration → exploitation → privilege escalation` process:
     killchain:
       - "_ [VulnHub] Lin.Security: 1/192.168.92.186":
         - ". Phase #1: Enumeration":

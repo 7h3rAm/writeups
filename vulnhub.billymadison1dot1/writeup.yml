@@ -19,7 +19,7 @@ writeup:
       - privesc_sudoers
   overview:
     description: |
-      This is a writeup for VulnHub VM [`Billy Madison: 1.1`](https://www.vulnhub.com/entry/billy-madison-11,161). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for VulnHub VM [Billy Madison: 1.1](https://www.vulnhub.com/entry/billy-madison-11,161). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [VulnHub] Billy Madison: 1.1/192.168.92.167":
         - ". Phase #1: Enumeration":
