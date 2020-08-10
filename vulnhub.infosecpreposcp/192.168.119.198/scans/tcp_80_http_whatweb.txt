@@ -1,0 +1,121 @@
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+WhatWeb report for http://192.168.119.198:80
+Status    : 200 OK
+Title     : OSCP Voucher &#8211; Just another WordPress site
+IP        : 192.168.119.198
+Country   : RESERVED, ZZ
+
+Summary   : WordPress[5.4.2], MetaGenerator[WordPress 5.4.2], HTML5, PoweredBy[-wordpress,-wordpress,,WordPress], Apache[2.4.41], Script, UncommonHeaders[link], HTTPServer[Ubuntu Linux][Apache/2.4.41 (Ubuntu)]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.41 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.41 (Ubuntu) (from server string)
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its 
+	value. 
+
+	String       : WordPress 5.4.2
+
+[ PoweredBy ]
+	This plugin identifies instances of 'Powered by x' text and 
+	attempts to extract the value for x. 
+
+	String       : -wordpress,-wordpress,,WordPress
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : link (from headers)
+
+[ WordPress ]
+	WordPress is an opensource blogging system commonly used as 
+	a CMS. 
+
+	Version      : 5.4.2
+	Aggressive function available (check plugin file or details).
+	Google Dorks: (1)
+	Website     : http://www.wordpress.org/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Mon, 20 Jul 2020 06:34:38 GMT
+	Server: Apache/2.4.41 (Ubuntu)
+	Link: <http://192.168.119.198/index.php/wp-json/>; rel="https://api.w.org/"
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 7695
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

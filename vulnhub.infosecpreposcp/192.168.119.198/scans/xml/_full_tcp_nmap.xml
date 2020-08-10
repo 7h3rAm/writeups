@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Jul 20 12:03:57 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/xml/_full_tcp_nmap.xml 192.168.119.198 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/vulnhub.infosecpreposcp/192.168.119.198/scans/xml/_full_tcp_nmap.xml 192.168.119.198" start="1595226837" startstr="Mon Jul 20 12:03:57 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1595226839"/>
+<taskend task="NSE" time="1595226839"/>
+<taskbegin task="NSE" time="1595226839"/>
+<taskend task="NSE" time="1595226839"/>
+<taskbegin task="NSE" time="1595226839"/>
+<taskend task="NSE" time="1595226839"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1595226839"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1595226852"/>
+<taskbegin task="Connect Scan" time="1595226852"/>
+<taskend task="Connect Scan" time="1595226857" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1595226857"/>
+<taskend task="Service scan" time="1595226924" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1595226924"/>
+<taskend task="NSE" time="1595226930"/>
+<taskbegin task="NSE" time="1595226930"/>
+<taskend task="NSE" time="1595226931"/>
+<taskbegin task="NSE" time="1595226931"/>
+<taskend task="NSE" time="1595226931"/>
+<host starttime="1595226852" endtime="1595226931"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="192.168.119.198" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="conn-refused" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="8.2p1 Ubuntu 4ubuntu0.1" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:8.2p1</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-generator" output="WordPress 5.4.2"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-robots.txt" output="1 disallowed entry &#xa;/secret.txt"/><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-title" output="OSCP Voucher &amp;#8211; Just another WordPress site"><elem key="title">OSCP Voucher &amp;#8211; Just another WordPress site</elem>
+</script></port>
+<port protocol="tcp" portid="33060"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="socks5" servicefp="SF-Port33060-TCP:V=7.80%I=9%D=7/20%Time=5F153AEF%P=x86_64-pc-linux-gnu%r(NULL,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(GenericLines,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(GetRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(HTTPOptions,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(RTSPRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(RPCCheck,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(DNSVersionBindReqTCP,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(DNSStatusRequestTCP,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(Hello,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(Help,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(SSLSessionReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(TerminalServerCookie,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(TLSSessionReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(SSLv23SessionReq,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(Kerberos,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(SMBProgNeg,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(X11Probe,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(FourOhFourRequest,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LPDString,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LDAPSearchReq,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(LDAPBindReq,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(SIPOptions,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(LANDesk-RC,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(TerminalServer,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(NCP,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(NotesRPC,2B,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0\x1e\0\0\0\x01\x08\x01\x10\x88&apos;\x1a\x0fInvalid\x20message\&quot;\x05HY000&quot;)%r(DistCCD,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(JavaRMI,9,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0&quot;)%r(Radmin,15D,&quot;\x05\0\0\0\x0b\x08\x05\x1a\0P\x01\0\0\x02\n\x0f\n\x03tls\x12\x08\x08\x01\x12\x04\x08\x07@\0\nM\n\x19authentication\.mechanisms\x120\x08\x03\&quot;,\n\x11\x08\x01\x12\r\x08\x08J\t\n\x07MYSQL41\n\x17\x08\x01\x12\x13\x08\x08J\x0f\n\rSHA256_MEMORY\n\x1d\n\x0bdoc\.formats\x12\x0e\x08\x01\x12\n\x08\x08J\x06\n\x04text\n\x1e\n\x12client\.interactive\x12\x08\x08\x01\x12\x04\x08\x07@\0\nn\n\x0bcompression\x12_\x08\x02\x1a\[\nY\n\talgorithm\x12L\x08\x03\&quot;H\n\x18\x08\x01\x12\x14\x08\x08J\x10\n\x0edeflate_stream\n\x15\x08\x01\x12\x11\x08\x08J\r\n\x0blz4_message\n\x15\x08\x01\x12\x11\x08\x08J\r\n\x0bzstd_stream\n\x1c\n\tnode_type\x12\x0f\x08\x01\x12\x0b\x08\x08J\x07\n\x05mysql\n\x20\n\x14client\.pwd_expire_ok\x12\x08\x08\x01\x12\x04\x08\x07@\0&quot;);" method="probed" conf="10"/><script id="fingerprint-strings" output="&#xa;  DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe: &#xa;    Invalid message&quot;&#xa;    HY000&#xa;  Radmin: &#xa;    authentication.mechanisms&#xa;    MYSQL41&#xa;    SHA256_MEMORY&#xa;    doc.formats&#xa;    text&#xa;    client.interactive&#xa;    compression&#xa;    algorithm&#xa;    deflate_stream&#xa;    lz4_message&#xa;    zstd_stream&#xa;    node_type&#xa;    mysql&#xa;    client.pwd_expire_ok"><elem key="DNSStatusRequestTCP, LDAPSearchReq, NotesRPC, SSLSessionReq, TLSSessionReq, X11Probe">&#xa;    Invalid message&quot;&#xa;    HY000</elem>
+<elem key="Radmin">&#xa;    authentication.mechanisms&#xa;    MYSQL41&#xa;    SHA256_MEMORY&#xa;    doc.formats&#xa;    text&#xa;    client.interactive&#xa;    compression&#xa;    algorithm&#xa;    deflate_stream&#xa;    lz4_message&#xa;    zstd_stream&#xa;    node_type&#xa;    mysql&#xa;    client.pwd_expire_ok</elem>
+</script><script id="socks-auth-info" output="&#xa;  No authentication&#xa;  No authentication&#xa;  No authentication"><table>
+<elem key="method">0</elem>
+<elem key="name">No authentication</elem>
+</table>
+<table>
+<elem key="method">0</elem>
+<elem key="name">No authentication</elem>
+</table>
+<table>
+<elem key="method">0</elem>
+<elem key="name">No authentication</elem>
+</table>
+</script></port>
+</ports>
+<times srtt="1606" rttvar="2238" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1595226931"/>
+<taskend task="NSE" time="1595226931"/>
+<taskbegin task="NSE" time="1595226931"/>
+<taskend task="NSE" time="1595226931"/>
+<taskbegin task="NSE" time="1595226931"/>
+<taskend task="NSE" time="1595226931"/>
+<runstats><finished time="1595226931" timestr="Mon Jul 20 12:05:31 2020" elapsed="94.46" summary="Nmap done at Mon Jul 20 12:05:31 2020; 1 IP address (1 host up) scanned in 94.46 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
