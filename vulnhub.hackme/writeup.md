@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 27/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
+**Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
 This is a writeup for VulnHub VM [hackme: 1](https://www.vulnhub.com/entry/hackme-1,330/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.34 ((Ubuntu))`: [exploit_php_fileupload](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 
 \newpage

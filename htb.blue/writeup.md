@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 01/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
-**Tags**: [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010)  
+**Tags**: [exploit_smb_ms17_010](https://github.com/7h3rAm/writeups/search?q=exploit_smb_ms17_010&unscoped_q=exploit_smb_ms17_010)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Blue](https://www.hackthebox.eu/home/machines/profile/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `139/tcp/netbios-ssn/Microsoft Windows netbios-ssn`: [exploit_smb_ms17_010](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010)  
 
 
 \newpage

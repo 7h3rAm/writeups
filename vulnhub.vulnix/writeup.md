@@ -26,13 +26,19 @@ header-includes:
 
 **Date**: 20/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys)  
+**Tags**: [exploit_nfs_rw](https://github.com/7h3rAm/writeups/search?q=exploit_nfs_rw&unscoped_q=exploit_nfs_rw), [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_authorizedkeys&unscoped_q=exploit_ssh_authorizedkeys), [privesc_nfs_norootsquash](https://github.com/7h3rAm/writeups/search?q=privesc_nfs_norootsquash&unscoped_q=privesc_nfs_norootsquash), [privesc_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=privesc_ssh_authorizedkeys&unscoped_q=privesc_ssh_authorizedkeys)  
 
 ## Overview
 This is a writeup for VulnHub VM [HackLAB: Vulnix](https://www.vulnhub.com/entry/hacklab-vulnix,48/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `22/tcp/ssh/OpenSSH 5.9p1 Debian 5ubuntu1 (Ubuntu Linux; protocol 2.0)`: [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [privesc_ssh_authorizedkeys](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys)  
+2\. `2049/tcp/nfs_acl/2-3 (RPC #100227)`: [exploit_nfs_rw](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [privesc_nfs_norootsquash](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash)  
 
 
 \newpage

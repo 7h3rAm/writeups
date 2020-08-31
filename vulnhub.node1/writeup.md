@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 28/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
+**Tags**: [exploit_nodejs](https://github.com/7h3rAm/writeups/search?q=exploit_nodejs&unscoped_q=exploit_nodejs), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [exploit_mongodb](https://github.com/7h3rAm/writeups/search?q=exploit_mongodb&unscoped_q=exploit_mongodb), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
 This is a writeup for VulnHub VM [Node: 1](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `3000/tcp/http/Node.js Express framework`: [exploit_nodejs](https://github.com/7h3rAm/writeups#exploit_nodejs), [exploit_credsreuse](https://github.com/7h3rAm/writeups#exploit_credsreuse), [exploit_mongodb](https://github.com/7h3rAm/writeups#exploit_mongodb), [privesc_setuid](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 
 \newpage

@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 13/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)  
+**Tags**: [exploit_shellshock](https://github.com/7h3rAm/writeups/search?q=exploit_shellshock&unscoped_q=exploit_shellshock), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Shocker](https://www.hackthebox.eu/home/machines/profile/108). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.18 ((Ubuntu))`: [exploit_shellshock](https://github.com/7h3rAm/writeups#exploit_shellshock), [privesc_sudoers](https://github.com/7h3rAm/writeups#privesc_sudoers)  
 
 
 \newpage

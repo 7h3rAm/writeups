@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 21/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap)  
+**Tags**: [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid), [privesc_nmap](https://github.com/7h3rAm/writeups/search?q=privesc_nmap&unscoped_q=privesc_nmap)  
 
 ## Overview
 This is a writeup for VulnHub VM [Mr-Robot: 1](https://www.vulnhub.com/entry/mr-robot-1,151/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd`: [exploit_php_reverseshell](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups#privesc_setuid), [privesc_nmap](https://github.com/7h3rAm/writeups#privesc_nmap)  
 
 
 \newpage

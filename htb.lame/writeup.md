@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 01/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap)  
+**Tags**: [exploit_smb_usermap](https://github.com/7h3rAm/writeups/search?q=exploit_smb_usermap&unscoped_q=exploit_smb_usermap)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Lame](htps://www.hackthebox.eu/home/machines/profile/1). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `139/tcp/netbios-ssn/Samba smbd 3.X - 4.X (workgroup: WORKGROUP)`: [exploit_smb_usermap](https://github.com/7h3rAm/writeups#exploit_smb_usermap)  
 
 
 \newpage

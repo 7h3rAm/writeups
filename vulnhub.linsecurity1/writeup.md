@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 10/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group)  
+**Tags**: [exploit_nfs_rw](https://github.com/7h3rAm/writeups/search?q=exploit_nfs_rw&unscoped_q=exploit_nfs_rw), [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_authorizedkeys&unscoped_q=exploit_ssh_authorizedkeys), [privesc_strace_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_strace_setuid&unscoped_q=privesc_strace_setuid), [privesc_docker_group](https://github.com/7h3rAm/writeups/search?q=privesc_docker_group&unscoped_q=privesc_docker_group)  
 
 ## Overview
 This is a writeup for VulnHub VM [Lin.Security: 1](https://www.vulnhub.com/entry/linsecurity-1,244/). Here's an overview of the `enumeration → exploitation → privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `2049/tcp/nfs_acl/3 (RPC #100227)`: [exploit_nfs_rw](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [privesc_strace_setuid](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [privesc_docker_group](https://github.com/7h3rAm/writeups#privesc_docker_group)  
 
 
 \newpage

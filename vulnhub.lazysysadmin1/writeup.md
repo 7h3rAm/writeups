@@ -26,13 +26,20 @@ header-includes:
 
 **Date**: 29/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)  
+**Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_smb_nullsession](https://github.com/7h3rAm/writeups/search?q=exploit_smb_nullsession&unscoped_q=exploit_smb_nullsession), [exploit_smb_web_root](https://github.com/7h3rAm/writeups/search?q=exploit_smb_web_root&unscoped_q=exploit_smb_web_root), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [exploit_wordpress_template](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_template&unscoped_q=exploit_wordpress_template), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
 This is a writeup for VulnHub VM [LazySysAdmin: 1](https://www.vulnhub.com/entry/lazysysadmin-1,205/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `22/tcp/ssh/OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.8 (Ubuntu Linux; protocol 2.0)`: [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo)  
+2\. `80/tcp/http/Apache httpd 2.4.7 ((Ubuntu))`: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [exploit_credsreuse](https://github.com/7h3rAm/writeups#exploit_credsreuse), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [exploit_wordpress_template](https://github.com/7h3rAm/writeups#exploit_wordpress_template)  
+3\. `139/tcp/netbios-ssn/Samba smbd 3.X - 4.X (workgroup: WORKGROUP)`: [exploit_smb_nullsession](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [exploit_smb_web_root](https://github.com/7h3rAm/writeups#exploit_smb_web_root)  
 
 
 \newpage

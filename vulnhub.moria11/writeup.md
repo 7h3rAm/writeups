@@ -26,12 +26,13 @@ header-includes:
 
 **Date**: 17/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`privesc_ssh_knownhosts`](https://github.com/7h3rAm/writeups#privesc_ssh_knownhosts)  
+**Tags**: [privesc_ssh_knownhosts](https://github.com/7h3rAm/writeups/search?q=privesc_ssh_knownhosts&unscoped_q=privesc_ssh_knownhosts)  
 
 ## Overview
 This is a writeup for VulnHub VM [Moria: 1.1](https://www.vulnhub.com/entry/moria-1,187/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
 
 

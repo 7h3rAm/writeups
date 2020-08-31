@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 11/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable)  
+**Tags**: [exploit_php_webshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_webshell&unscoped_q=exploit_php_webshell), [exploit_bash_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_bash_reverseshell&unscoped_q=exploit_bash_reverseshell), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers), [privesc_passwd_writable](https://github.com/7h3rAm/writeups/search?q=privesc_passwd_writable&unscoped_q=privesc_passwd_writable)  
 
 ## Overview
 This is a writeup for VulnHub VM [Misdirection: 1](https://www.vulnhub.com/entry/misdirection-1,371/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `8080/tcp/http/Apache httpd 2.4.29 ((Ubuntu))`: [exploit_php_webshell](https://github.com/7h3rAm/writeups#exploit_php_webshell), [exploit_bash_reverseshell](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [privesc_sudoers](https://github.com/7h3rAm/writeups#privesc_sudoers), [privesc_passwd_writable](https://github.com/7h3rAm/writeups#privesc_passwd_writable)  
 
 
 \newpage

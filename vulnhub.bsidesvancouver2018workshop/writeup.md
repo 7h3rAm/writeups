@@ -26,13 +26,20 @@ header-includes:
 
 **Date**: 09/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)  
+**Tags**: [enumerate_proto_ftp](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_ftp&unscoped_q=enumerate_proto_ftp), [enumerate_proto_ssh](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_ssh&unscoped_q=enumerate_proto_ssh), [exploit_ssh_bruteforce](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_bruteforce&unscoped_q=exploit_ssh_bruteforce), [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_plugin_hellodolly](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin_hellodolly&unscoped_q=exploit_wordpress_plugin_hellodolly), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 
 ## Overview
 This is a writeup for VulnHub VM [BSides Vancouver: 2018 (Workshop)](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `21/tcp/ftp/vsftpd 2.3.5`: [enumerate_proto_ftp](https://github.com/7h3rAm/writeups#enumerate_proto_ftp)  
+2\. `22/tcp/ssh/OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)`: [enumerate_proto_ssh](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [exploit_ssh_bruteforce](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce)  
+3\. `80/tcp/http/Apache httpd 2.2.22 ((Ubuntu))`: [enumerate_proto_http](https://github.com/7h3rAm/writeups#enumerate_proto_http), [enumerate_app_wordpress](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [exploit_wordpress_plugin_hellodolly](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [privesc_cron](https://github.com/7h3rAm/writeups#privesc_cron), [privesc_sudoers](https://github.com/7h3rAm/writeups#privesc_sudoers)  
 
 
 \newpage

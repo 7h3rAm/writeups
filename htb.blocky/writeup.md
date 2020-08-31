@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 13/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)  
+**Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_plugin](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin&unscoped_q=exploit_wordpress_plugin), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Blocky](https://www.hackthebox.eu/home/machines/profile/48). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.18 ((Ubuntu))`: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [exploit_wordpress_plugin](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [exploit_credsreuse](https://github.com/7h3rAm/writeups#exploit_credsreuse), [privesc_sudoers](https://github.com/7h3rAm/writeups#privesc_sudoers)  
 
 
 \newpage

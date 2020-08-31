@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 04/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
-**Tags**: [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051)  
+**Tags**: [exploit_iis_webdav](https://github.com/7h3rAm/writeups/search?q=exploit_iis_webdav&unscoped_q=exploit_iis_webdav), [privesc_windows_ms15_051](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms15_051&unscoped_q=privesc_windows_ms15_051)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Granny](https://www.hackthebox.eu/home/machines/profile/14). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Microsoft IIS httpd 6.0`: [exploit_iis_webdav](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [privesc_windows_ms15_051](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051)  
 
 
 \newpage

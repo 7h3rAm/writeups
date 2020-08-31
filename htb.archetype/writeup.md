@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 28/Apr/2020  
 **Categories**: [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
-**Tags**: [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login)  
+**Tags**: [enumerate_proto_smb](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_smb&unscoped_q=enumerate_proto_smb), [enumerate_proto_smb_anonymous_access](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_smb_anonymous_access&unscoped_q=enumerate_proto_smb_anonymous_access), [enumerate_proto_sql](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_sql&unscoped_q=enumerate_proto_sql), [enumerate_proto_sql_ssis_dtsconfig](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_sql_ssis_dtsconfig&unscoped_q=enumerate_proto_sql_ssis_dtsconfig), [exploit_sql_login](https://github.com/7h3rAm/writeups/search?q=exploit_sql_login&unscoped_q=exploit_sql_login), [exploit_sql_xpcmdshell](https://github.com/7h3rAm/writeups/search?q=exploit_sql_xpcmdshell&unscoped_q=exploit_sql_xpcmdshell), [enumerate_app_powershell_history](https://github.com/7h3rAm/writeups/search?q=enumerate_app_powershell_history&unscoped_q=enumerate_app_powershell_history), [privesc_psexec_login](https://github.com/7h3rAm/writeups/search?q=privesc_psexec_login&unscoped_q=privesc_psexec_login)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,13 @@ header-includes:
 This is a writeup for HackTheBox VM [Archetype](https://www.hackthebox.eu/home/start). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `445/tcp/microsoft-ds/Windows Server 2019 Standard 17763 microsoft-ds`: [enumerate_proto_smb](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [enumerate_proto_smb_anonymous_access](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [privesc_psexec_login](https://github.com/7h3rAm/writeups#privesc_psexec_login)  
+2\. `1433/tcp/ms-sql-s/Microsoft SQL Server 14.00.1000.00`: [enumerate_proto_sql](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [enumerate_proto_sql_ssis_dtsconfig](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [enumerate_app_powershell_history](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [exploit_sql_login](https://github.com/7h3rAm/writeups#exploit_sql_login), [exploit_sql_xpcmdshell](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell)  
 
 
 \newpage

@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 10/Aug/2020  
 **Categories**: [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash)  
+**Tags**: [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [exploit_ssh_privatekeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_privatekeys&unscoped_q=exploit_ssh_privatekeys), [privesc_lxc_bash](https://github.com/7h3rAm/writeups/search?q=privesc_lxc_bash&unscoped_q=privesc_lxc_bash)  
 
 ## Overview
 This is a writeup for VulnHub VM [InfoSec Prep: OSCP](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.41 ((Ubuntu))`: [enumerate_proto_http](https://github.com/7h3rAm/writeups#enumerate_proto_http), [exploit_ssh_privatekeys](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [privesc_lxc_bash](https://github.com/7h3rAm/writeups#privesc_lxc_bash)  
 
 
 \newpage

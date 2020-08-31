@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 05/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
-**Tags**: [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046)  
+**Tags**: [exploit_ftp_anonymous](https://github.com/7h3rAm/writeups/search?q=exploit_ftp_anonymous&unscoped_q=exploit_ftp_anonymous), [exploit_ftp_web_root](https://github.com/7h3rAm/writeups/search?q=exploit_ftp_web_root&unscoped_q=exploit_ftp_web_root), [exploit_iis_asp_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_iis_asp_reverseshell&unscoped_q=exploit_iis_asp_reverseshell), [privesc_windows_ms11_046](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms11_046&unscoped_q=privesc_windows_ms11_046)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,13 @@ header-includes:
 This is a writeup for HackTheBox VM [Devel](https://www.hackthebox.eu/home/machines/profile/3). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `21/tcp/ftp/Microsoft ftpd`: [exploit_ftp_anonymous](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [exploit_ftp_web_root](https://github.com/7h3rAm/writeups#exploit_ftp_web_root)  
+2\. `80/tcp/http/Microsoft IIS httpd 7.5`: [exploit_iis_asp_reverseshell](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [privesc_windows_ms11_046](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046)  
 
 
 \newpage

@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 17/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
+**Tags**: [exploit_python_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_python_reverseshell&unscoped_q=exploit_python_reverseshell), [privesc_mysql_creds](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_creds&unscoped_q=privesc_mysql_creds), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
 This is a writeup for VulnHub VM [Escalate_Linux: 1](https://www.vulnhub.com/entry/escalate_linux-1,323/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.29 ((Ubuntu))`: [exploit_python_reverseshell](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [privesc_mysql_creds](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [privesc_setuid](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 
 \newpage

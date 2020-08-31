@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 11/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid)  
+**Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload_bypass&unscoped_q=exploit_php_fileupload_bypass), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
 This is a writeup for VulnHub VM [FristiLeaks: 1.3](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`: [exploit_php_fileupload](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo), [privesc_setuid](https://github.com/7h3rAm/writeups#privesc_setuid)  
 
 
 \newpage

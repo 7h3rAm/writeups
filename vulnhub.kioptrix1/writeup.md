@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 28/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl)  
+**Tags**: [exploit_modssl](https://github.com/7h3rAm/writeups/search?q=exploit_modssl&unscoped_q=exploit_modssl), [privesc_modssl](https://github.com/7h3rAm/writeups/search?q=privesc_modssl&unscoped_q=privesc_modssl)  
 
 ## Overview
 This is a writeup for VulnHub VM [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `443/tcp/ssl/https/Apache/1.3.20 (Unix) (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b`: [exploit_modssl](https://github.com/7h3rAm/writeups#exploit_modssl), [privesc_modssl](https://github.com/7h3rAm/writeups#privesc_modssl)  
 
 
 \newpage

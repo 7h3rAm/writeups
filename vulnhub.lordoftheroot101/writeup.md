@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 10/Oct/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)  
+**Tags**: [exploit_sqli](https://github.com/7h3rAm/writeups/search?q=exploit_sqli&unscoped_q=exploit_sqli), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [privesc_kernel_overlayfs](https://github.com/7h3rAm/writeups/search?q=privesc_kernel_overlayfs&unscoped_q=privesc_kernel_overlayfs), [privesc_mysql_root](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_root&unscoped_q=privesc_mysql_root), [privesc_mysql_udf](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_udf&unscoped_q=privesc_mysql_udf)  
 
 ## Overview
 This is a writeup for VulnHub VM [Lord Of The Root: 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `1337/tcp/http/Apache httpd 2.4.7 ((Ubuntu))`: [exploit_sqli](https://github.com/7h3rAm/writeups#exploit_sqli), [exploit_credsreuse](https://github.com/7h3rAm/writeups#exploit_credsreuse), [privesc_kernel_overlayfs](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [privesc_mysql_root](https://github.com/7h3rAm/writeups#privesc_mysql_root), [privesc_mysql_udf](https://github.com/7h3rAm/writeups#privesc_mysql_udf)  
 
 
 \newpage

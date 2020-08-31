@@ -26,13 +26,19 @@ header-includes:
 
 **Date**: 31/Aug/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)  
+**Tags**: [exploit_bof](https://github.com/7h3rAm/writeups/search?q=exploit_bof&unscoped_q=exploit_bof), [privesc_anansi](https://github.com/7h3rAm/writeups/search?q=privesc_anansi&unscoped_q=privesc_anansi), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
 This is a writeup for VulnHub VM [Brainpan: 1](https://www.vulnhub.com/entry/brainpan-1,51/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `9999/tcp/abyss?`: [privesc_anansi](https://github.com/7h3rAm/writeups#privesc_anansi), [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo)  
+2\. `10000/tcp/http/SimpleHTTPServer 0.6 (Python 2.7.3)`: [exploit_bof](https://github.com/7h3rAm/writeups#exploit_bof)  
 
 
 \newpage

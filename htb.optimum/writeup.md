@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 04/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
-**Tags**: [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098)  
+**Tags**: [exploit_hfs_cmd_exec](https://github.com/7h3rAm/writeups/search?q=exploit_hfs_cmd_exec&unscoped_q=exploit_hfs_cmd_exec), [privesc_windows_ms16_098](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms16_098&unscoped_q=privesc_windows_ms16_098)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Optimum](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/HttpFileServer httpd 2.3`: [exploit_hfs_cmd_exec](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [privesc_windows_ms16_098](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098)  
 
 
 \newpage

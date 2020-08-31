@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 29/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)  
+**Tags**: [exploit_lotuscms](https://github.com/7h3rAm/writeups/search?q=exploit_lotuscms&unscoped_q=exploit_lotuscms), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
 This is a writeup for VulnHub VM [Kioptrix: Level 1.2 (#3)](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`: [exploit_lotuscms](https://github.com/7h3rAm/writeups#exploit_lotuscms), [privesc_sudoers](https://github.com/7h3rAm/writeups#privesc_sudoers), [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo)  
 
 
 \newpage

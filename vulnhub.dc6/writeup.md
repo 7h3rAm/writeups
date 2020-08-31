@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 10/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap)  
+**Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_plugin_activitymonitor](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin_activitymonitor&unscoped_q=exploit_wordpress_plugin_activitymonitor), [privesc_mysql_creds](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_creds&unscoped_q=privesc_mysql_creds), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo), [privesc_nmap](https://github.com/7h3rAm/writeups/search?q=privesc_nmap&unscoped_q=privesc_nmap)  
 
 ## Overview
 This is a writeup for VulnHub VM [DC: 6](https://www.vulnhub.com/entry/dc-6,315/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.25 ((Debian))`: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [exploit_wordpress_plugin_activitymonitor](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [privesc_mysql_creds](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo), [privesc_nmap](https://github.com/7h3rAm/writeups#privesc_nmap)  
 
 
 \newpage

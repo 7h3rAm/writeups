@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 19/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell)  
+**Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_chkrootkit](https://github.com/7h3rAm/writeups/search?q=privesc_chkrootkit&unscoped_q=privesc_chkrootkit), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron), [privesc_bash_reverseshell](https://github.com/7h3rAm/writeups/search?q=privesc_bash_reverseshell&unscoped_q=privesc_bash_reverseshell)  
 
 ## Overview
 This is a writeup for VulnHub VM [hackfest2016: Sedna](https://www.vulnhub.com/entry/hackfest2016-sedna,181/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.7 ((Ubuntu))`: [exploit_php_fileupload](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [privesc_chkrootkit](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [privesc_cron](https://github.com/7h3rAm/writeups#privesc_cron), [privesc_bash_reverseshell](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell)  
 
 
 \newpage

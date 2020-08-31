@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 26/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof)  
+**Tags**: [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload_bypass&unscoped_q=exploit_php_fileupload_bypass), [privesc_bof](https://github.com/7h3rAm/writeups/search?q=privesc_bof&unscoped_q=privesc_bof)  
 
 ## Overview
 This is a writeup for VulnHub VM [IMF: 1](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.4.18 ((Ubuntu))`: [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [privesc_bof](https://github.com/7h3rAm/writeups#privesc_bof)  
 
 
 \newpage

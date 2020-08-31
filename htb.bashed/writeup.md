@@ -26,7 +26,7 @@ header-includes:
 
 **Date**: 25/Jun/2020  
 **Categories**: [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux), [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp)  
-**Tags**: [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs)  
+**Tags**: [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [exploit_python_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_python_reverseshell&unscoped_q=exploit_python_reverseshell), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo), [privesc_cron_rootjobs](https://github.com/7h3rAm/writeups/search?q=privesc_cron_rootjobs&unscoped_q=privesc_cron_rootjobs)  
 **InfoCard**:  
 ![writeup.metadata.infocard](./infocard.png)
 
@@ -34,7 +34,12 @@ header-includes:
 This is a writeup for HackTheBox VM [Bashed](https://www.hackthebox.eu/home/machines/profile/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/2.4.18 ((Ubuntu))`: [enumerate_proto_http](https://github.com/7h3rAm/writeups#enumerate_proto_http), [exploit_python_reverseshell](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [privesc_sudo](https://github.com/7h3rAm/writeups#privesc_sudo), [privesc_cron_rootjobs](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs)  
 
 
 \newpage

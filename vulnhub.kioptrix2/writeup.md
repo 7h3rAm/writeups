@@ -26,13 +26,18 @@ header-includes:
 
 **Date**: 28/Sep/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [vulnhub](https://github.com/7h3rAm/writeups/search?q=vulnhub&unscoped_q=vulnhub), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
-**Tags**: [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend)  
+**Tags**: [exploit_sqli](https://github.com/7h3rAm/writeups/search?q=exploit_sqli&unscoped_q=exploit_sqli), [exploit_cmdexec](https://github.com/7h3rAm/writeups/search?q=exploit_cmdexec&unscoped_q=exploit_cmdexec), [privesc_kernel_ipappend](https://github.com/7h3rAm/writeups/search?q=privesc_kernel_ipappend&unscoped_q=privesc_kernel_ipappend)  
 
 ## Overview
 This is a writeup for VulnHub VM [Kioptrix: Level 1.1 (#2)](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
 
 
+### Killchain
 ![writeup.overview.killchain](./killchain.png)
+
+
+### TTPs
+1\. `80/tcp/http/Apache httpd 2.0.52 ((CentOS))`: [exploit_sqli](https://github.com/7h3rAm/writeups#exploit_sqli), [exploit_cmdexec](https://github.com/7h3rAm/writeups#exploit_cmdexec), [privesc_kernel_ipappend](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend)  
 
 
 \newpage
