@@ -22,12 +22,15 @@ writeup:
       This is a writeup for HackTheBox VM [Mirai](https://www.hackthebox.eu/home/machines/profile/64). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Mirai/10.10.10.48":
-        - ". Phase #1: Enumeration":
-          - ". 22/tcp":
-            - ".. Phase #2: Exploitation":
-              - ".. ssh (pi)":
-                - ".. /home/pi/Desktop/user.txt":
-                  - "... Phase #3: Privilege Escalation":
+        - ". 22/tcp":
+        - ". 53/tcp":
+        - ". 80/tcp":
+          - ". X-Pi-hole: A black hole for Internet advertisements.":
+          - ". http://10.10.10.48/admin/":
+            - ". pihole dashboard":
+              - ".. pihole default creds for ssh login":
+                - ".. ssh (pi)":
+                  - ".. /home/pi/Desktop/user.txt":
                     - "... id → user pi is member of sudo group":
                       - "... sudo su -":
                     - "... sudo -l → user pi can run any command with sudo":
@@ -36,19 +39,10 @@ writeup:
                           - "... /root/root.txt → flag in usb drive":
                             - "... cat /media/usbstick/damnit.txt → flag file deleted":
                               - "... strings /dev/sdb → contents of root.txt":
-          - ". 53/tcp":
-          - ". 80/tcp":
-            - ". Phase #1: Enumeration":
-              - ". X-Pi-hole: A black hole for Internet advertisements.":
-              - ". http://10.10.10.48/admin/":
-                - ". pihole dashboard":
-                  - ".. Phase #2: Exploitation":
-                    - ".. pihole default creds for ssh login":
-                      - ".. 22/tcp":
-          - ". 123/udp":
-          - ". 1323/tcp":
-          - ". 32400/tcp":
-          - ". 32469/tcp":
+        - ". 123/udp":
+        - ". 1323/tcp":
+        - ". 32400/tcp":
+        - ". 32469/tcp":
     ttps:
       "22/tcp/ssh/OpenSSH 6.7p1 Debian 5+deb8u3 (protocol 2.0)": exploit_defaultcreds privesc_sudoers
 
