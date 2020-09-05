@@ -1,8 +1,8 @@
 digraph G {
   #rankdir=LR;
-  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
+  nodesdictep=1.0; splines="ortho"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
-  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+  edge [style=solid color="#005f87" penwidth=0.75 arrowsize=0.75];
 
   0[label="192.168.92.178" color="navyblue" fillcolor="#ffffff" tooltip="[VulnHub] IMF: 1"];
   10[label="http://192.168.92.178/imfadministrator/images/whiteboard.jpg" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
@@ -33,28 +33,28 @@ digraph G {
     node [style="filled,solid"];
     label = "[VulnHub] IMF: 1";
     color = "#665957";
-    0 -> 1 [color="#665957"];
-    1 -> 2 [color="#665957"];
-    10 -> 11 [color="#665957"];
-    10 -> 12 [color="#665957"];
-    12 -> 13 [color="#665957"];
-    13 -> 14 [color="#665957"];
-    14 -> 15 [color="#665957"];
-    15 -> 16 [color="#665957"];
-    15 -> 17 [color="#665957"];
-    17 -> 18 [color="#665957"];
-    18 -> 19 [color="#665957"];
-    19 -> 20 [color="#665957"];
-    2 -> 3 [color="#665957"];
-    2 -> 5 [color="#665957"];
-    2 -> 7 [color="#665957"];
-    2 -> 9 [color="#665957"];
-    20 -> 21 [color="#665957"];
-    21 -> 22 [color="#665957"];
-    21 -> 23 [color="#665957"];
-    3 -> 4 [color="#665957"];
-    5 -> 6 [color="#665957"];
-    7 -> 8 [color="#665957"];
-    9 -> 10 [color="#665957"];
+    0 -> 1 [color="#005f87"];
+    1 -> 2 [color="#005f87"];
+    10 -> 11 [color="#005f87"];
+    10 -> 12 [color="#005f87"];
+    12 -> 13 [color="#005f87"];
+    13 -> 14 [color="#005f87"];
+    14 -> 15 [color="#005f87"];
+    15 -> 16 [color="#005f87"];
+    15 -> 17 [color="#005f87"];
+    17 -> 18 [color="#005f87"];
+    18 -> 19 [color="#005f87"];
+    19 -> 20 [color="#005f87"];
+    2 -> 3 [color="#005f87"];
+    2 -> 5 [color="#005f87"];
+    2 -> 7 [color="#005f87"];
+    2 -> 9 [color="#005f87"];
+    20 -> 21 [color="#005f87"];
+    21 -> 22 [color="#005f87"];
+    21 -> 23 [color="#005f87"];
+    3 -> 4 [color="#005f87"];
+    5 -> 6 [color="#005f87"];
+    7 -> 8 [color="#005f87"];
+    9 -> 10 [color="#005f87"];
   }
 }

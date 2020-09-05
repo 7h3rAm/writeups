@@ -1,8 +1,8 @@
 digraph G {
   #rankdir=LR;
-  nodesdictep=1.0; splines="line"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
+  nodesdictep=1.0; splines="ortho"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
-  edge [style=dashed color="#665957" penwidth=0.75 arrowsize=0.6];
+  edge [style=solid color="#005f87" penwidth=0.75 arrowsize=0.75];
 
   0[label="10.10.10.14" color="navyblue" fillcolor="#ffffff" tooltip="[HTB] Grandpa"];
   10[label="windows/local/ms15_051_client_copy_image" color="red" fillcolor="#ffacb7" tooltip="Phase #3:Privilege Escalation"];
@@ -23,18 +23,18 @@ digraph G {
     node [style="filled,solid"];
     label = "[HTB] Grandpa";
     color = "#665957";
-    0 -> 1 [color="#665957"];
-    1 -> 2 [color="#665957"];
-    10 -> 11 [color="#665957"];
-    11 -> 12 [color="#665957"];
-    11 -> 13 [color="#665957"];
-    2 -> 3 [color="#665957"];
-    3 -> 4 [color="#665957"];
-    4 -> 5 [color="#665957"];
-    5 -> 6 [color="#665957"];
-    6 -> 7 [color="#665957"];
-    7 -> 8 [color="#665957"];
-    8 -> 9 [color="#665957"];
-    9 -> 10 [color="#665957"];
+    0 -> 1 [color="#005f87"];
+    1 -> 2 [color="#005f87"];
+    10 -> 11 [color="#005f87"];
+    11 -> 12 [color="#005f87"];
+    11 -> 13 [color="#005f87"];
+    2 -> 3 [color="#005f87"];
+    3 -> 4 [color="#005f87"];
+    4 -> 5 [color="#005f87"];
+    5 -> 6 [color="#005f87"];
+    6 -> 7 [color="#005f87"];
+    7 -> 8 [color="#005f87"];
+    8 -> 9 [color="#005f87"];
+    9 -> 10 [color="#005f87"];
   }
 }
