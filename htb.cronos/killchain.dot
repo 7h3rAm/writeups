@@ -2,7 +2,7 @@ digraph G {
   #rankdir=LR;
   nodesdictep=1.0; splines="ortho"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
-  edge [style=solid color="#005f87" penwidth=0.75 arrowsize=0.75];
+  edge [style=solid color="#005f87" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
 
   0[label="10.10.10.13" color="navyblue" fillcolor="#ffffff" tooltip="[HTB] Cronos"];
   10[label="login page, vulnerable to sqli" color="darkgreen" fillcolor="#cceabb" tooltip="Phase #1:Enumeration"];
