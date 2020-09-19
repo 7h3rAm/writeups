@@ -269,7 +269,7 @@ Administrator
 
 \newpage
 ## Phase #3: Privilege Escalation
-1\. With our interactive shell running, we can now begin exploring the system further. Since the current user is a normal as well as service axxount, let's look at the Powershell history file to find any interesting commands:  
+1\. With our interactive shell running, we can now begin exploring the system further. Since the current user is a normal as well as service account, let's look at the Powershell history file to find any interesting commands:  
 ``` {.python .numberLines}
 type C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 
