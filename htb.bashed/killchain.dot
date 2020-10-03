@@ -4,7 +4,7 @@ digraph G {
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
   edge [style=solid color="#665957" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
 
-  0[label="10.10.10.68" color="#0077cc" fillcolor="#e1ecf4" tooltip="Bashed"];
+  0[label="10.10.10.68" color="#0077cc" fillcolor="#e1ecf4" tooltip="[HTB] Bashed"];
   10[label="sudo -l: www-data can run any command as scriptmanager" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
   11[label="switch to user scriptmanager" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
   12[label="cronjob running a python script as root but owned by scriptmanager" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
@@ -23,7 +23,7 @@ digraph G {
 
   subgraph cluster_0 {
     node [style="filled,solid"];
-    label = "Bashed";
+    label = "[HTB] Bashed";
     color = "#665957";
     0 -> 1 [color="#665957"];
     1 -> 2 [color="#665957"];

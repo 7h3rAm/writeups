@@ -4,7 +4,7 @@ digraph G {
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
   edge [style=solid color="#665957" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
 
-  0[label="10.10.10.27" color="#0077cc" fillcolor="#e1ecf4" tooltip="[HTB] Archetype - Overview"];
+  0[label="10.10.10.27" color="#0077cc" fillcolor="#e1ecf4" tooltip="[HTB] Archetype"];
   10[label="49665/tcp" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
   11[label="49666/tcp" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
   12[label="49667/tcp" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
@@ -36,7 +36,7 @@ digraph G {
 
   subgraph cluster_0 {
     node [style="filled,solid"];
-    label = "[HTB] Archetype - Overview";
+    label = "[HTB] Archetype";
     color = "#665957";
     0 -> 1 [color="#665957"];
     1 -> 10 [color="#665957"];
