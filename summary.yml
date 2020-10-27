@@ -2908,7 +2908,7 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                       |          OS          |       Points\
-      \       |          Owned           |          OSCPlike         |\n|:---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|:------------------:|:------------------------:|:-------------------------:|\n\
+      \       |          Owned           |         OSCPlike         |\n|:---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:|:------------------:|:------------------------:|:------------------------:|\n\
       |  1. |                                                                    \
       \                                         [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf)\
       \                                                                          \
@@ -2922,9 +2922,9 @@ summary:
       \ [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell),\
       \ [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history),\
       \ [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login)\
-      \            | [`\uD83D\uDD37`](foo \"Windows\") |                    | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| \
-      \ 2. |   [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf)<br/><img\
+      \            | [`\e[0;34m\uF17A\e[0m`](foo \"Windows\") |                  \
+      \  | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo\
+      \ \"== oscplike\") |\n|  2. |   [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.bashed/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.bashed/ratings.png\"\
       \ width=\"59\" height=\"20\"/>   |        [htb#118](https://www.hackthebox.eu/home/machines/profile/118)\
@@ -2937,11 +2937,11 @@ summary:
       \ [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs)\
       \                                                                          \
       \                                                                          \
-      \                                                                     |  [`\uD83D\
-      \uDC27`](foo \"Linux\")  | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78\
-      `](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n|  3. | \
-      \                                                                          \
-      \                        [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf)\
+      \                                                                     |  [`\e\
+      [1;33m\uF17C\e[0m`](foo \"Linux\")  | [`\e[1;36m\uF111\e[0m`](foo \"20pts\"\
+      ) | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo\
+      \ \"== oscplike\") |\n|  3. |                                              \
+      \                                                     [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf)\
       \                                                                          \
       \                         |        [vh#161](https://www.vulnhub.com/entry/billy-madison-11,161/)\
       \        |      <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png\"\
@@ -2954,9 +2954,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                                        |  [`\uD83D\uDC27`](foo\
-      \ \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\") |\
-      \                           |\n|  4. |   [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf)<br/><img\
+      \                                                        |  [`\e[1;33m\uF17C\
+      \e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"\
+      access_root\") |                          |\n|  4. |   [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.blocky/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.blocky/ratings.png\"\
       \ width=\"59\" height=\"20\"/>   |         [htb#48](https://www.hackthebox.eu/home/machines/profile/48)\
@@ -2970,10 +2970,10 @@ summary:
       \ [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)  \
       \                                                                          \
       \                                                                          \
-      \                                                                   |  [`\uD83D\
-      \uDC27`](foo \"Linux\")  | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78\
-      `](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n|  5. | \
-      \      [Blue](https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf)<br/><img\
+      \                                                                   |  [`\e\
+      [1;33m\uF17C\e[0m`](foo \"Linux\")  | [`\e[1;36m\uF111\e[0m`](foo \"20pts\"\
+      ) | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo\
+      \ \"== oscplike\") |\n|  5. |       [Blue](https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.blue/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.blue/ratings.png\"\
       \ width=\"59\" height=\"20\"/>       |         [htb#51](https://www.hackthebox.eu/home/machines/profile/51)\
@@ -2988,11 +2988,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                              | [`\uD83D\uDD37`](foo \"Windows\"\
-      ) | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\")\
-      \ | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n|  6. |                       \
-      \                                                                          \
-      \          [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf)\
+      \                                              | [`\e[0;34m\uF17A\e[0m`](foo\
+      \ \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo \"20pts\") | [`\e[0;31m\uE275\e\
+      [0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n\
+      |  6. |                                                                    \
+      \                                       [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf)\
       \                                                                          \
       \                                 |            [vh#51](https://www.vulnhub.com/entry/brainpan-1,51/)\
       \            |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png\"\
@@ -3005,11 +3005,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                                            |  [`\uD83D\uDC27\
-      `](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n|  7. |                       \
-      \                                                               [BSides Vancouver:\
-      \ 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf)\
+      \                                                            |  [`\e[1;33m\uF17C\
+      \e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"\
+      access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n|  7. |   \
+      \                                                                          \
+      \         [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf)\
       \                                                                          \
       \             | [vh#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/)\
       \ | <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png\"\
@@ -3021,8 +3021,8 @@ summary:
       \ [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly),\
       \ [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell),\
       \ [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)\
-      \ |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78\
-      `](foo \"access_root\") |                           |\n|  8. |   [Cronos](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf)<br/><img\
+      \ |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\
+      \e[0m`](foo \"access_root\") |                          |\n|  8. |   [Cronos](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.cronos/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.cronos/ratings.png\"\
       \ width=\"59\" height=\"20\"/>   |         [htb#11](https://www.hackthebox.eu/home/machines/profile/11)\
@@ -3037,10 +3037,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \            |  [`\uD83D\uDC27`](foo \"Linux\")  | [`\uD83D\uDFE1`](foo \"30pts\"\
-      ) | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\"\
-      ) |\n|  9. |                                                               \
-      \                                                 [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf)\
+      \            |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  | [`\e[1;32m\uF111\e\
+      [0m`](foo \"30pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |\n|  9. |                                    \
+      \                                                                          \
+      \  [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf)\
       \                                                                          \
       \                                       |              [vh#315](https://www.vulnhub.com/entry/dc-6,315/)\
       \              |             <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png\"\
@@ -3052,9 +3053,9 @@ summary:
       \ [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap)\
       \                                                                          \
       \                                                                          \
-      \                      |  [`\uD83D\uDC27`](foo \"Linux\")  |               \
-      \     | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\"\
-      ) |\n| 10. |     [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf)<br/><img\
+      \                      |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |        \
+      \            | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |\n| 10. |     [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.devel/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.devel/ratings.png\"\
       \ width=\"59\" height=\"20\"/>     |          [htb#3](https://www.hackthebox.eu/home/machines/profile/3)\
@@ -3068,11 +3069,11 @@ summary:
       \ [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046)\
       \                                                                          \
       \                                                                          \
-      \                                                        | [`\uD83D\uDD37`](foo\
-      \ \"Windows\") | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 11. |                       \
-      \                                                                          \
-      \    [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf)\
+      \                                                        | [`\e[0;34m\uF17A\e\
+      [0m`](foo \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo \"20pts\") | [`\e[0;31m\uE275\
+      \e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\")\
+      \ |\n| 11. |                                                               \
+      \                                      [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf)\
       \                                                                          \
       \                            |        [vh#323](https://www.vulnhub.com/entry/escalate_linux-1,323/)\
       \        |        <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png\"\
@@ -3086,10 +3087,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                 |  [`\uD83D\uDC27`](foo \"Linux\")  |    \
-      \                | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo\
-      \ \"== oscplike\") |\n| 12. |                                              \
-      \                                                      [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf)\
+      \                                 |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")\
+      \  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e\
+      [0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 12. |                        \
+      \                                                                          \
+      \  [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf)\
       \                                                                          \
       \                           |         [vh#133](https://www.vulnhub.com/entry/fristileaks-13,133/)\
       \         |      <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png\"\
@@ -3102,8 +3104,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                        | \
-      \ [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo\
-      \ \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 13. | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf)<br/><img\
+      \ [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\
+      \e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\")\
+      \ |\n| 13. | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/ratings.png\"\
       \ width=\"59\" height=\"20\"/> |         [htb#13](https://www.hackthebox.eu/home/machines/profile/13)\
@@ -3118,9 +3121,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \  | [`\uD83D\uDD37`](foo \"Windows\") | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 14.\
-      \ |   [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf)<br/><img\
+      \  | [`\e[0;34m\uF17A\e[0m`](foo \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo\
+      \ \"20pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |\n| 14. |   [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.granny/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.granny/ratings.png\"\
       \ width=\"59\" height=\"20\"/>   |         [htb#14](https://www.hackthebox.eu/home/machines/profile/14)\
@@ -3135,10 +3138,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \  | [`\uD83D\uDD37`](foo \"Windows\") | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 15.\
-      \ |                                                                        \
-      \                               [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf)\
+      \  | [`\e[0;34m\uF17A\e[0m`](foo \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo\
+      \ \"20pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |\n| 15. |                                    \
+      \                                                                   [hackfest2016:\
+      \ Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf)\
       \                                                                          \
       \                              |       [vh#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/)\
       \      |           <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png\"\
@@ -3151,10 +3155,11 @@ summary:
       \ [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds),\
       \ [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse)\
       \                                                                          \
-      \                               |  [`\uD83D\uDC27`](foo \"Linux\")  |      \
-      \              | [`\uD83E\uDE78`](foo \"access_root\") |                   \
-      \        |\n| 16. |                                                        \
-      \                                                [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf)\
+      \                               |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |\
+      \                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") |      \
+      \                    |\n| 16. |                                            \
+      \                                                            [hackfest2016:\
+      \ Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf)\
       \                                                                          \
       \                               |       [vh#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/)\
       \       |            <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png\"\
@@ -3166,10 +3171,10 @@ summary:
       \ [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell)\
       \                                                                          \
       \                                                                          \
-      \                           |  [`\uD83D\uDC27`](foo \"Linux\")  |          \
-      \          | [`\uD83E\uDE78`](foo \"access_root\") |                       \
-      \    |\n| 17. |                                                            \
-      \                                              [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf)\
+      \                           |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |   \
+      \                 | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") |         \
+      \                 |\n| 17. |                                               \
+      \                                                           [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf)\
       \                                                                          \
       \                                |          [vh#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/)\
       \          |           <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png\"\
@@ -3182,11 +3187,11 @@ summary:
       \ [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys)\
       \                                                                          \
       \                                                                          \
-      \                                                           |  [`\uD83D\uDC27\
-      `](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 18. |                       \
+      \                                                           |  [`\e[1;33m\uF17C\
+      \e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"\
+      access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 18. |   \
       \                                                                          \
-      \            [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf)\
+      \                                [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf)\
       \                                                                          \
       \                                   |            [vh#330](https://www.vulnhub.com/entry/hackme-1,330/)\
       \            |           <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png\"\
@@ -3200,10 +3205,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                 |  [`\uD83D\uDC27`](foo \"Linux\")  |    \
-      \                | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo\
-      \ \"== oscplike\") |\n| 19. |                                              \
-      \                                                                  [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf)\
+      \                                 |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")\
+      \  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e\
+      [0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 19. |                        \
+      \                                                                          \
+      \              [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf)\
       \                                                                          \
       \                                      |              [vh#162](https://www.vulnhub.com/entry/imf-1,162/)\
       \             |             <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png\"\
@@ -3216,11 +3222,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                                                    |  [`\uD83D\
-      \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 20. |                       \
-      \                                                                          \
-      \   [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf)\
+      \                                                                    |  [`\e\
+      [1;33m\uF17C\e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e\
+      [0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n\
+      | 20. |                                                                    \
+      \                                [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf)\
       \                                                                          \
       \                          |        [vh#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/)\
       \       |       <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png\"\
@@ -3234,11 +3240,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                      |  [`\uD83D\uDC27`](foo \"Linux\")  |\
-      \                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 21. |                                         \
-      \                                                             [Kioptrix: 2014\
-      \ (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)\
+      \                                      |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\"\
+      )  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e\
+      [0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 21. |                        \
+      \                                                                          \
+      \    [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf)\
       \                                                                          \
       \                             |          [vh#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/)\
       \         |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png\"\
@@ -3251,11 +3257,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                                      |   [`\uD83D\uDC79`](foo\
-      \ \"BSD\")   |                    | [`\uD83E\uDE78`](foo \"access_root\") |\
-      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 22. |                         \
+      \                                                      |   [`\e[0;31m\uF30C\e\
+      [0m`](foo \"BSD\")   |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\"\
+      ) | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 22. |                \
       \                                                                          \
-      \  [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf)\
+      \           [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf)\
       \                                                                          \
       \                           |        [vh#22](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)\
       \        |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png\"\
@@ -3269,10 +3275,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \            |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 23.\
-      \ |                                                                        \
-      \                            [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf)\
+      \            |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |                  \
+      \  | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo\
+      \ \"== oscplike\") |\n| 23. |                                              \
+      \                                                      [Kioptrix: Level 1.1\
+      \ (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf)\
       \                                                                          \
       \                          |        [vh#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/)\
       \       |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png\"\
@@ -3285,11 +3292,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
-      )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 24. |                                         \
-      \                                                           [Kioptrix: Level\
-      \ 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf)\
+      \                                               |  [`\e[1;33m\uF17C\e[0m`](foo\
+      \ \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\"\
+      ) | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 24. |                \
+      \                                                                          \
+      \          [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf)\
       \                                                                          \
       \                          |        [vh#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/)\
       \       |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png\"\
@@ -3302,11 +3309,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                                      |  [`\uD83D\uDC27`](foo\
-      \ \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\") |\
-      \ [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 25. |                         \
+      \                                                      |  [`\e[1;33m\uF17C\e\
+      [0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"\
+      access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 25. |   \
       \                                                                          \
-      \ [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf)\
+      \                       [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf)\
       \                                                                          \
       \                          |        [vh#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/)\
       \       |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png\"\
@@ -3320,9 +3327,9 @@ summary:
       \ [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)\
       \                                                                          \
       \                                                                          \
-      \                                           |  [`\uD83D\uDC27`](foo \"Linux\"\
-      )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 26. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img\
+      \                                           |  [`\e[1;33m\uF17C\e[0m`](foo \"\
+      Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\"\
+      ) | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 26. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.lame/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.lame/ratings.png\"\
       \ width=\"59\" height=\"20\"/>       |          [htb#1](https://www.hackthebox.eu/home/machines/profile/1)\
@@ -3337,11 +3344,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
-      )  | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 27. |                       \
-      \                                                                          \
-      \     [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf)\
+      \                                               |  [`\e[1;33m\uF17C\e[0m`](foo\
+      \ \"Linux\")  | [`\e[1;36m\uF111\e[0m`](foo \"20pts\") | [`\e[0;31m\uE275\e\
+      [0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n\
+      | 27. |                                                                    \
+      \                                  [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf)\
       \                                                                          \
       \                             |         [vh#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/)\
       \         |        <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png\"\
@@ -3354,9 +3361,9 @@ summary:
       \ [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template),\
       \ [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo)        \
       \                                                                          \
-      \     |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78\
-      `](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 28. | \
-      \  [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img\
+      \     |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |                    | [`\e\
+      [0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"==\
+      \ oscplike\") |\n| 28. |   [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.legacy/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.legacy/ratings.png\"\
       \ width=\"59\" height=\"20\"/>   |          [htb#2](https://www.hackthebox.eu/home/machines/profile/2)\
@@ -3371,11 +3378,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                              | [`\uD83D\uDD37`](foo \"Windows\"\
-      ) | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\uDE78`](foo \"access_root\")\
-      \ | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 29. |                       \
-      \                                                                          \
-      \      [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf)\
+      \                                              | [`\e[0;34m\uF17A\e[0m`](foo\
+      \ \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo \"20pts\") | [`\e[0;31m\uE275\e\
+      [0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n\
+      | 29. |                                                                    \
+      \                                   [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf)\
       \                                                                          \
       \                             |          [vh#244](https://www.vulnhub.com/entry/linsecurity-1,244/)\
       \         |        <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png\"\
@@ -3388,11 +3395,11 @@ summary:
       \ [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group)\
       \                                                                          \
       \                                                                          \
-      \                                                                    |  [`\uD83D\
-      \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 30. |                       \
-      \                                                                          [Lord\
-      \ Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf)\
+      \                                                                    |  [`\e\
+      [1;33m\uF17C\e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e\
+      [0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n\
+      | 30. |                                                                    \
+      \                             [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf)\
       \                                                                          \
       \                       |      [vh#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)\
       \      |      <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png\"\
@@ -3405,9 +3412,9 @@ summary:
       \ [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf)\
       \                                                                          \
       \                                                                          \
-      \                                       |  [`\uD83D\uDC27`](foo \"Linux\") \
-      \ |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 31. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img\
+      \                                       |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\"\
+      )  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e\
+      [0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 31. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.mirai/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png\"\
       \ width=\"59\" height=\"20\"/>     |         [htb#64](https://www.hackthebox.eu/home/machines/profile/64)\
@@ -3422,10 +3429,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \       |  [`\uD83D\uDC27`](foo \"Linux\")  | [`\uD83D\uDFE2`](foo \"20pts\"\
-      ) | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\"\
-      ) |\n| 32. |                                                               \
-      \                                       [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf)\
+      \       |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  | [`\e[1;36m\uF111\e[0m`](foo\
+      \ \"20pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |\n| 32. |                                    \
+      \                                                                  [Misdirection:\
+      \ 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf)\
       \                                                                          \
       \                             |         [vh#371](https://www.vulnhub.com/entry/misdirection-1,371/)\
       \         |        <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png\"\
@@ -3437,11 +3445,11 @@ summary:
       \ [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable)\
       \                                                                          \
       \                                                                          \
-      \                                                                  |  [`\uD83D\
-      \uDC27`](foo \"Linux\")  |                    | [`\uD83E\uDE78`](foo \"access_root\"\
-      ) | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 33. |                       \
+      \                                                                  |  [`\e[1;33m\uF17C\
+      \e[0m`](foo \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"\
+      access_root\") | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 33. |   \
       \                                                                          \
-      \           [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf)\
+      \                               [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf)\
       \                                                                          \
       \                                  |            [vh#187](https://www.vulnhub.com/entry/moria-11,187/)\
       \            |           <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/killchain.png\"\
@@ -3455,10 +3463,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                            |  [`\uD83D\uDC27`](foo \"Linux\"\
-      )  |                    | [`\uD83E\uDE78`](foo \"access_root\") |          \
-      \                 |\n| 34. |                                               \
-      \                                                            [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf)\
+      \                                            |  [`\e[1;33m\uF17C\e[0m`](foo\
+      \ \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\"\
+      ) |                          |\n| 34. |                                    \
+      \                                                                       [Mr-Robot:\
+      \ 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf)\
       \                                                                          \
       \                                 |           [vh#151](https://www.vulnhub.com/entry/mr-robot-1,151/)\
       \           |          <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png\"\
@@ -3471,11 +3480,11 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \                                               |  [`\uD83D\uDC27`](foo \"Linux\"\
-      )  |                    | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F\
-      `](foo \"== oscplike\") |\n| 35. |                                         \
-      \                                                                     [Node:\
-      \ 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf)\
+      \                                               |  [`\e[1;33m\uF17C\e[0m`](foo\
+      \ \"Linux\")  |                    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\"\
+      ) | [`\e[0;35m\uF111\e[0m`](foo \"== oscplike\") |\n| 35. |                \
+      \                                                                          \
+      \                    [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf)\
       \                                                                          \
       \                                     |             [vh#252](https://www.vulnhub.com/entry/node-1,252/)\
       \             |            <img src=\"https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png\"\
@@ -3488,9 +3497,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \              |  [`\uD83D\uDC27`](foo \"Linux\")  |                    | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 36.\
-      \ | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img\
+      \              |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  |                \
+      \    | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e[0m`](foo\
+      \ \"== oscplike\") |\n| 36. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.optimum/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.optimum/ratings.png\"\
       \ width=\"59\" height=\"20\"/> |          [htb#6](https://www.hackthebox.eu/home/machines/profile/6)\
@@ -3505,9 +3514,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          |\
-      \ [`\uD83D\uDD37`](foo \"Windows\") | [`\uD83D\uDFE2`](foo \"20pts\") | [`\uD83E\
-      \uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\") |\n| 37.\
-      \ | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img\
+      \ [`\e[0;34m\uF17A\e[0m`](foo \"Windows\") | [`\e[1;36m\uF111\e[0m`](foo \"\
+      20pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\e\
+      [0m`](foo \"== oscplike\") |\n| 37. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img\
       \ src=\"https://github.com/7h3rAm/writeups/blob/master/htb.shocker/matrix.png\"\
       \ width=\"59\" height=\"59\"/><br/><img src=\"https://github.com/7h3rAm/writeups/blob/master/htb.shocker/ratings.png\"\
       \ width=\"59\" height=\"20\"/> |        [htb#108](https://www.hackthebox.eu/home/machines/profile/108)\
@@ -3522,9 +3531,9 @@ summary:
       \                                                                          \
       \                                                                          \
       \                                                                          \
-      \         |  [`\uD83D\uDC27`](foo \"Linux\")  | [`\uD83D\uDFE2`](foo \"20pts\"\
-      ) | [`\uD83E\uDE78`](foo \"access_root\") | [`\u26A0\uFE0F`](foo \"== oscplike\"\
-      ) |"
+      \         |  [`\e[1;33m\uF17C\e[0m`](foo \"Linux\")  | [`\e[1;36m\uF111\e[0m`](foo\
+      \ \"20pts\") | [`\e[0;31m\uE275\e[0m`](foo \"access_root\") | [`\e[0;35m\uF111\
+      \e[0m`](foo \"== oscplike\") |"
   techniques:
     enumerate:
       enumerate_app_apache:
