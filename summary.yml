@@ -1,52 +1,64 @@
 summary:
   counts:
-    htbnix: 129
-    htboscplike: 74
-    htbwindows: 56
-    oscplikenix: 125
-    oscplikewindows: 34
+    htbnix: 131
+    htboscplike: 84
+    htbwindows: 57
+    oscplikenix: 166
+    oscplikewindows: 36
     ownedhtb: 25
-    ownedhtbnix: 26
+    ownedhtbnix: 13
     ownedhtboscplike: 25
-    ownedhtbwindows: 24
+    ownedhtbwindows: 12
     ownednix: 37
-    ownedoscplike: 44
-    ownedoscplikenix: 37
+    ownedoscplike: 46
+    ownedoscplikenix: 34
     ownedoscplikewindows: 12
+    ownedthm: 0
+    ownedthmnix: 0
+    ownedthmoscplike: 0
+    ownedthmwindows: 0
     ownedtotal: 49
     ownedvh: 24
-    ownedvhnix: 48
-    ownedvhoscplike: 19
+    ownedvhnix: 24
+    ownedvhoscplike: 21
     ownedvhwindows: 0
     ownedwindows: 12
-    percent: '23.27'
-    percenthtb: '17.57'
-    percentnix: '4.39'
-    percentvh: '28.24'
-    percentwindows: '12.07'
-    perhtb: 13.513513513513514
-    perhtbnix: 20.155038759689923
-    perhtboscplike: 33.78378378378378
-    perhtbwindows: 42.857142857142854
-    pernix: 5.417276720351391
-    peroscplike: 27.67295597484277
-    peroscplikenix: 29.599999999999998
-    peroscplikewindows: 35.294117647058826
-    pertotal: 6.612685560053981
-    pervh: 4.316546762589928
-    pervhnix: 8.664259927797833
-    pervhoscplike: 22.35294117647059
+    percent: '15.48'
+    percenthtb: '15.48'
+    percentnix: '4.35'
+    percentvh: '20.34'
+    percentwindows: '11.86'
+    perhtb: 13.297872340425531
+    perhtbnix: 9.923664122137405
+    perhtboscplike: 29.761904761904763
+    perhtbwindows: 21.052631578947366
+    pernix: 5.370101596516691
+    peroscplike: 19.246861924686193
+    peroscplikenix: 20.481927710843372
+    peroscplikewindows: 33.33333333333333
+    perthm: 0.0
+    perthmnix: 0
+    perthmoscplike: 0.0
+    perthmwindows: 0
+    pertotal: 4.8902195608782435
+    pervh: 4.285714285714286
+    pervhnix: 4.301075268817205
+    pervhoscplike: 17.796610169491526
     pervhwindows: 0.0
-    perwindows: 20.689655172413794
+    perwindows: 20.33898305084746
+    thmnix: 0
+    thmoscplike: 37
+    thmwindows: 0
     total: 0
-    totalhtb: 185
-    totalnix: 683
-    totaloscplike: 159
-    totaltotal: 741
-    totalvh: 556
-    totalwindows: 58
-    vhnix: 554
-    vhoscplike: 85
+    totalhtb: 188
+    totalnix: 689
+    totaloscplike: 239
+    totalthm: 254
+    totaltotal: 1002
+    totalvh: 560
+    totalwindows: 59
+    vhnix: 558
+    vhoscplike: 118
     vhwindows: 2
     writeups: 37
     writeupshtb: 13
@@ -576,16 +588,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 6215
-      - 5348
-      - 5075
-      - 2997
-      - 7982
-      - 895
-      - 621
-      - 300
-      - 94
-      - 145
+      - 6349
+      - 5442
+      - 5178
+      - 3065
+      - 8113
+      - 916
+      - 631
+      - 306
+      - 95
+      - 150
       free: false
       id: 118
       infrastructure: hackthebox
@@ -598,10 +610,10 @@ summary:
       matrix:
         aggregate:
         - 5.5
-        - 4.5
+        - 4.4
         - 4.4
         - 5.6
-        - 5.5
+        - 5.6
         maker:
         - 0
         - 0
@@ -621,10 +633,10 @@ summary:
       release: '2017-12-09'
       retired: true
       retired_date: '2018-04-28'
-      root_owns: 14168
+      root_owns: 14473
       shortname: bashed
       url: https://www.hackthebox.eu/home/machines/profile/118
-      user_owns: 17463
+      user_owns: 17807
       verbose_id: hackthebox#118
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
@@ -645,16 +657,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 2221
-      - 1775
-      - 2422
-      - 1430
-      - 3456
-      - 307
-      - 183
+      - 2272
+      - 1813
+      - 2488
+      - 1491
+      - 3549
+      - 313
+      - 188
       - 65
-      - 19
-      - 42
+      - 21
+      - 43
       free: false
       id: 48
       infrastructure: hackthebox
@@ -666,10 +678,10 @@ summary:
       maker2: null
       matrix:
         aggregate:
-        - 6.4
+        - 6.3
         - 5.4
-        - 4.2
-        - 5.8
+        - 4.1
+        - 5.9
         - 4.6
         maker:
         - 0
@@ -690,10 +702,10 @@ summary:
       release: '2017-07-21'
       retired: true
       retired_date: '2017-12-09'
-      root_owns: 6742
+      root_owns: 6933
       shortname: blocky
       url: https://www.hackthebox.eu/home/machines/profile/48
-      user_owns: 6740
+      user_owns: 6926
       verbose_id: hackthebox#48
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
@@ -736,16 +748,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 15395
-      - 6888
-      - 3425
-      - 1184
-      - 6611
-      - 202
-      - 122
-      - 80
+      - 15736
+      - 7089
+      - 3538
+      - 1230
+      - 6778
+      - 206
+      - 124
+      - 83
       - 28
-      - 109
+      - 112
       free: false
       id: 51
       infrastructure: hackthebox
@@ -757,11 +769,11 @@ summary:
       maker2: null
       matrix:
         aggregate:
-        - 4.1
-        - 6.4
-        - 8.3
-        - 1.7
-        - 3.6
+        - 4
+        - 6.3
+        - 8.2
+        - 1.8
+        - 3.7
         maker:
         - 0
         - 0
@@ -781,10 +793,10 @@ summary:
       release: '2017-07-28'
       retired: true
       retired_date: '2018-01-13'
-      root_owns: 19026
+      root_owns: 19539
       shortname: blue
       url: https://www.hackthebox.eu/home/machines/profile/51
-      user_owns: 18369
+      user_owns: 18868
       verbose_id: hackthebox#51
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
@@ -827,16 +839,16 @@ summary:
     machine:
       difficulty: medium
       difficulty_ratings:
-      - 525
-      - 996
-      - 2168
-      - 1852
-      - 3887
-      - 568
-      - 376
-      - 161
-      - 45
+      - 543
+      - 1025
+      - 2216
+      - 1915
+      - 4009
+      - 597
+      - 382
+      - 165
       - 46
+      - 47
       free: false
       id: 11
       infrastructure: hackthebox
@@ -850,8 +862,8 @@ summary:
         aggregate:
         - 6.9
         - 6.6
-        - 5.4
-        - 4.6
+        - 5.3
+        - 4.7
         - 3.4
         maker:
         - 0
@@ -872,10 +884,10 @@ summary:
       release: '2017-03-22'
       retired: true
       retired_date: '2017-05-26'
-      root_owns: 5391
+      root_owns: 5564
       shortname: cronos
       url: https://www.hackthebox.eu/home/machines/profile/11
-      user_owns: 5899
+      user_owns: 6076
       verbose_id: hackthebox#11
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
@@ -894,16 +906,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 2753
-      - 5080
-      - 7557
-      - 4376
-      - 8613
-      - 863
-      - 569
-      - 279
+      - 2820
+      - 5192
+      - 7704
+      - 4489
+      - 8868
+      - 887
+      - 587
+      - 280
       - 71
-      - 117
+      - 120
       free: false
       id: 3
       infrastructure: hackthebox
@@ -917,8 +929,8 @@ summary:
         aggregate:
         - 4.4
         - 5.2
-        - 6.9
-        - 3.1
+        - 6.8
+        - 3.2
         - 4.8
         maker:
         - 0
@@ -939,10 +951,10 @@ summary:
       release: '2017-03-15'
       retired: true
       retired_date: '2017-10-14'
-      root_owns: 17394
+      root_owns: 17818
       shortname: devel
       url: https://www.hackthebox.eu/home/machines/profile/3
-      user_owns: 16592
+      user_owns: 16995
       verbose_id: hackthebox#3
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
@@ -974,15 +986,15 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 1860
-      - 3295
-      - 3882
-      - 2149
-      - 4143
-      - 386
-      - 224
-      - 125
-      - 34
+      - 1916
+      - 3382
+      - 4004
+      - 2225
+      - 4268
+      - 407
+      - 233
+      - 127
+      - 35
       - 77
       free: false
       id: 13
@@ -997,8 +1009,8 @@ summary:
         aggregate:
         - 4.2
         - 5.1
-        - 7.6
-        - 2.4
+        - 7.5
+        - 2.5
         - 4.9
         maker:
         - 0
@@ -1019,10 +1031,10 @@ summary:
       release: '2017-04-12'
       retired: true
       retired_date: '2017-10-21'
-      root_owns: 9182
+      root_owns: 9460
       shortname: grandpa
       url: https://www.hackthebox.eu/home/machines/profile/13
-      user_owns: 8887
+      user_owns: 9161
       verbose_id: hackthebox#13
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
@@ -1067,14 +1079,14 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 2483
-      - 3027
-      - 3420
-      - 1647
-      - 3553
-      - 269
-      - 160
-      - 76
+      - 2568
+      - 3105
+      - 3522
+      - 1704
+      - 3662
+      - 277
+      - 165
+      - 81
       - 29
       - 59
       free: false
@@ -1089,10 +1101,10 @@ summary:
       matrix:
         aggregate:
         - 4.2
-        - 5.1
-        - 7.6
-        - 2.4
-        - 4.9
+        - 5
+        - 7.5
+        - 2.5
+        - 5
         maker:
         - 0
         - 0
@@ -1112,10 +1124,10 @@ summary:
       release: '2017-04-12'
       retired: true
       retired_date: '2017-05-26'
-      root_owns: 8142
+      root_owns: 8412
       shortname: granny
       url: https://www.hackthebox.eu/home/machines/profile/14
-      user_owns: 7840
+      user_owns: 8092
       verbose_id: hackthebox#14
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
@@ -1160,16 +1172,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 15873
-      - 10512
-      - 5818
-      - 1945
-      - 9114
-      - 351
-      - 206
-      - 139
-      - 62
+      - 16304
+      - 10811
+      - 6048
+      - 1997
+      - 9412
+      - 363
+      - 215
       - 143
+      - 63
+      - 152
       free: false
       id: 1
       infrastructure: hackthebox
@@ -1181,11 +1193,11 @@ summary:
       maker2: null
       matrix:
         aggregate:
-        - 4.4
-        - 4.4
-        - 7.2
-        - 2.8
-        - 5.6
+        - 4.3
+        - 4.3
+        - 7.1
+        - 2.9
+        - 5.7
         maker:
         - 0
         - 0
@@ -1205,10 +1217,10 @@ summary:
       release: '2017-03-14'
       retired: true
       retired_date: '2017-05-26'
-      root_owns: 25278
+      root_owns: 26066
       shortname: lame
       url: https://www.hackthebox.eu/home/machines/profile/1
-      user_owns: 23611
+      user_owns: 24356
       verbose_id: hackthebox#1
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf
@@ -1226,16 +1238,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 14949
-      - 8166
-      - 4527
-      - 1478
-      - 6658
-      - 281
-      - 131
-      - 75
-      - 50
-      - 103
+      - 15222
+      - 8349
+      - 4665
+      - 1514
+      - 6892
+      - 293
+      - 138
+      - 78
+      - 51
+      - 105
       free: false
       id: 2
       infrastructure: hackthebox
@@ -1248,10 +1260,10 @@ summary:
       matrix:
         aggregate:
         - 4.1
-        - 4.9
-        - 7.8
-        - 2.2
-        - 5.1
+        - 4.8
+        - 7.7
+        - 2.3
+        - 5.2
         maker:
         - 0
         - 0
@@ -1271,10 +1283,10 @@ summary:
       release: '2017-03-15'
       retired: true
       retired_date: '2017-05-26'
-      root_owns: 20216
+      root_owns: 20726
       shortname: legacy
       url: https://www.hackthebox.eu/home/machines/profile/2
-      user_owns: 19534
+      user_owns: 20020
       verbose_id: hackthebox#2
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf
@@ -1292,15 +1304,15 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 2054
-      - 2716
-      - 3351
-      - 1895
-      - 5444
-      - 479
-      - 368
-      - 178
-      - 48
+      - 2089
+      - 2765
+      - 3415
+      - 1932
+      - 5532
+      - 490
+      - 370
+      - 183
+      - 50
       - 79
       free: false
       id: 64
@@ -1313,11 +1325,11 @@ summary:
       maker2: null
       matrix:
         aggregate:
+        - 5
+        - 6.3
+        - 4.9
         - 5.1
-        - 6.4
-        - 5
-        - 5
-        - 3.6
+        - 3.7
         maker:
         - 0
         - 0
@@ -1332,15 +1344,15 @@ summary:
       owned_user: true
       points: 20
       private: false
-      rating: '4.4'
+      rating: '4.5'
       ratingsurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png
       release: '2017-09-01'
       retired: true
       retired_date: '2018-02-10'
-      root_owns: 9237
+      root_owns: 9404
       shortname: mirai
       url: https://www.hackthebox.eu/home/machines/profile/64
-      user_owns: 9602
+      user_owns: 9768
       verbose_id: hackthebox#64
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
@@ -1375,16 +1387,16 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 5286
-      - 4939
-      - 4710
-      - 2938
-      - 7263
-      - 945
-      - 662
-      - 361
+      - 5426
+      - 5059
+      - 4841
+      - 3003
+      - 7414
+      - 969
+      - 671
+      - 365
       - 100
-      - 153
+      - 155
       free: false
       id: 6
       infrastructure: hackthebox
@@ -1396,11 +1408,11 @@ summary:
       maker2: null
       matrix:
         aggregate:
-        - 4.8
-        - 6
-        - 7.5
-        - 2.5
-        - 4
+        - 4.7
+        - 5.9
+        - 7.4
+        - 2.6
+        - 4.1
         maker:
         - 0
         - 0
@@ -1420,10 +1432,10 @@ summary:
       release: '2017-03-18'
       retired: true
       retired_date: '2017-10-28'
-      root_owns: 12800
+      root_owns: 13151
       shortname: optimum
       url: https://www.hackthebox.eu/home/machines/profile/6
-      user_owns: 17499
+      user_owns: 17895
       verbose_id: hackthebox#6
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
@@ -1460,13 +1472,13 @@ summary:
     machine:
       difficulty: easy
       difficulty_ratings:
-      - 2247
-      - 2683
-      - 3910
-      - 2457
-      - 5311
-      - 572
-      - 368
+      - 2305
+      - 2756
+      - 4007
+      - 2516
+      - 5438
+      - 585
+      - 380
       - 152
       - 52
       - 72
@@ -1481,11 +1493,11 @@ summary:
       maker2: null
       matrix:
         aggregate:
-        - 6.2
-        - 6.5
-        - 7.7
-        - 2.3
-        - 3.5
+        - 6.1
+        - 6.3
+        - 7.6
+        - 2.4
+        - 3.7
         maker:
         - 0
         - 0
@@ -1505,10 +1517,10 @@ summary:
       release: '2017-09-30'
       retired: true
       retired_date: '2018-02-17'
-      root_owns: 9681
+      root_owns: 9926
       shortname: shocker
       url: https://www.hackthebox.eu/home/machines/profile/108
-      user_owns: 9864
+      user_owns: 10113
       verbose_id: hackthebox#108
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
@@ -1578,7 +1590,7 @@ summary:
       matrixurl: null
       name: 'Billy Madison: 1.1'
       os: Linux
-      oscplike: false
+      oscplike: true
       owned_root: true
       owned_user: true
       points: null
@@ -1673,7 +1685,7 @@ summary:
       matrixurl: null
       name: 'BSides Vancouver: 2018 (Workshop)'
       os: Linux
-      oscplike: false
+      oscplike: true
       owned_root: true
       owned_user: true
       points: null
@@ -2875,21 +2887,21 @@ summary:
     url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
     writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
   stats:
-    counts: '|    #     |     HackTheBox    |     VulnHub      |      OSCPlike     |       Owned       |
+    counts: '|    #     |     HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
 
-      |:--------:|:-----------------:|:----------------:|:-----------------:|:-----------------:|
+      |:--------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `25/185 (13.51%)` | `24/556 (4.32%)` | `44/159 (27.67%)` |  `49/741
-      (6.61%)` |
+      |  Total   | `25/188 (13.30%)` |  `24/560 (4.29%)` | `46/239 (19.25%)` | `49/1002
+      (4.89%)` |
 
-      | Windows  |  `24/56 (42.86%)` |  `0/2 (0.00%)`   |  `12/34 (35.29%)` |  `12/58
-      (20.69%)` |
+      | Windows  |  `12/57 (21.05%)` |   `0/2 (0.00%)`   |  `12/36 (33.33%)` |  `12/59
+      (20.34%)` |
 
-      |   *nix   | `26/129 (20.16%)` | `48/554 (8.66%)` | `37/125 (29.60%)` |  `37/683
-      (5.42%)` |
+      |   *nix   |  `13/131 (9.92%)` |  `24/558 (4.30%)` | `34/166 (20.48%)` |  `37/689
+      (5.37%)` |
 
-      | OSCPlike |  `25/74 (33.78%)` | `19/85 (22.35%)` |                   | `44/159
-      (27.67%)` |'
+      | OSCPlike |  `25/84 (29.76%)` | `21/118 (17.80%)` |                   | `46/239
+      (19.25%)` |'
     owned: '|  #  |                                                                                                                                                      Name                                                                                                                                                      |                                    Infra                                    |                                                               Killchain                                                                |                                                                                                                                                                                                                                                                                                                                                                                             TTPs                                                                                                                                                                                                                                                                                                                                                                                            |
 
       |:---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
