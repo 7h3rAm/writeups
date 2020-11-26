@@ -1,0 +1,6 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	yotf            Disk      Fox's Stuff -- keep out!
+	IPC$            IPC       IPC Service (year-of-the-fox server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available

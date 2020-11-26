@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Wed Jul 29 19:54:07 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/xml/_full_tcp_nmap.xml 10.10.41.240

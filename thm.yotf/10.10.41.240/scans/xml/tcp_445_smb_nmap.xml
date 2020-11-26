@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Jul 29 19:55:07 2020 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/tcp_445_smb_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/xml/tcp_445_smb_nmap.xml 10.10.41.240 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/tcp_445_smb_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/xml/tcp_445_smb_nmap.xml 10.10.41.240" start="1596032707" startstr="Wed Jul 29 19:55:07 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1596032708"/>
+<taskend task="NSE" time="1596032708"/>
+<taskbegin task="NSE" time="1596032708"/>
+<taskend task="NSE" time="1596032708"/>
+<taskbegin task="NSE" time="1596032708"/>
+<taskend task="NSE" time="1596032708"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1596032708"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1596032721"/>
+<taskbegin task="Connect Scan" time="1596032721"/>
+<taskend task="Connect Scan" time="1596032721" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1596032721"/>
+<taskend task="Service scan" time="1596032728" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1596032728"/>
+<taskprogress task="NSE" time="1596032759" percent="92.86" remaining="3" etc="1596032761"/>
+<taskprogress task="NSE" time="1596032789" percent="98.57" remaining="1" etc="1596032790"/>
+<taskprogress task="NSE" time="1596032819" percent="98.57" remaining="2" etc="1596032820"/>
+<taskprogress task="NSE" time="1596032849" percent="98.57" remaining="2" etc="1596032851"/>
+<taskprogress task="NSE" time="1596032879" percent="98.57" remaining="3" etc="1596032881"/>
+<taskprogress task="NSE" time="1596032909" percent="98.57" remaining="3" etc="1596032912"/>
+<taskprogress task="NSE" time="1596032939" percent="98.57" remaining="4" etc="1596032942"/>
+<taskprogress task="NSE" time="1596032969" percent="98.57" remaining="4" etc="1596032972"/>
+<taskprogress task="NSE" time="1596032999" percent="98.57" remaining="4" etc="1596033003"/>
+<taskprogress task="NSE" time="1596033029" percent="98.57" remaining="5" etc="1596033033"/>
+<taskend task="NSE" time="1596033035"/>
+<taskbegin task="NSE" time="1596033035"/>
+<taskprogress task="NSE" time="1596033066" percent="92.31" remaining="3" etc="1596033069"/>
+<taskend task="NSE" time="1596033068"/>
+<taskbegin task="NSE" time="1596033068"/>
+<taskend task="NSE" time="1596033068"/>
+<host starttime="1596032721" endtime="1596033068"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.41.240" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="netbios-ssn" product="Samba smbd" version="4.7.6-Ubuntu" extrainfo="workgroup: YEAROFTHEFOX" hostname="YEAR-OF-THE-FOX" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: YEAR-OF-THE-FOX, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  YEAR-OF-THE-FOX&lt;00&gt;  Flags: &lt;unique&gt;&lt;active&gt;&#xa;  YEAR-OF-THE-FOX&lt;03&gt;  Flags: &lt;unique&gt;&lt;active&gt;&#xa;  YEAR-OF-THE-FOX&lt;20&gt;  Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  YEAROFTHEFOX&lt;00&gt;     Flags: &lt;group&gt;&lt;active&gt;&#xa;  YEAROFTHEFOX&lt;1d&gt;     Flags: &lt;unique&gt;&lt;active&gt;&#xa;  YEAROFTHEFOX&lt;1e&gt;     Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-enum-domains" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-groups" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.10.41.240\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (year-of-the-fox server (Samba, Ubuntu))&#xa;    Users: 3&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\10.10.41.240\yotf: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Fox&apos;s Stuff -&#45; keep out!&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\home\fox\samba&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;"><elem key="account_used">guest</elem>
+<table key="\\10.10.41.240\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (year-of-the-fox server (Samba, Ubuntu))</elem>
+<elem key="Users">3</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.10.41.240\yotf">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Fox&apos;s Stuff -&#45; keep out!</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\home\fox\samba</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-enum-users" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-mbenum" output="&#xa;  DFS Root&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Master Browser&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Print server&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Server&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Server service&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Unix server&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Windows NT/2000/XP/2003 server&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;  Workstation&#xa;    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)&#xa;"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.7.6-Ubuntu)&#xa;  NetBIOS computer name: YEAR-OF-THE-FOX\x00&#xa;  Workgroup: YEAROFTHEFOX\x00&#xa;  System time: 2020-07-29T15:25:29+01:00&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.7.6-Ubuntu</elem>
+<elem key="domain">YEAROFTHEFOX\x00</elem>
+<elem key="server">YEAR-OF-THE-FOX\x00</elem>
+<elem key="date">2020-07-29T15:25:29+01:00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-07-29T14:25:31&#xa;  start_date: N/A"><elem key="date">2020-07-29T14:25:31</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="214516" rttvar="214516" to="1072580"/>
+</host>
+<taskbegin task="NSE" time="1596033068"/>
+<taskend task="NSE" time="1596033068"/>
+<taskbegin task="NSE" time="1596033068"/>
+<taskend task="NSE" time="1596033068"/>
+<taskbegin task="NSE" time="1596033068"/>
+<taskend task="NSE" time="1596033068"/>
+<runstats><finished time="1596033068" timestr="Wed Jul 29 20:01:08 2020" elapsed="361.31" summary="Nmap done at Wed Jul 29 20:01:08 2020; 1 IP address (1 host up) scanned in 361.31 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

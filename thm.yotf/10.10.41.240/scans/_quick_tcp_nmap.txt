@@ -1,0 +1,62 @@
+# Nmap 7.80 scan initiated Wed Jul 29 19:54:07 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/_quick_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/xml/_quick_tcp_nmap.xml 10.10.41.240
+Increasing send delay for 10.10.41.240 from 0 to 5 due to 25 out of 82 dropped probes since last increase.
+Nmap scan report for 10.10.41.240
+Host is up, received user-set (0.21s latency).
+Scanned at 2020-07-29 19:54:22 IST for 42s
+Not shown: 997 closed ports
+Reason: 997 conn-refused
+PORT    STATE SERVICE     REASON  VERSION
+80/tcp  open  http        syn-ack Apache httpd 2.4.29
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=You want in? Gotta guess the password!
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: 401 Unauthorized
+139/tcp open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: YEAROFTHEFOX)
+445/tcp open  netbios-ssn syn-ack Samba smbd 4.7.6-Ubuntu (workgroup: YEAROFTHEFOX)
+Service Info: Hosts: year-of-the-fox.lan, YEAR-OF-THE-FOX
+
+Host script results:
+|_clock-skew: mean: -20m00s, deviation: 34m37s, median: -1s
+| nbstat: NetBIOS name: YEAR-OF-THE-FOX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   YEAR-OF-THE-FOX<00>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<03>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<20>  Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   YEAROFTHEFOX<00>     Flags: <group><active>
+|   YEAROFTHEFOX<1d>     Flags: <unique><active>
+|   YEAROFTHEFOX<1e>     Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 57972/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 24267/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 63864/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 42720/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: year-of-the-fox
+|   NetBIOS computer name: YEAR-OF-THE-FOX\x00
+|   Domain name: lan
+|   FQDN: year-of-the-fox.lan
+|_  System time: 2020-07-29T15:24:57+01:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-07-29T14:24:57
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul 29 19:55:04 2020 -- 1 IP address (1 host up) scanned in 56.96 seconds

@@ -115,7 +115,7 @@
 | 4. | `25/tcp` |  | [`enumerate_proto_smtp`](https://github.com/7h3rAm/writeups#enumerate_proto_smtp) |  |
 | 5. | `53/tcp` |  | [`enumerate_proto_dns`](https://github.com/7h3rAm/writeups#enumerate_proto_dns) |  |
 | 6. | `79/tcp` |  | [`enumerate_proto_finger`](https://github.com/7h3rAm/writeups#enumerate_proto_finger) |  |
-| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.41 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_joomla`](https://github.com/7h3rAm/writeups#enumerate_app_joomla), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
+| 7. | `80/tcp` | `http/2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd`<br /><br />`http/Apache httpd 2.0.52 ((CentOS))`<br /><br />`http/Apache httpd 2.2.15 ((CentOS) DAV/2 PHP/5.3.3)`<br /><br />`http/Apache httpd 2.2.21 ((FreeBSD) mod_ssl/2.2.21 OpenSSL/0.9.8q DAV/2 PHP/5.3.8)`<br /><br />`http/Apache httpd 2.2.22 ((Ubuntu))`<br /><br />`http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)`<br /><br />`http/Apache httpd 2.4.18 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.25 ((Debian))`<br /><br />`http/Apache httpd 2.4.29`<br /><br />`http/Apache httpd 2.4.29 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.34 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.41 ((Ubuntu))`<br /><br />`http/Apache httpd 2.4.7 ((Ubuntu))`<br /><br />`http/HttpFileServer httpd 2.3`<br /><br />`http/Microsoft IIS httpd 6.0`<br /><br />`http/Microsoft IIS httpd 7.5` | [`enumerate_app_apache`](https://github.com/7h3rAm/writeups#enumerate_app_apache), [`enumerate_app_apache_tomcat`](https://github.com/7h3rAm/writeups#enumerate_app_apache_tomcat), [`enumerate_app_coldfusion_files`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_files), [`enumerate_app_coldfusion_version`](https://github.com/7h3rAm/writeups#enumerate_app_coldfusion_version), [`enumerate_app_drupal`](https://github.com/7h3rAm/writeups#enumerate_app_drupal), [`enumerate_app_joomla`](https://github.com/7h3rAm/writeups#enumerate_app_joomla), [`enumerate_app_phpmyadmin`](https://github.com/7h3rAm/writeups#enumerate_app_phpmyadmin), [`enumerate_app_prtg`](https://github.com/7h3rAm/writeups#enumerate_app_prtg), [`enumerate_app_webmin`](https://github.com/7h3rAm/writeups#enumerate_app_webmin), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_proto_webdav`](https://github.com/7h3rAm/writeups#enumerate_proto_webdav) | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_cmdexec`](https://github.com/7h3rAm/writeups#exploit_cmdexec), [`exploit_command_injection`](https://github.com/7h3rAm/writeups#exploit_command_injection), [`exploit_credsreuse`](https://github.com/7h3rAm/writeups#exploit_credsreuse), [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec), [`exploit_iis_asp_reverseshell`](https://github.com/7h3rAm/writeups#exploit_iis_asp_reverseshell), [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav), [`exploit_lotuscms`](https://github.com/7h3rAm/writeups#exploit_lotuscms), [`exploit_pchart`](https://github.com/7h3rAm/writeups#exploit_pchart), [`exploit_php_fileupload`](https://github.com/7h3rAm/writeups#exploit_php_fileupload), [`exploit_php_fileupload_bypass`](https://github.com/7h3rAm/writeups#exploit_php_fileupload_bypass), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock), [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`exploit_wordpress_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_wordpress_defaultcreds), [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_wordpress_template`](https://github.com/7h3rAm/writeups#exploit_wordpress_template), [`privesc_bash_reverseshell`](https://github.com/7h3rAm/writeups#privesc_bash_reverseshell), [`privesc_bof`](https://github.com/7h3rAm/writeups#privesc_bof), [`privesc_chkrootkit`](https://github.com/7h3rAm/writeups#privesc_chkrootkit), [`privesc_credsreuse`](https://github.com/7h3rAm/writeups#privesc_credsreuse), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs), [`privesc_env_relative_path`](https://github.com/7h3rAm/writeups#privesc_env_relative_path), [`privesc_kernel_ipappend`](https://github.com/7h3rAm/writeups#privesc_kernel_ipappend), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_mysql_root`](https://github.com/7h3rAm/writeups#privesc_mysql_root), [`privesc_mysql_udf`](https://github.com/7h3rAm/writeups#privesc_mysql_udf), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap), [`privesc_setuid`](https://github.com/7h3rAm/writeups#privesc_setuid), [`privesc_shell_escape`](https://github.com/7h3rAm/writeups#privesc_shell_escape), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers), [`privesc_windows_ms11_046`](https://github.com/7h3rAm/writeups#privesc_windows_ms11_046), [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070), [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051), [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098) |
 | 8. | `111/tcp` |  | [`enumerate_proto_nfs`](https://github.com/7h3rAm/writeups#enumerate_proto_nfs), [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 9. | `135/tcp` |  | [`enumerate_proto_rpc`](https://github.com/7h3rAm/writeups#enumerate_proto_rpc) |  |
 | 10. | `139/tcp` | `netbios-ssn/Microsoft Windows netbios-ssn`<br /><br />`netbios-ssn/Samba smbd 3.X - 4.X (workgroup: WORKGROUP)` | [`enumerate_app_powershell_history`](https://github.com/7h3rAm/writeups#enumerate_app_powershell_history), [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb), [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access), [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010) | [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067), [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010), [`exploit_smb_nullsession`](https://github.com/7h3rAm/writeups#exploit_smb_nullsession), [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap), [`exploit_smb_web_root`](https://github.com/7h3rAm/writeups#exploit_smb_web_root) |
@@ -594,8 +594,9 @@ whatweb <targetip>:<targetport> --color=never --log-brief="[OUTPUT].txt" ## iden
 | # | Name | Infra | Killchain | TTPs |
 |---|------|-------|-----------|------|
 | 1. | [InfoSec Prep: OSCP](https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/writeup.pdf) | [vh#508](https://www.vulnhub.com/entry/infosec-prep-oscp,508/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.infosecpreposcp/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_ssh_privatekeys`](https://github.com/7h3rAm/writeups#exploit_ssh_privatekeys), [`privesc_lxc_bash`](https://github.com/7h3rAm/writeups#privesc_lxc_bash) |
-| 2. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [htb#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
-| 3. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vh#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
+| 2. | [Year of the Fox](https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf) | [tryhackme#yotf](https://tryhackme.com/room/yotf) | <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_command_injection`](https://github.com/7h3rAm/writeups#exploit_command_injection), [`privesc_env_relative_path`](https://github.com/7h3rAm/writeups#privesc_env_relative_path) |
+| 3. | [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf) | [htb#118](https://www.hackthebox.eu/home/machines/profile/118) | <img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_cron_rootjobs`](https://github.com/7h3rAm/writeups#privesc_cron_rootjobs) |
+| 4. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vh#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
   
 ---
@@ -1013,6 +1014,10 @@ certain webapps couldbe vulebrable to command injection via input text fields
 # submit escaped input: "\";whoami\n"
 
 ```
+  
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Year of the Fox](https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf) | [tryhackme#yotf](https://tryhackme.com/room/yotf) | <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_command_injection`](https://github.com/7h3rAm/writeups#exploit_command_injection), [`privesc_env_relative_path`](https://github.com/7h3rAm/writeups#privesc_env_relative_path) |
   
 [+] https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/  
   
@@ -1860,6 +1865,10 @@ gcc -pthread -o dc dc.c -lcrypt
 <a name="privesc_env_relative_path"></a>
 #### privesc_env_relative_path [⇡](#privesc)  
 certain files when referenced without their complete path, can be misused to gain elevated privileges. this can be done by modifying the environment path to find the referenced file within a directory under attacker's control and placing a malicious binary within that directory with the same name as the referenced file  
+  
+| # | Name | Infra | Killchain | TTPs |
+|---|------|-------|-----------|------|
+| 1. | [Year of the Fox](https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf) | [tryhackme#yotf](https://tryhackme.com/room/yotf) | <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png" width="100" height="100" /> | [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`exploit_command_injection`](https://github.com/7h3rAm/writeups#exploit_command_injection), [`privesc_env_relative_path`](https://github.com/7h3rAm/writeups#privesc_env_relative_path) |
   
 [+] https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/  
   
@@ -2877,51 +2886,53 @@ bruteforce password:
 | 21. | `administrator` | `MEGACORP_4dm....` | `ssh` |
 | 22. | `notch` | `8YsqfCTnvxAUeduzjN.....` | `ssh` |
 | 23. | `pi` | `raspber..` | `ssh` |
-| 24. | `eric` | `triscui..` | `ssh` |
-| 25. | `anne` | `prince..` | `ssh` |
-| 26. | `graham` | `GSo7isUM...` | `ssh` |
-| 27. | `root` | `1234.` | `ssh` |
-| 28. | `admin` | `thisisalsopw...` | `ssh` |
-| 29. | `fristigod` | `LetThereBeFri....` | `ssh` |
-| 30. | `dreg` | `Mast..` | `ssh` |
-| 31. | `loneferret` | `starwa..` | `ssh` |
-| 32. | `john` | `MyNameIsJ...` | `ssh` |
-| 33. | `robert` | `ADGAdsafdfwt4gadf....` | `ssh` |
-| 34. | `togie` | `1234.` | `ssh` |
-| 35. | `bob` | `secr..` | `ssh` |
-| 36. | `susan` | `MySuperS3cretVa....` | `ssh` |
-| 37. | `insecurity` | `P@ssw0..` | `ssh` |
-| 38. | `smeagol` | `MyPreciousR...` | `ssh` |
-| 39. | `Ori` | `span..` | `ssh` |
-| 40. | `robot` | `abcdefghijklmnopqrstu.....` | `ssh` |
-| 41. | `mark` | `5AYRft73VtFp....` | `ssh` |
-| 42. | `wpadmin` | `wpadm..` | `ssh` |
-| 43. | `root` | `rootpasswo...` | `ssh` |
-| 44. | `user` | `letme..` | `ssh` |
-| 45. | `tomcat` | `submitthisforpo....` | `tomcat` |
-| 46. |  | `execrab..` | `truecrypt` |
-| 47. | `user1` | `hell.` | `webapp` |
-| 48. | `user2` | `comman..` | `webapp` |
-| 49. | `user3` | `p@ssw0..` | `webapp` |
-| 50. | `test` | `testte..` | `webapp` |
-| 51. | `superadmin` | `Uncracka...` | `webapp` |
-| 52. | `test1` | `testte..` | `webapp` |
-| 53. | `admin` | `5afac8d8..` | `webapp` |
-| 54. | `john` | `66lajGGb..` | `webapp` |
-| 55. | `frodo` | `iwilltakethe....` | `webapp` |
-| 56. | `smeagol` | `MyPreciousR...` | `webapp` |
-| 57. | `aragorn` | `AndMySwo..` | `webapp` |
-| 58. | `legolas` | `AndMyB..` | `webapp` |
-| 59. | `gimli` | `AndMyA..` | `webapp` |
-| 60. | `myP14ceAdm1nAcc0uNT` | `manchest..` | `webapp` |
-| 61. | `tom` | `spongeb..` | `webapp` |
-| 62. | `mark` | `snowfla..` | `webapp` |
-| 63. | `john` | `enig..` | `wordpress` |
-| 64. | `mark` | `helpdesk..` | `wordpress` |
-| 65. |  | `admin:$P$Bx9ohXoCVR5lkKtuQbuWuh2........` | `wordpress` |
-| 66. | `admin` | `TogieMYSQL123....` | `wordpress` |
-| 67. | `elliot` | `ER28-06..` | `wordpress` |
-| 68. | `admin` | `admi.` | `wordpress` |
+| 24. | `fox` | `12345..` | `ssh` |
+| 25. | `eric` | `triscui..` | `ssh` |
+| 26. | `anne` | `prince..` | `ssh` |
+| 27. | `graham` | `GSo7isUM...` | `ssh` |
+| 28. | `root` | `1234.` | `ssh` |
+| 29. | `admin` | `thisisalsopw...` | `ssh` |
+| 30. | `fristigod` | `LetThereBeFri....` | `ssh` |
+| 31. | `dreg` | `Mast..` | `ssh` |
+| 32. | `loneferret` | `starwa..` | `ssh` |
+| 33. | `john` | `MyNameIsJ...` | `ssh` |
+| 34. | `robert` | `ADGAdsafdfwt4gadf....` | `ssh` |
+| 35. | `togie` | `1234.` | `ssh` |
+| 36. | `bob` | `secr..` | `ssh` |
+| 37. | `susan` | `MySuperS3cretVa....` | `ssh` |
+| 38. | `insecurity` | `P@ssw0..` | `ssh` |
+| 39. | `smeagol` | `MyPreciousR...` | `ssh` |
+| 40. | `Ori` | `span..` | `ssh` |
+| 41. | `robot` | `abcdefghijklmnopqrstu.....` | `ssh` |
+| 42. | `mark` | `5AYRft73VtFp....` | `ssh` |
+| 43. | `wpadmin` | `wpadm..` | `ssh` |
+| 44. | `root` | `rootpasswo...` | `ssh` |
+| 45. | `user` | `letme..` | `ssh` |
+| 46. | `tomcat` | `submitthisforpo....` | `tomcat` |
+| 47. |  | `execrab..` | `truecrypt` |
+| 48. | `rascal` | `lov.` | `webapp` |
+| 49. | `user1` | `hell.` | `webapp` |
+| 50. | `user2` | `comman..` | `webapp` |
+| 51. | `user3` | `p@ssw0..` | `webapp` |
+| 52. | `test` | `testte..` | `webapp` |
+| 53. | `superadmin` | `Uncracka...` | `webapp` |
+| 54. | `test1` | `testte..` | `webapp` |
+| 55. | `admin` | `5afac8d8..` | `webapp` |
+| 56. | `john` | `66lajGGb..` | `webapp` |
+| 57. | `frodo` | `iwilltakethe....` | `webapp` |
+| 58. | `smeagol` | `MyPreciousR...` | `webapp` |
+| 59. | `aragorn` | `AndMySwo..` | `webapp` |
+| 60. | `legolas` | `AndMyB..` | `webapp` |
+| 61. | `gimli` | `AndMyA..` | `webapp` |
+| 62. | `myP14ceAdm1nAcc0uNT` | `manchest..` | `webapp` |
+| 63. | `tom` | `spongeb..` | `webapp` |
+| 64. | `mark` | `snowfla..` | `webapp` |
+| 65. | `john` | `enig..` | `wordpress` |
+| 66. | `mark` | `helpdesk..` | `wordpress` |
+| 67. |  | `admin:$P$Bx9ohXoCVR5lkKtuQbuWuh2........` | `wordpress` |
+| 68. | `admin` | `TogieMYSQL123....` | `wordpress` |
+| 69. | `elliot` | `ER28-06..` | `wordpress` |
+| 70. | `admin` | `admi.` | `wordpress` |
 
 <a name="hashes"></a>
 ### 🔑 Hashes [🡑](#loot)

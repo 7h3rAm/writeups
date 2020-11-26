@@ -1,0 +1,70 @@
+# Nmap 7.80 scan initiated Wed Jul 29 19:55:05 2020 as: nmap -vv --reason -Pn -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/tcp_139_smb_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/thm.yotf/10.10.41.240/scans/xml/tcp_139_smb_nmap.xml 10.10.41.240
+Nmap scan report for 10.10.41.240
+Host is up, received user-set (0.22s latency).
+Scanned at 2020-07-29 19:55:20 IST for 318s
+
+PORT    STATE SERVICE     REASON  VERSION
+139/tcp open  netbios-ssn syn-ack Samba smbd 4.7.6-Ubuntu (workgroup: YEAROFTHEFOX)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: Host: YEAR-OF-THE-FOX
+
+Host script results:
+| nbstat: NetBIOS name: YEAR-OF-THE-FOX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   YEAR-OF-THE-FOX<00>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<03>  Flags: <unique><active>
+|   YEAR-OF-THE-FOX<20>  Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   YEAROFTHEFOX<00>     Flags: <group><active>
+|   YEAROFTHEFOX<1d>     Flags: <unique><active>
+|   YEAROFTHEFOX<1e>     Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_smb-enum-groups: ERROR: Script execution failed (use -d to debug)
+| smb-enum-shares: 
+|   note: ERROR: Enumerating shares failed, guessing at common ones (SMB: Couldn't find a NetBIOS name that works for the server. Sorry!)
+|   account_used: guest
+|   \\10.10.41.240\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (year-of-the-fox server (Samba, Ubuntu))
+|     Users: 3
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|_    Current user access: READ/WRITE
+|_smb-enum-users: ERROR: Script execution failed (use -d to debug)
+| smb-mbenum: 
+|   DFS Root
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Master Browser
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Print server
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Server
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Server service
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Unix server
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Windows NT/2000/XP/2003 server
+|     YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+|   Workstation
+|_    YEAR-OF-THE-FOX  0.0  year-of-the-fox server (Samba, Ubuntu)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   NetBIOS computer name: YEAR-OF-THE-FOX\x00
+|   Workgroup: YEAROFTHEFOX\x00
+|_  System time: 2020-07-29T15:25:38+01:00
+|_smb-print-text: false
+|_smb-protocols: ERROR: Script execution failed (use -d to debug)
+|_smb-vuln-ms10-061: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
+|_smb2-security-mode: SMB: Couldn't find a NetBIOS name that works for the server. Sorry!
+| smb2-time: 
+|   date: 2020-07-29T14:25:38
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul 29 20:00:38 2020 -- 1 IP address (1 host up) scanned in 333.20 seconds

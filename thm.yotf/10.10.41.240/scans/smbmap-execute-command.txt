@@ -1,0 +1,6 @@
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.10.41.240
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.10.41.240
+[!] Authentication error on 10.10.41.240
+[!] Authentication error on 10.10.41.240

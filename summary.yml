@@ -85,6 +85,12 @@ summary:
     - credtype: ssh
       password: raspberry
       username: pi
+    - credtype: ssh
+      password: '1234567'
+      username: fox
+    - credtype: webapp
+      password: love
+      username: rascal
     - credtype: ftp
       password: babygirl_veronica07@yahoo.com
       username: veronica
@@ -409,8 +415,9 @@ summary:
   plot:
     categories:
       htb: 13
-      linux: 30
+      linux: 31
       oscp: 35
+      thm: 1
       vulnhub: 24
       windows: 7
     ports:
@@ -425,13 +432,13 @@ summary:
       3000/tcp: 1
       443/tcp: 1
       445/tcp: 1
-      80/tcp: 23
+      80/tcp: 24
       8080/tcp: 2
       9999/tcp: 1
     protocols:
       abyss?: 1
       ftp: 2
-      http: 28
+      http: 29
       microsoft-ds: 1
       ms-sql-s: 1
       netbios-ssn: 4
@@ -450,6 +457,7 @@ summary:
       Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch): 2
       Apache httpd 2.4.18 ((Ubuntu)): 4
       Apache httpd 2.4.25 ((Debian)): 1
+      Apache httpd 2.4.29: 1
       Apache httpd 2.4.29 ((Ubuntu)): 2
       Apache httpd 2.4.34 ((Ubuntu)): 1
       Apache httpd 2.4.41 ((Ubuntu)): 1
@@ -474,7 +482,7 @@ summary:
       enumerate_app_powershell_history: 1
       enumerate_app_wordpress: 5
       enumerate_proto_ftp: 1
-      enumerate_proto_http: 3
+      enumerate_proto_http: 4
       enumerate_proto_smb: 1
       enumerate_proto_smb_anonymous_access: 1
       enumerate_proto_sql: 1
@@ -483,6 +491,7 @@ summary:
       exploit_bash_reverseshell: 1
       exploit_bof: 1
       exploit_cmdexec: 1
+      exploit_command_injection: 1
       exploit_credsreuse: 5
       exploit_defaultcreds: 1
       exploit_ftp_anonymous: 1
@@ -527,6 +536,7 @@ summary:
       privesc_cron: 4
       privesc_cron_rootjobs: 1
       privesc_docker_group: 1
+      privesc_env_relative_path: 1
       privesc_freebsd: 1
       privesc_kernel_ipappend: 1
       privesc_kernel_overlayfs: 1
@@ -1550,6 +1560,49 @@ summary:
     - privesc_sudoers
     url: https://www.hackthebox.eu/home/machines/profile/108
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
+  - datetime: 20200730
+    infra: THM
+    machine:
+      description: Don't underestimate the sly old fox...
+      difficulty: hard
+      difficulty_ratings: null
+      id: tryhackme#yotf
+      infrastructure: tryhackme
+      killchainurl: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png
+      maker:
+        id: null
+        name: MuirlandOracle
+        url: null
+      matrixurl: null
+      name: Year of the Fox
+      os: null
+      oscplike: false
+      owned_root: false
+      owned_user: false
+      points: 40
+      private: false
+      ratingsurl: null
+      release: '2020-06-18T14:25:08.754Z'
+      series:
+        id: null
+        name: null
+        url: null
+      shortname: yotf
+      url: https://tryhackme.com/room/yotf
+      verbose_id: tryhackme#yotf
+      writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.md
+      writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
+    name: Year of the Fox
+    overview: <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png"
+      width="100" height="100" />
+    points: null
+    status: public
+    tags:
+    - enumerate_proto_http
+    - exploit_command_injection
+    - privesc_env_relative_path
+    url: https://tryhackme.com/room/yotf
+    writeup: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
   - datetime: 20190905
     infra: VulnHub
     machine:
@@ -3717,6 +3770,20 @@ summary:
           url: https://www.hackthebox.eu/home/machines/profile/118
           verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
+        - datetime: 20200730
+          infra: THM
+          name: Year of the Fox
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png"
+            width="100" height="100" />
+          points: null
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_command_injection
+          - privesc_env_relative_path
+          url: https://tryhackme.com/room/yotf
+          verbose_id: tryhackme#yotf
+          writeup: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
         - datetime: 20190909
           infra: VulnHub
           name: 'BSides Vancouver: 2018 (Workshop)'
@@ -4242,6 +4309,21 @@ summary:
           text fields
         references:
         - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
+        writeups:
+        - datetime: 20200730
+          infra: THM
+          name: Year of the Fox
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png"
+            width="100" height="100" />
+          points: null
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_command_injection
+          - privesc_env_relative_path
+          url: https://tryhackme.com/room/yotf
+          verbose_id: tryhackme#yotf
+          writeup: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
       exploit_credsreuse:
         cli: ''
         description: Reuse credentials already found for a service to interact with
@@ -5821,6 +5903,21 @@ summary:
           name as the referenced file
         references:
         - https://muirlandoracle.co.uk/2020/05/30/year-of-the-fox-write-up/
+        writeups:
+        - datetime: 20200730
+          infra: THM
+          name: Year of the Fox
+          overview: <img src="https://github.com/7h3rAm/writeups/blob/master/thm.yotf/killchain.png"
+            width="100" height="100" />
+          points: null
+          status: public
+          tags:
+          - enumerate_proto_http
+          - exploit_command_injection
+          - privesc_env_relative_path
+          url: https://tryhackme.com/room/yotf
+          verbose_id: tryhackme#yotf
+          writeup: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
       privesc_freebsd:
         cli: ''
         description: null
@@ -7665,6 +7762,7 @@ summary:
       - http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
       - http/Apache httpd 2.4.18 ((Ubuntu))
       - http/Apache httpd 2.4.25 ((Debian))
+      - http/Apache httpd 2.4.29
       - http/Apache httpd 2.4.29 ((Ubuntu))
       - http/Apache httpd 2.4.34 ((Ubuntu))
       - http/Apache httpd 2.4.41 ((Ubuntu))
@@ -7689,6 +7787,7 @@ summary:
       - enumerate_app_wordpress
       - enumerate_proto_http
       - exploit_cmdexec
+      - exploit_command_injection
       - exploit_credsreuse
       - exploit_hfs_cmd_exec
       - exploit_iis_asp_reverseshell
@@ -7713,6 +7812,7 @@ summary:
       - privesc_credsreuse
       - privesc_cron
       - privesc_cron_rootjobs
+      - privesc_env_relative_path
       - privesc_kernel_ipappend
       - privesc_lxc_bash
       - privesc_mysql_creds
@@ -7752,6 +7852,9 @@ summary:
       - name: Shocker
         url: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
         verbose_id: hackthebox#108
+      - name: Year of the Fox
+        url: https://github.com/7h3rAm/writeups/blob/master/thm.yotf/writeup.pdf
+        verbose_id: tryhackme#yotf
       - name: 'BSides Vancouver: 2018 (Workshop)'
         url: https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf
         verbose_id: vulnhub#231

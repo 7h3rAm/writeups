@@ -1,0 +1,510 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Wed Jul 29 19:55:05 2020
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 10.10.41.240
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==================================================== 
+|    Enumerating Workgroup/Domain on 10.10.41.240    |
+ ==================================================== 
+[+] Got domain/workgroup name: YEAROFTHEFOX
+
+ ============================================ 
+|    Nbtstat Information for 10.10.41.240    |
+ ============================================ 
+Looking up status of 10.10.41.240
+	YEAR-OF-THE-FOX <00> -         B <ACTIVE>  Workstation Service
+	YEAR-OF-THE-FOX <03> -         B <ACTIVE>  Messenger Service
+	YEAR-OF-THE-FOX <20> -         B <ACTIVE>  File Server Service
+	..__MSBROWSE__. <01> - <GROUP> B <ACTIVE>  Master Browser
+	YEAROFTHEFOX    <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	YEAROFTHEFOX    <1d> -         B <ACTIVE>  Master Browser
+	YEAROFTHEFOX    <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+	MAC Address = 00-00-00-00-00-00
+
+ ===================================== 
+|    Session Check on 10.10.41.240    |
+ ===================================== 
+[+] Server 10.10.41.240 allows sessions using username '', password ''
+
+ ===================================================== 
+|    Getting information via LDAP for 10.10.41.240    |
+ ===================================================== 
+[E] Connection error
+
+ =========================================== 
+|    Getting domain SID for 10.10.41.240    |
+ =========================================== 
+Domain Name: YEAROFTHEFOX
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ====================================== 
+|    OS information on 10.10.41.240    |
+ ====================================== 
+Use of uninitialized value $os_info in concatenation (.) or string at ./enum4linux.pl line 464.
+[+] Got OS info for 10.10.41.240 from smbclient: 
+[+] Got OS info for 10.10.41.240 from srvinfo:
+	YEAR-OF-THE-FOXWk Sv PrQ Unx NT SNT year-of-the-fox server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	6.1
+	server type     :	0x809a03
+
+ ============================= 
+|    Users on 10.10.41.240    |
+ ============================= 
+index: 0x1 RID: 0x3e8 acb: 0x00000010 Account: fox	Name: fox	Desc: 
+
+user:[fox] rid:[0x3e8]
+	User Name   :	fox
+	Full Name   :	fox
+	Home Drive  :	\\year-of-the-fox\fox
+	Dir Drive   :	
+	Profile Path:	\\year-of-the-fox\fox\profile
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 05:30:00 IST
+	Logoff Time              :	Wed, 06 Feb 2036 20:36:39 IST
+	Kickoff Time             :	Wed, 06 Feb 2036 20:36:39 IST
+	Password last set Time   :	Wed, 29 Jul 2020 19:53:50 IST
+	Password can change Time :	Wed, 29 Jul 2020 19:53:50 IST
+	Password must change Time:	Thu, 14 Sep 30828 08:18:05 IST
+	unknown_2[0..31]...
+	user_rid :	0x3e8
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+
+ =========================================== 
+|    Machine Enumeration on 10.10.41.240    |
+ =========================================== 
+[E] Internal error.  Not implmented in this version of enum4linux.
+
+ ========================================= 
+|    Share Enumeration on 10.10.41.240    |
+ ========================================= 
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	yotf            Disk      Fox's Stuff -- keep out!
+	IPC$            IPC       IPC Service (year-of-the-fox server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available
+
+[+] Attempting to map shares on 10.10.41.240
+//10.10.41.240/yotf	Mapping: DENIED, Listing: N/A
+//10.10.41.240/IPC$	[E] Can't understand response:
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+
+ ==================================================== 
+|    Password Policy Information for 10.10.41.240    |
+ ==================================================== 
+[E] Unexpected error from polenum:
+
+
+[+] Attaching to 10.10.41.240 using a NULL share
+
+[+] Trying protocol 139/SMB...
+
+	[!] Protocol failed: Missing required parameter 'digestmod'.
+
+[+] Trying protocol 445/SMB...
+
+	[!] Protocol failed: Missing required parameter 'digestmod'.
+
+
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ ============================== 
+|    Groups on 10.10.41.240    |
+ ============================== 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ======================================================================= 
+|    Users on 10.10.41.240 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ======================================================================= 
+[I] Found new SID: S-1-22-1
+[I] Found new SID: S-1-5-21-978893743-2663913856-222388731
+[I] Found new SID: S-1-5-32
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-500 *unknown*\*unknown* (8)
+S-1-5-32-501 *unknown*\*unknown* (8)
+S-1-5-32-502 *unknown*\*unknown* (8)
+S-1-5-32-503 *unknown*\*unknown* (8)
+S-1-5-32-504 *unknown*\*unknown* (8)
+S-1-5-32-505 *unknown*\*unknown* (8)
+S-1-5-32-506 *unknown*\*unknown* (8)
+S-1-5-32-507 *unknown*\*unknown* (8)
+S-1-5-32-508 *unknown*\*unknown* (8)
+S-1-5-32-509 *unknown*\*unknown* (8)
+S-1-5-32-510 *unknown*\*unknown* (8)
+S-1-5-32-511 *unknown*\*unknown* (8)
+S-1-5-32-512 *unknown*\*unknown* (8)
+S-1-5-32-513 *unknown*\*unknown* (8)
+S-1-5-32-514 *unknown*\*unknown* (8)
+S-1-5-32-515 *unknown*\*unknown* (8)
+S-1-5-32-516 *unknown*\*unknown* (8)
+S-1-5-32-517 *unknown*\*unknown* (8)
+S-1-5-32-518 *unknown*\*unknown* (8)
+S-1-5-32-519 *unknown*\*unknown* (8)
+S-1-5-32-520 *unknown*\*unknown* (8)
+S-1-5-32-521 *unknown*\*unknown* (8)
+S-1-5-32-522 *unknown*\*unknown* (8)
+S-1-5-32-523 *unknown*\*unknown* (8)
+S-1-5-32-524 *unknown*\*unknown* (8)
+S-1-5-32-525 *unknown*\*unknown* (8)
+S-1-5-32-526 *unknown*\*unknown* (8)
+S-1-5-32-527 *unknown*\*unknown* (8)
+S-1-5-32-528 *unknown*\*unknown* (8)
+S-1-5-32-529 *unknown*\*unknown* (8)
+S-1-5-32-530 *unknown*\*unknown* (8)
+S-1-5-32-531 *unknown*\*unknown* (8)
+S-1-5-32-532 *unknown*\*unknown* (8)
+S-1-5-32-533 *unknown*\*unknown* (8)
+S-1-5-32-534 *unknown*\*unknown* (8)
+S-1-5-32-535 *unknown*\*unknown* (8)
+S-1-5-32-536 *unknown*\*unknown* (8)
+S-1-5-32-537 *unknown*\*unknown* (8)
+S-1-5-32-538 *unknown*\*unknown* (8)
+S-1-5-32-539 *unknown*\*unknown* (8)
+S-1-5-32-540 *unknown*\*unknown* (8)
+S-1-5-32-541 *unknown*\*unknown* (8)
+S-1-5-32-542 *unknown*\*unknown* (8)
+S-1-5-32-543 *unknown*\*unknown* (8)
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+[E] No info found
+
+S-1-5-32-545 BUILTIN\Users (Local Group)
+[E] No info found
+
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+[E] No info found
+
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+[E] No info found
+
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+[E] No info found
+
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+[E] No info found
+
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+[E] No info found
+
+S-1-5-32-1000 *unknown*\*unknown* (8)
+S-1-5-32-1001 *unknown*\*unknown* (8)
+S-1-5-32-1002 *unknown*\*unknown* (8)
+S-1-5-32-1003 *unknown*\*unknown* (8)
+S-1-5-32-1004 *unknown*\*unknown* (8)
+S-1-5-32-1005 *unknown*\*unknown* (8)
+S-1-5-32-1006 *unknown*\*unknown* (8)
+S-1-5-32-1007 *unknown*\*unknown* (8)
+S-1-5-32-1008 *unknown*\*unknown* (8)
+S-1-5-32-1009 *unknown*\*unknown* (8)
+S-1-5-32-1010 *unknown*\*unknown* (8)
+S-1-5-32-1011 *unknown*\*unknown* (8)
+S-1-5-32-1012 *unknown*\*unknown* (8)
+S-1-5-32-1013 *unknown*\*unknown* (8)
+S-1-5-32-1014 *unknown*\*unknown* (8)
+S-1-5-32-1015 *unknown*\*unknown* (8)
+S-1-5-32-1016 *unknown*\*unknown* (8)
+S-1-5-32-1017 *unknown*\*unknown* (8)
+S-1-5-32-1018 *unknown*\*unknown* (8)
+S-1-5-32-1019 *unknown*\*unknown* (8)
+S-1-5-32-1020 *unknown*\*unknown* (8)
+S-1-5-32-1021 *unknown*\*unknown* (8)
+S-1-5-32-1022 *unknown*\*unknown* (8)
+S-1-5-32-1023 *unknown*\*unknown* (8)
+S-1-5-32-1024 *unknown*\*unknown* (8)
+S-1-5-32-1025 *unknown*\*unknown* (8)
+S-1-5-32-1026 *unknown*\*unknown* (8)
+S-1-5-32-1027 *unknown*\*unknown* (8)
+S-1-5-32-1028 *unknown*\*unknown* (8)
+S-1-5-32-1029 *unknown*\*unknown* (8)
+S-1-5-32-1030 *unknown*\*unknown* (8)
+S-1-5-32-1031 *unknown*\*unknown* (8)
+S-1-5-32-1032 *unknown*\*unknown* (8)
+S-1-5-32-1033 *unknown*\*unknown* (8)
+S-1-5-32-1034 *unknown*\*unknown* (8)
+S-1-5-32-1035 *unknown*\*unknown* (8)
+S-1-5-32-1036 *unknown*\*unknown* (8)
+S-1-5-32-1037 *unknown*\*unknown* (8)
+S-1-5-32-1038 *unknown*\*unknown* (8)
+S-1-5-32-1039 *unknown*\*unknown* (8)
+S-1-5-32-1040 *unknown*\*unknown* (8)
+S-1-5-32-1041 *unknown*\*unknown* (8)
+S-1-5-32-1042 *unknown*\*unknown* (8)
+S-1-5-32-1043 *unknown*\*unknown* (8)
+S-1-5-32-1044 *unknown*\*unknown* (8)
+S-1-5-32-1045 *unknown*\*unknown* (8)
+S-1-5-32-1046 *unknown*\*unknown* (8)
+S-1-5-32-1047 *unknown*\*unknown* (8)
+S-1-5-32-1048 *unknown*\*unknown* (8)
+S-1-5-32-1049 *unknown*\*unknown* (8)
+S-1-5-32-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-5-21-978893743-2663913856-222388731 and logon username '', password ''
+S-1-5-21-978893743-2663913856-222388731-500 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-501 YEAR-OF-THE-FOX\nobody (Local User)
+	User Name   :	nobody
+	Full Name   :	nobody
+	Home Drive  :	
+	Dir Drive   :	(null)
+	Profile Path:	
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 05:30:00 IST
+	Logoff Time              :	Thu, 14 Sep 30828 08:18:05 IST
+	Kickoff Time             :	Thu, 14 Sep 30828 08:18:05 IST
+	Password last set Time   :	Thu, 01 Jan 1970 05:30:00 IST
+	Password can change Time :	Thu, 01 Jan 1970 05:30:00 IST
+	Password must change Time:	Thu, 01 Jan 1970 05:30:00 IST
+	unknown_2[0..31]...
+	user_rid :	0x1f5
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+S-1-5-21-978893743-2663913856-222388731-502 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-503 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-504 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-505 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-506 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-507 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-508 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-509 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-510 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-511 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-512 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-513 YEAR-OF-THE-FOX\None (Domain Group)
+	Group Name:	None
+	Description:	Ordinary Users
+	Group Attribute:7
+	Num Members:0
+
+S-1-5-21-978893743-2663913856-222388731-514 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-515 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-516 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-517 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-518 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-519 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-520 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-521 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-522 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-523 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-524 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-525 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-526 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-527 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-528 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-529 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-530 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-531 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-532 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-533 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-534 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-535 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-536 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-537 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-538 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-539 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-540 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-541 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-542 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-543 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-544 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-545 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-546 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-547 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-548 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-549 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-550 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1000 YEAR-OF-THE-FOX\fox (Local User)
+	User Name   :	fox
+	Full Name   :	fox
+	Home Drive  :	\\year-of-the-fox\fox
+	Dir Drive   :	
+	Profile Path:	\\year-of-the-fox\fox\profile
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 05:30:00 IST
+	Logoff Time              :	Wed, 06 Feb 2036 20:36:39 IST
+	Kickoff Time             :	Wed, 06 Feb 2036 20:36:39 IST
+	Password last set Time   :	Wed, 29 Jul 2020 19:53:50 IST
+	Password can change Time :	Wed, 29 Jul 2020 19:53:50 IST
+	Password must change Time:	Thu, 14 Sep 30828 08:18:05 IST
+	unknown_2[0..31]...
+	user_rid :	0x3e8
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+S-1-5-21-978893743-2663913856-222388731-1001 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1002 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1003 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1004 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1005 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1006 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1007 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1008 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1009 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1010 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1011 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1012 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1013 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1014 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1015 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1016 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1017 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1018 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1019 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1020 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1021 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1022 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1023 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1024 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1025 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1026 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1027 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1028 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1029 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1030 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1031 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1032 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1033 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1034 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1035 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1036 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1037 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1038 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1039 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1040 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1041 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1042 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1043 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1044 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1045 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1046 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1047 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1048 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1049 *unknown*\*unknown* (8)
+S-1-5-21-978893743-2663913856-222388731-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''
+S-1-22-1-1000 Unix User\fox (Local User)
+	User Name   :	fox
+	Full Name   :	fox
+	Home Drive  :	\\year-of-the-fox\fox
+	Dir Drive   :	
+	Profile Path:	\\year-of-the-fox\fox\profile
+	Logon Script:	
+	Description :	
+	Workstations:	
+	Comment     :	
+	Remote Dial :
+	Logon Time               :	Thu, 01 Jan 1970 05:30:00 IST
+	Logoff Time              :	Wed, 06 Feb 2036 20:36:39 IST
+	Kickoff Time             :	Wed, 06 Feb 2036 20:36:39 IST
+	Password last set Time   :	Wed, 29 Jul 2020 19:53:50 IST
+	Password can change Time :	Wed, 29 Jul 2020 19:53:50 IST
+	Password must change Time:	Thu, 14 Sep 30828 08:18:05 IST
+	unknown_2[0..31]...
+	user_rid :	0x3e8
+	group_rid:	0x201
+	acb_info :	0x00000010
+	fields_present:	0x00ffffff
+	logon_divs:	168
+	bad_password_count:	0x00000000
+	logon_count:	0x00000000
+	padding1[0..7]...
+	logon_hrs[0..21]...
+	Account Disabled         : False
+	Password does not expire : False
+	Account locked out       : False
+	Password expired         : False
+	Interdomain trust account: False
+	Workstation trust account: False
+	Server trust account     : False
+	Trusted for delegation   : False
+
+S-1-22-1-1001 Unix User\rascal (Local User)
+Use of uninitialized value $user_info in pattern match (m//) at ./enum4linux.pl line 932.
+
+
+ ============================================= 
+|    Getting printer info for 10.10.41.240    |
+ ============================================= 
+No printers returned.
+
+
+enum4linux complete on Wed Jul 29 20:18:34 2020
+
