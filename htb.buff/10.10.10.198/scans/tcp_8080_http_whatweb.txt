@@ -1,0 +1,157 @@
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+/usr/lib/ruby/vendor_ruby/target.rb:188: warning: URI.escape is obsolete
+WhatWeb report for http://10.10.10.198:8080
+Status    : 200 OK
+Title     : mrb3n's Bro Hut
+IP        : 10.10.10.198
+Country   : RESERVED, ZZ
+
+Summary   : Shopify, Bootstrap, HTML5, Apache[2.4.43], PHP[7.4.6], PasswordField[password], Script[text/JavaScript,text/javascript], JQuery[1.11.0,1.9.1], Cookies[sec_session_id], HttpOnly[sec_session_id], X-Powered-By[PHP/7.4.6], HTTPServer[Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6], Vimeo, X-UA-Compatible[IE=edge], OpenSSL[1.1.1g], Frame
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.43 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : sec_session_id
+	String       : sec_session_id
+
+[ Frame ]
+	This plugin detects instances of frame and iframe HTML 
+	elements. 
+
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : sec_session_id
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Version      : 1.11.0
+	Version      : 1.9.1
+	Website     : http://jquery.com/
+
+[ OpenSSL ]
+	The OpenSSL Project is a collaborative effort to develop a 
+	robust, commercial-grade, full-featured, and Open Source 
+	toolkit implementing the Secure Sockets Layer (SSL v2/v3) 
+	and Transport Layer Security (TLS v1) protocols as well as 
+	a full-strength general purpose cryptography library. 
+
+	Version      : 1.1.1g
+	Website     : http://www.openssl.org/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 7.4.6
+	Version      : 7.4.6
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/JavaScript,text/javascript
+
+[ Shopify ]
+	Shopify CMS and ecommerce platform. 
+
+	Website     : http://shopify.com/
+
+[ Vimeo ]
+	Vimeo.com video player 
+
+	Website     : http://vimeo.com/
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/7.4.6 (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Wed, 22 Jul 2020 15:41:34 GMT
+	Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+	X-Powered-By: PHP/7.4.6
+	Set-Cookie: sec_session_id=n1u97vobadh1us49a2qm55n5te; path=/; HttpOnly
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Set-Cookie: sec_session_id=0k12far501gjqos55b4alc1ju3; path=/; HttpOnly
+	Content-Length: 4969
+	Connection: close
+	Content-Type: text/html; charset=UTF-8
+	

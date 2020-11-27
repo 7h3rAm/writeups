@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [exploit_ssh_privatekeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_privatekeys&unscoped_q=exploit_ssh_privatekeys), [privesc_lxc_bash](https://github.com/7h3rAm/writeups/search?q=privesc_lxc_bash&unscoped_q=privesc_lxc_bash)  
 
 ## Overview
-This is a writeup for VulnHub VM [InfoSec Prep: OSCP](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [InfoSec Prep: OSCP](https://www.vulnhub.com/entry/infosec-prep-oscp,508/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -68,23 +71,27 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find `80/tcp` to be open. Upon browsing the webpage we see that it looks to be a Wordpress blog with a post named "OSCP Voucher". This posts lists the process to submit the flag and also mentions that there's a user named `oscp` on this machine:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-3\. The `gobuster` scan result confirms that this is a Wordpress blog. We see an interesting entry `secret.txt` from `gobuster` scan results and also from the `robots.txt` file:  
+3\. We find `80/tcp` to be open. Upon browsing the webpage we see that it looks to be a Wordpress blog with a post named "OSCP Voucher". This posts lists the process to submit the flag and also mentions that there's a user named `oscp` on this machine:  
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot03.png)  
+4\. The `gobuster` scan result confirms that this is a Wordpress blog. We see an interesting entry `secret.txt` from `gobuster` scan results and also from the `robots.txt` file:  
 
-4\. This file has base64 encoded content that we decode to find a SSH private key file:  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
+
+![writeup.enumeration.steps.4.2](./screenshot03.png)  
+
+5\. This file has base64 encoded content that we decode to find a SSH private key file:  
 ``` {.python .numberLines}
 curl http://192.168.119.198/secret.txt | base64 -d -
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot04.png)  
+![writeup.enumeration.steps.5.1](./screenshot04.png)  
 
 
 ### Findings

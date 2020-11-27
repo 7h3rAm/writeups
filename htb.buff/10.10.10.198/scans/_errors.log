@@ -1,0 +1,1 @@
+[*] Service detection nmap-top-20-udp returned non-zero exit code: 1. Command: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_top_20_udp_nmap.txt" -oX "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_top_20_udp_nmap.xml" 10.10.10.198

@@ -1,0 +1,24 @@
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_top_20_udp_nmap.txt" -oX "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_top_20_udp_nmap.xml" 10.10.10.198
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_quick_tcp_nmap.txt" -oX "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_quick_tcp_nmap.xml" 10.10.10.198
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_full_tcp_nmap.txt" -oX "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_full_tcp_nmap.xml" 10.10.10.198
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.198:8080 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 8080 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_nmap.txt" -oX "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/tcp_8080_http_nmap.xml" 10.10.10.198
+
+curl -sSik http://10.10.10.198:8080/ -m 10 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_index.html"
+
+curl -sSik http://10.10.10.198:8080/robots.txt -m 10 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.198:8080/ /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.198:8080 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.198:8080 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.198:8080/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_gobuster.txt"; else gobuster dir -u http://10.10.10.198:8080/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.198:7680 2>&1 | tee "/home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_7680_sslscan.txt"; fi
+

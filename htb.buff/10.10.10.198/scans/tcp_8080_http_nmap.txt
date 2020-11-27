@@ -1,0 +1,709 @@
+# Nmap 7.80 scan initiated Wed Jul 22 21:06:17 2020 as: nmap -vv --reason -Pn -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/tcp_8080_http_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/tcp_8080_http_nmap.xml 10.10.10.198
+Nmap scan report for 10.10.10.198
+Host is up, received user-set (0.38s latency).
+Scanned at 2020-07-22 21:06:32 IST for 887s
+
+PORT     STATE SERVICE REASON  VERSION
+8080/tcp open  http    syn-ack Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+|_http-aspnet-debug: ERROR: Script execution failed (use -d to debug)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.198
+|   url                                      method
+|   http://10.10.10.198:8080/                FORM
+|   http://10.10.10.198:8080/about.php       FORM
+|   http://10.10.10.198:8080/facilities.php  FORM
+|   http://10.10.10.198:8080/packages.php    FORM
+|_  http://10.10.10.198:8080/contact.php     FORM
+|_http-chrono: Request times for /; avg: 8006.14ms; min: 6039.04ms; max: 10050.73ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.198
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 178
+|     Comment: 
+|         /* Encode output as utf-8 */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 414
+|     Comment: 
+|          //represent the hash as an array of 32-bit dwords
+|     
+|     Path: http://10.10.10.198:8080/boot/js/plugins/jquery.fitvids.js
+|     Line number: 1
+|     Comment: 
+|         /*global jQuery */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 169
+|     Comment: 
+|         /* Decode utf-16 surrogate pairs */
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery-ui-1.10.4.custom.min.css
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery UI - v1.10.4 - 2014-03-22
+|         * http://jqueryui.com
+|         * Includes: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css
+|         * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=%23ffffff&bgTextureHeader=fine_grain&bgImgOpacityHeader=15&borderColorHeader=%23fff&fcHeader=%23000&iconColorHeader=%23b83400&bgColorContent=%23fff&bgTextureContent=fine_grain&bgImgOpacityContent=10&borderColorContent=%23d9d6c4&fcContent=%231f1f1f&iconColorContent=%23222222&bgColorDefault=%23f8f7f6&bgTextureDefault=fine_grain&bgImgOpacityDefault=10&borderColorDefault=%23cbc7bd&fcDefault=%23654b24&iconColorDefault=%23b83400&bgColorHover=%23654b24&bgTextureHover=fine_grain&bgImgOpacityHover=65&borderColorHover=%23654b24&fcHover=%23ffffff&iconColorHover=%23ffffff&bgColorActive=%23eceadf&bgTextureActive=fine_grain&bgImgOpacityActive=15&borderColorActive=%23d9d6c4&fcActive=%23140f06&iconColorActive=%238c291d&bgColorHighlight=%23f7f3de&bgTextureHighlight=fine_grain&bgImgOpacityHighlight=15&borderColorHighlight=%23b2a266&fcHighlight=%233a3427&iconColorHighlight=%233572ac&bgColorError=%23b83400&bgTextureError=fine_grain&bgImgOpacityError=68&borderColorError=%23681818&fcError=%23ffffff&iconColorError=%23fbdb93&bgColorOverlay=%236e4f1c&bgTextureOverlay=diagonal_maze&bgImgOpacityOverlay=20&opacityOverlay=60&bgColorShadow=%23000000&bgTextureShadow=diagonal_maze&bgImgOpacityShadow=40&opacityShadow=60&thicknessShadow=5px&offsetTopShadow=0&offsetLeftShadow=-10px&cornerRadiusShadow=18px
+|         * Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 439
+|     Comment: 
+|         
+|         //Right-rotates a 64-bit number by shift
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 14
+|     Comment: 
+|         /* hex output format. 0 - lowercase; 1 - uppercase        */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 76
+|     Comment: 
+|         <!--/.navbar-collapse -->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 374
+|     Comment: 
+|          //Sigma1
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 183
+|     Comment: 
+|         /* IMAGE CAPTIONS */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 57
+|     Comment: 
+|          // At least one number, one lowercase and one uppercase letter 
+|     
+|     Path: http://10.10.10.198:8080/boot/js/slide.js
+|     Line number: 12
+|     Comment: 
+|         /* if dont like the effect and want simple fade effect add mode: fade, and delete mode: 'horizontal',
+|           useCSS: false,
+|           infiniteLoop: false,
+|           hideControlOnEnd: true,
+|           easing: 'easeOutElastic',
+|           speed: 2000*/
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 218
+|     Comment: 
+|         /*
+|          * Convert a raw string to an array of big-endian words
+|          * Characters >255 have their high-byte silently ignored.
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 68
+|     Comment: 
+|         /*
+|          * Convert a raw string to a hex string
+|          */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 29
+|     Comment: 
+|         
+|         
+|         
+|             <![endif]-->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 157
+|     Comment: 
+|         /*
+|          * Encode a string as utf-8.
+|          * For efficiency, this assumes the input is valid utf-16.
+|          */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 14
+|     Comment: 
+|         <!-- Bootstrap core CSS -->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/plugins/jquery.fitvids.js
+|     Line number: 2
+|     Comment: 
+|         /*jshint multistr:true browser:true */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 456
+|     Comment: 
+|         
+|         //Bitwise-shifts right a 64-bit number by shift
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 243
+|     Comment: 
+|         /*
+|          * Calculate the SHA-512 of an array of big-endian dwords, and a bit length
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 381
+|     Comment: 
+|          //Sigma0
+|     
+|     Path: http://10.10.10.198:8080/assets/js/ie8-responsive-file-warning.js
+|     Line number: 8
+|     Comment: 
+|         <!--/*-->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 124
+|     Comment: 
+|         /*
+|            * Repeatedly perform a long division. The binary array forms the dividend,
+|            * the length of the encoding is the divisor. Once computed, the quotient
+|            * forms the dividend for the next step. All remainders are stored for later
+|            * use.
+|            */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 66
+|     Comment: 
+|          // Check password and confirmation are the same
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 329
+|     Comment: 
+|          // append padding to the source string. The format is described in the FIPS.
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 11
+|     Comment: 
+|          // Make sure the plaintext password doesn't get sent. 
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 105
+|     Comment: 
+|         
+|             ================================================== -->
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 100
+|     Comment: 
+|         /* DIRECTION CONTROLS (NEXT / PREV) */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 26
+|     Comment: 
+|         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 93
+|     Comment: 
+|         <!-- Example row of columns -->
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 171
+|     Comment: 
+|         /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
+|     
+|     Path: http://10.10.10.198:8080/boot/css/bootstrap.min.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v3.1.1 (http://getbootstrap.com)
+|          * Copyright 2011-2014 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 14
+|     Comment: 
+|          // Finally submit the form. 
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 49
+|     Comment: 
+|         /*
+|          * Calculate the HMAC-SHA-512 of a key and some data (raw strings)
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * A JavaScript implementation of the Secure Hash Algorithm, SHA-512, as defined
+|          * in FIPS 180-2
+|          * Version 2.2 Copyright Anonymous Contributor, Paul Johnston 2000 - 2009.
+|          * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+|          * Distributed under the BSD License
+|          * See http://pajhome.org.uk/crypt/md5 for details.
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 352
+|     Comment: 
+|          //sigma1
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 232
+|     Comment: 
+|         /*
+|          * Convert an array of big-endian words to a string
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 58
+|     Comment: 
+|          // At least six characters 
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 10
+|     Comment: 
+|         /*
+|          * Configurable variables. You may need to tweak these to be compatible with
+|          * the server-side, but the defaults work in most cases.
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 50
+|     Comment: 
+|          // specific guidance to the user
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 49
+|     Comment: 
+|          // The check is duplicated below, but this is included to give more
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 48
+|     Comment: 
+|          // Check that the password is sufficiently long (min 6 chars)
+|     
+|     Path: http://10.10.10.198:8080/boot/js/jquery.bxslider.min.js
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * BxSlider v4.1.1 - Fully loaded, responsive content slider
+|          * http://bxslider.com
+|          *
+|          * Copyright 2013, Steven Wanderski - http://stevenwanderski.com - http://bxcreative.com
+|          * Written while drinking Belgian ales and listening to jazz
+|          *
+|          * Released under the MIT license - http://opensource.org/licenses/MIT
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 39
+|     Comment: 
+|          // Check the username
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 14
+|     Comment: 
+|         /** RESET AND LAYOUT
+|         ===================================*/
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 432
+|     Comment: 
+|         
+|         //Copies src into dst, assuming both are 64-bit numbers
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 15
+|     Comment: 
+|         /* base-64 pad character. "=" for strict RFC compliance   */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 27
+|     Comment: 
+|          // Check each field has a value
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 5
+|     Comment: 
+|          // Add the new element to our form. 
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 117
+|     Comment: 
+|         /* Convert to an array of 16-bit big-endian values, forming the dividend */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/forms.js
+|     Line number: 2
+|     Comment: 
+|          // Create a new element input, this will be our hashed password field. 
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 370
+|     Comment: 
+|          //Ch
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 358
+|     Comment: 
+|          //sigma0
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 31
+|     Comment: 
+|         /*
+|          * Perform a simple self-test to see if the VM is working
+|          */
+|     
+|     Path: http://10.10.10.198:8080/assets/js/ie8-responsive-file-warning.js
+|     Line number: 13
+|     Comment: 
+|         /*]]>*/
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 17
+|     Comment: 
+|         /*
+|          * These are the functions you'll usually want to call
+|          * They take string arguments and return either hex or base-64 encoded strings
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 429
+|     Comment: 
+|          //this.toString = int64toString;
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 102
+|     Comment: 
+|         <!-- /container -->
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 28
+|     Comment: 
+|         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 388
+|     Comment: 
+|          //Maj
+|     
+|     Path: http://10.10.10.198:8080/assets/js/ie8-responsive-file-warning.js
+|     Line number: 8
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         /*]]>*/-->
+|     
+|     Path: http://10.10.10.198:8080/boot/css/bootstrap.min.css
+|     Line number: 7
+|     Comment: 
+|         /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 441
+|     Comment: 
+|         
+|         //The function revrrot() is for that
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 487
+|     Comment: 
+|         
+|         //Same, except with 5 addends
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 25
+|     Comment: 
+|         <!-- Just for debugging purposes. Don't actually copy this line! -->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 109
+|     Comment: 
+|         /*
+|          * Convert a raw string to an arbitrary string encoding
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 64
+|     Comment: 
+|         /* PAGER */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 464
+|     Comment: 
+|         
+|         //Adds two 64-bit numbers
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 448
+|     Comment: 
+|         
+|         //Reverses the dwords of the source and then rotates right by shift.
+|     
+|     Path: http://10.10.10.198:8080/boot/js/plugins/jquery.fitvids.js
+|     Line number: 3
+|     Comment: 
+|         /*!
+|         * FitVids 1.0
+|         *
+|         * Copyright 2011, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
+|         * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+|         * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
+|         *
+|         * Date: Thu Sept 01 18:00:00 2011 -0500
+|         */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 86
+|     Comment: 
+|         /*
+|          * Convert a raw string to a base-64 string
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 316
+|     Comment: 
+|          //Temporary variables not specified by the document
+|     
+|     Path: http://10.10.10.198:8080/assets/js/ie8-responsive-file-warning.js
+|     Line number: 8
+|     Comment: 
+|         /*--><![CDATA[/*><!--*/
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 424
+|     Comment: 
+|         
+|         //A constructor for 64-bit numbers
+|     
+|     Path: http://10.10.10.198:8080/boot/css/main.css
+|     Line number: 1
+|     Comment: 
+|         /* Move down content because we have a fixed navbar that is 50px tall */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 149
+|     Comment: 
+|         /* Convert the remainders to the output string */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 107
+|     Comment: 
+|         <!-- Placed at the end of the document so the pages load faster -->
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * BxSlider v4.0 - Fully loaded, responsive content slider
+|          * http://bxslider.com
+|          *
+|          * Written by: Steven Wanderski, 2012
+|          * http://stevenwanderski.com
+|          * (while drinking Belgian ales and listening to jazz)
+|          *
+|          * CEO and founder of bxCreative, LTD
+|          * http://bxcreative.com
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 333
+|     Comment: 
+|          //32 dwords is the block size
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 135
+|     Comment: 
+|         /* AUTO CONTROLS (START / STOP) */
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 80
+|     Comment: 
+|         <!-- Main jumbotron for a primary marketing message or call to action -->
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Line number: 17
+|     Comment: 
+|         <!-- Custom styles for this template -->
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 32
+|     Comment: 
+|         /** THEME
+|         ===================================*/
+|     
+|     Path: http://10.10.10.198:8080/boot/css/jquery.bxslider.css
+|     Line number: 51
+|     Comment: 
+|         /* LOADER */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 295
+|     Comment: 
+|          //Initial hash values
+|     
+|     Path: http://10.10.10.198:8080/facilities.php
+|     Line number: 72
+|     Comment: 
+|         
+|         
+|         
+|         
+|                -->
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 41
+|     Comment: 
+|         /*
+|          * Calculate the SHA-512 of a raw string
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 476
+|     Comment: 
+|         
+|         //Same, except with 4 addends. Works faster than adding them one by one.
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 197
+|     Comment: 
+|         /*
+|          * Encode a string as utf-16
+|          */
+|     
+|     Path: http://10.10.10.198:8080/boot/js/sha512.js
+|     Line number: 251
+|     Comment: 
+|_         //SHA512 constants
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.198
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.198:8080/
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/about.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/facilities.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/packages.php
+|     Form id: 
+|     Form action: include/process_login.php
+|     
+|     Path: http://10.10.10.198:8080/contact.php
+|     Form id: 
+|_    Form action: include/process_login.php
+|_http-date: Wed, 22 Jul 2020 15:43:21 GMT; +5m01s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.php: Possible admin folder
+|_  /Admin/: Possible admin folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.10.198
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://10.10.10.198:8080/assets/ico/favicon.ico
+|   
+|   Error Code: 404
+|_  	http://10.10.10.198:8080/assets/js/ie8-responsive-file-warning.js
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://10.10.10.198:8080/assets/ico/favicon.ico: 
+|     (1) ip: 
+|_      + 10.10.10.198
+| http-headers: 
+|   Date: Wed, 22 Jul 2020 15:43:32 GMT
+|   Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+|   X-Powered-By: PHP/7.4.6
+|   Set-Cookie: sec_session_id=09maeiieul5o9lif4hqkqlp3nh; path=/; HttpOnly
+|   Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate
+|   Pragma: no-cache
+|   Set-Cookie: sec_session_id=fa9ta30g64gvcr5008l5k3pqrl; path=/; HttpOnly
+|   Content-Length: 4969
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+|_http-php-version: Logo query returned unknown hash a4d702751dd2c2ba14a477554fe0a1aa
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|   https://ajax.googleapis.com:443/ajax/libs/jquery/1.11.0/jquery.min.js
+|   https://oss.maxcdn.com:443/libs/html5shiv/3.7.0/html5shiv.js
+|   https://oss.maxcdn.com:443/libs/respond.js/1.4.2/respond.min.js
+|   http://code.jquery.com:80/ui/1.10.4/jquery-ui.js
+|_  http://code.jquery.com:80/jquery-1.9.1.js
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 2
+|     /boot/css/
+|       css: 3
+|     /boot/js/
+|       js: 6
+|     /boot/js/plugins/
+|       js: 1
+|     /img/
+|       jpg: 5
+|     /include/
+|       php: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /boot/js/plugins/
+|   Total files found (by extension):
+|_    Other: 1; css: 3; jpg: 5; js: 7; php: 3
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: mrb3n's Bro Hut
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Wed, 22 Jul 2020 15:43:21 GMT
+| Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 52 names had status ERROR
+|_75 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jul 22 21:21:19 2020 -- 1 IP address (1 host up) scanned in 902.31 seconds

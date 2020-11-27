@@ -4,7 +4,7 @@ digraph G {
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
   edge [style=solid color="#665957" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
 
-  0[label="10.10.255.177" color="#0077cc" fillcolor="#e1ecf4" tooltip="[THM] Year of the Fox"];
+  0[label="10.10.255.177" color="#0077cc" fillcolor="#e1ecf4" tooltip="[TryHackMe] Year of the Fox"];
   10[label="22/tcp listening on localhost" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   11[label="socat tunnel remote:1337 -> localhost:22" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   12[label="password bruteforce for user fox" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
@@ -31,7 +31,7 @@ digraph G {
 
   subgraph cluster_0 {
     node [style="filled,solid"];
-    label = "[THM] Year of the Fox";
+    label = "[TryHackMe] Year of the Fox";
     color = "#665957";
     0 -> 1 [color="#665957"];
     1 -> 2 [color="#665957"];

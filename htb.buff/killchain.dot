@@ -1,0 +1,38 @@
+digraph G {
+  #rankdir=LR;
+  nodesdictep=1.0; splines="ortho"; K=0.6; overlap=scale; fixedsize=true; resolution=72; bgcolor="#ffffff"; outputorder="edgesfirst";
+  node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
+  edge [style=solid color="#665957" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
+
+  0[label="10.10.10.198" color="#0077cc" fillcolor="#e1ecf4" tooltip="[HTB] Buff"];
+  10[label="edb:48389 - cloudme 1.11.2 bof" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+  11[label="netcat (administrator)" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+  12[label="root.txt" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+  1[label="8080/tcp" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
+  2[label="/contacts.php: Gym Management Software 1.0" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
+  3[label="edb:48506 - unauth remote code exec" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
+  4[label="pseudo-interactive shell" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
+  5[label="netcat (shaun)" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
+  6[label="user.txt" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
+  7[label="winpeas: services restricted from outside" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+  8[label="127.0.0.1:8888 - cloudme - 1.11.2" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+  9[label="plink port forward: -R 8888:127.0.0.1:8888" color="#c02d2e" fillcolor="#f9d3d7" tooltip="Phase #3:Privilege Escalation"];
+
+  subgraph cluster_0 {
+    node [style="filled,solid"];
+    label = "[HTB] Buff";
+    color = "#665957";
+    0 -> 1 [color="#665957"];
+    1 -> 2 [color="#665957"];
+    10 -> 11 [color="#665957"];
+    11 -> 12 [color="#665957"];
+    2 -> 3 [color="#665957"];
+    3 -> 4 [color="#665957"];
+    4 -> 5 [color="#665957"];
+    5 -> 6 [color="#665957"];
+    5 -> 7 [color="#665957"];
+    7 -> 8 [color="#665957"];
+    8 -> 9 [color="#665957"];
+    9 -> 10 [color="#665957"];
+  }
+}

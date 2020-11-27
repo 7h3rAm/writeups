@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Jul 22 21:04:22 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_full_tcp_nmap.xml 10.10.10.198 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/_full_tcp_nmap.txt -oX /home/kali/toolbox/repos/writeupsall/htb.buff/10.10.10.198/scans/xml/_full_tcp_nmap.xml 10.10.10.198" start="1595432062" startstr="Wed Jul 22 21:04:22 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1595432063"/>
+<taskend task="NSE" time="1595432063"/>
+<taskbegin task="NSE" time="1595432063"/>
+<taskend task="NSE" time="1595432063"/>
+<taskbegin task="NSE" time="1595432063"/>
+<taskend task="NSE" time="1595432063"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1595432063"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1595432076"/>
+<taskbegin task="Connect Scan" time="1595432076"/>
+<taskprogress task="Connect Scan" time="1595432107" percent="2.29" remaining="1323" etc="1595433430"/>
+<taskprogress task="Connect Scan" time="1595432137" percent="5.19" remaining="1116" etc="1595433252"/>
+<taskprogress task="Connect Scan" time="1595432167" percent="5.83" remaining="1470" etc="1595433637"/>
+<taskprogress task="Connect Scan" time="1595432239" percent="10.51" remaining="1388" etc="1595433627"/>
+<taskprogress task="Connect Scan" time="1595432269" percent="13.29" remaining="1259" etc="1595433528"/>
+<taskprogress task="Connect Scan" time="1595432302" percent="16.02" remaining="1186" etc="1595433487"/>
+<taskprogress task="Connect Scan" time="1595432583" percent="28.76" remaining="1256" etc="1595433839"/>
+<taskprogress task="Connect Scan" time="1595432733" percent="36.05" remaining="1166" etc="1595433899"/>
+<taskprogress task="Connect Scan" time="1595432924" percent="44.15" remaining="1073" etc="1595433997"/>
+<taskprogress task="Connect Scan" time="1595432984" percent="48.17" remaining="977" etc="1595433961"/>
+<taskprogress task="Connect Scan" time="1595433044" percent="52.37" remaining="881" etc="1595433924"/>
+<taskprogress task="Connect Scan" time="1595433077" percent="56.35" remaining="776" etc="1595433852"/>
+<taskprogress task="Connect Scan" time="1595433182" percent="61.74" remaining="686" etc="1595433867"/>
+<taskprogress task="Connect Scan" time="1595433329" percent="67.84" remaining="595" etc="1595433923"/>
+<taskprogress task="Connect Scan" time="1595433390" percent="72.41" remaining="501" etc="1595433891"/>
+<taskprogress task="Connect Scan" time="1595433471" percent="77.45" remaining="407" etc="1595433877"/>
+<taskprogress task="Connect Scan" time="1595433504" percent="81.95" remaining="315" etc="1595433819"/>
+<taskprogress task="Connect Scan" time="1595433534" percent="87.29" remaining="213" etc="1595433746"/>
+<taskprogress task="Connect Scan" time="1595433591" percent="92.36" remaining="126" etc="1595433716"/>
+<taskprogress task="Connect Scan" time="1595433630" percent="97.55" remaining="40" etc="1595433669"/>
+<taskend task="Connect Scan" time="1595433644" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1595433644"/>
+<taskend task="Service scan" time="1595433804" extrainfo="2 services on 1 host"/>
+<taskbegin task="NSE" time="1595433804"/>
+<taskend task="NSE" time="1595433825"/>
+<taskbegin task="NSE" time="1595433825"/>
+<taskend task="NSE" time="1595433829"/>
+<taskbegin task="NSE" time="1595433829"/>
+<taskend task="NSE" time="1595433829"/>
+<host starttime="1595432076" endtime="1595433829"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.198" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache httpd" version="2.4.43" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.4.6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.43</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-server-header" output="Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6"><elem>Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6</elem>
+</script><script id="http-title" output="mrb3n&apos;s Bro Hut"><elem key="title">mrb3n&apos;s Bro Hut</elem>
+</script></port>
+</ports>
+<times srtt="330033" rttvar="48128" to="522545"/>
+</host>
+<taskbegin task="NSE" time="1595433829"/>
+<taskend task="NSE" time="1595433829"/>
+<taskbegin task="NSE" time="1595433829"/>
+<taskend task="NSE" time="1595433829"/>
+<taskbegin task="NSE" time="1595433829"/>
+<taskend task="NSE" time="1595433829"/>
+<runstats><finished time="1595433829" timestr="Wed Jul 22 21:33:49 2020" elapsed="1767.28" summary="Nmap done at Wed Jul 22 21:33:49 2020; 1 IP address (1 host up) scanned in 1767.28 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

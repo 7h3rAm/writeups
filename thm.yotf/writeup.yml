@@ -2,7 +2,7 @@ writeup:
   metadata:
     status: public
     datetime: 20200730
-    infra: THM
+    infra: TryHackMe
     name: Year of the Fox
     points: 
     path: thm.yotf
@@ -13,7 +13,7 @@ writeup:
       - https://www.cybergoat.co.uk/writeup/Year-of-Fox-TryHackMe/
       - https://blog.tryhackme.com/year-of-the-fox-official-write-up/
     categories:
-      - thm
+      - tryhackme
       - linux
     tags:
       - enumerate_proto_http
@@ -21,9 +21,9 @@ writeup:
       - privesc_env_relative_path
   overview:
     description: |
-      This is a writeup for TryHackMe VM [Year of the Fox](https://tryhackme.com/room/yotf). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for TryHackMe VM [Year of the Fox](https://tryhackme.com/room/yotf).
     killchain:
-      - "_ [THM] Year of the Fox/10.10.255.177":
+      - "_ [TryHackMe] Year of the Fox/10.10.255.177":
         - ". 80/tcp":
           - ". webapp requires authentication":
             - ". password bruteforce for users fox and rascal":
@@ -116,6 +116,10 @@ writeup:
           Read data files from: /usr/bin/../share/nmap
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Wed Jul 29 19:55:04 2020 -- 1 IP address (1 host up) scanned in 56.96 seconds
+      - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
       - description: |
           We find `80/tcp` to be open and enumerate it further. The webapp enforces authentication due to which we are not allowed to view any pages. We will need to find the credentials for the web app to proceed with this further:
         command: |

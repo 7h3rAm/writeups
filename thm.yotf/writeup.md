@@ -12,8 +12,8 @@ header-includes:
                 bookmarks=true,
                 pdftitle="Year of the Fox",
                 pdfauthor="svachal (@7h3rAm)",
-                pdfsubject='Writeup for THM VM Year of the Fox',
-                pdfkeywords="thm linux",
+                pdfsubject='Writeup for TryHackMe VM Year of the Fox',
+                pdfkeywords="tryhackme linux",
                 colorlinks=true,
                 linkcolor=cyan,
                 urlcolor=blue}
@@ -22,17 +22,20 @@ header-includes:
   - \usepackage{mathtools}
 ---
 
-# [[THM] Year of the Fox](https://tryhackme.com/room/yotf)
+# [[TryHackMe] Year of the Fox](https://tryhackme.com/room/yotf)
 
 **Date**: 30/Jul/2020  
-**Categories**: [thm](https://github.com/7h3rAm/writeups/search?q=thm&unscoped_q=thm), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
+**Categories**: [tryhackme](https://github.com/7h3rAm/writeups/search?q=tryhackme&unscoped_q=tryhackme), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
 **Tags**: [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [exploit_command_injection](https://github.com/7h3rAm/writeups/search?q=exploit_command_injection&unscoped_q=exploit_command_injection), [privesc_env_relative_path](https://github.com/7h3rAm/writeups/search?q=privesc_env_relative_path&unscoped_q=privesc_env_relative_path)  
 
 ## Overview
-This is a writeup for TryHackMe VM [Year of the Fox](https://tryhackme.com/room/yotf). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for TryHackMe VM [Year of the Fox](https://tryhackme.com/room/yotf). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -109,9 +112,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find `80/tcp` to be open and enumerate it further. The webapp enforces authentication due to which we are not allowed to view any pages. We will need to find the credentials for the web app to proceed with this further:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-3\. From the scan results SMB for ports, we find that there are two active users on this machine: `fox` and `rascal`  
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find `80/tcp` to be open and enumerate it further. The webapp enforces authentication due to which we are not allowed to view any pages. We will need to find the credentials for the web app to proceed with this further:  
+
+4\. From the scan results SMB for ports, we find that there are two active users on this machine: `fox` and `rascal`  
 ``` {.python .numberLines}
 [+] Enumerating users using SID S-1-22-1 and logon username '', password ''
 S-1-22-1-1000 Unix User\fox (Local User)
@@ -134,25 +141,25 @@ enum4linux complete on Wed Jul 29 20:18:34 2020
 
 ```
 
-4\. We run a password bruteforce scan against the webapp for both usernames and find a hit:  
+5\. We run a password bruteforce scan against the webapp for both usernames and find a hit:  
 ``` {.python .numberLines}
 hydra -l rascal -P /usr/share/wordlists/rockyou.txt 10.10.41.240 http-head /
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot01.png)  
+![writeup.enumeration.steps.5.1](./screenshot01.png)  
 
-5\. Upon logging in, we see a webpage with a search text box try out a few queries. Submitting an empty string shows a listing of 3 files. We setup Burp proxy and start enumerating the search functionality further:  
+6\. Upon logging in, we see a webpage with a search text box try out a few queries. Submitting an empty string shows a listing of 3 files. We setup Burp proxy and start enumerating the search functionality further:  
 
-![writeup.enumeration.steps.5.1](./screenshot02.png)  
+![writeup.enumeration.steps.6.1](./screenshot02.png)  
 
-![writeup.enumeration.steps.5.2](./screenshot03.png)  
+![writeup.enumeration.steps.6.2](./screenshot03.png)  
 
-![writeup.enumeration.steps.5.3](./screenshot04.png)  
+![writeup.enumeration.steps.6.3](./screenshot04.png)  
 
-![writeup.enumeration.steps.5.4](./screenshot05.png)  
+![writeup.enumeration.steps.6.4](./screenshot05.png)  
 
-6\. We find a way to escape the search input and get command execution on the target machine:  
+7\. We find a way to escape the search input and get command execution on the target machine:  
 ``` {.python .numberLines}
 POST /assets/php/search.php HTTP/1.1
   Host: 10.10.41.240
@@ -170,9 +177,9 @@ POST /assets/php/search.php HTTP/1.1
 
 ```
 
-![writeup.enumeration.steps.6.1](./screenshot06.png)  
+![writeup.enumeration.steps.7.1](./screenshot06.png)  
 
-7\. We use this to triage the file system and find the first web flag file:  
+8\. We use this to triage the file system and find the first web flag file:  
 ``` {.python .numberLines}
 POST /assets/php/search.php HTTP/1.1
   Host: 10.10.41.240
@@ -190,7 +197,7 @@ POST /assets/php/search.php HTTP/1.1
 
 ```
 
-![writeup.enumeration.steps.7.1](./screenshot07.png)  
+![writeup.enumeration.steps.8.1](./screenshot07.png)  
 
 
 ### Findings
@@ -291,7 +298,7 @@ root
 
 \newpage
 ## Phase #3: Privilege Escalation
-1\. We find that we can execute the `/usr/sbin/shutdown` file with `sudo`. Since the target machine doesn't have `strings` installed, we transfer this file to our attacking machine and investigate further. We find a reference to the `poweroff` binary name, which when combined with the fact that `secure_path` is not defined wihtin `/etc/sudoers` (seen in `sudo -l` output), hint that a environment path modification vector could help us escalate privileges:  
+1\. We find that we can execute the `/usr/sbin/shutdown` file with `sudo`. Since the target machine doesn't have `strings` installed, we transfer this file to our attacking machine and investigate further. We find a reference to the `poweroff` binary name, which when combined with the fact that `secure_path` is not defined within `/etc/sudoers` (seen in `sudo -l` output), hint that a environment path modification vector could help us escalate privileges:  
 
 ![writeup.privesc.steps.1.1](./screenshot13.png)  
 
@@ -323,7 +330,7 @@ cat /home/rascal/.did-you-think-I-was-useless.root
 \newpage
 ## Learning/Recommendation
 * The webapp exposed a search field which was vulnerable to command injection. This allowed the attacker to gain interactive access of the target machine. It is advised to follow a secure development lifecycle for critical production web applications.
-* The `shutdown` binary was vulnerable to a path expansion attack which allowed the atatcker to gain elevated privileges.
+* The `shutdown` binary was vulnerable to a path expansion attack which allowed the attacker to gain elevated privileges.
 
 ## Loot
 ### Credentials
