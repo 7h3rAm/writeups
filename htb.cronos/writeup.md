@@ -27,14 +27,15 @@ header-includes:
 **Date**: 13/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
 **Tags**: [exploit_sqli](https://github.com/7h3rAm/writeups/search?q=exploit_sqli&unscoped_q=exploit_sqli), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Cronos](https://www.hackthebox.eu/home/machines/profile/11). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [CronOS](https://www.hackthebox.eu/home/machines/profile/11). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -77,20 +78,24 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We start with DNS enumeration and with a reverse lookup and find that the subdomain `ns1.cronos.htb` is associated with the target IP. Since DNS is responding on TCP, we also perform a DNS zone transfer and find additional subdomains associated with the target IP:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We start with DNS enumeration and with a reverse lookup and find that the subdomain `ns1.cronos.htb` is associated with the target IP. Since DNS is responding on TCP, we also perform a DNS zone transfer and find additional subdomains associated with the target IP:  
 ``` {.python .numberLines}
 dig +noall +answer -x 10.10.10.13 @10.10.10.13
 host -t axfr cronos.htb 10.10.10.13
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
-3\. Upon visiting the `admin.cronos.htb` subdomain, we are presented with a login page, that is vulnerable to SQL injection:  
+4\. Upon visiting the `admin.cronos.htb` subdomain, we are presented with a login page, that is vulnerable to SQL injection:  
 
-![writeup.enumeration.steps.3.1](./screenshot03.png)  
+![writeup.enumeration.steps.4.1](./screenshot03.png)  
 
 
 ### Findings

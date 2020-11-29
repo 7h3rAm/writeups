@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload_bypass&unscoped_q=exploit_php_fileupload_bypass), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [FristiLeaks: 1.3](https://www.vulnhub.com/entry/fristileaks-13,133/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [FristiLeaks: 1.3](https://www.vulnhub.com/entry/fristileaks-13,133/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -67,7 +70,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find references to 3 directories from `robots.txt`:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find references to 3 directories from `robots.txt`:  
 ``` {.python .numberLines}
 http://192.168.92.133/cola
 http://192.168.92.133/sisi
@@ -75,11 +82,11 @@ http://192.168.92.133/beer
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-3\. These directories don't have anything useful other than a meme image. Since all these directory names are references to drinks and the name of this VM also referes to one, we try `http://192.168.92.133/fristi` and are presented with a login page:  
+4\. These directories don't have anything useful other than a meme image. Since all these directory names are references to drinks and the name of this VM also referes to one, we try `http://192.168.92.133/fristi` and are presented with a login page:  
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
 
 ### Findings

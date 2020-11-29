@@ -144,6 +144,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Fri Sep 27 18:17:03 2019 -- 1 IP address (1 host up) scanned in 15.14 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We find a login form served at `80/tcp`. Within HTML comments we find reference to a possible username `admin` and successfully login using SQL injection:
         command: |
           admin/' or 1=1 -- -

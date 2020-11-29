@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_sqli](https://github.com/7h3rAm/writeups/search?q=exploit_sqli&unscoped_q=exploit_sqli), [exploit_cmdexec](https://github.com/7h3rAm/writeups/search?q=exploit_cmdexec&unscoped_q=exploit_cmdexec), [privesc_kernel_ipappend](https://github.com/7h3rAm/writeups/search?q=privesc_kernel_ipappend&unscoped_q=privesc_kernel_ipappend)  
 
 ## Overview
-This is a writeup for VulnHub VM [Kioptrix: Level 1.1 (#2)](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: Level 1.1 (#2)](https://www.vulnhub.com/entry/kioptrix-level-11-2,23/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -140,21 +143,25 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find a login form served at `80/tcp`. Within HTML comments we find reference to a possible username `admin` and successfully login using SQL injection:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find a login form served at `80/tcp`. Within HTML comments we find reference to a possible username `admin` and successfully login using SQL injection:  
 ``` {.python .numberLines}
 admin/' or 1=1 -- -
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
-3\. Once logged in, we find a web administration console with a text input field to accept an IP address. The web console will `POST` this IP to the `pingit.php` script that runs a `ping` query against this IP and shows result:  
+4\. Once logged in, we find a web administration console with a text input field to accept an IP address. The web console will `POST` this IP to the `pingit.php` script that runs a `ping` query against this IP and shows result:  
 
-![writeup.enumeration.steps.3.1](./screenshot03.png)  
+![writeup.enumeration.steps.4.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot04.png)  
+![writeup.enumeration.steps.4.2](./screenshot04.png)  
 
 
 ### Findings

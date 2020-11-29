@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_nfs_rw](https://github.com/7h3rAm/writeups/search?q=exploit_nfs_rw&unscoped_q=exploit_nfs_rw), [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_authorizedkeys&unscoped_q=exploit_ssh_authorizedkeys), [privesc_strace_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_strace_setuid&unscoped_q=privesc_strace_setuid), [privesc_docker_group](https://github.com/7h3rAm/writeups/search?q=privesc_docker_group&unscoped_q=privesc_docker_group)  
 
 ## Overview
-This is a writeup for VulnHub VM [Lin.Security: 1](https://www.vulnhub.com/entry/linsecurity-1,244/). Here's an overview of the `enumeration → exploitation → privilege escalation` process:
+This is a writeup for VulnHub VM [Lin.Security: 1](https://www.vulnhub.com/entry/linsecurity-1,244/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -82,13 +85,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find that there is an open NFS share for the `/home/peter` directory on the target system:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find that there is an open NFS share for the `/home/peter` directory on the target system:  
 ``` {.python .numberLines}
 showmount -e 192.168.92.186
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
 
 ### Findings

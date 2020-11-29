@@ -86,6 +86,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Tue Sep 10 18:09:59 2019 -- 1 IP address (1 host up) scanned in 8.96 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We start with `80/tcp` and are presented with a `Wordpress` installation. We run `wpscan` to enumerate users and find 5 hits:
         command: |
           admin, graham, mark, sarah and jens

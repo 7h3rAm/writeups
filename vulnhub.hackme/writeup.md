@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [hackme: 1](https://www.vulnhub.com/entry/hackme-1,330/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [hackme: 1](https://www.vulnhub.com/entry/hackme-1,330/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -73,7 +76,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find quite a few interesting links from the `gobuster` scan and open the `http://192.168.92.180:80/index.php` page to explore the web application further:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find quite a few interesting links from the `gobuster` scan and open the `http://192.168.92.180:80/index.php` page to explore the web application further:  
 ``` {.python .numberLines}
 gobuster -u http://192.168.92.180:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp"
   http://192.168.92.180:80/config.php (Status: 200) [Size: 0]
@@ -88,13 +95,13 @@ gobuster -u http://192.168.92.180:80/ -w /usr/share/seclists/Discovery/Web-Conte
 
 ```
 
-3\. We are redirected to the `http://192.168.92.180:80/login.php` link at every page visit so we try some common credentials and SQLi attempts. When these do not help, we decide to use the registration option which takes us to the `http://192.168.92.180:80/register.php` page. We register a username `foobar` with `foobar` password and get logged in to the web application:  
+4\. We are redirected to the `http://192.168.92.180:80/login.php` link at every page visit so we try some common credentials and SQLi attempts. When these do not help, we decide to use the registration option which takes us to the `http://192.168.92.180:80/register.php` page. We register a username `foobar` with `foobar` password and get logged in to the web application:  
 
-![writeup.enumeration.steps.3.1](./screenshot01.png)  
+![writeup.enumeration.steps.4.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot02.png)  
+![writeup.enumeration.steps.4.2](./screenshot02.png)  
 
-![writeup.enumeration.steps.3.3](./screenshot03.png)  
+![writeup.enumeration.steps.4.3](./screenshot03.png)  
 
 
 ### Findings

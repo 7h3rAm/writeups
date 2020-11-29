@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid), [privesc_nmap](https://github.com/7h3rAm/writeups/search?q=privesc_nmap&unscoped_q=privesc_nmap)  
 
 ## Overview
-This is a writeup for VulnHub VM [Mr-Robot: 1](https://www.vulnhub.com/entry/mr-robot-1,151/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Mr-Robot: 1](https://www.vulnhub.com/entry/mr-robot-1,151/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -92,7 +95,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find 2 interesting entries within the `http://192.168.92.134/robots.txt` file. One of these is for the first of the 3 key files and the other entry points to what looks like a dictionary file:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find 2 interesting entries within the `http://192.168.92.134/robots.txt` file. One of these is for the first of the 3 key files and the other entry points to what looks like a dictionary file:  
 ``` {.python .numberLines}
 http://192.168.92.134/robots.txt
   http://192.168.92.134/fsocity.dic
@@ -100,23 +107,23 @@ http://192.168.92.134/robots.txt
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot01a.png)  
+![writeup.enumeration.steps.3.2](./screenshot01a.png)  
 
-3\. We download the dictionary file and trim its contents to have only unique entries. This reduced the count of possible passwords from `858160` to `11451`:  
+4\. We download the dictionary file and trim its contents to have only unique entries. This reduced the count of possible passwords from `858160` to `11451`:  
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
-4\. From the `gobuster` scan, we also find entries pointing to a Wordpress installation. We confirm this by visiting the login page:  
+5\. From the `gobuster` scan, we also find entries pointing to a Wordpress installation. We confirm this by visiting the login page:  
 ``` {.python .numberLines}
 http://192.168.92.134/wp-login
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot03.png)  
+![writeup.enumeration.steps.5.1](./screenshot03.png)  
 
-5\. After trying a few credentials manually, we decide to bruteforce usernames first. We first need to create a usernames list from the `fsocity.dic` dictionary found earlier. For our case, we will filter on strings that are 4-8 chars long. Doing this, we eventually find 5247 possible candidates. We then bruteforce these strings and find a valid username:  
+6\. After trying a few credentials manually, we decide to bruteforce usernames first. We first need to create a usernames list from the `fsocity.dic` dictionary found earlier. For our case, we will filter on strings that are 4-8 chars long. Doing this, we eventually find 5247 possible candidates. We then bruteforce these strings and find a valid username:  
 ``` {.python .numberLines}
 grep -E '^[a-zA-Z]' fsocity.dic | sort -u |  awk 'length($1) <=8 && length($1) >= 4 { print $1}' > users
 wpuser http://192.168.92.134/ users
@@ -126,9 +133,9 @@ wpuser http://192.168.92.134/ users
 
 ```
 
-![writeup.enumeration.steps.5.1](./screenshot04.png)  
+![writeup.enumeration.steps.6.1](./screenshot04.png)  
 
-![writeup.enumeration.steps.5.2](./screenshot04a.png)  
+![writeup.enumeration.steps.6.2](./screenshot04a.png)  
 
 
 ### Findings

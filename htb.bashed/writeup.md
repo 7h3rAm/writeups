@@ -27,14 +27,15 @@ header-includes:
 **Date**: 25/Jun/2020  
 **Categories**: [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux), [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp)  
 **Tags**: [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [exploit_python_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_python_reverseshell&unscoped_q=exploit_python_reverseshell), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo), [privesc_cron_rootjobs](https://github.com/7h3rAm/writeups/search?q=privesc_cron_rootjobs&unscoped_q=privesc_cron_rootjobs)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Bashed](https://www.hackthebox.eu/home/machines/profile/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Bashed](https://www.hackthebox.eu/home/machines/profile/118). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -66,13 +67,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We see that the port `80/tcp` is the only open port on this machine. Let's run `gobuster` and find interesting directories on this web server:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We see that the port `80/tcp` is the only open port on this machine. Let's run `gobuster` and find interesting directories on this web server:  
 ``` {.python .numberLines}
 gobuster dir -u http://10.10.10.68:80/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/toolbox/writeups/htb.bashed/results/10.10.10.68/scans/tcp_80_http_gobuster_dirbuster.txt"
 
 ```
 
-3\. We find a few directories from `gobuster` scan and the `/dev` directory lists two interesting files: `phpbash.min.php` and `phpbash.php`  
+4\. We find a few directories from `gobuster` scan and the `/dev` directory lists two interesting files: `phpbash.min.php` and `phpbash.php`  
 ``` {.python .numberLines}
 $ cat results/10.10.10.68/scans/tcp_80_http_gobuster_dirbuster.txt 
   http://10.10.10.68:80/images (Status: 301) [Size: 311]
@@ -90,13 +95,13 @@ $ cat results/10.10.10.68/scans/tcp_80_http_gobuster_dirbuster.txt
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot03.png)  
+![writeup.enumeration.steps.4.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot01.png)  
+![writeup.enumeration.steps.4.2](./screenshot01.png)  
 
-4\. We find that [`phpbash`](https://github.com/Arrexel/phpbash) is a minimal web shell that can give us interactive access to the target machine.  
+5\. We find that [`phpbash`](https://github.com/Arrexel/phpbash) is a minimal web shell that can give us interactive access to the target machine.  
 
-![writeup.enumeration.steps.4.1](./screenshot02.png)  
+![writeup.enumeration.steps.5.1](./screenshot02.png)  
 
 
 ### Findings

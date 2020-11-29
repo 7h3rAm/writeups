@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 
 ## Overview
-This is a writeup for VulnHub VM [Billy Madison: 1.1](https://www.vulnhub.com/entry/billy-madison-11,161). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Billy Madison: 1.1](https://www.vulnhub.com/entry/billy-madison-11,161/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -111,78 +114,82 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. Tried connecting to Telnet service and found a ROT13 encoded string:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-3\. Decoded the ROT13 (Caesar Cipher) encoded string and used it as the HTTP directory name:  
+3\. Tried connecting to Telnet service and found a ROT13 encoded string:  
+
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
+
+4\. Decoded the ROT13 (Caesar Cipher) encoded string and used it as the HTTP directory name:  
 ``` {.python .numberLines}
 http://192.168.92.167/exschmenuating
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
-4\. Found reference to the presence of files with names from `rockyou.txt` wordlist and `veronica` string in them. We created a custom wordlist, ran a `gobuster` scan and found a network capture file:  
+5\. Found reference to the presence of files with names from `rockyou.txt` wordlist and `veronica` string in them. We created a custom wordlist, ran a `gobuster` scan and found a network capture file:  
 ``` {.python .numberLines}
 gobuster -u http://192.168.92.167/exschmenuating -w veronica.wordlist -e -k -l -s "200,204,301,302,307,403,500" -x "cap,pcap,capture" -o "results/192.168.92.167/scans/tcp_80_http_gobuster_dirbuster.txt" → http://192.168.92.167/exschmenuating/012987veronica.cap
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot03.png)  
+![writeup.enumeration.steps.5.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.4.2](./screenshot04.png)  
+![writeup.enumeration.steps.5.2](./screenshot04.png)  
 
-5\. Ran a port knock using the [Spanish Armada](https://www.youtube.com/watch?v=z5YU7JwVy7s) combo to open the FTP backdoor:  
+6\. Ran a port knock using the [Spanish Armada](https://www.youtube.com/watch?v=z5YU7JwVy7s) combo to open the FTP backdoor:  
 ``` {.python .numberLines}
 for port in 1466 67 1469 1514 1981 1986; do nmap -Pn --host_timeout 201 --max-retries 0 -p ${port} 192.168.92.167; done
 nmap -p21 192.168.92.167
 
 ```
 
-6\. Found FTP password for user `veronica` using `hydra` and the custom wordlist created earlier:  
+7\. Found FTP password for user `veronica` using `hydra` and the custom wordlist created earlier:  
 ``` {.python .numberLines}
 hydra -l veronica -P veronica.wordlist 192.168.92.167 ftp → veronica/babygirl_veronica07@yahoo.com
 
 ```
 
-![writeup.enumeration.steps.6.1](./screenshot05.png)  
+![writeup.enumeration.steps.7.1](./screenshot05.png)  
 
-7\. Found FTP password for user `eric` from the network capture file `012987veronica.cap`:  
+8\. Found FTP password for user `eric` from the network capture file `012987veronica.cap`:  
 ``` {.python .numberLines}
 eric/ericdoesntdrinkhisownpee
 
 ```
 
-![writeup.enumeration.steps.7.1](./screenshot06a.png)  
+![writeup.enumeration.steps.8.1](./screenshot06a.png)  
 
-8\. Connected as user `eric` to the FTP service and found a `.notes` file:  
+9\. Connected as user `eric` to the FTP service and found a `.notes` file:  
 ``` {.python .numberLines}
 ftp://eric@192.168.92.167/.notes
 
 ```
 
-![writeup.enumeration.steps.8.1](./screenshot06.png)  
+![writeup.enumeration.steps.9.1](./screenshot06.png)  
 
-9\. Found reference to a SSH backdoor that requires sending an email with text `My kid will be a **soccer player**`:  
+10\. Found reference to a SSH backdoor that requires sending an email with text `My kid will be a **soccer player**`:  
 ``` {.python .numberLines}
 'swaks --to eric@madisonhotels.com --from vvaughn@polyfector.edu --server 192.168.92.167:2525 --body "My kid will be a soccer player" --header "Subject: My kid will be a soccer player"'
 
 ```
 
-![writeup.enumeration.steps.9.1](./screenshot10.png)  
+![writeup.enumeration.steps.10.1](./screenshot10.png)  
 
-10\. Port `1974/tcp` is the SSH backdoor placed on the target host by user `eric`:  
+11\. Port `1974/tcp` is the SSH backdoor placed on the target host by user `eric`:  
 
-![writeup.enumeration.steps.10.1](./screenshot11.png)  
+![writeup.enumeration.steps.11.1](./screenshot11.png)  
 
-11\. Found a network capture file `eg-01.cap` from user `veronica`'s FTP directory:  
+12\. Found a network capture file `eg-01.cap` from user `veronica`'s FTP directory:  
 ``` {.python .numberLines}
 ftp://veronica@192.168.92.167/eg-01.cap
 
 ```
 
-![writeup.enumeration.steps.11.1](./screenshot09.png)  
+![writeup.enumeration.steps.12.1](./screenshot09.png)  
 
 
 ### Findings

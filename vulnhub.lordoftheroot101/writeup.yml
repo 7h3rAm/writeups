@@ -79,6 +79,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Thu Oct 10 14:06:44 2019 -- 1 IP address (1 host up) scanned in 5.59 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We just have 1 open port, `22/tcp` and start there. Upon connecting we see a banner that hints at port knocking sequence `1,2,3`. We knock on these ports and find a new port, `1337/tcp`, open up on the target system:
         command: |
           ssh root@192.168.92.151

@@ -92,6 +92,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Wed Oct  9 19:28:27 2019 -- 1 IP address (1 host up) scanned in 14.69 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We find that there is an open NFS share for the `/home/peter` directory on the target system:
         command: |
           showmount -e 192.168.92.186

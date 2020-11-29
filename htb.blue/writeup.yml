@@ -84,6 +84,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Fri Nov  1 17:08:32 2019 -- 1 IP address (1 host up) scanned in 171.43 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We find SMB ports to be open on the target system. We run a Nmap NSE script scan to check if the SMB service is vulnerable:
         command: |
           nmap -p139,445 --script smb-vuln-* --script-args=unsafe=1 10.10.10.40

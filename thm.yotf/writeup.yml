@@ -23,7 +23,7 @@ writeup:
     description: |
       This is a writeup for TryHackMe VM [Year of the Fox](https://tryhackme.com/room/yotf).
     killchain:
-      - "_ [TryHackMe] Year of the Fox/10.10.255.177":
+      - "_ [TryHackMe] Year of the Fox/10.10.41.240":
         - ". 80/tcp":
           - ". webapp requires authentication":
             - ". password bruteforce for users fox and rascal":

@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_fileupload](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload&unscoped_q=exploit_php_fileupload), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_chkrootkit](https://github.com/7h3rAm/writeups/search?q=privesc_chkrootkit&unscoped_q=privesc_chkrootkit), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron), [privesc_bash_reverseshell](https://github.com/7h3rAm/writeups/search?q=privesc_bash_reverseshell&unscoped_q=privesc_bash_reverseshell)  
 
 ## Overview
-This is a writeup for VulnHub VM [hackfest2016: Sedna](https://www.vulnhub.com/entry/hackfest2016-sedna,181/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [hackfest2016: Sedna](https://www.vulnhub.com/entry/hackfest2016-sedna,181/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -271,7 +274,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. From the Nikto scan report we see that there is a `license.txt` file that could be interesting. We take a look at the file and find `Copyright (c) 2012 - 2015 BuilderEngine / Radian Enterprise Systems Limited.` message in it indicating installation of `BuilderEngine` application:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. From the Nikto scan report we see that there is a `license.txt` file that could be interesting. We take a look at the file and find `Copyright (c) 2012 - 2015 BuilderEngine / Radian Enterprise Systems Limited.` message in it indicating installation of `BuilderEngine` application:  
 ``` {.python .numberLines}
 - Nikto v2.1.6
 ---------------------------------------------------------------------------

@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_webshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_webshell&unscoped_q=exploit_php_webshell), [exploit_bash_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_bash_reverseshell&unscoped_q=exploit_bash_reverseshell), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers), [privesc_passwd_writable](https://github.com/7h3rAm/writeups/search?q=privesc_passwd_writable&unscoped_q=privesc_passwd_writable)  
 
 ## Overview
-This is a writeup for VulnHub VM [Misdirection: 1](https://www.vulnhub.com/entry/misdirection-1,371/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Misdirection: 1](https://www.vulnhub.com/entry/misdirection-1,371/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -80,7 +83,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We start with `8080/tcp` service. There are some interesting hits from `gobuster` scan:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We start with `8080/tcp` service. There are some interesting hits from `gobuster` scan:  
 ``` {.python .numberLines}
 http://192.168.92.187:8080/debug (Status: 301)
 http://192.168.92.187:8080/shell (Status: 301)
@@ -88,9 +95,9 @@ http://192.168.92.187:8080/wordpress (Status: 301)
 
 ```
 
-3\. Upon checking out the `/debug` url, we find that it has a PHP web shell called [p0wny-shell](https://github.com/flozz/p0wny-shell). This is a huge convenience as we can now spawn a reverse shell and get fully interactive access:  
+4\. Upon checking out the `/debug` url, we find that it has a PHP web shell called [p0wny-shell](https://github.com/flozz/p0wny-shell). This is a huge convenience as we can now spawn a reverse shell and get fully interactive access:  
 
-![writeup.enumeration.steps.3.1](./screenshot00.png)  
+![writeup.enumeration.steps.4.1](./screenshot00.png)  
 
 
 ### Findings

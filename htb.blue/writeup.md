@@ -27,14 +27,15 @@ header-includes:
 **Date**: 01/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [exploit_smb_ms17_010](https://github.com/7h3rAm/writeups/search?q=exploit_smb_ms17_010&unscoped_q=exploit_smb_ms17_010)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Blue](https://www.hackthebox.eu/home/machines/profile/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Blue](https://www.hackthebox.eu/home/machines/profile/51). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -83,17 +84,21 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find SMB ports to be open on the target system. We run a Nmap NSE script scan to check if the SMB service is vulnerable:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find SMB ports to be open on the target system. We run a Nmap NSE script scan to check if the SMB service is vulnerable:  
 ``` {.python .numberLines}
 nmap -p139,445 --script smb-vuln-* --script-args=unsafe=1 10.10.10.40
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-3\. We find that the target system is missing patches from [MS17-010](https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010) bulletin and as such vulnerable. We can use the [zzz_exploit.py](https://github.com/worawit/MS17-010) EternalBlue exploit to gain interactive access. But before that we need to determine the target OS version and the name of an active pipe:  
+4\. We find that the target system is missing patches from [MS17-010](https://docs.microsoft.com/en-us/security-updates/securitybulletins/2017/ms17-010) bulletin and as such vulnerable. We can use the [zzz_exploit.py](https://github.com/worawit/MS17-010) EternalBlue exploit to gain interactive access. But before that we need to determine the target OS version and the name of an active pipe:  
 
-4\. We first use Metasploit auxiliary module `scanner/smb/smb_version` to determine target OS version to be `Windows 7 Professional SP1 (build:7601) (name:HARIS-PC)`:  
+5\. We first use Metasploit auxiliary module `scanner/smb/smb_version` to determine target OS version to be `Windows 7 Professional SP1 (build:7601) (name:HARIS-PC)`:  
 ``` {.python .numberLines}
 msfconsole
   use auxiliary/scanner/smb/smb_version
@@ -103,9 +108,9 @@ msfconsole
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot02.png)  
+![writeup.enumeration.steps.5.1](./screenshot02.png)  
 
-5\. Then we use another Metasploit auxiliary module `scanner/smb/pipe_auditor` to find multiple open pipes `\netlogon, \lsarpc, \samr, \browser, \atsvc, \epmapper, \eventlog, \InitShutdown, \keysvc, \lsass, \LSM_API_service, \ntsvcs, \plugplay, \protected_storage, \scerpc, \srvsvc, \trkwks, \W32TIME_ALT, \wkssvc`:  
+6\. Then we use another Metasploit auxiliary module `scanner/smb/pipe_auditor` to find multiple open pipes `\netlogon, \lsarpc, \samr, \browser, \atsvc, \epmapper, \eventlog, \InitShutdown, \keysvc, \lsass, \LSM_API_service, \ntsvcs, \plugplay, \protected_storage, \scerpc, \srvsvc, \trkwks, \W32TIME_ALT, \wkssvc`:  
 ``` {.python .numberLines}
 msfconsole
   use auxiliary/scanner/smb/pipe_auditor
@@ -115,7 +120,7 @@ msfconsole
 
 ```
 
-![writeup.enumeration.steps.5.1](./screenshot03.png)  
+![writeup.enumeration.steps.6.1](./screenshot03.png)  
 
 
 ### Findings

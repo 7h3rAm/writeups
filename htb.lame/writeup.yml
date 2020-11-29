@@ -101,6 +101,10 @@ writeup:
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Fri Nov  1 12:31:47 2019 -- 1 IP address (1 host up) scanned in 93.91 seconds
       - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
+      - description: |
           We find that the `vsftpd` service allows anonymous logins and as such connect to it but don't find anything inetresting there. We however find a MSF exploit for the `vsftpd` version `2.3.4`. This exploit failed to obtain a session:
         command: |
           ftp 10.10.10.3

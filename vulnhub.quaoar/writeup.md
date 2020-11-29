@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_defaultcreds](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_defaultcreds&unscoped_q=exploit_wordpress_defaultcreds), [exploit_wordpress_plugin_hellodolly](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin_hellodolly&unscoped_q=exploit_wordpress_plugin_hellodolly), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_mysql_creds](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_creds&unscoped_q=privesc_mysql_creds), [privesc_credsreuse](https://github.com/7h3rAm/writeups/search?q=privesc_credsreuse&unscoped_q=privesc_credsreuse)  
 
 ## Overview
-This is a writeup for VulnHub VM [hackfest2016: Quaoar](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [hackfest2016: Quaoar](https://www.vulnhub.com/entry/hackfest2016-quaoar,180/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -247,7 +250,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. Upon checking `robots.txt` file we find a `wordpress` entry:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. Upon checking `robots.txt` file we find a `wordpress` entry:  
 ``` {.python .numberLines}
 HTTP/1.1 200 OK
 Date: Wed, 18 Sep 2019 21:24:15 GMT
@@ -270,16 +277,16 @@ Allow: /wordpress/
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-3\. We run `wpscan` to enumerate users and find 2 hits:  
+4\. We run `wpscan` to enumerate users and find 2 hits:  
 ``` {.python .numberLines}
 admin
 wpuser
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
 
 ### Findings

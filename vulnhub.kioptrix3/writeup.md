@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_lotuscms](https://github.com/7h3rAm/writeups/search?q=exploit_lotuscms&unscoped_q=exploit_lotuscms), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
-This is a writeup for VulnHub VM [Kioptrix: Level 1.2 (#3)](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: Level 1.2 (#3)](https://www.vulnhub.com/entry/kioptrix-level-12-3,24/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -76,28 +79,32 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We added an entry for this target within `/etc/hosts` file:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We added an entry for this target within `/etc/hosts` file:  
 ``` {.python .numberLines}
 tail -2 /etc/hosts
   192.168.92.184  kioptrix3.com
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot00.png)  
+![writeup.enumeration.steps.3.1](./screenshot00.png)  
 
-3\. We find a login page at the following url: `http://kioptrix3.com/index.php?system=Admin`  
+4\. We find a login page at the following url: `http://kioptrix3.com/index.php?system=Admin`  
 
-![writeup.enumeration.steps.3.1](./screenshot01.png)  
+![writeup.enumeration.steps.4.1](./screenshot01.png)  
 
-4\. We find that the underlying CMS is `LotusCMS` and use searchsploit to look for any exploits. There were two hits but nothing useful as using Metasploit is out of scope for this writeup. We decided to look for non-MSF versions of the remote code execution exploit for `LotusCMS`:  
+5\. We find that the underlying CMS is `LotusCMS` and use searchsploit to look for any exploits. There were two hits but nothing useful as using Metasploit is out of scope for this writeup. We decided to look for non-MSF versions of the remote code execution exploit for `LotusCMS`:  
 ``` {.python .numberLines}
 searchsploit lotuscms
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot02.png)  
+![writeup.enumeration.steps.5.1](./screenshot02.png)  
 
-5\. We also find a gallery application hosted on the following url: `http://kioptrix3.com/gallery/`. We test this application for SQLi using `sqlmap` and are able to dump the `dev_accounts` table from the `gallery` database. This table lists unsalted MD5 hashes for users `dreg` and `loneferret` that are auto-cracked by `sqlmap`:  
+6\. We also find a gallery application hosted on the following url: `http://kioptrix3.com/gallery/`. We test this application for SQLi using `sqlmap` and are able to dump the `dev_accounts` table from the `gallery` database. This table lists unsalted MD5 hashes for users `dreg` and `loneferret` that are auto-cracked by `sqlmap`:  
 ``` {.python .numberLines}
 sqlmap --batch -u "http://kioptrix3.com/gallery/gallery.php?id=null" --dump
   Database: gallery
@@ -112,9 +119,9 @@ sqlmap --batch -u "http://kioptrix3.com/gallery/gallery.php?id=null" --dump
 
 ```
 
-![writeup.enumeration.steps.5.1](./screenshot03.png)  
+![writeup.enumeration.steps.6.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.5.2](./screenshot04.png)  
+![writeup.enumeration.steps.6.2](./screenshot04.png)  
 
 
 ### Findings

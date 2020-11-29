@@ -27,14 +27,15 @@ header-includes:
 **Date**: 13/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
 **Tags**: [exploit_shellshock](https://github.com/7h3rAm/writeups/search?q=exploit_shellshock&unscoped_q=exploit_shellshock), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Shocker](https://www.hackthebox.eu/home/machines/profile/108). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Shocker](https://www.hackthebox.eu/home/machines/profile/108). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -75,7 +76,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We try Shellshock related enumeration steps to identify interesting scripts to be used as entrypoint:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We try Shellshock related enumeration steps to identify interesting scripts to be used as entrypoint:  
 ``` {.python .numberLines}
 gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403
 gobuster -u 10.10.10.56 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -s 200,204,301,302,307,403 -k -x sh,pl
@@ -83,15 +88,15 @@ nmap -sV -p80 --script http-shellshock --script-args uri=/cgi-bin/user.sh,cmd=ls
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
-3\. The `user.sh` script looks interesting and we manually confirm that it is vulnerable to Shellshock:  
+4\. The `user.sh` script looks interesting and we manually confirm that it is vulnerable to Shellshock:  
 
-![writeup.enumeration.steps.3.1](./screenshot03.png)  
+![writeup.enumeration.steps.4.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot04.png)  
+![writeup.enumeration.steps.4.2](./screenshot04.png)  
 
 
 ### Findings

@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_pchart](https://github.com/7h3rAm/writeups/search?q=exploit_pchart&unscoped_q=exploit_pchart), [exploit_phptax](https://github.com/7h3rAm/writeups/search?q=exploit_phptax&unscoped_q=exploit_phptax), [privesc_freebsd](https://github.com/7h3rAm/writeups/search?q=privesc_freebsd&unscoped_q=privesc_freebsd)  
 
 ## Overview
-This is a writeup for VulnHub VM [Kioptrix: 2014 (#5)](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: 2014 (#5)](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -67,13 +70,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. While exploring the `80/tcp` service, we find a HTML comment that points to `pChart2.1.3/index.php`:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+3\. While exploring the `80/tcp` service, we find a HTML comment that points to `pChart2.1.3/index.php`:  
 
-![writeup.enumeration.steps.2.3](./screenshot03.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
+
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
+
+![writeup.enumeration.steps.3.3](./screenshot03.png)  
 
 
 ### Findings

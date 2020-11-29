@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_sqli](https://github.com/7h3rAm/writeups/search?q=exploit_sqli&unscoped_q=exploit_sqli), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [privesc_kernel_overlayfs](https://github.com/7h3rAm/writeups/search?q=privesc_kernel_overlayfs&unscoped_q=privesc_kernel_overlayfs), [privesc_mysql_root](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_root&unscoped_q=privesc_mysql_root), [privesc_mysql_udf](https://github.com/7h3rAm/writeups/search?q=privesc_mysql_udf&unscoped_q=privesc_mysql_udf)  
 
 ## Overview
-This is a writeup for VulnHub VM [Lord Of The Root: 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Lord Of The Root: 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -70,7 +73,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We just have 1 open port, `22/tcp` and start there. Upon connecting we see a banner that hints at port knocking sequence `1,2,3`. We knock on these ports and find a new port, `1337/tcp`, open up on the target system:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We just have 1 open port, `22/tcp` and start there. Upon connecting we see a banner that hints at port knocking sequence `1,2,3`. We knock on these ports and find a new port, `1337/tcp`, open up on the target system:  
 ``` {.python .numberLines}
 ssh root@192.168.92.151
                                                     .____    _____________________________
@@ -95,13 +102,13 @@ knock 192.168.92.151 1,2,3
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
-![writeup.enumeration.steps.2.3](./screenshot03.png)  
+![writeup.enumeration.steps.3.3](./screenshot03.png)  
 
-3\. We see that the newly opened port is running a HTTP service. We explore it using a web browser. We find a Base64 encoded text within HTML source of the `robots.txt` page. Upon decoding it twice we find a directory path which leads to a login form:  
+4\. We see that the newly opened port is running a HTTP service. We explore it using a web browser. We find a Base64 encoded text within HTML source of the `robots.txt` page. Upon decoding it twice we find a directory path which leads to a login form:  
 ``` {.python .numberLines}
 http://192.168.92.151:1337/robots.txt
   THprM09ETTBOVEl4TUM5cGJtUmxlQzV3YUhBPSBDbG9zZXIh
@@ -114,11 +121,11 @@ b64d Lzk3ODM0NTIxMC9pbmRleC5waHA=
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot04.png)  
+![writeup.enumeration.steps.4.1](./screenshot04.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot05.png)  
+![writeup.enumeration.steps.4.2](./screenshot05.png)  
 
-![writeup.enumeration.steps.3.3](./screenshot06.png)  
+![writeup.enumeration.steps.4.3](./screenshot06.png)  
 
 
 ### Findings

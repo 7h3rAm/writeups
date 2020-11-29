@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_nodejs](https://github.com/7h3rAm/writeups/search?q=exploit_nodejs&unscoped_q=exploit_nodejs), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [exploit_mongodb](https://github.com/7h3rAm/writeups/search?q=exploit_mongodb&unscoped_q=exploit_mongodb), [privesc_setuid](https://github.com/7h3rAm/writeups/search?q=privesc_setuid&unscoped_q=privesc_setuid)  
 
 ## Overview
-This is a writeup for VulnHub VM [Node: 1](https://www.vulnhub.com/entry/node-1,252/#). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Node: 1](https://www.vulnhub.com/entry/node-1,252/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -77,7 +80,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We explore the `3000/tcp` service and find a Node.js webapp. Upon exploring the source we come across few REST API calls of which the `http://192.168.92.189:3000/api/users/` call is very important as it lists regsitered usernames and password hashes. We use online tools to detect hash type as SHA256 and find plaintext strings for three users:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We explore the `3000/tcp` service and find a Node.js webapp. Upon exploring the source we come across few REST API calls of which the `http://192.168.92.189:3000/api/users/` call is very important as it lists regsitered usernames and password hashes. We use online tools to detect hash type as SHA256 and find plaintext strings for three users:  
 ``` {.python .numberLines}
 username: myP14ceAdm1nAcc0uNT
 hash: dffc504aa55359b9265cbebe1e4032fe600b64475ae3fd29c07d23223334d0af
@@ -93,11 +100,11 @@ plaintext: snowflake
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
-![writeup.enumeration.steps.2.3](./screenshot03.png)  
+![writeup.enumeration.steps.3.3](./screenshot03.png)  
 
 
 ### Findings

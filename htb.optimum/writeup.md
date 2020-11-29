@@ -27,14 +27,15 @@ header-includes:
 **Date**: 04/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [exploit_hfs_cmd_exec](https://github.com/7h3rAm/writeups/search?q=exploit_hfs_cmd_exec&unscoped_q=exploit_hfs_cmd_exec), [privesc_windows_ms16_098](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms16_098&unscoped_q=privesc_windows_ms16_098)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Optimum](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Optimum](https://www.hackthebox.eu/home/machines/profile/6). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -67,9 +68,13 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find `HttpFileServer 2.3` running on the target system. Upon searching for exploits we find multiple hits:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find `HttpFileServer 2.3` running on the target system. Upon searching for exploits we find multiple hits:  
+
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
 
 ### Findings

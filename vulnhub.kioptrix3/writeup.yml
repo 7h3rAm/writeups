@@ -45,26 +45,6 @@ writeup:
     ttps:
       "80/tcp/http/Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)": exploit_lotuscms privesc_sudoers privesc_sudo
 
-    overview:
-      enumeration: |
-        "192.168.92.184"
-        "192.168.92.184" -> "22/tcp"
-        "192.168.92.184" -> "80/tcp"
-        "80/tcp" -> "LotusCMS"
-        "80/tcp" -> "Gallarific"
-      exploitation: |
-        "LotusCMS" -> "remote code execution exploit"
-        "remote code execution exploit" -> "netcat (www-data)"
-        "Gallarific" -> "sql injection"
-        "sql injection" -> "mysql database dump"
-        "mysql database dump" -> "credentials for users dreg and loneferret"
-        "credentials for users dreg and loneferret" -> "ssh loneferret@192.168.92.184"
-      privesc: |
-        "ssh loneferret@192.168.92.184" -> "sudo -l"
-        "sudo -l" -> "sudo ht"
-        "sudo ht" -> "edit /etc/sudoers and allow loneferret to run all commands"
-        "edit /etc/sudoers and allow loneferret to run all commands" -> "sudo su"
-        "sudo su" -> "root"
   enumeration:
     steps:
       - description: |
@@ -99,6 +79,10 @@ writeup:
           Read data files from: /usr/bin/../share/nmap
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Sat Sep 28 20:47:18 2019 -- 1 IP address (1 host up) scanned in 10.35 seconds
+      - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
       - description: |
           We added an entry for this target within `/etc/hosts` file:
         command: |

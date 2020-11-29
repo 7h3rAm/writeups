@@ -4,7 +4,7 @@ digraph G {
   node [fontname="courier" fontsize=18 shape=box width=0.25 fillcolor="white" style="filled,solid"];
   edge [style=solid color="#665957" penwidth=0.75 arrowhead=vee arrowsize=0.75 ];
 
-  0[label="192.168.92.185" color="#0077cc" fillcolor="#e1ecf4" tooltip="Kioptrix: 2014 (#5)"];
+  0[label="192.168.92.185" color="#0077cc" fillcolor="#e1ecf4" tooltip="[VulnHub] Kioptrix: 2014 (#5)"];
   10[label="Mozilla4_browser" color="#3d8f58" fillcolor="#dcf0e2" tooltip="Phase #1:Enumeration"];
   11[label="burp proxy: useragent: Mozilla4_browser" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   12[label="/phptax/ webapp" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
@@ -26,7 +26,7 @@ digraph G {
 
   subgraph cluster_0 {
     node [style="filled,solid"];
-    label = "Kioptrix: 2014 (#5)";
+    label = "[VulnHub] Kioptrix: 2014 (#5)";
     color = "#665957";
     0 -> 1 [color="#665957"];
     1 -> 2 [color="#665957"];

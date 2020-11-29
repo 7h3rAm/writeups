@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [enumerate_proto_ftp](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_ftp&unscoped_q=enumerate_proto_ftp), [enumerate_proto_ssh](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_ssh&unscoped_q=enumerate_proto_ssh), [exploit_ssh_bruteforce](https://github.com/7h3rAm/writeups/search?q=exploit_ssh_bruteforce&unscoped_q=exploit_ssh_bruteforce), [enumerate_proto_http](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_http&unscoped_q=enumerate_proto_http), [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_plugin_hellodolly](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin_hellodolly&unscoped_q=exploit_wordpress_plugin_hellodolly), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [privesc_cron](https://github.com/7h3rAm/writeups/search?q=privesc_cron&unscoped_q=privesc_cron), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 
 ## Overview
-This is a writeup for VulnHub VM [BSides Vancouver: 2018 (Workshop)](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [BSides Vancouver: 2018 (Workshop)](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -93,21 +96,25 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. The FTP service allows `anonymous` login. We use it to download a list of users:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. The FTP service allows `anonymous` login. We use it to download a list of users:  
 ``` {.python .numberLines}
 ftp://192.168.92.169/public/users.txt.bk
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot03.png)  
+![writeup.enumeration.steps.3.1](./screenshot03.png)  
 
-3\. We find one disallowed entry within `robots.txt`:  
+4\. We find one disallowed entry within `robots.txt`:  
 ``` {.python .numberLines}
 http://192.168.92.169/robots.txt → /backup_wordpress
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot01.png)  
+![writeup.enumeration.steps.4.1](./screenshot01.png)  
 
 
 ### Findings

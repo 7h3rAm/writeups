@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_modssl](https://github.com/7h3rAm/writeups/search?q=exploit_modssl&unscoped_q=exploit_modssl), [privesc_modssl](https://github.com/7h3rAm/writeups/search?q=privesc_modssl&unscoped_q=privesc_modssl)  
 
 ## Overview
-This is a writeup for VulnHub VM [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -124,7 +127,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We explore the various directories and files found with `gobuster` scan but nothing interesting is found:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We explore the various directories and files found with `gobuster` scan but nothing interesting is found:  
 ``` {.python .numberLines}
 gobuster -u http://192.168.92.181:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp"
   http://192.168.92.181:80/index.html (Status: 200) [Size: 2890]
@@ -135,14 +142,14 @@ gobuster -u http://192.168.92.181:80/ -w /usr/share/seclists/Discovery/Web-Conte
 
 ```
 
-3\. We fallback on Nmap version detection for `443/tcp` and search exploits for `Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b` using `searchsploit`:  
+4\. We fallback on Nmap version detection for `443/tcp` and search exploits for `Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b` using `searchsploit`:  
 ``` {.python .numberLines}
 searchsploit mod_ssl
   Apache mod_ssl < 2.8.7 OpenSSL - 'OpenFuckV2.c' Remote Buffer Overflow (2)  | exploits/unix/remote/47080.c
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot01.png)  
+![writeup.enumeration.steps.4.1](./screenshot01.png)  
 
 
 ### Findings

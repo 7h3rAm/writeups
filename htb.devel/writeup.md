@@ -27,14 +27,15 @@ header-includes:
 **Date**: 05/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [exploit_ftp_anonymous](https://github.com/7h3rAm/writeups/search?q=exploit_ftp_anonymous&unscoped_q=exploit_ftp_anonymous), [exploit_ftp_web_root](https://github.com/7h3rAm/writeups/search?q=exploit_ftp_web_root&unscoped_q=exploit_ftp_web_root), [exploit_iis_asp_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_iis_asp_reverseshell&unscoped_q=exploit_iis_asp_reverseshell), [privesc_windows_ms11_046](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms11_046&unscoped_q=privesc_windows_ms11_046)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Devel](https://www.hackthebox.eu/home/machines/profile/3). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Devel](https://www.hackthebox.eu/home/machines/profile/3). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -75,11 +76,15 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find that the FTP service allows `anonymous` login and it shares directory with IIS server web root. This means we can upload `.aspx` reverse shell file via FTP and trigger it using the HTTP service:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+3\. We find that the FTP service allows `anonymous` login and it shares directory with IIS server web root. This means we can upload `.aspx` reverse shell file via FTP and trigger it using the HTTP service:  
+
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
+
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
 
 
 ### Findings

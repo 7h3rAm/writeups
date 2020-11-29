@@ -27,14 +27,15 @@ header-includes:
 **Date**: 12/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
 **Tags**: [exploit_defaultcreds](https://github.com/7h3rAm/writeups/search?q=exploit_defaultcreds&unscoped_q=exploit_defaultcreds), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Mirai](https://www.hackthebox.eu/home/machines/profile/64). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Mirai](https://www.hackthebox.eu/home/machines/profile/64). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -80,17 +81,21 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. From the HTTP response headers, we find that the HTTP service is running the [PiHole](https://pi-hole.net/) project:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-3\. We also find an `admin` directory from the `gobuster` scan:  
+3\. From the HTTP response headers, we find that the HTTP service is running the [PiHole](https://pi-hole.net/) project:  
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-4\. Upon visiting the `http://10.10.10.48/admin/` page, we get the default PiHole dashboard:  
+4\. We also find an `admin` directory from the `gobuster` scan:  
 
-![writeup.enumeration.steps.4.1](./screenshot03.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
+
+5\. Upon visiting the `http://10.10.10.48/admin/` page, we get the default PiHole dashboard:  
+
+![writeup.enumeration.steps.5.1](./screenshot03.png)  
 
 
 ### Findings

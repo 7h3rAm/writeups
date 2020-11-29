@@ -103,6 +103,10 @@ writeup:
           # Nmap done at Wed Jul 31 15:34:20 2019 -- 1 IP address (1 host up) scanned in 45.02 seconds
       - description: |
           Downloaded file from `http://192.168.92.141:10000/bin/brainpan.exe`.
+      - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
     findings:
       openports:
         - '9999/tcp   |  abyss?  |'

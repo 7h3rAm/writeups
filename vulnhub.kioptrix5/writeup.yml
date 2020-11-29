@@ -22,7 +22,7 @@ writeup:
     description: |
       This is a writeup for VulnHub VM [Kioptrix: 2014 (#5)](https://www.vulnhub.com/entry/kioptrix-2014-5,62/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
-      - "_ Kioptrix: 2014 (#5)/192.168.92.185":
+      - "_ [VulnHub] Kioptrix: 2014 (#5)/192.168.92.185":
         - ". Phase #1: Enumeration":
           - ". 80/tcp":
             - ". html comment: pChart2.1.3/index.php":
@@ -70,6 +70,10 @@ writeup:
           Read data files from: /usr/bin/../share/nmap
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Wed Oct  9 12:12:28 2019 -- 1 IP address (1 host up) scanned in 35.43 seconds
+      - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
       - description: |
           While exploring the `80/tcp` service, we find a HTML comment that points to `pChart2.1.3/index.php`:
         screenshot:

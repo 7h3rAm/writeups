@@ -47,30 +47,6 @@ writeup:
     ttps:
       "3000/tcp/http/Node.js Express framework": exploit_nodejs exploit_credsreuse exploit_mongodb privesc_setuid
 
-    overview:
-      enumeration: |
-        "192.168.92.189"
-        "192.168.92.189" → "22/tcp"
-        "192.168.92.189" → "3000/tcp"
-        "3000/tcp" → "node.js web app"
-        "node.js web app" → "/assets/js/app/controllers/home.js"
-        "/assets/js/app/controllers/home.js" → "/api/users/"
-      exploitation: |
-        "/api/users/" → "login to web app as user myP14ceAdm1nAcc0uNT"
-        "login to web app as user myP14ceAdm1nAcc0uNT" → "download backup"
-        "download backup" → "hardcoded mongodb creds for user mark"
-        "hardcoded mongodb creds for user mark" → "mongodb credentials reused for ssh"
-        "mongodb credentials reused for ssh" → "ssh (mark)"
-        "22/tcp" → "ssh (mark)"
-        "ssh (mark)" → "user.txt only accessible by user tom"
-        "user.txt only accessible by user tom" → "get netcat reverse shell via mongodb cmdexec bug"
-        "get netcat reverse shell via mongodb cmdexec bug" → "netcat (tom)"
-        "netcat (tom)" → "/home/tom/user.txt"
-      privesc: |
-        "netcat (tom)" → "found setuid file /usr/local/bin/backup"
-        "found setuid file /usr/local/bin/backup" → "use to backup root directory → fail"
-        "found setuid file /usr/local/bin/backup" → "use to backup symlink'd root directory → success"
-        "use to backup symlink'd root directory → success" → "tmp/test/root/root.txt"
   enumeration:
     steps:
       - description: |
@@ -106,6 +82,10 @@ writeup:
           Read data files from: /usr/bin/../share/nmap
           Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
           # Nmap done at Tue Oct 22 14:20:49 2019 -- 1 IP address (1 host up) scanned in 23.99 seconds
+      - description: |
+          Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:
+        screenshot:
+          - ./openports.png
       - description: |
           We explore the `3000/tcp` service and find a Node.js webapp. Upon exploring the source we come across few REST API calls of which the `http://192.168.92.189:3000/api/users/` call is very important as it lists regsitered usernames and password hashes. We use online tools to detect hash type as SHA256 and find plaintext strings for three users:
         command: |

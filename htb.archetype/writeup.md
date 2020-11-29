@@ -27,14 +27,15 @@ header-includes:
 **Date**: 28/Apr/2020  
 **Categories**: [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [enumerate_proto_smb](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_smb&unscoped_q=enumerate_proto_smb), [enumerate_proto_smb_anonymous_access](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_smb_anonymous_access&unscoped_q=enumerate_proto_smb_anonymous_access), [enumerate_proto_sql](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_sql&unscoped_q=enumerate_proto_sql), [enumerate_proto_sql_ssis_dtsconfig](https://github.com/7h3rAm/writeups/search?q=enumerate_proto_sql_ssis_dtsconfig&unscoped_q=enumerate_proto_sql_ssis_dtsconfig), [exploit_sql_login](https://github.com/7h3rAm/writeups/search?q=exploit_sql_login&unscoped_q=exploit_sql_login), [exploit_sql_xpcmdshell](https://github.com/7h3rAm/writeups/search?q=exploit_sql_xpcmdshell&unscoped_q=exploit_sql_xpcmdshell), [enumerate_app_powershell_history](https://github.com/7h3rAm/writeups/search?q=enumerate_app_powershell_history&unscoped_q=enumerate_app_powershell_history), [privesc_psexec_login](https://github.com/7h3rAm/writeups/search?q=privesc_psexec_login&unscoped_q=privesc_psexec_login)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Archetype](https://www.hackthebox.eu/home/start). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Archetype](https://www.hackthebox.eu/home/start). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -137,25 +138,29 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. We find `445/tcp` to be open and can use `smbclient` to check if it allows anonymous access:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. We find `445/tcp` to be open and can use `smbclient` to check if it allows anonymous access:  
 ``` {.python .numberLines}
 smbclient -N -L \\\\10.10.10.27
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-3\. We find a non-default share named `backups` which seems interesting. Let's explore further:  
+4\. We find a non-default share named `backups` which seems interesting. Let's explore further:  
 ``` {.python .numberLines}
 smbclient -N \\\\10.10.10.27\\backups
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
-4\. We find a `prod.dtsConfig` file on the SMB share. The `.dtsConfig` files are used by [SQL Server Integration Services (SSIS)](https://en.wikipedia.org/wiki/SQL_Server_Integration_Services). We find that this file contains plaintext credentials for the default SQL service user:  
+5\. We find a `prod.dtsConfig` file on the SMB share. The `.dtsConfig` files are used by [SQL Server Integration Services (SSIS)](https://en.wikipedia.org/wiki/SQL_Server_Integration_Services). We find that this file contains plaintext credentials for the default SQL service user:  
 
-![writeup.enumeration.steps.4.1](./screenshot03.png)  
+![writeup.enumeration.steps.5.1](./screenshot03.png)  
 
 
 ### Findings

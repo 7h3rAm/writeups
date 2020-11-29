@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_smb_nullsession](https://github.com/7h3rAm/writeups/search?q=exploit_smb_nullsession&unscoped_q=exploit_smb_nullsession), [exploit_smb_web_root](https://github.com/7h3rAm/writeups/search?q=exploit_smb_web_root&unscoped_q=exploit_smb_web_root), [exploit_php_reverseshell](https://github.com/7h3rAm/writeups/search?q=exploit_php_reverseshell&unscoped_q=exploit_php_reverseshell), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [exploit_wordpress_template](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_template&unscoped_q=exploit_wordpress_template), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
-This is a writeup for VulnHub VM [LazySysAdmin: 1](https://www.vulnhub.com/entry/lazysysadmin-1,205/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [LazySysAdmin: 1](https://www.vulnhub.com/entry/lazysysadmin-1,205/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -135,13 +138,17 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. Upon visiting the `80/tcp`, we find an unknown web application. Inspecting further, we find a few links via `robots.txt` file but none of those seem useful.  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.2.1](./openports.png)  
 
-![writeup.enumeration.steps.2.2](./screenshot02.png)  
+3\. Upon visiting the `80/tcp`, we find an unknown web application. Inspecting further, we find a few links via `robots.txt` file but none of those seem useful.  
 
-3\. We also find a `wordpress` directory from the `gobuster` scan report. Initial attempts to login via common default credentials didn't succeed. Since we already have read access to Wordpress installation via the open SMB share, we download the `wp-config.php` file and obtain the hardcoded MySQL credentials within it:  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
+
+![writeup.enumeration.steps.3.2](./screenshot02.png)  
+
+4\. We also find a `wordpress` directory from the `gobuster` scan report. Initial attempts to login via common default credentials didn't succeed. Since we already have read access to Wordpress installation via the open SMB share, we download the `wp-config.php` file and obtain the hardcoded MySQL credentials within it:  
 ``` {.python .numberLines}
 gobuster -u http://192.168.92.191:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp"
 smbclient //192.168.92.191/share$
@@ -150,11 +157,11 @@ smbclient //192.168.92.191/share$
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot07.png)  
+![writeup.enumeration.steps.4.1](./screenshot07.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot08.png)  
+![writeup.enumeration.steps.4.2](./screenshot08.png)  
 
-4\. We explore the SMB service and find that there is a user named `togie` on this system. Other than that, there is an open (readonly) SMB share and it is also the web root. We find a lot of interesting files within this directory, particularly the `deets.txt` file that has a password `12345`, possibly for user `togie`:  
+5\. We explore the SMB service and find that there is a user named `togie` on this system. Other than that, there is an open (readonly) SMB share and it is also the web root. We find a lot of interesting files within this directory, particularly the `deets.txt` file that has a password `12345`, possibly for user `togie`:  
 ``` {.python .numberLines}
 enum4linux -a -M -l -d 192.168.92.191
 smbclient //192.168.92.191/share$
@@ -162,11 +169,11 @@ http://192.168.92.191/deets.txt
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot03.png)  
+![writeup.enumeration.steps.5.1](./screenshot03.png)  
 
-![writeup.enumeration.steps.4.2](./screenshot03a.png)  
+![writeup.enumeration.steps.5.2](./screenshot03a.png)  
 
-![writeup.enumeration.steps.4.3](./screenshot04.png)  
+![writeup.enumeration.steps.5.3](./screenshot04.png)  
 
 
 ### Findings

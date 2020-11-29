@@ -27,14 +27,15 @@ header-includes:
 **Date**: 01/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [exploit_smb_ms08_067](https://github.com/7h3rAm/writeups/search?q=exploit_smb_ms08_067&unscoped_q=exploit_smb_ms08_067)  
-**InfoCard**:  
-![writeup.metadata.infocard](./infocard.png)
 
 ## Overview
-This is a writeup for HackTheBox VM [Legacy](https://www.hackthebox.eu/home/machines/profile/2). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for HackTheBox VM [Legacy](https://www.hackthebox.eu/home/machines/profile/2). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -100,7 +101,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. From the Nmap scan results, we find that the target system has SMB service running and is a Windows XP system:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. From the Nmap scan results, we find that the target system has SMB service running and is a Windows XP system:  
 ``` {.python .numberLines}
 | smb-os-discovery:
 |   OS: Windows XP (Windows 2000 LAN Manager)

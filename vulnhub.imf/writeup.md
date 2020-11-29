@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_php_fileupload_bypass](https://github.com/7h3rAm/writeups/search?q=exploit_php_fileupload_bypass&unscoped_q=exploit_php_fileupload_bypass), [privesc_bof](https://github.com/7h3rAm/writeups/search?q=privesc_bof&unscoped_q=privesc_bof)  
 
 ## Overview
-This is a writeup for VulnHub VM [IMF: 1](https://www.vulnhub.com/entry/imf-1,162/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [IMF: 1](https://www.vulnhub.com/entry/imf-1,162/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -64,7 +67,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-2\. The Nmap NSE script `http-comments-displayer` found out first flag on the `contact.php` page:  
+2\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.2.1](./openports.png)  
+
+3\. The Nmap NSE script `http-comments-displayer` found out first flag on the `contact.php` page:  
 ``` {.python .numberLines}
 view-source:http://192.168.92.178/contact.php
   |     Path: http://192.168.92.178:80/contact.php
@@ -77,9 +84,9 @@ b64d "YWxsdGhlZmlsZXM=" ; echo
 
 ```
 
-![writeup.enumeration.steps.2.1](./screenshot01.png)  
+![writeup.enumeration.steps.3.1](./screenshot01.png)  
 
-3\. We also find base64 strings used as filenames for some javascript files. Decoding these strings reveal the second flag:  
+4\. We also find base64 strings used as filenames for some javascript files. Decoding these strings reveal the second flag:  
 ``` {.python .numberLines}
 view-source:http://192.168.92.178/index.php
   <script src="js/ZmxhZzJ7YVcxbVl.js"></script>
@@ -94,20 +101,20 @@ b64d "aW1mYWRtaW5pc3RyYXRvcg=="
 
 ```
 
-![writeup.enumeration.steps.3.1](./screenshot02.png)  
+![writeup.enumeration.steps.4.1](./screenshot02.png)  
 
-![writeup.enumeration.steps.3.2](./screenshot03.png)  
+![writeup.enumeration.steps.4.2](./screenshot03.png)  
 
-4\. Following up on the `imfadministrator` string, it turned out to be a directory name. Visting this link gives a login page with an interesting comment in HTML source. We made a few attempts but could not successfully login:  
+5\. Following up on the `imfadministrator` string, it turned out to be a directory name. Visting this link gives a login page with an interesting comment in HTML source. We made a few attempts but could not successfully login:  
 ``` {.python .numberLines}
 http://192.168.92.178/imfadministrator/index.php
   <!-- I couldn't get the SQL working, so I hard-coded the password. It's still mad secure through. - Roger -->
 
 ```
 
-![writeup.enumeration.steps.4.1](./screenshot04.png)  
+![writeup.enumeration.steps.5.1](./screenshot04.png)  
 
-5\. We intercept the login request via Burp proxy and change the `pass` field to an array which confuses the application and returns a page with the third flag:  
+6\. We intercept the login request via Burp proxy and change the `pass` field to an array which confuses the application and returns a page with the third flag:  
 ``` {.python .numberLines}
 flag3{Y29udGludWVUT2Ntcw==}
   b64d "Y29udGludWVUT2Ntcw=="
@@ -115,24 +122,24 @@ flag3{Y29udGludWVUT2Ntcw==}
 
 ```
 
-![writeup.enumeration.steps.5.1](./screenshot05.png)  
+![writeup.enumeration.steps.6.1](./screenshot05.png)  
 
-![writeup.enumeration.steps.5.2](./screenshot06.png)  
+![writeup.enumeration.steps.6.2](./screenshot06.png)  
 
-![writeup.enumeration.steps.5.3](./screenshot07.png)  
+![writeup.enumeration.steps.6.3](./screenshot07.png)  
 
-![writeup.enumeration.steps.5.4](./screenshot08.png)  
+![writeup.enumeration.steps.6.4](./screenshot08.png)  
 
-6\. We explored the CMS link but could not find anything interesting apart from the `pagename` parameter in URL. Upon further enumeration, the URL handler was found to be vulnerable to SQLi:  
+7\. We explored the CMS link but could not find anything interesting apart from the `pagename` parameter in URL. Upon further enumeration, the URL handler was found to be vulnerable to SQLi:  
 ``` {.python .numberLines}
 http://192.168.92.178/imfadministrator/cms.php?pagename=home'
   Warning: mysqli_fetch_row() expects parameter 1 to be mysqli_result, boolean given in /var/www/html/imfadministrator/cms.php on line 29
 
 ```
 
-![writeup.enumeration.steps.6.1](./screenshot09.png)  
+![writeup.enumeration.steps.7.1](./screenshot09.png)  
 
-7\. We fire up `sqlmap` on this URL and from the database dump, found a new page containing an image `whiteboard.jpg`. This image has a QR code that encodes the fourth flag:  
+8\. We fire up `sqlmap` on this URL and from the database dump, found a new page containing an image `whiteboard.jpg`. This image has a QR code that encodes the fourth flag:  
 ``` {.python .numberLines}
 http://192.168.92.178/imfadministrator/images/whiteboard.jpg
   flag4{dXBsb2Fkcjk0Mi5waHA=}
@@ -141,9 +148,9 @@ http://192.168.92.178/imfadministrator/images/whiteboard.jpg
 
 ```
 
-![writeup.enumeration.steps.7.1](./screenshot10.png)  
+![writeup.enumeration.steps.8.1](./screenshot10.png)  
 
-![writeup.enumeration.steps.7.2](./screenshot11.png)  
+![writeup.enumeration.steps.8.2](./screenshot11.png)  
 
 
 ### Findings

@@ -29,10 +29,13 @@ header-includes:
 **Tags**: [exploit_bof](https://github.com/7h3rAm/writeups/search?q=exploit_bof&unscoped_q=exploit_bof), [privesc_anansi](https://github.com/7h3rAm/writeups/search?q=privesc_anansi&unscoped_q=privesc_anansi), [privesc_sudo](https://github.com/7h3rAm/writeups/search?q=privesc_sudo&unscoped_q=privesc_sudo)  
 
 ## Overview
-This is a writeup for VulnHub VM [Brainpan: 1](https://www.vulnhub.com/entry/brainpan-1,51/). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+This is a writeup for VulnHub VM [Brainpan: 1](https://www.vulnhub.com/entry/brainpan-1,51/). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
+![writeup.overview.machinescli](./machinescli.png)
 
 ### Killchain
+Here's the killchain (`enumeration` → `exploitation` → `privilege escalation`) for this machine:
+
 ![writeup.overview.killchain](./killchain.png)
 
 
@@ -106,6 +109,10 @@ Service detection performed. Please report any incorrect results at https://nmap
 ```
 
 2\. Downloaded file from `http://192.168.92.141:10000/bin/brainpan.exe`.  
+
+3\. Here's the summary of open ports and associated [AutoRecon](https://github.com/Tib3rius/AutoRecon) scan files:  
+
+![writeup.enumeration.steps.3.1](./openports.png)  
 
 
 ### Findings
