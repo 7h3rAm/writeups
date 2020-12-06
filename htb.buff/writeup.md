@@ -71,7 +71,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ![writeup.enumeration.steps.2.1](./openports.png)  
 
-3\. We find '8080/tcp' to be open and running `Apache httpd 2.4.43`. We start by looking at the webpage and find it be hosting a fitness center portal:  
+3\. We find `8080/tcp` to be open and running `Apache httpd 2.4.43`. We start by looking at the webpage and find it be hosting a fitness center portal:  
 
 ![writeup.enumeration.steps.3.1](./screenshot01.png)  
 

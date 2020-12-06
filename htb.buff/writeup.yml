@@ -61,7 +61,7 @@ writeup:
         screenshot:
           - ./openports.png
       - description: |
-          We find '8080/tcp' to be open and running `Apache httpd 2.4.43`. We start by looking at the webpage and find it be hosting a fitness center portal:
+          We find `8080/tcp` to be open and running `Apache httpd 2.4.43`. We start by looking at the webpage and find it be hosting a fitness center portal:
         command: |
         screenshot:
           - ./screenshot01.png
