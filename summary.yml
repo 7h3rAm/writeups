@@ -1,8 +1,8 @@
 summary:
   counts:
-    htbnix: 137
+    htbnix: 140
     htboscplike: 83
-    htbwindows: 58
+    htbwindows: 59
     oscplikenix: 168
     oscplikewindows: 36
     ownedhtb: 25
@@ -25,39 +25,39 @@ summary:
     ownedwindows: 12
     percent: '15.77'
     percenthtb: '16.87'
-    percentnix: '4.31'
+    percentnix: '4.29'
     percentthm: '2.70'
     percentvh: '19.83'
-    percentwindows: '13.33'
-    perhtb: 12.82051282051282
-    perhtbnix: 9.48905109489051
+    percentwindows: '13.11'
+    perhtb: 12.562814070351758
+    perhtbnix: 9.285714285714286
     perhtboscplike: 28.915662650602407
-    perhtbwindows: 20.689655172413794
-    pernix: 5.138888888888888
+    perhtbwindows: 20.33898305084746
+    pernix: 5.117565698478561
     peroscplike: 18.672199170124482
     peroscplikenix: 19.642857142857142
     peroscplikewindows: 33.33333333333333
-    perthm: 0.3424657534246575
+    perthm: 0.32786885245901637
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 4.664179104477612
+    pertotal: 4.591368227731864
     pervh: 4.102564102564102
     pervhnix: 4.1166380789022305
     pervhoscplike: 17.355371900826448
     pervhwindows: 0.0
-    perwindows: 20.0
+    perwindows: 19.672131147540984
     thmnix: 0
     thmoscplike: 37
     thmwindows: 0
     total: 0
-    totalhtb: 195
-    totalnix: 720
+    totalhtb: 199
+    totalnix: 723
     totaloscplike: 241
-    totalthm: 292
-    totaltotal: 1072
+    totalthm: 305
+    totaltotal: 1089
     totalvh: 585
-    totalwindows: 60
+    totalwindows: 61
     vhnix: 583
     vhoscplike: 121
     vhwindows: 2
@@ -941,6 +941,25 @@ summary:
             - exploit_gymsystem_rce
             - exploit_cloudme_bof
             privesc: []
+        ippsec:
+          description:
+            00:00:00 - Introduction: https://www.youtube.com/watch?v=-KBm3tBNK74&t=0s
+            00:00:45 - Begin of nmap and poking at the website: https://www.youtube.com/watch?v=-KBm3tBNK74&t=45s
+            00:03:00 - Checking when an image was uploaded to the server with wget and exiftool: https://www.youtube.com/watch?v=-KBm3tBNK74&t=180s
+            00:04:10 - Contact.php discloses the software Gym Management Software is being used. Examining the exploit: https://www.youtube.com/watch?v=-KBm3tBNK74&t=250s
+            00:06:10 - Editing the Python Exploit to force everything through a proxy, so we can examine what the exploit does.: https://www.youtube.com/watch?v=-KBm3tBNK74&t=370s
+            00:08:30 - Running the exploit and examining in Burp: https://www.youtube.com/watch?v=-KBm3tBNK74&t=510s
+            00:14:20 - Having trouble getting a reverse shell via PS, Uploading NC.EXE to do it: https://www.youtube.com/watch?v=-KBm3tBNK74&t=860s
+            '00:17:10 - Running WinPEAS.exe ': https://www.youtube.com/watch?v=-KBm3tBNK74&t=1030s
+            00:21:00 - Discovering CloudMe in the Downloads directory then looking at the exploit: https://www.youtube.com/watch?v=-KBm3tBNK74&t=1260s
+            00:23:20 - CloudMe isn't listening on a port... Reverting and getting a shell again: https://www.youtube.com/watch?v=-KBm3tBNK74&t=1400s
+            00:25:30 - Reverse shell returned... Still waiting for CloudMe to listen on a port: https://www.youtube.com/watch?v=-KBm3tBNK74&t=1530s
+            00:27:27 - Uploading Chisel to the box, then doing a port forward for MySQL to enumerate the database: https://www.youtube.com/watch?v=-KBm3tBNK74&t=1647s
+            00:31:00 - Finding MySQL Credentials in db.php, then checking the database from our box thanks to Chisel: https://www.youtube.com/watch?v=-KBm3tBNK74&t=1860s
+            00:34:30 - Replacing the payload in the CloudMe exploit with a reverse shell: https://www.youtube.com/watch?v=-KBm3tBNK74&t=2070s
+            00:37:20 - Running the exploit and getting root: https://www.youtube.com/watch?v=-KBm3tBNK74&t=2240s
+          name: HackTheBox - Buff
+          video_url: https://www.youtube.com/watch?v=-KBm3tBNK74&t=0
     name: Buff
     overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.buff/killchain.png"
       width="100" height="100" />
@@ -3365,14 +3384,14 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/292 (0.34%)` | `25/195 (12.82%)` |  `24/585 (4.10%)` | `45/241
-      (18.67%)` | `50/1072 (4.66%)` |
+      |  Total   | `1/305 (0.33%)` | `25/199 (12.56%)` |  `24/585 (4.10%)` | `45/241
+      (18.67%)` | `50/1089 (4.59%)` |
 
-      | Windows  |  `0/0 (0.00%)`  |  `12/58 (20.69%)` |   `0/2 (0.00%)`   |  `12/36
-      (33.33%)` |  `12/60 (20.00%)` |
+      | Windows  |  `0/0 (0.00%)`  |  `12/59 (20.34%)` |   `0/2 (0.00%)`   |  `12/36
+      (33.33%)` |  `12/61 (19.67%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/137 (9.49%)` |  `24/583 (4.12%)` | `33/168
-      (19.64%)` |  `37/720 (5.14%)` |
+      |   *nix   |  `0/0 (0.00%)`  |  `13/140 (9.29%)` |  `24/583 (4.12%)` | `33/168
+      (19.64%)` |  `37/723 (5.12%)` |
 
       | OSCPlike |  `0/37 (0.00%)` |  `24/83 (28.92%)` | `21/121 (17.36%)` |                   |
       `45/241 (18.67%)` |'
