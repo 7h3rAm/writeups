@@ -1,6 +1,6 @@
 summary:
   counts:
-    htbnix: 150
+    htbnix: 151
     htboscplike: 86
     htbwindows: 64
     oscplikenix: 170
@@ -29,19 +29,19 @@ summary:
     percentthm: '2.63'
     percentvh: '19.83'
     percentwindows: '12.12'
-    perhtb: 11.682242990654206
-    perhtbnix: 8.666666666666668
+    perhtb: 11.627906976744185
+    perhtbnix: 8.609271523178808
     perhtboscplike: 27.906976744186046
     perhtbwindows: 18.75
-    pernix: 4.562268803945746
+    pernix: 4.556650246305419
     peroscplike: 18.367346938775512
     peroscplikenix: 19.411764705882355
     peroscplikewindows: 32.432432432432435
-    perthm: 0.2695417789757413
+    perthm: 0.267379679144385
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 4.006410256410256
+    pertotal: 3.993610223642172
     pervh: 3.619909502262444
     pervhnix: 3.6308623298033282
     pervhoscplike: 17.355371900826448
@@ -51,11 +51,11 @@ summary:
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 214
-    totalnix: 811
+    totalhtb: 215
+    totalnix: 812
     totaloscplike: 245
-    totalthm: 371
-    totaltotal: 1248
+    totalthm: 374
+    totaltotal: 1252
     totalvh: 663
     totalwindows: 66
     vhnix: 661
@@ -3384,14 +3384,14 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/371 (0.27%)` | `25/214 (11.68%)` |  `24/663 (3.62%)` | `45/245
-      (18.37%)` | `50/1248 (4.01%)` |
+      |  Total   | `1/374 (0.27%)` | `25/215 (11.63%)` |  `24/663 (3.62%)` | `45/245
+      (18.37%)` | `50/1252 (3.99%)` |
 
       | Windows  |  `0/0 (0.00%)`  |  `12/64 (18.75%)` |   `0/2 (0.00%)`   |  `12/37
       (32.43%)` |  `12/66 (18.18%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/150 (8.67%)` |  `24/661 (3.63%)` | `33/170
-      (19.41%)` |  `37/811 (4.56%)` |
+      |   *nix   |  `0/0 (0.00%)`  |  `13/151 (8.61%)` |  `24/661 (3.63%)` | `33/170
+      (19.41%)` |  `37/812 (4.56%)` |
 
       | OSCPlike |  `0/38 (0.00%)` |  `24/86 (27.91%)` | `21/121 (17.36%)` |                   |
       `45/245 (18.37%)` |'
