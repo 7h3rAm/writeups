@@ -1,6 +1,6 @@
 summary:
   counts:
-    htbnix: 160
+    htbnix: 163
     htboscplike: 94
     htbwindows: 66
     oscplikenix: 177
@@ -25,25 +25,25 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.61'
+    percentnix: '3.58'
     percentthm: '2.63'
     percentvh: '19.67'
     percentwindows: '11.76'
-    perhtb: 11.061946902654867
-    perhtbnix: 8.125
+    perhtb: 10.91703056768559
+    perhtbnix: 7.975460122699387
     perhtboscplike: 26.595744680851062
     perhtbwindows: 18.181818181818183
-    pernix: 4.312354312354312
+    pernix: 4.2675893886966545
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.24154589371980675
+    perthm: 0.23866348448687352
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.731343283582089
-    pervh: 3.428571428571429
-    pervhnix: 3.4383954154727796
+    pertotal: 3.6927621861152145
+    pervh: 3.39943342776204
+    pervhnix: 3.4090909090909087
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
     perwindows: 17.647058823529413
@@ -51,14 +51,14 @@ summary:
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 226
-    totalnix: 858
+    totalhtb: 229
+    totalnix: 867
     totaloscplike: 254
-    totalthm: 414
-    totaltotal: 1340
-    totalvh: 700
+    totalthm: 419
+    totaltotal: 1354
+    totalvh: 706
     totalwindows: 68
-    vhnix: 698
+    vhnix: 704
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -3384,14 +3384,14 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/414 (0.24%)` | `25/226 (11.06%)` |  `24/700 (3.43%)` | `46/254
-      (18.11%)` | `50/1340 (3.73%)` |
+      |  Total   | `1/419 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254
+      (18.11%)` | `50/1354 (3.69%)` |
 
       | Windows  |  `0/0 (0.00%)`  |  `12/66 (18.18%)` |   `0/2 (0.00%)`   |  `12/39
       (30.77%)` |  `12/68 (17.65%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/160 (8.12%)` |  `24/698 (3.44%)` | `34/177
-      (19.21%)` |  `37/858 (4.31%)` |
+      |   *nix   |  `0/0 (0.00%)`  |  `13/163 (7.98%)` |  `24/704 (3.41%)` | `34/177
+      (19.21%)` |  `37/867 (4.27%)` |
 
       | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
