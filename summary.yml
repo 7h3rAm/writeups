@@ -37,11 +37,11 @@ summary:
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.23866348448687352
+    perthm: 0.23696682464454977
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.6927621861152145
+    pertotal: 3.6845983787767134
     pervh: 3.39943342776204
     pervhnix: 3.4090909090909087
     pervhoscplike: 17.21311475409836
@@ -54,8 +54,8 @@ summary:
     totalhtb: 229
     totalnix: 867
     totaloscplike: 254
-    totalthm: 419
-    totaltotal: 1354
+    totalthm: 422
+    totaltotal: 1357
     totalvh: 706
     totalwindows: 68
     vhnix: 704
@@ -3384,8 +3384,8 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/419 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254
-      (18.11%)` | `50/1354 (3.69%)` |
+      |  Total   | `1/422 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254
+      (18.11%)` | `50/1357 (3.68%)` |
 
       | Windows  |  `0/0 (0.00%)`  |  `12/66 (18.18%)` |   `0/2 (0.00%)`   |  `12/39
       (30.77%)` |  `12/68 (17.65%)` |
@@ -4051,6 +4051,13 @@ summary:
           url: https://www.vulnhub.com/entry/hackfest2016-quaoar,180/
           verbose_id: vh#180
           writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.quaoar/writeup.pdf
+      enumerate_file_modified_time_window:
+        cli: 'find / -newermt 2020-12-27 ! -newermt 2020-12-30 -type f 2>/def/null
+
+          '
+        description: find files modified within a time window
+        references:
+        - https://www.tripwire.com/state-of-security/security-data-protection/passing-offensive-security-certified-professional-exam-oscp/
       enumerate_nmap_initial:
         cli: 'sudo nmap -Pn -sC -sV -O -oN initial <attackerip>
 

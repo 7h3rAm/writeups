@@ -75,7 +75,7 @@
 ### 📊 Counts [🡑](#stats)
 |    #     |    TryHackMe    |     HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
 |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
-|  Total   | `1/419 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254 (18.11%)` | `50/1354 (3.69%)` |
+|  Total   | `1/422 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254 (18.11%)` | `50/1357 (3.68%)` |
 | Windows  |  `0/0 (0.00%)`  |  `12/66 (18.18%)` |   `0/2 (0.00%)`   |  `12/39 (30.77%)` |  `12/68 (17.65%)` |
 |   *nix   |  `0/0 (0.00%)`  |  `13/163 (7.98%)` |  `24/704 (3.41%)` | `34/177 (19.21%)` |  `37/867 (4.27%)` |
 | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   | `46/254 (18.11%)` |
@@ -464,6 +464,17 @@ extract hashes from wp mysql db and crack via john:
 | 4. | [DC: 6](https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/writeup.pdf) | [vh#315](https://www.vulnhub.com/entry/dc-6,315/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.dc6/killchain.png" width="100" height="100" /> | [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_activitymonitor`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_activitymonitor), [`privesc_mysql_creds`](https://github.com/7h3rAm/writeups#privesc_mysql_creds), [`privesc_sudo`](https://github.com/7h3rAm/writeups#privesc_sudo), [`privesc_nmap`](https://github.com/7h3rAm/writeups#privesc_nmap) |
 | 5. | [BSides Vancouver: 2018 (Workshop)](https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/writeup.pdf) | [vh#231](https://www.vulnhub.com/entry/bsides-vancouver-2018-workshop,231/) | <img src="https://github.com/7h3rAm/writeups/blob/master/vulnhub.bsidesvancouver2018workshop/killchain.png" width="100" height="100" /> | [`enumerate_proto_ftp`](https://github.com/7h3rAm/writeups#enumerate_proto_ftp), [`enumerate_proto_ssh`](https://github.com/7h3rAm/writeups#enumerate_proto_ssh), [`exploit_ssh_bruteforce`](https://github.com/7h3rAm/writeups#exploit_ssh_bruteforce), [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http), [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress), [`exploit_wordpress_plugin_hellodolly`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin_hellodolly), [`exploit_php_reverseshell`](https://github.com/7h3rAm/writeups#exploit_php_reverseshell), [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron), [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers) |
   
+  
+---
+<a name="enumerate_file_modified_time_window"></a>
+#### enumerate_file_modified_time_window [⇡](#enumerate)  
+find files modified within a time window  
+```shell
+find / -newermt 2020-12-27 ! -newermt 2020-12-30 -type f 2>/def/null
+
+```
+  
+[+] https://www.tripwire.com/state-of-security/security-data-protection/passing-offensive-security-certified-professional-exam-oscp/  
   
 ---
 <a name="enumerate_nmap_initial"></a>

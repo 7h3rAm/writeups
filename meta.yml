@@ -659,6 +659,13 @@ meta:
             wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://<targetip>:<targetport>/login.php
   ttps:
     enumerate:
+    enumerate:
+      enumerate_file_modified_time_window:
+        description: find files modified within a time window
+        cli: |
+          find / -newermt 2020-12-27 ! -newermt 2020-12-30 -type f 2>/def/null
+        references:
+          - https://www.tripwire.com/state-of-security/security-data-protection/passing-offensive-security-certified-professional-exam-oscp/
       enumerate_nmap_initial:
         description: run nmap initial scans
         cli: |
