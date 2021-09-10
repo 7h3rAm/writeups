@@ -6,7 +6,7 @@ writeup:
     name: CronOS
     points: 30
     path: htb.cronos
-    url: https://www.hackthebox.eu/home/machines/profile/11
+    url: https://app.hackthebox.eu/machines/11
     infocard: ./infocard.png
     references:
       - https://www.youtube.com/watch?v=CYeVUmOar3I
@@ -20,7 +20,7 @@ writeup:
       - privesc_cron
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Cronos](https://www.hackthebox.eu/home/machines/profile/11). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Cronos](https://app.hackthebox.eu/machines/11). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Cronos/10.10.10.13":
         - ". Phase #1: Enumeration":

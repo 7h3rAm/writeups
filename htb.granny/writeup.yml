@@ -6,7 +6,7 @@ writeup:
     name: Granny
     points: 20
     path: htb.granny
-    url: https://www.hackthebox.eu/home/machines/profile/14
+    url: https://app.hackthebox.eu/machines/14
     infocard: ./infocard.png
     references:
       - https://marcelowoloszyn.cl/hackthebox/hack-the-box-write-up-granny/
@@ -20,7 +20,7 @@ writeup:
       - privesc_windows_ms15_051
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Granny](https://www.hackthebox.eu/home/machines/profile/14). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Granny](https://app.hackthebox.eu/machines/14). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Granny/10.10.10.15":
         - ". Phase #1: Enumeration":

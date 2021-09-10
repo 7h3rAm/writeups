@@ -6,7 +6,7 @@ writeup:
     name: Mirai
     points: 20
     path: htb.mirai
-    url: https://www.hackthebox.eu/home/machines/profile/64
+    url: https://app.hackthebox.eu/machines/64
     infocard: ./infocard.png
     references:
       - https://www.youtube.com/watch?v=SRmvRGUuuno
@@ -19,7 +19,7 @@ writeup:
       - privesc_sudoers
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Mirai](https://www.hackthebox.eu/home/machines/profile/64). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Mirai](https://app.hackthebox.eu/machines/64). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Mirai/10.10.10.48":
         - ". 22/tcp":

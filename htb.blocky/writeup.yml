@@ -6,7 +6,7 @@ writeup:
     name: Blocky
     points: 20
     path: htb.blocky
-    url: https://www.hackthebox.eu/home/machines/profile/48
+    url: https://app.hackthebox.eu/machines/48
     infocard: ./infocard.png
     references:
       - https://www.youtube.com/watch?v=C2O-rilXA6I
@@ -21,7 +21,7 @@ writeup:
       - privesc_sudoers
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Blocky](https://www.hackthebox.eu/home/machines/profile/48). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Blocky](https://app.hackthebox.eu/machines/48). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Blocky/10.10.10.37":
         - ". Phase #1: Enumeration":

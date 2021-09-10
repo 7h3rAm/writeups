@@ -6,7 +6,7 @@ writeup:
     name: Optimum
     points: 20
     path: htb.optimum
-    url: https://www.hackthebox.eu/home/machines/profile/6
+    url: https://app.hackthebox.eu/machines/6
     infocard: ./infocard.png
     references:
       - https://reboare.github.io/hackthebox/htb-optimum.html
@@ -19,7 +19,7 @@ writeup:
       - privesc_windows_ms16_098
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Optimum](https://www.hackthebox.eu/home/machines/profile/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Optimum](https://app.hackthebox.eu/machines/6). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Optimum/10.10.10.8":
         - ". Phase #1: Enumeration":

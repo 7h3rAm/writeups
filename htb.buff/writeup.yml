@@ -6,7 +6,7 @@ writeup:
     name: Buff
     points: 20
     path: htb.buff
-    url: https://www.hackthebox.eu/home/machines/profile/263
+    url: https://app.hackthebox.eu/machines/263
     categories:
       - windows
       - oscp
@@ -17,7 +17,7 @@ writeup:
       - exploit_cloudme_bof
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Buff](https://www.hackthebox.eu/home/machines/profile/263). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Buff](https://app.hackthebox.eu/machines/263). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Buff/10.10.10.198":
         - ". 8080/tcp":

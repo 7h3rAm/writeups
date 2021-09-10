@@ -6,7 +6,7 @@ writeup:
     name: Archetype
     points: 10
     path: htb.archetype
-    url: https://www.hackthebox.eu/home/start
+    url: https://app.hackthebox.eu/machines/287
     infocard: ./infocard.png
     categories:
       - htb
@@ -22,7 +22,7 @@ writeup:
       - privesc_psexec_login
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Archetype](https://www.hackthebox.eu/home/start). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Archetype](https://app.hackthebox.eu/machines/287). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Archetype/10.10.10.27":
         - ". Phase #1: Enumeration":

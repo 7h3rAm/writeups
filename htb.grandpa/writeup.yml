@@ -6,7 +6,7 @@ writeup:
     name: Grandpa
     points: 20
     path: htb.grandpa
-    url: https://www.hackthebox.eu/home/machines/profile/13
+    url: https://app.hackthebox.eu/machines/13
     infocard: ./infocard.png
     categories:
       - oscp
@@ -17,7 +17,7 @@ writeup:
       - privesc_windows_ms14_070
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Grandpa](https://www.hackthebox.eu/home/machines/profile/13). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Grandpa](https://app.hackthebox.eu/machines/13). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Grandpa/10.10.10.14":
         - ". Phase #1: Enumeration":

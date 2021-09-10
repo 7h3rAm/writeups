@@ -6,7 +6,7 @@ writeup:
     name: Legacy
     points: 20
     path: htb.legacy
-    url: https://www.hackthebox.eu/home/machines/profile/2
+    url: https://app.hackthebox.eu/machines/2
     infocard: ./infocard.png
     references:
       - https://medium.com/@_C_3PJoe/htb-retired-box-walkthrough-legacy-147bbcc9ff02
@@ -18,7 +18,7 @@ writeup:
       - exploit_smb_ms08_067
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Legacy](https://www.hackthebox.eu/home/machines/profile/2). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Legacy](https://app.hackthebox.eu/machines/2). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Legacy/10.10.10.4":
         - ". Phase #1: Enumeration":

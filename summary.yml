@@ -1,8 +1,8 @@
 summary:
   counts:
-    htbnix: 163
+    htbnix: 168
     htboscplike: 94
-    htbwindows: 66
+    htbwindows: 70
     oscplikenix: 177
     oscplikewindows: 39
     ownedhtb: 25
@@ -25,40 +25,40 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.58'
+    percentnix: '3.54'
     percentthm: '2.63'
     percentvh: '19.67'
-    percentwindows: '11.76'
-    perhtb: 10.91703056768559
-    perhtbnix: 7.975460122699387
+    percentwindows: '11.11'
+    perhtb: 10.504201680672269
+    perhtbnix: 7.738095238095238
     perhtboscplike: 26.595744680851062
-    perhtbwindows: 18.181818181818183
-    pernix: 4.2675893886966545
+    perhtbwindows: 17.142857142857142
+    pernix: 4.223744292237443
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.23696682464454977
+    perthm: 0.2358490566037736
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.6845983787767134
-    pervh: 3.39943342776204
-    pervhnix: 3.4090909090909087
+    pertotal: 3.6443148688046647
+    pervh: 3.3802816901408446
+    pervhnix: 3.389830508474576
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
-    perwindows: 17.647058823529413
+    perwindows: 16.666666666666664
     thmnix: 0
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 229
-    totalnix: 867
+    totalhtb: 238
+    totalnix: 876
     totaloscplike: 254
-    totalthm: 422
-    totaltotal: 1357
-    totalvh: 706
-    totalwindows: 68
-    vhnix: 704
+    totalthm: 424
+    totaltotal: 1372
+    totalvh: 710
+    totalwindows: 72
+    vhnix: 708
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -570,19 +570,45 @@ summary:
   - datetime: 20200428
     infra: HackTheBox
     machine:
+      difficulty: startingpoint
+      difficulty_ratings: null
+      id: 287
+      infrastructure: hackthebox
+      ip: 10.10.10.27
       killchainurl: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png
+      matrix:
+        aggregate: []
+        maker: []
       matrixurl: null
       name: Archetype
+      order: 1
       os: Windows
-      oscplike: true
+      oscplike: false
       owned_root: true
       owned_user: true
+      points: 0
       private: false
       ratingsurl: null
-      url: https://www.hackthebox.eu/home/start
-      verbose_id: hackthebox#archetype
+      shortname: archetype
+      url: https://app.hackthebox.eu/machines/287
+      verbose_id: hackthebox#287
+      vip: 0
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
+      writeups:
+        7h3rAm:
+          ttps:
+            enumerate:
+            - enumerate_proto_smb
+            - enumerate_proto_smb_anonymous_access
+            - enumerate_proto_sql
+            - enumerate_proto_sql_ssis_dtsconfig
+            - enumerate_app_powershell_history
+            exploit:
+            - exploit_sql_login
+            - exploit_sql_xpcmdshell
+            privesc:
+            - privesc_psexec_login
     name: Archetype
     overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
       width="100" height="100" />
@@ -597,7 +623,7 @@ summary:
     - exploit_sql_xpcmdshell
     - enumerate_app_powershell_history
     - privesc_psexec_login
-    url: https://www.hackthebox.eu/home/start
+    url: https://app.hackthebox.eu/machines/287
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
   - datetime: 20200625
     infra: HackTheBox
@@ -651,7 +677,7 @@ summary:
       retired_date: '2018-04-28'
       root_owns: 14742
       shortname: bashed
-      url: https://www.hackthebox.eu/home/machines/profile/118
+      url: https://app.hackthebox.eu/machines/118
       user_owns: 18103
       verbose_id: hackthebox#118
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.md
@@ -676,7 +702,7 @@ summary:
     - exploit_python_reverseshell
     - privesc_sudo
     - privesc_cron_rootjobs
-    url: https://www.hackthebox.eu/home/machines/profile/118
+    url: https://app.hackthebox.eu/machines/118
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
   - datetime: 20191113
     infra: HackTheBox
@@ -730,21 +756,12 @@ summary:
       retired_date: '2017-12-09'
       root_owns: 7124
       shortname: blocky
-      url: https://www.hackthebox.eu/home/machines/profile/48
+      url: https://app.hackthebox.eu/machines/48
       user_owns: 7116
       verbose_id: hackthebox#48
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate:
-            - enumerate_app_wordpress
-            exploit:
-            - exploit_wordpress_plugin
-            - exploit_credsreuse
-            privesc:
-            - privesc_sudoers
         ippsec:
           description:
             00:00:01 - ------ Box Completed, Below extra content (Some mistakes, pretty much do this live without prep): https://www.youtube.com/watch?v=C2O-rilXA6I&t=1s
@@ -776,7 +793,7 @@ summary:
     - exploit_wordpress_plugin
     - exploit_credsreuse
     - privesc_sudoers
-    url: https://www.hackthebox.eu/home/machines/profile/48
+    url: https://app.hackthebox.eu/machines/48
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
   - datetime: 20191101
     infra: HackTheBox
@@ -830,18 +847,12 @@ summary:
       retired_date: '2018-01-13'
       root_owns: 19988
       shortname: blue
-      url: https://www.hackthebox.eu/home/machines/profile/51
+      url: https://app.hackthebox.eu/machines/51
       user_owns: 19300
       verbose_id: hackthebox#51
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_smb_ms17_010
-            privesc: []
         ippsec:
           description:
             00:00:38 - Start of Recon: https://www.youtube.com/watch?v=YRsfX6DW10E&t=38s
@@ -873,7 +884,7 @@ summary:
     status: public
     tags:
     - exploit_smb_ms17_010
-    url: https://www.hackthebox.eu/home/machines/profile/51
+    url: https://app.hackthebox.eu/machines/51
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
   - datetime: 20200722
     infra: HackTheBox
@@ -927,20 +938,12 @@ summary:
       retired_date: '2020-11-21'
       root_owns: 6470
       shortname: buff
-      url: https://www.hackthebox.eu/home/machines/profile/263
+      url: https://app.hackthebox.eu/machines/263
       user_owns: 15667
       verbose_id: hackthebox#263
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate:
-            - enumerate_proto_http
-            exploit:
-            - exploit_gymsystem_rce
-            - exploit_cloudme_bof
-            privesc: []
         ippsec:
           description:
             00:00:00 - Introduction: https://www.youtube.com/watch?v=-KBm3tBNK74&t=0s
@@ -969,7 +972,7 @@ summary:
     - enumerate_proto_http
     - exploit_gymsystem_rce
     - exploit_cloudme_bof
-    url: https://www.hackthebox.eu/home/machines/profile/263
+    url: https://app.hackthebox.eu/machines/263
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
   - datetime: 20191113
     infra: HackTheBox
@@ -1023,7 +1026,7 @@ summary:
       retired_date: '2017-05-26'
       root_owns: 5704
       shortname: cronos
-      url: https://www.hackthebox.eu/home/machines/profile/11
+      url: https://app.hackthebox.eu/machines/11
       user_owns: 6219
       verbose_id: hackthebox#11
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.md
@@ -1044,7 +1047,7 @@ summary:
     tags:
     - exploit_sqli
     - privesc_cron
-    url: https://www.hackthebox.eu/home/machines/profile/11
+    url: https://app.hackthebox.eu/machines/11
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
   - datetime: 20191105
     infra: HackTheBox
@@ -1098,21 +1101,12 @@ summary:
       retired_date: '2017-10-14'
       root_owns: 18229
       shortname: devel
-      url: https://www.hackthebox.eu/home/machines/profile/3
+      url: https://app.hackthebox.eu/machines/3
       user_owns: 17382
       verbose_id: hackthebox#3
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_ftp_anonymous
-            - exploit_ftp_web_root
-            - exploit_iis_asp_reverseshell
-            privesc:
-            - privesc_windows_ms11_046
         ippsec:
           description:
             00:01:02 - Going over NMAP: https://www.youtube.com/watch?v=2LNyAbroZUk&t=62s
@@ -1133,7 +1127,7 @@ summary:
     - exploit_ftp_web_root
     - exploit_iis_asp_reverseshell
     - privesc_windows_ms11_046
-    url: https://www.hackthebox.eu/home/machines/profile/3
+    url: https://app.hackthebox.eu/machines/3
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
   - datetime: 20191104
     infra: HackTheBox
@@ -1187,19 +1181,12 @@ summary:
       retired_date: '2017-10-21'
       root_owns: 9711
       shortname: grandpa
-      url: https://www.hackthebox.eu/home/machines/profile/13
+      url: https://app.hackthebox.eu/machines/13
       user_owns: 9407
       verbose_id: hackthebox#13
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_iis_webdav
-            privesc:
-            - privesc_windows_ms14_070
         ippsec:
           description:
             ? '00:00:01 - Heads up. The pivot idea, was a pretty big fail. Should
@@ -1233,7 +1220,7 @@ summary:
     tags:
     - exploit_iis_webdav
     - privesc_windows_ms14_070
-    url: https://www.hackthebox.eu/home/machines/profile/13
+    url: https://app.hackthebox.eu/machines/13
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
   - datetime: 20191104
     infra: HackTheBox
@@ -1287,19 +1274,12 @@ summary:
       retired_date: '2017-05-26'
       root_owns: 8657
       shortname: granny
-      url: https://www.hackthebox.eu/home/machines/profile/14
+      url: https://app.hackthebox.eu/machines/14
       user_owns: 8324
       verbose_id: hackthebox#14
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_iis_webdav
-            privesc:
-            - privesc_windows_ms15_051
         ippsec:
           description:
             ? '00:00:01 - Heads up. The pivot idea, was a pretty big fail. Should
@@ -1333,7 +1313,7 @@ summary:
     tags:
     - exploit_iis_webdav
     - privesc_windows_ms15_051
-    url: https://www.hackthebox.eu/home/machines/profile/14
+    url: https://app.hackthebox.eu/machines/14
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
   - datetime: 20191101
     infra: HackTheBox
@@ -1387,7 +1367,7 @@ summary:
       retired_date: '2017-05-26'
       root_owns: 26773
       shortname: lame
-      url: https://www.hackthebox.eu/home/machines/profile/1
+      url: https://app.hackthebox.eu/machines/1
       user_owns: 25025
       verbose_id: hackthebox#1
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.md
@@ -1406,7 +1386,7 @@ summary:
     status: public
     tags:
     - exploit_smb_usermap
-    url: https://www.hackthebox.eu/home/machines/profile/1
+    url: https://app.hackthebox.eu/machines/1
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf
   - datetime: 20191101
     infra: HackTheBox
@@ -1460,7 +1440,7 @@ summary:
       retired_date: '2017-05-26'
       root_owns: 21190
       shortname: legacy
-      url: https://www.hackthebox.eu/home/machines/profile/2
+      url: https://app.hackthebox.eu/machines/2
       user_owns: 20465
       verbose_id: hackthebox#2
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.md
@@ -1479,7 +1459,7 @@ summary:
     status: public
     tags:
     - exploit_smb_ms08_067
-    url: https://www.hackthebox.eu/home/machines/profile/2
+    url: https://app.hackthebox.eu/machines/2
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf
   - datetime: 20191112
     infra: HackTheBox
@@ -1533,19 +1513,12 @@ summary:
       retired_date: '2018-02-10'
       root_owns: 9578
       shortname: mirai
-      url: https://www.hackthebox.eu/home/machines/profile/64
+      url: https://app.hackthebox.eu/machines/64
       user_owns: 9943
       verbose_id: hackthebox#64
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_defaultcreds
-            privesc:
-            - privesc_sudoers
         ippsec:
           description:
             00:00:49 - Nmap: https://www.youtube.com/watch?v=SRmvRGUuuno&t=49s
@@ -1569,7 +1542,7 @@ summary:
     tags:
     - exploit_defaultcreds
     - privesc_sudoers
-    url: https://www.hackthebox.eu/home/machines/profile/64
+    url: https://app.hackthebox.eu/machines/64
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
   - datetime: 20191104
     infra: HackTheBox
@@ -1623,19 +1596,12 @@ summary:
       retired_date: '2017-10-28'
       root_owns: 13491
       shortname: optimum
-      url: https://www.hackthebox.eu/home/machines/profile/6
+      url: https://app.hackthebox.eu/machines/6
       user_owns: 18282
       verbose_id: hackthebox#6
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_hfs_cmd_exec
-            privesc:
-            - privesc_windows_ms16_098
         ippsec:
           description:
             00:01:38 - Go to HTTPFileServer: https://www.youtube.com/watch?v=kWTnVBIpNsE&t=98s
@@ -1661,7 +1627,7 @@ summary:
     tags:
     - exploit_hfs_cmd_exec
     - privesc_windows_ms16_098
-    url: https://www.hackthebox.eu/home/machines/profile/6
+    url: https://app.hackthebox.eu/machines/6
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
   - datetime: 20191113
     infra: HackTheBox
@@ -1715,19 +1681,12 @@ summary:
       retired_date: '2018-02-17'
       root_owns: 10173
       shortname: shocker
-      url: https://www.hackthebox.eu/home/machines/profile/108
+      url: https://app.hackthebox.eu/machines/108
       user_owns: 10350
       verbose_id: hackthebox#108
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
       writeups:
-        7h3rAm:
-          ttps:
-            enumerate: []
-            exploit:
-            - exploit_shellshock
-            privesc:
-            - privesc_sudoers
         ippsec:
           description:
             '00:00:01 - If you want some more details about the actual ShellShock exploit, check out the Beep Video. ': https://www.youtube.com/watch?v=IBlTdguhgfY&t=1s
@@ -1751,7 +1710,7 @@ summary:
     tags:
     - exploit_shellshock
     - privesc_sudoers
-    url: https://www.hackthebox.eu/home/machines/profile/108
+    url: https://app.hackthebox.eu/machines/108
     writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
   - datetime: 20200730
     infra: TryHackMe
@@ -3384,14 +3343,14 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/422 (0.24%)` | `25/229 (10.92%)` |  `24/706 (3.40%)` | `46/254
-      (18.11%)` | `50/1357 (3.68%)` |
+      |  Total   | `1/424 (0.24%)` | `25/238 (10.50%)` |  `24/710 (3.38%)` | `46/254
+      (18.11%)` | `50/1372 (3.64%)` |
 
-      | Windows  |  `0/0 (0.00%)`  |  `12/66 (18.18%)` |   `0/2 (0.00%)`   |  `12/39
-      (30.77%)` |  `12/68 (17.65%)` |
+      | Windows  |  `0/0 (0.00%)`  |  `12/70 (17.14%)` |   `0/2 (0.00%)`   |  `12/39
+      (30.77%)` |  `12/72 (16.67%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/163 (7.98%)` |  `24/704 (3.41%)` | `34/177
-      (19.21%)` |  `37/867 (4.27%)` |
+      |   *nix   |  `0/0 (0.00%)`  |  `13/168 (7.74%)` |  `24/708 (3.39%)` | `34/177
+      (19.21%)` |  `37/876 (4.22%)` |
 
       | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
@@ -3399,7 +3358,7 @@ summary:
 
       |:---:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 
-      |  1. |                                                                                                             [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf)                                                                                                              |            [htb#archetype](https://www.hackthebox.eu/home/start)            |            <img
+      |  1. |                                                                                                             [Archetype](https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf)                                                                                                              |              [htb#287](https://app.hackthebox.eu/machines/287)              |            <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
       width="100" height="100"/>            |             [`enumerate_proto_smb`](https://github.com/7h3rAm/writeups#enumerate_proto_smb),
       [`enumerate_proto_smb_anonymous_access`](https://github.com/7h3rAm/writeups#enumerate_proto_smb_anonymous_access),
@@ -3413,7 +3372,7 @@ summary:
       |  2. |   [Bashed](https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/ratings.png"
-      width="59" height="20"/>   |        [htb#118](https://www.hackthebox.eu/home/machines/profile/118)       |             <img
+      width="59" height="20"/>   |              [htb#118](https://app.hackthebox.eu/machines/118)              |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.bashed/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                          [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http),
       [`exploit_python_reverseshell`](https://github.com/7h3rAm/writeups#exploit_python_reverseshell),
@@ -3428,7 +3387,7 @@ summary:
       |  4. |   [Blocky](https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/ratings.png"
-      width="59" height="20"/>   |         [htb#48](https://www.hackthebox.eu/home/machines/profile/48)        |             <img
+      width="59" height="20"/>   |               [htb#48](https://app.hackthebox.eu/machines/48)               |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.blocky/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                          [`enumerate_app_wordpress`](https://github.com/7h3rAm/writeups#enumerate_app_wordpress),
       [`exploit_wordpress_plugin`](https://github.com/7h3rAm/writeups#exploit_wordpress_plugin),
@@ -3438,7 +3397,7 @@ summary:
       |  5. |       [Blue](https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.blue/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.blue/ratings.png"
-      width="59" height="20"/>       |         [htb#51](https://www.hackthebox.eu/home/machines/profile/51)        |              <img
+      width="59" height="20"/>       |               [htb#51](https://app.hackthebox.eu/machines/51)               |              <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.blue/killchain.png"
       width="100" height="100"/>               |                                                                                                                                                                                                                                                                                                                                                      [`exploit_smb_ms17_010`](https://github.com/7h3rAm/writeups#exploit_smb_ms17_010)                                                                                                                                                                                                                                                                                                                                                      |
 
@@ -3465,7 +3424,7 @@ summary:
       |  8. |       [Buff](https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.buff/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.buff/ratings.png"
-      width="59" height="20"/>       |        [htb#263](https://www.hackthebox.eu/home/machines/profile/263)       |              <img
+      width="59" height="20"/>       |              [htb#263](https://app.hackthebox.eu/machines/263)              |              <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.buff/killchain.png"
       width="100" height="100"/>               |                                                                                                                                                                                                                                                                   [`enumerate_proto_http`](https://github.com/7h3rAm/writeups#enumerate_proto_http),
       [`exploit_gymsystem_rce`](https://github.com/7h3rAm/writeups#exploit_gymsystem_rce),
@@ -3474,7 +3433,7 @@ summary:
       |  9. |   [Cronos](https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/ratings.png"
-      width="59" height="20"/>   |         [htb#11](https://www.hackthebox.eu/home/machines/profile/11)        |             <img
+      width="59" height="20"/>   |               [htb#11](https://app.hackthebox.eu/machines/11)               |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.cronos/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                             [`exploit_sqli`](https://github.com/7h3rAm/writeups#exploit_sqli),
       [`privesc_cron`](https://github.com/7h3rAm/writeups#privesc_cron)                                                                                                                                                                                                                                                                                                                            |
@@ -3490,7 +3449,7 @@ summary:
       | 11. |     [Devel](https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/ratings.png"
-      width="59" height="20"/>     |          [htb#3](https://www.hackthebox.eu/home/machines/profile/3)         |              <img
+      width="59" height="20"/>     |                [htb#3](https://app.hackthebox.eu/machines/3)                |              <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.devel/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                             [`exploit_ftp_anonymous`](https://github.com/7h3rAm/writeups#exploit_ftp_anonymous),
       [`exploit_ftp_web_root`](https://github.com/7h3rAm/writeups#exploit_ftp_web_root),
@@ -3514,7 +3473,7 @@ summary:
       | 14. | [Grandpa](https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/matrix.png"
       width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/ratings.png"
-      width="59" height="20"/> |         [htb#13](https://www.hackthebox.eu/home/machines/profile/13)        |             <img
+      width="59" height="20"/> |               [htb#13](https://app.hackthebox.eu/machines/13)               |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/killchain.png"
       width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                           [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav),
       [`privesc_windows_ms14_070`](https://github.com/7h3rAm/writeups#privesc_windows_ms14_070)                                                                                                                                                                                                                                                                                                          |
@@ -3522,7 +3481,7 @@ summary:
       | 15. |   [Granny](https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/ratings.png"
-      width="59" height="20"/>   |         [htb#14](https://www.hackthebox.eu/home/machines/profile/14)        |             <img
+      width="59" height="20"/>   |               [htb#14](https://app.hackthebox.eu/machines/14)               |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.granny/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                           [`exploit_iis_webdav`](https://github.com/7h3rAm/writeups#exploit_iis_webdav),
       [`privesc_windows_ms15_051`](https://github.com/7h3rAm/writeups#privesc_windows_ms15_051)                                                                                                                                                                                                                                                                                                          |
@@ -3609,7 +3568,7 @@ summary:
       | 27. |       [Lame](https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/ratings.png"
-      width="59" height="20"/>       |          [htb#1](https://www.hackthebox.eu/home/machines/profile/1)         |              <img
+      width="59" height="20"/>       |                [htb#1](https://app.hackthebox.eu/machines/1)                |              <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.lame/killchain.png"
       width="100" height="100"/>               |                                                                                                                                                                                                                                                                                                                                                       [`exploit_smb_usermap`](https://github.com/7h3rAm/writeups#exploit_smb_usermap)                                                                                                                                                                                                                                                                                                                                                       |
 
@@ -3627,7 +3586,7 @@ summary:
       | 29. |   [Legacy](https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/ratings.png"
-      width="59" height="20"/>   |          [htb#2](https://www.hackthebox.eu/home/machines/profile/2)         |             <img
+      width="59" height="20"/>   |                [htb#2](https://app.hackthebox.eu/machines/2)                |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.legacy/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                                                      [`exploit_smb_ms08_067`](https://github.com/7h3rAm/writeups#exploit_smb_ms08_067)                                                                                                                                                                                                                                                                                                                                                      |
 
@@ -3651,7 +3610,7 @@ summary:
       | 32. |     [Mirai](https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/matrix.png" width="59"
       height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/ratings.png"
-      width="59" height="20"/>     |         [htb#64](https://www.hackthebox.eu/home/machines/profile/64)        |              <img
+      width="59" height="20"/>     |               [htb#64](https://app.hackthebox.eu/machines/64)               |              <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.mirai/killchain.png"
       width="100" height="100"/>              |                                                                                                                                                                                                                                                                                                                  [`exploit_defaultcreds`](https://github.com/7h3rAm/writeups#exploit_defaultcreds),
       [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                 |
@@ -3684,7 +3643,7 @@ summary:
       | 37. | [Optimum](https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/matrix.png"
       width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/ratings.png"
-      width="59" height="20"/> |          [htb#6](https://www.hackthebox.eu/home/machines/profile/6)         |             <img
+      width="59" height="20"/> |                [htb#6](https://app.hackthebox.eu/machines/6)                |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.optimum/killchain.png"
       width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                         [`exploit_hfs_cmd_exec`](https://github.com/7h3rAm/writeups#exploit_hfs_cmd_exec),
       [`privesc_windows_ms16_098`](https://github.com/7h3rAm/writeups#privesc_windows_ms16_098)                                                                                                                                                                                                                                                                                                        |
@@ -3692,7 +3651,7 @@ summary:
       | 38. | [Shocker](https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf)<br/><img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/matrix.png"
       width="59" height="59"/><br/><img src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/ratings.png"
-      width="59" height="20"/> |        [htb#108](https://www.hackthebox.eu/home/machines/profile/108)       |             <img
+      width="59" height="20"/> |              [htb#108](https://app.hackthebox.eu/machines/108)              |             <img
       src="https://github.com/7h3rAm/writeups/blob/master/htb.shocker/killchain.png"
       width="100" height="100"/>             |                                                                                                                                                                                                                                                                                                                    [`exploit_shellshock`](https://github.com/7h3rAm/writeups#exploit_shellshock),
       [`privesc_sudoers`](https://github.com/7h3rAm/writeups#privesc_sudoers)                                                                                                                                                                                                                                                                                                                   |
@@ -3855,8 +3814,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_app_prtg:
         cli: "default credentials:\n  prtgadmin/prtgadmin\nconfiguration and backup\
@@ -3977,7 +3936,7 @@ summary:
           - exploit_wordpress_plugin
           - exploit_credsreuse
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/48
+          url: https://app.hackthebox.eu/machines/48
           verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20190909
@@ -4230,7 +4189,7 @@ summary:
           - exploit_python_reverseshell
           - privesc_sudo
           - privesc_cron_rootjobs
-          url: https://www.hackthebox.eu/home/machines/profile/118
+          url: https://app.hackthebox.eu/machines/118
           verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20200722
@@ -4244,7 +4203,7 @@ summary:
           - enumerate_proto_http
           - exploit_gymsystem_rce
           - exploit_cloudme_bof
-          url: https://www.hackthebox.eu/home/machines/profile/263
+          url: https://app.hackthebox.eu/machines/263
           verbose_id: htb#263
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
         - datetime: 20200730
@@ -4460,8 +4419,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_smb_anonymous_access:
         cli: "# connect to and explore smb share:\n  smbclient -N -L \\\\\\\\<targetip>\n\
@@ -4492,8 +4451,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_smtp:
         cli: "smtp-user-enum -M VRFY -U /usr/share/metasploit-framework/data/wordlists/unix_users.txt\
@@ -4552,8 +4511,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_sql_ssis_dtsconfig:
         cli: 'cat *.dtsConfig
@@ -4582,8 +4541,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       enumerate_proto_ssh:
         cli: "authorized_keys:\n  ssh-keygen -t rsa -b 2048\n    enter a custom filename\n\
@@ -4744,7 +4703,7 @@ summary:
           - enumerate_proto_http
           - exploit_gymsystem_rce
           - exploit_cloudme_bof
-          url: https://www.hackthebox.eu/home/machines/profile/263
+          url: https://app.hackthebox.eu/machines/263
           verbose_id: htb#263
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
       exploit_cmdexec:
@@ -4834,7 +4793,7 @@ summary:
           - exploit_wordpress_plugin
           - exploit_credsreuse
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/48
+          url: https://app.hackthebox.eu/machines/48
           verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20191008
@@ -4917,7 +4876,7 @@ summary:
           tags:
           - exploit_defaultcreds
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/64
+          url: https://app.hackthebox.eu/machines/64
           verbose_id: htb#64
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
       exploit_drupal_passwordcrack:
@@ -4945,7 +4904,7 @@ summary:
           - exploit_ftp_web_root
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
-          url: https://www.hackthebox.eu/home/machines/profile/3
+          url: https://app.hackthebox.eu/machines/3
           verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_ftp_web_root:
@@ -4968,7 +4927,7 @@ summary:
           - exploit_ftp_web_root
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
-          url: https://www.hackthebox.eu/home/machines/profile/3
+          url: https://app.hackthebox.eu/machines/3
           verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_gpp_groupsxml:
@@ -5005,7 +4964,7 @@ summary:
           - enumerate_proto_http
           - exploit_gymsystem_rce
           - exploit_cloudme_bof
-          url: https://www.hackthebox.eu/home/machines/profile/263
+          url: https://app.hackthebox.eu/machines/263
           verbose_id: htb#263
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
       exploit_hfs_cmd_exec:
@@ -5028,7 +4987,7 @@ summary:
           tags:
           - exploit_hfs_cmd_exec
           - privesc_windows_ms16_098
-          url: https://www.hackthebox.eu/home/machines/profile/6
+          url: https://app.hackthebox.eu/machines/6
           verbose_id: htb#6
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       exploit_iis_asp_reverseshell:
@@ -5058,7 +5017,7 @@ summary:
           - exploit_ftp_web_root
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
-          url: https://www.hackthebox.eu/home/machines/profile/3
+          url: https://app.hackthebox.eu/machines/3
           verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       exploit_iis_webdav:
@@ -5083,7 +5042,7 @@ summary:
           tags:
           - exploit_iis_webdav
           - privesc_windows_ms14_070
-          url: https://www.hackthebox.eu/home/machines/profile/13
+          url: https://app.hackthebox.eu/machines/13
           verbose_id: htb#13
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
         - datetime: 20191104
@@ -5096,7 +5055,7 @@ summary:
           tags:
           - exploit_iis_webdav
           - privesc_windows_ms15_051
-          url: https://www.hackthebox.eu/home/machines/profile/14
+          url: https://app.hackthebox.eu/machines/14
           verbose_id: htb#14
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       exploit_lotuscms:
@@ -5602,7 +5561,7 @@ summary:
           - exploit_python_reverseshell
           - privesc_sudo
           - privesc_cron_rootjobs
-          url: https://www.hackthebox.eu/home/machines/profile/118
+          url: https://app.hackthebox.eu/machines/118
           verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20190917
@@ -5643,7 +5602,7 @@ summary:
           tags:
           - exploit_shellshock
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/108
+          url: https://app.hackthebox.eu/machines/108
           verbose_id: htb#108
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
       exploit_smb_ms08_067:
@@ -5679,7 +5638,7 @@ summary:
           status: public
           tags:
           - exploit_smb_ms08_067
-          url: https://www.hackthebox.eu/home/machines/profile/2
+          url: https://app.hackthebox.eu/machines/2
           verbose_id: htb#2
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.legacy/writeup.pdf
       exploit_smb_ms17_010:
@@ -5710,7 +5669,7 @@ summary:
           status: public
           tags:
           - exploit_smb_ms17_010
-          url: https://www.hackthebox.eu/home/machines/profile/51
+          url: https://app.hackthebox.eu/machines/51
           verbose_id: htb#51
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
       exploit_smb_nullsession:
@@ -5766,7 +5725,7 @@ summary:
           status: public
           tags:
           - exploit_smb_usermap
-          url: https://www.hackthebox.eu/home/machines/profile/1
+          url: https://app.hackthebox.eu/machines/1
           verbose_id: htb#1
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.lame/writeup.pdf
       exploit_smb_web_root:
@@ -5818,8 +5777,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       exploit_sql_xpcmdshell:
         cli: "SELECT IS_SRVROLEMEMBER('sysadmin') ## check if current sql user has\
@@ -5852,8 +5811,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       exploit_sqli:
         cli: 'sqlmap -u "http://<targetip>:<targetport>/<vulnwebapp>/index.php" --batch
@@ -5873,7 +5832,7 @@ summary:
           tags:
           - exploit_sqli
           - privesc_cron
-          url: https://www.hackthebox.eu/home/machines/profile/11
+          url: https://app.hackthebox.eu/machines/11
           verbose_id: htb#11
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
         - datetime: 20190928
@@ -6058,7 +6017,7 @@ summary:
           - exploit_wordpress_plugin
           - exploit_credsreuse
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/48
+          url: https://app.hackthebox.eu/machines/48
           verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
       exploit_wordpress_plugin_activitymonitor:
@@ -6280,7 +6239,7 @@ summary:
           tags:
           - exploit_sqli
           - privesc_cron
-          url: https://www.hackthebox.eu/home/machines/profile/11
+          url: https://app.hackthebox.eu/machines/11
           verbose_id: htb#11
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.cronos/writeup.pdf
         - datetime: 20190905
@@ -6358,7 +6317,7 @@ summary:
           - exploit_python_reverseshell
           - privesc_sudo
           - privesc_cron_rootjobs
-          url: https://www.hackthebox.eu/home/machines/profile/118
+          url: https://app.hackthebox.eu/machines/118
           verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
       privesc_ctf_usertxt_timestamp:
@@ -6795,8 +6754,8 @@ summary:
           - exploit_sql_xpcmdshell
           - enumerate_app_powershell_history
           - privesc_psexec_login
-          url: https://www.hackthebox.eu/home/start
-          verbose_id: htb#archetype
+          url: https://app.hackthebox.eu/machines/287
+          verbose_id: htb#287
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
       privesc_setuid:
         cli: ''
@@ -6984,7 +6943,7 @@ summary:
           - exploit_python_reverseshell
           - privesc_sudo
           - privesc_cron_rootjobs
-          url: https://www.hackthebox.eu/home/machines/profile/118
+          url: https://app.hackthebox.eu/machines/118
           verbose_id: htb#118
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.bashed/writeup.pdf
         - datetime: 20190831
@@ -7082,7 +7041,7 @@ summary:
           - exploit_wordpress_plugin
           - exploit_credsreuse
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/48
+          url: https://app.hackthebox.eu/machines/48
           verbose_id: htb#48
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
         - datetime: 20191112
@@ -7095,7 +7054,7 @@ summary:
           tags:
           - exploit_defaultcreds
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/64
+          url: https://app.hackthebox.eu/machines/64
           verbose_id: htb#64
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
         - datetime: 20191113
@@ -7108,7 +7067,7 @@ summary:
           tags:
           - exploit_shellshock
           - privesc_sudoers
-          url: https://www.hackthebox.eu/home/machines/profile/108
+          url: https://app.hackthebox.eu/machines/108
           verbose_id: htb#108
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
         - datetime: 20190905
@@ -7213,7 +7172,7 @@ summary:
           - exploit_ftp_web_root
           - exploit_iis_asp_reverseshell
           - privesc_windows_ms11_046
-          url: https://www.hackthebox.eu/home/machines/profile/3
+          url: https://app.hackthebox.eu/machines/3
           verbose_id: htb#3
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       privesc_windows_ms14_070:
@@ -7231,7 +7190,7 @@ summary:
           tags:
           - exploit_iis_webdav
           - privesc_windows_ms14_070
-          url: https://www.hackthebox.eu/home/machines/profile/13
+          url: https://app.hackthebox.eu/machines/13
           verbose_id: htb#13
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
       privesc_windows_ms15_051:
@@ -7249,7 +7208,7 @@ summary:
           tags:
           - exploit_iis_webdav
           - privesc_windows_ms15_051
-          url: https://www.hackthebox.eu/home/machines/profile/14
+          url: https://app.hackthebox.eu/machines/14
           verbose_id: htb#14
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       privesc_windows_ms16_032:
@@ -7272,7 +7231,7 @@ summary:
           tags:
           - exploit_hfs_cmd_exec
           - privesc_windows_ms16_098
-          url: https://www.hackthebox.eu/home/machines/profile/6
+          url: https://app.hackthebox.eu/machines/6
           verbose_id: htb#6
           writeup: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       privesc_windows_upnphost:
@@ -7927,7 +7886,7 @@ summary:
       writeups:
       - name: Archetype
         url: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
-        verbose_id: hackthebox#archetype
+        verbose_id: hackthebox#287
     '1521':
       l4: tcp
       port: '1521'
@@ -8143,7 +8102,7 @@ summary:
       writeups:
       - name: Archetype
         url: https://github.com/7h3rAm/writeups/blob/master/htb.archetype/writeup.pdf
-        verbose_id: hackthebox#archetype
+        verbose_id: hackthebox#287
     '53':
       l4: tcp
       port: '53'

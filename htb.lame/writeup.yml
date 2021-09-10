@@ -6,7 +6,7 @@ writeup:
     name: Lame
     points: 20
     path: htb.lame
-    url: https://www.hackthebox.eu/home/machines/profile/1
+    url: https://app.hackthebox.eu/machines/1
     infocard: ./infocard.png
     references:
       - https://hackingresources.com/lame-hackthebox-walkthrough/
@@ -18,7 +18,7 @@ writeup:
       - exploit_smb_usermap
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Lame](htps://www.hackthebox.eu/home/machines/profile/1). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Lame](https://app.hackthebox.eu/machines/1). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Lame/10.10.10.3":
         - ". Phase #1: Enumeration":

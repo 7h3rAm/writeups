@@ -6,7 +6,7 @@ writeup:
     name: Blue
     points: 20
     path: htb.blue
-    url: https://www.hackthebox.eu/home/machines/profile/51
+    url: https://app.hackthebox.eu/machines/51
     infocard: ./infocard.png
     references:
       - https://medium.com/@sdgeek/hack-the-box-htb-blue-115b3f563125
@@ -18,7 +18,7 @@ writeup:
       - exploit_smb_ms17_010
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Blue](https://www.hackthebox.eu/home/machines/profile/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Blue](https://app.hackthebox.eu/machines/51). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Blue/10.10.10.40":
         - ". Phase #1: Enumeration":

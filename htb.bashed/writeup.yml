@@ -6,7 +6,7 @@ writeup:
     name: Bashed
     points: 20
     path: htb.bashed
-    url: https://www.hackthebox.eu/home/machines/profile/118
+    url: https://app.hackthebox.eu/machines/118
     infocard: ./infocard.png
     references:
       - https://medium.com/@ranakhalil101/hack-the-box-bashed-writup-a8e51a2914c2
@@ -22,7 +22,7 @@ writeup:
       - privesc_cron_rootjobs
   overview:
     description: |
-      This is a writeup for HackTheBox VM [Bashed](https://www.hackthebox.eu/home/machines/profile/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
+      This is a writeup for HackTheBox VM [Bashed](https://app.hackthebox.eu/machines/118). Here's an overview of the `enumeration` → `exploitation` → `privilege escalation` process:
     killchain:
       - "_ [HTB] Bashed/10.10.10.68":
         - ". Phase #1: Enumeration":
