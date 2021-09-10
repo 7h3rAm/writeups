@@ -4,7 +4,7 @@ writeup:
     datetime: 20200428
     infra: HackTheBox
     name: Archetype
-    points: 10
+    points: 0
     path: htb.archetype
     url: https://app.hackthebox.eu/machines/287
     infocard: ./infocard.png
