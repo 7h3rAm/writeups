@@ -1,6 +1,6 @@
 summary:
   counts:
-    htbnix: 168
+    htbnix: 170
     htboscplike: 94
     htbwindows: 70
     oscplikenix: 177
@@ -25,25 +25,25 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.54'
+    percentnix: '3.53'
     percentthm: '2.63'
     percentvh: '19.67'
     percentwindows: '11.11'
-    perhtb: 10.504201680672269
-    perhtbnix: 7.738095238095238
+    perhtb: 10.416666666666668
+    perhtbnix: 7.647058823529412
     perhtboscplike: 26.595744680851062
     perhtbwindows: 17.142857142857142
-    pernix: 4.223744292237443
+    pernix: 4.2093287827076225
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.2358490566037736
+    perthm: 0.23255813953488372
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.6443148688046647
-    pervh: 3.3802816901408446
-    pervhnix: 3.389830508474576
+    pertotal: 3.6205648081100654
+    pervh: 3.375527426160337
+    pervhnix: 3.385049365303244
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
     perwindows: 16.666666666666664
@@ -51,14 +51,14 @@ summary:
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 238
-    totalnix: 876
+    totalhtb: 240
+    totalnix: 879
     totaloscplike: 254
-    totalthm: 424
-    totaltotal: 1372
-    totalvh: 710
+    totalthm: 430
+    totaltotal: 1381
+    totalvh: 711
     totalwindows: 72
-    vhnix: 708
+    vhnix: 709
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -612,7 +612,7 @@ summary:
     name: Archetype
     overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
       width="100" height="100" />
-    points: 10
+    points: null
     status: public
     tags:
     - enumerate_proto_smb
@@ -3343,14 +3343,14 @@ summary:
 
       |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/424 (0.24%)` | `25/238 (10.50%)` |  `24/710 (3.38%)` | `46/254
-      (18.11%)` | `50/1372 (3.64%)` |
+      |  Total   | `1/430 (0.23%)` | `25/240 (10.42%)` |  `24/711 (3.38%)` | `46/254
+      (18.11%)` | `50/1381 (3.62%)` |
 
       | Windows  |  `0/0 (0.00%)`  |  `12/70 (17.14%)` |   `0/2 (0.00%)`   |  `12/39
       (30.77%)` |  `12/72 (16.67%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/168 (7.74%)` |  `24/708 (3.39%)` | `34/177
-      (19.21%)` |  `37/876 (4.22%)` |
+      |   *nix   |  `0/0 (0.00%)`  |  `13/170 (7.65%)` |  `24/709 (3.39%)` | `34/177
+      (19.21%)` |  `37/879 (4.21%)` |
 
       | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
@@ -3803,7 +3803,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -4408,7 +4408,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -4440,7 +4440,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -4500,7 +4500,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -4530,7 +4530,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -5766,7 +5766,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -5800,7 +5800,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
@@ -6743,7 +6743,7 @@ summary:
           name: Archetype
           overview: <img src="https://github.com/7h3rAm/writeups/blob/master/htb.archetype/killchain.png"
             width="100" height="100" />
-          points: 10
+          points: null
           status: public
           tags:
           - enumerate_proto_smb
