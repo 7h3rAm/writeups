@@ -659,7 +659,6 @@ meta:
             wfuzz -c -z file,./pin.txt -d 'user=pinkadmin&pass=AaPinkSecaAdmin4467&pin=FUZZ' --hh 45,41 http://<targetip>:<targetport>/login.php
   ttps:
     enumerate:
-    enumerate:
       enumerate_file_modified_time_window:
         description: find files modified within a time window
         cli: |
