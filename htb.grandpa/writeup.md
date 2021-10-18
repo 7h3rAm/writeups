@@ -22,14 +22,14 @@ header-includes:
   - \usepackage{mathtools}
 ---
 
-# [[HackTheBox] Grandpa](https://www.hackthebox.eu/home/machines/profile/13)
+# [[HackTheBox] Grandpa](https://app.hackthebox.eu/machines/13)
 
 **Date**: 04/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [windows](https://github.com/7h3rAm/writeups/search?q=windows&unscoped_q=windows)  
 **Tags**: [exploit_iis_webdav](https://github.com/7h3rAm/writeups/search?q=exploit_iis_webdav&unscoped_q=exploit_iis_webdav), [privesc_windows_ms14_070](https://github.com/7h3rAm/writeups/search?q=privesc_windows_ms14_070&unscoped_q=privesc_windows_ms14_070)  
 
 ## Overview
-This is a writeup for HackTheBox VM [Grandpa](https://www.hackthebox.eu/home/machines/profile/13). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
+This is a writeup for HackTheBox VM [Grandpa](https://app.hackthebox.eu/machines/13). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
 ![writeup.overview.machinescli](./machinescli.png)
 
@@ -170,4 +170,4 @@ C:\Documents and Settings\Administrator\Desktop\root.txt: 9359e905a2c35f........
 ```
 
 ## References
-[+] <https://www.hackthebox.eu/home/machines/profile/13>  
+[+] <https://app.hackthebox.eu/machines/13>  

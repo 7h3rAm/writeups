@@ -34,7 +34,7 @@ writeup:
                   - ". sql credentials for user root":
                     - ".. Phase #2: Exploitation":
                       - ".. ftp creds reuse for user notch":
-                        - ".. access to user nothc's home directory":
+                        - ".. access to user notch's home directory":
                       - ".. ssh creds reuse for user notch":
                         - ".. ssh (notch)":
                           - ".. user.txt":

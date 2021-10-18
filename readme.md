@@ -75,9 +75,9 @@
 ### 📊 Counts [🡑](#stats)
 |    #     |    TryHackMe    |     HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
 |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
-|  Total   | `1/451 (0.22%)` | `25/247 (10.12%)` |  `24/711 (3.38%)` | `46/254 (18.11%)` | `50/1409 (3.55%)` |
+|  Total   | `1/462 (0.22%)` | `25/248 (10.08%)` |  `24/711 (3.38%)` | `46/254 (18.11%)` | `50/1421 (3.52%)` |
 | Windows  |  `0/0 (0.00%)`  |  `12/73 (16.44%)` |   `0/2 (0.00%)`   |  `12/39 (30.77%)` |  `12/75 (16.00%)` |
-|   *nix   |  `0/0 (0.00%)`  |  `13/174 (7.47%)` |  `24/709 (3.39%)` | `34/177 (19.21%)` |  `37/883 (4.19%)` |
+|   *nix   |  `0/0 (0.00%)`  |  `13/175 (7.43%)` |  `24/709 (3.39%)` | `34/177 (19.21%)` |  `37/884 (4.19%)` |
 | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   | `46/254 (18.11%)` |
 
 <a name="topcategories"></a>
@@ -228,7 +228,7 @@ tomcat manager default creds:
 ---
 <a name="enumerate_app_coldfusion_files"></a>
 #### enumerate_app_coldfusion_files [⇡](#enumerate)  
-look for available sub driectories and files on a coldfusion install  
+look for available sub directories and files on a coldfusion install  
 ```shell
 dirb http://<targetip>:<targetport> /usr/share/dirb/wordlists/vulns/coldfusion.txt
 

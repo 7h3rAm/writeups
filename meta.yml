@@ -721,7 +721,7 @@ meta:
         references:
           - https://0xrick.github.io/hack-the-box/jerry/
       enumerate_app_coldfusion_files:
-        description: look for available sub driectories and files on a coldfusion install
+        description: look for available sub directories and files on a coldfusion install
         cli: |
           dirb http://<targetip>:<targetport> /usr/share/dirb/wordlists/vulns/coldfusion.txt
         ports:
