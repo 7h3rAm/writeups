@@ -762,6 +762,15 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blocky/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate:
+            - enumerate_app_wordpress
+            exploit:
+            - exploit_wordpress_plugin
+            - exploit_credsreuse
+            privesc:
+            - privesc_sudoers
         ippsec:
           description:
             00:00:01 - ------ Box Completed, Below extra content (Some mistakes, pretty much do this live without prep): https://www.youtube.com/watch?v=C2O-rilXA6I&t=1s
@@ -853,6 +862,12 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.blue/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_smb_ms17_010
+            privesc: []
         ippsec:
           description:
             00:00:38 - Start of Recon: https://www.youtube.com/watch?v=YRsfX6DW10E&t=38s
@@ -944,6 +959,14 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.buff/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate:
+            - enumerate_proto_http
+            exploit:
+            - exploit_gymsystem_rce
+            - exploit_cloudme_bof
+            privesc: []
         ippsec:
           description:
             00:00:00 - Introduction: https://www.youtube.com/watch?v=-KBm3tBNK74&t=0s
@@ -1107,6 +1130,15 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.devel/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_ftp_anonymous
+            - exploit_ftp_web_root
+            - exploit_iis_asp_reverseshell
+            privesc:
+            - privesc_windows_ms11_046
         ippsec:
           description:
             00:01:02 - Going over NMAP: https://www.youtube.com/watch?v=2LNyAbroZUk&t=62s
@@ -1187,6 +1219,13 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.grandpa/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_iis_webdav
+            privesc:
+            - privesc_windows_ms14_070
         ippsec:
           description:
             ? '00:00:01 - Heads up. The pivot idea, was a pretty big fail. Should
@@ -1280,6 +1319,13 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.granny/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_iis_webdav
+            privesc:
+            - privesc_windows_ms15_051
         ippsec:
           description:
             ? '00:00:01 - Heads up. The pivot idea, was a pretty big fail. Should
@@ -1519,6 +1565,13 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.mirai/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_defaultcreds
+            privesc:
+            - privesc_sudoers
         ippsec:
           description:
             00:00:49 - Nmap: https://www.youtube.com/watch?v=SRmvRGUuuno&t=49s
@@ -1602,6 +1655,13 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.optimum/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_hfs_cmd_exec
+            privesc:
+            - privesc_windows_ms16_098
         ippsec:
           description:
             00:01:38 - Go to HTTPFileServer: https://www.youtube.com/watch?v=kWTnVBIpNsE&t=98s
@@ -1687,6 +1747,13 @@ summary:
       writeupmdurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.md
       writeuppdfurl: https://github.com/7h3rAm/writeups/blob/master/htb.shocker/writeup.pdf
       writeups:
+        7h3rAm:
+          ttps:
+            enumerate: []
+            exploit:
+            - exploit_shellshock
+            privesc:
+            - privesc_sudoers
         ippsec:
           description:
             '00:00:01 - If you want some more details about the actual ShellShock exploit, check out the Beep Video. ': https://www.youtube.com/watch?v=IBlTdguhgfY&t=1s
