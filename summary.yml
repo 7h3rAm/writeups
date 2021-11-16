@@ -1,8 +1,8 @@
 summary:
   counts:
-    htbnix: 170
+    htbnix: 181
     htboscplike: 94
-    htbwindows: 70
+    htbwindows: 73
     oscplikenix: 177
     oscplikewindows: 39
     ownedhtb: 25
@@ -25,40 +25,40 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.53'
+    percentnix: '3.43'
     percentthm: '2.63'
     percentvh: '19.67'
-    percentwindows: '11.11'
-    perhtb: 10.416666666666668
-    perhtbnix: 7.647058823529412
+    percentwindows: '10.67'
+    perhtb: 9.84251968503937
+    perhtbnix: 7.18232044198895
     perhtboscplike: 26.595744680851062
-    perhtbwindows: 17.142857142857142
-    pernix: 4.2093287827076225
+    perhtbwindows: 16.43835616438356
+    pernix: 4.097452934662237
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.23255813953488372
+    perthm: 0.211864406779661
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.6205648081100654
-    pervh: 3.375527426160337
-    pervhnix: 3.385049365303244
+    pertotal: 3.4482758620689653
+    pervh: 3.314917127071823
+    pervhnix: 3.32409972299169
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
-    perwindows: 16.666666666666664
+    perwindows: 16.0
     thmnix: 0
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 240
-    totalnix: 879
+    totalhtb: 254
+    totalnix: 903
     totaloscplike: 254
-    totalthm: 430
-    totaltotal: 1381
-    totalvh: 711
-    totalwindows: 72
-    vhnix: 709
+    totalthm: 472
+    totaltotal: 1450
+    totalvh: 724
+    totalwindows: 75
+    vhnix: 722
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -3339,20 +3339,20 @@ summary:
     url: https://www.vulnhub.com/entry/hacklab-vulnix,48/
     writeup: https://github.com/7h3rAm/writeups/blob/master/vulnhub.vulnix/writeup.pdf
   stats:
-    counts: '|    #     |    TryHackMe    |     HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
+    counts: '|    #     |    TryHackMe    |    HackTheBox    |      VulnHub      |      OSCPlike     |       Owned       |
 
-      |:--------:|:---------------:|:-----------------:|:-----------------:|:-----------------:|:-----------------:|
+      |:--------:|:---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/430 (0.23%)` | `25/240 (10.42%)` |  `24/711 (3.38%)` | `46/254
-      (18.11%)` | `50/1381 (3.62%)` |
+      |  Total   | `1/472 (0.21%)` | `25/254 (9.84%)` |  `24/724 (3.31%)` | `46/254
+      (18.11%)` | `50/1450 (3.45%)` |
 
-      | Windows  |  `0/0 (0.00%)`  |  `12/70 (17.14%)` |   `0/2 (0.00%)`   |  `12/39
-      (30.77%)` |  `12/72 (16.67%)` |
+      | Windows  |  `0/0 (0.00%)`  | `12/73 (16.44%)` |   `0/2 (0.00%)`   |  `12/39
+      (30.77%)` |  `12/75 (16.00%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  |  `13/170 (7.65%)` |  `24/709 (3.39%)` | `34/177
-      (19.21%)` |  `37/879 (4.21%)` |
+      |   *nix   |  `0/0 (0.00%)`  | `13/181 (7.18%)` |  `24/722 (3.32%)` | `34/177
+      (19.21%)` |  `37/903 (4.10%)` |
 
-      | OSCPlike |  `0/38 (0.00%)` |  `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
+      | OSCPlike |  `0/38 (0.00%)` | `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
     owned: '|  #  |                                                                                                                                                      Name                                                                                                                                                      |                                    Infra                                    |                                                               Killchain                                                                |                                                                                                                                                                                                                                                                                                                                                                                             TTPs                                                                                                                                                                                                                                                                                                                                                                                            |
 
