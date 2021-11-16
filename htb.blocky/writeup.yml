@@ -34,7 +34,7 @@ writeup:
                   - ". sql credentials for user root":
                     - ".. Phase #2: Exploitation":
                       - ".. ftp creds reuse for user notch":
-                        - ".. access to user nothc's home directory":
+                        - ".. access to user notch's home directory":
                       - ".. ssh creds reuse for user notch":
                         - ".. ssh (notch)":
                           - ".. user.txt":
@@ -48,7 +48,6 @@ writeup:
           - ". 25565/tcp":
     ttps:
       "80/tcp/http/Apache httpd 2.4.18 ((Ubuntu))": enumerate_app_wordpress exploit_wordpress_plugin exploit_credsreuse privesc_sudoers
-
   enumeration:
     steps:
       - description: |

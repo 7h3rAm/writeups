@@ -22,14 +22,14 @@ header-includes:
   - \usepackage{mathtools}
 ---
 
-# [[HackTheBox] Blocky](https://www.hackthebox.eu/home/machines/profile/48)
+# [[HackTheBox] Blocky](https://app.hackthebox.eu/machines/48)
 
 **Date**: 13/Nov/2019  
 **Categories**: [oscp](https://github.com/7h3rAm/writeups/search?q=oscp&unscoped_q=oscp), [htb](https://github.com/7h3rAm/writeups/search?q=htb&unscoped_q=htb), [linux](https://github.com/7h3rAm/writeups/search?q=linux&unscoped_q=linux)  
 **Tags**: [enumerate_app_wordpress](https://github.com/7h3rAm/writeups/search?q=enumerate_app_wordpress&unscoped_q=enumerate_app_wordpress), [exploit_wordpress_plugin](https://github.com/7h3rAm/writeups/search?q=exploit_wordpress_plugin&unscoped_q=exploit_wordpress_plugin), [exploit_credsreuse](https://github.com/7h3rAm/writeups/search?q=exploit_credsreuse&unscoped_q=exploit_credsreuse), [privesc_sudoers](https://github.com/7h3rAm/writeups/search?q=privesc_sudoers&unscoped_q=privesc_sudoers)  
 
 ## Overview
-This is a writeup for HackTheBox VM [Blocky](https://www.hackthebox.eu/home/machines/profile/48). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
+This is a writeup for HackTheBox VM [Blocky](https://app.hackthebox.eu/machines/48). Here are stats for this machine from [machinescli](https://github.com/7h3rAm/machinescli):
 
 ![writeup.overview.machinescli](./machinescli.png)
 
@@ -179,5 +179,5 @@ ssh: notch/8YsqfCTnvxAUeduzj......
 ```
 
 ## References
-[+] <https://www.hackthebox.eu/home/machines/profile/48>  
+[+] <https://app.hackthebox.eu/machines/48>  
 [+] <https://www.youtube.com/watch?v=C2O-rilXA6I>  

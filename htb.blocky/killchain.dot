@@ -6,7 +6,7 @@ digraph G {
 
   0[label="10.10.10.37" color="#0077cc" fillcolor="#e1ecf4" tooltip="[HTB] Blocky"];
   10[label="ftp creds reuse for user notch" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
-  11[label="access to user nothc's home directory" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
+  11[label="access to user notch's home directory" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   12[label="ssh creds reuse for user notch" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   13[label="ssh (notch)" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];
   14[label="user.txt" color="#cea51b" fillcolor="#fbf2d4" tooltip="Phase #2:Exploitation"];

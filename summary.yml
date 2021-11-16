@@ -1,6 +1,6 @@
 summary:
   counts:
-    htbnix: 181
+    htbnix: 179
     htboscplike: 94
     htbwindows: 73
     oscplikenix: 177
@@ -25,25 +25,25 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.43'
+    percentnix: '3.45'
     percentthm: '2.63'
     percentvh: '19.67'
     percentwindows: '10.67'
-    perhtb: 9.84251968503937
-    perhtbnix: 7.18232044198895
+    perhtb: 9.920634920634921
+    perhtbnix: 7.262569832402235
     perhtboscplike: 26.595744680851062
     perhtbwindows: 16.43835616438356
-    pernix: 4.097452934662237
+    pernix: 4.115684093437152
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.211864406779661
+    perthm: 0.2136752136752137
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.4482758620689653
-    pervh: 3.314917127071823
-    pervhnix: 3.32409972299169
+    pertotal: 3.467406380027739
+    pervh: 3.32409972299169
+    pervhnix: 3.3333333333333335
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
     perwindows: 16.0
@@ -51,14 +51,14 @@ summary:
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 254
-    totalnix: 903
+    totalhtb: 252
+    totalnix: 899
     totaloscplike: 254
-    totalthm: 472
-    totaltotal: 1450
-    totalvh: 724
+    totalthm: 468
+    totaltotal: 1442
+    totalvh: 722
     totalwindows: 75
-    vhnix: 722
+    vhnix: 720
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -3343,14 +3343,14 @@ summary:
 
       |:--------:|:---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/472 (0.21%)` | `25/254 (9.84%)` |  `24/724 (3.31%)` | `46/254
-      (18.11%)` | `50/1450 (3.45%)` |
+      |  Total   | `1/468 (0.21%)` | `25/252 (9.92%)` |  `24/722 (3.32%)` | `46/254
+      (18.11%)` | `50/1442 (3.47%)` |
 
       | Windows  |  `0/0 (0.00%)`  | `12/73 (16.44%)` |   `0/2 (0.00%)`   |  `12/39
       (30.77%)` |  `12/75 (16.00%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  | `13/181 (7.18%)` |  `24/722 (3.32%)` | `34/177
-      (19.21%)` |  `37/903 (4.10%)` |
+      |   *nix   |  `0/0 (0.00%)`  | `13/179 (7.26%)` |  `24/720 (3.33%)` | `34/177
+      (19.21%)` |  `37/899 (4.12%)` |
 
       | OSCPlike |  `0/38 (0.00%)` | `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
@@ -3689,7 +3689,7 @@ summary:
         cli: 'dirb http://<targetip>:<targetport> /usr/share/dirb/wordlists/vulns/coldfusion.txt
 
           '
-        description: look for available sub driectories and files on a coldfusion
+        description: look for available sub directories and files on a coldfusion
           install
         ports:
         - 80/tcp
