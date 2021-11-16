@@ -1,6 +1,6 @@
 summary:
   counts:
-    htbnix: 179
+    htbnix: 181
     htboscplike: 94
     htbwindows: 73
     oscplikenix: 177
@@ -25,25 +25,25 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.45'
+    percentnix: '3.43'
     percentthm: '2.63'
     percentvh: '19.67'
     percentwindows: '10.67'
-    perhtb: 9.920634920634921
-    perhtbnix: 7.262569832402235
+    perhtb: 9.84251968503937
+    perhtbnix: 7.18232044198895
     perhtboscplike: 26.595744680851062
     perhtbwindows: 16.43835616438356
-    pernix: 4.115684093437152
+    pernix: 4.092920353982301
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.2136752136752137
+    perthm: 0.211864406779661
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.467406380027739
-    pervh: 3.32409972299169
-    pervhnix: 3.3333333333333335
+    pertotal: 3.445899379738112
+    pervh: 3.310344827586207
+    pervhnix: 3.319502074688797
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
     perwindows: 16.0
@@ -51,14 +51,14 @@ summary:
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 252
-    totalnix: 899
+    totalhtb: 254
+    totalnix: 904
     totaloscplike: 254
-    totalthm: 468
-    totaltotal: 1442
-    totalvh: 722
+    totalthm: 472
+    totaltotal: 1451
+    totalvh: 725
     totalwindows: 75
-    vhnix: 720
+    vhnix: 723
     vhoscplike: 122
     vhwindows: 2
     writeups: 38
@@ -3147,16 +3147,55 @@ summary:
   - datetime: 20190918
     infra: VulnHub
     machine:
-      description: "Welcome to Quaoar\nThis is a vulnerable machine i created for\
-        \ the Hackfest 2016 CTF\nhttp://hackfest.ca/\nDifficulty : Very Easy\nTips:\n\
-        Here are the tools you can research to help you to own this machine.\nnmap\n\
-        dirb / dirbuster / BurpSmartBuster\nnikto\nwpscan\nhydra\nYour Brain\nCoffee\n\
-        Google :)\nGoals: This machine is intended to be doable by someone who is\
-        \ interested in learning computer security\nThere are 3 flags on this machine\n\
-        1. Get a shell\n2. Get root access\n3. There is a post exploitation flag on\
-        \ the box\nFeedback: This is my first vulnerable machine, please give me feedback\
-        \ on how to improve !\n@ViperBlackSkull on Twitter\n[email\_protected]\nSpecial\
-        \ Thanks to madmantm for testing\nSHA-256 DA39EC5E9A82B33BA2C0CD2B1F5E8831E75759C51B3A136D3CB5D8126E2A4753"
+      description: 'Welcome to Quaoar
+
+        This is a vulnerable machine i created for the Hackfest 2016 CTF
+
+        http://hackfest.ca/
+
+        Difficulty : Very Easy
+
+        Tips:
+
+        Here are the tools you can research to help you to own this machine.
+
+        nmap
+
+        dirb / dirbuster / BurpSmartBuster
+
+        nikto
+
+        wpscan
+
+        hydra
+
+        Your Brain
+
+        Coffee
+
+        Google :)
+
+        Goals: This machine is intended to be doable by someone who is interested
+        in learning computer security
+
+        There are 3 flags on this machine
+
+        1. Get a shell
+
+        2. Get root access
+
+        3. There is a post exploitation flag on the box
+
+        Feedback: This is my first vulnerable machine, please give me feedback on
+        how to improve !
+
+        @ViperBlackSkull on Twitter
+
+        [email protected]
+
+        Special Thanks to madmantm for testing
+
+        SHA-256 DA39EC5E9A82B33BA2C0CD2B1F5E8831E75759C51B3A136D3CB5D8126E2A4753'
       difficulty: null
       difficulty_ratings: null
       id: 180
@@ -3214,16 +3253,43 @@ summary:
   - datetime: 20190919
     infra: VulnHub
     machine:
-      description: "Welcome to Sedna\nThis is a vulnerable machine i created for the\
-        \ Hackfest 2016 CTF\nhttp://hackfest.ca/\nDifficulty : Medium\nTips:\nThere\
-        \ are multiple way to root this box, if it should work but\ndoesn't try to\
-        \ gather more info about why its not working.\nGoals: This machine is intended\
-        \ to be doable by someone who have\nsome experience in doing machine on vulnhub\n\
-        There are 4 flags on this machine\nOne for a shell\nOne for root access\n\
-        Two for doing post exploitation on Sedna\nFeedback: This is my second vulnerable\
-        \ machine, please give me\nfeedback on how to improve !\n@ViperBlackSkull\
-        \ on Twitter\n[email\_protected]\nSpecial Thanks to madmantm for testing this\
-        \ virtual machine\nSHA-256 : 178306779A86965E0361AA20BA458C71F2C7AEB490F5FD8FAAFAEDAE18E0B0BA"
+      description: 'Welcome to Sedna
+
+        This is a vulnerable machine i created for the Hackfest 2016 CTF
+
+        http://hackfest.ca/
+
+        Difficulty : Medium
+
+        Tips:
+
+        There are multiple way to root this box, if it should work but
+
+        doesn''t try to gather more info about why its not working.
+
+        Goals: This machine is intended to be doable by someone who have
+
+        some experience in doing machine on vulnhub
+
+        There are 4 flags on this machine
+
+        One for a shell
+
+        One for root access
+
+        Two for doing post exploitation on Sedna
+
+        Feedback: This is my second vulnerable machine, please give me
+
+        feedback on how to improve !
+
+        @ViperBlackSkull on Twitter
+
+        [email protected]
+
+        Special Thanks to madmantm for testing this virtual machine
+
+        SHA-256 : 178306779A86965E0361AA20BA458C71F2C7AEB490F5FD8FAAFAEDAE18E0B0BA'
       difficulty: null
       difficulty_ratings: null
       id: 181
@@ -3343,14 +3409,14 @@ summary:
 
       |:--------:|:---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/468 (0.21%)` | `25/252 (9.92%)` |  `24/722 (3.32%)` | `46/254
-      (18.11%)` | `50/1442 (3.47%)` |
+      |  Total   | `1/472 (0.21%)` | `25/254 (9.84%)` |  `24/725 (3.31%)` | `46/254
+      (18.11%)` | `50/1451 (3.45%)` |
 
       | Windows  |  `0/0 (0.00%)`  | `12/73 (16.44%)` |   `0/2 (0.00%)`   |  `12/39
       (30.77%)` |  `12/75 (16.00%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  | `13/179 (7.26%)` |  `24/720 (3.33%)` | `34/177
-      (19.21%)` |  `37/899 (4.12%)` |
+      |   *nix   |  `0/0 (0.00%)`  | `13/181 (7.18%)` |  `24/723 (3.32%)` | `34/177
+      (19.21%)` |  `37/904 (4.09%)` |
 
       | OSCPlike |  `0/38 (0.00%)` | `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
