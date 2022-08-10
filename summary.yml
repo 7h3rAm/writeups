@@ -1,8 +1,8 @@
 summary:
   counts:
-    htbnix: 189
+    htbnix: 221
     htboscplike: 94
-    htbwindows: 74
+    htbwindows: 82
     oscplikenix: 177
     oscplikewindows: 39
     ownedhtb: 25
@@ -25,39 +25,39 @@ summary:
     ownedwindows: 12
     percent: '14.96'
     percenthtb: '14.89'
-    percentnix: '3.40'
+    percentnix: '3.28'
     percentthm: '2.63'
     percentvh: '19.67'
-    percentwindows: '10.53'
-    perhtb: 9.505703422053232
-    perhtbnix: 6.878306878306878
+    percentwindows: '9.52'
+    perhtb: 8.25082508250825
+    perhtbnix: 5.88235294117647
     perhtboscplike: 26.595744680851062
-    perhtbwindows: 16.216216216216218
-    pernix: 4.057017543859649
+    perhtbwindows: 14.634146341463413
+    pernix: 3.919491525423729
     peroscplike: 18.11023622047244
     peroscplikenix: 19.2090395480226
     peroscplikewindows: 30.76923076923077
-    perthm: 0.20325203252032523
+    perthm: 0.1692047377326565
     perthmnix: 0
     perthmoscplike: 0.0
     perthmwindows: 0
-    pertotal: 3.3783783783783785
+    pertotal: 3.0883261272390365
     pervh: 3.310344827586207
     pervhnix: 3.319502074688797
     pervhoscplike: 17.21311475409836
     pervhwindows: 0.0
-    perwindows: 15.789473684210526
+    perwindows: 14.285714285714285
     thmnix: 0
     thmoscplike: 38
     thmwindows: 0
     total: 0
-    totalhtb: 263
-    totalnix: 912
+    totalhtb: 303
+    totalnix: 944
     totaloscplike: 254
-    totalthm: 492
-    totaltotal: 1480
+    totalthm: 591
+    totaltotal: 1619
     totalvh: 725
-    totalwindows: 76
+    totalwindows: 84
     vhnix: 723
     vhoscplike: 122
     vhwindows: 2
@@ -3409,14 +3409,14 @@ summary:
 
       |:--------:|:---------------:|:----------------:|:-----------------:|:-----------------:|:-----------------:|
 
-      |  Total   | `1/492 (0.20%)` | `25/263 (9.51%)` |  `24/725 (3.31%)` | `46/254
-      (18.11%)` | `50/1480 (3.38%)` |
+      |  Total   | `1/591 (0.17%)` | `25/303 (8.25%)` |  `24/725 (3.31%)` | `46/254
+      (18.11%)` | `50/1619 (3.09%)` |
 
-      | Windows  |  `0/0 (0.00%)`  | `12/74 (16.22%)` |   `0/2 (0.00%)`   |  `12/39
-      (30.77%)` |  `12/76 (15.79%)` |
+      | Windows  |  `0/0 (0.00%)`  | `12/82 (14.63%)` |   `0/2 (0.00%)`   |  `12/39
+      (30.77%)` |  `12/84 (14.29%)` |
 
-      |   *nix   |  `0/0 (0.00%)`  | `13/189 (6.88%)` |  `24/723 (3.32%)` | `34/177
-      (19.21%)` |  `37/912 (4.06%)` |
+      |   *nix   |  `0/0 (0.00%)`  | `13/221 (5.88%)` |  `24/723 (3.32%)` | `34/177
+      (19.21%)` |  `37/944 (3.92%)` |
 
       | OSCPlike |  `0/38 (0.00%)` | `25/94 (26.60%)` | `21/122 (17.21%)` |                   |
       `46/254 (18.11%)` |'
